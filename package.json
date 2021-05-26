@@ -1,0 +1,15 @@
+{
+  "name": "scriptcat.org",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index.js",
+  "author": "Junzhou Liu <Junzhou2016@outlook.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^2.0.0-beta.14"
+  },
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs --dest dist"
+  }
+}
