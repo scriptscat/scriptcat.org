@@ -209,3 +209,18 @@ declare function GM_setClipboard(data: string, info?: string | { type?: string, 
 ```ts
 declare function GM_addStyle(css: string): HTMLElement;
 ```
+
+#### GM_registerMenuCommand
+> 注册一个菜单选项到弹出页面中,点击时会调用`listener`方法
+
+```ts
+declare function GM_registerMenuCommand(name: string, listener: Function, accessKey?: string): number;
+```
+
+#### GM_unregisterMenuCommand
+> 通过id删除一个已经注册了的菜单项
+
+```ts
+declare function GM_unregisterMenuCommand(id: number): void;
+```
+
