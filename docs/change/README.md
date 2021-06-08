@@ -1,6 +1,12 @@
 # 更新日志
 
-## v0.3.5
+## v0.4.1
+> 重大bug修复
+
+* 修复split导致的前台脚本无法执行的问题
+* 增加`GM_xmlhttpRequest`所支持的`unsafe header`
+
+## v0.4.0
 
 > 做了一些界面上的优化,增加了[用户配置](/dev/config.md)功能
 
@@ -13,6 +19,7 @@
 * 优化弹出页面增加后台脚本项,可直接在弹出页上执行脚本
 * 优化安装页面增加脚本的开启开关
 * 支持`GM_registerMenuCommand`和`GM_unregisterMenuCommand`
+* 支持`GM_xmlhttpRequest`填写一些unsafe的header
 
 ## v0.3.4
 

@@ -10,7 +10,7 @@ API的详细定义,请看`tempermonkey.d.ts`或者内置编辑器提示,文档�
 
 #### GM_cookie *
 
-> 部分功能缺失,本扩展特供,操作cookie,只能在后台脚本中使用
+> 部分功能缺失,暂只支持list操作,本扩展特供,只能在后台脚本中使用,必须使用`@connect`声明操作的host,且经过用户授权才可使用.
 
 ```typescript
 declare function GM_cookie(action: GM_Types.CookieAction, details: GM_Types.CookieDetails, ondone: (cookie: GM_Types.Cookie[] | any, error: any | undefined) => void): void;
@@ -88,7 +88,7 @@ declare namespace GM_Types {
 
 #### GM_xmlhttpRequest
 
-> 部分功能缺失,cookie功能firefox暂不支持
+> 部分功能缺失,cookie功能firefox暂不支持,需要用户授权才可正常访问,使用`@connect`描述的host可跳过用户授权,其它需要进行ajax操作的API同理.
 
 ```typescript
 declare function GM_xmlhttpRequest(details: GM_Types.XHRDetails): GM_Types.AbortHandle<void>;
