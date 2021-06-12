@@ -2,7 +2,7 @@
 
 定时脚本由`@crontab`属性声明,可以精确到秒级调用,提供了一个`once`,表示某个时间内最多执行一次(考虑浏览器未打开的情况).建议脚本的运行时间不要大于定时时间的间隔.
 
-可使用在线工具测试:https://tool.lu/crontab/
+可使用在线工具测试:[crontab在线测试](https://tool.lu/crontab/)
 
 ### Crontab 例子
 
