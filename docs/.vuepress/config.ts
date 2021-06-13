@@ -6,7 +6,7 @@ module.exports = {
   lang: "zh-CN",
   title: "脚本猫",
   description: "脚本猫",
-  head: [["link", { rel: "icon", href: "/images/logo.webp" }]],
+  head: [["link", { rel: "icon", href: "/images/logo.png" }]],
 
   themePlugins: {
     // only enable git plugin in production mode
@@ -14,7 +14,7 @@ module.exports = {
   },
 
   themeConfig: {
-    logo: "/images/logo.webp",
+    logo: "/images/logo.png",
     repo: "scriptscat/scriptcat.org",
    
     locales: {

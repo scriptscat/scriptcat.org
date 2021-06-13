@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: images/logo.webp
+heroImage: images/logo.png
 heroText: ScriptCat
 tagline: 可以执行自定义脚本的<br>浏览器扩展
 actions:
