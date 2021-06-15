@@ -15,8 +15,9 @@ module.exports = {
 
   themeConfig: {
     logo: "/images/logo.png",
-    repo: "scriptscat/scriptcat.org/docs",
-   
+    repo: "scriptscat/scriptcat.org",
+    docsDir: 'docs',
+    editLinkText: '在 GitHub 上编辑此页'
     locales: {
 
       '/': {
