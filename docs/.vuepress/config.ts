@@ -15,7 +15,7 @@ module.exports = {
 
   themeConfig: {
     logo: "/images/logo.png",
-    repo: "scriptscat/scriptcat.org",
+    repo: "scriptscat/scriptcat.org/docs",
    
     locales: {
 
