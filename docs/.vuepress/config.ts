@@ -17,7 +17,6 @@ module.exports = {
     logo: "/images/logo.png",
     repo: "scriptscat/scriptcat.org",
     docsDir: 'docs',
-    editLinkText: '在 GitHub 上编辑此页'
     locales: {
 
       '/': {
@@ -28,7 +27,7 @@ module.exports = {
         sidebar: sidebar.zh,
 
         // page meta
-        editLinkText: 'Edit this page on GitHub',
+        editLinkText: '在 GitHub 上编辑此页',
       },
 
     } ,
