@@ -11,5 +11,8 @@
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs --dest dist"
+  },
+  "dependencies": {
+    "file-loader": "^6.2.0"
   }
 }

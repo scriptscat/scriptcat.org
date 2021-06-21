@@ -62,13 +62,13 @@
 
 被match的url才会运行脚本,遵循[Match patterns](https://developer.chrome.com/docs/extensions/mv3/match_patterns/),match中使用*表示通配:
 
-| 值                             | 正确案例                                                     | 错误案例                               |
-| ------------------------------ | ------------------------------------------------------------ | -------------------------------------- |
-| http://scriptcat.org/doc/match | http://scriptcat.org/doc/match                               | http://scriptcat.org/doc/runAt         |
-| \*://\*/param?*                | https://scriptcat.org/param\|http://scriptcat.org/param?search=油猴 | https://scriptcat.org/test/param       |
-| \*://\*/prefix*suffix          | http://scriptcat.org/prefix/suffix\|http://scriptcat.org/prefix/mid/suffix\|http://scriptcat.org/prefixsuffix | http://scriptcat.org/prefix/suffix/end |
-| http\*://scriptcat.org/*       | https://scriptcat.org/\|https://scriptcat.org/doc\|http://scriptcat.org/doc/match\|http://scriptcat.org/param?search=油猴 | https://doc.scriptcat.org/             |
-| http\*://scriptcat.org/doc/*   | https://scriptcat.org/doc\|http://scriptcat.org/doc/match    | http://scriptcat.org/param?search=油猴 |
+| 值                               | 正确案例                                                     | 错误案例                               |
+| -------------------------------- | ------------------------------------------------------------ | -------------------------------------- |
+| `http://scriptcat.org/doc/match` | http://scriptcat.org/doc/match                               | http://scriptcat.org/doc/runAt         |
+| `*://*/param?*`                  | https://scriptcat.org/param\|http://scriptcat.org/param?search=油猴 | https://scriptcat.org/test/param       |
+| `*://*/prefix*suffix`            | http://scriptcat.org/prefix/suffix\|http://scriptcat.org/prefix/mid/suffix\|http://scriptcat.org/prefixsuffix | http://scriptcat.org/prefix/suffix/end |
+| `http*://scriptcat.org/*`        | https://scriptcat.org/\|https://scriptcat.org/doc\|http://scriptcat.org/doc/match\|http://scriptcat.org/param?search=油猴 | https://doc.scriptcat.org/             |
+| `http*://scriptcat.org/doc/*`    | https://scriptcat.org/doc\|http://scriptcat.org/doc/match    | http://scriptcat.org/param?search=油猴 |
 
 #### include
 
@@ -102,6 +102,20 @@ match的别名
 #### definition
 
 一个`.d.ts`文件的引用地址,能够自动补全编辑器的自动提示
+
+#### console
+
+声明之后,脚本执行的`console`的输出内容可以记录到控制台.(将console的函数执行实际替换成GM_log)
+
+![image-20210621214143661](./meta.assets/image-20210621214143661.png)
+
+![](./meta.assets/image-20210621214124685.png)
+
+```ts
+//@console log warn
+//@console error
+//会将 console.log console.error console.warn 替换对应的GM_log日志级别
+```
 
 ### 额外描述值
 

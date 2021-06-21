@@ -2,7 +2,7 @@ import { navbar, sidebar } from './configs'
 
 const isProd = process.env.NODE_ENV === 'production'
 module.exports = {
-  base:'/',
+  base: '/',
   lang: "zh-CN",
   title: "脚本猫",
   description: "脚本猫",
@@ -30,11 +30,11 @@ module.exports = {
         editLinkText: '在 GitHub 上编辑此页',
       },
 
-    } ,
-  
+    },
+
   },
 
-  
+
 
   markdown: {
     // importCode: {
@@ -56,6 +56,19 @@ module.exports = {
     //     : false,
     // ],
   ],
+
+  module: {
+    rules: [
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
+    ],
+  },
 };
 
 
