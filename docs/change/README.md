@@ -1,10 +1,12 @@
 # 更新日志
 
 ## v0.4.2
-> 优化代码,调整表格
+> 优化代码,UI调整
 
-* 增加`GM_xmlhttpRequest`所支持的`unsafe header`
+* 界面UI调整
+* 增加`GM_xmlhttpRequest`所支持的`unsafe header`和支持`arraybuffer`,`nocache`,`user`,`password`,`overrideMimeType`,功能
 * 增加运行日志查看功能,点击面板`运行状态`栏即可查看最后一次运行日志.具体请看:[console](/dev/meta.md#console)功能
+* 修复`GM_notification`的`done`回调
 * 优化调整代码列表排序逻辑
 * 优化最后更新栏点击可进行脚本的手动检查更新
 
