@@ -46,7 +46,7 @@ declare namespace GM_Types {
 
 #### GM_notification *
 
-> 发送消息通知,提供了`progress`和`buttons`的能力,可以显示进度条类型和按钮类型的通知,多提供了`GM_closeNotification`,`GM_updateNotification`两个方法.
+> 发送消息通知,提供了`progress`和`buttons`的能力(Firefox不支持),可以显示进度条类型和按钮类型的通知,多提供了`GM_closeNotification`,`GM_updateNotification`(Firefox不支持)两个方法.
 >
 > [demo](https://bbs.tampermonkey.net.cn/thread-403-1-1.html)
 

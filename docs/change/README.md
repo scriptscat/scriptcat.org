@@ -1,5 +1,15 @@
 # 更新日志
 
+## v0.4.4
+> v0.4.3 兼容Firefox处理以过审核.
+
+* 处理Firefox sandbox逻辑
+* 优化安装/权限确认页面UI
+* 优化编辑器快捷键和工具条
+* 修复某些情况下安装或更新时不显示脚本名的bug
+* 修复`GM_xmlhttpRequest`的`arraybuffer,blob`支持
+* 修复若干兼容油猴的bug
+
 ## v0.4.2
 > 优化代码,UI调整
 
