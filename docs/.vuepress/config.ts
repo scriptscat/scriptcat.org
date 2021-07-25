@@ -1,11 +1,12 @@
 import { navbar, sidebar } from './configs'
 
 const isProd = process.env.NODE_ENV === 'production'
+
 module.exports = {
   base: '/',
   lang: "zh-CN",
   title: "脚本猫",
-  description: "脚本猫",
+  description: "一个可以执行用户脚本的浏览器扩展,万物皆可脚本化,让你的浏览器可以做更多的事情!",
   head: [["link", { rel: "icon", href: "/images/logo.png" }]],
 
   themePlugins: {
@@ -16,7 +17,10 @@ module.exports = {
   themeConfig: {
     logo: "/images/logo.png",
     repo: "scriptscat/scriptcat.org",
+    repoLabel: 'GitHub',
+    editLinks: true,
     docsDir: 'docs',
+    lastUpdated: 'Last Updated',
     locales: {
 
       '/': {
@@ -46,15 +50,14 @@ module.exports = {
     // },
   },
 
+
   plugins: [
-    // [
-    //   '@vuepress/plugin-shiki',
-    //   isProd
-    //     ? {
-    //         theme: 'dark-plus',
-    //       }
-    //     : false,
-    // ],
+    [
+      '@vuepress/google-analytics',
+      {
+        'ga': 'UA-138255059-4'
+      }
+    ]
   ],
 
   module: {
@@ -69,6 +72,5 @@ module.exports = {
       },
     ],
   },
+
 };
-
-

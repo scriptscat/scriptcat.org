@@ -1,6 +1,15 @@
 import type { SidebarConfig } from "@vuepress/theme-default";
 
 export const zh: SidebarConfig = {
+  "/use": [
+    {
+      isGroup: true,
+      text: "使用指南",
+      children: [
+        "/use/"
+      ]
+    }
+  ],
   "/dev/": [
     {
       isGroup: true,

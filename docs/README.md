@@ -5,9 +5,9 @@ heroText: ScriptCat
 tagline: 可以执行自定义脚本的浏览器扩展
 actions:
   - text: 开始使用
-    link: /#安装扩展
+    link: /use/index.html
   - text: 开发指南
-    link: /dev
+    link: /dev/index.html
   - text: GitHub仓库
     link: https://github.com/scriptscat/scriptcat
     extraClass: github grey
