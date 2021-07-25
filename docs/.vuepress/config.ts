@@ -20,7 +20,6 @@ module.exports = {
     repoLabel: 'GitHub',
     editLinks: true,
     docsDir: 'docs',
-    lastUpdated: 'Last Updated',
     locales: {
 
       '/': {
@@ -32,6 +31,7 @@ module.exports = {
 
         // page meta
         editLinkText: '在 GitHub 上编辑此页',
+        lastUpdated: '最后更新',
       },
 
     },
@@ -53,9 +53,9 @@ module.exports = {
 
   plugins: [
     [
-      '@vuepress/google-analytics',
+      '@vuepress/plugin-google-analytics',
       {
-        'ga': 'UA-138255059-4'
+        'id': 'G-7MBECV28JV'
       }
     ]
   ],
