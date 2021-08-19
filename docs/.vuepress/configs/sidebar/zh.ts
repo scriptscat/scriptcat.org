@@ -18,6 +18,7 @@ export const zh: SidebarConfig = {
         "/dev/README.md",
         "/dev/background.md",
         "/dev/cron.md",
+        "/dev/cloudcat.md",
         "/dev/api.md",
         "/dev/cat-api.md",
         "/dev/config.md",

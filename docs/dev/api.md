@@ -1,14 +1,14 @@
 # API 文档
-### 说明
+## 说明
 
-本扩展api定义参考[tampermonkey文档](https://www.tampermonkey.net/documentation.php),由于时间和精力问题,只实现了部分API,后续将继续迭代,本扩展进行扩充或者与原GM不同的API将在文档中特殊标注.对于某些API还提供了同步函数,同步函数规则:GM.*,具体请看文档内容.
+本扩展api定义参考[tampermonkey文档](https://www.tampermonkey.net/documentation.php),由于时间和精力问题,只实现了部分API,后续将继续迭代,本扩展进行扩充或者与原GM不同的API将在文档中特殊标注(使用\*号).对于某些API还提供了同步函数,同步函数规则:GM.*,具体请看文档内容.
 
 API的详细定义,请看`tempermonkey.d.ts`或者内置编辑器提示,文档更新可能不会及时.对于本扩展特有的API请看[CatApi文档](cat-api.md)
 
-### 定义
+## 定义
 
 
-#### GM_cookie *
+### GM_cookie *
 
 > 部分功能缺失,暂只支持list操作,本扩展特供,只能在后台脚本中使用,必须使用`@connect`声明操作的host,且经过用户授权才可使用.
 
@@ -18,8 +18,8 @@ declare function GM_cookie(action: GM_Types.CookieAction, details: GM_Types.Cook
 declare namespace GM_Types {
     type CookieAction = "list" | "delete" | "set";
     interface CookieDetails {
-        url: string
-        name: string
+        url?: string
+        name?: string
         value?: string
         domain?: string
         path?: string
@@ -42,9 +42,7 @@ declare namespace GM_Types {
 }
 ```
 
-
-
-#### GM_notification *
+### GM_notification *
 
 > 发送消息通知,提供了`progress`和`buttons`的能力(Firefox不支持),可以显示进度条类型和按钮类型的通知,多提供了`GM_closeNotification`,`GM_updateNotification`(Firefox不支持)两个方法.
 >
@@ -86,7 +84,7 @@ declare namespace GM_Types {
 }
 ```
 
-#### GM_xmlhttpRequest
+### GM_xmlhttpRequest
 
 > 部分功能缺失,cookie功能firefox暂不支持,需要用户授权才可正常访问,使用`@connect`描述的host可跳过用户授权,其它需要进行ajax操作的API同理.
 
@@ -143,14 +141,8 @@ declare namespace GM_Types {
 }
 ```
 
-#### GM.fetch
-
-> 功能缺失
-
-
-
-#### GM_log *
-> 日志函数,日志将在控制面板的运行日志中看到.相比于tm增加了一个日志的level
+### GM_log *
+> 日志函数,后台脚本的日志将在控制面板的运行日志中看到(点击运行状态栏).相比于tm增加了一个日志的level.
 
 ```typescript
 declare function GM_log(message: string, level?: GM_Types.LOGGER_LEVEL): any;
@@ -159,8 +151,8 @@ declare namespace GM_Types {
 }
 ```
 
-#### GM_get/set/deleteValue
-> 从储存中获取或者设置值,数据在同一`namespace`中可以共享,且可以实时的同步.同一`namespace`中共享是一个实验性的功能🧪.
+### GM_get/set/deleteValue
+> 从储存中获取或者设置值,数据在同一`namespace`中可以共享,且可以实时的同步.
 
 ```ts
 declare function GM_setValue(name: string, value: any): void;
@@ -170,7 +162,7 @@ declare function GM_getValue(name: string, defaultValue?: any): any;
 declare function GM_deleteValue(name: string): void;
 ```
 
-#### GM_add/removeValueChangeListener
+### GM_add/removeValueChangeListener
 > 对值的监听操作,add会返回一个监听id,使用remove可以取消监听
 
 ```ts
@@ -179,7 +171,7 @@ declare function GM_addValueChangeListener(name: string, listener: GM_Types.Valu
 declare function GM_removeValueChangeListener(listenerId: number): void;
 ```
 
-#### GM_openInTab
+### GM_openInTab
 > 打开一个新窗口
 
 ```ts
@@ -196,28 +188,28 @@ declare namespace GM_Types {
 }
 ```
 
-#### GM_setClipboard
+### GM_setClipboard
 > 设置剪辑板
 
 ```ts
 declare function GM_setClipboard(data: string, info?: string | { type?: string, minetype?: string }): void;
 ```
 
-#### GM_addStyle
+### GM_addStyle
 > 添加样式到页面中,返回样式DOM
 
 ```ts
 declare function GM_addStyle(css: string): HTMLElement;
 ```
 
-#### GM_registerMenuCommand
+### GM_registerMenuCommand
 > 注册一个菜单选项到弹出页面中,点击时会调用`listener`方法
 
 ```ts
 declare function GM_registerMenuCommand(name: string, listener: Function, accessKey?: string): number;
 ```
 
-#### GM_unregisterMenuCommand
+### GM_unregisterMenuCommand
 > 通过id删除一个已经注册了的菜单项
 
 ```ts
