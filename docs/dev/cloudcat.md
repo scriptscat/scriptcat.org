@@ -4,9 +4,13 @@
 
 ## CloudCat附加描述
 
+### cloudCat
+
+声明此脚本可以使用`CloudCat`运行
+
 ### cloudServer
 
-云服务器地址
+默认的云服务器地址
 
 
 ### exportValue

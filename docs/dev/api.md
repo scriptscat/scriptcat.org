@@ -19,7 +19,7 @@ declare namespace GM_Types {
     type CookieAction = "list" | "delete" | "set";
     interface CookieDetails {
         url?: string
-        name?: string
+        name: string
         value?: string
         domain?: string
         path?: string
