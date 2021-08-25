@@ -1,9 +1,9 @@
 # 更新日志
 
 ## v0.5.0
-> 重大更新,开始支持cloudcat
+> **重大更新**,开始支持[CloudCat](/dev/cloudcat.md)
 
-* 支持cloudcat
+* 支持[CloudCat](/dev/cloudcat.md)
 * 编辑操作增加导出/导入功能
 * 优化列表状态栏
 * 沙盒优化
