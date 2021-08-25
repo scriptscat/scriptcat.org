@@ -28,8 +28,6 @@
 
 脚本返回`Promise`对象,管理器可以将返回的内容当作日志记录下来.
 
-在`crontab`的`once`中,`reject`的第二个参数将会作为延迟重试执行的时间来处理,单位为秒.
-
 ```ts
 // ==UserScript==
 // @name         Promise测试demo
@@ -40,9 +38,9 @@
 // ==/UserScript==
 return new Promise((resolve, reject) => {
   if (Math.round((Math.random() * 10) % 2)) {
-    resolve("ok");// 记录成功
+    resolve("ok");// 执行成功
   } else {
-    reject("error", 10);// 记录错误信息,并10秒后重试
+    reject("error");// 执行失败,并返回错误原因
   }
 });
 ```

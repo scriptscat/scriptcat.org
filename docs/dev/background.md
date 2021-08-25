@@ -21,9 +21,9 @@
 // ==/UserScript==
 return new Promise((resolve, reject) => {
   if (Math.round((Math.random() * 10) % 2)) {
-    resolve("ok");
+    resolve("ok");// 执行成功
   } else {
-    reject("error", 10);
+    reject("error");// 执行失败,并返回错误原因
   }
 });
 ```
