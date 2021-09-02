@@ -1,10 +1,18 @@
 # 更新日志
 
+## v0.5.1
+> 更新界面UI,新增[订阅模式](/dev/subscribe.md)
+
+* 更新界面UI,优化页面逻辑
+* 新增[订阅模式](/dev/subscribe.md)
+* 修复crontab表达式错误的时候,脚本列表不显示
+
 ## v0.5.0
 > **重大更新**,开始支持[CloudCat](/dev/cloudcat.md)
 
 * 支持[CloudCat](/dev/cloudcat.md)
 * 编辑操作增加导出/导入功能
+* 添加通知信息
 * 优化列表状态栏
 * 沙盒优化
 * 修复油猴API兼容问题

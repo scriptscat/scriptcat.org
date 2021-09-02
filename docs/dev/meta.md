@@ -126,11 +126,15 @@ match的别名
 
 ### supportURL
 
-支持站点
+支持站点,bug反馈页面
 
-### homepage, homepageURL, website, source
+### homepage, homepageURL, website
 
 脚本主页
+
+### source
+
+脚本源码页
 
 ### icon, iconURL, defaulticon
 

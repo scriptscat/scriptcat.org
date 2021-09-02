@@ -6,7 +6,7 @@ export const zh: SidebarConfig = {
       isGroup: true,
       text: "使用指南",
       children: [
-        "/use/"
+        "/use/README.md"
       ]
     }
   ],
@@ -19,9 +19,10 @@ export const zh: SidebarConfig = {
         "/dev/background.md",
         "/dev/cron.md",
         "/dev/cloudcat.md",
+        "/dev/subscribe.md",
+        "/dev/config.md",
         "/dev/api.md",
         "/dev/cat-api.md",
-        "/dev/config.md",
         "/dev/meta.md",
       ],
     },
