@@ -1,11 +1,12 @@
 # 更新日志
 
 ## v0.5.1
-> 更新界面UI,新增[订阅模式](/dev/subscribe.md)
+> 优化界面UI,优化调试模式
 
 * 更新界面UI,优化页面逻辑
-* 新增[订阅模式](/dev/subscribe.md)
+* 优化后台脚本[调试模式](/dev/background.html#脚本调试)
 * 修复crontab表达式错误的时候,脚本列表不显示
+* 移除`@console`
 
 ## v0.5.0
 > **重大更新**,开始支持[CloudCat](/dev/cloudcat.md)

@@ -17,7 +17,6 @@ export const zh: SidebarConfig = {
       children: [
         "/dev/README.md",
         "/dev/background.md",
-        "/dev/cron.md",
         "/dev/cloudcat.md",
         "/dev/subscribe.md",
         "/dev/config.md",
