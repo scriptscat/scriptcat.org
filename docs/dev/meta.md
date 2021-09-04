@@ -124,6 +124,18 @@ match的别名
 
 当前脚本的开源协议
 
+### updateURL
+
+检查更新必须要求远程脚本有`@version`标签才能生效
+
+脚本检查更新的链接,不设置默认为链接的`user.js=>meta.js`,无`user.js`的默认为当前链接.
+
+如果配置了`@updateURL`必须也得配置`@downloadURL`才能使`@updateURL`生效
+
+### downloadURL
+
+脚本更新的下载地址
+
 ### supportURL
 
 支持站点,bug反馈页面

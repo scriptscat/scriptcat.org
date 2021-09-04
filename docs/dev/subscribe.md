@@ -1,6 +1,6 @@
 # 订阅模式
 
-使用`user.sub.js`后缀或者使用链接进行导入安装，必须使用`https`链接。
+注释开头与结尾使用`UserSubscribe`，使用`user.sub.js`(非强制)后缀或者使用链接进行导入安装，必须使用`https`链接。
 
 订阅脚本仅会在安装时弹出安装界面由用户确认订阅，但后续的更新采用静默更新的方式，除非`connect`权限发生改变，否则不会弹出更新界面由用户确认。
 
@@ -11,7 +11,7 @@
 
 
 ```js
-// ==UserScript==
+// ==UserSubscribe==
 // @name         xxx
 // @description  订阅xxx系列脚本
 // @version      0.1.0
@@ -20,7 +20,7 @@
 // @connect      www.baidu.com
 // @scriptUrl    https://script.tampermonkey.net.cn/48.user.js
 // @scriptUrl    https://script.tampermonkey.net.cn/49.user.js
-// ==/UserScript==
+// ==/UserSubscribe==
 ```
 
 
