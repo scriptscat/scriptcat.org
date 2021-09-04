@@ -1,10 +1,16 @@
 # 更新日志
 
+## v0.6.0
+> 新增[订阅模式](/dev/subscribe.md)
+
+* 增加[订阅模式](/dev/subscribe.md),可管理多脚本
+
+
 ## v0.5.1
 > 优化界面UI,优化调试模式
 
 * 更新界面UI,优化页面逻辑
-* 优化后台脚本[调试模式](/dev/background.html#脚本调试)
+* 优化后台脚本[调试模式](/dev/background.md#脚本调试)
 * 修复crontab表达式错误的时候,脚本列表不显示
 * 移除`@console`
 
