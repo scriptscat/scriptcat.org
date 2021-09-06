@@ -22,7 +22,7 @@
 
 ### namespace
 
-脚本命名空间,同一`namespace`空间中的脚本,数据可以共享🧪.
+脚本命名空间.~~同一`namespace`空间中的脚本,数据可以共享🧪.~~（以切换成使用`storageName`作为共享空间）
 
 ### version
 
@@ -49,6 +49,10 @@
 | document-menu  | 在页面右键时会显示一个菜单,点击时运行脚本,脚本名称作为菜单名称 | v0.3.4 |
 
 对于menu图标可参考:[Unicode Symbols](https://unicode-table.com/en/)和[emoji](https://www.emojiall.com/zh-hans)
+
+### storageName
+
+`Value`的存储空间，同一`storageName`下的数据可以共享和通信.
 
 ### background
 

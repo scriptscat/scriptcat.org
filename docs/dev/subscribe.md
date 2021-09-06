@@ -16,7 +16,6 @@
 // @description  订阅xxx系列脚本
 // @version      0.1.0
 // @author       You
-// @grant        GM_xmlhttpRequest
 // @connect      www.baidu.com
 // @scriptUrl    https://script.tampermonkey.net.cn/48.user.js
 // @scriptUrl    https://script.tampermonkey.net.cn/49.user.js
