@@ -10,13 +10,17 @@ API的详细定义,请看`tempermonkey.d.ts`或者内置编辑器提示,文档�
 
 ### GM_cookie *
 
-> 部分功能缺失,暂只支持list操作,本扩展特供,只能在后台脚本中使用,必须使用`@connect`声明操作的host,且经过用户授权才可使用.
+> 本扩展特供,只能在后台脚本中使用,必须使用`@connect`声明操作的host,且经过用户授权才可使用.
+> 
+> GM_getCookieStore 🧪 是实验性的
 
 ```typescript
-declare function GM_cookie(action: GM_Types.CookieAction, details: GM_Types.CookieDetails, ondone: (cookie: GM_Types.Cookie[] | any, error: any | undefined) => void): void;
+declare function GM_cookie(action: GM_Types.CookieAction, details: GM_Types.CookieDetails, ondone: (cookie: GM_Types.Cookie[], error: any | undefined) => void): void;
+// 通过tabid(前后端通信可能用到,ValueChangeListener会返回tabid),获取storeid,后台脚本用.
+declare function GM_getCookieStore(tabid: number, ondone: (storeId: number, error: any | undefined) => void): void;
 
 declare namespace GM_Types {
-    type CookieAction = "list" | "delete" | "set";
+    type CookieAction = "list" | "delete" | "set" | "store";
     interface CookieDetails {
         url?: string
         name: string
@@ -24,6 +28,8 @@ declare namespace GM_Types {
         domain?: string
         path?: string
         secure?: boolean
+        session?: boolean
+        storeId?: string;
         httpOnly?: boolean
         expirationDate?: number
     }
@@ -166,6 +172,9 @@ declare function GM_deleteValue(name: string): void;
 > 对值的监听操作,add会返回一个监听id,使用remove可以取消监听
 
 ```ts
+// tabid是只有后台脚本监听才有的参数
+type ValueChangeListener = (name: string, oldValue: any, newValue: any, remote: boolean, tabid?: number) => any;
+
 declare function GM_addValueChangeListener(name: string, listener: GM_Types.ValueChangeListener): number;
 
 declare function GM_removeValueChangeListener(listenerId: number): void;

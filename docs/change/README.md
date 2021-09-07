@@ -1,10 +1,14 @@
 # 更新日志
 
-## v0.6.0
-> 新增[订阅模式](/dev/subscribe.md)
+## v0.5.2
+> cookie操作增强
 
-* 增加[订阅模式](/dev/subscribe.md),可管理多脚本
-
+* 支持对隐身窗口的cookie操作
+* 增强`GM_cookie`函数,支持`delete/set/store`操作
+* `GM_addValueChangeListener`支持返回tabid(后台脚本中)
+* 增加`GM_getCookieStore`通过tabid,获取cookie store
+* 增加`storageName`来规定value共享,移除原来的`namespace`共享
+* 修复浏览器打开时脚本加载问题
 
 ## v0.5.1
 > 优化界面UI,优化调试模式

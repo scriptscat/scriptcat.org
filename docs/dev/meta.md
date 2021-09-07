@@ -50,7 +50,7 @@
 
 对于menu图标可参考:[Unicode Symbols](https://unicode-table.com/en/)和[emoji](https://www.emojiall.com/zh-hans)
 
-### storageName
+### storageName 🧪
 
 `Value`的存储空间，同一`storageName`下的数据可以共享和通信.
 
