@@ -168,8 +168,8 @@ declare function GM_getValue(name: string, defaultValue?: any): any;
 declare function GM_deleteValue(name: string): void;
 ```
 
-### GM_add/removeValueChangeListener
-> 对值的监听操作,add会返回一个监听id,使用remove可以取消监听
+### GM_add/removeValueChangeListener *
+> 对值的监听操作,add会返回一个监听id,使用remove可以取消监听.后台脚本监听会返回tabid.
 
 ```ts
 // tabid是只有后台脚本监听才有的参数
