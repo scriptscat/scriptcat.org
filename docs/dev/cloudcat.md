@@ -44,3 +44,15 @@
 // 所有可用参数如下:
 // @exportCookie domain=scriptcat.org;url=https://docs.scriptcat.org/use;name=cookie1;path=/use;secure=true;session=true
 ```
+
+## API支持变化
+> 暂时只支持以下API,若无特殊说明,表示与原API一样.
+
+### GM_xmlhttpRequest
+
+
+### GM_notification
+
+
+### GM_log
+
