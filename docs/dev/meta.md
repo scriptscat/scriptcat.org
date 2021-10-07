@@ -64,7 +64,7 @@
 
 ### match
 
-被match的url才会运行脚本,遵循[Match patterns](https://developer.chrome.com/docs/extensions/mv3/match_patterns/),match中使用*表示通配,tld表示匹配顶域:
+被match的url才会运行脚本,遵循[Match patterns](https://developer.chrome.com/docs/extensions/mv3/match_patterns/),match中使用*表示通配,tld表示匹配顶域,域名以`*.`开头也会匹配`xxx.com`:
 
 | 值                               | 正确案例                                                     | 错误案例                               |
 | -------------------------------- | ------------------------------------------------------------ | -------------------------------------- |
@@ -74,6 +74,7 @@
 | `http*://scriptcat.org/*`        | https://scriptcat.org/\|https://scriptcat.org/doc\|http://scriptcat.org/doc/match\|http://scriptcat.org/param?search=油猴 | https://doc.scriptcat.org/             |
 | `http*://scriptcat.org/doc/*`    | https://scriptcat.org/doc\|http://scriptcat.org/doc/match    | http://scriptcat.org/param?search=油猴 |
 | `http*://scriptcat.tld/doc/*`    | https://scriptcat.cn/doc\|http://scriptcat.net.cn/doc/match    | http://google.com/param?search=油猴 |
+| `http*://*.scriptcat.org/doc/*`    | https://scriptcat.cn/doc\|http://www.scriptcat.net.cn/doc/match    | http://google.com/param?search=油猴 |
 
 ### include
 
