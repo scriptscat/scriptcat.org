@@ -3,6 +3,7 @@
 ## v0.6.2
 > 添加油猴`resource`的支持和修复bug
 
+* 支持`document-body`
 * 添加`GM_getResourceText`和`GM_getResourceURL`
 * 添加`include/match`的tld顶域匹配支持
 * 修复沙盒set属性问题
