@@ -95,6 +95,18 @@ match的别名
 ### connect
 获取网站的访问权限,请看`GM_cookie`和`GM_xmlhttpRequest`
 
+### resource 
+
+引入资源文件,声明完`@resource`后,可使用`GM_getResourceText`/`GM_getResourceURL`获取信息
+
+```js
+// @resource icon https://bbs.tampermonkey.net.cn/favicon.ico
+// @resource html https://bbs.tampermonkey.net.cn/
+// @resource xml https://bbs.tampermonkey.net.cn/sitemap.xml
+// 添加资源校验
+// @resource icon https://bbs.tampermonkey.net.cn/favicon.ico#md5=xxx;sha256=xxx
+```
+
 ### require
 
 引入外部js文件,可以进行[资源校验](#资源校验)

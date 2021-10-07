@@ -225,3 +225,12 @@ declare function GM_registerMenuCommand(name: string, listener: Function, access
 declare function GM_unregisterMenuCommand(id: number): void;
 ```
 
+### GM_getResourceText/GM_getResourceURL
+
+```js
+//GM_getResourceText 获取资源文本数据,image等byte类型的数据会返回空文本,需要使用GM_getResourceURL获取
+declare function GM_getResourceText(name: string): string | undefined;
+//GM_getResourceURL 获取经过base64后的数据
+declare function GM_getResourceURL(name: string): string | undefined
+```
+
