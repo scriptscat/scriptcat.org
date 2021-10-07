@@ -4,6 +4,7 @@
 > 添加油猴`resource`的支持和修复bug
 
 * 添加`GM_getResourceText`和`GM_getResourceURL`
+* 添加`include/match`的tld顶域匹配支持
 * 修复沙盒set属性问题
 * 修复`GM_registerMenuCommand`重复注册显示的问题
 * 修复更新页面脚本开启状态不一致的问题
