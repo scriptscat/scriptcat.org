@@ -1,7 +1,7 @@
 # 更新日志
 
 ## v0.6.2
-> 添加油猴`resource`的支持和修复bug
+> 支持某些油猴特性和修复bug
 
 * 支持`document-body`
 * 添加`GM_getResourceText`和`GM_getResourceURL`
