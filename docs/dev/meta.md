@@ -91,8 +91,8 @@ match的别名
 两个特殊的值:
 
 * **none**: 表示不在沙盒环境中运行,直接存在页面环境中,此环境下无法使用任何的GM API,可以直接访问页面的`window`对象.
+* **unsafeWindow**在沙盒环境中如果需要访问页面的`window`对象,需要使用`unsafeWindow`来进行访问.(tm不需要声明这个,为了兼容只能去了,好不规范啊.)
 
-* **unsafeWindow**在沙盒环境中如果需要访问页面的`window`对象,需要使用`unsafeWindow`来进行访问
 
 ### connect
 获取网站的访问权限,请看`GM_cookie`和`GM_xmlhttpRequest`
