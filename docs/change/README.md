@@ -4,6 +4,7 @@
 > 导入导出功能(兼容tampermonkey)和修复bug
 
 * 优化新建脚本的origin
+* 开启`GM_cookie`给前端脚本,并兼容tm的使用方法
 * 导入导出json文件(兼容tampermonkey)
 * 修复沙盒中无法使用eval的问题
 

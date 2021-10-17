@@ -8,11 +8,11 @@ API的详细定义,请看`tempermonkey.d.ts`或者内置编辑器提示,文档�
 ## 定义
 
 
-### GM_cookie *
+### GM_cookie
 
-> 本扩展特供,只能在后台脚本中使用,必须使用`@connect`声明操作的host,且经过用户授权才可使用.
+> 必须使用`@connect`声明操作的host,且经过用户授权才可使用.虽然兼容TM的`GM_cookie.list`操作,但是为了统一,不建议这样.
 > 
-> GM_getCookieStore 🧪 是实验性的
+> GM_getCookieStore 用于获取cookie储存空间id 🧪 是实验性的
 
 ```typescript
 declare function GM_cookie(action: GM_Types.CookieAction, details: GM_Types.CookieDetails, ondone: (cookie: GM_Types.Cookie[], error: any | undefined) => void): void;
