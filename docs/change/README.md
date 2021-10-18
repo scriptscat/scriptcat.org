@@ -6,6 +6,7 @@
 * 优化新建脚本的origin
 * 导入导出json文件(兼容tampermonkey)
 * 修复沙盒中无法使用eval的问题
+* 修复match错误会影响其它脚本的问题
 
 ## v0.6.3
 > 修复bug
