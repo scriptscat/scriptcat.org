@@ -1,5 +1,10 @@
 # 更新日志
 
+## v0.7.0
+> 支持vscode扩展开发
+
+* 支持vscode扩展开发
+
 ## v0.6.4
 > 导入导出功能(兼容tampermonkey)和修复bug
 
