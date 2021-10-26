@@ -1,6 +1,15 @@
 # 更新日志
 
-## v0.7.0
+## v0.7.1 (2021-10-26)
+> 修复一个比较严重的bug,编辑本地脚本uuid每次发生改变导致同步多次的问题. 
+> 
+> 支持vscode扩展开发和脚本市场支持,具体可以看此视频: [脚本猫配合vscode开发（demo，想看看大家有啥意见）](https://www.bilibili.com/video/BV16q4y157CP)
+
+### Bugs fixed:
+
+- 编辑本地脚本uuid每次发生改变导致同步多次的问题([`7175c6f`](https://github.com/scriptscat/scriptcat/commit/7175c6f36122d88fceb7b44be94e603eb7dd6129)) (@CodFrm)
+
+## v0.7.0 (2021-10-26)
 > 支持vscode扩展开发和脚本市场支持,具体可以看此视频: [脚本猫配合vscode开发（demo，想看看大家有啥意见）](https://www.bilibili.com/video/BV16q4y157CP)
 
 ### New feature:
