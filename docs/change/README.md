@@ -1,11 +1,12 @@
 # 更新日志
 
 ## v0.7.0
-> 支持vscode扩展开发和脚本市场支持
+> 支持vscode扩展开发和脚本市场支持,具体可以看此视频: [脚本猫配合vscode开发（demo，想看看大家有啥意见）](https://www.bilibili.com/video/BV16q4y157CP)
 
 ### New feature:
 
 - vscode代码同步([`5750fb6`](https://github.com/scriptscat/scriptcat/commit/5750fb6daa3317a3d793df5d8e68da4f44a520b1)) (@CodFrm)
+- 外部api用于脚本市场获取脚本状态([`8ce9ae9`](https://github.com/scriptscat/scriptcat/commit/8ce9ae990a735e17d4d1711cd17adcc299c39225)) (@CodFrm)
 - 脚本列表拖动排序([`d3aa7ab`](https://github.com/scriptscat/scriptcat/commit/d3aa7abc64fc09818b16221e36fe2fe3781da6c8)) (@CodFrm)
 - 通过链接安装([`00e4622`](https://github.com/scriptscat/scriptcat/commit/00e46227d42768b3e1d91abb8cc1f44948aca05b)) (@CodFrm)
 
