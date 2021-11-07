@@ -1,5 +1,17 @@
 # 更新日志
 
+## v0.7.2 (2021-11-07)
+> 在此之前的脚本猫对GM_XHR的返回contentType做了判断,如果是json类型会自动转换成json给脚本,现在兼容油猴的做法,不对此进行自动的转化,需要手动转化,或者加上responseType.可能会导致某些脚本出现兼容性问题.
+
+### New feature:
+
+- GM_XHR支持返回set-cookie和处理xhr.response兼容问题([`53bac0b`](https://github.com/scriptscat/scriptcat/commit/53bac0b82ff1e5da4cf4d9bed67f6cac74b46675)) (@CodFrm)
+- 脚本header悬停提示([`a0eabad`](https://github.com/scriptscat/scriptcat/commit/a0eabade47b775719c779b6ca63e4a86451338f7)) (@CodFrm)
+
+### Bugs fixed:
+
+- 安装脚本时代码对比反向问题([`bd769a0`](https://github.com/scriptscat/scriptcat/commit/bd769a01aa3e037d1b279ae958934565b2a7ac9b)) (@CodFrm)
+
 ## v0.7.1 (2021-10-26)
 > 修复一个比较严重的bug,编辑本地脚本uuid每次发生改变导致同步多次的问题. 
 > 
