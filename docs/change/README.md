@@ -1,5 +1,25 @@
 # 更新日志
 
+## v0.7.3 (2021-11-22)
+
+### New feature:
+
+- vscode自动连接([`dac2cc6`](https://github.com/scriptscat/scriptcat/commit/dac2cc6fed1de44a7e546989107892507b388837)) (@CodFrm)
+- 用户配置支持动态多选([`6bf5b29`](https://github.com/scriptscat/scriptcat/commit/6bf5b29f75ae2b2adeb35216c7bdd3393cdb7ec0)) (@CodFrm)
+- gm.xhr支持发送FormData数据([`693c410`](https://github.com/scriptscat/scriptcat/commit/693c410a7e7e0f96a947fef7c58ddd41f93cd8d4)) (@CodFrm)
+- 添加*.user.bg.js后台脚本后缀监听([`05021c1`](https://github.com/scriptscat/scriptcat/commit/05021c124899514db4a82bf262e89992b52f1f4f)) (@CodFrm)
+
+### Bugs fixed:
+
+- 兼容油猴的 responseType json处理([`0d75d86`](https://github.com/scriptscat/scriptcat/commit/0d75d86f55b3c6439c89ca28cd5712dbc125ba0c)) (@CodFrm)
+- responseType问题和gm_xhr url的相对位置处理([`288d751`](https://github.com/scriptscat/scriptcat/commit/288d75133c1b575c89365422cf6f8e23ee0cba9f)) (@CodFrm)
+- eval执行脚本内方法([`4d0e056`](https://github.com/scriptscat/scriptcat/commit/4d0e0569eeb13cad852b52149bb0ca7ec32b89bb)) (@CodFrm)
+- gm_xhr获取重定向后地址([`4906c79`](https://github.com/scriptscat/scriptcat/commit/4906c7950e5a4902f3d7262e431fac0034a5267b)) (@CodFrm)
+- 沙盒兼容问题&某些情况下sourceUrl不显示的问题([`85cb130`](https://github.com/scriptscat/scriptcat/commit/85cb130b016c41b71c58b81e9f422acdd694278a)) (@CodFrm)
+- 拉取数量显示错误([`106de02`](https://github.com/scriptscat/scriptcat/commit/106de02583ae08299ddd4d02fbfdd2140c9a7847)) (@CodFrm)
+- 某些情况下菜单注册后不显示([`aff0bb4`](https://github.com/scriptscat/scriptcat/commit/aff0bb4bf595b8fb63bf8827f53e3f5e84e11b95)) (@CodFrm)
+- 沙盒内可访问window上对象([`49a276c`](https://github.com/scriptscat/scriptcat/commit/49a276c00bb56e30186c70ee300b4ea58673aa50)) (@CodFrm)
+
 ## v0.7.2 (2021-11-07)
 > 在此之前的脚本猫对GM_XHR的返回contentType做了判断,如果是json类型会自动转换成json给脚本,现在兼容油猴的做法,不对此进行自动的转化,需要手动转化,或者加上responseType.可能会导致某些脚本出现兼容性问题.
 
