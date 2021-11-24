@@ -1,5 +1,13 @@
 # 更新日志
 
+## v0.7.4 (2021-11-24)
+
+### Bugs fixed:
+
+- eval问题 & GM_deleteValue 调用错误([`d668452`](https://github.com/scriptscat/scriptcat/commit/d668452b318174c985263f0a3ccca7d5afaa2239)) (@CodFrm)
+- FormData火狐无法clone导致错误([`e5190e3`](https://github.com/scriptscat/scriptcat/commit/e5190e3680e36e638f08085306ae05d9e5e44e2a)) (@CodFrm)
+
+
 ## v0.7.3 (2021-11-22)
 
 ### New feature:
