@@ -22,7 +22,24 @@
 
 如果上述列表中没有你的浏览器,可以从[Github Release](https://github.com/scriptscat/scriptcat/releases)页面中,下载`zip`/`crx`文件手动进行安装
 
+以基于Chromium内核的360浏览器为例：
 
+第一步
+![1](https://user-images.githubusercontent.com/90684083/143379356-7d04a0d4-602f-4b73-9d28-34a9bbd1dc4f.png)
+第二步
+![2](https://user-images.githubusercontent.com/90684083/143379375-c783b1d2-63bb-4726-8b25-2fd6e0dfd09f.png)
+第三步
+![3](https://user-images.githubusercontent.com/90684083/143379392-4cb8cffc-68b9-4677-96d4-06960aa9c49d.png)
+第四步
+![4](https://user-images.githubusercontent.com/90684083/143379403-02c96401-9e8f-42fe-a02e-a13897b9fabb.png)
+第五步
+![5](https://user-images.githubusercontent.com/90684083/143379409-ea7826b9-99dc-4b4f-bdae-b85c49e31b2a.png)
+第六步
+![6](https://user-images.githubusercontent.com/90684083/143379420-deac9199-7ed2-47ce-a3db-95bc93da4789.png)
+第七步
+![7](https://user-images.githubusercontent.com/90684083/143379432-9bc2e86f-5a0c-4323-b934-45f9be6c6b7f.png)
+
+通过以上步骤即可完成安装，并前往脚本站搜索想要安装的脚本
 
 ## 获取脚本
 
