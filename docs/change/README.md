@@ -1,5 +1,19 @@
 # 更新日志
 
+## v0.7.5 (2021-12-08)
+
+### Bugs fixed:
+- `GM_registerMenuCommand`某些情况注册不上([`70399b3`](https://github.com/scriptscat/scriptcat/commit/70399b3b137051e378a36d4ca33b07ea4cf68b1a)) (@CodFrm)
+- gm_xhr默认不带上origin([`70399b3`](https://github.com/scriptscat/scriptcat/commit/70399b3b137051e378a36d4ca33b07ea4cf68b1a)) (@CodFrm)
+- 沙盒中globalThis指向沙盒global([`c15913c`](https://github.com/scriptscat/scriptcat/commit/c15913c3fe6531d48c2b1a1f42702ee3dc11a966)) (@CodFrm)
+- 右侧悬浮按钮固定可能遮挡的问题([`84ed9a1`](https://github.com/scriptscat/scriptcat/commit/84ed9a105ab92cb5a057c3d15d9240bbc1ffbec7)) (@CodFrm)
+- unsafe header覆盖失败([`8a28a9c`](https://github.com/scriptscat/scriptcat/commit/8a28a9cadf49852a25d8c58b216489c70b3ddc18)) (@CodFrm)
+- GM_addStyle与tm管理器插入地方一致([`0375282`](https://github.com/scriptscat/scriptcat/commit/03752823d0a6f12d8dfefdf35bc19625719d066b)) (@CodFrm)
+
+### Perf
+- 图标加载速度优化([`5a74b19`](https://github.com/scriptscat/scriptcat/commit/5a74b193ac769e0af9481dff44577553449a3937)) (@CodFrm)
+
+
 ## v0.7.4 (2021-11-24)
 
 ### Bugs fixed:
