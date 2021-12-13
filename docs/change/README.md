@@ -1,5 +1,19 @@
 # 更新日志
 
+## 0.7.6 (2021-12-13)
+> 新增GM储存管理,开始尝试使用emoji来写changelog
+
+### Added
+
+- ✨ 储存增加重新加载与清空选项 [[db0559e](https://github.com/scriptscat/scriptcat/commit/db0559e32462d391136d455c64fd425413723484)]
+- ✨ GM储存管理([#15](https://github.com/scriptscat/scriptcat/issues/15)) [[6a13ff2](https://github.com/scriptscat/scriptcat/commit/6a13ff2c75222809cfd4696a8ed89de12b93cd87)]
+
+### Fixed
+
+- 🐛 修复gm_xhr的response为空的问题 [[8ae251a](https://github.com/scriptscat/scriptcat/commit/8ae251a81cf4e3167b70bdb71e2711de07e1f314)]
+- 🐛 修复同步时脚本错乱 [[606ac06](https://github.com/scriptscat/scriptcat/commit/606ac0652f1172ba0dd27c64b15437a51b0fca03)]
+- 🐛 修复框架组件icon不显示 [[72376db](https://github.com/scriptscat/scriptcat/commit/72376db39b02466951e7c4305a30e0ab1db21fb0)]
+
 ## v0.7.5 (2021-12-08)
 
 ### Bugs fixed:
@@ -20,7 +34,6 @@
 
 - eval问题 & GM_deleteValue 调用错误([`d668452`](https://github.com/scriptscat/scriptcat/commit/d668452b318174c985263f0a3ccca7d5afaa2239)) (@CodFrm)
 - FormData火狐无法clone导致错误([`e5190e3`](https://github.com/scriptscat/scriptcat/commit/e5190e3680e36e638f08085306ae05d9e5e44e2a)) (@CodFrm)
-
 
 ## v0.7.3 (2021-11-22)
 
