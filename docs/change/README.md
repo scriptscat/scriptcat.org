@@ -1,4 +1,13 @@
 # 更新日志
+## 0.7.7 (2021-12-17)
+
+### Fixed
+
+- 🐛 修复GM_setValue设置object实例时的错误 [[fa9dcbc](https://github.com/scriptscat/scriptcat/commit/fa9dcbcb39abb1de70eb0bee9fc72314958d44a8)]
+
+### Miscellaneous
+
+- 👔 只有中版本更新时才打开更新日志页面 [[74981dc](https://github.com/scriptscat/scriptcat/commit/74981dcbb3cd1e1cc31c3d88ababcabfc33529c5)]
 
 ## 0.7.6 (2021-12-13)
 > 新增GM储存管理,开始尝试使用emoji来写changelog
