@@ -11,14 +11,13 @@ API的详细定义,请看`tempermonkey.d.ts`或者内置编辑器提示,文档�
 ### GM_cookie
 
 > 必须使用`@connect`声明操作的host,且经过用户授权才可使用.虽然兼容TM的`GM_cookie.list`操作,但是为了统一,不建议这样.
-> 
-> GM_getCookieStore 用于获取cookie储存空间id 🧪 是实验性的
+
+
 
 ```typescript
 declare function GM_cookie(action: GM_Types.CookieAction, details: GM_Types.CookieDetails, ondone: (cookie: GM_Types.Cookie[], error: any | undefined) => void): void;
-// 通过tabid(前后端通信可能用到,ValueChangeListener会返回tabid),获取storeid,后台脚本用.
-declare function GM_getCookieStore(tabid: number, ondone: (storeId: number, error: any | undefined) => void): void;
 
+// store可通过tabid(前后端通信可能用到,ValueChangeListener会返回tabid),获取storeid,后台脚本用.
 declare namespace GM_Types {
     type CookieAction = "list" | "delete" | "set" | "store";
     interface CookieDetails {
@@ -90,9 +89,11 @@ declare namespace GM_Types {
 }
 ```
 
-### GM_xmlhttpRequest
+### GM_xmlhttpRequest *
 
 > 部分功能缺失,cookie功能firefox暂不支持,需要用户授权才可正常访问,使用`@connect`描述的host可跳过用户授权,其它需要进行ajax操作的API同理.
+
+对于anonymous和cookie相比tm做了特殊处理,anonymous为true且cookie存在时,发送的cookie为设置的cookie不会带上其他cookie
 
 ```typescript
 declare function GM_xmlhttpRequest(details: GM_Types.XHRDetails): GM_Types.AbortHandle<void>;
@@ -121,28 +122,27 @@ declare namespace GM_Types {
     type Listener<OBJ> = (event: OBJ) => any;
 
     interface XHRDetails {
-        method?: "GET" | "HEAD" | "POST",
-        url?: string,
-        headers?: { readonly [key: string]: string },
-        data?: string,
-        binary?: boolean,
-        timeout?: number,
-        context?: CONTEXT_TYPE,
-        responseType?: "arraybuffer" | "blob" | "json",
+        method?: 'GET' | 'HEAD' | 'POST' | 'PUT' | 'DELETE' | 'PATCH' | 'OPTIONS'
+        url: string
+        headers?: { [key: string]: string }
+        data?: string | FormData
+        cookie?: string
+        binary?: boolean
+        timeout?: number
+        responseType?: 'arraybuffer' | 'blob' | 'json'
         overrideMimeType?: string,
         anonymous?: boolean,
         fetch?: boolean,
-        username?: string,
+        user?: string,
         password?: string,
+        nocache?: boolean
 
         onload?: Listener<XHRResponse>,
         onloadstart?: Listener<XHRResponse>,
         onloadend?: Listener<XHRResponse>,
         onprogress?: Listener<XHRProgress>,
         onreadystatechange?: Listener<XHRResponse>,
-        ontimeout?: Function,
-        onabort?: Function,
-        onerror?: Function
+        ontimeout?: () => void,
     }
 }
 ```
@@ -151,9 +151,9 @@ declare namespace GM_Types {
 > 日志函数,后台脚本的日志将在控制面板的运行日志中看到(点击运行状态栏).相比于tm增加了一个日志的level.
 
 ```typescript
-declare function GM_log(message: string, level?: GM_Types.LOGGER_LEVEL): any;
+declare function GM_log(message: string, level?: GM_Types.LoggerLevel): any;
 declare namespace GM_Types {
-    type LOGGER_LEVEL = 'debug' | 'info' | 'warn' | 'error';
+    type LoggerLevel = 'debug' | 'info' | 'warn' | 'error';
 }
 ```
 
@@ -161,10 +161,11 @@ declare namespace GM_Types {
 > 从储存中获取或者设置值,数据在同一`namespace`中可以共享,且可以实时的同步.
 
 ```ts
+// 添加数据,请注意数据只能为bool;string;number;object四种类型,不能存储对象实例
 declare function GM_setValue(name: string, value: any): void;
-
+// 获取数据
 declare function GM_getValue(name: string, defaultValue?: any): any;
-
+// 删除数据,再获取会返回undefined或defaultValue
 declare function GM_deleteValue(name: string): void;
 ```
 
@@ -172,7 +173,7 @@ declare function GM_deleteValue(name: string): void;
 > 对值的监听操作,add会返回一个监听id,使用remove可以取消监听.后台脚本监听会返回tabid.
 
 ```ts
-// tabid是只有后台脚本监听才有的参数
+// tabid是只有后台脚本监听才有的参数,获得tabid后可以使用GM_cookie('store')获取页面的cookie储存空间
 type ValueChangeListener = (name: string, oldValue: any, newValue: any, remote: boolean, tabid?: number) => any;
 
 declare function GM_addValueChangeListener(name: string, listener: GM_Types.ValueChangeListener): number;
@@ -197,7 +198,23 @@ declare namespace GM_Types {
 }
 ```
 
+### GM_get/saveTab/GM_getTabs
+
+> 类似GM_setValue的一个储存数据的方法，但是本方法的生命周期为一个浏览器页面窗口的打开->关闭
+
+```ts
+// 获取tab数据
+declare function GM_getTab(callback: (obj: object) => any): void;
+// 保存tab数据
+declare function GM_saveTab(obj: object): void;
+// 获取所有tab数据
+declare function GM_getTabs(callback: (objs: { [key: number]: object }) => any): void;
+```
+
+
+
 ### GM_setClipboard
+
 > 设置剪辑板
 
 ```ts
