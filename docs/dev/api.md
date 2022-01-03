@@ -229,7 +229,7 @@ declare function GM_addStyle(css: string): HTMLElement;
 ```
 
 ### GM_registerMenuCommand
-> 注册一个菜单选项到弹出页面中,点击时会调用`listener`方法
+> 注册一个菜单选项到弹出页面中,点击时会调用`listener`方法,如果注册多个同名菜单,则只会第一个生效
 
 ```ts
 declare function GM_registerMenuCommand(name: string, listener: Function, accessKey?: string): number;
