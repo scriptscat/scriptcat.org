@@ -211,8 +211,6 @@ declare function GM_saveTab(obj: object): void;
 declare function GM_getTabs(callback: (objs: { [key: number]: object }) => any): void;
 ```
 
-
-
 ### GM_setClipboard
 
 > 设置剪辑板
@@ -244,10 +242,32 @@ declare function GM_unregisterMenuCommand(id: number): void;
 
 ### GM_getResourceText/GM_getResourceURL
 
-```js
+```ts
 //GM_getResourceText 获取资源文本数据,image等byte类型的数据会返回空文本,需要使用GM_getResourceURL获取
 declare function GM_getResourceText(name: string): string | undefined;
 //GM_getResourceURL 获取经过base64后的数据
 declare function GM_getResourceURL(name: string): string | undefined
 ```
 
+### GM_download
+
+下载文件,可设置header等内容
+
+```ts
+declare function GM_download(details: GM_Types.DownloadDetails): GM_Types.AbortHandle<boolean>;
+declare function GM_download(url: string, filename: string): GM_Types.AbortHandle<boolean>;
+
+declare namespace GM_Types {
+    interface DownloadDetails {
+        url: string,
+        name: string,
+        headers?: { readonly [key: string]: string },
+        saveAs?: boolean,
+        timeout?: number,
+        onerror?: Listener<DownloadError>,
+        ontimeout?: Listener<object>,
+        onload?: Listener<object>,
+        onprogress?: Listener<XHRProgress<void>>
+    }
+}
+```

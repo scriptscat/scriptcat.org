@@ -42,9 +42,16 @@ declare function CAT_clearProxy(): void;
 
 
 ### CAT_click 🧪
-> 真实点击
+> 真实点击,此API是测试性的,可能会修改和移除
 
 使用了[Input.dispatchMouseEvent](https://chromedevtools.github.io/devtools-protocol/tot/Input/#method-dispatchMouseEvent)实现,请确认元素在可视区域内,且坐标是相对于窗口的位置.
 ```ts
 declare function CAT_click(x: number, y: number): void
+```
+
+### CAT_createFile
+> 创建文件,将base64或者blob转化为文件进行下载,可在后台脚本中使用
+
+```ts
+declare function CAT_createFile(file: string | Blob, name: string, ondone: (download: boolean, error: any | undefined) => void);
 ```
