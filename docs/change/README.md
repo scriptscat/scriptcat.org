@@ -1,4 +1,36 @@
-# 更新日志
+
+# Changelog
+
+## 0.8.0 (2022-01-10)
+
+### Added
+
+- ✨ GM_download可以下载blob文件 [[2096137](https://github.com/scriptscat/scriptcat/commit/2096137bc77a3a2094d26e470c596667af651f4d)]
+- ✨ 实现GM_download函数 [[a06113c](https://github.com/scriptscat/scriptcat/commit/a06113ce07a964342e62462b5380e463b7247b1a)]
+- ✨ 支持zip格式导入导出 [[48d197c](https://github.com/scriptscat/scriptcat/commit/48d197c826504018e093e745377c2eb8bba5bf40)]
+- ✨ 实现GM_get/saveTab [[3f5085f](https://github.com/scriptscat/scriptcat/commit/3f5085fbf67bd315588bc7261ce2c14d02a3a81a)]
+
+### Changed
+
+- 🎨 修改eslint错误 [[5bdcbf9](https://github.com/scriptscat/scriptcat/commit/5bdcbf9afa9df31c4d0cc31ba4e359d8c87b04a2)]
+- ♻️ 重构导入导出 [[6cd369e](https://github.com/scriptscat/scriptcat/commit/6cd369e6d30a8b5938b3cd717356439ad2c8aa75)]
+- 🎨 修改GM_menu注册同名菜单只使第一个生效 [[bd16121](https://github.com/scriptscat/scriptcat/commit/bd1612105d4fd13af48c5152e379270dbfc60932)]
+- 🎨 修改eslint代码 [[d9b9af0](https://github.com/scriptscat/scriptcat/commit/d9b9af06f7a71629be8cdc6de98aa6d8b67f24e3)]
+- ⚡ 删除GM_getCookieStore使用GM_Cookie(&#x27;store&#x27;)操作 [[1ae5096](https://github.com/scriptscat/scriptcat/commit/1ae5096c903d6c984597ff46d4f41d4a03fb1b3b)]
+
+### Fixed
+
+- 🐛 修复对GM.*函数的支持 [[d9ee5c6](https://github.com/scriptscat/scriptcat/commit/d9ee5c6643cc3f2146c99703b58d786ca7e708da)]
+- 🐛 修复GM.xmlHttpRequest h大写的问题 [#26](https://github.com/scriptscat/scriptcat/issues/26) [[5ebf3aa](https://github.com/scriptscat/scriptcat/commit/5ebf3aa3057be8f8280dfee69784edff421651c7)]
+- 🐛 修复编辑页菜单栏样式错误 [[42b9a91](https://github.com/scriptscat/scriptcat/commit/42b9a91511f9dc1a225bea5568f6774123942ddf)]
+- 🐛 修复后台脚本调试时unsafeHeader发送错误 [[328ca18](https://github.com/scriptscat/scriptcat/commit/328ca1864a87dafa0b4e022cdd0dd7a52883a5ba)]
+- 🐛 修复沙盒内self、top、parent逃逸 [[eba7144](https://github.com/scriptscat/scriptcat/commit/eba71446e4b2206473284567a1cc6bac5ca5e045)]
+- 🐛 修复GM函数this问题 [[9eb92cc](https://github.com/scriptscat/scriptcat/commit/9eb92cca14df9d48a7b5800c49bc903a8b480de5)]
+
+### Miscellaneous
+
+- 👔 兼容油猴match http* [[9ebdeb9](https://github.com/scriptscat/scriptcat/commit/9ebdeb96d9988843de35f0ddad73b179bdfbf863)]
+
 ## 0.7.7 (2021-12-17)
 
 ### Fixed
