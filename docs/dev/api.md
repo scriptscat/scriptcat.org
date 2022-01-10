@@ -251,23 +251,34 @@ declare function GM_getResourceURL(name: string): string | undefined
 
 ### GM_download
 
-下载文件,可设置header等内容
+下载文件,可设置header等内容,相比tm多了cookie和anonymous的功能,如果为blob url,将会直接打开下载,只有onload事件,这是与tm不同的一个特性(为后台脚本无法创建下载而服务,可能会在一些生成报表的场景使用到)
 
 ```ts
 declare function GM_download(details: GM_Types.DownloadDetails): GM_Types.AbortHandle<boolean>;
 declare function GM_download(url: string, filename: string): GM_Types.AbortHandle<boolean>;
 
 declare namespace GM_Types {
+
+    interface DownloadError {
+        error: 'not_enabled' | 'not_whitelisted' | 'not_permitted' | 'not_supported' | 'not_succeeded' | 'unknown',
+        details?: string
+    }
+
     interface DownloadDetails {
+        method?: 'GET' | 'POST'
         url: string,
         name: string,
-        headers?: { readonly [key: string]: string },
+        headers?: { [key: string]: string }
         saveAs?: boolean,
         timeout?: number,
+        cookie?: string,
+        anonymous?: boolean
+
         onerror?: Listener<DownloadError>,
-        ontimeout?: Listener<object>,
+        ontimeout?: () => void,
         onload?: Listener<object>,
         onprogress?: Listener<XHRProgress<void>>
     }
+
 }
 ```

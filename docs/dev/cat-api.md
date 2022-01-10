@@ -49,9 +49,3 @@ declare function CAT_clearProxy(): void;
 declare function CAT_click(x: number, y: number): void
 ```
 
-### CAT_createFile
-> 创建文件,将base64或者blob转化为文件进行下载,可在后台脚本中使用
-
-```ts
-declare function CAT_createFile(file: string | Blob, name: string, ondone: (download: boolean, error: any | undefined) => void);
-```
