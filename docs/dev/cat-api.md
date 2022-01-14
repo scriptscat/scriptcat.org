@@ -48,4 +48,3 @@ declare function CAT_clearProxy(): void;
 ```ts
 declare function CAT_click(x: number, y: number): void
 ```
-

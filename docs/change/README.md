@@ -1,6 +1,21 @@
 
 # Changelog
 
+## 0.8.1 (2022-01-14)
+
+### Added
+
+- ✨ 脚本静默更新 [[aeeda0f](https://github.com/scriptscat/scriptcat/commit/aeeda0f710c9c22d1507d3edfb2b5e08a1bdc1e8)]
+- ✨ 兼容暴力猴导出脚本包 [[b477640](https://github.com/scriptscat/scriptcat/commit/b47764025d069b33733f4051cb910882df3c83f3)]
+- ✨ 新建脚本页面URL识别 [[429dd55](https://github.com/scriptscat/scriptcat/commit/429dd55657ef50f20231c9e414f1b24c2cad1d80)]
+- ✨ GM_xmlhttpRequest支持blob数据 [#29](https://github.com/scriptscat/scriptcat/issues/29) [[71a039f](https://github.com/scriptscat/scriptcat/commit/71a039f53e2212d80c32932493bc3cca186d05cd)]
+
+### Fixed
+
+- 🐛 修复Firefox unsafeHeader拦截问题 [#20](https://github.com/scriptscat/scriptcat/issues/20) [[757fe2c](https://github.com/scriptscat/scriptcat/commit/757fe2c12a30b45f3094119266ed3962ae51c3dc)]
+
+
+
 ## 0.8.0 (2022-01-10)
 
 ### Added

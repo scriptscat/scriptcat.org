@@ -93,7 +93,15 @@ declare namespace GM_Types {
 
 > 部分功能缺失,cookie功能firefox暂不支持,需要用户授权才可正常访问,使用`@connect`描述的host可跳过用户授权,其它需要进行ajax操作的API同理.
 
-对于anonymous和cookie相比tm做了特殊处理,anonymous为true且cookie存在时,发送的cookie为设置的cookie不会带上其他cookie
+对于anonymous和cookie相比tm做了特殊处理,anonymous为true且cookie存在时,发送的cookie为设置的cookie不会带上其他cookie.
+
+特殊header也是支持的:
+* user-agent
+* origin,
+* referer
+* cookie
+* host
+* ...
 
 ```typescript
 declare function GM_xmlhttpRequest(details: GM_Types.XHRDetails): GM_Types.AbortHandle<void>;
@@ -129,7 +137,7 @@ declare namespace GM_Types {
         cookie?: string
         binary?: boolean
         timeout?: number
-        responseType?: 'arraybuffer' | 'blob' | 'json'
+        responseType?: 'text' |'arraybuffer' | 'blob' | 'json'
         overrideMimeType?: string,
         anonymous?: boolean,
         fetch?: boolean,
@@ -200,7 +208,7 @@ declare namespace GM_Types {
 
 ### GM_get/saveTab/GM_getTabs
 
-> 类似GM_setValue的一个储存数据的方法，但是本方法的生命周期为一个浏览器页面窗口的打开->关闭
+> 类似GM_setValue的一个储存数据的方法,但是本方法的生命周期为一个浏览器页面窗口的打开->关闭,后台脚本中无法使用
 
 ```ts
 // 获取tab数据
