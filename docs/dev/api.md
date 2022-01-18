@@ -169,7 +169,7 @@ declare namespace GM_Types {
 ```
 
 ### GM_get/set/deleteValue
-> 从储存中获取或者设置值,数据在同一`namespace`中可以共享,且可以实时的同步.
+> 从储存中获取或者设置值,数据在同一[**storageName**](meta.md#storagename-%F0%9F%A7%AA)中可以共享,且可以实时的同步.
 
 ```ts
 // 添加数据,请注意数据只能为bool;string;number;object四种类型,不能存储对象实例
@@ -181,7 +181,7 @@ declare function GM_deleteValue(name: string): void;
 ```
 
 ### GM_add/removeValueChangeListener *
-> 对值的监听操作,add会返回一个监听id,使用remove可以取消监听.后台脚本监听会返回tabid.
+> 对值的监听操作,add会返回一个监听id,使用remove可以取消监听.后台脚本监听会返回tabid.可以使用这个方法实现一个简单的通信,使用[**storageName**](meta.md#storagename-%F0%9F%A7%AA)可以实现跨脚本通信.
 
 ```ts
 // tabid是只有后台脚本监听才有的参数,获得tabid后可以使用GM_cookie('store')获取页面的cookie储存空间
