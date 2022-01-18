@@ -91,7 +91,7 @@ declare namespace GM_Types {
 
 ### GM_xmlhttpRequest *
 
-> 部分功能缺失,cookie功能firefox暂不支持,需要用户授权才可正常访问,使用`@connect`描述的host可跳过用户授权,其它需要进行ajax操作的API同理.
+> 部分功能缺失,cookie功能firefox暂不支持.需要用户授权才可正常访问,使用`@connect`描述的host可跳过用户授权,其它需要进行ajax操作的API同理.
 
 对于anonymous和cookie相比tm做了特殊处理,anonymous为true且cookie存在时,发送的cookie为设置的cookie不会带上其他cookie.
 
@@ -102,6 +102,8 @@ declare namespace GM_Types {
 * cookie
 * host
 * ...
+
+增加了maxRedirects参数,可控制请求的最大重定向次数,为0表示禁止重定向.
 
 ```typescript
 declare function GM_xmlhttpRequest(details: GM_Types.XHRDetails): GM_Types.AbortHandle<void>;
@@ -144,6 +146,7 @@ declare namespace GM_Types {
         user?: string,
         password?: string,
         nocache?: boolean
+        maxRedirects?: number
 
         onload?: Listener<XHRResponse>,
         onloadstart?: Listener<XHRResponse>,

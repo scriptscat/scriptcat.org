@@ -58,9 +58,9 @@
 
 ## Promise
 
-> 十分推荐这种写法,也便于脚本管理器的脚本监控
+十分推荐这种写法,也便于脚本管理器的脚本监控,对于有异步执行的,必须使用`Promise`.
 
-脚本返回`Promise`对象,管理器可以将返回的内容当作日志记录下来.
+脚本返回`Promise`对象,管理器也可以将返回的内容当作日志记录下来.
 
 ```ts
 // ==UserScript==
@@ -80,7 +80,6 @@ return new Promise((resolve, reject) => {
 ```
 
 
-
 ```js
 // ==UserScript==
 // @name         每天运行一次的定时脚本
@@ -98,7 +97,7 @@ return new Promise((resolve, reject) => {
 });
 ```
 
-请注意将`resolve/reject`的操作放入执行完毕后的步骤中,`resolve/reject`后管理器会认为脚本执行完毕,后续的所有GM操作将不会生效.
+请注意将`resolve/reject`的操作放入执行完毕后的步骤中,`resolve/reject`后管理器会认为脚本执行完毕,后续的所有GM操作将不会生效.如果是希望持续运行的后台脚本,可以不调用`resolve`.
 ```js
 // ==UserScript==
 // @name         请求API
