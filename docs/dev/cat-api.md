@@ -33,7 +33,6 @@ declare namespace CAT_Types {
 
 
 ### CAT_clearProxy
-
 > 清理代理
 
 ```typescript

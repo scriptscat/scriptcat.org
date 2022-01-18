@@ -1,7 +1,6 @@
 # 后台脚本
 
-> 后台脚本适用于持续运行类型的脚本.后台脚本是脚本猫特有的脚本.
-
+后台脚本适用于持续运行类型的脚本.后台脚本是脚本猫特有的脚本,后台脚本运行在沙盒中,无法操作dom对象.可使用与油猴一致的GM API进行开发,对于兼容性会在文档中标出.
 
 
 ## 后台脚本
@@ -99,3 +98,23 @@ return new Promise((resolve, reject) => {
 });
 ```
 
+请注意将`resolve/reject`的操作放入执行完毕后的步骤中,`resolve/reject`后管理器会认为脚本执行完毕,后续的所有GM操作将不会生效.
+```js
+// ==UserScript==
+// @name         请求API
+// @namespace    wyz
+// @version      1.0.0
+// @author       wyz
+// @crontab      * * once * *
+// ==/UserScript==
+return new Promise((resolve, reject) => {
+    GM_xmlhttpRequest({
+        url: 'https://bbs.tampermonkey.net.cn/',
+        onload() {
+            resolve('ok');// 执行成功
+        }, onerror() {
+            reject('error');// 执行失败,并返回错误原因
+        }
+    });
+});
+```
