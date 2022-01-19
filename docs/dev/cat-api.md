@@ -9,7 +9,7 @@
 
 
 ### CAT_setProxy
-> 设置代理,请注意本功能会与Proxy SwitchyOmega类型的扩展冲突.可以多个脚本使用代理,不会产生冲突.(例如一个脚本提供Google访问,一个脚本提供推特访问)
+设置代理,请注意本功能会与Proxy SwitchyOmega类型的扩展冲突.可以多个脚本使用代理,不会产生冲突.(例如一个脚本提供Google访问,一个脚本提供推特访问)
 
 请先了解[PAC](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file)和[PAC中Chromium 完整网址限制](https://github.com/FelisCatus/SwitchyOmega/wiki/Chromium-%E5%AE%8C%E6%95%B4%E7%BD%91%E5%9D%80%E9%99%90%E5%88%B6)
 
@@ -33,7 +33,7 @@ declare namespace CAT_Types {
 
 
 ### CAT_clearProxy
-> 清理代理
+清理代理
 
 ```typescript
 declare function CAT_clearProxy(): void;
@@ -41,7 +41,7 @@ declare function CAT_clearProxy(): void;
 
 
 ### CAT_click 🧪
-> 真实点击,此API是测试性的,可能会修改和移除
+真实点击,此API是测试性的,可能会修改和移除
 
 使用了[Input.dispatchMouseEvent](https://chromedevtools.github.io/devtools-protocol/tot/Input/#method-dispatchMouseEvent)实现,请确认元素在可视区域内,且坐标是相对于窗口的位置.
 ```ts
