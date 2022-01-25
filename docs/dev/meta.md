@@ -52,7 +52,7 @@
 
 ### storageName 🧪
 
-`Value`的存储空间，同一`storageName`下的数据可以共享和通信.
+`Value`的存储空间，同一`storageName`下的数据可以共享和通信.这是脚本猫独有的.
 
 ### background
 

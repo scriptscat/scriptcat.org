@@ -1,6 +1,24 @@
 
 # Changelog
 
+## 0.8.2 (2022-01-22)
+> 2022年的最后一个版本,提前祝大家新年快乐！🎇
+
+### Added
+
+- ✨ GM_xhr 支持maxRedirects [[4d29cae](https://github.com/scriptscat/scriptcat/commit/4d29caeb78d9e3f7d94f31a2d3fd3e1d56279ab9)]
+
+### Fixed
+
+- 🐛 修复订阅@connect错误的问题 [[247db9c](https://github.com/scriptscat/scriptcat/commit/247db9ce06e584c4962094a70bcc094f5028adab)]
+- 🐛 修复端口通配的问题 [#30](https://github.com/scriptscat/scriptcat/issues/30) [[f5183bd](https://github.com/scriptscat/scriptcat/commit/f5183bd4d6ce7866fececa9aeed8146730d980bd)]
+- 🐛 修复GM_xhr返回值和GM_delValue删除错误 [[45fb304](https://github.com/scriptscat/scriptcat/commit/45fb30410caedccf82ea0298d612c3a015adbaea)]
+- 🐛 修复沙盒兼容 [[82ceea9](https://github.com/scriptscat/scriptcat/commit/82ceea9407103f05c67a0ae60b46cde6ea25429d)]
+- 🐛 修复某些时候超时才打开权限确认窗口的问题 [[b861869](https://github.com/scriptscat/scriptcat/commit/b8618697bf50bed8840e0f0199162d399b8702c9)]
+- 🐛 修复火狐url获取错误的问题 [[854dd26](https://github.com/scriptscat/scriptcat/commit/854dd26272526f674341e7c119d93a8fce7a271c)]
+- 💚 修复ci打包版本号错误 [[b218cf4](https://github.com/scriptscat/scriptcat/commit/b218cf487828273d033f4bdb0a5bc6f146c31e87)]
+
+
 ## 0.8.1 (2022-01-14)
 
 ### Added
