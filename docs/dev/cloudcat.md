@@ -1,6 +1,6 @@
 # 云端执行
 
-[CloudCat](https://github.com/scriptscat/cloudcat)是用于云端执行后台脚本的服务.
+> 提供了多种云端的运行方式，详情请看[运行环境](#运行环境)。另外[CloudCat](https://github.com/scriptscat/cloudcat)是用于云端执行后台脚本的服务，是一个FAAS平台，还在开发中。
 
 ⚠请注意⚠,上传到云端后,定时脚本表达式中的`once`语义会进行改变,将`once`之前的时间替换成最小值运行.
 
@@ -16,13 +16,19 @@
 
 ## CloudCat附加描述
 
+一个参考的脚本：[bilibili自动签到](https://scriptcat.org/script-show-page/48)
+
 ### cloudCat
 
-声明此脚本可以使用`CloudCat`运行
+声明此属性脚本可以使用`CloudCat`方式运行，当脚本有此选项后在脚本列表中会显示一个云端执行的按钮，点击后可以选择执行方式，执行方式请看[运行环境](#运行环境)
+
+![image-20220203225847694](./cloudcat.assets/image-20220203225847694.png)
 
 ### cloudServer
 
-默认的云服务器地址
+> 与cloudcat相关,还未实现
+
+默认的cloudcat服务器地址
 
 
 ### exportValue
@@ -59,4 +65,25 @@
 
 
 ### GM_log
+
+
+
+## 运行环境
+
+### 本地
+
+将导出一个zip包,解压进入文件夹后执行如下命令,可在本地执行,需要本地有nodejs的环境
+
+```bash
+npm i
+node index.js
+```
+
+
+
+### 腾讯云
+
+请先在[**访问密钥**](https://console.cloud.tencent.com/cam/capi)创建腾讯云的密钥，如果是子账号请注意需要给子账号分配云函数的权限；然后在[**函数服务**](https://console.cloud.tencent.com/scf/list)开通函数服务，每个月有一定的免费额度；地域默认为上海，如有特殊需求可自行调整，点击上传后会自动根据`@crontab`创建定时触发器，定时运行函数。
+
+![image-20220203224956248](./cloudcat.assets/image-20220203224956248.png)
 
