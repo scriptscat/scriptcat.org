@@ -66,7 +66,9 @@
 
 ### GM_log
 
+### GM_getValue
 
+暂时只支持获取`@exportValue`导出的value,不支持set/delete/list等方法
 
 ## 运行环境
 
@@ -78,7 +80,6 @@
 npm i
 node index.js
 ```
-
 
 
 ### 腾讯云

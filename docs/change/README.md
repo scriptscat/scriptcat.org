@@ -1,8 +1,33 @@
 
 # Changelog
 
+## 0.9.0 (2022-02-14)
+> 支持一键上云啦！！！两个参考的脚本: [bilibili自动签到](https://scriptcat.org/script-show-page/48),[掘金签到和自动抽奖](https://scriptcat.org/script-show-page/303)
+
+### Added
+
+- 💥 支持腾讯云函数执行 [[20ead08](https://github.com/scriptscat/scriptcat/commit/20ead086e78c6866be58939874c47a9159e12ca5)]
+- 💥 导出可执行的nodejs包 [[7b8466f](https://github.com/scriptscat/scriptcat/commit/7b8466f1b88fd7937b745b1d4594d723543614bb)]
+- ✨ 脚本列表页浮动按钮隐藏按钮 [#37](https://github.com/scriptscat/scriptcat/issues/37) [[a16efb0](https://github.com/scriptscat/scriptcat/commit/a16efb0d3b6139e257b5d5f58219c39572d961f7)]
+- ✨ 腾讯云触发器 [[a706827](https://github.com/scriptscat/scriptcat/commit/a706827c693831e411b678f2b09297192213c41e)]
+
+### Changed
+
+- ⚡ 优化部署模板 [[9f2595a](https://github.com/scriptscat/scriptcat/commit/9f2595af18f1c15af20a6a07309d66442eec00d1)]
+- ⬆️ 升级依赖、处理babel [[ab7bc9b](https://github.com/scriptscat/scriptcat/commit/ab7bc9bc8bf213aa17964facf7369642df6455e7)]
+
+### Fixed
+
+- 🐛 修复在同tab上切换url不会清空掉老脚本导致错误加载的问题 [[37b88fb](https://github.com/scriptscat/scriptcat/commit/37b88fba5f546f893234b4934bf84809557f9f05)]
+- 🐛 修复match兼容问题 [[d919e8a](https://github.com/scriptscat/scriptcat/commit/d919e8a943552dd5bdff9de4ec2befd5c57f96f1)]
+- 🐛 修复后台脚本无法处理blob的问题 [#34](https://github.com/scriptscat/scriptcat/issues/34) [[7b81677](https://github.com/scriptscat/scriptcat/commit/7b816773a811abb7933db244c35bda60031001b5)]
+
+### Miscellaneous
+
+- 📄 修改License为GPLv3 [[dfa0231](https://github.com/scriptscat/scriptcat/commit/dfa0231f2826b910f4e855509f99a97c6a2f7cdd)]
+
 ## 0.8.2 (2022-01-22)
-> 2022年的最后一个版本,提前祝大家新年快乐！🎇
+> 2021年的最后一个版本,提前祝大家新年快乐！🎇
 
 ### Added
 
