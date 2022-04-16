@@ -1,3 +1,5 @@
+// 新版本已废弃, 请使用docs/.vuepress/sidebar.ts, 保留是为了未来可能的国际化
+
 import type { SidebarConfig } from "@vuepress/theme-default";
 
 export const zh: SidebarConfig = {

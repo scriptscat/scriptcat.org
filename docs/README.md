@@ -6,7 +6,7 @@ tagline: 可以执行自定义脚本的浏览器扩展
 heroImage: /logo.png
 title: 首页
 actions:
-  - text: 快速开始 💡
+  - text: 开始使用 💡
     link: /use/
     type: primary
 

@@ -3,7 +3,7 @@ import navbar from "./navbar";
 import sidebar from "./sidebar";
 
 export default defineThemeConfig({
-  hostname: "https://hangover1230.github.io/vuepress-blog/", // 当前网站部署到的域名
+  hostname: "https://docs.scriptcat.org", // 当前网站部署到的域名
 
   iconPrefix: "iconfont icon-", // 图标的 FontClass 前缀
 
@@ -21,7 +21,7 @@ export default defineThemeConfig({
 
   footer: "Released under the MIT License Copyright © 2021-2022 ScriptCat 脚本猫", // 页脚
 
-  editLink: false, // 是否展示编辑此页链接
+  editLink: true, // 是否展示编辑此页链接
 
   displayFooter: true, // 是否默认显示页脚
 
@@ -43,10 +43,10 @@ export default defineThemeConfig({
 
   plugins: {
 
-    /* copyright: { // 版权信息
+    copyright: { // 版权信息
       global: true,
-      author: "Hangover",
-    }, */
+      author: "ScriptCat",
+    },
 
     search: { // 搜索插件
       locales: {
