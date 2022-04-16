@@ -8,7 +8,8 @@ export default defineHopeConfig({
 
   base: "/", // 部署站点的基础路径 默认："/"
 
-  head: [ // 在最终渲染出的 HTML 的 <head> 标签内加入的额外标签
+  head: [
+    // 在最终渲染出的 HTML 的 <head> 标签内加入的额外标签
     [
       "link",
       {
@@ -24,6 +25,8 @@ export default defineHopeConfig({
       },
     ],
   ],
+
+  dest: "./dist",
 
   themeConfig,
 });
