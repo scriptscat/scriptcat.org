@@ -1,17 +1,19 @@
 {
-  "name": "vuepress-project",
+  "name": "scriptcat.org",
   "version": "1.0.0",
-  "description": "",
+  "description": "脚本猫文档",
   "main": "index.js",
+  "author": "Junzhou Liu <Junzhou2016@outlook.com>",
+  "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "docs:clean-dev": "vuepress dev docs --clean-cache"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "scriptcat"
+  ],
   "devDependencies": {
     "@vuepress/plugin-search": "^2.0.0-beta.38",
     "vuepress": "^2.0.0-beta.39",
