@@ -9,7 +9,11 @@ export default defineThemeConfig({
 
   logo: "/logo.png", // 导航栏图标
 
-  repo: "scriptscat/scriptcat.org", // github 仓库，用于在导航栏中显示仓库链接
+  repo: "scriptscat/scriptcat", // github 仓库，用于在导航栏中显示仓库链接
+
+  docsRepo: "scriptscat/scriptcat.org",
+
+  docsDir: "/docs",
 
   // docsDir: "demo/src", // 文档在仓库中的目录
 
@@ -19,7 +23,8 @@ export default defineThemeConfig({
   // 侧边栏
   sidebar: sidebar,
 
-  footer: "Released under the MIT License Copyright © 2021-2022 ScriptCat 脚本猫", // 页脚
+  footer:
+    "Released under the MIT License Copyright © 2021-2022 ScriptCat 脚本猫", // 页脚
 
   editLink: true, // 是否展示编辑此页链接
 
@@ -27,7 +32,8 @@ export default defineThemeConfig({
 
   pageInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime"], // 文章信息
 
-  themeColor: { // 主题色
+  themeColor: {
+    // 主题色
     blue: "#2196f3",
     skyblue: "#87ceeb",
     red: "#f26d6d",
@@ -42,13 +48,14 @@ export default defineThemeConfig({
   }, */
 
   plugins: {
-
-    copyright: { // 版权信息
+    copyright: {
+      // 版权信息
       global: true,
       author: "ScriptCat",
     },
 
-    search: { // 搜索插件
+    search: {
+      // 搜索插件
       locales: {
         "/": {
           placeholder: "搜索",
@@ -56,7 +63,8 @@ export default defineThemeConfig({
       },
     },
 
-    mdEnhance: { // Markdown 增强功能
+    mdEnhance: {
+      // Markdown 增强功能
       enableAll: true, // 启用全部功能
       presentation: {
         plugins: ["highlight", "math", "search", "notes", "zoom"],
