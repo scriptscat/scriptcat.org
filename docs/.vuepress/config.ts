@@ -1,76 +1,29 @@
-import { navbar, sidebar } from './configs'
+import { defineHopeConfig } from "vuepress-theme-hope";
+import themeConfig from "./themeConfig";
 
-const isProd = process.env.NODE_ENV === 'production'
+export default defineHopeConfig({
+  lang: "zh-CN", // 站点的语言
 
-module.exports = {
-  base: '/',
-  lang: "zh-CN",
-  title: "脚本猫",
-  description: "一个可以执行用户脚本的浏览器扩展,万物皆可脚本化,让你的浏览器可以做更多的事情!",
-  head: [["link", { rel: "icon", href: "/images/logo.png" }]],
+  title: "ScriptCat", // 站点的标题
 
-  themePlugins: {
-    // only enable git plugin in production mode
-    git: isProd,
-  },
+  base: "/", // 部署站点的基础路径 默认："/"
 
-  themeConfig: {
-    logo: "/images/logo.png",
-    repo: "scriptscat/scriptcat.org",
-    repoLabel: 'GitHub',
-    editLinks: true,
-    docsDir: 'docs',
-    locales: {
-
-      '/': {
-        // navbar
-        navbar: navbar.zh,
-
-        // sidebar
-        sidebar: sidebar.zh,
-
-        // page meta
-        editLinkText: '在 GitHub 上编辑此页',
-        lastUpdated: '最后更新',
-      },
-
-    },
-
-  },
-
-
-
-  markdown: {
-    // importCode: {
-    //   handleImportPath: (str) =>
-    //     str.replace(
-    //       /^@vuepress/,
-    //       path.resolve(__dirname, '../../packages/@vuepress')
-    //     ),
-    // },
-  },
-
-
-  plugins: [
+  head: [ // 在最终渲染出的 HTML 的 <head> 标签内加入的额外标签
     [
-      '@vuepress/plugin-google-analytics',
+      "link",
       {
-        'id': 'G-7MBECV28JV'
-      }
-    ]
-  ],
-
-  module: {
-    rules: [
-      {
-        test: /\.(png|jpe?g|gif)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-          },
-        ],
+        rel: "stylesheet",
+        href: "//at.alicdn.com/t/font_2410206_mfj6e1vbwo.css",
       },
     ],
-  },
+    [
+      "link",
+      {
+        rel: "icon",
+        href: "logo.png",
+      },
+    ],
+  ],
 
-};
+  themeConfig,
+});

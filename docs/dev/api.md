@@ -1,4 +1,10 @@
+---
+icon: api
+---
+
+
 # API 文档
+
 ## 说明
 
 本扩展api定义参考[tampermonkey文档](https://www.tampermonkey.net/documentation.php),由于时间和精力问题,只实现了部分API,后续将继续迭代,本扩展进行扩充或者与原GM不同的API将在文档中特殊标注(使用\*号).对于某些API还提供了同步函数,同步函数规则:GM.*,具体请看文档内容.
