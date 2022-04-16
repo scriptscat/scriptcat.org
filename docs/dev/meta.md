@@ -1,3 +1,8 @@
+---
+icon: write
+---
+
+
 # 描述文档
 
 `==UserScript==` 中的内容,用于描述脚本所需要的权限和脚本的信息作用等,在脚本的最开始的位置.
@@ -171,6 +176,3 @@ match的别名
 ```js
 // @require https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js#md5=d55836f30c097da753179f82fa6f108f;sha256=a476ab8560837a51938aa6e1720c8be87c2862b6221690e9de7ffac113811a90
 ```
-
-
-

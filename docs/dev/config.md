@@ -1,3 +1,8 @@
+---
+icon: config
+---
+
+
 # 用户配置
 
 `==UserConfig==` 中的内容,应该在`==UserScript==` 后方,表示脚本的一些用户配置.配置信息的描述使用[yaml](https://yaml.org/)格式来进行编写:
@@ -59,5 +64,4 @@ group2:
 
 在此处定义完成后,将会在控制面板中显示配置按钮,供用户配置,开发者使用`GM_getValue`获取配置的值,key使用`group.config`来表示.
 
-![](./config.assets/image-20210621213013631.png)
-
+![](/config/image-20210621213013631.png)

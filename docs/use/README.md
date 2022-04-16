@@ -1,3 +1,8 @@
+---
+icon: creative
+---
+
+
 # 快速开始
 
 > 脚本猫,一个可以执行用户脚本的浏览器扩展,万物皆可脚本化,让你的浏览器可以做更多的事情!
@@ -64,6 +69,3 @@
 ### GitHub/Gist
 
 你可以[在 Github 和 Gist 中 搜索脚本资源。](https://gist.github.com/search?l=JavaScript&o=desc&q="%3D%3DUserScript%3D%3D"&s=updated)
-
-
-

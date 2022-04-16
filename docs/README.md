@@ -1,31 +1,36 @@
 ---
 home: true
-heroImage: images/logo.png
+icon: home
 heroText: ScriptCat
 tagline: 可以执行自定义脚本的浏览器扩展
+heroImage: /logo.png
+title: 首页
 actions:
-  - text: 开始使用
-    link: /use/index.html
-  - text: 开发指南
-    link: /dev/index.html
-  - text: GitHub仓库
-    link: https://github.com/scriptscat/scriptcat
-    extraClass: github grey
-    icon: fa fa-github
-    target: _blank
+  - text: 快速开始 💡
+    link: /use/
+    type: primary
+
+  - text: 开发指南 🛠
+    link: /dev/
+    type: primary
+
 features:
-  - title: 易用
+  - title: 简单易用
+    icon: creative
     details: 安装扩展->安装脚本->开始使用
+
   - title: 特色功能
-    details: 实现了一个后台脚本运行的框架,提供了一些特殊的API,让脚本能够做更多的事情.
+    icon: flower
+    details: 实现了一个后台脚本运行的框架,提供了一些特殊的API,让脚本能够做更多的事情
+
   - title: 支持平台
+    icon: launch
     details: 常见的全部浏览器 Chrome Edge Firefox
-    
-footer: 
-    Released under the MIT License Copyright © 2021-2021 ScriptCat 脚本猫
 ---
 
-> 脚本猫,一个可以执行用户脚本的浏览器扩展,万物皆可脚本化,让你的浏览器可以做更多的事情!
+
+::: info 脚本猫,一个可以执行用户脚本的浏览器扩展,万物皆可脚本化,让你的浏览器可以做更多的事情!
+:::
 
 ![GitHub stars](https://img.shields.io/github/stars/scriptscat/scriptcat.svg)
 [![Build Status](https://github.com/scriptscat/scriptcat/workflows/build/badge.svg?branch=master)](https://github.com/scriptscat/scriptcat)
@@ -34,7 +39,6 @@ footer:
 [![Edge](https://img.shields.io/badge/edge-sucess-brightgreen?logo=microsoft%20edge)](https://microsoftedge.microsoft.com/addons/detail/scriptcat/liilgpjgabokdklappibcjfablkpcekh)
 [![FireFox](https://img.shields.io/badge/firefox-sucess-brightgreen?logo=firefox)](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/)
 ![GitHub All Releases](https://img.shields.io/github/downloads/scriptscat/scriptcat/total)
-
 
 ## 关于脚本猫
 
