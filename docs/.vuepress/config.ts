@@ -26,6 +26,15 @@ export default defineHopeConfig({
     ],
   ],
 
+  plugins: [
+    [
+      "@vuepress/google-analytics",
+      {
+        id: "G-7MBECV28JV",
+      },
+    ],
+  ],
+
   dest: "./dist",
 
   themeConfig,
