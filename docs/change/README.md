@@ -3,9 +3,27 @@ sidebar: false
 icon: editor
 ---
 
-# Changelog
+## 0.9.1 (2022-04-30)
+> 一些功能修复和代码优化
 
-## 0.9.0 (2022-02-14)
+### Added
+
+- ✨ 优化跨域资源确定逻辑 [#56](https://github.com/scriptscat/scriptcat/issues/56) [[9144e3b](https://github.com/scriptscat/scriptcat/commit/9144e3bc209c23c494a475234ea62e93c28885a1)]
+
+### Changed
+
+- ⚡ 优化日志组件 [[8a8fef2](https://github.com/scriptscat/scriptcat/commit/8a8fef2c1fc0a7e11d43b6c261f4326cbbd77123)]
+
+### Removed
+
+- 🔥 废弃proxy功能 [#60](https://github.com/scriptscat/scriptcat/issues/60) [[1ee42ad](https://github.com/scriptscat/scriptcat/commit/1ee42ad9f0927af9a5942e2a205755d15c07b0e5)]
+
+### Fixed
+
+- 🐛 修复脚本/订阅检查更新间隔无法设置的问题 [[998c9f9](https://github.com/scriptscat/scriptcat/commit/998c9f909efc6dc7fc0ee6effd23153ae6efd493)]
+- 🐛 修复调试脚本时getValue获取旧值 [[75215e3](https://github.com/scriptscat/scriptcat/commit/75215e3b43b846faee1b0a80d29d6c892a828047)]
+
+# 0.9.0 (2022-02-14)
 > 支持一键上云啦！！！两个参考的脚本: [bilibili自动签到](https://scriptcat.org/script-show-page/48),[掘金签到和自动抽奖](https://scriptcat.org/script-show-page/303)
 
 ### Added
