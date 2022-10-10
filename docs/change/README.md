@@ -3,6 +3,21 @@ sidebar: false
 icon: editor
 ---
 
+## 0.9.2 (2022-10-10)
+> 时隔半年的更新，本次更新只做了兼容性的修复。。。。
+> 
+> 近期开始重构脚本猫了（架子已合并到main分支），在v0.10.x将做出大改变，这是向v1.0.0过渡的第一步，预计11月左右完成，绝对不🐦，另外v0.10.0将会有以下不兼容的变动：
+> - [v0.10.0将取消云同步](https://github.com/scriptscat/scriptcat/issues/99)，但会新增网盘同步
+
+### Removed
+
+- 🔥 移除扩展debugger权限 [[75bc958](https://github.com/scriptscat/scriptcat/commit/75bc958f6257a25408fcb47b6546096ffdeb0d1d)]
+
+### Fixed
+
+- 🐛 修复GM_info的兼容问题 [[7d030b0](https://github.com/scriptscat/scriptcat/commit/7d030b0f28c4ae1cd3e84df8144dc97ccb649ce2)]
+
+
 ## 0.9.1 (2022-04-30)
 > 一些功能修复和代码优化
 
@@ -23,7 +38,7 @@ icon: editor
 - 🐛 修复脚本/订阅检查更新间隔无法设置的问题 [[998c9f9](https://github.com/scriptscat/scriptcat/commit/998c9f909efc6dc7fc0ee6effd23153ae6efd493)]
 - 🐛 修复调试脚本时getValue获取旧值 [[75215e3](https://github.com/scriptscat/scriptcat/commit/75215e3b43b846faee1b0a80d29d6c892a828047)]
 
-# 0.9.0 (2022-02-14)
+## 0.9.0 (2022-02-14)
 > 支持一键上云啦！！！两个参考的脚本: [bilibili自动签到](https://scriptcat.org/script-show-page/48),[掘金签到和自动抽奖](https://scriptcat.org/script-show-page/303)
 
 ### Added
