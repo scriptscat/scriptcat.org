@@ -7,21 +7,22 @@ icon: editor
 
 > 时隔半年的更新，本次更新只做了兼容性的修复。。。。
 >
-> 近期开始重构脚本猫了（架子已合并到 main 分支），在 v0.10.x 将做出大改变，这是向 v1.0.0 过渡的第一步，预计 11 月左右完成，绝对不 🐦，另外 v0.10.0 将会有以下不兼容的变动：
+> 近期开始重构脚本猫了（架子已合并到 main 分支），在 v0.10.x 将做出大改变，这是向 v1.0.0 过渡的第一步，预计 11 月左右完成，绝对不
+> 🐦，另外 v0.10.0 将会有以下不兼容的变动：
 >
 > - [v0.10.0 将取消云同步](https://github.com/scriptscat/scriptcat/issues/99)，但会新增网盘同步
 
 ### Removed
 
 - 🔥 移除扩展 debugger 权限
-  [[[75bc958](https://github.com/scriptscat/scriptcat/commit/75bc958f6257a25408fcb47b6546096ffdeb0d1d)](https://github.com/scriptscat/scriptcat/commit/75bc958f6257a25408fcb47b6546096ffdeb0d1d)]
+  [[75bc958](https://github.com/scriptscat/scriptcat/commit/75bc958f6257a25408fcb47b6546096ffdeb0d1d)]
 
 ### Fixed
 
-- 🚑 紧急修复 GM 沙盒问题（删除掉了 v0.9.2）
-  [[[fbe6e05](https://github.com/scriptscat/scriptcat/commit/fbe6e057f30b9455a0bbbd10743a9752d3f8ca49)](https://github.com/scriptscat/scriptcat/commit/fbe6e057f30b9455a0bbbd10743a9752d3f8ca49)]
+- 🚑 紧急修复 GM 沙盒问题
+  [[fbe6e05](https://github.com/scriptscat/scriptcat/commit/fbe6e057f30b9455a0bbbd10743a9752d3f8ca49)]
 - 🐛 修复 GM_info 的兼容问题
-  [[[7d030b0](https://github.com/scriptscat/scriptcat/commit/7d030b0f28c4ae1cd3e84df8144dc97ccb649ce2)](https://github.com/scriptscat/scriptcat/commit/7d030b0f28c4ae1cd3e84df8144dc97ccb649ce2)]
+  [[7d030b0](https://github.com/scriptscat/scriptcat/commit/7d030b0f28c4ae1cd3e84df8144dc97ccb649ce2)]
 
 ## 0.9.1 (2022-04-30)
 
@@ -217,16 +218,19 @@ icon: editor
 
 - `GM_registerMenuCommand`某些情况注册不上([`70399b3`](https://github.com/scriptscat/scriptcat/commit/70399b3b137051e378a36d4ca33b07ea4cf68b1a))
   (@CodFrm)
-- gm_xhr 默认不带上 origin([`70399b3`](https://github.com/scriptscat/scriptcat/commit/70399b3b137051e378a36d4ca33b07ea4cf68b1a))
+- gm_xhr 默认不带上
+  origin([`70399b3`](https://github.com/scriptscat/scriptcat/commit/70399b3b137051e378a36d4ca33b07ea4cf68b1a))
   (@CodFrm)
-- 沙盒中 globalThis 指向沙盒 global([`c15913c`](https://github.com/scriptscat/scriptcat/commit/c15913c3fe6531d48c2b1a1f42702ee3dc11a966))
+- 沙盒中 globalThis 指向沙盒
+  global([`c15913c`](https://github.com/scriptscat/scriptcat/commit/c15913c3fe6531d48c2b1a1f42702ee3dc11a966))
   (@CodFrm)
 - 右侧悬浮按钮固定可能遮挡的问题([`84ed9a1`](https://github.com/scriptscat/scriptcat/commit/84ed9a105ab92cb5a057c3d15d9240bbc1ffbec7))
   (@CodFrm)
-- unsafe
-  header 覆盖失败([`8a28a9c`](https://github.com/scriptscat/scriptcat/commit/8a28a9cadf49852a25d8c58b216489c70b3ddc18))
+- unsafe header
+  覆盖失败([`8a28a9c`](https://github.com/scriptscat/scriptcat/commit/8a28a9cadf49852a25d8c58b216489c70b3ddc18))
   (@CodFrm)
-- GM_addStyle 与 tm 管理器插入地方一致([`0375282`](https://github.com/scriptscat/scriptcat/commit/03752823d0a6f12d8dfefdf35bc19625719d066b))
+- GM_addStyle 与 tm
+  管理器插入地方一致([`0375282`](https://github.com/scriptscat/scriptcat/commit/03752823d0a6f12d8dfefdf35bc19625719d066b))
   (@CodFrm)
 
 ### Perf
@@ -241,52 +245,63 @@ icon: editor
 - eval 问题 & GM_deleteValue
   调用错误([`d668452`](https://github.com/scriptscat/scriptcat/commit/d668452b318174c985263f0a3ccca7d5afaa2239))
   (@CodFrm)
-- FormData 火狐无法 clone 导致错误([`e5190e3`](https://github.com/scriptscat/scriptcat/commit/e5190e3680e36e638f08085306ae05d9e5e44e2a))
+- FormData 火狐无法 clone
+  导致错误([`e5190e3`](https://github.com/scriptscat/scriptcat/commit/e5190e3680e36e638f08085306ae05d9e5e44e2a))
   (@CodFrm)
 
 ## v0.7.3 (2021-11-22)
 
 ### New feature:
 
-- vscode 自动连接([`dac2cc6`](https://github.com/scriptscat/scriptcat/commit/dac2cc6fed1de44a7e546989107892507b388837))
+- vscode
+  自动连接([`dac2cc6`](https://github.com/scriptscat/scriptcat/commit/dac2cc6fed1de44a7e546989107892507b388837))
   (@CodFrm)
 - 用户配置支持动态多选([`6bf5b29`](https://github.com/scriptscat/scriptcat/commit/6bf5b29f75ae2b2adeb35216c7bdd3393cdb7ec0))
   (@CodFrm)
-- gm.xhr 支持发送 FormData 数据([`693c410`](https://github.com/scriptscat/scriptcat/commit/693c410a7e7e0f96a947fef7c58ddd41f93cd8d4))
+- gm.xhr 支持发送 FormData
+  数据([`693c410`](https://github.com/scriptscat/scriptcat/commit/693c410a7e7e0f96a947fef7c58ddd41f93cd8d4))
   (@CodFrm)
-- 添加\*.user.bg.js 后台脚本后缀监听([`05021c1`](https://github.com/scriptscat/scriptcat/commit/05021c124899514db4a82bf262e89992b52f1f4f))
+- 添加\*.user.bg.js
+  后台脚本后缀监听([`05021c1`](https://github.com/scriptscat/scriptcat/commit/05021c124899514db4a82bf262e89992b52f1f4f))
   (@CodFrm)
 
 ### Bugs fixed:
 
-- 兼容油猴的 responseType
-  json 处理([`0d75d86`](https://github.com/scriptscat/scriptcat/commit/0d75d86f55b3c6439c89ca28cd5712dbc125ba0c))
+- 兼容油猴的 responseType json
+  处理([`0d75d86`](https://github.com/scriptscat/scriptcat/commit/0d75d86f55b3c6439c89ca28cd5712dbc125ba0c))
   (@CodFrm)
-- responseType 问题和 gm_xhr
-  url 的相对位置处理([`288d751`](https://github.com/scriptscat/scriptcat/commit/288d75133c1b575c89365422cf6f8e23ee0cba9f))
+- responseType 问题和 gm_xhr url
+  的相对位置处理([`288d751`](https://github.com/scriptscat/scriptcat/commit/288d75133c1b575c89365422cf6f8e23ee0cba9f))
   (@CodFrm)
-- eval 执行脚本内方法([`4d0e056`](https://github.com/scriptscat/scriptcat/commit/4d0e0569eeb13cad852b52149bb0ca7ec32b89bb))
+- eval
+  执行脚本内方法([`4d0e056`](https://github.com/scriptscat/scriptcat/commit/4d0e0569eeb13cad852b52149bb0ca7ec32b89bb))
   (@CodFrm)
-- gm_xhr 获取重定向后地址([`4906c79`](https://github.com/scriptscat/scriptcat/commit/4906c7950e5a4902f3d7262e431fac0034a5267b))
+- gm_xhr
+  获取重定向后地址([`4906c79`](https://github.com/scriptscat/scriptcat/commit/4906c7950e5a4902f3d7262e431fac0034a5267b))
   (@CodFrm)
-- 沙盒兼容问题&某些情况下 sourceUrl 不显示的问题([`85cb130`](https://github.com/scriptscat/scriptcat/commit/85cb130b016c41b71c58b81e9f422acdd694278a))
+- 沙盒兼容问题&某些情况下 sourceUrl
+  不显示的问题([`85cb130`](https://github.com/scriptscat/scriptcat/commit/85cb130b016c41b71c58b81e9f422acdd694278a))
   (@CodFrm)
 - 拉取数量显示错误([`106de02`](https://github.com/scriptscat/scriptcat/commit/106de02583ae08299ddd4d02fbfdd2140c9a7847))
   (@CodFrm)
 - 某些情况下菜单注册后不显示([`aff0bb4`](https://github.com/scriptscat/scriptcat/commit/aff0bb4bf595b8fb63bf8827f53e3f5e84e11b95))
   (@CodFrm)
-- 沙盒内可访问 window 上对象([`49a276c`](https://github.com/scriptscat/scriptcat/commit/49a276c00bb56e30186c70ee300b4ea58673aa50))
+- 沙盒内可访问 window
+  上对象([`49a276c`](https://github.com/scriptscat/scriptcat/commit/49a276c00bb56e30186c70ee300b4ea58673aa50))
   (@CodFrm)
 
 ## v0.7.2 (2021-11-07)
 
-> 在此之前的脚本猫对 GM_XHR 的返回 contentType 做了判断,如果是 json 类型会自动转换成 json 给脚本,现在兼容油猴的做法,不对此进行自动的转化,需要手动转化,或者加上 responseType.可能会导致某些脚本出现兼容性问题.
+> 在此之前的脚本猫对 GM_XHR 的返回 contentType 做了判断,如果是 json 类型会自动转换成 json
+> 给脚本,现在兼容油猴的做法,不对此进行自动的转化,需要手动转化,或者加上 responseType.可能会导致某些脚本出现兼容性问题.
 
 ### New feature:
 
-- GM_XHR 支持返回 set-cookie 和处理 xhr.response 兼容问题([`53bac0b`](https://github.com/scriptscat/scriptcat/commit/53bac0b82ff1e5da4cf4d9bed67f6cac74b46675))
+- GM_XHR 支持返回 set-cookie 和处理 xhr.response
+  兼容问题([`53bac0b`](https://github.com/scriptscat/scriptcat/commit/53bac0b82ff1e5da4cf4d9bed67f6cac74b46675))
   (@CodFrm)
-- 脚本 header 悬停提示([`a0eabad`](https://github.com/scriptscat/scriptcat/commit/a0eabade47b775719c779b6ca63e4a86451338f7))
+- 脚本 header
+  悬停提示([`a0eabad`](https://github.com/scriptscat/scriptcat/commit/a0eabade47b775719c779b6ca63e4a86451338f7))
   (@CodFrm)
 
 ### Bugs fixed:
@@ -303,7 +318,8 @@ icon: editor
 
 ### Bugs fixed:
 
-- 编辑本地脚本 uuid 每次发生改变导致同步多次的问题([`7175c6f`](https://github.com/scriptscat/scriptcat/commit/7175c6f36122d88fceb7b44be94e603eb7dd6129))
+- 编辑本地脚本 uuid
+  每次发生改变导致同步多次的问题([`7175c6f`](https://github.com/scriptscat/scriptcat/commit/7175c6f36122d88fceb7b44be94e603eb7dd6129))
   (@CodFrm)
 
 ## v0.7.0 (2021-10-26)
@@ -313,9 +329,11 @@ icon: editor
 
 ### New feature:
 
-- vscode 代码同步([`5750fb6`](https://github.com/scriptscat/scriptcat/commit/5750fb6daa3317a3d793df5d8e68da4f44a520b1))
+- vscode
+  代码同步([`5750fb6`](https://github.com/scriptscat/scriptcat/commit/5750fb6daa3317a3d793df5d8e68da4f44a520b1))
   (@CodFrm)
-- 外部 api 用于脚本市场获取脚本状态([`8ce9ae9`](https://github.com/scriptscat/scriptcat/commit/8ce9ae990a735e17d4d1711cd17adcc299c39225))
+- 外部 api
+  用于脚本市场获取脚本状态([`8ce9ae9`](https://github.com/scriptscat/scriptcat/commit/8ce9ae990a735e17d4d1711cd17adcc299c39225))
   (@CodFrm)
 - 脚本列表拖动排序([`d3aa7ab`](https://github.com/scriptscat/scriptcat/commit/d3aa7abc64fc09818b16221e36fe2fe3781da6c8))
   (@CodFrm)
