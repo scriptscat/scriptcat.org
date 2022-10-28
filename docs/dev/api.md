@@ -1,5 +1,5 @@
 ---
-icon: api
+id: api
 ---
 
 # API 文档

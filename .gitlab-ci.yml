@@ -13,8 +13,8 @@ build:
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
   script:
-    - yarn --frozen-lockfile
-    - yarn build
+    - npm ci
+    - npm run build
   cache:
     key: node-cache
     paths:
@@ -22,7 +22,7 @@ build:
   artifacts:
     expire_in: 1 week
     paths:
-      - dist
+      - build
 
 build-docker:
   stage: docker

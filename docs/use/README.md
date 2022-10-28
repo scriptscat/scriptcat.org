@@ -1,6 +1,5 @@
 ---
-sidebar: false
-icon: creative
+id: use
 ---
 
 

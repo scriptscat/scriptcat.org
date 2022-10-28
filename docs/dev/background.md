@@ -1,5 +1,5 @@
 ---
-icon: back-stage
+id: backgroud
 ---
 
 
@@ -47,9 +47,9 @@ icon: back-stage
 
 在脚本列表页面，鼠标放置`运行状态栏`会提示脚本的运行状态,点击可弹出通过`GM_log`打印的日志内容
 
-![](/background/image-20210621214143661.png)
+![](./background.assets/image-20210621214143661.png)
 
-![](/background/image-20210621214124685.png)
+![](./background.assets/image-20210621214124685.png)
 
 
 
@@ -57,11 +57,11 @@ icon: back-stage
 
 后台脚本可直接在脚本编辑页面进行调试,但是存在下面问题: value无法正常同步,registerMenu菜单无法正常触发.
 
-![](/background/image-20210903141601057.png)
+![](./background.assets/image-20210903141601057.png)
 
 如果是运行的环境请前往扩展开启**开发人员模式**然后在点击扩展的background.html进行调试，运行时产生的错误也可以在运行日志中查看
 
-![image-20210903144155450](/background/image-20210903144155450.png)
+![image-20210903144155450](./background.assets/image-20210903144155450.png)
 
 
 ## Promise

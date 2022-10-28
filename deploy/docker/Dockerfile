@@ -1,3 +1,3 @@
 FROM nginx:1.23-alpine
 
-COPY dist /usr/share/nginx/html
+COPY build /usr/share/nginx/html

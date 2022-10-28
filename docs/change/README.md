@@ -1,7 +1,8 @@
 ---
-sidebar: false
-icon: editor
+id: change
 ---
+
+# 更新日志
 
 ## 0.9.4 (2022-10-11)
 

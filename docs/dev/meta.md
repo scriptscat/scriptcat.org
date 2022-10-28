@@ -1,5 +1,5 @@
 ---
-icon: write
+id: meta
 ---
 
 
@@ -61,11 +61,11 @@ icon: write
 
 ### background
 
-表示本脚本为后台脚本,需要运行在后台环境,具体请看[后台脚本](background.md)
+表示本脚本为后台脚本,需要运行在后台环境,具体请看[后台脚本](./background.md#后台脚本)
 
 ### crontab
 
-表示脚本为定时脚本,需要有cron表达式值,只能存在一个cron表达式,会在后台环境中定时运行,具体请看[定时脚本](cron.md)
+表示脚本为定时脚本,需要有cron表达式值,只能存在一个cron表达式,会在后台环境中定时运行,具体请看[定时脚本](./background.md#定时脚本)
 
 ### match
 
@@ -91,7 +91,7 @@ match的别名
 
 ### grant
 
-申请API权限,需要申请了API之后才能调用,api列表请看:[API文档](./api.md)和[CAT API文档](cat-api.md).
+申请API权限,需要申请了API之后才能调用,api列表请看:[API文档](./api.md)和[CAT API文档](./cat-api.md).
 
 两个特殊的值:
 
