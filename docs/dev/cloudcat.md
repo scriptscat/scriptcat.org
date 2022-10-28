@@ -50,14 +50,14 @@ id: cloudcat
 描述要导出到云端的cookie,可以存在多个描述.参数使用`GM_cookie`的`CookieDetails`进行描述,例如:
 
 ```ts
-// 如下将导出https://docs.scriptcat.org/use/中name为cookie1的cookie
-// @exportCookie url=https://docs.scriptcat.org/use;name=cookie1
+// 如下将导出https://docs.scriptcat.org/docs/use/中name为cookie1的cookie
+// @exportCookie url=https://docs.scriptcat.org/docs/use;name=cookie1
 
 // 将导出scriptcat.org域所有的cookie
 // @exportCookie domain=scriptcat.org
 
 // 所有可用参数如下:
-// @exportCookie domain=scriptcat.org;url=https://docs.scriptcat.org/use;name=cookie1;path=/use;secure=true;session=true
+// @exportCookie domain=scriptcat.org;url=https://docs.scriptcat.org/docs/use;name=cookie1;path=/docs/use;secure=true;session=true
 ```
 
 ## API支持变化
