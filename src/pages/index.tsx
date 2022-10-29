@@ -18,8 +18,22 @@ function HomepageHeader() {
     >
       <div className="container">
         <img src="/img/logo.png"></img>
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <h1
+          className="hero__title"
+          style={{
+            color: "#fff",
+          }}
+        >
+          {siteConfig.title}
+        </h1>
+        <p
+          className="hero__subtitle"
+          style={{
+            color: "#fff",
+          }}
+        >
+          {siteConfig.tagline}
+        </p>
         <div className={styles.buttons}>
           <Link className="button button--secondary button--lg" to="/docs/use">
             开始使用

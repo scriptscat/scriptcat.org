@@ -42,6 +42,10 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        gtag: {
+          trackingID: 'G-7MBECV28JV',
+          anonymizeIP: true,
+        },
       }),
     ],
   ],
@@ -49,8 +53,8 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      metadata:[
-        {name: 'keywords', content: 'scriptcat,userscript,backscript,browser extension,浏览器扩展,用户脚本,后台脚本,脚本猫'},
+      metadata: [
+        { name: 'keywords', content: 'scriptcat,userscript,backscript,browser extension,浏览器扩展,用户脚本,后台脚本,脚本猫' },
       ],
       navbar: {
         title: 'ScriptCat',
