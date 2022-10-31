@@ -29,7 +29,7 @@ const sidebars = {
   ],
   change: [
     "change/change",
-    "change/beta"
+    "change/pre-release"
   ]
 };
 
