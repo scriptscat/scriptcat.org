@@ -14,7 +14,8 @@
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
   use: [
-    "use/use"
+    "use/use",
+    "use/sync"
   ],
   dev: [
     "dev/dev",

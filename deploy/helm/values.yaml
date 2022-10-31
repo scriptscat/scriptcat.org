@@ -48,6 +48,7 @@ ingress:
     # kubernetes.io/tls-acme: "true"
     nginx.ingress.kubernetes.io/configuration-snippet: |
       rewrite ^/use$ /docs/use/ redirect;  # 重定向 /use
+      rewrite ^/use/$ /docs/use/ redirect;  # 重定向 /use
       rewrite ^/dev/(.*)$ /docs/dev/$1 redirect;  # 重定向 /dev
       rewrite ^/dev$ /docs/dev/ redirect;  # 重定向 /dev
       rewrite ^/change/(.*)$ /docs/change/$1 redirect;  # 重定向 /change
