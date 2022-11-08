@@ -13,6 +13,25 @@ id: pre-release
 另外除了预发布以外,脚本猫每次功能完善/bug
 修复合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+## 0.10.0-beta (2022-11-08)
+
+### Added
+
+- ✨ 支持eslint [[e55d23f](https://github.com/scriptscat/scriptcat/commit/e55d23f4a15ff3831de94ea7a1c0d72d0c0c071f)]
+
+### Changed
+
+- ♻️ 重构脚本订阅 [[8b1a73c](https://github.com/scriptscat/scriptcat/commit/8b1a73cdc2428048267c83c79742d25397d71f37)]
+- ♻️ 重构导出云脚本 [[844d424](https://github.com/scriptscat/scriptcat/commit/844d424bcb755592f19a4d11ad749941792ce27d)]
+
+### Fixed
+
+- 🐛 修复eslint对后台脚本的支持与兼容火狐 [[2343339](https://github.com/scriptscat/scriptcat/commit/23433391d1e54bdda3d0e61642e3768d3dfb91fe)]
+- 🐛 修复GM xhr header为空时发送默认值与UserConfig默认值的问题 [[e3a04db](https://github.com/scriptscat/scriptcat/commit/e3a04db58d0c15935ba642240a4869a20049ab2a)]
+- 🐛 修复火狐兼容问题 [[88a6d4a](https://github.com/scriptscat/scriptcat/commit/88a6d4a3ad24bef64ba37035b02a50ad8ece8c38)]
+- 🐛 修复GM_xhr unsafeHeader 发送错误、popup支持运行 [[02d1a45](https://github.com/scriptscat/scriptcat/commit/02d1a45a27f871b237ecce63c2cb22e7436ee726)]
+
+
 ## 0.10.0-alpha.1 (2022-10-31)
 
 ### Added
