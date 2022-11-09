@@ -13,6 +13,13 @@ id: pre-release
 另外除了预发布以外,脚本猫每次功能完善/bug
 修复合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+## 0.10.0-beta.1 (2022-11-09)
+
+### Fixed
+
+- 🐛 修复打包引起的错误 [[ee034bc](https://github.com/scriptscat/scriptcat/commit/ee034bc7c491d48d7aec8d353cbbe496f7649add)]
+
+
 ## 0.10.0-beta (2022-11-08)
 
 ### Added
