@@ -4,6 +4,8 @@ id: pre-release
 
 # 预发布
 
+[![FireFox](https://img.shields.io/badge/firefox-sucess-brightgreen?logo=firefox)](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat-pre/)
+
 预发布版本是在正式发布之前的版本.它们通常用于测试新功能和修复问题,预发布版本的版本号包含一个预发布标识符,例如:
 `1.0.0-alpha.1`.脚本猫会存在以下两种类型的预发布版本:
 
@@ -12,6 +14,29 @@ id: pre-release
 
 另外除了预发布以外,脚本猫每次功能完善/bug
 修复合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
+
+## 0.10.0-beta.2 (2022-11-16)
+
+### Added
+
+- ✨ 支持百度网盘备份、恢复和同步 [[2cac37f](https://github.com/scriptscat/scriptcat/commit/2cac37f5223aed65dc68156d8b57ccb0a6f51f7e)]
+- ✨ 支持百度网盘备份鉴权 [[18178d5](https://github.com/scriptscat/scriptcat/commit/18178d579e019f6b374c51bcd18298244a33c1f2)]
+
+### Changed
+
+- ♻️ 重构vscode功能 [[f5ec7a4](https://github.com/scriptscat/scriptcat/commit/f5ec7a4b44b902a6c519c0fffaeea56e7750dac0)]
+
+### Removed
+
+- 🔥 移除document-body和document-menu [[06dfc18](https://github.com/scriptscat/scriptcat/commit/06dfc18a537c9a1c600bd1707107cd7b6b7a0230)]
+
+### Fixed
+
+- 🐛 修复后台脚本无法使用responseType的问题 [#108](https://github.com/scriptscat/scriptcat/issues/108) [[43b407a](https://github.com/scriptscat/scriptcat/commit/43b407a7c056aa7e4cb0f075eee4927923a629a8)]
+- 🐛 修复在sandbox页执行BroadcastChannel某些浏览器会报错 [#107](https://github.com/scriptscat/scriptcat/issues/107) [[c4d4de4](https://github.com/scriptscat/scriptcat/commit/c4d4de4c0d3b441d07962ec3e44052f0080ecb3c)]
+- 🐛 修复后台脚本内存溢出问题 [#71](https://github.com/scriptscat/scriptcat/issues/71) [[62c2f47](https://github.com/scriptscat/scriptcat/commit/62c2f479b674d8caca19408ee8f4dd33ff1f1d2e)]
+- 🐛 修复列表宽度问题和储存清空bug [[e00669a](https://github.com/scriptscat/scriptcat/commit/e00669ae49e6e2bdfc9fb03750e0ee706bf0a6ca)]
+
 
 ## 0.10.0-beta.1 (2022-11-09)
 
