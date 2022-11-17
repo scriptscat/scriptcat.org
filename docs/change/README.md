@@ -4,6 +4,127 @@ id: change
 
 # 更新日志
 
+[预发布版本](./pre-release.md)
+
+## 0.10.0 (2022-11-17)
+
+### Changed
+
+- ⚡ 修改百度网盘鉴权方式 [[222c2d7](https://github.com/scriptscat/scriptcat/commit/222c2d76b7eb309247ce46b0c0159608bfd7356f)]
+
+
+## 0.10.0-beta.2 (2022-11-16)
+
+### Added
+
+- ✨ 支持百度网盘备份、恢复和同步 [[2cac37f](https://github.com/scriptscat/scriptcat/commit/2cac37f5223aed65dc68156d8b57ccb0a6f51f7e)]
+- ✨ 支持百度网盘备份鉴权 [[18178d5](https://github.com/scriptscat/scriptcat/commit/18178d579e019f6b374c51bcd18298244a33c1f2)]
+
+### Changed
+
+- ♻️ 重构vscode功能 [[f5ec7a4](https://github.com/scriptscat/scriptcat/commit/f5ec7a4b44b902a6c519c0fffaeea56e7750dac0)]
+
+### Removed
+
+- 🔥 移除document-body和document-menu [[06dfc18](https://github.com/scriptscat/scriptcat/commit/06dfc18a537c9a1c600bd1707107cd7b6b7a0230)]
+
+### Fixed
+
+- 🐛 修复后台脚本无法使用responseType的问题 [#108](https://github.com/scriptscat/scriptcat/issues/108) [[43b407a](https://github.com/scriptscat/scriptcat/commit/43b407a7c056aa7e4cb0f075eee4927923a629a8)]
+- 🐛 修复在sandbox页执行BroadcastChannel某些浏览器会报错 [#107](https://github.com/scriptscat/scriptcat/issues/107) [[c4d4de4](https://github.com/scriptscat/scriptcat/commit/c4d4de4c0d3b441d07962ec3e44052f0080ecb3c)]
+- 🐛 修复后台脚本内存溢出问题 [#71](https://github.com/scriptscat/scriptcat/issues/71) [[62c2f47](https://github.com/scriptscat/scriptcat/commit/62c2f479b674d8caca19408ee8f4dd33ff1f1d2e)]
+- 🐛 修复列表宽度问题和储存清空bug [[e00669a](https://github.com/scriptscat/scriptcat/commit/e00669ae49e6e2bdfc9fb03750e0ee706bf0a6ca)]
+
+
+## 0.10.0-beta.1 (2022-11-09)
+
+### Fixed
+
+- 🐛 修复打包引起的错误 [[ee034bc](https://github.com/scriptscat/scriptcat/commit/ee034bc7c491d48d7aec8d353cbbe496f7649add)]
+
+
+## 0.10.0-beta (2022-11-08)
+
+### Added
+
+- ✨ 支持eslint [[e55d23f](https://github.com/scriptscat/scriptcat/commit/e55d23f4a15ff3831de94ea7a1c0d72d0c0c071f)]
+
+### Changed
+
+- ♻️ 重构脚本订阅 [[8b1a73c](https://github.com/scriptscat/scriptcat/commit/8b1a73cdc2428048267c83c79742d25397d71f37)]
+- ♻️ 重构导出云脚本 [[844d424](https://github.com/scriptscat/scriptcat/commit/844d424bcb755592f19a4d11ad749941792ce27d)]
+
+### Fixed
+
+- 🐛 修复eslint对后台脚本的支持与兼容火狐 [[2343339](https://github.com/scriptscat/scriptcat/commit/23433391d1e54bdda3d0e61642e3768d3dfb91fe)]
+- 🐛 修复GM xhr header为空时发送默认值与UserConfig默认值的问题 [[e3a04db](https://github.com/scriptscat/scriptcat/commit/e3a04db58d0c15935ba642240a4869a20049ab2a)]
+- 🐛 修复火狐兼容问题 [[88a6d4a](https://github.com/scriptscat/scriptcat/commit/88a6d4a3ad24bef64ba37035b02a50ad8ece8c38)]
+- 🐛 修复GM_xhr unsafeHeader 发送错误、popup支持运行 [[02d1a45](https://github.com/scriptscat/scriptcat/commit/02d1a45a27f871b237ecce63c2cb22e7436ee726)]
+
+
+## 0.10.0-alpha.1 (2022-10-31)
+
+### Added
+
+- ✨ webdav云同步 [[b419c91](https://github.com/scriptscat/scriptcat/commit/b419c91d1e7047390aa4c601a3a6ed3d54a165ba)]
+
+### Changed
+
+- ♻️ 储存管理 [[1067285](https://github.com/scriptscat/scriptcat/commit/106728515d162e3b8d90d49d31f472cb4a10ca25)]
+- ♻️ 重构userconfig [[43a332d](https://github.com/scriptscat/scriptcat/commit/43a332db99b0b075762f1e06d3e2569b7a7f949c)]
+
+### Fixed
+
+- 🐛 修复include、GM.*和ExternalMessage问题 [[fe96990](https://github.com/scriptscat/scriptcat/commit/fe969903d855ed385dc91214f6d46cff1963deeb)]
+- 🐛 修复文档链接 [[33041e4](https://github.com/scriptscat/scriptcat/commit/33041e45a947e99a8478e3ea53f4eb422df9a65e)]
+
+### In Process
+
+- 🚧 订阅脚本
+- 🚧 VSCode 连接
+- 🚧 导出云端脚本
+
+### Miscellaneous
+
+-  👷 CI打包时加上commit id [[313e44e](https://github.com/scriptscat/scriptcat/commit/313e44e3f7a55077d6b273e7483f1fc08d2c36da)]
+-  👷 优化打包产物 [[7ca5c13](https://github.com/scriptscat/scriptcat/commit/7ca5c139ffc97c6f48f6457c117ded2cb591b21e)]
+-  👷 优化ci构建与同步目录 [[217fa99](https://github.com/scriptscat/scriptcat/commit/217fa991b78b6e8232e8b03bfee5da6cf5894a8b)]
+
+
+## 0.10.0-alpha(2022-10-27)
+
+> 非常不稳定且功能不完善的一个版本 本版本为 alpha 测试，功能并未全部完成，欢迎体验，建议备份后升级或者共存的形式安装
+>
+> 全新的架构、全新的 UI，凤凰涅槃、王者归来、大器晚成
+
+### Added
+
+- ✨ webdav 备份
+- ✨ 后台脚本支持 GM_menu
+- ✨ GM_menu 支持浏览器右键菜单
+
+### Changed
+
+- ♻️ 全新架构、全新 UI
+- ♻️ 重构日志系统
+- ♻️ 重构代码编辑
+
+### In Process
+
+- 🚧 webdav 云同步
+- 🚧 设置页面各个选项
+- 🚧 订阅脚本
+- 🚧 UserConfig
+- 🚧 脚本储存管理
+- 🚧 VSCode 连接
+- 🚧 导出云端脚本
+
+### Removed
+
+- 🔥 移除原版本云同步，新增其它云平台同步
+- 🔥 由于没有相关用户操作，移除用户登录
+- 🔥 鉴于腾讯云函数收费，可能将移除导出腾讯云函数，后续版本再加入
+
 ## 0.9.4 (2022-10-11)
 
 > 时隔半年的更新，本次更新只做了兼容性的修复。。。。（连续新写了几个 bug。。。。）
