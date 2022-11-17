@@ -10,7 +10,11 @@ id: change
 
 ### Changed
 
-- ⚡ 修改百度网盘鉴权方式 [[222c2d7](https://github.com/scriptscat/scriptcat/commit/222c2d76b7eb309247ce46b0c0159608bfd7356f)]
+- ⚡ 优化百度网盘鉴权 [[222c2d7](https://github.com/scriptscat/scriptcat/commit/222c2d76b7eb309247ce46b0c0159608bfd7356f)]
+
+### Fixed
+
+- 🐛 修复打包版本问题 [[f73c543](https://github.com/scriptscat/scriptcat/commit/f73c54352ba0ba09248f72842d80bc08ac335ae8)]
 
 
 ## 0.10.0-beta.2 (2022-11-16)
