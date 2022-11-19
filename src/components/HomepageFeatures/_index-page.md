@@ -1,6 +1,11 @@
+# ScriptCat
+
+> 脚本猫,一个可以执行用户脚本的浏览器扩展,万物皆可脚本化,让你的浏览器可以做更多的事情!
+
 
 ![GitHub stars](https://img.shields.io/github/stars/scriptscat/scriptcat.svg)
-[![Build Status](https://github.com/scriptscat/scriptcat/workflows/build/badge.svg?branch=master)](https://github.com/scriptscat/scriptcat)
+[![Build Status](https://github.com/scriptscat/scriptcat/workflows/build/badge.svg?branch=main)](https://github.com/scriptscat/scriptcat)
+[![codecov](https://codecov.io/gh/scriptscat/scriptcat/branch/main/graph/badge.svg?token=G1A6ZGDQTY)](https://codecov.io/gh/scriptscat/scriptcat)
 ![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/scriptscat/scriptcat.svg?label=version)
 [![Chrome](https://img.shields.io/badge/chrome-sucess-brightgreen?logo=google%20chrome)](https://chrome.google.com/webstore/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf)
 [![Edge](https://img.shields.io/badge/edge-sucess-brightgreen?logo=microsoft%20edge)](https://microsoftedge.microsoft.com/addons/detail/scriptcat/liilgpjgabokdklappibcjfablkpcekh)
@@ -9,9 +14,7 @@
 
 ## 关于脚本猫
 
-参考了油猴的设计思路并且支持油猴脚本,实现了一个后台脚本运行的框架,提供了一些特殊的API,让脚本能够做更多的事情,并且提供了一个优秀的编辑器,让脚本代码编写开发更加舒服流畅.
-
-对于我们的开发计划请看:[Project #1](https://github.com/scriptscat/scriptcat/projects/1),我们将在这里公示我们的开发计划,如果你有什么好的意见也可以发[issue](https://github.com/scriptscat/scriptcat/issues)反馈给我们.
+参考了油猴的设计思路并且支持油猴脚本,实现了一个后台脚本运行的框架,提供了一些特殊的API,让脚本能够做更多的事情.并且提供了一个优秀的编辑器,让脚本代码编写开发更加舒服流畅.
 
 **如果觉得好用，顺手点个 Star 吧 ❤❤❤**
 
@@ -24,22 +27,22 @@
 * 定时脚本,可以每日定时执行,每天通过脚本定时处理事务.可用于自动签到,定时提醒等功能.
 * 丰富的API,相比于油猴,扩展出了更多强大的API,可以实现更多的功能.
 * 通过沙盒机制确保了用户的安全,用户确定后才会给脚本授予权限.
-* 优秀的编辑器,且提供了API的自动补全机制.
-* 同步的API,让脚本编写更加流畅.
+* 优秀的编辑器,且提供了API的自动补全和ESLint.
+* 美观的UI
+
+...更多丰富功能加入中
 
 ## 说明
 
 ### 安装脚本
 
-可以从各大用户脚本市场[获取脚本](https://docs.scriptcat.org/docs/use#%E8%8E%B7%E5%8F%96%E8%84%9A%E6%9C%AC)进行安装,脚本猫所支持的后台脚本专门建立了一个市场:[后台脚本](https://bbs.tampermonkey.net.cn/forum-68-1.html).
+可以从各大用户脚本市场[获取脚本](https://docs.scriptcat.org/docs/use/#%E8%8E%B7%E5%8F%96%E8%84%9A%E6%9C%AC)进行安装,脚本猫所支持的后台脚本专门建立了一个市场:[后台脚本](https://bbs.tampermonkey.net.cn/forum-68-1.html).
 
 安装方式与油猴一样,同时也是兼容绝大部分油猴脚本的,如果遇到未兼容的脚本,你可以通过[issue](https://github.com/scriptscat/scriptcat/issues)反馈给我们.
 
 对于开发者来说,也可以参考这些脚本写出自己的脚本来.
 
 ### 开发文档
-
-> [开发指南:https://docs.scriptcat.org/docs/dev/](https://docs.scriptcat.org/docs/dev/)
 
 [开发文档](https://docs.scriptcat.org/docs/dev/)尽力完善中,因为是参考油猴的设计,与油猴脚本相通的地方很多,就算你使用其它油猴管理器,你也可以参考脚本猫的文档来开发!  
 
@@ -55,6 +58,11 @@
 * [Edge商店](https://microsoftedge.microsoft.com/addons/detail/scriptcat/liilgpjgabokdklappibcjfablkpcekh)
 * [FireFox商店](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/)
 
-#### 交流
+### 交流
 
 [Telegram](https://t.me/scriptscat)
+
+## License
+本项目使用GPLv3协议开源, 请遵守协议规定.	
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fscriptscat%2Fscriptcat.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fscriptscat%2Fscriptcat?ref=badge_large)

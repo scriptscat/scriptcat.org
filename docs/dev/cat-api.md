@@ -58,3 +58,12 @@ declare function CAT_clearProxy(): void;
 ```ts
 declare function CAT_click(x: number, y: number): void
 ```
+
+### CAT_userConfig
+> 0.11.0-beta 加入
+
+你可以调用此API打开脚本的[用户配置](./config.md)页面
+
+```ts
+declare function CAT_userConfig(): void
+```
