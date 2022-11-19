@@ -29,7 +29,6 @@ const sidebars = {
   ],
   change: [
     "change/change",
-    "change/pre-release"
   ]
 };
 

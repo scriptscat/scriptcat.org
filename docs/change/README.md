@@ -4,9 +4,8 @@ id: change
 
 # 更新日志
 
-[预发布版本](./pre-release.md)
-
 <a name="0.11.0-beta"></a>
+
 ## 0.11.0-beta (2022-11-19)
 
 ### Added
@@ -15,6 +14,7 @@ id: change
 
 
 <a name="0.10.1"></a>
+
 ## 0.10.1 (2022-11-19)
 
 ### Added
