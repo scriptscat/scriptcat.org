@@ -6,6 +6,30 @@ id: change
 
 [预发布版本](./pre-release.md)
 
+<a name="0.11.0-beta"></a>
+## 0.11.0-beta (2022-11-19)
+
+### Added
+
+- ✨ 添加CAT_userConfig打开用户配置页 [[025db33](https://github.com/scriptscat/scriptcat/commit/025db3391bfca7d0477ba05d7680e8a0ca5af961)]
+
+
+<a name="0.10.1"></a>
+## 0.10.1 (2022-11-19)
+
+### Added
+
+- ✨ 资源管理和火狐兼容性处理 [[26ab1c5](https://github.com/scriptscat/scriptcat/commit/26ab1c578ba449a0c9810f8b52aaf3c4bf95ae4a)]
+
+### Fixed
+
+- 🐛 修复userconfig选择框问题与二次打开不显示的问题 [[3504d8d](https://github.com/scriptscat/scriptcat/commit/3504d8d4348897d192645b1a54ed79d26306c41e)]
+- 💚 修复ci构建报错问题 [[eb0031f](https://github.com/scriptscat/scriptcat/commit/eb0031f8f62f5545a0dc5cb35290ee1aed7bc34e)]
+- 🐛 修复getResourceResource key问题 [[df22c6f](https://github.com/scriptscat/scriptcat/commit/df22c6f809da53d46814bbb948d3471555645cce)]
+- 🐛 修复百度网盘鉴权缓存问题 [[88e7d3b](https://github.com/scriptscat/scriptcat/commit/88e7d3b6a0886b6468cf083ce559f18aecab45bb)]
+- 🐛 修复firefox下编辑器不兼容的问题 [[c88c192](https://github.com/scriptscat/scriptcat/commit/c88c192a55504caf09a27675778eb14aaf21c3ed)]
+
+
 ## 0.10.0 (2022-11-17)
 
 ### Changed
