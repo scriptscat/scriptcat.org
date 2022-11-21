@@ -24,6 +24,15 @@ id: change
 - ✨ 添加 CAT_userConfig 打开用户配置页
   [[025db33](https://github.com/scriptscat/scriptcat/commit/025db3391bfca7d0477ba05d7680e8a0ca5af961)]
 
+
+<a name="0.10.2"></a>
+## 0.10.2 (2022-11-21)
+
+### Fixed
+
+- 🐛 修复某些情况export表唯一性导致数据库升级失败 [[10a5c19](https://github.com/scriptscat/scriptcat/commit/10a5c1973b7f2dbcbe3f1720f6a1f33b23b93949)]
+
+
 <a name="0.10.1"></a>
 
 ## 0.10.1 (2022-11-19)
