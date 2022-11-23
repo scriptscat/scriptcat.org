@@ -25,6 +25,20 @@ id: change
   [[025db33](https://github.com/scriptscat/scriptcat/commit/025db3391bfca7d0477ba05d7680e8a0ca5af961)]
 
 
+<a name="0.10.3"></a>
+
+## 0.10.3 (2022-11-23)
+
+### Fixed
+
+- 🐛 修复删除脚本依旧在运行的bug [[e7a5f20](https://github.com/scriptscat/scriptcat/commit/e7a5f20199aac246a22aff9f8e7142a8134a11f3)]
+- 🐛 修复备份文件操作错误 [#113](https://github.com/scriptscat/scriptcat/issues/113) [[af09645](https://github.com/scriptscat/scriptcat/commit/af09645d5bd5fea604c5729235b38577cb1e88d6)]
+
+### Miscellaneous
+
+- 📝 Update README.md [[3f768c7](https://github.com/scriptscat/scriptcat/commit/3f768c7021d43bca725809dd22cb14f38c80ebfa)]
+
+
 <a name="0.10.2"></a>
 
 ## 0.10.2 (2022-11-21)
