@@ -15,15 +15,6 @@ id: change
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
-<a name="0.11.0-beta"></a>
-
-## 0.11.0-beta (2022-11-19)
-
-### Added
-
-- ✨ 添加 CAT_userConfig 打开用户配置页
-  [[025db33](https://github.com/scriptscat/scriptcat/commit/025db3391bfca7d0477ba05d7680e8a0ca5af961)]
-
 
 <a name="0.10.3"></a>
 
@@ -46,6 +37,19 @@ id: change
 ### Fixed
 
 - 🐛 修复某些情况export表唯一性导致数据库升级失败 [[10a5c19](https://github.com/scriptscat/scriptcat/commit/10a5c1973b7f2dbcbe3f1720f6a1f33b23b93949)]
+
+
+<a name="0.11.0-beta"></a>
+
+## 0.11.0-beta (2022-11-19)
+
+### Added
+
+- ✨ 添加CAT_userConfig打开用户配置页 [[025db33](https://github.com/scriptscat/scriptcat/commit/025db3391bfca7d0477ba05d7680e8a0ca5af961)]
+
+### Changed
+
+- 🎨 统一更新日志地址 [[8e48400](https://github.com/scriptscat/scriptcat/commit/8e4840027719089f2a1a800f991714d4652fd231)]
 
 
 <a name="0.10.1"></a>
