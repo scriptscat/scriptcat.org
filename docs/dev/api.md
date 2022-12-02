@@ -14,6 +14,8 @@ API,后续将继续迭代,本扩展进行扩充或者与原 GM 不同的 API 将
 API 的详细定义,请看`tempermonkey.d.ts`或者内置编辑器提示,文档更新可能不会及时.对于本扩展特有的 API
 请看[CatApi 文档](cat-api.md)
 
+另外可以在[example](https://github.com/scriptscat/scriptcat/tree/main/example)查看相关示例
+
 ## 定义
 
 ### GM_cookie
@@ -329,8 +331,11 @@ declare function GM_unregisterMenuCommand(id: number): void;
 ```ts
 //GM_getResourceText 获取资源文本数据,image等byte类型的数据会返回空文本,需要使用GM_getResourceURL获取
 declare function GM_getResourceText(name: string): string | undefined;
-//GM_getResourceURL 获取经过base64后的数据
-declare function GM_getResourceURL(name: string): string | undefined;
+//GM_getResourceURL 获取经过base64后的数据,也可以通过第二个参数获取blob url
+declare function GM_getResourceURL(
+  name: string,
+  isBlobUrl?: boolean = false
+): string | undefined;
 ```
 
 ### GM_download
@@ -375,4 +380,13 @@ declare namespace GM_Types {
     onprogress?: Listener<XHRProgress<void>>;
   }
 }
+```
+
+### GM_addElement
+
+在页面中插入元素,可以绕过CSP限制
+
+```ts
+declare function GM_addElement(tag: string, attribubutes: any);
+declare function GM_addElement(parentNode: Element, tag: string, attrs: any);
 ```
