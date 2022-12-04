@@ -16,6 +16,35 @@ id: change
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
 
+<a name="0.11.0-beta.1"></a>
+
+## 0.11.0-beta.1 (2022-12-04)
+
+### Added
+
+- ✨ GM_getResourceURL支持获取blob url [#84](https://github.com/scriptscat/scriptcat/issues/84) [[22925cb](https://github.com/scriptscat/scriptcat/commit/22925cb009c38d414210fd7d529b96bc32a69fb8)]
+- ✨ 支持GM_addElement [#102](https://github.com/scriptscat/scriptcat/issues/102) [[0d0f4db](https://github.com/scriptscat/scriptcat/commit/0d0f4dba48b35198239156ec344d509d65eede31)]
+- ✨ 支持自定义eslint [[0ff6ddd](https://github.com/scriptscat/scriptcat/commit/0ff6dddeb2f5152a718ab7587d4e61c62178ff5a)]
+- ✨ 添加CAT_userConfig打开用户配置页 [[025db33](https://github.com/scriptscat/scriptcat/commit/025db3391bfca7d0477ba05d7680e8a0ca5af961)]
+
+
+<a name="0.10.4"></a>
+
+## 0.10.4 (2022-12-04)
+
+### Added
+
+- ✨ 兼容tm的储存导入导出 [[2eed348](https://github.com/scriptscat/scriptcat/commit/2eed3486aefe9fcd8bb7f9df08da040b9a280ea3)]
+
+### Fixed
+
+- 🐛 .prettierrc添加endOfLine兼容windows [[ee34161](https://github.com/scriptscat/scriptcat/commit/ee34161163ad7e18b16b39b492bb56b709bd9266)]
+- 🐛 修复了点击左侧脚本tab没有选择对应的内容,以及点击左侧脚本没有选中的效果 [[9ad2b53](https://github.com/scriptscat/scriptcat/commit/9ad2b533bd624ffea2c7e786318b35d1f589bae5)]
+- 🐛 兼容GM_cookie.list的调用方式和菜单展示问题 [#117](https://github.com/scriptscat/scriptcat/issues/117) [[a54d0c6](https://github.com/scriptscat/scriptcat/commit/a54d0c62ad327adaae6d183d5b5aa4468026c888)]
+- 🐛 修复更新间隔设置从不失效 [#115](https://github.com/scriptscat/scriptcat/issues/115) [[50d8264](https://github.com/scriptscat/scriptcat/commit/50d8264bc3e91126e56d6688b8dec5b1e1f42908)]
+- 🐛 修复document-body与优化资源识别text [#116](https://github.com/scriptscat/scriptcat/issues/116) [[1b87ffc](https://github.com/scriptscat/scriptcat/commit/1b87ffc99e9eb67c9878e7909f2b349b42e59681)]
+
+
 <a name="0.10.3"></a>
 
 ## 0.10.3 (2022-11-23)
