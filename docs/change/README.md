@@ -15,6 +15,14 @@ id: change
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+<a name="0.11.0-beta.2"></a>
+
+## 0.11.0-beta.2 (2022-12-04)
+
+### Fixed
+
+- 🐛 修复install页错误 [[fda9de8](https://github.com/scriptscat/scriptcat/commit/fda9de80e87259618757df907fa0ff5c94b0a188)]
+
 
 <a name="0.11.0-beta.1"></a>
 
