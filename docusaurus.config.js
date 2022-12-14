@@ -136,9 +136,9 @@ const config = {
         darkTheme: darkCodeTheme,
       },
       algolia: {
-        appId: 'R2IYF7ETH7',
-        apiKey: '599cec31baffa4868cae4e79f180729b',
-        indexName: 'docsearch',
+        appId: 'CWJJXTJUJS',
+        apiKey: '283cbc6053e086e74123140ab8677465',
+        indexName: 'scriptcat',
         contextualSearch: true,
         searchPagePath: 'search',
       },
