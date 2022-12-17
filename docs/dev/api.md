@@ -173,7 +173,13 @@ declare namespace GM_Types {
     cookie?: string;
     binary?: boolean;
     timeout?: number;
-    responseType?: "text" | "arraybuffer" | "blob" | "json";
+    responseType?:
+      | "text"
+      | "arraybuffer"
+      | "blob"
+      | "json"
+      | "document"
+      | "stream"; // stream 在当前版本是一个较为简陋的实现
     overrideMimeType?: string;
     anonymous?: boolean;
     fetch?: boolean;
