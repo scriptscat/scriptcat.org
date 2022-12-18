@@ -15,6 +15,30 @@ id: change
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+
+<a name="0.11.0-beta.3"></a>
+
+## 0.11.0-beta.3 (2022-12-18)
+> 支持OneDriver、CAT_fileStorage等多个重磅功能
+
+
+### Added
+
+- ✨ 支持onedrive [#80](https://github.com/scriptscat/scriptcat/issues/80) [[7a71700](https://github.com/scriptscat/scriptcat/commit/7a717007e0ad486a43fab548a5c06b0286238264)]
+- ✨ 支持CAT_fileStorage [#127](https://github.com/scriptscat/scriptcat/issues/127) [[d566afb](https://github.com/scriptscat/scriptcat/commit/d566afb1417ea55c73aa19b5d205af5318c72ed5)]
+- ✨ GM_xhr支持document和stream [[eedf0c1](https://github.com/scriptscat/scriptcat/commit/eedf0c11c831e1518f89748383a0058e623f8315)]
+- ✨ tab栏点击右键可以关闭当前，关闭其他，关闭左侧，关闭右侧脚本 [[1b8d84e](https://github.com/scriptscat/scriptcat/commit/1b8d84eb7af0c821622fb8fab91fb073c78f3bc2)]
+
+### Fixed
+
+- 🐛 修复文件系统斜杠问题 [[3a66818](https://github.com/scriptscat/scriptcat/commit/3a66818b9be48a6b1149fa5dd2d277724ed5aa89)]
+- 🐛 修复沙盒模式无法从window读取GM_info的问题 [#126](https://github.com/scriptscat/scriptcat/issues/126) [[f23ccde](https://github.com/scriptscat/scriptcat/commit/f23ccdead4429a39d8478851e0405a7e3e6a4257)]
+- 🐛 修复脚本储存管理过高与object类型编辑问题 [[e0a0d64](https://github.com/scriptscat/scriptcat/commit/e0a0d64f0616230e48b67a58ee0030a04156a7b4)]
+- 🐛 修复列表名称排序错误 [[8e678da](https://github.com/scriptscat/scriptcat/commit/8e678dae738facad73b9875d92d6d0cead5dd4b2)]
+- 🐛 修复导入重复的问题 [[0ec4cc6](https://github.com/scriptscat/scriptcat/commit/0ec4cc619caaa79a7cc3c82d3d906aef42756495)]
+- 🐛 处理*开头的特殊情况 [#123](https://github.com/scriptscat/scriptcat/issues/123) [[9569736](https://github.com/scriptscat/scriptcat/commit/9569736846f886b64118af1ab14fbf920bf58955)]
+- 🐛 修复了点击编辑以后进入指定脚本可以左侧也选中对应的脚步名字,点击保存tab脚本名称和左侧脚本名称同步修改以后的内容 [[5335869](https://github.com/scriptscat/scriptcat/commit/53358694a02c0822335048e0f659f40ebd393a9e)]
+
 <a name="0.11.0-beta.2"></a>
 
 ## 0.11.0-beta.2 (2022-12-04)
