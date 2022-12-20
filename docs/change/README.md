@@ -16,11 +16,20 @@ id: change
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
 
+<a name="0.11.0"></a>
+
+## 0.11.0 (2022-12-20)
+
+### Fixed
+
+- 🐛 修复OneDrive创建多余目录的bug [[3e326d7](https://github.com/scriptscat/scriptcat/commit/3e326d7aa0921c08817e844367cf361c99de51c5)]
+- 🐛 修复onedrive查看备份文件 [[e79a5fb](https://github.com/scriptscat/scriptcat/commit/e79a5fb94857a717541da4f3307271321fb8d4f2)]
+
+
 <a name="0.11.0-beta.3"></a>
 
 ## 0.11.0-beta.3 (2022-12-18)
 > 支持OneDriver、CAT_fileStorage等多个重磅功能
-
 
 ### Added
 

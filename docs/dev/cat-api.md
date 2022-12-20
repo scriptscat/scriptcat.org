@@ -8,6 +8,8 @@ id: cat-api
 
 本扩展特有的 API 将会以 CAT\_ 开头进行定义.
 
+另外可以在[example](https://github.com/scriptscat/scriptcat/tree/main/example)查看相关示例
+
 ## 定义
 
 ### CAT_setProxy
@@ -68,12 +70,20 @@ declare function CAT_click(x: number, y: number): void;
 declare function CAT_userConfig(): void;
 ```
 
-### CAT_fileStorage
+### CAT_fileStorage🧪
 
-> 提案中
+> 0.11.0加入
 
-调用此 API,可以操控脚本同步配置的文件储存源,将会在设定目录下创建一个`app`目录供此 API 使用.
+操控脚本同步配置的文件储存源,将会在同步目录下创建一个app/uuid目录供此 API 使用,上传时默认覆盖同名文件.
+请注意这是一个试验性质的 API, 后续可能会改变
 
 ```ts
-
+declare function CAT_fileStorage(
+  action: "list"|"upload"|"donwload"|"delete",
+  details: {
+    path?: string; 
+    onload?: (files: CATType.FileStorageFileInfo[]) => void;
+    onerror?: (error: CATType.FileStorageError) => void;
+  }
+): void;
 ```
