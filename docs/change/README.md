@@ -15,6 +15,17 @@ id: change
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+<a name="0.11.1"></a>
+
+## 0.11.1 (2023-01-15)
+> 由于firefox商店限制，暂时移除掉firefox的CSP策略，此项移除将会导致firefox版本的扩展无法使用代码提示，后续再寻找解决方案。
+
+### Fixed
+
+- 🐛 修复值未发生改变时的报错 [[a97981c](https://github.com/scriptscat/scriptcat/commit/a97981cd0b96acfa7778df9debc33a2697cab400)]
+- 🐛 修复http* match问题 [#132](https://github.com/scriptscat/scriptcat/issues/132) [[b17581b](https://github.com/scriptscat/scriptcat/commit/b17581b264fe5a1160f41bf6d8a7200017d0583a)]
+- 🐛 修复vscode连接问题 [[f0c3853](https://github.com/scriptscat/scriptcat/commit/f0c3853565eaac845aa98c7358a324a0df74c04c)]
+
 
 <a name="0.11.0"></a>
 
