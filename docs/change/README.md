@@ -15,6 +15,22 @@ id: change
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+<a name="0.11.2"></a>
+
+## 0.11.2 (2023-02-07)
+
+### Added
+
+- ✨ 支持安装本地脚本 [[eb82fa9](https://github.com/scriptscat/scriptcat/commit/eb82fa9b154dbc49d40e00d7cfcabf9c7c7898be)]
+
+### Fixed
+
+- 🐛 修复uuid导致的同步问题 [#141](https://github.com/scriptscat/scriptcat/issues/141) [#133](https://github.com/scriptscat/scriptcat/issues/133) [[9b70673](https://github.com/scriptscat/scriptcat/commit/9b70673032650284d551429d232a11654654ad7f)]
+- 🐛 优化系统弹出更新逻辑延长至60s并添加停止逻辑 [#137](https://github.com/scriptscat/scriptcat/issues/137) [[38921da](https://github.com/scriptscat/scriptcat/commit/38921da3555b78f65f42d16aeb6174ca0543e0af)]
+- 🐛 修复user.js?*链接无法触发安装与优化点击脚本名即进入编辑 [#142](https://github.com/scriptscat/scriptcat/issues/142) [[4576795](https://github.com/scriptscat/scriptcat/commit/4576795a3320c75eea87fa83ec271de7329f5bad)]
+- 🐛 GM_info添加更多属性以兼容其他管理器 [#139](https://github.com/scriptscat/scriptcat/issues/139) [[184cfaf](https://github.com/scriptscat/scriptcat/commit/184cfaf97ec0e9276f22eee4edd5c359411c3992)]
+
+
 <a name="0.11.1"></a>
 
 ## 0.11.1 (2023-01-15)
