@@ -21,6 +21,7 @@ id: change
 
 ### Fixed
 
+- 🐛 修复沙盒context关键字能访问的问题 [[dbd9ad4](https://github.com/scriptscat/scriptcat/commit/dbd9ad405cea50eefe4614fea5c46426c3a9abe0)]
 - 🐛 修复沙盒context作用域问题 [[3d15519](https://github.com/scriptscat/scriptcat/commit/3d1551926b3b6954906467297ca4a9a5905cf945)]
 - 🐛 修复沙盒变量undefined问题 [[2dcf9c2](https://github.com/scriptscat/scriptcat/commit/2dcf9c299faa90304dc87d736d94f4196fd522a9)]
 - 🐛 修复定时脚本计时器停止错误 [#147](https://github.com/scriptscat/scriptcat/issues/147) [#149](https://github.com/scriptscat/scriptcat/issues/149) [[f9cb6dc](https://github.com/scriptscat/scriptcat/commit/f9cb6dc63da799943fb302540a1e42a53e328ede)]
