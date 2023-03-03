@@ -15,6 +15,17 @@ id: change
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+<a name="0.11.3"></a>
+
+## 0.11.3 (2023-03-03)
+
+### Fixed
+
+- 🐛 修复沙盒context作用域问题 [[3d15519](https://github.com/scriptscat/scriptcat/commit/3d1551926b3b6954906467297ca4a9a5905cf945)]
+- 🐛 修复沙盒变量undefined问题 [[2dcf9c2](https://github.com/scriptscat/scriptcat/commit/2dcf9c299faa90304dc87d736d94f4196fd522a9)]
+- 🐛 修复定时脚本计时器停止错误 [#147](https://github.com/scriptscat/scriptcat/issues/147) [#149](https://github.com/scriptscat/scriptcat/issues/149) [[f9cb6dc](https://github.com/scriptscat/scriptcat/commit/f9cb6dc63da799943fb302540a1e42a53e328ede)]
+- 🐛 修复用户动态配置 [[e67883e](https://github.com/scriptscat/scriptcat/commit/e67883edebe937bf56a064e7d568a0530621b484)]
+
 <a name="0.11.2"></a>
 
 ## 0.11.2 (2023-02-07)
