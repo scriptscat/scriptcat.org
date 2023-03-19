@@ -15,6 +15,28 @@ id: change
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+<a name="0.12.0-beta"></a>
+
+## 0.12.0-beta (2023-03-19)
+
+### Added
+
+- ✨ 根据安装url生成安装主页按钮 [#134](https://github.com/scriptscat/scriptcat/issues/134) [[789bda2](https://github.com/scriptscat/scriptcat/commit/789bda2d97b0b02b9ccb886d5c73e0530447bdc6)]
+- ✨ 排除指定网址执行 [#144](https://github.com/scriptscat/scriptcat/issues/144) [[2d5573f](https://github.com/scriptscat/scriptcat/commit/2d5573ffeb76ae479f3cfd62d3766c00532f93b1)]
+
+### Changed
+
+- ⚡ 优化获取脚本逻辑 [#134](https://github.com/scriptscat/scriptcat/issues/134) [[81a589e](https://github.com/scriptscat/scriptcat/commit/81a589ea2c4ac46e88cc029b02add095623738e6)]
+- ⚡ 优化脚本储存数据过大导致的卡顿问题 [[dbdbec1](https://github.com/scriptscat/scriptcat/commit/dbdbec191aaa6e3f9bda8609feb0e637f160946f)]
+
+### Fixed
+
+- 🐛 修复菜单多次注册的问题 [#129](https://github.com/scriptscat/scriptcat/issues/129) [[9515269](https://github.com/scriptscat/scriptcat/commit/951526918c03dab2e18f37520e6d58b3503979c0)]
+- 🐛 修复数据清除错误 [[e3fbaf5](https://github.com/scriptscat/scriptcat/commit/e3fbaf585bf2e845ccee5f3273afb195cc26a356)]
+- 🐛 修复iframe中运行不在popup页显示的问题与添加脚本运行次数 [#154](https://github.com/scriptscat/scriptcat/issues/154) [[b5670c9](https://github.com/scriptscat/scriptcat/commit/b5670c96991a8a2256f577a063f9b0c6e0186823)]
+- 🐛 修复GM_menu问题 [#153](https://github.com/scriptscat/scriptcat/issues/153) [[4d6eafe](https://github.com/scriptscat/scriptcat/commit/4d6eafe531ca57799e288812df8c96130c112365)]
+
+
 <a name="0.11.3"></a>
 
 ## 0.11.3 (2023-03-03)
