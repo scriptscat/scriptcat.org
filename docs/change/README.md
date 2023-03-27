@@ -15,6 +15,20 @@ id: change
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+<a name="0.12.0"></a>
+
+## 0.12.0 (2023-03-27)
+
+### Added
+
+- ✨ 添加安装脚本成功后的提示与资源过期机制 [#158](https://github.com/scriptscat/scriptcat/issues/158) [[0794cd3](https://github.com/scriptscat/scriptcat/commit/0794cd3be1a54e02529ddfc722a4cf457883952c)]
+
+### Fixed
+
+- 🐛 修复某些以.user.js为后缀的网页识别成安装脚本 [[f094d80](https://github.com/scriptscat/scriptcat/commit/f094d80dd616995c8ffdbc42f9be52b8fe25b493)]
+- 🐛 修复没有菜单时不显示主菜单 [#159](https://github.com/scriptscat/scriptcat/issues/159) [[4c4b15f](https://github.com/scriptscat/scriptcat/commit/4c4b15f46586e5e3b71e16fa337d4bdb6c9eda10)]
+- 🐛 修复代码编辑框不跟随暗夜模式变化的问题与优化id列为sort列 [[df26bdf](https://github.com/scriptscat/scriptcat/commit/df26bdfa734796719b7190e75ad2d1038abc2dfd)]
+
 <a name="0.12.0-beta"></a>
 
 ## 0.12.0-beta (2023-03-19)
