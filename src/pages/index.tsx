@@ -4,7 +4,7 @@ import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
-
+import { Space } from "antd";
 import styles from "./index.module.css";
 
 function HomepageHeader() {
@@ -24,7 +24,15 @@ function HomepageHeader() {
             color: "#fff",
           }}
         >
-          {siteConfig.title}
+          {/* {siteConfig.title} */}
+          Script{" "}
+          <b
+            style={{
+              color: "var(--ifm-color-primary-light)",
+            }}
+          >
+            Cat
+          </b>
         </h1>
         <p
           className="hero__subtitle"
@@ -32,13 +40,32 @@ function HomepageHeader() {
             color: "#fff",
           }}
         >
-          {siteConfig.tagline}
+          {/* {siteConfig.tagline} */}
+          执行
+          <b
+            style={{
+              color: "var(--ifm-color-primary-light)",
+            }}
+          >
+            用户脚本
+          </b>
+          的浏览器扩展,激活浏览器的无限可能!
         </p>
-        <div className={styles.buttons}>
+        <Space size="large">
           <Link className="button button--secondary button--lg" to="/docs/use">
             开始使用
           </Link>
-        </div>
+          <a
+            href="https://github.com/scriptscat/scriptcat"
+            target="_blank"
+            style={{ display: "block", height: "24px" }}
+          >
+            <img
+              src="https://img.shields.io/github/stars/scriptscat/scriptcat?style=social"
+              height="24"
+            />
+          </a>
+        </Space>
       </div>
     </header>
   );
