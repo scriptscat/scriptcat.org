@@ -15,6 +15,43 @@ id: change
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+<a name="0.13.0-beta"></a>
+
+## 0.13.0-beta (2023-05-21)
+
+### Added
+
+- ✨ 授权管理 [#184](https://github.com/scriptscat/scriptcat/issues/184) [[002e443](https://github.com/scriptscat/scriptcat/commit/002e443d4aa42385fbfa57865b9bf0af60cc95d6)]
+- ✨ 打开备份目录 [#182](https://github.com/scriptscat/scriptcat/issues/182) [[7274e40](https://github.com/scriptscat/scriptcat/commit/7274e40893619249d9a775e63eecae4a8c971852)]
+- ✨ 一键关闭所有脚本按钮 [#130](https://github.com/scriptscat/scriptcat/issues/130) [[27187a6](https://github.com/scriptscat/scriptcat/commit/27187a677115b15f762e9e98a20a8d6432fd1058)]
+- ✨ 优化加载逻辑 [#135](https://github.com/scriptscat/scriptcat/issues/135) [[5b9c37d](https://github.com/scriptscat/scriptcat/commit/5b9c37dfa488895978f79653eb3496cbd6b90511)]
+- ✨ 新增 iframe 运行计次 [#167](https://github.com/scriptscat/scriptcat/issues/167) [[0a3ae5a](https://github.com/scriptscat/scriptcat/commit/0a3ae5ae042294e5274c964466569c379ac6d181)]
+- ✨ 日志定时清理逻辑 [[81587a0](https://github.com/scriptscat/scriptcat/commit/81587a05c65b03c45ebd837c0ba5249a192259f8)]
+- ✨ 新增脚本编辑器菜单快捷键显示 [[f9e92b8](https://github.com/scriptscat/scriptcat/commit/f9e92b860980d40c91840e88233b6c1209a0c1dc)]
+- ✨ 新增脚本编辑器脚本另存为功能 [[7790137](https://github.com/scriptscat/scriptcat/commit/77901379235482e07a40de543119631d4b57bf99)]
+- ✨ 添加 GM_openInTab 新可选功能 [[f2b6722](https://github.com/scriptscat/scriptcat/commit/f2b67222b1179095db0ac04d8c7a1db78ce4e951)]
+- ✨ 增加 crontab 悬浮提示 [[8d6ba52](https://github.com/scriptscat/scriptcat/commit/8d6ba52f4515beb25ed4440f00d977e2ccb3ae7f)]
+- ✨ eslint quickfix [[b0e9abe](https://github.com/scriptscat/scriptcat/commit/b0e9abee7fe0d92f138e7ff5fb6f0ab608ee89e3)]
+
+### Fixed
+
+- 🐛 修复 debug 值问题 [#163](https://github.com/scriptscat/scriptcat/issues/163) [[826d164](https://github.com/scriptscat/scriptcat/commit/826d164f44ee0d5e45cd71cca97bc8594d0a8318)]
+- 🐛 修复同步删除问题 [#143](https://github.com/scriptscat/scriptcat/issues/143) [[021e6db](https://github.com/scriptscat/scriptcat/commit/021e6db15eda2b6276fc18372eb4ac7a2b965bb9)]
+- 🐛 修复特殊 function 判断 [[43ee0de](https://github.com/scriptscat/scriptcat/commit/43ee0de9f3d18304a667d01f5601fcd2fb68cc8d)]
+- 🐛 修复沙盒隔离问题 [#189](https://github.com/scriptscat/scriptcat/issues/189) [[647de2e](https://github.com/scriptscat/scriptcat/commit/647de2ebc63162204a4bad164938e14e332d77a4)]
+- 🐛 添加数据校验 [#161](https://github.com/scriptscat/scriptcat/issues/161) [[2a02ecb](https://github.com/scriptscat/scriptcat/commit/2a02ecb0dd8497c637c5c85af7c7f9c3e9ce7ac3)]
+- 🐛 修复排序逻辑问题 [#164](https://github.com/scriptscat/scriptcat/issues/164) [[97c0ac0](https://github.com/scriptscat/scriptcat/commit/97c0ac03561dedd2893fb6d41aefce922df7f832)]
+- 🐛 修复脚本更新会导致自定义配置失效的问题 [#174](https://github.com/scriptscat/scriptcat/issues/174) [[aa2ace1](https://github.com/scriptscat/scriptcat/commit/aa2ace198e06199f9a59fe16c467bb6c9b6f0ff9)]
+- 🐛 修复 vscode 正常断开后不重新连接的问题 [#176](https://github.com/scriptscat/scriptcat/issues/176) [[f2df2d4](https://github.com/scriptscat/scriptcat/commit/f2df2d40a08289ce0c0fe52c4f3e8fb2c947257a)]
+- 🐛 修复 chrome.downloads.download 错误捕获 [[7d4ad2d](https://github.com/scriptscat/scriptcat/commit/7d4ad2d6307ec8d67f310c6e73c1259934f738b1)]
+
+### Miscellaneous
+
+- 优化 useOpen 标签关闭监听方式 [[4ab0d58](https://github.com/scriptscat/scriptcat/commit/4ab0d58a21569d0d9e790e4a3b2ebaa237f2f5ea)]
+- 优化 ESLint [[e927f2c](https://github.com/scriptscat/scriptcat/commit/e927f2cbfc2b0b643170aa8b7a13cc6eb28d6d36)]
+- 更新monaco@0.37.1，修复多编辑器快捷键冲突 [[348fd67](https://github.com/scriptscat/scriptcat/commit/348fd67c861ece3e658e6f6720d9bc63312276fe)]
+- 更新依赖修复 Windows 本地编译错误 [[392e4e6](https://github.com/scriptscat/scriptcat/commit/392e4e682769423f4446dd4a5138a1db89a1c37a)]
+
 <a name="0.12.0"></a>
 
 ## 0.12.0 (2023-03-27)
@@ -25,9 +62,9 @@ id: change
 
 ### Fixed
 
-- 🐛 修复某些以.user.js为后缀的网页识别成安装脚本 [[f094d80](https://github.com/scriptscat/scriptcat/commit/f094d80dd616995c8ffdbc42f9be52b8fe25b493)]
+- 🐛 修复某些以.user.js 为后缀的网页识别成安装脚本 [[f094d80](https://github.com/scriptscat/scriptcat/commit/f094d80dd616995c8ffdbc42f9be52b8fe25b493)]
 - 🐛 修复没有菜单时不显示主菜单 [#159](https://github.com/scriptscat/scriptcat/issues/159) [[4c4b15f](https://github.com/scriptscat/scriptcat/commit/4c4b15f46586e5e3b71e16fa337d4bdb6c9eda10)]
-- 🐛 修复代码编辑框不跟随暗夜模式变化的问题与优化id列为sort列 [[df26bdf](https://github.com/scriptscat/scriptcat/commit/df26bdfa734796719b7190e75ad2d1038abc2dfd)]
+- 🐛 修复代码编辑框不跟随暗夜模式变化的问题与优化 id 列为 sort 列 [[df26bdf](https://github.com/scriptscat/scriptcat/commit/df26bdfa734796719b7190e75ad2d1038abc2dfd)]
 
 <a name="0.12.0-beta"></a>
 
@@ -35,7 +72,7 @@ id: change
 
 ### Added
 
-- ✨ 根据安装url生成安装主页按钮 [#134](https://github.com/scriptscat/scriptcat/issues/134) [[789bda2](https://github.com/scriptscat/scriptcat/commit/789bda2d97b0b02b9ccb886d5c73e0530447bdc6)]
+- ✨ 根据安装 url 生成安装主页按钮 [#134](https://github.com/scriptscat/scriptcat/issues/134) [[789bda2](https://github.com/scriptscat/scriptcat/commit/789bda2d97b0b02b9ccb886d5c73e0530447bdc6)]
 - ✨ 排除指定网址执行 [#144](https://github.com/scriptscat/scriptcat/issues/144) [[2d5573f](https://github.com/scriptscat/scriptcat/commit/2d5573ffeb76ae479f3cfd62d3766c00532f93b1)]
 
 ### Changed
@@ -47,9 +84,8 @@ id: change
 
 - 🐛 修复菜单多次注册的问题 [#129](https://github.com/scriptscat/scriptcat/issues/129) [[9515269](https://github.com/scriptscat/scriptcat/commit/951526918c03dab2e18f37520e6d58b3503979c0)]
 - 🐛 修复数据清除错误 [[e3fbaf5](https://github.com/scriptscat/scriptcat/commit/e3fbaf585bf2e845ccee5f3273afb195cc26a356)]
-- 🐛 修复iframe中运行不在popup页显示的问题与添加脚本运行次数 [#154](https://github.com/scriptscat/scriptcat/issues/154) [[b5670c9](https://github.com/scriptscat/scriptcat/commit/b5670c96991a8a2256f577a063f9b0c6e0186823)]
-- 🐛 修复GM_menu问题 [#153](https://github.com/scriptscat/scriptcat/issues/153) [[4d6eafe](https://github.com/scriptscat/scriptcat/commit/4d6eafe531ca57799e288812df8c96130c112365)]
-
+- 🐛 修复 iframe 中运行不在 popup 页显示的问题与添加脚本运行次数 [#154](https://github.com/scriptscat/scriptcat/issues/154) [[b5670c9](https://github.com/scriptscat/scriptcat/commit/b5670c96991a8a2256f577a063f9b0c6e0186823)]
+- 🐛 修复 GM_menu 问题 [#153](https://github.com/scriptscat/scriptcat/issues/153) [[4d6eafe](https://github.com/scriptscat/scriptcat/commit/4d6eafe531ca57799e288812df8c96130c112365)]
 
 <a name="0.11.3"></a>
 
@@ -57,9 +93,9 @@ id: change
 
 ### Fixed
 
-- 🐛 修复沙盒context关键字能访问的问题 [[dbd9ad4](https://github.com/scriptscat/scriptcat/commit/dbd9ad405cea50eefe4614fea5c46426c3a9abe0)]
-- 🐛 修复沙盒context作用域问题 [[3d15519](https://github.com/scriptscat/scriptcat/commit/3d1551926b3b6954906467297ca4a9a5905cf945)]
-- 🐛 修复沙盒变量undefined问题 [[2dcf9c2](https://github.com/scriptscat/scriptcat/commit/2dcf9c299faa90304dc87d736d94f4196fd522a9)]
+- 🐛 修复沙盒 context 关键字能访问的问题 [[dbd9ad4](https://github.com/scriptscat/scriptcat/commit/dbd9ad405cea50eefe4614fea5c46426c3a9abe0)]
+- 🐛 修复沙盒 context 作用域问题 [[3d15519](https://github.com/scriptscat/scriptcat/commit/3d1551926b3b6954906467297ca4a9a5905cf945)]
+- 🐛 修复沙盒变量 undefined 问题 [[2dcf9c2](https://github.com/scriptscat/scriptcat/commit/2dcf9c299faa90304dc87d736d94f4196fd522a9)]
 - 🐛 修复定时脚本计时器停止错误 [#147](https://github.com/scriptscat/scriptcat/issues/147) [#149](https://github.com/scriptscat/scriptcat/issues/149) [[f9cb6dc](https://github.com/scriptscat/scriptcat/commit/f9cb6dc63da799943fb302540a1e42a53e328ede)]
 - 🐛 修复用户动态配置 [[e67883e](https://github.com/scriptscat/scriptcat/commit/e67883edebe937bf56a064e7d568a0530621b484)]
 
@@ -73,23 +109,22 @@ id: change
 
 ### Fixed
 
-- 🐛 修复uuid导致的同步问题 [#141](https://github.com/scriptscat/scriptcat/issues/141) [#133](https://github.com/scriptscat/scriptcat/issues/133) [[9b70673](https://github.com/scriptscat/scriptcat/commit/9b70673032650284d551429d232a11654654ad7f)]
-- 🐛 优化系统弹出更新逻辑延长至60s并添加停止逻辑 [#137](https://github.com/scriptscat/scriptcat/issues/137) [[38921da](https://github.com/scriptscat/scriptcat/commit/38921da3555b78f65f42d16aeb6174ca0543e0af)]
-- 🐛 修复user.js?*链接无法触发安装与优化点击脚本名即进入编辑 [#142](https://github.com/scriptscat/scriptcat/issues/142) [[4576795](https://github.com/scriptscat/scriptcat/commit/4576795a3320c75eea87fa83ec271de7329f5bad)]
-- 🐛 GM_info添加更多属性以兼容其他管理器 [#139](https://github.com/scriptscat/scriptcat/issues/139) [[184cfaf](https://github.com/scriptscat/scriptcat/commit/184cfaf97ec0e9276f22eee4edd5c359411c3992)]
-
+- 🐛 修复 uuid 导致的同步问题 [#141](https://github.com/scriptscat/scriptcat/issues/141) [#133](https://github.com/scriptscat/scriptcat/issues/133) [[9b70673](https://github.com/scriptscat/scriptcat/commit/9b70673032650284d551429d232a11654654ad7f)]
+- 🐛 优化系统弹出更新逻辑延长至 60s 并添加停止逻辑 [#137](https://github.com/scriptscat/scriptcat/issues/137) [[38921da](https://github.com/scriptscat/scriptcat/commit/38921da3555b78f65f42d16aeb6174ca0543e0af)]
+- 🐛 修复 user.js?\*链接无法触发安装与优化点击脚本名即进入编辑 [#142](https://github.com/scriptscat/scriptcat/issues/142) [[4576795](https://github.com/scriptscat/scriptcat/commit/4576795a3320c75eea87fa83ec271de7329f5bad)]
+- 🐛 GM_info 添加更多属性以兼容其他管理器 [#139](https://github.com/scriptscat/scriptcat/issues/139) [[184cfaf](https://github.com/scriptscat/scriptcat/commit/184cfaf97ec0e9276f22eee4edd5c359411c3992)]
 
 <a name="0.11.1"></a>
 
 ## 0.11.1 (2023-01-15)
-> 由于firefox商店限制，暂时移除掉firefox的CSP策略，此项移除将会导致firefox版本的扩展无法使用代码提示，后续再寻找解决方案。
+
+> 由于 firefox 商店限制，暂时移除掉 firefox 的 CSP 策略，此项移除将会导致 firefox 版本的扩展无法使用代码提示，后续再寻找解决方案。
 
 ### Fixed
 
 - 🐛 修复值未发生改变时的报错 [[a97981c](https://github.com/scriptscat/scriptcat/commit/a97981cd0b96acfa7778df9debc33a2697cab400)]
-- 🐛 修复http* match问题 [#132](https://github.com/scriptscat/scriptcat/issues/132) [[b17581b](https://github.com/scriptscat/scriptcat/commit/b17581b264fe5a1160f41bf6d8a7200017d0583a)]
-- 🐛 修复vscode连接问题 [[f0c3853](https://github.com/scriptscat/scriptcat/commit/f0c3853565eaac845aa98c7358a324a0df74c04c)]
-
+- 🐛 修复 http\* match 问题 [#132](https://github.com/scriptscat/scriptcat/issues/132) [[b17581b](https://github.com/scriptscat/scriptcat/commit/b17581b264fe5a1160f41bf6d8a7200017d0583a)]
+- 🐛 修复 vscode 连接问题 [[f0c3853](https://github.com/scriptscat/scriptcat/commit/f0c3853565eaac845aa98c7358a324a0df74c04c)]
 
 <a name="0.11.0"></a>
 
@@ -97,31 +132,31 @@ id: change
 
 ### Fixed
 
-- 🐛 修复OneDrive创建多余目录的bug [[3e326d7](https://github.com/scriptscat/scriptcat/commit/3e326d7aa0921c08817e844367cf361c99de51c5)]
-- 🐛 修复onedrive查看备份文件 [[e79a5fb](https://github.com/scriptscat/scriptcat/commit/e79a5fb94857a717541da4f3307271321fb8d4f2)]
-
+- 🐛 修复 OneDrive 创建多余目录的 bug [[3e326d7](https://github.com/scriptscat/scriptcat/commit/3e326d7aa0921c08817e844367cf361c99de51c5)]
+- 🐛 修复 onedrive 查看备份文件 [[e79a5fb](https://github.com/scriptscat/scriptcat/commit/e79a5fb94857a717541da4f3307271321fb8d4f2)]
 
 <a name="0.11.0-beta.3"></a>
 
 ## 0.11.0-beta.3 (2022-12-18)
-> 支持OneDriver、CAT_fileStorage等多个重磅功能
+
+> 支持 OneDriver、CAT_fileStorage 等多个重磅功能
 
 ### Added
 
-- ✨ 支持onedrive [#80](https://github.com/scriptscat/scriptcat/issues/80) [[7a71700](https://github.com/scriptscat/scriptcat/commit/7a717007e0ad486a43fab548a5c06b0286238264)]
-- ✨ 支持CAT_fileStorage [#127](https://github.com/scriptscat/scriptcat/issues/127) [[d566afb](https://github.com/scriptscat/scriptcat/commit/d566afb1417ea55c73aa19b5d205af5318c72ed5)]
-- ✨ GM_xhr支持document和stream [[eedf0c1](https://github.com/scriptscat/scriptcat/commit/eedf0c11c831e1518f89748383a0058e623f8315)]
-- ✨ tab栏点击右键可以关闭当前，关闭其他，关闭左侧，关闭右侧脚本 [[1b8d84e](https://github.com/scriptscat/scriptcat/commit/1b8d84eb7af0c821622fb8fab91fb073c78f3bc2)]
+- ✨ 支持 onedrive [#80](https://github.com/scriptscat/scriptcat/issues/80) [[7a71700](https://github.com/scriptscat/scriptcat/commit/7a717007e0ad486a43fab548a5c06b0286238264)]
+- ✨ 支持 CAT_fileStorage [#127](https://github.com/scriptscat/scriptcat/issues/127) [[d566afb](https://github.com/scriptscat/scriptcat/commit/d566afb1417ea55c73aa19b5d205af5318c72ed5)]
+- ✨ GM_xhr 支持 document 和 stream [[eedf0c1](https://github.com/scriptscat/scriptcat/commit/eedf0c11c831e1518f89748383a0058e623f8315)]
+- ✨ tab 栏点击右键可以关闭当前，关闭其他，关闭左侧，关闭右侧脚本 [[1b8d84e](https://github.com/scriptscat/scriptcat/commit/1b8d84eb7af0c821622fb8fab91fb073c78f3bc2)]
 
 ### Fixed
 
 - 🐛 修复文件系统斜杠问题 [[3a66818](https://github.com/scriptscat/scriptcat/commit/3a66818b9be48a6b1149fa5dd2d277724ed5aa89)]
-- 🐛 修复沙盒模式无法从window读取GM_info的问题 [#126](https://github.com/scriptscat/scriptcat/issues/126) [[f23ccde](https://github.com/scriptscat/scriptcat/commit/f23ccdead4429a39d8478851e0405a7e3e6a4257)]
-- 🐛 修复脚本储存管理过高与object类型编辑问题 [[e0a0d64](https://github.com/scriptscat/scriptcat/commit/e0a0d64f0616230e48b67a58ee0030a04156a7b4)]
+- 🐛 修复沙盒模式无法从 window 读取 GM_info 的问题 [#126](https://github.com/scriptscat/scriptcat/issues/126) [[f23ccde](https://github.com/scriptscat/scriptcat/commit/f23ccdead4429a39d8478851e0405a7e3e6a4257)]
+- 🐛 修复脚本储存管理过高与 object 类型编辑问题 [[e0a0d64](https://github.com/scriptscat/scriptcat/commit/e0a0d64f0616230e48b67a58ee0030a04156a7b4)]
 - 🐛 修复列表名称排序错误 [[8e678da](https://github.com/scriptscat/scriptcat/commit/8e678dae738facad73b9875d92d6d0cead5dd4b2)]
 - 🐛 修复导入重复的问题 [[0ec4cc6](https://github.com/scriptscat/scriptcat/commit/0ec4cc619caaa79a7cc3c82d3d906aef42756495)]
-- 🐛 处理*开头的特殊情况 [#123](https://github.com/scriptscat/scriptcat/issues/123) [[9569736](https://github.com/scriptscat/scriptcat/commit/9569736846f886b64118af1ab14fbf920bf58955)]
-- 🐛 修复了点击编辑以后进入指定脚本可以左侧也选中对应的脚步名字,点击保存tab脚本名称和左侧脚本名称同步修改以后的内容 [[5335869](https://github.com/scriptscat/scriptcat/commit/53358694a02c0822335048e0f659f40ebd393a9e)]
+- 🐛 处理\*开头的特殊情况 [#123](https://github.com/scriptscat/scriptcat/issues/123) [[9569736](https://github.com/scriptscat/scriptcat/commit/9569736846f886b64118af1ab14fbf920bf58955)]
+- 🐛 修复了点击编辑以后进入指定脚本可以左侧也选中对应的脚步名字,点击保存 tab 脚本名称和左侧脚本名称同步修改以后的内容 [[5335869](https://github.com/scriptscat/scriptcat/commit/53358694a02c0822335048e0f659f40ebd393a9e)]
 
 <a name="0.11.0-beta.2"></a>
 
@@ -129,8 +164,7 @@ id: change
 
 ### Fixed
 
-- 🐛 修复install页错误 [[fda9de8](https://github.com/scriptscat/scriptcat/commit/fda9de80e87259618757df907fa0ff5c94b0a188)]
-
+- 🐛 修复 install 页错误 [[fda9de8](https://github.com/scriptscat/scriptcat/commit/fda9de80e87259618757df907fa0ff5c94b0a188)]
 
 <a name="0.11.0-beta.1"></a>
 
@@ -138,11 +172,10 @@ id: change
 
 ### Added
 
-- ✨ GM_getResourceURL支持获取blob url [#84](https://github.com/scriptscat/scriptcat/issues/84) [[22925cb](https://github.com/scriptscat/scriptcat/commit/22925cb009c38d414210fd7d529b96bc32a69fb8)]
-- ✨ 支持GM_addElement [#102](https://github.com/scriptscat/scriptcat/issues/102) [[0d0f4db](https://github.com/scriptscat/scriptcat/commit/0d0f4dba48b35198239156ec344d509d65eede31)]
-- ✨ 支持自定义eslint [[0ff6ddd](https://github.com/scriptscat/scriptcat/commit/0ff6dddeb2f5152a718ab7587d4e61c62178ff5a)]
-- ✨ 添加CAT_userConfig打开用户配置页 [[025db33](https://github.com/scriptscat/scriptcat/commit/025db3391bfca7d0477ba05d7680e8a0ca5af961)]
-
+- ✨ GM_getResourceURL 支持获取 blob url [#84](https://github.com/scriptscat/scriptcat/issues/84) [[22925cb](https://github.com/scriptscat/scriptcat/commit/22925cb009c38d414210fd7d529b96bc32a69fb8)]
+- ✨ 支持 GM_addElement [#102](https://github.com/scriptscat/scriptcat/issues/102) [[0d0f4db](https://github.com/scriptscat/scriptcat/commit/0d0f4dba48b35198239156ec344d509d65eede31)]
+- ✨ 支持自定义 eslint [[0ff6ddd](https://github.com/scriptscat/scriptcat/commit/0ff6dddeb2f5152a718ab7587d4e61c62178ff5a)]
+- ✨ 添加 CAT_userConfig 打开用户配置页 [[025db33](https://github.com/scriptscat/scriptcat/commit/025db3391bfca7d0477ba05d7680e8a0ca5af961)]
 
 <a name="0.10.4"></a>
 
@@ -150,31 +183,30 @@ id: change
 
 ### Added
 
-- ✨ 兼容tm的储存导入导出 [[2eed348](https://github.com/scriptscat/scriptcat/commit/2eed3486aefe9fcd8bb7f9df08da040b9a280ea3)]
+- ✨ 兼容 tm 的储存导入导出 [[2eed348](https://github.com/scriptscat/scriptcat/commit/2eed3486aefe9fcd8bb7f9df08da040b9a280ea3)]
 
 ### Fixed
 
-- 🐛 .prettierrc添加endOfLine兼容windows [[ee34161](https://github.com/scriptscat/scriptcat/commit/ee34161163ad7e18b16b39b492bb56b709bd9266)]
-- 🐛 修复了点击左侧脚本tab没有选择对应的内容,以及点击左侧脚本没有选中的效果 [[9ad2b53](https://github.com/scriptscat/scriptcat/commit/9ad2b533bd624ffea2c7e786318b35d1f589bae5)]
-- 🐛 兼容GM_cookie.list的调用方式和菜单展示问题 [#117](https://github.com/scriptscat/scriptcat/issues/117) [[a54d0c6](https://github.com/scriptscat/scriptcat/commit/a54d0c62ad327adaae6d183d5b5aa4468026c888)]
+- 🐛 .prettierrc 添加 endOfLine 兼容 windows [[ee34161](https://github.com/scriptscat/scriptcat/commit/ee34161163ad7e18b16b39b492bb56b709bd9266)]
+- 🐛 修复了点击左侧脚本 tab 没有选择对应的内容,以及点击左侧脚本没有选中的效果 [[9ad2b53](https://github.com/scriptscat/scriptcat/commit/9ad2b533bd624ffea2c7e786318b35d1f589bae5)]
+- 🐛 兼容 GM_cookie.list 的调用方式和菜单展示问题 [#117](https://github.com/scriptscat/scriptcat/issues/117) [[a54d0c6](https://github.com/scriptscat/scriptcat/commit/a54d0c62ad327adaae6d183d5b5aa4468026c888)]
 - 🐛 修复更新间隔设置从不失效 [#115](https://github.com/scriptscat/scriptcat/issues/115) [[50d8264](https://github.com/scriptscat/scriptcat/commit/50d8264bc3e91126e56d6688b8dec5b1e1f42908)]
-- 🐛 修复document-body与优化资源识别text [#116](https://github.com/scriptscat/scriptcat/issues/116) [[1b87ffc](https://github.com/scriptscat/scriptcat/commit/1b87ffc99e9eb67c9878e7909f2b349b42e59681)]
-
+- 🐛 修复 document-body 与优化资源识别 text [#116](https://github.com/scriptscat/scriptcat/issues/116) [[1b87ffc](https://github.com/scriptscat/scriptcat/commit/1b87ffc99e9eb67c9878e7909f2b349b42e59681)]
 
 <a name="0.10.3"></a>
 
 ## 0.10.3 (2022-11-23)
-> 此版本无严重bug将会发布到edge
+
+> 此版本无严重 bug 将会发布到 edge
 
 ### Fixed
 
-- 🐛 修复删除脚本依旧在运行的bug [[e7a5f20](https://github.com/scriptscat/scriptcat/commit/e7a5f20199aac246a22aff9f8e7142a8134a11f3)]
+- 🐛 修复删除脚本依旧在运行的 bug [[e7a5f20](https://github.com/scriptscat/scriptcat/commit/e7a5f20199aac246a22aff9f8e7142a8134a11f3)]
 - 🐛 修复备份文件操作错误 [#113](https://github.com/scriptscat/scriptcat/issues/113) [[af09645](https://github.com/scriptscat/scriptcat/commit/af09645d5bd5fea604c5729235b38577cb1e88d6)]
 
 ### Miscellaneous
 
 - 📝 Update README.md [[3f768c7](https://github.com/scriptscat/scriptcat/commit/3f768c7021d43bca725809dd22cb14f38c80ebfa)]
-
 
 <a name="0.10.2"></a>
 
@@ -182,8 +214,7 @@ id: change
 
 ### Fixed
 
-- 🐛 修复某些情况export表唯一性导致数据库升级失败 [[10a5c19](https://github.com/scriptscat/scriptcat/commit/10a5c1973b7f2dbcbe3f1720f6a1f33b23b93949)]
-
+- 🐛 修复某些情况 export 表唯一性导致数据库升级失败 [[10a5c19](https://github.com/scriptscat/scriptcat/commit/10a5c1973b7f2dbcbe3f1720f6a1f33b23b93949)]
 
 <a name="0.11.0-beta"></a>
 
@@ -191,12 +222,11 @@ id: change
 
 ### Added
 
-- ✨ 添加CAT_userConfig打开用户配置页 [[025db33](https://github.com/scriptscat/scriptcat/commit/025db3391bfca7d0477ba05d7680e8a0ca5af961)]
+- ✨ 添加 CAT_userConfig 打开用户配置页 [[025db33](https://github.com/scriptscat/scriptcat/commit/025db3391bfca7d0477ba05d7680e8a0ca5af961)]
 
 ### Changed
 
 - 🎨 统一更新日志地址 [[8e48400](https://github.com/scriptscat/scriptcat/commit/8e4840027719089f2a1a800f991714d4652fd231)]
-
 
 <a name="0.10.1"></a>
 
