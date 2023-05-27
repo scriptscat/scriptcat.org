@@ -15,6 +15,18 @@ id: change
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+
+<a name="0.13.0"></a>
+
+## 0.13.0 (2023-05-27)
+
+### Fixed
+
+- 🐛 修复数据导入tm问题 [#187](https://github.com/scriptscat/scriptcat/issues/187) [[5546cc1](https://github.com/scriptscat/scriptcat/commit/5546cc1e4aae8ee7f831901431a120bcd7933e6d)]
+- 🐛 修复特殊属性导致的问题 [#190](https://github.com/scriptscat/scriptcat/issues/190) [[c453d21](https://github.com/scriptscat/scriptcat/commit/c453d21e409963e85e607acaa46aaef02e0d2362)]
+- 🐛 修复object类型的值变更会通知的问题 [[146c9ed](https://github.com/scriptscat/scriptcat/commit/146c9ed6cae8fd18c285a806dceed0f20553617d)]
+- 🐛 修复支持无namespace [[e0a9446](https://github.com/scriptscat/scriptcat/commit/e0a944639c26d5fb7a86f35ab5f5eeb050e4133b)]
+
 <a name="0.13.0-beta"></a>
 
 ## 0.13.0-beta (2023-05-21)
