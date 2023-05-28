@@ -4,7 +4,7 @@ import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
-import { Space } from "antd";
+import { Button, Space } from "antd";
 import styles from "./index.module.css";
 
 function HomepageHeader() {
@@ -61,6 +61,12 @@ function HomepageHeader() {
               href="https://scriptcat.org"
             >
               🔍 寻找脚本
+            </Link>
+            <Link
+              className="button button--info button--sm"
+              href="https://bbs.tampermonkey.net.cn/"
+            >
+              💬 交流社区
             </Link>
             <a
               href="https://github.com/scriptscat/scriptcat"
