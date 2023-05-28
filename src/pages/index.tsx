@@ -51,20 +51,28 @@ function HomepageHeader() {
           </b>
           的浏览器扩展,激活浏览器的无限可能!
         </p>
-        <Space size="large">
+        <Space size="large" direction="vertical">
           <Link className="button button--secondary button--lg" to="/docs/use">
             开始使用
           </Link>
-          <a
-            href="https://github.com/scriptscat/scriptcat"
-            target="_blank"
-            style={{ display: "block", height: "24px" }}
-          >
-            <img
-              src="https://img.shields.io/github/stars/scriptscat/scriptcat?style=social"
-              height="24"
-            />
-          </a>
+          <Space>
+            <Link
+              className="button button--primary button--sm"
+              href="https://scriptcat.org"
+            >
+              🔍 寻找脚本
+            </Link>
+            <a
+              href="https://github.com/scriptscat/scriptcat"
+              target="_blank"
+              style={{ display: "block", height: "24px" }}
+            >
+              <img
+                src="https://img.shields.io/github/stars/scriptscat/scriptcat?style=social"
+                height="24"
+              />
+            </a>
+          </Space>
         </Space>
       </div>
     </header>
