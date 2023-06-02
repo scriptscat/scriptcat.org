@@ -16,6 +16,17 @@ id: change
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
 
+<a name="0.13.1"></a>
+
+## 0.13.1 (2023-06-02)
+
+### Fixed
+
+- 🐛 优化options页header， 新增外部链接 [[951833e](https://github.com/scriptscat/scriptcat/commit/951833eab5368fc179a0192f4513a8edc39fdf86)]
+- 🐛 修复沙盒加载问题 [#195](https://github.com/scriptscat/scriptcat/issues/195) [[4e1c904](https://github.com/scriptscat/scriptcat/commit/4e1c904be1595ff48ca8ba414d8478caaf67079c)]
+- 🐛 修复沙盒默认函数没有bind的问题 [[81e46b1](https://github.com/scriptscat/scriptcat/commit/81e46b1f147b7e98120cd53ecdaa0528c65cc6bf)]
+- 🐛 修复firefox csp策略问题 [#170](https://github.com/scriptscat/scriptcat/issues/170) [[d310275](https://github.com/scriptscat/scriptcat/commit/d3102754bed50b1d1e79d63eaa1f78d1c9345fc4)]
+
 <a name="0.13.0"></a>
 
 ## 0.13.0 (2023-05-27)
