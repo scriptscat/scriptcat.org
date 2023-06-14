@@ -52,10 +52,15 @@ group1:
     min: 10  # 最小值
     max: 16  # 最大值
     unit: 分 # 表示单位
+  configH:
+    title: 配置H
+    description: 这是一个长文本类型的配置
+    type: textarea
+    default: 默认值
 ---
-group2:
+group2: #第二组配置
   configX:
-    title: 配置A
+    title: 配置X
     description: 这是一个文本类型的配置
     default: 默认值
  ==/UserConfig== */
