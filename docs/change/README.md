@@ -15,6 +15,25 @@ id: change
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+<a name="0.14.0-beta"></a>
+
+## 0.14.0-beta (2023-06-14)
+
+### Added
+
+- ✨ 后台脚本增加重试逻辑 [[16551df](https://github.com/scriptscat/scriptcat/commit/16551df926f5e39e8b9071d106b86b6499d4b090)]
+- ✨ UserConfig 支持 TextArea [[fc2134b](https://github.com/scriptscat/scriptcat/commit/fc2134bf981b69765cdc32afbf76a9909d1c6ebf)]
+- ✨ 支持暴力猴的导入格式 [[1398e59](https://github.com/scriptscat/scriptcat/commit/1398e5954c00db79c44ea5413dec9b05078971a3)]
+- ✨ match 和更新 URL 管理 [[a805dde](https://github.com/scriptscat/scriptcat/commit/a805ddebbee761ebcf21550b787ec68c737fc9fa)]
+- ✨ fileStorage API 改进 [#138](https://github.com/scriptscat/scriptcat/issues/138) ([#199](https://github.com/scriptscat/scriptcat/issues/199)) [[707d391](https://github.com/scriptscat/scriptcat/commit/707d3910a3b85d846dbcc5b27ffcec0bb117acc2)]
+- ✨ 脚本列表批量操作 [#164](https://github.com/scriptscat/scriptcat/issues/164) [#175](https://github.com/scriptscat/scriptcat/issues/175) [[af0ba88](https://github.com/scriptscat/scriptcat/commit/af0ba8878355d55bd1a1d4d83d9d7e2b23352fcc)]
+
+### Fixed
+
+- 🐛 修复 tools 页面滚动条问题 ([#201](https://github.com/scriptscat/scriptcat/issues/201)) [[f3493ae](https://github.com/scriptscat/scriptcat/commit/f3493aed46166b6d0e541c7145fb6d8576968150)]
+- 🐛 修复 GM_log 打印对象时报错 [[4a6516d](https://github.com/scriptscat/scriptcat/commit/4a6516df950caf024a624dea740c4595d0a93e4a)]
+- 🐛 修复 FormItem 错误导致的用户配置、储存管理等功能无法编辑的问题 [[243f90a](https://github.com/scriptscat/scriptcat/commit/243f90ac9b922183325dda0aa8b0c7df63fb8353)]
+- 🐛 修复某些.user.js url 加载错误 [[2596617](https://github.com/scriptscat/scriptcat/commit/2596617e34261e05aaa888e928c1a0f5bb0e3b12)]
 
 <a name="0.13.1"></a>
 
@@ -22,10 +41,10 @@ id: change
 
 ### Fixed
 
-- 🐛 优化options页header， 新增外部链接 [[951833e](https://github.com/scriptscat/scriptcat/commit/951833eab5368fc179a0192f4513a8edc39fdf86)]
+- 🐛 优化 options 页 header， 新增外部链接 [[951833e](https://github.com/scriptscat/scriptcat/commit/951833eab5368fc179a0192f4513a8edc39fdf86)]
 - 🐛 修复沙盒加载问题 [#195](https://github.com/scriptscat/scriptcat/issues/195) [[4e1c904](https://github.com/scriptscat/scriptcat/commit/4e1c904be1595ff48ca8ba414d8478caaf67079c)]
-- 🐛 修复沙盒默认函数没有bind的问题 [[81e46b1](https://github.com/scriptscat/scriptcat/commit/81e46b1f147b7e98120cd53ecdaa0528c65cc6bf)]
-- 🐛 修复firefox csp策略问题 [#170](https://github.com/scriptscat/scriptcat/issues/170) [[d310275](https://github.com/scriptscat/scriptcat/commit/d3102754bed50b1d1e79d63eaa1f78d1c9345fc4)]
+- 🐛 修复沙盒默认函数没有 bind 的问题 [[81e46b1](https://github.com/scriptscat/scriptcat/commit/81e46b1f147b7e98120cd53ecdaa0528c65cc6bf)]
+- 🐛 修复 firefox csp 策略问题 [#170](https://github.com/scriptscat/scriptcat/issues/170) [[d310275](https://github.com/scriptscat/scriptcat/commit/d3102754bed50b1d1e79d63eaa1f78d1c9345fc4)]
 
 <a name="0.13.0"></a>
 
@@ -33,10 +52,10 @@ id: change
 
 ### Fixed
 
-- 🐛 修复数据导入tm问题 [#187](https://github.com/scriptscat/scriptcat/issues/187) [[5546cc1](https://github.com/scriptscat/scriptcat/commit/5546cc1e4aae8ee7f831901431a120bcd7933e6d)]
+- 🐛 修复数据导入 tm 问题 [#187](https://github.com/scriptscat/scriptcat/issues/187) [[5546cc1](https://github.com/scriptscat/scriptcat/commit/5546cc1e4aae8ee7f831901431a120bcd7933e6d)]
 - 🐛 修复特殊属性导致的问题 [#190](https://github.com/scriptscat/scriptcat/issues/190) [[c453d21](https://github.com/scriptscat/scriptcat/commit/c453d21e409963e85e607acaa46aaef02e0d2362)]
-- 🐛 修复object类型的值变更会通知的问题 [[146c9ed](https://github.com/scriptscat/scriptcat/commit/146c9ed6cae8fd18c285a806dceed0f20553617d)]
-- 🐛 修复支持无namespace [[e0a9446](https://github.com/scriptscat/scriptcat/commit/e0a944639c26d5fb7a86f35ab5f5eeb050e4133b)]
+- 🐛 修复 object 类型的值变更会通知的问题 [[146c9ed](https://github.com/scriptscat/scriptcat/commit/146c9ed6cae8fd18c285a806dceed0f20553617d)]
+- 🐛 修复支持无 namespace [[e0a9446](https://github.com/scriptscat/scriptcat/commit/e0a944639c26d5fb7a86f35ab5f5eeb050e4133b)]
 
 <a name="0.13.0-beta"></a>
 
