@@ -20,6 +20,23 @@ id: change
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+<a name="0.14.0-beta.1"></a>
+
+## 0.14.0-beta.1 (2023-06-16)
+> 🎉🎉🎉 脚本猫开始支持i18n，向国际化脚本管理器迈出第一步！ 💥💥💥
+
+### Added
+
+- ✨ userconfig textarea支持rows参数 [[a2003a0](https://github.com/scriptscat/scriptcat/commit/a2003a0ca7c9bd00b582ddecbff4cbf37eef5337)]
+
+### Fixed
+
+- 🐛 修复后台脚本状态显示错误的问题 [[d997dc7](https://github.com/scriptscat/scriptcat/commit/d997dc713026a40147503eda1220b5bae0979542)]
+
+### Miscellaneous
+
+- 🌐 i18n国际化 [#188](https://github.com/scriptscat/scriptcat/issues/188) ([#202](https://github.com/scriptscat/scriptcat/issues/202)) [[d0e6ef0](https://github.com/scriptscat/scriptcat/commit/d0e6ef07b33fe24416212079dfa51ed8a2cb6827)]
+
 
 <a name="0.14.0-beta"></a>
 
