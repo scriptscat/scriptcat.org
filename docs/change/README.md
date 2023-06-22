@@ -20,10 +20,26 @@ id: change
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+<a name="0.14.0"></a>
+
+## 0.14.0 (2023-06-20)
+> 🎉🎉🎉 脚本猫开始支持多国语言，向国际化脚本管理器迈出第一步！ 💥💥💥
+
+### Fixed
+
+- 🐛 修复更新时间i18n问题 [[40bc8da](https://github.com/scriptscat/scriptcat/commit/40bc8dacb732343a0df7440ad51012dd5bed6b28)]
+- 🐛 修复RegExp需要全局对象的问题 fixes [#203](https://github.com/scriptscat/scriptcat/issues/203) [[705641b](https://github.com/scriptscat/scriptcat/commit/705641b363d8623ae55f6b4d81cf7dcbc5f0945d)]
+
+### Miscellaneous
+
+- 🌐 add english readme ([#204](https://github.com/scriptscat/scriptcat/issues/204)) [[e56d4fc](https://github.com/scriptscat/scriptcat/commit/e56d4fc6bf44cd59162e5adf9926459ec33f9217)]
+- 🌐 调整无数据的文案与WebDAV账号密码文案 [[9a82eac](https://github.com/scriptscat/scriptcat/commit/9a82eac94f921cc361cc9bb97431d5225599af0a)]
+
+
 <a name="0.14.0-beta.1"></a>
 
 ## 0.14.0-beta.1 (2023-06-16)
-> 🎉🎉🎉 脚本猫开始支持i18n，向国际化脚本管理器迈出第一步！ 💥💥💥
+> 🎉🎉🎉 脚本猫开始支持多国语言，向国际化脚本管理器迈出第一步！ 💥💥💥
 
 ### Added
 
