@@ -62,28 +62,65 @@ declare function CAT_click(x: number, y: number): void;
 
 ### CAT_userConfig
 
-> 0.11.0-beta 加入
-
 你可以调用此 API 打开脚本的[用户配置](./config.md)页面
 
 ```ts
 declare function CAT_userConfig(): void;
 ```
 
-### CAT_fileStorage🧪
+### CAT_fileStorage
 
-> 0.11.0加入
-
-操控脚本同步配置的文件储存源,将会在同步目录下创建一个app/uuid目录供此 API 使用,上传时默认覆盖同名文件.
-请注意这是一个试验性质的 API, 后续可能会改变
+操控管理器设置的储存系统,将会在目录下创建一个app/uuid目录供此 API 使用,如果指定了baseDir参数,则会使用baseDir作为基础目录
 
 ```ts
+/**
+ * 操控管理器设置的储存系统,将会在目录下创建一个app/uuid目录供此 API 使用,如果指定了baseDir参数,则会使用baseDir作为基础目录
+ * 上传时默认覆盖同名文件
+ * @param action 操作类型 list 列出指定目录所有文件, upload 上传文件, download 下载文件, delete 删除文件, config 打开配置页, 暂时不提供move/mkdir等操作
+ * @param details
+ */
 declare function CAT_fileStorage(
-  action: "list"|"upload"|"donwload"|"delete",
+  action: "list",
   details: {
-    path?: string; 
+    // 文件路径
+    path?: string;
+    // 基础目录,如果未设置,则将脚本uuid作为目录
+    baseDir?: string;
     onload?: (files: CATType.FileStorageFileInfo[]) => void;
     onerror?: (error: CATType.FileStorageError) => void;
   }
 ): void;
+declare function CAT_fileStorage(
+  action: "download",
+  details: {
+    file: CATType.FileStorageFileInfo; // 某些平台需要提供文件的hash值,所以需要传入文件信息
+    onload: (data: Blob) => void;
+    // onprogress?: (progress: number) => void;
+    onerror?: (error: CATType.FileStorageError) => void;
+    // public?: boolean;
+  }
+): void;
+declare function CAT_fileStorage(
+  action: "delete",
+  details: {
+    path: string;
+    onload?: () => void;
+    onerror?: (error: CATType.FileStorageError) => void;
+    // public?: boolean;
+  }
+): void;
+declare function CAT_fileStorage(
+  action: "upload",
+  details: {
+    path: string;
+    // 基础目录,如果未设置,则将脚本uuid作为目录
+    baseDir?: string;
+    data: Blob;
+    onload?: () => void;
+    // onprogress?: (progress: number) => void;
+    onerror?: (error: CATType.FileStorageError) => void;
+    // public?: boolean;
+  }
+): void;
+declare function CAT_fileStorage(action: "config"): void;
 ```

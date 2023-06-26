@@ -8,7 +8,7 @@ id: sync
 
 - [x] WebDAV
 - [x] 百度网盘
-- [ ] OneDriver
+- [x] OneDriver
 
 ## 同步
 

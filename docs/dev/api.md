@@ -18,6 +18,10 @@ API 的详细定义,请看`tempermonkey.d.ts`或者内置编辑器提示,文档�
 
 ## 定义
 
+### GM_info
+
+获取脚本相关信息(参考`tempermonkey.d.ts`且并不完全)
+
 ### GM_cookie
 
 必须使用`@connect`声明操作的 host,且经过用户授权才可使用.虽然兼容 TM 的`GM_cookie.list`操作,但是为了统一,不建议这样.

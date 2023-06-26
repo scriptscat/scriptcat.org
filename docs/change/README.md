@@ -20,6 +20,23 @@ id: change
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+<a name="0.14.1"></a>
+
+## 0.14.1 (2023-06-26)
+> 修复几个比较严重的问题，且影响版本广
+> 反复储存oldScript对象，数据量过大时可能导致脚本加载失败
+
+### Added
+
+- ✨ 将UserConfig暴露至GM_info对象中 ([#206](https://github.com/scriptscat/scriptcat/issues/206)) [[3de39e7](https://github.com/scriptscat/scriptcat/commit/3de39e78fefefafefdd4efb3e03917cb55f4e4cc)]
+
+### Fixed
+
+- 🐛 修复vscode连接问题与同步问题 [[06c3ef7](https://github.com/scriptscat/scriptcat/commit/06c3ef79d5b59df4268dd8388bf798ef8284c42a)]
+- 🐛 修复GM_openInTab默认在后台打开页面的问题 [[7d2a5b2](https://github.com/scriptscat/scriptcat/commit/7d2a5b2a4ffb6d3023ee85ce1b9e7e629ac9d774)]
+- 🐛 修复反复储存oldScript对象问题 [[4832a80](https://github.com/scriptscat/scriptcat/commit/4832a80b5a3c553563367892adcdf85e9832fc98)]
+
+
 <a name="0.14.0"></a>
 
 ## 0.14.0 (2023-06-20)
