@@ -173,7 +173,7 @@ export default function HomepageFeatures(): JSX.Element {
           </Link>
         </div>
       </div>
-      <div className="flex gap-3 bg-light px-20 w-full">
+      <div className="flex gap-3 bg-light w-full">
         <div className="flex-1 m-auto text-center py-4 w-full">
           <h2>社区评论</h2>
           <Space direction="vertical" className="w-full">
@@ -185,8 +185,8 @@ export default function HomepageFeatures(): JSX.Element {
                 slidesToShow={4}
                 slidesToScroll={1}
                 autoplay={true}
-                speed={2000}
-                autoplaySpeed={2000}
+                speed={3000}
+                autoplaySpeed={3000}
                 cssEase="linear"
               >
                 {comments.left.map((item) => (
@@ -208,8 +208,8 @@ export default function HomepageFeatures(): JSX.Element {
                 slidesToShow={4}
                 slidesToScroll={1}
                 autoplay={true}
-                speed={2000}
-                autoplaySpeed={2000}
+                speed={3000}
+                autoplaySpeed={3000}
                 cssEase="linear"
                 rtl={true}
                 initialSlide={3}
