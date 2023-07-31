@@ -20,6 +20,33 @@ id: change
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+<a name="0.15.0-beta"></a>
+
+## 0.15.0-beta (2023-07-31)
+> 大量问题修复与优化
+
+### Added
+
+- ✨ 脚本名支持i18n ([#221](https://github.com/scriptscat/scriptcat/issues/221)) [[968122d](https://github.com/scriptscat/scriptcat/commit/968122df58592fd29b4a82b665104dd26eb8d319)] ([@LiWeny16](https://github.com/LiWeny16))
+- ✨ 脚本批量更新 ([#219](https://github.com/scriptscat/scriptcat/issues/219)) [[8d442ac](https://github.com/scriptscat/scriptcat/commit/8d442ac5c9de2ab7d6694d4b15afdf572291d75d)] ([@LiWeny16](https://github.com/LiWeny16))
+
+### Fixed
+
+- 🐛 优化同步报错问题 [#222](https://github.com/scriptscat/scriptcat/issues/222) [[dd05752](https://github.com/scriptscat/scriptcat/commit/dd0575268638e4009d3fb6c5d389ce836ad761a2)]
+- 🐛 修复常量值被改变的问题 [#214](https://github.com/scriptscat/scriptcat/issues/214) [[63d3061](https://github.com/scriptscat/scriptcat/commit/63d3061a755d625dca853a776b7f10507cba8eda)]
+- 🐛 修复GM_addElement父节点参数为shadowDom错误的问题 [#214](https://github.com/scriptscat/scriptcat/issues/214) [[0bbe7ce](https://github.com/scriptscat/scriptcat/commit/0bbe7ce4e4745a21aefb05f5a8633382aaf3ffa0)]
+- 🐛 修复列表排序问题 [[f1527b0](https://github.com/scriptscat/scriptcat/commit/f1527b0e814201d31c4b06b93a2ab613b46379bd)]
+- 🐛 修复GM_openInTab loadInBackground参数问题 [[1f29bfc](https://github.com/scriptscat/scriptcat/commit/1f29bfc24dd00b418acb2d52691f847fddec5f27)]
+- 🐛 修复xml文档无法加载脚本的问题 [#211](https://github.com/scriptscat/scriptcat/issues/211) [[ef7efbd](https://github.com/scriptscat/scriptcat/commit/ef7efbdd1da3011054edc7ff6e39693033a538b1)]
+- 🐛 修复网盘同步脚本覆盖问题 [[e4bd5d4](https://github.com/scriptscat/scriptcat/commit/e4bd5d441c37f2a32b6854c63a7ebcd6cd719abe)]
+- 🐛 修复后台脚本无法控制setInterval停止的问题 [#207](https://github.com/scriptscat/scriptcat/issues/207) [[d059ef7](https://github.com/scriptscat/scriptcat/commit/d059ef7ef9fa4b097b4a3682f36dc973e82cf61e)]
+- 🐛 修复网盘登录掉了之后无法重新登录的问题 [#210](https://github.com/scriptscat/scriptcat/issues/210) [[963a6d2](https://github.com/scriptscat/scriptcat/commit/963a6d289afa84c43b43301e1764bc10cd4ccaa7)]
+- 🐛 修复脚本列表页一些警告问题 [[fc6d14d](https://github.com/scriptscat/scriptcat/commit/fc6d14d07eb74f6008a8b2bee3be4d79cf85e610)]
+- 🐛 修复vscode重连问题与某些情况下停止脚本无效的问题 [[bb7d4d5](https://github.com/scriptscat/scriptcat/commit/bb7d4d501e18730fe359fa6bc01550be68849043)]
+- 🐛 修复GM_openInTab active参数始终为true的问题 [[274ef59](https://github.com/scriptscat/scriptcat/commit/274ef59fb7bafe951e120c63536ba7b94aea30e7)]
+- 🐛 修复更新日志通知不自动关闭 [[7a7e221](https://github.com/scriptscat/scriptcat/commit/7a7e2212789d219f64b394860cf462b48b81f341)]
+
+
 <a name="0.14.1"></a>
 
 ## 0.14.1 (2023-06-26)
@@ -28,7 +55,7 @@ id: change
 
 ### Added
 
-- ✨ 将UserConfig暴露至GM_info对象中 ([#206](https://github.com/scriptscat/scriptcat/issues/206)) [[3de39e7](https://github.com/scriptscat/scriptcat/commit/3de39e78fefefafefdd4efb3e03917cb55f4e4cc)]
+- ✨ 将UserConfig暴露至GM_info对象中 ([#206](https://github.com/scriptscat/scriptcat/issues/206)) [[3de39e7](https://github.com/scriptscat/scriptcat/commit/3de39e78fefefafefdd4efb3e03917cb55f4e4cc)] ([@DreamNya](https://github.com/DreamNya))
 
 ### Fixed
 
