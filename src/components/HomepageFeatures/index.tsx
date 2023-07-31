@@ -1,52 +1,115 @@
 import React from "react";
-import clsx from "clsx";
-import styles from "./styles.module.css";
-import { Image, Space } from "antd";
+import { Avatar, Card, Image, Space, Typography } from "antd";
 import Link from "@docusaurus/Link";
+import Meta from "antd/es/card/Meta";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-type FeatureItem = {
-  title: string;
-  Svg: React.ComponentType<React.ComponentProps<"svg">>;
-  description: JSX.Element;
+const Comment = ({ avatar, username, description, content }) => {
+  return (
+    <Card style={{ width: 300 }} bodyStyle={{ padding: "20px" }}>
+      <Meta
+        avatar={
+          <Avatar
+            size="large"
+            src={avatar}
+            style={{ border: "1px solid #000" }}
+          />
+        }
+        title={
+          <Space direction="vertical" style={{ width: "100%" }} size={0}>
+            <div
+              style={{
+                width: "100%",
+                textAlign: "left",
+              }}
+            >
+              {username}
+            </div>
+            <div
+              style={{
+                width: "100%",
+                fontSize: "10px",
+                color: "var(--ifm-color-gray-600)",
+                textAlign: "left",
+              }}
+            >
+              {description}
+            </div>
+          </Space>
+        }
+      />
+      <div
+        style={{
+          marginTop: "6px",
+          width: "100%",
+          fontSize: "14px",
+          color: "#000",
+          textAlign: "left",
+        }}
+      >
+        {content}
+      </div>
+    </Card>
+  );
 };
 
-const FeatureList: FeatureItem[] = [
-  {
-    title: "简单易用",
-    Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
-    description: <>{"安装扩展->安装脚本->开始使用"}</>,
-  },
-  {
-    title: "特色功能",
-    Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
-    description: (
-      <>
-        实现了一个后台脚本运行的框架,提供了一些特殊的API,让脚本能够做更多的事情
-      </>
-    ),
-  },
-  {
-    title: "支持平台",
-    Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
-    description: (
-      <>兼容90%以上的油猴脚本，支持常见的全部浏览器 Chrome Edge Firefox</>
-    ),
-  },
-];
-
-function Feature({ title, Svg, description }: FeatureItem) {
-  return (
-    <div className={clsx("col col--4")}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
-        <p>{description}</p>
-      </div>
-    </div>
-  );
-}
+const comments = {
+  left: [
+    {
+      avatar:
+        "https://bbs.tampermonkey.net.cn/uc_server/data/avatar/000/00/00/02_avatar_middle.jpg",
+      username: "李恒道1",
+      description: "油中创始人之一",
+      content: "我们脚本猫真是太棒啦！",
+    },
+    {
+      avatar:
+        "https://bbs.tampermonkey.net.cn/uc_server/data/avatar/000/00/00/02_avatar_middle.jpg",
+      username: "李恒道2",
+      description: "油中创始人之一",
+      content: "我们脚本猫真是太棒啦！",
+    },
+    {
+      avatar:
+        "https://bbs.tampermonkey.net.cn/uc_server/data/avatar/000/00/00/02_avatar_middle.jpg",
+      username: "李恒道3",
+      description: "油中创始人之一",
+      content: "我们脚本猫真是太棒啦！",
+    },
+    {
+      avatar:
+        "https://bbs.tampermonkey.net.cn/uc_server/data/avatar/000/00/00/02_avatar_middle.jpg",
+      username: "李恒道4",
+      description: "油中创始人之一",
+      content: "我们脚本猫真是太棒啦！",
+    },
+    {
+      avatar:
+        "https://bbs.tampermonkey.net.cn/uc_server/data/avatar/000/00/00/02_avatar_middle.jpg",
+      username: "李恒道5",
+      description: "油中创始人之一",
+      content: "我们脚本猫真是太棒啦！",
+    },
+  ],
+  right: [
+    {
+      avatar:
+        "https://bbs.tampermonkey.net.cn/uc_server/data/avatar/000/00/00/02_avatar_middle.jpg",
+      username: "李恒道",
+      description: "油中创始人之一",
+      content: "我们脚本猫真是太棒啦！",
+    },
+    {
+      avatar:
+        "https://bbs.tampermonkey.net.cn/uc_server/data/avatar/000/00/00/02_avatar_middle.jpg",
+      username: "李恒道",
+      description: "油中创始人之一",
+      content: "我们脚本猫真是太棒啦！",
+    },
+  ],
+};
 
 export default function HomepageFeatures(): JSX.Element {
   return (
@@ -110,17 +173,59 @@ export default function HomepageFeatures(): JSX.Element {
           </Link>
         </div>
       </div>
-      <div className="flex gap-3 bg-light px-20">
-        <div className="flex-1 py-10 m-auto text-center">
-          <b style={{ fontSize: "32px" }}>油猴中文网</b>
-          <Image src="/img/logo.png" preview={false} />
-          <b style={{ fontSize: "32px" }}>脚本猫</b>
-        </div>
-        <div className="flex-1 m-auto text-center">
-          <h2>免费开源、社区活跃</h2>
-          <p>
-            脚本猫是一个开源项目,有一个活跃的社区,你可以在社区中提出你的建议,参与到脚本猫的开发中来.并且我们也维护了脚本交流的社区“油猴中文网”,当你在脚本开发上遇到什么问题时也可以前往中文网进行提问
-          </p>
+      <div className="flex gap-3 bg-light px-20 w-full">
+        <div className="flex-1 m-auto text-center py-4 w-full">
+          <h2>社区评论</h2>
+          <Space direction="vertical" className="w-full">
+            <div className="w-full">
+              <Slider
+                dots={false}
+                arrows={false}
+                infinite={true}
+                slidesToShow={4}
+                slidesToScroll={1}
+                autoplay={true}
+                speed={2000}
+                autoplaySpeed={2000}
+                cssEase="linear"
+              >
+                {comments.left.map((item) => (
+                  <Comment
+                    key={item.username}
+                    avatar={item.avatar}
+                    username={item.username}
+                    description={item.description}
+                    content={item.content}
+                  />
+                ))}
+              </Slider>
+            </div>
+            <div>
+              <Slider
+                dots={false}
+                arrows={false}
+                infinite={true}
+                slidesToShow={4}
+                slidesToScroll={1}
+                autoplay={true}
+                speed={2000}
+                autoplaySpeed={2000}
+                cssEase="linear"
+                rtl={true}
+                initialSlide={3}
+              >
+                {comments.left.map((item) => (
+                  <Comment
+                    key={item.username}
+                    avatar={item.avatar}
+                    username={item.username}
+                    description={item.description}
+                    content={item.content}
+                  />
+                ))}
+              </Slider>
+            </div>
+          </Space>
         </div>
       </div>
     </div>

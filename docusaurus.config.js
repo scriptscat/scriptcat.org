@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'ScriptCat',
   tagline: '可以执行自定义脚本的浏览器扩展',
-  url: 'https://scriptcat.org',
+  url: 'https://docs.scriptcat.org',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -48,6 +48,10 @@ const config = {
         gtag: {
           trackingID: 'G-7MBECV28JV',
           anonymizeIP: true,
+        },
+        sitemap: {
+          changefreq: "weekly",
+          filename: "sitemap.xml",
         },
       }),
     ],

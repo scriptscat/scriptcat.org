@@ -4,8 +4,83 @@ import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
-import { Button, Space } from "antd";
+import { Button, Dropdown, MenuItemProps, MenuProps, Space } from "antd";
 import styles from "./index.module.css";
+import { Icon } from "@iconify/react";
+import { DownOutlined, SearchOutlined } from "@ant-design/icons";
+import { browserName } from "react-device-detect";
+import { ItemType } from "antd/es/menu/hooks/useItems";
+
+const IconButton = ({ href, text, icon }) => {
+  return (
+    <a target="_black" href={href}>
+      <Space align="center">
+        <div
+          style={{
+            padding: 2,
+            background: "#fff",
+            height: "22px",
+            width: "22px",
+            border: "1px solid #fff",
+            lineHeight: "22px",
+            borderRadius: "4px",
+          }}
+        >
+          <Icon height={16} width={16} icon={icon} />
+        </div>
+        <b>{text}</b>
+      </Space>
+    </a>
+  );
+};
+
+const storeMap: { [key: string]: ItemType & { label: any } } = {
+  edge: {
+    key: "edge",
+    label: (
+      <IconButton
+        href="https://microsoftedge.microsoft.com/addons/detail/scriptcat/liilgpjgabokdklappibcjfablkpcekh"
+        icon="logos:microsoft-edge"
+        text="添加到 Edge 浏览器"
+      />
+    ),
+  },
+  chrome: {
+    key: "chrome",
+    label: (
+      <IconButton
+        href="https://chrome.google.com/webstore/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf"
+        icon="logos:chrome"
+        text="添加到 Chrome 浏览器"
+      />
+    ),
+  },
+  firefox: {
+    key: "firefox",
+    label: (
+      <IconButton
+        href="https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/"
+        icon="logos:firefox"
+        text="添加到 Firefox 浏览器"
+      />
+    ),
+  },
+  crx: {
+    key: "crx",
+    label: (
+      <IconButton
+        href="https://bbs.tampermonkey.net.cn/thread-3068-1-1.html"
+        icon="noto:package"
+        text="下载 安装包 文件手动安装"
+      />
+    ),
+  },
+};
+
+const storeList: ItemType[] = [];
+Object.keys(storeMap).forEach((key) => {
+  storeList.push(storeMap[key]);
+});
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -34,27 +109,37 @@ function HomepageHeader() {
             Cat
           </b>
         </h1>
-        <p
-          className="hero__subtitle"
-          style={{
-            color: "#fff",
-          }}
-        >
-          {/* {siteConfig.tagline} */}
-          执行
-          <b
+        <Space size="large" direction="vertical" align="center">
+          <Dropdown.Button
+            size="large"
+            type="primary"
+            icon={<DownOutlined rev={undefined} />}
+            menu={{
+              items: storeList,
+            }}
+            arrow={true}
+          >
+            {storeMap[browserName.toLowerCase()] &&
+              storeMap[browserName.toLowerCase()].label}
+            {!storeMap[browserName.toLowerCase()] && storeMap["crx"].label}
+          </Dropdown.Button>
+          <p
+            className="hero__subtitle"
             style={{
-              color: "var(--ifm-color-primary-light)",
+              color: "#fff",
             }}
           >
-            用户脚本
-          </b>
-          的浏览器扩展,激活浏览器的无限可能!
-        </p>
-        <Space size="large" direction="vertical">
-          <Link className="button button--secondary button--lg" to="/docs/use">
-            开始使用
-          </Link>
+            {/* {siteConfig.tagline} */}
+            执行
+            <b
+              style={{
+                color: "var(--ifm-color-primary-light)",
+              }}
+            >
+              用户脚本
+            </b>
+            的浏览器扩展,激活浏览器的无限可能!
+          </p>
           <Space>
             <Link
               className="button button--primary button--sm"

@@ -50,3 +50,8 @@
   background: rgba(75, 85, 99);
   color: #fff;
 }
+
+a:hover {
+  color: unset;
+  text-decoration: unset;
+}

@@ -31,7 +31,7 @@ id: use
 
 ### 加载解压缩方式安装扩展
 
-① 先从[Github Release](https://github.com/scriptscat/scriptcat/releases)页面中,下载`zip`文件
+① 先从[Github Release](https://github.com/scriptscat/scriptcat/releases)或者[社区下载](https://bbs.tampermonkey.net.cn/thread-3068-1-1.html)页面中,下载`zip`文件,如果是`crx`文件将其后缀改为`zip`
 
 ② 解压到新建文件夹中（建议备注，此文件夹不可删除或移动，否则扩展将无法正常运行）
 
