@@ -8,7 +8,11 @@ import "slick-carousel/slick/slick-theme.css";
 
 const Comment = ({ avatar, username, description, content }) => {
   return (
-    <Card style={{ width: 300 }} bodyStyle={{ padding: "20px" }}>
+    <Card
+      style={{ width: 400, height: 140 }}
+      bodyStyle={{ padding: "20px" }}
+      size="small"
+    >
       <Meta
         avatar={
           <Avatar
@@ -60,46 +64,54 @@ const comments = {
     {
       avatar:
         "https://bbs.tampermonkey.net.cn/uc_server/data/avatar/000/00/00/02_avatar_middle.jpg",
-      username: "李恒道1",
+      username: "李恒道",
       description: "油中创始人之一",
       content: "我们脚本猫真是太棒啦！",
     },
     {
       avatar:
-        "https://bbs.tampermonkey.net.cn/uc_server/data/avatar/000/00/00/02_avatar_middle.jpg",
-      username: "李恒道2",
-      description: "油中创始人之一",
-      content: "我们脚本猫真是太棒啦！",
+        "https://bbs.tampermonkey.net.cn/uc_server/data/avatar/noavatar.svg",
+      username: "为考试发愁",
+      description: "学生",
+      content:
+        "感谢油中如此丰富的学习资源，让我受益匪浅，更好地发展自己的技术能力。脚本猫是一个非常好用的浏览器扩展，为我提供了便捷和高效的功能。",
     },
     {
       avatar:
-        "https://bbs.tampermonkey.net.cn/uc_server/data/avatar/000/00/00/02_avatar_middle.jpg",
-      username: "李恒道3",
-      description: "油中创始人之一",
-      content: "我们脚本猫真是太棒啦！",
+        "https://bbs.tampermonkey.net.cn/uc_server/data/avatar/000/04/10/07_avatar_big.jpg",
+      username: "言小溪enncy",
+      description: "著名脚本作者",
+      content: "由衷感谢油中",
     },
     {
       avatar:
-        "https://bbs.tampermonkey.net.cn/uc_server/data/avatar/000/00/00/02_avatar_middle.jpg",
-      username: "李恒道4",
-      description: "油中创始人之一",
-      content: "我们脚本猫真是太棒啦！",
-    },
-    {
-      avatar:
-        "https://bbs.tampermonkey.net.cn/uc_server/data/avatar/000/00/00/02_avatar_middle.jpg",
-      username: "李恒道5",
-      description: "油中创始人之一",
-      content: "我们脚本猫真是太棒啦！",
+        "https://bbs.tampermonkey.net.cn/uc_server/data/avatar/000/02/37/09_avatar_big.jpg",
+      username: "仟羽",
+      description: "Chrome 用户",
+      content: "一开始，人们都以为这是小众js插件。。。。直到。。。",
     },
   ],
   right: [
     {
       avatar:
-        "https://bbs.tampermonkey.net.cn/uc_server/data/avatar/000/00/00/02_avatar_middle.jpg",
-      username: "李恒道",
-      description: "油中创始人之一",
-      content: "我们脚本猫真是太棒啦！",
+        "https://bbs.tampermonkey.net.cn/uc_server/data/avatar/noavatar.svg",
+      username: "wwwwwllllk",
+      description: "前端开发人员",
+      content: "使用脚本猫来提高自己的互联网体验，来油中认识志同道合的人。",
+    },
+    {
+      avatar:
+        "https://bbs.tampermonkey.net.cn/uc_server/data/avatar/000/06/81/84_avatar_big.jpg",
+      username: "Oraer",
+      description: "Chrome 用户",
+      content: "初识油猴！学习油猴！超越油猴！",
+    },
+    {
+      avatar:
+        "https://bbs.tampermonkey.net.cn/uc_server/data/avatar/000/07/64/97_avatar_big.jpg",
+      username: "bigonion",
+      description: "脚本猫开发者",
+      content: "Scriptcat is the future.",
     },
     {
       avatar:
@@ -182,7 +194,7 @@ export default function HomepageFeatures(): JSX.Element {
                 dots={false}
                 arrows={false}
                 infinite={true}
-                slidesToShow={4}
+                slidesToShow={3}
                 slidesToScroll={1}
                 autoplay={true}
                 speed={3000}
@@ -205,7 +217,7 @@ export default function HomepageFeatures(): JSX.Element {
                 dots={false}
                 arrows={false}
                 infinite={true}
-                slidesToShow={4}
+                slidesToShow={3}
                 slidesToScroll={1}
                 autoplay={true}
                 speed={3000}
@@ -214,7 +226,7 @@ export default function HomepageFeatures(): JSX.Element {
                 rtl={true}
                 initialSlide={3}
               >
-                {comments.left.map((item) => (
+                {comments.right.map((item) => (
                   <Comment
                     key={item.username}
                     avatar={item.avatar}

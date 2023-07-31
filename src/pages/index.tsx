@@ -11,9 +11,9 @@ import { DownOutlined, SearchOutlined } from "@ant-design/icons";
 import { browserName } from "react-device-detect";
 import { ItemType } from "antd/es/menu/hooks/useItems";
 
-const IconButton = ({ href, text, icon }) => {
+const IconButton = ({ href, text, icon, target = "_black" }) => {
   return (
-    <a target="_black" href={href}>
+    <a target={target} href={href}>
       <Space align="center">
         <div
           style={{
@@ -34,7 +34,7 @@ const IconButton = ({ href, text, icon }) => {
   );
 };
 
-const storeMap: { [key: string]: ItemType & { label: any } } = {
+const storeMap: { [key: string]: ItemType & { label: any; show?: boolean } } = {
   edge: {
     key: "edge",
     label: (
@@ -65,6 +65,18 @@ const storeMap: { [key: string]: ItemType & { label: any } } = {
       />
     ),
   },
+  default: {
+    key: "default",
+    label: (
+      <IconButton
+        href="/docs/use/"
+        icon="logos:chrome"
+        text="安装扩展到浏览器"
+        target="_black"
+      />
+    ),
+    show: false,
+  },
   crx: {
     key: "crx",
     label: (
@@ -79,7 +91,9 @@ const storeMap: { [key: string]: ItemType & { label: any } } = {
 
 const storeList: ItemType[] = [];
 Object.keys(storeMap).forEach((key) => {
-  storeList.push(storeMap[key]);
+  if (storeMap[key].show !== false) {
+    storeList.push(storeMap[key]);
+  }
 });
 
 function HomepageHeader() {
@@ -121,11 +135,12 @@ function HomepageHeader() {
           >
             {storeMap[browserName.toLowerCase()] &&
               storeMap[browserName.toLowerCase()].label}
-            {!storeMap[browserName.toLowerCase()] && storeMap["crx"].label}
+            {!storeMap[browserName.toLowerCase()] && storeMap["default"].label}
           </Dropdown.Button>
           <p
             className="hero__subtitle"
             style={{
+              fontSize: "18px",
               color: "#fff",
             }}
           >
