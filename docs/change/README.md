@@ -20,6 +20,20 @@ id: change
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+<a name="0.15.0"></a>
+
+## 0.15.0 (2023-08-15)
+> 添加了新手引导
+
+### Added
+
+- ✨ 首次进入时打开引导与更新时打开更新日志 [[f400658](https://github.com/scriptscat/scriptcat/commit/f40065815c75a046e752168d15e1718ba91bceff)]
+- ✨ 新手引导 [[f355efb](https://github.com/scriptscat/scriptcat/commit/f355efbc7a5f36d7a6c0352e7477cd1a14c781e1)]
+
+### Fixed
+
+- 🐛 优化同步错误处理 [[cc5e22d](https://github.com/scriptscat/scriptcat/commit/cc5e22d1186395d10651e2d3a37bc44659cfd559)]
+
 <a name="0.15.0-beta"></a>
 
 ## 0.15.0-beta (2023-07-31)
