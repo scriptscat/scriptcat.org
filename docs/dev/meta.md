@@ -126,7 +126,14 @@ match的别名
 
 一个`.d.ts`文件的引用地址,能够自动补全编辑器的自动提示
 
+### antifeature
 
+这是与脚本市场有关的，不受欢迎的功能需要加上此描述值，例如：
+
+```js
+// @antifeature ads 脚本拥有广告
+// @antifeature referral-link 该脚本会修改或重定向到作者的返佣链接
+```
 
 ## 额外描述值
 
