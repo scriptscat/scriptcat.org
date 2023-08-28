@@ -1,52 +1,51 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require("prism-react-renderer/themes/github");
+const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'ScriptCat',
-  tagline: '可以执行自定义脚本的浏览器扩展',
-  url: 'https://docs.scriptcat.org',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/logo.png',
+  title: "ScriptCat",
+  tagline: "可以执行自定义脚本的浏览器扩展",
+  url: "https://docs.scriptcat.org",
+  baseUrl: "/",
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
+  favicon: "img/logo.png",
 
   trailingSlash: true,
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: "facebook", // Usually your GitHub org/user name.
+  projectName: "docusaurus", // Usually your repo name.
 
-  plugins: ['docusaurus-tailwindcss'],
+  plugins: ["docusaurus-tailwindcss"],
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'zh-Hans',
-    locales: ['zh-Hans'],
+    defaultLocale: "zh-Hans",
+    locales: ["zh-Hans"],
   },
 
   presets: [
     [
-      'classic',
+      "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/scriptscat/scriptcat.org/edit/main',
+          editUrl: "https://github.com/scriptscat/scriptcat.org/edit/main",
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
         gtag: {
-          trackingID: 'G-7MBECV28JV',
+          trackingID: "G-7MBECV28JV",
           anonymizeIP: true,
         },
         sitemap: {
@@ -61,77 +60,88 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       metadata: [
-        { name: 'keywords', content: 'scriptcat,userscript,backscript,browser extension,浏览器扩展,用户脚本,后台脚本,脚本猫' },
+        {
+          name: "keywords",
+          content:
+            "scriptcat,userscript,backscript,browser extension,浏览器扩展,用户脚本,后台脚本,脚本猫",
+        },
       ],
       navbar: {
-        title: 'ScriptCat',
+        title: "ScriptCat",
         logo: {
-          alt: 'ScriptCat',
-          src: 'img/logo.png',
+          alt: "ScriptCat",
+          src: "img/logo.png",
         },
         items: [
           {
-            type: 'doc',
-            docId: 'use/use',
-            position: 'left',
-            label: '使用指南',
-          }, {
-            type: 'doc',
-            docId: 'dev/dev',
-            position: 'left',
-            label: '开发指南',
-          }, {
-            type: 'doc',
-            docId: 'change/change',
-            position: 'right',
-            label: '更新日志',
+            type: "doc",
+            docId: "use/use",
+            position: "left",
+            label: "使用文档",
           },
           {
-            href: 'https://github.com/scriptscat/scriptcat',
-            label: 'GitHub',
-            position: 'right',
+            type: "doc",
+            docId: "dev/dev",
+            position: "left",
+            label: "开发文档",
+          },
+          {
+            type: "doc",
+            docId: "change/change",
+            position: "right",
+            label: "更新日志",
+          },
+          {
+            href: "https://learn.scriptcat.org/",
+            label: "脚本开发指南",
+            position: "right",
+          },
+          {
+            href: "https://github.com/scriptscat/scriptcat",
+            label: "GitHub",
+            position: "right",
           },
         ],
       },
       footer: {
-        style: 'dark',
+        style: "dark",
         links: [
           {
-            title: 'Docs',
+            title: "Docs",
             items: [
               {
-                label: '使用指南',
-                to: '/docs/use',
+                label: "使用指南",
+                to: "/docs/use",
               },
               {
-                label: '开发指南',
-                to: '/docs/dev'
-              }
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: '油猴中文网',
-                href: 'https://bbs.tampermonkey.net.cn/',
-              },
-              {
-                label: '脚本猫脚本站',
-                href: 'https://scriptcat.org/',
-              },
-              {
-                label: 'Telegram',
-                href: 'https://t.me/scriptscat',
+                label: "开发指南",
+                to: "/docs/dev",
               },
             ],
           },
           {
-            title: 'More',
+            title: "Community",
             items: [
               {
-                label: 'GitHub',
-                href: 'https://github.com/scriptscat/scriptcat',
+                label: "油猴中文网",
+                href: "https://bbs.tampermonkey.net.cn/",
+              },
+              {
+                label: "脚本猫脚本站",
+                href: "https://scriptcat.org/",
+              },
+              {
+                label: "Telegram",
+                href: "https://t.me/scriptscat",
+              },
+            ],
+          },
+          {
+            title: "More",
+            items: [
+              {
+                label: "GitHub",
+                href: "https://github.com/scriptscat/scriptcat",
               },
             ],
           },
@@ -143,11 +153,11 @@ const config = {
         darkTheme: darkCodeTheme,
       },
       algolia: {
-        appId: 'CWJJXTJUJS',
-        apiKey: '283cbc6053e086e74123140ab8677465',
-        indexName: 'scriptcat',
+        appId: "CWJJXTJUJS",
+        apiKey: "283cbc6053e086e74123140ab8677465",
+        indexName: "scriptcat",
         contextualSearch: true,
-        searchPagePath: 'search',
+        searchPagePath: "search",
       },
     }),
 };
