@@ -20,6 +20,26 @@ id: change
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+
+<a name="0.15.1"></a>
+
+## 0.15.1 (2023-08-30)
+
+### Added
+
+- ✨ 优化授权管理 [[5eb7c5a](https://github.com/scriptscat/scriptcat/commit/5eb7c5aa3b67c9dba20712b8c69f83cd0b3ab302)]
+
+### Changed
+
+- ⬆️ 升级cron包 fixed: [#152](https://github.com/scriptscat/scriptcat/issues/152) [[0c43741](https://github.com/scriptscat/scriptcat/commit/0c4374196ebe8b29ae1a9c61353f6ff48d0d8843)]
+
+### Fixed
+
+- 🐛 修复重定向后的携带#号的finalUrl问题 [[715639e](https://github.com/scriptscat/scriptcat/commit/715639e81ecc318b1432cd15b70cc0f89d99a007)]
+- 🐛 修复CAT_fileStorage网络错误也会导致配置实现的问题 fixed [#224](https://github.com/scriptscat/scriptcat/issues/224) [[c309832](https://github.com/scriptscat/scriptcat/commit/c309832a7da4b110b43537ef53518df1ca1e12b2)]
+- 🐛 忽略webdav创建目录错误 [#213](https://github.com/scriptscat/scriptcat/issues/213) [[890076a](https://github.com/scriptscat/scriptcat/commit/890076a7416513c867f1f2aef7c9929aa899894e)]
+
+
 <a name="0.15.0"></a>
 
 ## 0.15.0 (2023-08-15)
