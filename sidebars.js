@@ -15,7 +15,10 @@
 const sidebars = {
   use: [
     "use/use",
-    "use/sync"
+    "use/sync",
+    {
+      服务协议: ["use/policy/privacy"],
+    },
   ],
   dev: [
     "dev/dev",
@@ -25,11 +28,9 @@ const sidebars = {
     "dev/config",
     "dev/api",
     "dev/cat-api",
-    "dev/meta"
+    "dev/meta",
   ],
-  change: [
-    "change/change",
-  ]
+  change: ["change/change"],
 };
 
 module.exports = sidebars;
