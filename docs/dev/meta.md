@@ -27,7 +27,7 @@ id: meta
 
 ### namespace
 
-脚本命名空间.~~同一`namespace`空间中的脚本,数据可以共享🧪.~~（以切换成使用`storageName`作为共享空间）
+脚本命名空间，`name+namepsace`确认脚本的唯一性
 
 ### version
 
@@ -57,7 +57,7 @@ id: meta
 
 ### storageName 🧪
 
-`Value`的存储空间，同一`storageName`下的数据可以共享和通信.这是脚本猫独有的.
+`Value`的存储空间，同一`storageName`下的数据可以共享和通信。这是脚本猫独有的.
 
 ### background
 
@@ -121,6 +121,10 @@ match的别名
 ### require-css 🧪
 
 引入外部css文件,可以进行[资源校验](#资源校验)
+
+### noframes
+
+表示脚本不运行在`<frame>`中
 
 ### definition
 

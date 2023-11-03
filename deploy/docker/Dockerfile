@@ -1,3 +1,5 @@
-FROM nginx:1.23-alpine
+ARG BASEIMAGE
+
+FROM $BASEIMAGE
 
 COPY build /usr/share/nginx/html
