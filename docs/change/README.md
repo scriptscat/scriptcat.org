@@ -21,6 +21,31 @@ id: change
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
 
+<a name="0.16.0-beta"></a>
+
+## 0.16.0-beta (2023-11-28)
+
+### Added
+
+- ✨ 添加i18n所见即所得模式 [[460088a](https://github.com/scriptscat/scriptcat/commit/460088a27ee20036aad27d5eccabb3311fc71863)]
+- ✨ 优化语言选择 [[5807a2a](https://github.com/scriptscat/scriptcat/commit/5807a2af0aa62a945e273a677597f7c607dcd9d9)]
+- ✨ 使用crowdin管理翻译 [[c62a559](https://github.com/scriptscat/scriptcat/commit/c62a5593c5d57feb8239e50ee90aaa3f3fc309b4)]
+
+### Changed
+
+- 💄 调整Badge颜色为灰色 [[97c06f5](https://github.com/scriptscat/scriptcat/commit/97c06f552133b4fba3b2d6f27cf5b39f3d1c3323)]
+
+### Fixed
+
+- 🐛 修复onedrive空间问题 [#224](https://github.com/scriptscat/scriptcat/issues/224) [[0d10588](https://github.com/scriptscat/scriptcat/commit/0d1058818538a0764e9c55b3842480a202230231)]
+- 🐛 处理onedrive e5账号文件同步文件 [#224](https://github.com/scriptscat/scriptcat/issues/224) [[dc56ec6](https://github.com/scriptscat/scriptcat/commit/dc56ec623ad8b00976aef71df81fffdd41863180)]
+- 🐛 修复gf logo问题 [[092517e](https://github.com/scriptscat/scriptcat/commit/092517ebb84e9309c7577fac05ce84f6cb334d9c)]
+- 🐛 修复不同语言下table的宽度问题 ([#236](https://github.com/scriptscat/scriptcat/issues/236)) [[3eb84b5](https://github.com/scriptscat/scriptcat/commit/3eb84b51ad69ed5ed74181774b6a356b30fa8c36)] by [@duoluodexiaoxiaoyuan](https://github.com/duoluodexiaoxiaoyuan)
+- 🐛 修复新的注入方式导致dev模式无法正常运行的问题 [[a96ab94](https://github.com/scriptscat/scriptcat/commit/a96ab947cfa1321adb7a560f922a1b5f85ffb21e)]
+- 🐛 优化脚本运行框架注入速度 [#232](https://github.com/scriptscat/scriptcat/issues/232) [[4cf6450](https://github.com/scriptscat/scriptcat/commit/4cf6450debe4b3a6b773459559da486f1863298f)]
+- 🐛 默认不传origin header [#233](https://github.com/scriptscat/scriptcat/issues/233) [[9d4ebcc](https://github.com/scriptscat/scriptcat/commit/9d4ebcc7711475696613b1ed7b42256046371198)]
+
+
 <a name="0.15.1"></a>
 
 ## 0.15.1 (2023-08-30)
