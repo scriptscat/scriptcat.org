@@ -21,6 +21,23 @@ id: change
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
 
+<a name="0.16.0"></a>
+
+## 0.16.0 (2023-12-21)
+
+### Added
+
+- ✨ 新增 GM_info 元数据 connects [#245](https://github.com/scriptscat/scriptcat/issues/245) [[c04a829](https://github.com/scriptscat/scriptcat/commit/c04a82906192ba29580e51d90b112435d44d2418)]
+
+### Fixed
+
+- 🐛 修复语言切换&quot;最后更新&quot;字段翻译不同步的问题 [#241](https://github.com/scriptscat/scriptcat/issues/241) [[2d178ac](https://github.com/scriptscat/scriptcat/commit/2d178acd29054f1064063f7b58eef6dfadb3ba5c)]
+- 🐛 修复@grant GM.*声明问题 [#243](https://github.com/scriptscat/scriptcat/issues/243) [[6d7efa6](https://github.com/scriptscat/scriptcat/commit/6d7efa6b5051dcc947ffb40727febd1b585ca428)]
+- 🐛 修复@match 端口匹配错误 [#244](https://github.com/scriptscat/scriptcat/issues/244) [[2e378c3](https://github.com/scriptscat/scriptcat/commit/2e378c35b5d20280a3e26a540a61b31629d358ac)]
+- 🐛 修复往global写入Symbol属性问题 [[d8bb2f1](https://github.com/scriptscat/scriptcat/commit/d8bb2f1c93c9689dd4d6458a3f4564d4acb67be4)]
+- 🐛 修复引入的lodash与页面冲突问题 [[96280a2](https://github.com/scriptscat/scriptcat/commit/96280a24e284ed62654097573c14e574996e2a5a)]
+
+
 <a name="0.16.0-beta"></a>
 
 ## 0.16.0-beta (2023-11-28)
