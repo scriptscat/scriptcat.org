@@ -13,13 +13,34 @@ id: change
 
 - [Firefox](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat-pre/)
 
-由于Chrome系列浏览器无法支持MV2的扩展上传,先采用群的方式进行通知
+由于 Chrome 系列浏览器无法支持 MV2 的扩展上传,先采用群的方式进行通知
 
-- [ScriptCat Beta群 124771063](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=ig72L7KKqkj0rngxuYdP3bPb2p256Oy4&authKey=fR%2BO6kgwxv0mRmxUnH91SNf0HnUPzooacVeMbxmFXKcfycgPKMgbZlH5KvVrK40X&noverify=0&group_code=124771063)
-
+- [ScriptCat Beta 群 124771063](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=ig72L7KKqkj0rngxuYdP3bPb2p256Oy4&authKey=fR%2BO6kgwxv0mRmxUnH91SNf0HnUPzooacVeMbxmFXKcfycgPKMgbZlH5KvVrK40X&noverify=0&group_code=124771063)
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+<a name="0.16.1"></a>
+
+## 0.16.1 (2024-02-26)
+
+### Added
+
+- ✨ 最后更新添加排序功能 [#250](https://github.com/scriptscat/scriptcat/issues/250) [[ded11ca](https://github.com/scriptscat/scriptcat/commit/ded11cafaa31e7f5ec43d4f96f6db41cfa8c7ff9)]
+
+### Changed
+
+- ⚡ 优化名称搜索 [#262](https://github.com/scriptscat/scriptcat/issues/262) [[08778ed](https://github.com/scriptscat/scriptcat/commit/08778ed945a5887c93ba24c816f4d8febdf3ac1e)]
+
+### Fixed
+
+- 🐛 修复脚本删除同步失败的问题 [#254](https://github.com/scriptscat/scriptcat/issues/254) [[bf68abb](https://github.com/scriptscat/scriptcat/commit/bf68abb9b7bffe3c8658d361c92e850b0c555953)]
+- 🐛 修复订阅脚本重复安装的问题 [#257](https://github.com/scriptscat/scriptcat/issues/257) [[57bc6f9](https://github.com/scriptscat/scriptcat/commit/57bc6f9390a33400730eb7c261cf7c23c5f3532a)]
+- 🐛 修复 toString.call(window)返回内容不正确 [#260](https://github.com/scriptscat/scriptcat/issues/260) [[2288dae](https://github.com/scriptscat/scriptcat/commit/2288dae8d5589c97a8d2b1983fb9b97df05df04e)]
+- 🐛 修复并发 setValue 导致的数据错误 [#249](https://github.com/scriptscat/scriptcat/issues/249) [[0b4d241](https://github.com/scriptscat/scriptcat/commit/0b4d2413382d0b8c5671eb6685808c77deaf9117)]
+- 🐛 修复 vscode 同步时文件路径变更导致重复同步 [#247](https://github.com/scriptscat/scriptcat/issues/247) [[a6efaa7](https://github.com/scriptscat/scriptcat/commit/a6efaa77fe34d5f1b836e9e56e7e6c358af7e85d)]
+- 🐛 新增脚本支持顶级 await by @DreamNya ([#258](https://github.com/scriptscat/scriptcat/issues/258)) [[3a37af2](https://github.com/scriptscat/scriptcat/commit/3a37af2d885dc133d4ae3f82b7f9ca49d0279a5f)]
+
+**Full Changelog**: [v0.16.0...v0.16.1](https://github.com/scriptscat/scriptcat/compare/v0.16.0...v0.16.1)
 
 <a name="0.16.0"></a>
 
@@ -32,11 +53,10 @@ id: change
 ### Fixed
 
 - 🐛 修复语言切换&quot;最后更新&quot;字段翻译不同步的问题 [#241](https://github.com/scriptscat/scriptcat/issues/241) [[2d178ac](https://github.com/scriptscat/scriptcat/commit/2d178acd29054f1064063f7b58eef6dfadb3ba5c)]
-- 🐛 修复@grant GM.*声明问题 [#243](https://github.com/scriptscat/scriptcat/issues/243) [[6d7efa6](https://github.com/scriptscat/scriptcat/commit/6d7efa6b5051dcc947ffb40727febd1b585ca428)]
+- 🐛 修复@grant GM.\*声明问题 [#243](https://github.com/scriptscat/scriptcat/issues/243) [[6d7efa6](https://github.com/scriptscat/scriptcat/commit/6d7efa6b5051dcc947ffb40727febd1b585ca428)]
 - 🐛 修复@match 端口匹配错误 [#244](https://github.com/scriptscat/scriptcat/issues/244) [[2e378c3](https://github.com/scriptscat/scriptcat/commit/2e378c35b5d20280a3e26a540a61b31629d358ac)]
-- 🐛 修复往global写入Symbol属性问题 [[d8bb2f1](https://github.com/scriptscat/scriptcat/commit/d8bb2f1c93c9689dd4d6458a3f4564d4acb67be4)]
-- 🐛 修复引入的lodash与页面冲突问题 [[96280a2](https://github.com/scriptscat/scriptcat/commit/96280a24e284ed62654097573c14e574996e2a5a)]
-
+- 🐛 修复往 global 写入 Symbol 属性问题 [[d8bb2f1](https://github.com/scriptscat/scriptcat/commit/d8bb2f1c93c9689dd4d6458a3f4564d4acb67be4)]
+- 🐛 修复引入的 lodash 与页面冲突问题 [[96280a2](https://github.com/scriptscat/scriptcat/commit/96280a24e284ed62654097573c14e574996e2a5a)]
 
 <a name="0.16.0-beta"></a>
 
@@ -44,24 +64,23 @@ id: change
 
 ### Added
 
-- ✨ 添加i18n所见即所得模式 [[460088a](https://github.com/scriptscat/scriptcat/commit/460088a27ee20036aad27d5eccabb3311fc71863)]
+- ✨ 添加 i18n 所见即所得模式 [[460088a](https://github.com/scriptscat/scriptcat/commit/460088a27ee20036aad27d5eccabb3311fc71863)]
 - ✨ 优化语言选择 [[5807a2a](https://github.com/scriptscat/scriptcat/commit/5807a2af0aa62a945e273a677597f7c607dcd9d9)]
-- ✨ 使用crowdin管理翻译 [[c62a559](https://github.com/scriptscat/scriptcat/commit/c62a5593c5d57feb8239e50ee90aaa3f3fc309b4)]
+- ✨ 使用 crowdin 管理翻译 [[c62a559](https://github.com/scriptscat/scriptcat/commit/c62a5593c5d57feb8239e50ee90aaa3f3fc309b4)]
 
 ### Changed
 
-- 💄 调整Badge颜色为灰色 [[97c06f5](https://github.com/scriptscat/scriptcat/commit/97c06f552133b4fba3b2d6f27cf5b39f3d1c3323)]
+- 💄 调整 Badge 颜色为灰色 [[97c06f5](https://github.com/scriptscat/scriptcat/commit/97c06f552133b4fba3b2d6f27cf5b39f3d1c3323)]
 
 ### Fixed
 
-- 🐛 修复onedrive空间问题 [#224](https://github.com/scriptscat/scriptcat/issues/224) [[0d10588](https://github.com/scriptscat/scriptcat/commit/0d1058818538a0764e9c55b3842480a202230231)]
-- 🐛 处理onedrive e5账号文件同步文件 [#224](https://github.com/scriptscat/scriptcat/issues/224) [[dc56ec6](https://github.com/scriptscat/scriptcat/commit/dc56ec623ad8b00976aef71df81fffdd41863180)]
-- 🐛 修复gf logo问题 [[092517e](https://github.com/scriptscat/scriptcat/commit/092517ebb84e9309c7577fac05ce84f6cb334d9c)]
-- 🐛 修复不同语言下table的宽度问题 ([#236](https://github.com/scriptscat/scriptcat/issues/236)) [[3eb84b5](https://github.com/scriptscat/scriptcat/commit/3eb84b51ad69ed5ed74181774b6a356b30fa8c36)] by [@duoluodexiaoxiaoyuan](https://github.com/duoluodexiaoxiaoyuan)
-- 🐛 修复新的注入方式导致dev模式无法正常运行的问题 [[a96ab94](https://github.com/scriptscat/scriptcat/commit/a96ab947cfa1321adb7a560f922a1b5f85ffb21e)]
+- 🐛 修复 onedrive 空间问题 [#224](https://github.com/scriptscat/scriptcat/issues/224) [[0d10588](https://github.com/scriptscat/scriptcat/commit/0d1058818538a0764e9c55b3842480a202230231)]
+- 🐛 处理 onedrive e5 账号文件同步文件 [#224](https://github.com/scriptscat/scriptcat/issues/224) [[dc56ec6](https://github.com/scriptscat/scriptcat/commit/dc56ec623ad8b00976aef71df81fffdd41863180)]
+- 🐛 修复 gf logo 问题 [[092517e](https://github.com/scriptscat/scriptcat/commit/092517ebb84e9309c7577fac05ce84f6cb334d9c)]
+- 🐛 修复不同语言下 table 的宽度问题 ([#236](https://github.com/scriptscat/scriptcat/issues/236)) [[3eb84b5](https://github.com/scriptscat/scriptcat/commit/3eb84b51ad69ed5ed74181774b6a356b30fa8c36)] by [@duoluodexiaoxiaoyuan](https://github.com/duoluodexiaoxiaoyuan)
+- 🐛 修复新的注入方式导致 dev 模式无法正常运行的问题 [[a96ab94](https://github.com/scriptscat/scriptcat/commit/a96ab947cfa1321adb7a560f922a1b5f85ffb21e)]
 - 🐛 优化脚本运行框架注入速度 [#232](https://github.com/scriptscat/scriptcat/issues/232) [[4cf6450](https://github.com/scriptscat/scriptcat/commit/4cf6450debe4b3a6b773459559da486f1863298f)]
-- 🐛 默认不传origin header [#233](https://github.com/scriptscat/scriptcat/issues/233) [[9d4ebcc](https://github.com/scriptscat/scriptcat/commit/9d4ebcc7711475696613b1ed7b42256046371198)]
-
+- 🐛 默认不传 origin header [#233](https://github.com/scriptscat/scriptcat/issues/233) [[9d4ebcc](https://github.com/scriptscat/scriptcat/commit/9d4ebcc7711475696613b1ed7b42256046371198)]
 
 <a name="0.15.1"></a>
 
@@ -73,18 +92,18 @@ id: change
 
 ### Changed
 
-- ⬆️ 升级cron包 fixed: [#152](https://github.com/scriptscat/scriptcat/issues/152) [[0c43741](https://github.com/scriptscat/scriptcat/commit/0c4374196ebe8b29ae1a9c61353f6ff48d0d8843)]
+- ⬆️ 升级 cron 包 fixed: [#152](https://github.com/scriptscat/scriptcat/issues/152) [[0c43741](https://github.com/scriptscat/scriptcat/commit/0c4374196ebe8b29ae1a9c61353f6ff48d0d8843)]
 
 ### Fixed
 
-- 🐛 修复重定向后的携带#号的finalUrl问题 [[715639e](https://github.com/scriptscat/scriptcat/commit/715639e81ecc318b1432cd15b70cc0f89d99a007)]
-- 🐛 修复CAT_fileStorage网络错误也会导致配置实现的问题 fixed [#224](https://github.com/scriptscat/scriptcat/issues/224) [[c309832](https://github.com/scriptscat/scriptcat/commit/c309832a7da4b110b43537ef53518df1ca1e12b2)]
-- 🐛 忽略webdav创建目录错误 [#213](https://github.com/scriptscat/scriptcat/issues/213) [[890076a](https://github.com/scriptscat/scriptcat/commit/890076a7416513c867f1f2aef7c9929aa899894e)]
-
+- 🐛 修复重定向后的携带#号的 finalUrl 问题 [[715639e](https://github.com/scriptscat/scriptcat/commit/715639e81ecc318b1432cd15b70cc0f89d99a007)]
+- 🐛 修复 CAT_fileStorage 网络错误也会导致配置实现的问题 fixed [#224](https://github.com/scriptscat/scriptcat/issues/224) [[c309832](https://github.com/scriptscat/scriptcat/commit/c309832a7da4b110b43537ef53518df1ca1e12b2)]
+- 🐛 忽略 webdav 创建目录错误 [#213](https://github.com/scriptscat/scriptcat/issues/213) [[890076a](https://github.com/scriptscat/scriptcat/commit/890076a7416513c867f1f2aef7c9929aa899894e)]
 
 <a name="0.15.0"></a>
 
 ## 0.15.0 (2023-08-15)
+
 > 添加了新手引导
 
 ### Added
@@ -99,71 +118,72 @@ id: change
 <a name="0.15.0-beta"></a>
 
 ## 0.15.0-beta (2023-07-31)
+
 > 优化为主的一个版本
 
 ### Added
 
-- ✨ 脚本名支持i18n ([#221](https://github.com/scriptscat/scriptcat/issues/221)) [[968122d](https://github.com/scriptscat/scriptcat/commit/968122df58592fd29b4a82b665104dd26eb8d319)] ([@LiWeny16](https://github.com/LiWeny16))
+- ✨ 脚本名支持 i18n ([#221](https://github.com/scriptscat/scriptcat/issues/221)) [[968122d](https://github.com/scriptscat/scriptcat/commit/968122df58592fd29b4a82b665104dd26eb8d319)] ([@LiWeny16](https://github.com/LiWeny16))
 - ✨ 脚本批量更新 ([#219](https://github.com/scriptscat/scriptcat/issues/219)) [[8d442ac](https://github.com/scriptscat/scriptcat/commit/8d442ac5c9de2ab7d6694d4b15afdf572291d75d)] ([@LiWeny16](https://github.com/LiWeny16))
 
 ### Fixed
 
 - 🐛 优化同步报错问题 [#222](https://github.com/scriptscat/scriptcat/issues/222) [[dd05752](https://github.com/scriptscat/scriptcat/commit/dd0575268638e4009d3fb6c5d389ce836ad761a2)]
 - 🐛 修复常量值被改变的问题 [#214](https://github.com/scriptscat/scriptcat/issues/214) [[63d3061](https://github.com/scriptscat/scriptcat/commit/63d3061a755d625dca853a776b7f10507cba8eda)]
-- 🐛 修复GM_addElement父节点参数为shadowDom错误的问题 [#214](https://github.com/scriptscat/scriptcat/issues/214) [[0bbe7ce](https://github.com/scriptscat/scriptcat/commit/0bbe7ce4e4745a21aefb05f5a8633382aaf3ffa0)]
+- 🐛 修复 GM_addElement 父节点参数为 shadowDom 错误的问题 [#214](https://github.com/scriptscat/scriptcat/issues/214) [[0bbe7ce](https://github.com/scriptscat/scriptcat/commit/0bbe7ce4e4745a21aefb05f5a8633382aaf3ffa0)]
 - 🐛 修复列表排序问题 [[f1527b0](https://github.com/scriptscat/scriptcat/commit/f1527b0e814201d31c4b06b93a2ab613b46379bd)]
-- 🐛 修复GM_openInTab loadInBackground参数问题 [[1f29bfc](https://github.com/scriptscat/scriptcat/commit/1f29bfc24dd00b418acb2d52691f847fddec5f27)]
-- 🐛 修复xml文档无法加载脚本的问题 [#211](https://github.com/scriptscat/scriptcat/issues/211) [[ef7efbd](https://github.com/scriptscat/scriptcat/commit/ef7efbdd1da3011054edc7ff6e39693033a538b1)]
+- 🐛 修复 GM_openInTab loadInBackground 参数问题 [[1f29bfc](https://github.com/scriptscat/scriptcat/commit/1f29bfc24dd00b418acb2d52691f847fddec5f27)]
+- 🐛 修复 xml 文档无法加载脚本的问题 [#211](https://github.com/scriptscat/scriptcat/issues/211) [[ef7efbd](https://github.com/scriptscat/scriptcat/commit/ef7efbdd1da3011054edc7ff6e39693033a538b1)]
 - 🐛 修复网盘同步脚本覆盖问题 [[e4bd5d4](https://github.com/scriptscat/scriptcat/commit/e4bd5d441c37f2a32b6854c63a7ebcd6cd719abe)]
-- 🐛 修复后台脚本无法控制setInterval停止的问题 [#207](https://github.com/scriptscat/scriptcat/issues/207) [[d059ef7](https://github.com/scriptscat/scriptcat/commit/d059ef7ef9fa4b097b4a3682f36dc973e82cf61e)]
+- 🐛 修复后台脚本无法控制 setInterval 停止的问题 [#207](https://github.com/scriptscat/scriptcat/issues/207) [[d059ef7](https://github.com/scriptscat/scriptcat/commit/d059ef7ef9fa4b097b4a3682f36dc973e82cf61e)]
 - 🐛 修复网盘登录掉了之后无法重新登录的问题 [#210](https://github.com/scriptscat/scriptcat/issues/210) [[963a6d2](https://github.com/scriptscat/scriptcat/commit/963a6d289afa84c43b43301e1764bc10cd4ccaa7)]
 - 🐛 修复脚本列表页一些警告问题 [[fc6d14d](https://github.com/scriptscat/scriptcat/commit/fc6d14d07eb74f6008a8b2bee3be4d79cf85e610)]
-- 🐛 修复vscode重连问题与某些情况下停止脚本无效的问题 [[bb7d4d5](https://github.com/scriptscat/scriptcat/commit/bb7d4d501e18730fe359fa6bc01550be68849043)]
-- 🐛 修复GM_openInTab active参数始终为true的问题 [[274ef59](https://github.com/scriptscat/scriptcat/commit/274ef59fb7bafe951e120c63536ba7b94aea30e7)]
+- 🐛 修复 vscode 重连问题与某些情况下停止脚本无效的问题 [[bb7d4d5](https://github.com/scriptscat/scriptcat/commit/bb7d4d501e18730fe359fa6bc01550be68849043)]
+- 🐛 修复 GM_openInTab active 参数始终为 true 的问题 [[274ef59](https://github.com/scriptscat/scriptcat/commit/274ef59fb7bafe951e120c63536ba7b94aea30e7)]
 - 🐛 修复更新日志通知不自动关闭 [[7a7e221](https://github.com/scriptscat/scriptcat/commit/7a7e2212789d219f64b394860cf462b48b81f341)]
-
 
 <a name="0.14.1"></a>
 
 ## 0.14.1 (2023-06-26)
+
 > 修复几个比较严重的问题，且影响版本广
-> 反复储存oldScript对象，数据量过大时可能导致脚本加载失败
+> 反复储存 oldScript 对象，数据量过大时可能导致脚本加载失败
 
 ### Added
 
-- ✨ 将UserConfig暴露至GM_info对象中 ([#206](https://github.com/scriptscat/scriptcat/issues/206)) [[3de39e7](https://github.com/scriptscat/scriptcat/commit/3de39e78fefefafefdd4efb3e03917cb55f4e4cc)] ([@DreamNya](https://github.com/DreamNya))
+- ✨ 将 UserConfig 暴露至 GM_info 对象中 ([#206](https://github.com/scriptscat/scriptcat/issues/206)) [[3de39e7](https://github.com/scriptscat/scriptcat/commit/3de39e78fefefafefdd4efb3e03917cb55f4e4cc)] ([@DreamNya](https://github.com/DreamNya))
 
 ### Fixed
 
-- 🐛 修复vscode连接问题与同步问题 [[06c3ef7](https://github.com/scriptscat/scriptcat/commit/06c3ef79d5b59df4268dd8388bf798ef8284c42a)]
-- 🐛 修复GM_openInTab默认在后台打开页面的问题 [[7d2a5b2](https://github.com/scriptscat/scriptcat/commit/7d2a5b2a4ffb6d3023ee85ce1b9e7e629ac9d774)]
-- 🐛 修复反复储存oldScript对象问题 [[4832a80](https://github.com/scriptscat/scriptcat/commit/4832a80b5a3c553563367892adcdf85e9832fc98)]
-
+- 🐛 修复 vscode 连接问题与同步问题 [[06c3ef7](https://github.com/scriptscat/scriptcat/commit/06c3ef79d5b59df4268dd8388bf798ef8284c42a)]
+- 🐛 修复 GM_openInTab 默认在后台打开页面的问题 [[7d2a5b2](https://github.com/scriptscat/scriptcat/commit/7d2a5b2a4ffb6d3023ee85ce1b9e7e629ac9d774)]
+- 🐛 修复反复储存 oldScript 对象问题 [[4832a80](https://github.com/scriptscat/scriptcat/commit/4832a80b5a3c553563367892adcdf85e9832fc98)]
 
 <a name="0.14.0"></a>
 
 ## 0.14.0 (2023-06-20)
+
 > 🎉🎉🎉 脚本猫开始支持多国语言，向国际化脚本管理器迈出第一步！ 💥💥💥
 
 ### Fixed
 
-- 🐛 修复更新时间i18n问题 [[40bc8da](https://github.com/scriptscat/scriptcat/commit/40bc8dacb732343a0df7440ad51012dd5bed6b28)]
-- 🐛 修复RegExp需要全局对象的问题 fixes [#203](https://github.com/scriptscat/scriptcat/issues/203) [[705641b](https://github.com/scriptscat/scriptcat/commit/705641b363d8623ae55f6b4d81cf7dcbc5f0945d)]
+- 🐛 修复更新时间 i18n 问题 [[40bc8da](https://github.com/scriptscat/scriptcat/commit/40bc8dacb732343a0df7440ad51012dd5bed6b28)]
+- 🐛 修复 RegExp 需要全局对象的问题 fixes [#203](https://github.com/scriptscat/scriptcat/issues/203) [[705641b](https://github.com/scriptscat/scriptcat/commit/705641b363d8623ae55f6b4d81cf7dcbc5f0945d)]
 
 ### Miscellaneous
 
 - 🌐 add english readme ([#204](https://github.com/scriptscat/scriptcat/issues/204)) [[e56d4fc](https://github.com/scriptscat/scriptcat/commit/e56d4fc6bf44cd59162e5adf9926459ec33f9217)]
-- 🌐 调整无数据的文案与WebDAV账号密码文案 [[9a82eac](https://github.com/scriptscat/scriptcat/commit/9a82eac94f921cc361cc9bb97431d5225599af0a)]
-
+- 🌐 调整无数据的文案与 WebDAV 账号密码文案 [[9a82eac](https://github.com/scriptscat/scriptcat/commit/9a82eac94f921cc361cc9bb97431d5225599af0a)]
 
 <a name="0.14.0-beta.1"></a>
 
 ## 0.14.0-beta.1 (2023-06-16)
+
 > 🎉🎉🎉 脚本猫开始支持多国语言，向国际化脚本管理器迈出第一步！ 💥💥💥
 
 ### Added
 
-- ✨ userconfig textarea支持rows参数 [[a2003a0](https://github.com/scriptscat/scriptcat/commit/a2003a0ca7c9bd00b582ddecbff4cbf37eef5337)]
+- ✨ userconfig textarea 支持 rows 参数 [[a2003a0](https://github.com/scriptscat/scriptcat/commit/a2003a0ca7c9bd00b582ddecbff4cbf37eef5337)]
 
 ### Fixed
 
@@ -171,8 +191,7 @@ id: change
 
 ### Miscellaneous
 
-- 🌐 i18n国际化 [#188](https://github.com/scriptscat/scriptcat/issues/188) ([#202](https://github.com/scriptscat/scriptcat/issues/202)) [[d0e6ef0](https://github.com/scriptscat/scriptcat/commit/d0e6ef07b33fe24416212079dfa51ed8a2cb6827)]
-
+- 🌐 i18n 国际化 [#188](https://github.com/scriptscat/scriptcat/issues/188) ([#202](https://github.com/scriptscat/scriptcat/issues/202)) [[d0e6ef0](https://github.com/scriptscat/scriptcat/commit/d0e6ef07b33fe24416212079dfa51ed8a2cb6827)]
 
 <a name="0.14.0-beta"></a>
 
