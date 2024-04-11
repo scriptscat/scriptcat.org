@@ -38,7 +38,7 @@ id: change
 - 🐛 修复 toString.call(window)返回内容不正确 [#260](https://github.com/scriptscat/scriptcat/issues/260) [[2288dae](https://github.com/scriptscat/scriptcat/commit/2288dae8d5589c97a8d2b1983fb9b97df05df04e)]
 - 🐛 修复并发 setValue 导致的数据错误 [#249](https://github.com/scriptscat/scriptcat/issues/249) [[0b4d241](https://github.com/scriptscat/scriptcat/commit/0b4d2413382d0b8c5671eb6685808c77deaf9117)]
 - 🐛 修复 vscode 同步时文件路径变更导致重复同步 [#247](https://github.com/scriptscat/scriptcat/issues/247) [[a6efaa7](https://github.com/scriptscat/scriptcat/commit/a6efaa77fe34d5f1b836e9e56e7e6c358af7e85d)]
-- 🐛 新增脚本支持顶级 await by @DreamNya ([#258](https://github.com/scriptscat/scriptcat/issues/258)) [[3a37af2](https://github.com/scriptscat/scriptcat/commit/3a37af2d885dc133d4ae3f82b7f9ca49d0279a5f)]
+- 🐛 新增脚本支持顶级 await by @DreamNya [#258](https://github.com/scriptscat/scriptcat/issues/258) [[3a37af2](https://github.com/scriptscat/scriptcat/commit/3a37af2d885dc133d4ae3f82b7f9ca49d0279a5f)]
 
 **Full Changelog**: [v0.16.0...v0.16.1](https://github.com/scriptscat/scriptcat/compare/v0.16.0...v0.16.1)
 
