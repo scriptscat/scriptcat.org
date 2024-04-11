@@ -1,8 +1,7 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require("prism-react-renderer/themes/github");
-const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+import { themes as prismThemes } from "prism-react-renderer";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -20,7 +19,7 @@ const config = {
   organizationName: "facebook", // Usually your GitHub org/user name.
   projectName: "docusaurus", // Usually your repo name.
 
-  plugins: ["docusaurus-tailwindcss"],
+  plugins: [["@gracefullight/docusaurus-plugin-tailwind", {}]],
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -86,6 +85,11 @@ const config = {
             label: "开发文档",
           },
           {
+            href: "https://scriptcat.org/search",
+            label: "获取脚本",
+            position: "left",
+          },
+          {
             type: "doc",
             docId: "change/change",
             position: "right",
@@ -149,8 +153,8 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} ScriptCat, Inc. Built with Docusaurus.`,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: prismThemes.github,
+        darkTheme: prismThemes.dracula,
       },
       algolia: {
         appId: "CWJJXTJUJS",
