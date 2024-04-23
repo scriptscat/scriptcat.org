@@ -19,6 +19,30 @@ id: change
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+<a name="0.16.2"></a>
+
+## 0.16.2 (2024-04-22)
+
+> 后续主要精力将放在`Manifest V3`的支持上，本次版本主要是一些小的改进与修复，详细功能演示请看：[v0.16.2](./v0.16#v0.16.2)
+
+### Added
+
+- ✨ 菜单自动隐藏配置 [#269](https://github.com/scriptscat/scriptcat/issues/269) [[3e8f2ce](https://github.com/scriptscat/scriptcat/commit/3e8f2cee095ce25395f49d2bfce3ccf199c1d880)]
+- ✨ 脚本列表添加列调整隐藏操作 [#269](https://github.com/scriptscat/scriptcat/issues/269) [[b8f679d](https://github.com/scriptscat/scriptcat/commit/b8f679df134448e0f3fca7f43795917f225c8b05)]
+- ✅ 修复测试问题 [[04dbdb2](https://github.com/scriptscat/scriptcat/commit/04dbdb2d8030c035972ab077d63f8ef79b3d0621)]
+
+### Fixed
+
+- ✏️ 修复引导拼写错误 [#268](https://github.com/scriptscat/scriptcat/issues/268) [[ca742c3](https://github.com/scriptscat/scriptcat/commit/ca742c3189c709011797e681b9aa1740fa1aedb8)]
+- 🐛 修复百度网盘删除文件失败的问题 [[e516058](https://github.com/scriptscat/scriptcat/commit/e516058b8f7e5e0dd4bda39c0ea6d332a679bbdd)]
+- 🐛 修复同步功能删除会恢复的问题 [[75c4522](https://github.com/scriptscat/scriptcat/commit/75c452284d4e8676a42291e2b04d4a9f7785db3d)]
+
+### Miscellaneous
+
+- 👷 处理 edge 商店发布不能包含压缩文件的问题 [[e5b2e3b](https://github.com/scriptscat/scriptcat/commit/e5b2e3b2df73cfb51a2a45ee44a0e5e1928a8a29)]
+
+**Full Changelog**: [v0.16.1...v0.16.2](https://github.com/scriptscat/scriptcat/compare/v0.16.1...v0.16.2)
+
 <a name="0.16.1"></a>
 
 ## 0.16.1 (2024-02-26)
