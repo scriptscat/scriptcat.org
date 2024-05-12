@@ -19,11 +19,29 @@ id: change
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+<a name="0.16.3"></a>
+
+## 0.16.3 (2024-05-01)
+
+### Fixed
+
+- 🐛 修复 GM.\*兼容问题 [#274](https://github.com/scriptscat/scriptcat/issues/274) [[389e6d2](https://github.com/scriptscat/scriptcat/commit/389e6d27ff697312a716a2a152de9492b23d4f3a)]
+- 🐛 处理 on 事件的移除 [[c69c208](https://github.com/scriptscat/scriptcat/commit/c69c2085c410f1a2e65c221917353f13c4f1bc71)]
+- 🐛 修复 header 设置导致的请求失败 [[b5c2910](https://github.com/scriptscat/scriptcat/commit/b5c2910a526dbf785e481681956a8aa9efe2a20c)]
+- 🐛 处理全局属性 [[ff3b721](https://github.com/scriptscat/scriptcat/commit/ff3b72192efbe8712479d9460a4f1c0bf45a6e0e)]
+- 🐛 修复 window 穿透问题 [#273](https://github.com/scriptscat/scriptcat/issues/273) [[577f7e5](https://github.com/scriptscat/scriptcat/commit/577f7e523b525f38bb9d9d3dddae5921b88c3e9a)]
+- 🐛 修复 hasOwnProperty 返回 undefined 的问题 [#272](https://github.com/scriptscat/scriptcat/issues/272) [[b93be76](https://github.com/scriptscat/scriptcat/commit/b93be76c684ba0a9820deff65cf9d2baaa007e18)]
+
+### Miscellaneous
+
+- 🌐 扩展名和描述 i18n [[03987b0](https://github.com/scriptscat/scriptcat/commit/03987b0604daef7168b73ad80337af0e8c8c5549)]
+- 👷 修复 firefox 扩展包构建 [[328f84f](https://github.com/scriptscat/scriptcat/commit/328f84f2a0b3523a2cb40d16b72d4110e3cd255d)]
+
 <a name="0.16.2"></a>
 
 ## 0.16.2 (2024-04-22)
 
-> 后续主要精力将放在`Manifest V3`的支持上，本次版本主要是一些小的改进与修复，详细功能演示请看：[v0.16.2](./v0.16#v0.16.2)
+> 后续主要精力将放在`Manifest V3`的支持上，本次版本主要是一些小的改进与修复，详细功能演示请看：[v0.16.2](./v0.16#v0162)
 
 ### Added
 
