@@ -1,5 +1,5 @@
 ---
-id: en_privacy
+id: privacy
 title: Privacy Policy
 ---
 
