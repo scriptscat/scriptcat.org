@@ -9,7 +9,7 @@ const config = {
   tagline: "可以执行自定义脚本的浏览器扩展",
   url: "https://docs.scriptcat.org",
   baseUrl: "/",
-  onBrokenLinks: "throw",
+  onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/logo.png",
 
@@ -26,7 +26,7 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: "zh-Hans",
-    locales: ["zh-Hans"],
+    locales: ["zh-Hans", "en"],
   },
 
   presets: [
