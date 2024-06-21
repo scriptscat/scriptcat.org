@@ -69,7 +69,7 @@ const storeMap: { [key: string]: ItemType & { label: any; show?: boolean } } = {
     key: "default",
     label: (
       <IconButton
-        href="/docs/use/"
+        href="/docs/use/use"
         icon="logos:chrome"
         text="安装扩展到浏览器"
         target="_black"
