@@ -19,6 +19,24 @@ id: change
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+<a name="0.16.4"></a>
+
+## 0.16.4 (2024-07-10)
+
+### Added
+
+- ✨ 脚本列表页显示脚本 icon [#292](https://github.com/scriptscat/scriptcat/issues/292) [[1e82fe4](https://github.com/scriptscat/scriptcat/commit/1e82fe4e1e9f71bf202622dedf9adc2d3dcbf13b)]
+- ✨ 新建脚本支持导入本地文件 [#294](https://github.com/scriptscat/scriptcat/issues/294) [[faeb30c](https://github.com/scriptscat/scriptcat/commit/faeb30c2803db8873cc186a28008c5cc9c6b5393)]
+
+### Fixed
+
+- 🐛 修复 English 下列宽问题 [#297](https://github.com/scriptscat/scriptcat/issues/297) [[fcfb3ac](https://github.com/scriptscat/scriptcat/commit/fcfb3ac0e3378b9607ee29593000e660edc4b955)]
+- 🐛 修复删除 Userconfig 后主页还是会显示的问题 [#285](https://github.com/scriptscat/scriptcat/issues/285) [[dd3b1b4](https://github.com/scriptscat/scriptcat/commit/dd3b1b4f9012eecd52f5f27d8f6f4fb24c9888c4)]
+- 🐛 修复 firefox 环境下 GM_addElement 的问题 [#291](https://github.com/scriptscat/scriptcat/issues/291) [[013a4f6](https://github.com/scriptscat/scriptcat/commit/013a4f614e62beeab6e0696fd09c11dcea9e0607)]
+- 🐛 修复排序后点击错乱的问题 [#283](https://github.com/scriptscat/scriptcat/issues/283) [[8a05f00](https://github.com/scriptscat/scriptcat/commit/8a05f00c2922c2382bae9c46a3d49a08223b4de5)]
+- 🐛 处理页面回退 [#277](https://github.com/scriptscat/scriptcat/issues/277) [[f6f0a80](https://github.com/scriptscat/scriptcat/commit/f6f0a80d10ccc0597fb7128fdf125bbd16aa1c56)]
+- 🐛 修复 RegExp 内容被覆盖的问题 [#293](https://github.com/scriptscat/scriptcat/issues/293) [#289](https://github.com/scriptscat/scriptcat/issues/289) [[3ef9fbc](https://github.com/scriptscat/scriptcat/commit/3ef9fbcaf3d7b261792476f2486dc4b4a002bead)]
+
 <a name="0.16.3"></a>
 
 ## 0.16.3 (2024-05-01)
