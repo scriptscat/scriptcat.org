@@ -19,6 +19,14 @@ id: change
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+<a name="0.16.5"></a>
+
+## 0.16.5 (2024-07-12)
+
+### Fixed
+
+- 🐛 修复chrome v127下GM_addElement相关问题 [#299](https://github.com/scriptscat/scriptcat/issues/299) [[cd749af](https://github.com/scriptscat/scriptcat/commit/cd749afbe98a92016a22c5f7fee2a9d40fd8f815)]
+
 <a name="0.16.4"></a>
 
 ## 0.16.4 (2024-07-10)
