@@ -22,7 +22,7 @@ id: change
 <a name="0.16.6"></a>
 
 ## 0.16.6 (2024-10-24)
-> Manifest V3重构计划筹备中，非严重与功能性bug暂时不会处理。升级Manifest V3后可能需要你开启扩展的开发者模式才可以继续使用前台脚本(Userscript)
+> Manifest V3重构计划筹备中，非严重与功能性bug暂时不会处理。受限于[Manifest V3](https://developer.chrome.com/docs/extensions/develop/migrate/checklist?hl=zh-cn)平台，升级后可能需要你开启扩展的开发者模式才可以继续使用前台脚本(Userscript)
 
 ### Changed
 
