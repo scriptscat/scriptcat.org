@@ -19,6 +19,24 @@ id: change
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+<a name="0.16.6"></a>
+
+## 0.16.6 (2024-10-24)
+> Manifest V3重构计划筹备中，非严重与功能性bug暂时不会处理。升级Manifest V3后可能需要你开启扩展的开发者模式才可以继续使用前台脚本(Userscript)
+
+### Changed
+
+- 🎨 优化WebDAV密码输入，修改为密码框 ([#311](https://github.com/scriptscat/scriptcat/issues/311)) [[9f1003c](https://github.com/scriptscat/scriptcat/commit/9f1003ca18925b1c3ef8de6cd4c393d0d0f97dc3)]
+
+### Fixed
+
+- 🐛 修复GM.xmlHttpRequest实现 [#308](https://github.com/scriptscat/scriptcat/issues/308) [[f0c3a67](https://github.com/scriptscat/scriptcat/commit/f0c3a6739e290426548d50209c241215ec005480)]
+
+### Miscellaneous
+
+- 🌐 添加越南语 ([#314](https://github.com/scriptscat/scriptcat/issues/314)) [[50c7a36](https://github.com/scriptscat/scriptcat/commit/50c7a3643400141e568d6bdc35506b93f7804635)]
+
+
 <a name="0.16.5"></a>
 
 ## 0.16.5 (2024-07-12)
