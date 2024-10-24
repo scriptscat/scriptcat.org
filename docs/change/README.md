@@ -26,7 +26,7 @@ id: change
 
 ### Changed
 
-- 🎨 优化WebDAV密码输入，修改为密码框 ([#311](https://github.com/scriptscat/scriptcat/issues/311)) [[9f1003c](https://github.com/scriptscat/scriptcat/commit/9f1003ca18925b1c3ef8de6cd4c393d0d0f97dc3)]
+- 🎨 优化WebDAV密码输入，修改为密码框 ([#311](https://github.com/scriptscat/scriptcat/issues/311)) by @Przeblysk [[9f1003c](https://github.com/scriptscat/scriptcat/commit/9f1003ca18925b1c3ef8de6cd4c393d0d0f97dc3)]
 
 ### Fixed
 
@@ -34,7 +34,7 @@ id: change
 
 ### Miscellaneous
 
-- 🌐 添加越南语 ([#314](https://github.com/scriptscat/scriptcat/issues/314)) [[50c7a36](https://github.com/scriptscat/scriptcat/commit/50c7a3643400141e568d6bdc35506b93f7804635)]
+- 🌐 添加越南语 ([#314](https://github.com/scriptscat/scriptcat/issues/314)) by @RenjiYuusei [[50c7a36](https://github.com/scriptscat/scriptcat/commit/50c7a3643400141e568d6bdc35506b93f7804635)]
 
 
 <a name="0.16.5"></a>
