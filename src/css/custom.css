@@ -55,3 +55,6 @@ a:hover {
   color: unset;
   text-decoration: unset;
 }
+.comment .swiper-wrapper{
+  transition-timing-function:linear !important
+}

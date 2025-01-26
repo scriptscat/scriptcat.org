@@ -1,15 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import { Avatar, Card, Image, Space, Typography } from "antd";
 import Link from "@docusaurus/Link";
 import Meta from "antd/es/card/Meta";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+
+import "swiper/css";
 
 const Comment = ({ avatar, username, description, content }) => {
+  const swiper = useSwiper();
+  const [isPlaying, setIsPlaying] = useState(true);
+  const enterCallback = () => {
+    if (!isPlaying) {
+      return;
+    }
+    swiper.setTranslate(swiper.getTranslate());
+    swiper.autoplay.stop();
+    setIsPlaying(false);
+  };
+  const leaveCallback = () => {
+    if (isPlaying) {
+      return;
+    }
+    swiper.slideTo(swiper.activeIndex, 20000);
+    swiper.autoplay.start();
+    setIsPlaying(true);
+  };
   return (
     <Card
-      style={{ width: 400, height: 140 }}
+      onMouseEnter={enterCallback}
+      onMouseLeave={leaveCallback}
+      style={{ maxWidth: 400, height: 160 }}
       bodyStyle={{ padding: "20px" }}
       size="small"
     >
@@ -56,6 +77,38 @@ const Comment = ({ avatar, username, description, content }) => {
         {content}
       </div>
     </Card>
+  );
+};
+
+const CommentSlider = ({ rtl = false, initialSlide = 0 }) => {
+  return (
+    <Swiper
+      className="comment"
+      initialSlide={initialSlide}
+      spaceBetween={50}
+      slidesPerView={3}
+      allowTouchMove={false}
+      speed={1000 * 20}
+      loop={true}
+      autoplay={{
+        delay: 0,
+        disableOnInteraction: false,
+        reverseDirection: rtl,
+      }}
+      onSwiper={(swiper) => console.log(swiper)}
+      modules={[Autoplay]}
+    >
+      {comments.left.map((item) => (
+        <SwiperSlide key={item.username}>
+          <Comment
+            avatar={item.avatar}
+            username={item.username}
+            description={item.description}
+            content={item.content}
+          />
+        </SwiperSlide>
+      ))}
+    </Swiper>
   );
 };
 
@@ -124,6 +177,7 @@ const comments = {
 };
 
 export default function HomepageFeatures(): JSX.Element {
+  const [sliderRef, setSliderRef] = useState(null);
   return (
     <div className="home flex flex-col">
       <div className="flex gap-3 bg-dark px-20">
@@ -189,53 +243,16 @@ export default function HomepageFeatures(): JSX.Element {
         <div className="flex-1 m-auto text-center py-4 w-full">
           <h2>社区评论</h2>
           <Space direction="vertical" className="w-full">
-            <div className="w-full">
-              <Slider
-                dots={false}
-                arrows={false}
-                infinite={true}
-                slidesToShow={3}
-                slidesToScroll={1}
-                autoplay={true}
-                speed={3000}
-                autoplaySpeed={3000}
-                cssEase="linear"
-              >
-                {comments.left.map((item) => (
-                  <Comment
-                    key={item.username}
-                    avatar={item.avatar}
-                    username={item.username}
-                    description={item.description}
-                    content={item.content}
-                  />
-                ))}
-              </Slider>
-            </div>
+            <div className="w-full"></div>
             <div>
-              <Slider
-                dots={false}
-                arrows={false}
-                infinite={true}
-                slidesToShow={3}
-                slidesToScroll={1}
-                autoplay={true}
-                speed={3000}
-                autoplaySpeed={3000}
-                cssEase="linear"
-                rtl={true}
-                initialSlide={3}
-              >
-                {comments.right.map((item) => (
-                  <Comment
-                    key={item.username}
-                    avatar={item.avatar}
-                    username={item.username}
-                    description={item.description}
-                    content={item.content}
-                  />
-                ))}
-              </Slider>
+              <CommentSlider></CommentSlider>
+            </div>
+            <div
+              style={{
+                margin: "13px 0",
+              }}
+            >
+              <CommentSlider rtl={true} initialSlide={3}></CommentSlider>
             </div>
           </Space>
         </div>
