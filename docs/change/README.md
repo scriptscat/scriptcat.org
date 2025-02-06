@@ -13,10 +13,6 @@ id: change
 
 - [Firefox](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat-pre/)
 
-由于 Chrome 系列浏览器无法支持 MV2 的扩展上传,先采用群的方式进行通知
-
-- [ScriptCat Beta 群 124771063](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=ig72L7KKqkj0rngxuYdP3bPb2p256Oy4&authKey=fR%2BO6kgwxv0mRmxUnH91SNf0HnUPzooacVeMbxmFXKcfycgPKMgbZlH5KvVrK40X&noverify=0&group_code=124771063)
-
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
 <a name="0.16.6"></a>
