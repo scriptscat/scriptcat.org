@@ -135,8 +135,8 @@ const config = {
                 href: "https://scriptcat.org/",
               },
               {
-                label: "Telegram",
-                href: "https://t.me/scriptscat",
+                label: "Discord",
+                href: "https://discord.gg/e53kpVqv",
               },
             ],
           },
