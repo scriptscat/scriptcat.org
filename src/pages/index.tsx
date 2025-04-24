@@ -10,8 +10,9 @@ import styles from './index.module.css';
 import { Icon } from '@iconify/react';
 import { DownOutlined, SearchOutlined } from '@ant-design/icons';
 import { browserName } from 'react-device-detect';
-import type { ItemType } from 'antd/es/menu/hooks/useItems';
 import type { JSX } from 'react';
+import { IconCat } from '../components/IconCat';
+import type { ItemType } from 'antd/es/menu/interface';
 
 // 浏览器图标按钮组件
 const IconButton = ({ href, text, icon, target = '_blank' }) => {
@@ -216,43 +217,18 @@ function HomepageHeader(): JSX.Element {
                 menu={{
                   items: storeList,
                 }}
-                arrow={true}>
+                arrow={true}
+                style={{width:'auto'}}
+                >
                 {storeMap[browserName.toLowerCase()] && storeMap[browserName.toLowerCase()].label}
                 {!storeMap[browserName.toLowerCase()] && storeMap['default'].label}
               </Dropdown.Button>
-            </div>
-
-            <div className="flex flex-wrap gap-4 mb-12">
-              <div className={styles.downloadBtn}>
-                <img
-                  src="https://unpkg.com/lucide-static@latest/icons/download.svg"
-                  className="w-5 h-5"
-                  alt="Download"
-                />
-                立即安装
+              <div>
+                <a href="https://scriptcat.org" className={styles.btnBrowseScripts}>
+                  <SearchOutlined className="w-5 h-5" />
+                  浏览脚本库
+                </a>
               </div>
-              <a href="https://scriptcat.org" className={styles.btnBrowseScripts}>
-                <SearchOutlined className="w-5 h-5" />
-                浏览脚本库
-              </a>
-            </div>
-            <div className={styles.heroLinks}>
-              <Link
-                className={clsx('button button--info button--sm', styles.heroLink)}
-                href="https://bbs.tampermonkey.net.cn/">
-                💬 交流社区
-              </Link>
-              <a
-                href="https://github.com/scriptscat/scriptcat"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.githubButton}>
-                <img
-                  src="https://img.shields.io/github/stars/scriptscat/scriptcat?style=social"
-                  height="24"
-                  alt="GitHub Stars"
-                />
-              </a>
             </div>
           </div>
 
@@ -437,7 +413,13 @@ function FeaturesSection(): JSX.Element {
 // 产品对比表格组件 - 使用div模拟表格
 function ComparisonSection() {
   // 对比数据
-  const comparisonData = [
+  const comparisonData: {
+    feature: string;
+    scriptcat: boolean;
+    tampermonkey: boolean;
+    scriptcatLabel?: string;
+    tampermonkeyLabel?: string;
+  }[] = [
     { feature: '脚本兼容性', scriptcat: true, tampermonkey: true },
     { feature: '性能优化', scriptcat: true, tampermonkey: false, scriptcatLabel: '高效' },
     { feature: '开源免费', scriptcat: true, tampermonkey: true },
@@ -466,7 +448,7 @@ function ComparisonSection() {
               <div className="p-6 font-semibold text-gray-800 dark:text-white text-lg">特性</div>
               <div className="p-6 font-semibold text-gray-800 dark:text-white text-lg text-center relative group">
                 <div className="flex items-center justify-center gap-3">
-                  <Icon icon="lucide:cat" className="w-6 h-6 text-blue-500" />
+                  <IconCat />
                   <span>ScriptCat</span>
                 </div>
                 <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/2 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -715,154 +697,6 @@ function Footer() {
           </a>
         </div>
       </div>
-
-      <div className="container">
-        <div className={styles.footerGrid}>
-          {/* 列 1: 关于 */}
-          <div className={styles.footerColumn}>
-            <div className={styles.footerLogo}>
-              <IconCat />
-              <span className={styles.footerLogoText}>ScriptCat</span>
-            </div>
-            <p className={styles.footerDescription}>
-              强大的浏览器脚本引擎，让您的上网体验更加丰富多彩。
-            </p>
-            <div className={styles.footerSocial}>
-              <a href="https://github.com/scriptscat/scriptcat" className={styles.footerSocialLink}>
-                <Icon icon="lucide:github" className={styles.footerSocialIcon} />
-              </a>
-              <a href="#" className={styles.footerSocialLink}>
-                <Icon icon="lucide:twitter" className={styles.footerSocialIcon} />
-              </a>
-              <a href="#" className={styles.footerSocialLink}>
-                <Icon icon="lucide:rss" className={styles.footerSocialIcon} />
-              </a>
-            </div>
-          </div>
-
-          {/* 列 2: 产品 */}
-          <div className={styles.footerColumn}>
-            <h4 className={styles.footerColumnTitle}>产品</h4>
-            <ul className={styles.footerColumnList}>
-              <li>
-                <a href="#" className={styles.footerColumnLink}>
-                  特性介绍
-                </a>
-              </li>
-              <li>
-                <a href="#" className={styles.footerColumnLink}>
-                  浏览器支持
-                </a>
-              </li>
-              <li>
-                <a href="#" className={styles.footerColumnLink}>
-                  脚本商店
-                </a>
-              </li>
-              <li>
-                <a href="#" className={styles.footerColumnLink}>
-                  更新日志
-                </a>
-              </li>
-              <li>
-                <a href="#" className={styles.footerColumnLink}>
-                  路线图
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* 列 3: 资源 */}
-          <div className={styles.footerColumn}>
-            <h4 className={styles.footerColumnTitle}>资源</h4>
-            <ul className={styles.footerColumnList}>
-              <li>
-                <a href="#" className={styles.footerColumnLink}>
-                  开发文档
-                </a>
-              </li>
-              <li>
-                <a href="#" className={styles.footerColumnLink}>
-                  API 参考
-                </a>
-              </li>
-              <li>
-                <a href="#" className={styles.footerColumnLink}>
-                  示例脚本
-                </a>
-              </li>
-              <li>
-                <a href="#" className={styles.footerColumnLink}>
-                  常见问题
-                </a>
-              </li>
-              <li>
-                <a href="#" className={styles.footerColumnLink}>
-                  教程视频
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* 列 4: 社区 */}
-          <div className={styles.footerColumn}>
-            <h4 className={styles.footerColumnTitle}>社区</h4>
-            <ul className={styles.footerColumnList}>
-              <li>
-                <a href="https://bbs.tampermonkey.net.cn/" className={styles.footerColumnLink}>
-                  论坛讨论
-                </a>
-              </li>
-              <li>
-                <a href="#" className={styles.footerColumnLink}>
-                  Discord 频道
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/scriptscat/scriptcat/blob/main/CONTRIBUTING.md"
-                  className={styles.footerColumnLink}>
-                  贡献指南
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/scriptscat/scriptcat/issues"
-                  className={styles.footerColumnLink}>
-                  报告问题
-                </a>
-              </li>
-              <li>
-                <div className={styles.footerColumnLinkWithBadge}>
-                  <a href="#" className={styles.footerColumnLink}>
-                    联系团队
-                  </a>
-                  <span className={styles.footerColumnBadge}>招募中</span>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      {/* 版权信息 */}
-      <div className={styles.footerCopyright}>
-        <div className={styles.footerCopyrightText}>
-          &copy; {new Date().getFullYear()} ScriptCat. 保留所有权利。
-        </div>
-        <div className={styles.footerCopyrightLinks}>
-          <a href="#" className={styles.footerCopyrightLink}>
-            隐私政策
-          </a>
-          <a href="#" className={styles.footerCopyrightLink}>
-            使用条款
-          </a>
-          <a href="#" className={styles.footerCopyrightLink}>
-            许可协议
-          </a>
-        </div>
-      </div>
-      {/* 底部装饰 */}
-      <div className={styles.footerDecoration}></div>
     </footer>
   );
 }
@@ -884,8 +718,4 @@ export default function Home(): JSX.Element {
       </div>
     </Layout>
   );
-}
-
-function IconCat() {
-  return <img src="/img/logo.png" alt="Custom Icon" className={styles.scriptcatPopupIconSvg} />;
 }
