@@ -23,6 +23,8 @@ API 的详细定义,请看`tempermonkey.d.ts`或者内置编辑器提示,文档�
 获取脚本相关信息(参考`tempermonkey.d.ts`且并不完全)
 
 ### GM_cookie
+>
+> v0.17.0-alpha 后删除store与tabid相关的参数，现在会根据当前所在的窗口来决定获取隐身窗口还是普通窗口的 cookie
 
 必须使用`@connect`声明操作的 host,且经过用户授权才可使用.虽然兼容 TM 的`GM_cookie.list`操作,但是为了统一,不建议这样.
 
@@ -33,9 +35,8 @@ declare function GM_cookie(
   ondone: (cookie: GM_Types.Cookie[], error: any | undefined) => void
 ): void;
 
-// store可通过tabid(前后端通信可能用到,ValueChangeListener会返回tabid),获取storeid,后台脚本用.
 declare namespace GM_Types {
-  type CookieAction = "list" | "delete" | "set" | "store";
+  type CookieAction = "list" | "delete" | "set";
   interface CookieDetails {
     url?: string;
     name: string;
@@ -236,19 +237,18 @@ declare function GM_deleteValue(name: string): void;
 declare function GM_listValues(): string[];
 ```
 
-### GM_add/removeValueChangeListener \*
+### GM_add/removeValueChangeListener
+>
+> tabid于0.17.0-alpha后删除, 详情见[GM_cookie](#gm_cookie)
 
-对值的监听操作,add 会返回一个监听 id,使用 remove 可以取消监听.后台脚本监听会返回
-tabid.可以使用这个方法实现一个简单的通信,使用[**storageName**](meta.md#storagename-%F0%9F%A7%AA)可以实现跨脚本通信.
+对值的监听操作,add 会返回一个监听 id,使用 remove 可以取消监听.可以使用这个方法实现一个简单的通信,使用[**storageName**](meta.md#storagename-%F0%9F%A7%AA)可以实现跨脚本通信.
 
 ```ts
-// tabid是只有后台脚本监听才有的参数,获得tabid后可以使用GM_cookie('store')获取页面的cookie储存空间
 type ValueChangeListener = (
   name: string,
   oldValue: any,
   newValue: any,
   remote: boolean,
-  tabid?: number
 ) => any;
 
 declare function GM_addValueChangeListener(
@@ -259,7 +259,7 @@ declare function GM_addValueChangeListener(
 declare function GM_removeValueChangeListener(listenerId: number): void;
 ```
 
-### GM_openInTab
+### GM_openInTab \*
 
 打开一个新窗口
 
@@ -276,6 +276,7 @@ declare namespace GM_Types {
     active?: boolean;
     insert?: boolean;
     setParent?: boolean;
+    useOpen?: boolean; // 这是一个实验性/不兼容其他管理器/不兼容Firefox的功能 表示使用window.open打开新窗口 #178
   }
 }
 ```
