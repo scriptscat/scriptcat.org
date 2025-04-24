@@ -45,14 +45,12 @@ declare namespace GM_Types {
     path?: string;
     secure?: boolean;
     session?: boolean;
-    storeId?: string;
     httpOnly?: boolean;
     expirationDate?: number;
   }
   interface Cookie {
     domain: string;
     name: string;
-    storeId: string;
     value: string;
     session: boolean;
     hostOnly: boolean;
@@ -140,8 +138,6 @@ cookie 不会带上其他 cookie.
 - host
 - ...
 
-增加了 maxRedirects 参数,可控制请求的最大重定向次数,为 0 表示禁止重定向.
-
 ```typescript
 declare function GM_xmlhttpRequest(
   details: GM_Types.XHRDetails
@@ -191,7 +187,7 @@ declare namespace GM_Types {
     user?: string;
     password?: string;
     nocache?: boolean;
-    maxRedirects?: number;
+    redirect?: "follow" | "error" | "manual";// 为了与tm保持一致, 在v0.17.0后废弃maxRedirects, 使用redirect替代, 会强制使用fetch模式
 
     onload?: Listener<XHRResponse>;
     onloadstart?: Listener<XHRResponse>;
@@ -244,11 +240,13 @@ declare function GM_listValues(): string[];
 对值的监听操作,add 会返回一个监听 id,使用 remove 可以取消监听.可以使用这个方法实现一个简单的通信,使用[**storageName**](meta.md#storagename-%F0%9F%A7%AA)可以实现跨脚本通信.
 
 ```ts
+// tabid是只有后台脚本监听才有的参数
 type ValueChangeListener = (
   name: string,
   oldValue: any,
   newValue: any,
   remote: boolean,
+  tabid?: number
 ) => any;
 
 declare function GM_addValueChangeListener(
