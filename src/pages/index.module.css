@@ -5,7 +5,7 @@
   transition: background-color 0.3s ease;
 }
 
-[data-theme='dark'] .homeContainer {
+[data-theme="dark"] .homeContainer {
   background-color: var(--ifm-background-surface-color);
 }
 
@@ -18,7 +18,7 @@
   transition: background-color 0.3s ease;
 }
 
-[data-theme='dark'] .heroBanner {
+[data-theme="dark"] .heroBanner {
   background-color: var(--ifm-background-surface-color);
 }
 
@@ -90,7 +90,7 @@
   align-items: center;
   gap: 0.5rem;
   transition: all 0.3s ease;
-  color:#fff;
+  color: #fff;
 }
 
 .downloadBtn:hover {
@@ -107,15 +107,13 @@
   align-items: center;
   gap: 8px;
   transition: all 0.3s ease;
-  color:#fff;
+  color: #fff;
   text-wrap: nowrap;
-
 }
 
 .btnBrowseScripts:hover {
   background-color: #374151; /* gray-700 */
 }
-
 
 @media (min-width: 768px) {
   .heroContent {
@@ -155,7 +153,7 @@
   color: var(--ifm-color-black);
 }
 
-[data-theme='dark'] .heroTitle {
+[data-theme="dark"] .heroTitle {
   color: var(--ifm-color-white);
 }
 
@@ -170,7 +168,7 @@
   max-width: 600px;
 }
 
-[data-theme='dark'] .heroSubtitle {
+[data-theme="dark"] .heroSubtitle {
   color: var(--ifm-color-gray-300);
 }
 
@@ -181,7 +179,7 @@
 
 .heroButtons {
   display: flex;
-  gap:1rem;
+  gap: 1rem;
   margin-bottom: 2rem;
   justify-content: start;
 }
@@ -235,7 +233,7 @@
   margin-left: -0.5rem;
 }
 
-[data-theme='dark'] .userAvatar {
+[data-theme="dark"] .userAvatar {
   border-color: var(--ifm-color-gray-800);
 }
 
@@ -248,7 +246,7 @@
   font-size: 0.875rem;
 }
 
-[data-theme='dark'] .userCountText {
+[data-theme="dark"] .userCountText {
   color: var(--ifm-color-gray-400);
 }
 
@@ -269,7 +267,7 @@
   position: relative;
 }
 
-[data-theme='dark'] .codeEditor {
+[data-theme="dark"] .codeEditor {
   background-color: rgba(17, 24, 39, 0.5);
   border-color: rgba(75, 85, 99, 0.5);
 }
@@ -282,7 +280,7 @@
   gap: 0.5rem;
 }
 
-[data-theme='dark'] .codeEditorHeader {
+[data-theme="dark"] .codeEditorHeader {
   background-color: rgba(31, 41, 55, 0.8);
 }
 
@@ -298,7 +296,7 @@
   margin-left: 0.5rem;
 }
 
-[data-theme='dark'] .codeEditorTitle {
+[data-theme="dark"] .codeEditorTitle {
   color: var(--ifm-color-gray-400);
 }
 
@@ -312,7 +310,7 @@
   color: rgb(17, 24, 39);
 }
 
-[data-theme='dark'] .codeEditorContent {
+[data-theme="dark"] .codeEditorContent {
   background-color: rgb(17, 24, 39);
   color: var(--ifm-color-white);
 }
@@ -321,7 +319,7 @@
   color: var(--ifm-color-gray-600);
 }
 
-[data-theme='dark'] .codeComment {
+[data-theme="dark"] .codeComment {
   color: var(--ifm-color-gray-500);
 }
 
@@ -329,7 +327,7 @@
   color: rgb(124, 58, 237);
 }
 
-[data-theme='dark'] .codeKeyword {
+[data-theme="dark"] .codeKeyword {
   color: rgb(196, 181, 253);
 }
 
@@ -337,7 +335,7 @@
   color: rgb(37, 99, 235);
 }
 
-[data-theme='dark'] .codeFunction {
+[data-theme="dark"] .codeFunction {
   color: rgb(96, 165, 250);
 }
 
@@ -345,7 +343,7 @@
   color: rgb(16, 185, 129);
 }
 
-[data-theme='dark'] .codeString {
+[data-theme="dark"] .codeString {
   color: rgb(110, 231, 183);
 }
 
@@ -353,7 +351,7 @@
   color: rgb(109, 40, 217);
 }
 
-[data-theme='dark'] .codeObject {
+[data-theme="dark"] .codeObject {
   color: rgb(167, 139, 250);
 }
 
@@ -361,7 +359,7 @@
   color: rgb(79, 70, 229);
 }
 
-[data-theme='dark'] .codeProperty {
+[data-theme="dark"] .codeProperty {
   color: rgb(129, 140, 248);
 }
 
@@ -384,7 +382,7 @@
   margin-bottom: 1.5rem;
 }
 
-[data-theme='dark'] .trustBadgesTitle {
+[data-theme="dark"] .trustBadgesTitle {
   color: var(--ifm-color-gray-400);
 }
 
@@ -403,7 +401,7 @@
   color: var(--ifm-color-gray-600);
 }
 
-[data-theme='dark'] .trustBadge {
+[data-theme="dark"] .trustBadge {
   color: var(--ifm-color-gray-400);
 }
 
@@ -414,7 +412,7 @@
   display: none;
 }
 
-[data-theme='dark'] .trustBadgeDivider {
+[data-theme="dark"] .trustBadgeDivider {
   background-color: var(--ifm-color-gray-700);
 }
 
@@ -430,15 +428,61 @@
   position: relative;
   background-color: #f5f8fc;
   transition: background-color 0.3s ease;
+  overflow: hidden;
 }
 
-[data-theme='dark'] .featuresSection {
+[data-theme="dark"] .featuresSection {
   background-color: var(--ifm-background-surface-color);
+}
+
+/* 新增特性区域背景 */
+.featuresSectionBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.featuresSectionBlur1 {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  width: 40rem;
+  height: 40rem;
+  border-radius: 50%;
+  background-color: rgba(59, 130, 246, 0.05);
+  filter: blur(120px);
+}
+
+.featuresSectionBlur2 {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  width: 35rem;
+  height: 35rem;
+  border-radius: 50%;
+  background-color: rgba(139, 92, 246, 0.05);
+  filter: blur(120px);
+}
+
+.featuresSectionGrid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none" stroke="rgba(255,255,255,0.02)" stroke-width="0.5"/></svg>');
+  background-size: 50px 50px;
+  opacity: 0.4;
 }
 
 .featuresSectionHeader {
   text-align: center;
   margin-bottom: 4rem;
+  position: relative;
+  z-index: 1;
 }
 
 .featuresSectionTitle {
@@ -448,7 +492,7 @@
   color: var(--ifm-color-black);
 }
 
-[data-theme='dark'] .featuresSectionTitle {
+[data-theme="dark"] .featuresSectionTitle {
   color: var(--ifm-color-white);
 }
 
@@ -456,11 +500,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  background-image: linear-gradient(
-    to right,
-    var(--ifm-color-primary-light),
-    var(--ifm-color-primary-dark)
-  );
+  background-image: linear-gradient(to right, var(--ifm-color-primary-light), var(--ifm-color-primary-dark));
 }
 
 .featuresSectionSubtitle {
@@ -470,7 +510,7 @@
   margin: 0 auto;
 }
 
-[data-theme='dark'] .featuresSectionSubtitle {
+[data-theme="dark"] .featuresSectionSubtitle {
   color: var(--ifm-color-gray-400);
 }
 
@@ -480,6 +520,8 @@
   gap: 2rem;
   max-width: 72rem;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 @media (min-width: 640px) {
@@ -494,96 +536,446 @@
   }
 }
 
+/* 优化后的特性卡片样式 */
 .featureCard {
-  background-color: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(5px);
+  position: relative;
+  height: 100%;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+}
+
+.featureCardInner {
+  position: relative;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  padding: 2.5rem 2rem;
   border: 1px solid rgba(209, 213, 219, 0.5);
-  padding: 2rem;
-  border-radius: 0.75rem;
-  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 1;
 }
 
-[data-theme='dark'] .featureCard {
-  background-color: rgba(31, 41, 55, 0.5);
+[data-theme="dark"] .featureCardInner {
+  background: rgba(31, 41, 55, 0.7);
   border-color: rgba(75, 85, 99, 0.5);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.2);
 }
 
-.featureCard:hover {
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  transform: translateY(-2px);
-  border-color: rgba(156, 163, 175, 0.5);
+.featureCard:hover .featureCardInner {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.1);
 }
 
-[data-theme='dark'] .featureCard:hover {
-  border-color: rgba(107, 114, 128, 0.5);
+[data-theme="dark"] .featureCard:hover .featureCardInner {
+  box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.3);
 }
 
-.featureIcon {
-  width: 3.5rem;
-  height: 3.5rem;
-  border-radius: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.featureIconWrapper {
+  position: relative;
   margin-bottom: 1.5rem;
 }
 
-.featureTitle {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-  color: var(--ifm-color-black);
+.featureIcon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-[data-theme='dark'] .featureTitle {
+.featureIconSvg {
+  color: white;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
+  transition: transform 0.3s ease;
+}
+
+.featureCard:hover .featureIcon {
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.15);
+}
+
+.featureCard:hover .featureIconSvg {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.7));
+}
+
+.featureIconGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  opacity: 0.3;
+  filter: blur(20px);
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.featureCard:hover .featureIconGlow {
+  width: 8rem;
+  height: 8rem;
+  opacity: 0.5;
+  filter: blur(25px);
+}
+
+.featureTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-black);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+[data-theme="dark"] .featureTitle {
   color: var(--ifm-color-white);
+}
+
+.featureCard:hover .featureTitle {
+  transform: translateY(-5px);
+}
+
+.featureTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 2.5rem;
+  height: 3px;
+  background: linear-gradient(to right, var(--ifm-color-primary-light), transparent);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.featureCard:hover .featureTitle::after {
+  width: 4rem;
 }
 
 .featureDescription {
   color: var(--ifm-color-gray-700);
+  line-height: 1.6;
+  transition: opacity 0.3s ease;
 }
 
-[data-theme='dark'] .featureDescription {
-  color: var(--ifm-color-gray-400);
+[data-theme="dark"] .featureDescription {
+  color: var(--ifm-color-gray-300);
 }
 
-/* 对比表格样式 */
+.featureCardShine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  z-index: 2;
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+  pointer-events: none;
+}
+
+[data-theme="dark"] .featureCardShine {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.05) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.featureCard:hover .featureCardShine {
+  transform: translateX(100%);
+}
+
+.featureCardCorner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5rem;
+  height: 5rem;
+  background: linear-gradient(135deg, transparent 50%, rgba(255, 255, 255, 0.1) 50%);
+  z-index: 1;
+  border-top-right-radius: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+[data-theme="dark"] .featureCardCorner {
+  background: linear-gradient(135deg, transparent 50%, rgba(255, 255, 255, 0.05) 50%);
+}
+
+.featureCard:hover .featureCardCorner {
+  opacity: 1;
+}
+
+/* 对比表格区域样式 - 超级绚酷版 */
 .comparisonSection {
-  padding: 4rem 0;
+  padding: 8rem 0;
   position: relative;
   background-color: #f5f8fc;
   transition: background-color 0.3s ease;
+  overflow: hidden;
+  perspective: 1000px;
 }
 
-[data-theme='dark'] .comparisonSection {
+[data-theme="dark"] .comparisonSection {
   background-color: var(--ifm-background-surface-color);
 }
 
+/* 背景效果 */
+.comparisonBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.comparisonBlur1 {
+  position: absolute;
+  top: 15%;
+  right: 10%;
+  width: 40rem;
+  height: 40rem;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    rgba(59, 130, 246, 0.15) 0%,
+    rgba(59, 130, 246, 0.05) 50%,
+    transparent 70%
+  );
+  filter: blur(80px);
+  animation: pulseGlow 8s infinite alternate ease-in-out;
+}
+
+.comparisonBlur2 {
+  position: absolute;
+  bottom: 15%;
+  left: 10%;
+  width: 35rem;
+  height: 35rem;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    rgba(139, 92, 246, 0.15) 0%,
+    rgba(139, 92, 246, 0.05) 50%,
+    transparent 70%
+  );
+  filter: blur(80px);
+  animation: pulseGlow 12s infinite alternate-reverse ease-in-out;
+}
+
+.comparisonBlur3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60rem;
+  height: 60rem;
+  border-radius: 50%;
+  background: radial-gradient(-50%);
+  width: 60rem;
+  height: 60rem;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    rgba(14, 165, 233, 0.03) 0%,
+    rgba(14, 165, 233, 0.01) 50%,
+    transparent 70%
+  );
+  filter: blur(100px);
+  opacity: 0.7;
+  animation: slowRotate 30s infinite linear;
+}
+
+@keyframes pulseGlow {
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.8;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes slowRotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.comparisonGrid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none" stroke="rgba(59,130,246,0.03)" stroke-width="0.5"/></svg>');
+  background-size: 50px 50px;
+  opacity: 0.4;
+  animation: gridMove 60s infinite linear;
+}
+
+@keyframes gridMove {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100px 100px;
+  }
+}
+
+/* 粒子效果 */
+.comparisonParticles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.comparisonParticle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: rgba(59, 130, 246, 0.3);
+  border-radius: 50%;
+  filter: blur(1px);
+  animation: floatParticle 15s infinite linear;
+}
+
+[data-theme="dark"] .comparisonParticle {
+  background-color: rgba(96, 165, 250, 0.3);
+}
+
+@keyframes floatParticle {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-300px) translateX(100px);
+    opacity: 0;
+  }
+}
+
+/* 标题样式 */
 .comparisonSectionHeader {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.comparisonSectionTitleWrapper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1rem;
 }
 
 .comparisonSectionTitle {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 3rem;
+  font-weight: 800;
   margin-bottom: 1rem;
   color: var(--ifm-color-black);
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  letter-spacing: -0.5px;
 }
 
-[data-theme='dark'] .comparisonSectionTitle {
+[data-theme="dark"] .comparisonSectionTitle {
   color: var(--ifm-color-white);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .comparisonSectionTitleHighlight {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  background-image: linear-gradient(
-    to right,
-    var(--ifm-color-primary-light),
-    var(--ifm-color-primary-dark)
-  );
+  background-image: linear-gradient(to right, #3b82f6, #8b5cf6);
+  position: relative;
+  display: inline-block;
+}
+
+.comparisonSectionTitleHighlight::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.25rem;
+  background: linear-gradient(to right, #3b82f6, #8b5cf6);
+  border-radius: 3px;
+  animation: highlightPulse 2s infinite alternate ease-in-out;
+}
+
+@keyframes highlightPulse {
+  0% {
+    opacity: 0.7;
+    transform: scaleX(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleX(1.05);
+  }
+}
+
+.comparisonSectionTitleGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, rgba(59, 130, 246, 0.2) 0%, transparent 70%);
+  filter: blur(20px);
+  z-index: 1;
+  opacity: 0;
+  animation: titleGlowPulse 3s infinite alternate ease-in-out;
+}
+
+@keyframes titleGlowPulse {
+  0% {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+  }
+  100% {
+    opacity: 0.8;
+    width: 120%;
+    height: 150%;
+  }
 }
 
 .comparisonSectionSubtitle {
@@ -591,255 +983,768 @@
   color: var(--ifm-color-gray-700);
   max-width: 48rem;
   margin: 0 auto;
+  position: relative;
 }
 
-[data-theme='dark'] .comparisonSectionSubtitle {
+[data-theme="dark"] .comparisonSectionSubtitle {
   color: var(--ifm-color-gray-400);
 }
 
-.comparisonTable {
-  max-width: 100%;
-  width: 100%;
+/* 表格容器 */
+.comparisonTableContainer {
+  position: relative;
+  max-width: 72rem;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  border-radius: 1rem;
+  z-index: 1;
+  transform-style: preserve-3d;
+}
+
+/* 3D卡片效果 */
+.comparisonCard3D {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+  transform: rotateX(5deg) rotateY(0deg);
+  will-change: transform;
+}
+
+.comparisonCard3D:hover {
+  transform: rotateX(0deg) rotateY(0deg);
+}
+
+.comparisonCardInner {
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* 表格主体样式 */
+.comparisonTableWrapper {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(20px);
+  border-radius: 1.5rem;
   overflow: hidden;
   border: 1px solid rgba(209, 213, 219, 0.5);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  transform: translateY(0);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.comparisonTable:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 25px 30px -5px rgba(0, 0, 0, 0.15), 0 15px 15px -5px rgba(0, 0, 0, 0.08);
-}
-
-[data-theme='dark'] .comparisonTable {
-  background: linear-gradient(to bottom right, rgba(31, 41, 55, 0.8), rgba(17, 24, 39, 0.8));
-  border-color: rgba(75, 85, 99, 0.5);
-}
-
-.table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  table-layout: fixed;
-}
-
-.tableHeader {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.1) inset, 0 10px 30px
+    rgba(59, 130, 246, 0.1);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
-  background: linear-gradient(to right, rgba(243, 244, 246, 0.8), rgba(249, 250, 251, 0.8));
-  border-bottom: 1px solid rgba(209, 213, 219, 0.5);
+  z-index: 2;
+  transform: translateZ(0px);
 }
 
-[data-theme='dark'] .tableHeader {
-  background: linear-gradient(to right, rgba(17, 24, 39, 0.8), rgba(31, 41, 55, 0.8));
-  border-bottom-color: rgba(75, 85, 99, 0.5);
+[data-theme="dark"] .comparisonTableWrapper {
+  background: rgba(17, 24, 39, 0.8);
+  border-color: rgba(55, 65, 81, 0.5);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.05) inset, 0 10px 30px
+    rgba(59, 130, 246, 0.1);
 }
 
-.tableHeaderCell {
-  text-align: left;
-  padding: 1.5rem;
-  font-weight: 600;
-  color: var(--ifm-color-black);
-  position: relative;
-}
-
-.tableHeaderCell:first-child {
-  width: 40%;
-  border-right: 1px solid rgba(209, 213, 219, 0.3);
-}
-
-.tableHeaderCell:not(:first-child) {
-  width: 30%;
-  text-align: center;
-}
-
-[data-theme='dark'] .tableHeaderCell {
-  color: var(--ifm-color-white);
-}
-
-.tableHeaderLogo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  position: relative;
-}
-
-.tableHeaderLogo::after {
-  content: '';
-  position: absolute;
-  bottom: -1.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50%;
-  height: 3px;
-  background: linear-gradient(
-    to right,
-    var(--ifm-color-primary-light),
-    var(--ifm-color-primary-dark)
-  );
-  border-radius: 3px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.tableHeaderCell:hover .tableHeaderLogo::after {
-  opacity: 1;
-}
-
-.tableHeaderIcon {
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
-.tableRow {
-  border-bottom: 1px solid rgba(209, 213, 219, 0.5);
-  transition: background-color 0.2s ease;
-}
-
-[data-theme='dark'] .tableRow {
-  border-bottom-color: rgba(75, 85, 99, 0.5);
-}
-
-.tableRow:hover {
-  background-color: rgba(243, 244, 246, 0.5);
-}
-
-[data-theme='dark'] .tableRow:hover {
-  background-color: rgba(55, 65, 81, 0.5);
-}
-
-.tableRow:last-child {
-  border-bottom: none;
-}
-
-.tableCell {
-  padding: 1.25rem 1.5rem;
-  color: var(--ifm-color-gray-700);
-  font-weight: 500;
-  border-right: 1px solid rgba(209, 213, 219, 0.3);
-}
-
-[data-theme='dark'] .tableCell {
-  color: var(--ifm-color-gray-300);
-  border-right-color: rgba(75, 85, 99, 0.3);
-}
-
-.tableCellCenter {
-  text-align: center;
-  padding: 1.25rem 1.5rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.tableCellCenter::before {
-  content: '';
+.comparisonTableWrapper::before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-  background: radial-gradient(circle at center, rgba(59, 130, 246, 0.05) 0%, transparent 70%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0) 10%,
+    rgba(255, 255, 255, 0) 90%,
+    rgba(255, 255, 255, 0.05)
+  );
   pointer-events: none;
+  z-index: 3;
 }
 
-.tableCellCenter:hover::before {
-  opacity: 1;
+[data-theme="dark"] .comparisonTableWrapper::before {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0) 10%,
+    rgba(255, 255, 255, 0) 90%,
+    rgba(255, 255, 255, 0.03)
+  );
 }
 
-.tableCheckIcon {
-  width: 1.75rem;
-  height: 1.75rem;
-  color: var(--ifm-color-primary-light);
-  margin: 0 auto;
-  filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.3));
-  transition: transform 0.2s ease, filter 0.2s ease;
+/* 表格头部样式 */
+.comparisonTableHeader {
+  display: grid;
+  grid-template-columns: 40% 30% 30%;
+  background: linear-gradient(to right, rgba(243, 244, 246, 0.7), rgba(249, 250, 251, 0.7));
+  border-bottom: 1px solid rgba(209, 213, 219, 0.5);
+  position: relative;
+  z-index: 2;
 }
 
-.tableCellCenter:hover .tableCheckIcon {
-  transform: scale(1.1);
-  filter: drop-shadow(0 0 12px rgba(59, 130, 246, 0.5));
+[data-theme="dark"] .comparisonTableHeader {
+  background: linear-gradient(to right, rgba(31, 41, 55, 0.7), rgba(17, 24, 39, 0.7));
+  border-bottom-color: rgba(75, 85, 99, 0.5);
 }
 
-.tableCheckIconGray {
-  width: 1.75rem;
-  height: 1.75rem;
-  color: var(--ifm-color-gray-600);
-  margin: 0 auto;
-  transition: transform 0.2s ease;
+.comparisonTableHeaderCell {
+  padding: 1.75rem 2rem;
+  position: relative;
+  overflow: hidden;
 }
 
-.tableCellCenter:hover .tableCheckIconGray {
-  transform: scale(1.1);
+.comparisonTableHeaderCellContent {
+  position: relative;
+  z-index: 2;
 }
 
-[data-theme='dark'] .tableCheckIconGray {
-  color: var(--ifm-color-gray-400);
+.comparisonTableHeaderTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--ifm-color-black);
+  position: relative;
+  z-index: 2;
+  letter-spacing: -0.5px;
 }
 
-.tableMinusIcon {
-  width: 1.75rem;
-  height: 1.75rem;
-  color: var(--ifm-color-gray-600);
-  margin: 0 auto;
-  transition: transform 0.2s ease;
+[data-theme="dark"] .comparisonTableHeaderTitle {
+  color: var(--ifm-color-white);
 }
 
-.tableCellCenter:hover .tableMinusIcon {
-  transform: scale(1.1);
+.comparisonTableHeaderLine {
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 3rem;
+  height: 3px;
+  background: linear-gradient(to right, rgba(59, 130, 246, 0.7), transparent);
+  border-radius: 3px;
 }
 
-[data-theme='dark'] .tableMinusIcon {
-  color: var(--ifm-color-gray-400);
+[data-theme="dark"] .comparisonTableHeaderLine {
+  background: linear-gradient(to right, rgba(96, 165, 250, 0.7), transparent);
 }
 
-.tableCrossIcon {
-  width: 1.75rem;
-  height: 1.75rem;
-  color: var(--ifm-color-gray-600);
-  margin: 0 auto;
-  transition: transform 0.2s ease;
+.comparisonTableHeaderLogo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+  z-index: 2;
 }
 
-.tableCellCenter:hover .tableCrossIcon {
-  transform: scale(1.1) rotate(10deg);
-}
-
-[data-theme='dark'] .tableCrossIcon {
-  color: var(--ifm-color-gray-400);
-}
-
-.tableCellWithLabel {
+.comparisonTableHeaderIcon {
+  width: 3rem;
+  height: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  color: #3b82f6;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(59, 130, 246, 0.1));
+  border-radius: 1rem;
+  padding: 0.5rem;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(59, 130, 246, 0.2);
 }
 
-.tableCellLabel {
-  font-size: 0.75rem;
-  padding: 0.2rem 0.6rem;
-  background: linear-gradient(to right, rgba(59, 130, 246, 0.1), rgba(37, 99, 235, 0.1));
-  border-radius: 9999px;
-  color: var(--ifm-color-primary);
-  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+.comparisonTableHeaderIcon svg {
+  width: 1.75rem;
+  height: 1.75rem;
+  filter: drop-shadow(0 0 5px rgba(59, 130, 246, 0.5));
+  transition: all 0.3s ease;
 }
 
-.tableCellCenter:hover .tableCellLabel {
+.comparisonTableHeaderCell:hover .comparisonTableHeaderIcon {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+}
+
+.comparisonTableHeaderCell:hover .comparisonTableHeaderIcon svg {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.7));
+}
+
+.comparisonTableHeaderIconRing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  border: 2px solid rgba(59, 130, 246, 0.3);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.comparisonTableHeaderCell:hover .comparisonTableHeaderIconRing {
+  width: 120%;
+  height: 120%;
+  opacity: 1;
+}
+
+.comparisonTableHeaderGlow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 1;
+}
+
+.comparisonTableHeaderCell:hover .comparisonTableHeaderGlow {
+  opacity: 1;
+}
+
+/* 表格主体样式 */
+.comparisonTableBody {
+  position: relative;
+  z-index: 2;
+}
+
+.comparisonTableRow {
+  display: grid;
+  grid-template-columns: 40% 30% 30%;
+  border-bottom: 1px solid rgba(209, 213, 219, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+[data-theme="dark"] .comparisonTableRow {
+  border-bottom-color: rgba(75, 85, 99, 0.3);
+}
+
+/* 修改表格行 hover 样式，解决最后一行闪烁问题 */
+.comparisonTableRow:hover {
+  background-color: rgba(243, 244, 246, 0.5);
+  /* 移除 translateZ 变换，它可能导致鼠标悬停时元素位置变化 */
+  /* transform: translateZ(10px); */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  z-index: 3;
+}
+
+[data-theme="dark"] .comparisonTableRow:hover {
+  background-color: rgba(55, 65, 81, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 为最后一行添加特殊处理，确保悬停效果稳定 */
+.comparisonTableRow:last-child {
+  border-bottom: none;
+  position: relative; /* 确保最后一行有正确的定位上下文 */
+  z-index: 2; /* 确保z-index正确 */
+}
+
+.comparisonTableRow:last-child:hover {
+  /* 为最后一行使用更稳定的hover效果 */
+  transform: none;
+  /* 添加内部阴影代替位移效果 */
+  box-shadow: inset 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+/* 调整单元格内部元素的hover效果，避免引起布局变化 */
+.comparisonTableRow:hover .comparisonTableCellInner {
+  /* 减小Y轴位移量，避免过大的位置变化 */
+  transform: translateY(-1px);
+}
+
+/* 为最后一行的单元格内部元素提供更稳定的hover效果 */
+.comparisonTableRow:last-child:hover .comparisonTableCellInner {
+  transform: none;
+}
+
+/* 确保表格底部区域有足够的内边距，防止鼠标移出 */
+.comparisonTableBody {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 1px; /* 添加小的底部内边距 */
+}
+
+.comparisonTableRowActive {
+  background-color: rgba(243, 244, 246, 0.7);
+}
+
+[data-theme="dark"] .comparisonTableRowActive {
+  background-color: rgba(55, 65, 81, 0.5);
+}
+
+.comparisonTableRow:last-child {
+  border-bottom: none;
+}
+
+/* 表格单元格样式 */
+.comparisonTableCell {
+  padding: 1.5rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.comparisonTableCellInner {
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.comparisonTableRow:hover .comparisonTableCellInner {
   transform: translateY(-2px);
-  box-shadow: 0 4px 6px rgba(59, 130, 246, 0.2);
 }
 
-[data-theme='dark'] .tableCellLabel {
-  background: linear-gradient(to right, rgba(59, 130, 246, 0.2), rgba(37, 99, 235, 0.2));
-  color: var(--ifm-color-primary-light);
+.comparisonTableCellText {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--ifm-color-gray-800);
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .comparisonTableCellText {
+  color: var(--ifm-color-gray-200);
+}
+
+.comparisonTableRow:hover .comparisonTableCellText {
+  color: #3b82f6;
+  text-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+[data-theme="dark"] .comparisonTableRow:hover .comparisonTableCellText {
+  color: #60a5fa;
+  text-shadow: 0 0 20px rgba(96, 165, 250, 0.3);
+}
+
+.comparisonTableCellHighlight {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, #3b82f6, transparent);
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.comparisonTableRow:hover .comparisonTableCellHighlight {
+  width: 50%;
+}
+
+.comparisonTableCellCheck {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.comparisonTableCellCheckIcon {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3b82f6;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.comparisonTableCellCheckIcon svg {
+  width: 1.75rem;
+  height: 1.75rem;
+  filter: drop-shadow(0 0 5px rgba(59, 130, 246, 0.5));
+  transition: all 0.3s ease;
+}
+
+.comparisonTableRow:hover .comparisonTableCellCheckIcon {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.4));
+}
+
+.comparisonTableRow:hover .comparisonTableCellCheckIcon svg {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.7));
+}
+
+.comparisonTableCellCheckRing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 2px solid rgba(59, 130, 246, 0.3);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.comparisonTableRow:hover .comparisonTableCellCheckRing {
+  width: 3.5rem;
+  height: 3.5rem;
+  opacity: 1;
+  border-color: rgba(59, 130, 246, 0.5);
+}
+
+.comparisonTableCellGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4rem;
+  height: 4rem;
+  background: radial-gradient(circle at center, rgba(59, 130, 246, 0.2) 0%, transparent 70%);
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+.comparisonTableRow:hover .comparisonTableCellGlow {
+  opacity: 1;
+  width: 6rem;
+  height: 6rem;
+  background: radial-gradient(circle at center, rgba(59, 130, 246, 0.3) 0%, transparent 70%);
+}
+
+.comparisonTableCellCheckIconGray {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ifm-color-gray-500);
+  transition: all 0.3s ease;
+}
+
+.comparisonTableCellCheckIconGray svg {
+  width: 1.75rem;
+  height: 1.75rem;
+  transition: all 0.3s ease;
+}
+
+.comparisonTableRow:hover .comparisonTableCellCheckIconGray {
+  transform: scale(1.1);
+  color: var(--ifm-color-gray-600);
+}
+
+.comparisonTableCellMinus {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ifm-color-gray-400);
+  transition: all 0.3s ease;
+}
+
+.comparisonTableCellMinus svg {
+  width: 1.75rem;
+  height: 1.75rem;
+  transition: all 0.3s ease;
+}
+
+.comparisonTableRow:hover .comparisonTableCellMinus {
+  transform: scale(1.1);
+  color: var(--ifm-color-gray-500);
+}
+
+.comparisonTableCellCross {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ifm-color-gray-400);
+  transition: all 0.3s ease;
+}
+
+.comparisonTableCellCross svg {
+  width: 1.75rem;
+  height: 1.75rem;
+  transition: all 0.3s ease;
+}
+
+.comparisonTableRow:hover .comparisonTableCellCross {
+  transform: scale(1.1) rotate(10deg);
+  color: var(--ifm-color-gray-500);
+}
+
+.comparisonTableCellWithLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.comparisonTableCellLabel {
+  padding: 0.25rem 0.75rem;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(37, 99, 235, 0.1));
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #3b82f6;
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.1), 0 0 0 1px rgba(59, 130, 246, 0.1) inset;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.comparisonTableCellLabel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: all 0.5s ease;
+}
+
+.comparisonTableRow:hover .comparisonTableCellLabel {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.2), 0 0 0 1px rgba(59, 130, 246, 0.2) inset;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.25), rgba(37, 99, 235, 0.15));
+}
+
+.comparisonTableRow:hover .comparisonTableCellLabel::before {
+  left: 100%;
+}
+
+[data-theme="dark"] .comparisonTableCellLabel {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.25), rgba(37, 99, 235, 0.15));
+  color: #60a5fa;
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.2), 0 0 0 1px rgba(59, 130, 246, 0.2) inset;
+}
+
+.comparisonTableCellLabelGray {
+  padding: 0.25rem 0.75rem;
+  background: rgba(209, 213, 219, 0.2);
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--ifm-color-gray-600);
+  transition: all 0.3s ease;
+}
+
+.comparisonTableRow:hover .comparisonTableCellLabelGray {
+  transform: translateY(-2px);
+}
+
+[data-theme="dark"] .comparisonTableCellLabelGray {
+  background: rgba(75, 85, 99, 0.2);
+  color: var(--ifm-color-gray-400);
+}
+
+/* 表格底部样式 */
+.comparisonTableFooter {
+  position: relative;
+  padding: 1.75rem 2rem;
+  background: linear-gradient(to right, rgba(243, 244, 246, 0.5), rgba(249, 250, 251, 0.5));
+  border-top: 1px solid rgba(209, 213, 219, 0.3);
+  overflow: hidden;
+  z-index: 2;
+}
+
+[data-theme="dark"] .comparisonTableFooter {
+  background: linear-gradient(to right, rgba(31, 41, 55, 0.5), rgba(17, 24, 39, 0.5));
+  border-top-color: rgba(75, 85, 99, 0.3);
+}
+
+.comparisonTableFooterHighlight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(59, 130, 246, 0.05) 0%, transparent 50%, rgba(59, 130, 246, 0.05) 100%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.comparisonTableFooter:hover .comparisonTableFooterHighlight {
+  opacity: 1;
+}
+
+.comparisonTableFooterContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+.comparisonTableFooterText {
+  color: var(--ifm-color-gray-700);
+  font-weight: 500;
+}
+
+[data-theme="dark"] .comparisonTableFooterText {
+  color: var(--ifm-color-gray-300);
+}
+
+.comparisonTableFooterButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #3b82f6, #4f46e5);
+  border-radius: 0.75rem;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3), 0 0 0 1px rgba(59, 130, 246, 0.1) inset;
+}
+
+.comparisonTableFooterButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(59, 130, 246, 0.4), 0 0 0 1px rgba(59, 130, 246, 0.2) inset;
+  color: white;
+  text-decoration: none;
+}
+
+.comparisonTableFooterButton svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  transition: transform 0.3s ease;
+}
+
+.comparisonTableFooterButton:hover svg {
+  transform: translateX(3px);
+}
+
+.comparisonTableFooterButtonGlow {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: all 0.5s ease;
+}
+
+.comparisonTableFooterButton:hover .comparisonTableFooterButtonGlow {
+  left: 100%;
+}
+
+/* 装饰元素 */
+.comparisonTableDecoration1 {
+  position: absolute;
+  top: -3rem;
+  right: -3rem;
+  width: 15rem;
+  height: 15rem;
+  background: radial-gradient(circle at center, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 0.7;
+  filter: blur(30px);
+  animation: decorationPulse 8s infinite alternate ease-in-out;
+}
+
+.comparisonTableDecoration2 {
+  position: absolute;
+  bottom: -4rem;
+  left: -4rem;
+  width: 20rem;
+  height: 20rem;
+  background: radial-gradient(circle at center, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 0.7;
+  filter: blur(40px);
+  animation: decorationPulse 12s infinite alternate-reverse ease-in-out;
+}
+
+@keyframes decorationPulse {
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.8;
+    transform: scale(1.2);
+  }
+}
+
+.comparisonTableDecoration3 {
+  position: absolute;
+  top: 20%;
+  right: -10%;
+  width: 10rem;
+  height: 10rem;
+  border: 2px solid rgba(59, 130, 246, 0.1);
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 0.7;
+  animation: rotateSlow 30s infinite linear;
+}
+
+.comparisonTableDecoration4 {
+  position: absolute;
+  bottom: 20%;
+  left: -5%;
+  width: 5rem;
+  height: 5rem;
+  border: 1px solid rgba(139, 92, 246, 0.1);
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 0.7;
+  animation: rotateSlow 20s infinite linear reverse;
+}
+
+@keyframes rotateSlow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.comparisonBottomGlow {
+  position: absolute;
+  bottom: -5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 10rem;
+  background: radial-gradient(ellipse at center, rgba(59, 130, 246, 0.2) 0%, transparent 70%);
+  filter: blur(40px);
+  z-index: 0;
+  opacity: 0.5;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .comparisonSectionTitle {
+    font-size: 2.5rem;
+  }
+
+  .comparisonTableHeaderCell,
+  .comparisonTableCell {
+    padding: 1.25rem 1rem;
+  }
+
+  .comparisonTableHeaderIcon,
+  .comparisonTableCellCheckIcon,
+  .comparisonTableCellCheckIconGray,
+  .comparisonTableCellMinus,
+  .comparisonTableCellCross {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .comparisonTableHeaderIcon svg,
+  .comparisonTableCellCheckIcon svg,
+  .comparisonTableCellCheckIconGray svg,
+  .comparisonTableCellMinus svg,
+  .comparisonTableCellCross svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .comparisonTableCellText {
+    font-size: 1rem;
+  }
 }
 
 /* 使用场景区域样式 */
@@ -850,7 +1755,7 @@
   transition: background-color 0.3s ease;
 }
 
-[data-theme='dark'] .scenarioSection {
+[data-theme="dark"] .scenarioSection {
   background-color: var(--ifm-background-surface-color);
 }
 
@@ -866,7 +1771,7 @@
   color: var(--ifm-color-black);
 }
 
-[data-theme='dark'] .scenarioSectionTitle {
+[data-theme="dark"] .scenarioSectionTitle {
   color: var(--ifm-color-white);
 }
 
@@ -874,11 +1779,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  background-image: linear-gradient(
-    to right,
-    var(--ifm-color-primary-light),
-    var(--ifm-color-primary-dark)
-  );
+  background-image: linear-gradient(to right, var(--ifm-color-primary-light), var(--ifm-color-primary-dark));
 }
 
 .scenarioSectionSubtitle {
@@ -886,7 +1787,7 @@
   color: var(--ifm-color-gray-700);
 }
 
-[data-theme='dark'] .scenarioSectionSubtitle {
+[data-theme="dark"] .scenarioSectionSubtitle {
   color: var(--ifm-color-gray-400);
 }
 
@@ -913,7 +1814,7 @@
   transition: all 0.3s ease;
 }
 
-[data-theme='dark'] .scenarioCard {
+[data-theme="dark"] .scenarioCard {
   background-color: rgba(31, 41, 55, 0.5);
   border-color: rgba(75, 85, 99, 0.5);
 }
@@ -924,7 +1825,7 @@
   border-color: rgba(156, 163, 175, 0.5);
 }
 
-[data-theme='dark'] .scenarioCard:hover {
+[data-theme="dark"] .scenarioCard:hover {
   border-color: rgba(107, 114, 128, 0.5);
 }
 
@@ -936,7 +1837,7 @@
   justify-content: space-between;
 }
 
-[data-theme='dark'] .scenarioHeader {
+[data-theme="dark"] .scenarioHeader {
   border-bottom-color: rgba(75, 85, 99, 0.5);
 }
 
@@ -961,7 +1862,7 @@
   color: var(--ifm-color-black);
 }
 
-[data-theme='dark'] .scenarioTitle {
+[data-theme="dark"] .scenarioTitle {
   color: var(--ifm-color-white);
 }
 
@@ -970,7 +1871,7 @@
   color: var(--ifm-color-gray-600);
 }
 
-[data-theme='dark'] .scenarioSubtitle {
+[data-theme="dark"] .scenarioSubtitle {
   color: var(--ifm-color-gray-400);
 }
 
@@ -1000,7 +1901,7 @@
   gap: 0.75rem;
 }
 
-[data-theme='dark'] .scenarioFeature {
+[data-theme="dark"] .scenarioFeature {
   background-color: rgba(55, 65, 81, 0.5);
 }
 
@@ -1008,7 +1909,7 @@
   color: var(--ifm-color-gray-600);
 }
 
-[data-theme='dark'] .scenarioFeature svg {
+[data-theme="dark"] .scenarioFeature svg {
   color: var(--ifm-color-gray-400);
 }
 
@@ -1017,7 +1918,7 @@
   color: var(--ifm-color-gray-700);
 }
 
-[data-theme='dark'] .scenarioFeature span {
+[data-theme="dark"] .scenarioFeature span {
   color: var(--ifm-color-gray-300);
 }
 
@@ -1037,7 +1938,7 @@
   color: var(--ifm-color-gray-600);
 }
 
-[data-theme='dark'] .scenarioSitesHeader span {
+[data-theme="dark"] .scenarioSitesHeader span {
   color: var(--ifm-color-gray-400);
 }
 
@@ -1064,7 +1965,7 @@
   color: var(--ifm-color-gray-700);
 }
 
-[data-theme='dark'] .scenarioSite {
+[data-theme="dark"] .scenarioSite {
   background-color: rgba(55, 65, 81, 0.3);
   color: var(--ifm-color-gray-300);
 }
@@ -1077,7 +1978,7 @@
   transition: background-color 0.3s ease;
 }
 
-[data-theme='dark'] .downloadSection {
+[data-theme="dark"] .downloadSection {
   background-color: var(--ifm-background-surface-color);
 }
 
@@ -1092,7 +1993,7 @@
   position: relative;
 }
 
-[data-theme='dark'] .downloadCard {
+[data-theme="dark"] .downloadCard {
   background-color: rgba(31, 41, 55, 0.5);
   border-color: rgba(75, 85, 99, 0.5);
 }
@@ -1162,7 +2063,7 @@
   color: var(--ifm-color-black);
 }
 
-[data-theme='dark'] .downloadCardTitle {
+[data-theme="dark"] .downloadCardTitle {
   color: var(--ifm-color-white);
 }
 
@@ -1170,11 +2071,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  background-image: linear-gradient(
-    to right,
-    var(--ifm-color-primary-light),
-    var(--ifm-color-primary-dark)
-  );
+  background-image: linear-gradient(to right, var(--ifm-color-primary-light), var(--ifm-color-primary-dark));
 }
 
 .downloadCardSubtitle {
@@ -1183,7 +2080,7 @@
   margin-bottom: 2rem;
 }
 
-[data-theme='dark'] .downloadCardSubtitle {
+[data-theme="dark"] .downloadCardSubtitle {
   color: var(--ifm-color-gray-300);
 }
 
@@ -1205,11 +2102,7 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 1.5rem;
-  background-image: linear-gradient(
-    to right,
-    var(--ifm-color-primary),
-    var(--ifm-color-primary-dark)
-  );
+  background-image: linear-gradient(to right, var(--ifm-color-primary), var(--ifm-color-primary-dark));
   border-radius: 0.5rem;
   font-weight: 500;
   color: var(--ifm-color-white);
@@ -1258,7 +2151,7 @@
   transition: all 0.3s ease;
 }
 
-[data-theme='dark'] .downloadCardButtonGithub {
+[data-theme="dark"] .downloadCardButtonGithub {
   background-color: rgba(55, 65, 81, 0.8);
   border-color: rgba(75, 85, 99, 0.5);
   color: var(--ifm-color-white);
@@ -1271,7 +2164,7 @@
   text-decoration: none;
 }
 
-[data-theme='dark'] .downloadCardButtonGithub:hover {
+[data-theme="dark"] .downloadCardButtonGithub:hover {
   background-color: rgba(75, 85, 99, 0.8);
   color: var(--ifm-color-white);
 }
@@ -1292,7 +2185,7 @@
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-[data-theme='dark'] .browserWindow {
+[data-theme="dark"] .browserWindow {
   background-color: var(--ifm-color-gray-800);
 }
 
@@ -1305,7 +2198,7 @@
   border-bottom: 1px solid var(--ifm-color-gray-300);
 }
 
-[data-theme='dark'] .browserWindowHeader {
+[data-theme="dark"] .browserWindowHeader {
   background-color: var(--ifm-color-gray-900);
   border-bottom-color: var(--ifm-color-gray-700);
 }
@@ -1327,7 +2220,7 @@
   padding: 0 1rem;
 }
 
-[data-theme='dark'] .browserWindowAddress {
+[data-theme="dark"] .browserWindowAddress {
   background-color: var(--ifm-color-gray-800);
 }
 
@@ -1336,7 +2229,7 @@
   color: var(--ifm-color-gray-600);
 }
 
-[data-theme='dark'] .browserWindowUrl {
+[data-theme="dark"] .browserWindowUrl {
   color: var(--ifm-color-gray-400);
 }
 
@@ -1350,7 +2243,7 @@
   position: relative;
 }
 
-[data-theme='dark'] .browserWindowContent {
+[data-theme="dark"] .browserWindowContent {
   background-color: var(--ifm-color-gray-100);
 }
 
@@ -1430,13 +2323,10 @@
   font-size: 0.75rem;
 }
 
-
-
 .footerContributors {
   padding: 2rem 0;
   margin-bottom: 2rem;
 }
-
 
 .footerContributorsTitle {
   text-align: center;
@@ -1446,7 +2336,7 @@
   color: var(--ifm-color-black);
 }
 
-[data-theme='dark'] .footerContributorsTitle {
+[data-theme="dark"] .footerContributorsTitle {
   color: var(--ifm-color-white);
 }
 
@@ -1478,7 +2368,7 @@
   transition: all 0.3s ease;
 }
 
-[data-theme='dark'] .footerContributorsButton {
+[data-theme="dark"] .footerContributorsButton {
   background-color: rgba(55, 65, 81, 0.8);
   border-color: rgba(75, 85, 99, 0.5);
   color: var(--ifm-color-white);
@@ -1491,7 +2381,7 @@
   text-decoration: none;
 }
 
-[data-theme='dark'] .footerContributorsButton:hover {
+[data-theme="dark"] .footerContributorsButton:hover {
   background-color: rgba(75, 85, 99, 0.8);
   color: var(--ifm-color-white);
 }
