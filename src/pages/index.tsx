@@ -720,10 +720,7 @@ function useBackgroundColor(lightColor: string, darkColor: string) {
 
     return () => {
       observer.disconnect();
-      document.documentElement.style.setProperty(
-        '--ifm-background-surface-color',
-        ' var(--ifm-color-content-inverse)',
-      );
+      document.documentElement.style.removeProperty('--ifm-background-surface-color');
     };
   }, [lightColor, darkColor]);
 }
