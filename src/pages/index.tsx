@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import clsx from "clsx"
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext"
-import Layout from "@theme/Layout"
-import { Dropdown, Space } from "antd"
-import styles from "./index.module.css"
-import { Icon } from "@iconify/react"
-import { DownOutlined, SearchOutlined } from "@ant-design/icons"
-import { browserName } from "react-device-detect"
-import type { JSX } from "react"
-import { IconCat } from "../components/IconCat"
-import type { ItemType } from "antd/es/menu/interface"
+import { useEffect, useState } from "react";
+import clsx from "clsx";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import Layout from "@theme/Layout";
+import { Dropdown, Space } from "antd";
+import styles from "./index.module.css";
+import { Icon } from "@iconify/react";
+import { DownOutlined, SearchOutlined } from "@ant-design/icons";
+import { browserName } from "react-device-detect";
+import type { JSX } from "react";
+import { IconCat } from "../components/IconCat";
+import type { ItemType } from "antd/es/menu/interface";
 
 // 浏览器图标按钮组件
 const IconButton = ({ href, text, icon, target = "_blank" }) => {
@@ -34,8 +34,8 @@ const IconButton = ({ href, text, icon, target = "_blank" }) => {
         <b>{text}</b>
       </Space>
     </a>
-  )
-}
+  );
+};
 
 // 浏览器商店映射
 const storeMap: { [key: string]: ItemType & { label: any; show?: boolean } } = {
@@ -71,7 +71,14 @@ const storeMap: { [key: string]: ItemType & { label: any; show?: boolean } } = {
   },
   default: {
     key: "default",
-    label: <IconButton href="/docs/use/use" icon="logos:chrome" text="安装扩展到浏览器" target="_self" />,
+    label: (
+      <IconButton
+        href="/docs/use/use"
+        icon="logos:chrome"
+        text="安装扩展到浏览器"
+        target="_self"
+      />
+    ),
     show: false,
   },
   crx: {
@@ -84,15 +91,15 @@ const storeMap: { [key: string]: ItemType & { label: any; show?: boolean } } = {
       />
     ),
   },
-}
+};
 
 // 构建商店列表
-const storeList: ItemType[] = []
+const storeList: ItemType[] = [];
 Object.keys(storeMap).forEach((key) => {
   if (storeMap[key].show !== false) {
-    storeList.push(storeMap[key])
+    storeList.push(storeMap[key]);
   }
-})
+});
 
 // 特性卡片组件 - 优化后的版本
 const FeatureCard = ({ icon, title, description, color }) => (
@@ -100,9 +107,17 @@ const FeatureCard = ({ icon, title, description, color }) => (
     <div className={styles.featureCardInner}>
       <div className={styles.featureIconWrapper}>
         <div className={styles.featureIcon} style={{ backgroundColor: color }}>
-          <Icon icon={icon} width={28} height={28} className={styles.featureIconSvg} />
+          <Icon
+            icon={icon}
+            width={28}
+            height={28}
+            className={styles.featureIconSvg}
+          />
         </div>
-        <div className={styles.featureIconGlow} style={{ backgroundColor: color }}></div>
+        <div
+          className={styles.featureIconGlow}
+          style={{ backgroundColor: color }}
+        ></div>
       </div>
       <h3 className={styles.featureTitle}>{title}</h3>
       <p className={styles.featureDescription}>{description}</p>
@@ -110,22 +125,42 @@ const FeatureCard = ({ icon, title, description, color }) => (
       <div className={styles.featureCardCorner}></div>
     </div>
   </div>
-)
+);
 
 // 使用场景卡片组件
-const ScenarioCard = ({ icon, title, subtitle, tag, tagColor, features, sites, scriptUrl }) => (
+const ScenarioCard = ({
+  icon,
+  title,
+  subtitle,
+  tag,
+  tagColor,
+  features,
+  sites,
+  scriptUrl,
+}) => (
   <div className={styles.scenarioCard}>
     <div className={styles.scenarioHeader}>
       <div className={styles.scenarioTitleWrapper}>
-        <div className={styles.scenarioIcon} style={{ backgroundColor: tagColor.bg }}>
-          <Icon icon={icon} width={24} height={24} style={{ color: tagColor.text }} />
+        <div
+          className={styles.scenarioIcon}
+          style={{ backgroundColor: tagColor.bg }}
+        >
+          <Icon
+            icon={icon}
+            width={24}
+            height={24}
+            style={{ color: tagColor.text }}
+          />
         </div>
         <div>
           <h3 className={styles.scenarioTitle}>{title}</h3>
           <p className={styles.scenarioSubtitle}>{subtitle}</p>
         </div>
       </div>
-      <div className={styles.scenarioTag} style={{ backgroundColor: tagColor.bg, color: tagColor.text }}>
+      <div
+        className={styles.scenarioTag}
+        style={{ backgroundColor: tagColor.bg, color: tagColor.text }}
+      >
         {tag}
       </div>
     </div>
@@ -141,7 +176,7 @@ const ScenarioCard = ({ icon, title, subtitle, tag, tagColor, features, sites, s
       <div className={styles.scenarioSites}>
         <div className={styles.scenarioSitesHeader}>
           <span>支持网站</span>
-          <a href={scriptUrl} style={{ color: tagColor.text }}>
+          <a href={scriptUrl} target="_blank" style={{ color: tagColor.text }}>
             获取脚本 →
           </a>
         </div>
@@ -155,36 +190,40 @@ const ScenarioCard = ({ icon, title, subtitle, tag, tagColor, features, sites, s
       </div>
     </div>
   </div>
-)
+);
 
 // 主页头部组件
 function HomepageHeader(): JSX.Element {
-  const { siteConfig } = useDocusaurusContext()
-  const [theme, setTheme] = useState("light")
+  const { siteConfig } = useDocusaurusContext();
+  const [theme, setTheme] = useState("light");
 
   // 检测 data-theme 属性
   useEffect(() => {
     const updateTheme = () => {
-      const currentTheme = document.documentElement.getAttribute("data-theme") || "light"
-      setTheme(currentTheme)
-    }
+      const currentTheme =
+        document.documentElement.getAttribute("data-theme") || "light";
+      setTheme(currentTheme);
+    };
 
     // 初始化
-    updateTheme()
+    updateTheme();
 
     // 创建一个 MutationObserver 来监听 data-theme 属性变化
     const observer = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
-        if (mutation.type === "attributes" && mutation.attributeName === "data-theme") {
-          updateTheme()
+        if (
+          mutation.type === "attributes" &&
+          mutation.attributeName === "data-theme"
+        ) {
+          updateTheme();
         }
-      })
-    })
+      });
+    });
 
-    observer.observe(document.documentElement, { attributes: true })
+    observer.observe(document.documentElement, { attributes: true });
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <header className={clsx("hero", styles.heroBanner)}>
@@ -204,7 +243,7 @@ function HomepageHeader(): JSX.Element {
               <span className={styles.gradientText}>终极脚本引擎</span>
             </h1>
             <p className="text-xl text-black dark:text-gray-300  mb-8 max-w-2xl">
-              ScriptCat是一个强大的开源浏览器脚本引擎，让您轻松定制网页功能，消除广告，自动执行任务，提升浏览体验。与Tampermonkey兼容，专为技术爱好者设计。
+              ScriptCat是一个强大的开源浏览器脚本引擎，让您轻松定制网页功能，消除广告，自动执行任务，提升浏览体验。与Tampermonkey兼容，并提供更多功能和优化。
             </p>
             <p className={styles.heroSubtitle}>
               执行
@@ -223,11 +262,16 @@ function HomepageHeader(): JSX.Element {
                 arrow={true}
                 style={{ width: "auto" }}
               >
-                {storeMap[browserName.toLowerCase()] && storeMap[browserName.toLowerCase()].label}
-                {!storeMap[browserName.toLowerCase()] && storeMap["default"].label}
+                {storeMap[browserName.toLowerCase()] &&
+                  storeMap[browserName.toLowerCase()].label}
+                {!storeMap[browserName.toLowerCase()] &&
+                  storeMap["default"].label}
               </Dropdown.Button>
               <div>
-                <a href="https://scriptcat.org" className={styles.btnBrowseScripts}>
+                <a
+                  href="https://scriptcat.org"
+                  className={styles.btnBrowseScripts}
+                >
                   <SearchOutlined className="w-5 h-5" />
                   浏览脚本库
                 </a>
@@ -238,29 +282,50 @@ function HomepageHeader(): JSX.Element {
           <div className={styles.heroRight}>
             <div className={styles.codeEditor}>
               <div className={styles.codeEditorHeader}>
-                <div className={styles.codeEditorDot} style={{ backgroundColor: "#ff5f56" }}></div>
-                <div className={styles.codeEditorDot} style={{ backgroundColor: "#ffbd2e" }}></div>
-                <div className={styles.codeEditorDot} style={{ backgroundColor: "#27c93f" }}></div>
-                <span className={styles.codeEditorTitle}>script.js - ScriptCat</span>
+                <div
+                  className={styles.codeEditorDot}
+                  style={{ backgroundColor: "#ff5f56" }}
+                ></div>
+                <div
+                  className={styles.codeEditorDot}
+                  style={{ backgroundColor: "#ffbd2e" }}
+                ></div>
+                <div
+                  className={styles.codeEditorDot}
+                  style={{ backgroundColor: "#27c93f" }}
+                ></div>
+                <span className={styles.codeEditorTitle}>
+                  script.js - ScriptCat
+                </span>
               </div>
               <div className={styles.codeEditorContent}>
                 <div className={styles.codeComment}>// ==UserScript==</div>
-                <div className={styles.codeComment}>// @name Auto Dark Mode</div>
-                <div className={styles.codeComment}>// @namespace http://scriptcat.org</div>
+                <div className={styles.codeComment}>
+                  // @name Auto Dark Mode
+                </div>
+                <div className={styles.codeComment}>
+                  // @namespace http://scriptcat.org
+                </div>
                 <div className={styles.codeComment}>// @version 1.0</div>
-                <div className={styles.codeComment}>// @description Automatically enable dark mode on websites</div>
-                <div className={styles.codeComment}>// @author ScriptCat User</div>
+                <div className={styles.codeComment}>
+                  // @description Automatically enable dark mode on websites
+                </div>
+                <div className={styles.codeComment}>
+                  // @author ScriptCat User
+                </div>
                 <div className={styles.codeComment}>// @match *://**/*</div>
                 <div className={styles.codeComment}>// ==/UserScript==</div>
                 <br />
                 <div>
                   <span className={styles.codeKeyword}>function</span>{" "}
-                  <span className={styles.codeFunction}>enableDarkMode</span>() {"{"}
+                  <span className={styles.codeFunction}>enableDarkMode</span>(){" "}
+                  {"{"}
                 </div>
                 <div className={styles.codeLine}>
                   <span className={styles.codeKeyword}>const</span> css ={" "}
                   <span className={styles.codeString}>
-                    `body {"{"} background-color: #121212; color: #e0e0e0; {"}"}`
+                    `body {"{"} background-color: #121212; color: #e0e0e0; {"}"}
+                    `
                   </span>
                   ;
                 </div>
@@ -271,33 +336,50 @@ function HomepageHeader(): JSX.Element {
                   <span className={styles.codeString}>'style'</span>);
                 </div>
                 <div className={styles.codeLine}>
-                  style.<span className={styles.codeProperty}>textContent</span> = css;
+                  style.<span className={styles.codeProperty}>textContent</span>{" "}
+                  = css;
                 </div>
                 <div className={styles.codeLine}>
-                  <span className={styles.codeObject}>document</span>.<span className={styles.codeProperty}>head</span>.
-                  <span className={styles.codeFunction}>appendChild</span>(style);
+                  <span className={styles.codeObject}>document</span>.
+                  <span className={styles.codeProperty}>head</span>.
+                  <span className={styles.codeFunction}>appendChild</span>
+                  (style);
                 </div>
                 <div className={styles.codeLine}>
-                  <span className={styles.codeObject}>console</span>.<span className={styles.codeFunction}>log</span>(
-                  <span className={styles.codeString}>'🐱 ScriptCat: Dark mode enabled'</span>);
+                  <span className={styles.codeObject}>console</span>.
+                  <span className={styles.codeFunction}>log</span>(
+                  <span className={styles.codeString}>
+                    '🐱 ScriptCat: Dark mode enabled'
+                  </span>
+                  );
                 </div>
                 <div>{"}"}</div>
                 <br />
                 <div>
                   <span className={styles.codeKeyword}>function</span>{" "}
-                  <span className={styles.codeFunction}>isDarkModePreferred</span>() {"{"}
+                  <span className={styles.codeFunction}>
+                    isDarkModePreferred
+                  </span>
+                  () {"{"}
                 </div>
                 <div className={styles.codeLine}>
-                  <span className={styles.codeKeyword}>return</span> <span className={styles.codeObject}>window</span>.
+                  <span className={styles.codeKeyword}>return</span>{" "}
+                  <span className={styles.codeObject}>window</span>.
                   <span className={styles.codeFunction}>matchMedia</span>(
-                  <span className={styles.codeString}>'(prefers-color-scheme: dark)'</span>).
+                  <span className={styles.codeString}>
+                    '(prefers-color-scheme: dark)'
+                  </span>
+                  ).
                   <span className={styles.codeProperty}>matches</span>;
                 </div>
                 <div>{"}"}</div>
                 <br />
                 <div>
                   <span className={styles.codeKeyword}>if</span> (
-                  <span className={styles.codeFunction}>isDarkModePreferred</span>()) {"{"}
+                  <span className={styles.codeFunction}>
+                    isDarkModePreferred
+                  </span>
+                  ()) {"{"}
                 </div>
                 <div className={styles.codeLine}>
                   <span className={styles.codeFunction}>enableDarkMode</span>();
@@ -320,36 +402,40 @@ function HomepageHeader(): JSX.Element {
         </div>
       </div>
     </header>
-  )
+  );
 }
 
 // 主要特性区域组件
 function FeaturesSection(): JSX.Element {
-  const [theme, setTheme] = useState("light")
+  const [theme, setTheme] = useState("light");
 
   // 检测 data-theme 属性
   useEffect(() => {
     const updateTheme = () => {
-      const currentTheme = document.documentElement.getAttribute("data-theme") || "light"
-      setTheme(currentTheme)
-    }
+      const currentTheme =
+        document.documentElement.getAttribute("data-theme") || "light";
+      setTheme(currentTheme);
+    };
 
     // 初始化
-    updateTheme()
+    updateTheme();
 
     // 创建一个 MutationObserver 来监听 data-theme 属性变化
     const observer = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
-        if (mutation.type === "attributes" && mutation.attributeName === "data-theme") {
-          updateTheme()
+        if (
+          mutation.type === "attributes" &&
+          mutation.attributeName === "data-theme"
+        ) {
+          updateTheme();
         }
-      })
-    })
+      });
+    });
 
-    observer.observe(document.documentElement, { attributes: true })
+    observer.observe(document.documentElement, { attributes: true });
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section className={styles.featuresSection}>
@@ -362,10 +448,13 @@ function FeaturesSection(): JSX.Element {
         <div className={styles.featuresSectionHeader}>
           <h2 className={styles.featuresSectionTitle}>
             强大的功能，
-            <span className={styles.featuresSectionTitleHighlight}>无限可能</span>
+            <span className={styles.featuresSectionTitleHighlight}>
+              无限可能
+            </span>
           </h2>
           <p className={styles.featuresSectionSubtitle}>
-            ScriptCat 提供了一系列强大的功能，让您可以轻松地扩展浏览器的能力，创造属于自己的网络体验。
+            ScriptCat
+            提供了一系列强大的功能，让您可以轻松地扩展浏览器的能力，创造属于自己的网络体验。
           </p>
         </div>
 
@@ -378,8 +467,8 @@ function FeaturesSection(): JSX.Element {
           />
           <FeatureCard
             icon="lucide:zap"
-            title="高性能引擎"
-            description="优化的脚本执行引擎，显著提升脚本运行效率，减少内存占用，提供更流畅的体验。"
+            title="后台脚本"
+            description="区别于普通用户脚本，让你的脚本可以在后台中持续运行，无须开启标签页。"
             color="rgba(99, 102, 241, 0.8)"
           />
           <FeatureCard
@@ -397,41 +486,56 @@ function FeaturesSection(): JSX.Element {
           <FeatureCard
             icon="lucide:plug"
             title="强大的 API"
-            description="提供丰富的 API 接口，支持跨域请求、本地存储、通知推送等高级功能，扩展脚本能力。"
+            description="提供比GM更丰富的 API 接口，支持文件存储、用户配置等高级功能，扩展脚本能力。"
             color="rgba(16, 185, 129, 0.8)"
           />
           <FeatureCard
             icon="lucide:box"
             title="脚本商店"
-            description="内置脚本商店，一键安装热门脚本，或发布您的作品与社区分享，构建活跃的生态圈。"
+            description="拥有脚本商店，一键安装热门脚本，或发布您的作品与社区分享，构建活跃的生态圈。"
             color="rgba(244, 63, 94, 0.8)"
           />
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 // 产品对比表格组件 - 超级绚酷版
 function ComparisonSection() {
   // 对比数据
   const comparisonData: {
-    feature: string
-    scriptcat: boolean
-    tampermonkey: boolean
-    scriptcatLabel?: string
-    tampermonkeyLabel?: string
+    feature: string;
+    scriptcat: boolean;
+    tampermonkey: boolean | -1;
+    scriptcatLabel?: string;
+    tampermonkeyLabel?: string;
   }[] = [
     { feature: "脚本兼容性", scriptcat: true, tampermonkey: true },
-    { feature: "性能优化", scriptcat: true, tampermonkey: false, scriptcatLabel: "高效" },
+    {
+      feature: "后台脚本",
+      scriptcat: true,
+      tampermonkey: -1,
+      scriptcatLabel: "高效",
+    },
     { feature: "开源免费", scriptcat: true, tampermonkey: true },
-    { feature: "云端同步", scriptcat: true, tampermonkey: true, scriptcatLabel: "多平台" },
-    { feature: "调试工具", scriptcat: true, tampermonkey: false, scriptcatLabel: "增强版" },
-    { feature: "中文社区支持", scriptcat: true, tampermonkey: false },
-  ]
+    {
+      feature: "云端同步",
+      scriptcat: true,
+      tampermonkey: true,
+      scriptcatLabel: "多平台",
+    },
+    {
+      feature: "更多的 API",
+      scriptcat: true,
+      tampermonkey: -1,
+      scriptcatLabel: "",
+    },
+    { feature: "社区支持", scriptcat: true, tampermonkey: -1 },
+  ];
 
   // 使用状态来跟踪当前高亮的行
-  const [highlightedRow, setHighlightedRow] = useState<number | null>(null)
+  const [highlightedRow, setHighlightedRow] = useState<number | null>(null);
 
   return (
     <section className={styles.comparisonSection}>
@@ -461,11 +565,16 @@ function ComparisonSection() {
         <div className={styles.comparisonSectionHeader}>
           <div className={styles.comparisonSectionTitleWrapper}>
             <h2 className={styles.comparisonSectionTitle}>
-              为什么选择 <span className={styles.comparisonSectionTitleHighlight}>ScriptCat</span>
+              为什么选择{" "}
+              <span className={styles.comparisonSectionTitleHighlight}>
+                ScriptCat
+              </span>
             </h2>
             <div className={styles.comparisonSectionTitleGlow}></div>
           </div>
-          <p className={styles.comparisonSectionSubtitle}>与其他脚本引擎相比，ScriptCat 提供了更多优势和增强功能</p>
+          <p className={styles.comparisonSectionSubtitle}>
+            与其他脚本引擎相比，ScriptCat 提供了更多优势和增强功能
+          </p>
         </div>
 
         <div className={styles.comparisonTableContainer}>
@@ -484,7 +593,9 @@ function ComparisonSection() {
                 <div className={styles.comparisonTableHeader}>
                   <div className={styles.comparisonTableHeaderCell}>
                     <div className={styles.comparisonTableHeaderCellContent}>
-                      <span className={styles.comparisonTableHeaderTitle}>特性</span>
+                      <span className={styles.comparisonTableHeaderTitle}>
+                        特性
+                      </span>
                       <div className={styles.comparisonTableHeaderLine}></div>
                     </div>
                   </div>
@@ -493,9 +604,13 @@ function ComparisonSection() {
                       <div className={styles.comparisonTableHeaderLogo}>
                         <div className={styles.comparisonTableHeaderIcon}>
                           <IconCat />
-                          <div className={styles.comparisonTableHeaderIconRing}></div>
+                          <div
+                            className={styles.comparisonTableHeaderIconRing}
+                          ></div>
                         </div>
-                        <span className={styles.comparisonTableHeaderTitle}>ScriptCat</span>
+                        <span className={styles.comparisonTableHeaderTitle}>
+                          ScriptCat
+                        </span>
                       </div>
                       <div className={styles.comparisonTableHeaderGlow}></div>
                     </div>
@@ -506,7 +621,9 @@ function ComparisonSection() {
                         <div className={styles.comparisonTableHeaderIcon}>
                           <Icon icon="lucide:code" />
                         </div>
-                        <span className={styles.comparisonTableHeaderTitle}>Tampermonkey</span>
+                        <span className={styles.comparisonTableHeaderTitle}>
+                          Tampermonkey
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -517,14 +634,22 @@ function ComparisonSection() {
                   {comparisonData.map((row, index) => (
                     <div
                       key={index}
-                      className={`${styles.comparisonTableRow} ${highlightedRow === index ? styles.comparisonTableRowActive : ""}`}
+                      className={`${styles.comparisonTableRow} ${
+                        highlightedRow === index
+                          ? styles.comparisonTableRowActive
+                          : ""
+                      }`}
                       onMouseEnter={() => setHighlightedRow(index)}
                       onMouseLeave={() => setHighlightedRow(null)}
                     >
                       <div className={styles.comparisonTableCell}>
                         <div className={styles.comparisonTableCellInner}>
-                          <span className={styles.comparisonTableCellText}>{row.feature}</span>
-                          <div className={styles.comparisonTableCellHighlight}></div>
+                          <span className={styles.comparisonTableCellText}>
+                            {row.feature}
+                          </span>
+                          <div
+                            className={styles.comparisonTableCellHighlight}
+                          ></div>
                         </div>
                       </div>
                       <div className={styles.comparisonTableCell}>
@@ -532,20 +657,46 @@ function ComparisonSection() {
                           {row.scriptcat ? (
                             <div className={styles.comparisonTableCellCheck}>
                               {row.scriptcatLabel ? (
-                                <div className={styles.comparisonTableCellWithLabel}>
-                                  <div className={styles.comparisonTableCellCheckIcon}>
+                                <div
+                                  className={
+                                    styles.comparisonTableCellWithLabel
+                                  }
+                                >
+                                  <div
+                                    className={
+                                      styles.comparisonTableCellCheckIcon
+                                    }
+                                  >
                                     <Icon icon="lucide:check" />
-                                    <div className={styles.comparisonTableCellCheckRing}></div>
+                                    <div
+                                      className={
+                                        styles.comparisonTableCellCheckRing
+                                      }
+                                    ></div>
                                   </div>
-                                  <span className={styles.comparisonTableCellLabel}>{row.scriptcatLabel}</span>
+                                  <span
+                                    className={styles.comparisonTableCellLabel}
+                                  >
+                                    {row.scriptcatLabel}
+                                  </span>
                                 </div>
                               ) : (
-                                <div className={styles.comparisonTableCellCheckIcon}>
+                                <div
+                                  className={
+                                    styles.comparisonTableCellCheckIcon
+                                  }
+                                >
                                   <Icon icon="lucide:check" />
-                                  <div className={styles.comparisonTableCellCheckRing}></div>
+                                  <div
+                                    className={
+                                      styles.comparisonTableCellCheckRing
+                                    }
+                                  ></div>
                                 </div>
                               )}
-                              <div className={styles.comparisonTableCellGlow}></div>
+                              <div
+                                className={styles.comparisonTableCellGlow}
+                              ></div>
                             </div>
                           ) : (
                             <div className={styles.comparisonTableCellMinus}>
@@ -556,22 +707,40 @@ function ComparisonSection() {
                       </div>
                       <div className={styles.comparisonTableCell}>
                         <div className={styles.comparisonTableCellInner}>
-                          {row.tampermonkey ? (
+                          {row.tampermonkey === true ? (
                             <div className={styles.comparisonTableCellCheck}>
                               {row.tampermonkeyLabel ? (
-                                <div className={styles.comparisonTableCellWithLabel}>
-                                  <div className={styles.comparisonTableCellCheckIconGray}>
+                                <div
+                                  className={
+                                    styles.comparisonTableCellWithLabel
+                                  }
+                                >
+                                  <div
+                                    className={
+                                      styles.comparisonTableCellCheckIconGray
+                                    }
+                                  >
                                     <Icon icon="lucide:check" />
                                   </div>
-                                  <span className={styles.comparisonTableCellLabelGray}>{row.tampermonkeyLabel}</span>
+                                  <span
+                                    className={
+                                      styles.comparisonTableCellLabelGray
+                                    }
+                                  >
+                                    {row.tampermonkeyLabel}
+                                  </span>
                                 </div>
                               ) : (
-                                <div className={styles.comparisonTableCellCheckIconGray}>
+                                <div
+                                  className={
+                                    styles.comparisonTableCellCheckIconGray
+                                  }
+                                >
                                   <Icon icon="lucide:check" />
                                 </div>
                               )}
                             </div>
-                          ) : row.feature === "中文社区支持" ? (
+                          ) : row.tampermonkey === -1 ? (
                             <div className={styles.comparisonTableCellCross}>
                               <Icon icon="lucide:x" />
                             </div>
@@ -585,14 +754,13 @@ function ComparisonSection() {
                     </div>
                   ))}
                 </div>
-
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 // 使用场景展示组件
@@ -603,10 +771,14 @@ function ScenarioSection() {
         <div className={styles.scenarioSectionHeader}>
           <h2 className={styles.scenarioSectionTitle}>
             解决
-            <span className={styles.scenarioSectionTitleHighlight}>实际问题</span>
+            <span className={styles.scenarioSectionTitleHighlight}>
+              实际问题
+            </span>
             的脚本
           </h2>
-          <p className={styles.scenarioSectionSubtitle}>来看看 ScriptCat 能为您的浏览体验带来哪些改变</p>
+          <p className={styles.scenarioSectionSubtitle}>
+            来看看 ScriptCat 能为您的浏览体验带来哪些改变
+          </p>
         </div>
 
         <div className={styles.scenarioGrid}>
@@ -615,7 +787,10 @@ function ScenarioSection() {
             title="视频网站增强"
             subtitle="优化视频观看体验"
             tag="热门应用"
-            tagColor={{ bg: "rgba(59, 130, 246, 0.1)", text: "var(--ifm-color-primary-light)" }}
+            tagColor={{
+              bg: "rgba(59, 130, 246, 0.1)",
+              text: "var(--ifm-color-primary-light)",
+            }}
             features={[
               { icon: "lucide:fast-forward", text: "视频倍速控制" },
               { icon: "lucide:download", text: "一键视频下载" },
@@ -623,7 +798,7 @@ function ScenarioSection() {
               { icon: "lucide:layout", text: "界面简化优化" },
             ]}
             sites={["Bilibili", "Youtube", "Netflix", "+更多"]}
-            scriptUrl="https://scriptcat.org/search?q=video"
+            scriptUrl="https://scriptcat.org/search?keyword=视频"
           />
 
           <ScenarioCard
@@ -631,7 +806,10 @@ function ScenarioSection() {
             title="网购助手"
             subtitle="让购物体验更轻松"
             tag="实用工具"
-            tagColor={{ bg: "rgba(99, 102, 241, 0.1)", text: "var(--ifm-color-primary-light)" }}
+            tagColor={{
+              bg: "rgba(99, 102, 241, 0.1)",
+              text: "var(--ifm-color-primary-light)",
+            }}
             features={[
               { icon: "lucide:trending-down", text: "价格历史查询" },
               { icon: "lucide:percent", text: "优惠券自动查找" },
@@ -639,12 +817,12 @@ function ScenarioSection() {
               { icon: "lucide:bell", text: "降价提醒" },
             ]}
             sites={["淘宝", "京东", "亚马逊", "+更多"]}
-            scriptUrl="https://scriptcat.org/search?q=shopping"
+            scriptUrl="https://scriptcat.org/search?keyword=购物"
           />
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 // 下载区域组件
@@ -662,27 +840,57 @@ function DownloadSection() {
             <div className={styles.downloadCardLeft}>
               <h2 className={styles.downloadCardTitle}>
                 准备好
-                <span className={styles.downloadCardTitleHighlight}>增强您的浏览体验</span>
+                <span className={styles.downloadCardTitleHighlight}>
+                  增强您的浏览体验
+                </span>
                 了吗？
               </h2>
-              <p className={styles.downloadCardSubtitle}>立即安装 ScriptCat，解锁网页浏览的无限可能</p>
+              <p className={styles.downloadCardSubtitle}>
+                立即安装 ScriptCat，解锁网页浏览的无限可能
+              </p>
               <div className={styles.downloadCardButtons}>
                 <a
-                  href="https://chrome.google.com/webstore/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf"
+                  href="https://microsoftedge.microsoft.com/addons/detail/scriptcat/liilgpjgabokdklappibcjfablkpcekh"
+                  target="_blank"
                   className={styles.downloadCardButtonChrome}
                 >
-                  <Icon icon="lucide:chrome" className={styles.downloadCardButtonIcon} />
+                  <Icon
+                    icon="logos:microsoft-edge"
+                    className={styles.downloadCardButtonIcon}
+                  />
+                  Edge 扩展商店
+                </a>
+                <a
+                  href="https://chrome.google.com/webstore/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf"
+                  target="_blank"
+                  className={styles.downloadCardButtonChrome}
+                >
+                  <Icon
+                    icon="logos:chrome"
+                    className={styles.downloadCardButtonIcon}
+                  />
                   Chrome 扩展商店
                 </a>
                 <a
                   href="https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/"
+                  target="_blank"
                   className={styles.downloadCardButtonFirefox}
                 >
-                  <Icon icon="lucide:firefox" className={styles.downloadCardButtonIcon} />
+                  <Icon
+                    icon="logos:firefox"
+                    className={styles.downloadCardButtonIcon}
+                  />
                   Firefox 扩展商店
                 </a>
-                <a href="https://github.com/scriptscat/scriptcat" className={styles.downloadCardButtonGithub}>
-                  <Icon icon="lucide:github" className={styles.downloadCardButtonIcon} />
+                <a
+                  href="https://github.com/scriptscat/scriptcat/releases"
+                  target="_blank"
+                  className={styles.downloadCardButtonGithub}
+                >
+                  <Icon
+                    icon="lucide:github"
+                    className={styles.downloadCardButtonIcon}
+                  />
                   GitHub 下载
                 </a>
               </div>
@@ -691,11 +899,22 @@ function DownloadSection() {
             <div className={styles.downloadCardRight}>
               <div className={styles.browserWindow}>
                 <div className={styles.browserWindowHeader}>
-                  <div className={styles.browserWindowDot} style={{ backgroundColor: "#ff5f56" }}></div>
-                  <div className={styles.browserWindowDot} style={{ backgroundColor: "#ffbd2e" }}></div>
-                  <div className={styles.browserWindowDot} style={{ backgroundColor: "#27c93f" }}></div>
+                  <div
+                    className={styles.browserWindowDot}
+                    style={{ backgroundColor: "#ff5f56" }}
+                  ></div>
+                  <div
+                    className={styles.browserWindowDot}
+                    style={{ backgroundColor: "#ffbd2e" }}
+                  ></div>
+                  <div
+                    className={styles.browserWindowDot}
+                    style={{ backgroundColor: "#27c93f" }}
+                  ></div>
                   <div className={styles.browserWindowAddress}>
-                    <span className={styles.browserWindowUrl}>https://scriptcat.org</span>
+                    <span className={styles.browserWindowUrl}>
+                      https://scriptcat.org
+                    </span>
                   </div>
                 </div>
                 <div className={styles.browserWindowContent}>
@@ -711,8 +930,12 @@ function DownloadSection() {
                       <div className={styles.scriptcatPopupIcon}>
                         <IconCat />
                       </div>
-                      <h4 className={styles.scriptcatPopupTitle}>ScriptCat 已启用</h4>
-                      <p className={styles.scriptcatPopupText}>3个脚本正在运行于当前页面</p>
+                      <h4 className={styles.scriptcatPopupTitle}>
+                        ScriptCat 已启用
+                      </h4>
+                      <p className={styles.scriptcatPopupText}>
+                        3个脚本正在运行于当前页面
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -722,7 +945,7 @@ function DownloadSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 // 页脚组件
@@ -739,36 +962,42 @@ function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
 // 自定义钩子用于修改和恢复CSS变量
 function useBackgroundColor(lightColor: string, darkColor: string) {
   useEffect(() => {
     const handleThemeChange = () => {
-      const isDarkMode = document.documentElement.getAttribute("data-theme") === "dark"
-      const color = isDarkMode ? darkColor : lightColor
-      document.documentElement.style.setProperty("--ifm-background-surface-color", color)
-    }
+      const isDarkMode =
+        document.documentElement.getAttribute("data-theme") === "dark";
+      const color = isDarkMode ? darkColor : lightColor;
+      document.documentElement.style.setProperty(
+        "--ifm-background-surface-color",
+        color
+      );
+    };
 
     // 初始化时设置颜色
-    handleThemeChange()
+    handleThemeChange();
 
     // 监听主题变化（假设主题切换时会触发属性变化）
-    const observer = new MutationObserver(handleThemeChange)
+    const observer = new MutationObserver(handleThemeChange);
     observer.observe(document.documentElement, {
       attributes: true,
       attributeFilter: ["data-theme"],
-    })
+    });
 
     return () => {
-      observer.disconnect()
-      document.documentElement.style.removeProperty("--ifm-background-surface-color")
-    }
-  }, [lightColor, darkColor])
+      observer.disconnect();
+      document.documentElement.style.removeProperty(
+        "--ifm-background-surface-color"
+      );
+    };
+  }, [lightColor, darkColor]);
 }
 
 export default function Home(): JSX.Element {
-  useBackgroundColor("#f5f8fc", "#0f172a")
+  useBackgroundColor("#f5f8fc", "#0f172a");
   return (
     <Layout
       title="首页"
@@ -783,5 +1012,5 @@ export default function Home(): JSX.Element {
         <Footer />
       </div>
     </Layout>
-  )
+  );
 }

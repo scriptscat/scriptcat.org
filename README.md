@@ -1,41 +1,23 @@
-# Website
+# 脚本猫文档
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+本项目是[脚本猫](https://docs.scriptcat.org/)文档页面，包含了脚本猫的使用说明、API 文档、常见问题等内容。
 
-### Installation
+使用[docusaurus](https://docusaurus.io/)构建。
 
-```
-$ yarn
-```
-
-### Local Development
+## 安装
 
 ```
-$ yarn start
+pnpm i
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-### Build
+### 本地开发
 
 ```
-$ yarn build
+npm run start
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
+### 构建
 
 ```
-$ USE_SSH=true yarn deploy
+npm run build
 ```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.

@@ -16,9 +16,9 @@
   },
   "dependencies": {
     "@ant-design/icons": "^5.1.4",
-    "@docusaurus/core": "^3.5.2",
-    "@docusaurus/plugin-google-gtag": "^3.5.2",
-    "@docusaurus/preset-classic": "^3.5.2",
+    "@docusaurus/core": "^3.7.0",
+    "@docusaurus/plugin-google-gtag": "^3.7.0",
+    "@docusaurus/preset-classic": "^3.7.0",
     "@gracefullight/docusaurus-plugin-tailwind": "^1.0.1",
     "@mdx-js/react": "^3.0.0",
     "antd": "^5.4.7",
@@ -31,9 +31,9 @@
     "swiper": "^11.2.1"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "^3.5.2",
-    "@docusaurus/tsconfig": "^3.5.2",
-    "@docusaurus/types": "^3.5.2",
+    "@docusaurus/module-type-aliases": "^3.7.0",
+    "@docusaurus/tsconfig": "^3.7.0",
+    "@docusaurus/types": "^3.7.0",
     "@iconify/react": "^4.1.1",
     "@tsconfig/docusaurus": "^1.0.5",
     "@types/react": "^18.2.29",
