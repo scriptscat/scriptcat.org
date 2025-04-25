@@ -218,8 +218,7 @@ function HomepageHeader(): JSX.Element {
                   items: storeList,
                 }}
                 arrow={true}
-                style={{width:'auto'}}
-                >
+                style={{ width: 'auto' }}>
                 {storeMap[browserName.toLowerCase()] && storeMap[browserName.toLowerCase()].label}
                 {!storeMap[browserName.toLowerCase()] && storeMap['default'].label}
               </Dropdown.Button>
@@ -700,10 +699,37 @@ function Footer() {
     </footer>
   );
 }
+// 自定义钩子用于修改和恢复CSS变量
+function useBackgroundColor(lightColor: string, darkColor: string) {
+  useEffect(() => {
+    const handleThemeChange = () => {
+      const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
+      const color = isDarkMode ? darkColor : lightColor;
+      document.documentElement.style.setProperty('--ifm-background-surface-color', color);
+    };
+
+    // 初始化时设置颜色
+    handleThemeChange();
+
+    // 监听主题变化（假设主题切换时会触发属性变化）
+    const observer = new MutationObserver(handleThemeChange);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['data-theme'],
+    });
+
+    return () => {
+      observer.disconnect();
+      document.documentElement.style.setProperty(
+        '--ifm-background-surface-color',
+        ' var(--ifm-color-content-inverse)',
+      );
+    };
+  }, [lightColor, darkColor]);
+}
 
 export default function Home(): JSX.Element {
-  const { siteConfig } = useDocusaurusContext();
-
+  useBackgroundColor('#f5f8fc', '#0f172a');
   return (
     <Layout
       title="首页"
