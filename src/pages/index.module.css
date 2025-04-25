@@ -1284,6 +1284,8 @@
   position: relative;
   z-index: 2;
   transition: transform 0.3s ease;
+  display: flex;
+  justify-content: center;
 }
 
 .comparisonTableRow:hover .comparisonTableCellInner {
@@ -1638,6 +1640,7 @@
   opacity: 0.7;
   filter: blur(30px);
   animation: decorationPulse 8s infinite alternate ease-in-out;
+  pointer-events: none;
 }
 
 .comparisonTableDecoration2 {
@@ -1651,6 +1654,7 @@
   z-index: 1;
   opacity: 0.7;
   filter: blur(40px);
+  pointer-events: none;
   animation: decorationPulse 12s infinite alternate-reverse ease-in-out;
 }
 
@@ -1676,6 +1680,8 @@
   z-index: 1;
   opacity: 0.7;
   animation: rotateSlow 30s infinite linear;
+  pointer-events: none;
+
 }
 
 .comparisonTableDecoration4 {
@@ -1689,6 +1695,8 @@
   z-index: 1;
   opacity: 0.7;
   animation: rotateSlow 20s infinite linear reverse;
+  pointer-events: none;
+
 }
 
 @keyframes rotateSlow {
