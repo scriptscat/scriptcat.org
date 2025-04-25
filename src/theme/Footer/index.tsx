@@ -99,7 +99,7 @@ function CustomFooter() {
                 </a>
               </li>
               <li>
-                <a href="/docs/use/QA/" className={styles.footerColumnLink}>
+                <a href="/docs/use/qa/" className={styles.footerColumnLink}>
                   常见问题
                 </a>
               </li>
@@ -152,6 +152,7 @@ function CustomFooter() {
                 <div className={styles.footerColumnLinkWithBadge}>
                   <a
                     href="https://github.com/scriptscat"
+                    target="_blank"
                     className={styles.footerColumnLink}
                   >
                     联系团队
