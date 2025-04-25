@@ -6,7 +6,7 @@
 }
 
 [data-theme='dark'] .homeContainer {
-  background-color: #0f172a;
+  background-color: var(--ifm-background-surface-color);
 }
 
 /* 英雄区域样式 */
@@ -19,7 +19,7 @@
 }
 
 [data-theme='dark'] .heroBanner {
-  background-color: #0f172a;
+  background-color: var(--ifm-background-surface-color);
 }
 
 .heroBackground {
@@ -433,7 +433,7 @@
 }
 
 [data-theme='dark'] .featuresSection {
-  background-color: #0f172a;
+  background-color: var(--ifm-background-surface-color);
 }
 
 .featuresSectionHeader {
@@ -556,7 +556,7 @@
 }
 
 [data-theme='dark'] .comparisonSection {
-  background-color: #0f172a;
+  background-color: var(--ifm-background-surface-color);
 }
 
 .comparisonSectionHeader {
@@ -851,7 +851,7 @@
 }
 
 [data-theme='dark'] .scenarioSection {
-  background-color: #0f172a;
+  background-color: var(--ifm-background-surface-color);
 }
 
 .scenarioSectionHeader {
@@ -1078,7 +1078,7 @@
 }
 
 [data-theme='dark'] .downloadSection {
-  background-color: #0f172a;
+  background-color: var(--ifm-background-surface-color);
 }
 
 .downloadCard {

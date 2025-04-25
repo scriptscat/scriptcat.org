@@ -1,13 +1,12 @@
 /* 页脚样式 */
 .footer {
   border-top: 1px solid rgba(209, 213, 219, 0.5);
-  background-color: #f5f8fc;
   transition: background-color 0.3s ease, border-top-color 0.3s ease;
+  background-color: var(--ifm-background-surface-color);
   padding-top: 2rem;
 }
 
 [data-theme='dark'] .footer {
-  background-color: #0f172a;
   border-top-color: rgba(75, 85, 99, 0.5);
 }
 
