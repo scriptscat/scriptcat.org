@@ -20,6 +20,7 @@ function CustomFooter() {
             <div className={styles.footerSocial}>
               <a
                 href="https://github.com/scriptscat/scriptcat"
+                target="_blank"
                 className={styles.footerSocialLink}
               >
                 <Icon
@@ -27,14 +28,15 @@ function CustomFooter() {
                   className={styles.footerSocialIcon}
                 />
               </a>
-              <a href="#" className={styles.footerSocialLink}>
+              <a
+                href="https://discord.gg/e53kpVqv"
+                target="_blank"
+                className={styles.footerSocialLink}
+              >
                 <Icon
-                  icon="lucide:twitter"
+                  icon="mingcute:discord-line"
                   className={styles.footerSocialIcon}
                 />
-              </a>
-              <a href="#" className={styles.footerSocialLink}>
-                <Icon icon="lucide:rss" className={styles.footerSocialIcon} />
               </a>
             </div>
           </div>
@@ -127,6 +129,7 @@ function CustomFooter() {
               <li>
                 <a
                   href="https://discord.gg/e53kpVqv"
+                  target="_blank"
                   className={styles.footerColumnLink}
                 >
                   Discord 频道
@@ -135,6 +138,7 @@ function CustomFooter() {
               <li>
                 <a
                   href="https://github.com/scriptscat/scriptcat/blob/main/CONTRIBUTING.md"
+                  target="_blank"
                   className={styles.footerColumnLink}
                 >
                   贡献指南
@@ -143,6 +147,7 @@ function CustomFooter() {
               <li>
                 <a
                   href="https://github.com/scriptscat/scriptcat/issues"
+                  target="_blank"
                   className={styles.footerColumnLink}
                 >
                   报告问题

@@ -270,6 +270,7 @@ function HomepageHeader(): JSX.Element {
               <div>
                 <a
                   href="https://scriptcat.org"
+                  target="_blank"
                   className={styles.btnBrowseScripts}
                 >
                   <SearchOutlined className="w-5 h-5" />
@@ -855,7 +856,7 @@ function DownloadSection() {
                   className={styles.downloadCardButtonChrome}
                 >
                   <Icon
-                    icon="logos:microsoft-edge"
+                    icon="ri:edge-new-line"
                     className={styles.downloadCardButtonIcon}
                   />
                   Edge 扩展商店
@@ -866,7 +867,7 @@ function DownloadSection() {
                   className={styles.downloadCardButtonChrome}
                 >
                   <Icon
-                    icon="logos:chrome"
+                    icon="lucide:chrome"
                     className={styles.downloadCardButtonIcon}
                   />
                   Chrome 扩展商店
@@ -877,7 +878,7 @@ function DownloadSection() {
                   className={styles.downloadCardButtonFirefox}
                 >
                   <Icon
-                    icon="logos:firefox"
+                    icon="ri:firefox-line"
                     className={styles.downloadCardButtonIcon}
                   />
                   Firefox 扩展商店
