@@ -85,11 +85,6 @@ const config = {
             label: "开发文档",
           },
           {
-            href: "https://scriptcat.org/search",
-            label: "获取脚本",
-            position: "left",
-          },
-          {
             type: "doc",
             docId: "change/change",
             position: "right",
