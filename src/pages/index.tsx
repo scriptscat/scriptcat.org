@@ -314,7 +314,7 @@ function HomepageHeader(): JSX.Element {
                 <div className={styles.codeComment}>
                   // @author ScriptCat User
                 </div>
-                <div className={styles.codeComment}>// @match *://**/*</div>
+                <div className={styles.codeComment}>// @match *://*/*</div>
                 <div className={styles.codeComment}>// ==/UserScript==</div>
                 <br />
                 <div>
