@@ -18,23 +18,71 @@ sidebar_position: 1
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
-<a name="0.16.6"></a>
+<a name="0.17.0-alpha.4"></a>
 
-## 0.16.6 (2024-10-24)
-> Manifest V3重构计划筹备中，非严重与功能性bug暂时不会处理。受限于[Manifest V3](https://developer.chrome.com/docs/extensions/develop/migrate/checklist?hl=zh-cn)平台，升级后可能需要你开启扩展的开发者模式才可以继续使用前台脚本(Userscript)
+## 0.17.0-alpha.4 (2025-05-03)
+
+### Added
+
+- ✨ 添加 GM_info 中的 downloadMode 标识 [#348](https://github.com/scriptscat/scriptcat/issues/348) [[28f3d86](https://github.com/scriptscat/scriptcat/commit/28f3d86d5721c66850b27388028b99ec3ebb5a2c)]
 
 ### Changed
 
-- 🎨 优化WebDAV密码输入，修改为密码框 ([#311](https://github.com/scriptscat/scriptcat/issues/311)) by @Przeblysk [[9f1003c](https://github.com/scriptscat/scriptcat/commit/9f1003ca18925b1c3ef8de6cd4c393d0d0f97dc3)]
+- ⚡ 性能优化 [[20eba92](https://github.com/scriptscat/scriptcat/commit/20eba92c997a3874214bfcdd271f9a24e6283b70)]
+- ⚡ 优化打包文件大小 [#376](https://github.com/scriptscat/scriptcat/issues/376) [[324e27a](https://github.com/scriptscat/scriptcat/commit/324e27aa76f2bdbe1059683c18618d7faae3b64c)]
+- ♻️ 优化引导与脚本站外部调用等功能 [[223da30](https://github.com/scriptscat/scriptcat/commit/223da30904844134caac303727b709a84a808803)]
+- 🔥 移除了`@require-css`
 
 ### Fixed
 
-- 🐛 修复GM.xmlHttpRequest实现 [#308](https://github.com/scriptscat/scriptcat/issues/308) [[f0c3a67](https://github.com/scriptscat/scriptcat/commit/f0c3a6739e290426548d50209c241215ec005480)]
+- 🐛 修复从 GitHub 安装脚本卡住的问题 [#378](https://github.com/scriptscat/scriptcat/issues/378) [[c299df0](https://github.com/scriptscat/scriptcat/commit/c299df0d1b6f1ff32cac86d865d7cb379bc518c3)]
+- 🐛 处理 GM_xmlhttpRequest redirect 问题 [#330](https://github.com/scriptscat/scriptcat/issues/330) [[47d7cec](https://github.com/scriptscat/scriptcat/commit/47d7cec7bd8f6cd50a95a97cb96ca88551ff5855)]
+- 🐛 更换交互 element 方式 [#334](https://github.com/scriptscat/scriptcat/issues/334) [[e04795a](https://github.com/scriptscat/scriptcat/commit/e04795a51c30c16f3e4ad9daa364d57254a556a4)]
+- 🐛 修复 GM.\* API 问题 [#363](https://github.com/scriptscat/scriptcat/issues/363) [[ca6324d](https://github.com/scriptscat/scriptcat/commit/ca6324d2f728c02534c9cccaaf555ef72dc991c0)]
+- 🐛 修复脚本匹配、隐藏排序、首次打开浏览器加载脚本等问题 [#317](https://github.com/scriptscat/scriptcat/issues/317) [[2988176](https://github.com/scriptscat/scriptcat/commit/29881765fc6b32061a521cd933b069f44ed2c778)]
+- 🐛 修复首次打开浏览器加载脚本的问题 [[2254fd1](https://github.com/scriptscat/scriptcat/commit/2254fd10867ca4a2ac02fd19e71b99cf5eea30d2)]
+
+<a name="0.17.0-alpha.3"></a>
+
+## 0.17.0-alpha.3 (2025-04-25)
+
+从 v0.17.0 开始，脚本猫升级为 manifest v3，并且切换储存引擎`indexedDB`为`chrome.storage.local`，如果发现数据出现问题，请前往[Github](https://github.com/scriptscat/scriptcat/issues)给我们反馈。
+
+你可以在[Chrome](https://chromewebstore.google.com/detail/%E8%84%9A%E6%9C%AC%E7%8C%AB-beta/jaehimmlecjmebpekkipmpmbpfhdacom?authuser=0&hl=zh-CN)与[Edge](https://microsoftedge.microsoft.com/addons/detail/%E8%84%9A%E6%9C%AC%E7%8C%AB-beta/nimmbghgpcjmeniofmpdfkofcedcjpfi)安装 Beta 版本
+
+重构为 manifest v3，更换储存引擎，修改部分特性
+
+### Changed
+
+- ♻️ 新储存引擎数据迁移 [[deace16](https://github.com/scriptscat/scriptcat/commit/deace1633e1f46db4b4dcc5cb1d3c63a4d273244)]
+- ♻️ 重构代码，升级为 manifest v3 [[fcb4cc4](https://github.com/scriptscat/scriptcat/commit/fcb4cc48afcb12106eec8d39a5d902504e2553fc)]
+- 为了与 tm 保持一致移除`GM_xmlhttpRequest`的`maxRedirects`使用`redirect`替代
+- 移除`GM_cookie`的`store`方法与`storeId`、`tabId`，现在获取 cookie 会直接取当前页面的`store`（例如隐身窗口与普通窗口的 store 是不同的）
+
+### Fixed
+
+- 🐛 修复重构 mv3 之后的一些细节问题 [[416442c](https://github.com/scriptscat/scriptcat/commit/416442c9494cacf8e3d0f1028e5856819811e4c6)]
+- 🐛 修复 OneDrive 上传文件问题 [#366](https://github.com/scriptscat/scriptcat/issues/366) [[ad5a711](https://github.com/scriptscat/scriptcat/commit/ad5a7116c9d54b4e4a4ab53420d0e1d185612f98)]
+
+**Full Changelog**: https://github.com/scriptscat/scriptcat/compare/v0.16.6...v0.17.0-alpha.3
+
+<a name="0.16.6"></a>
+
+## 0.16.6 (2024-10-24)
+
+> Manifest V3 重构计划筹备中，非严重与功能性 bug 暂时不会处理。受限于[Manifest V3](https://developer.chrome.com/docs/extensions/develop/migrate/checklist?hl=zh-cn)平台，升级后可能需要你开启扩展的开发者模式才可以继续使用前台脚本(Userscript)
+
+### Changed
+
+- 🎨 优化 WebDAV 密码输入，修改为密码框 ([#311](https://github.com/scriptscat/scriptcat/issues/311)) by @Przeblysk [[9f1003c](https://github.com/scriptscat/scriptcat/commit/9f1003ca18925b1c3ef8de6cd4c393d0d0f97dc3)]
+
+### Fixed
+
+- 🐛 修复 GM.xmlHttpRequest 实现 [#308](https://github.com/scriptscat/scriptcat/issues/308) [[f0c3a67](https://github.com/scriptscat/scriptcat/commit/f0c3a6739e290426548d50209c241215ec005480)]
 
 ### Miscellaneous
 
 - 🌐 添加越南语 ([#314](https://github.com/scriptscat/scriptcat/issues/314)) by @RenjiYuusei [[50c7a36](https://github.com/scriptscat/scriptcat/commit/50c7a3643400141e568d6bdc35506b93f7804635)]
-
 
 <a name="0.16.5"></a>
 
@@ -42,7 +90,7 @@ sidebar_position: 1
 
 ### Fixed
 
-- 🐛 修复chrome v127下GM_addElement相关问题 [#299](https://github.com/scriptscat/scriptcat/issues/299) [[cd749af](https://github.com/scriptscat/scriptcat/commit/cd749afbe98a92016a22c5f7fee2a9d40fd8f815)]
+- 🐛 修复 chrome v127 下 GM_addElement 相关问题 [#299](https://github.com/scriptscat/scriptcat/issues/299) [[cd749af](https://github.com/scriptscat/scriptcat/commit/cd749afbe98a92016a22c5f7fee2a9d40fd8f815)]
 
 <a name="0.16.4"></a>
 
