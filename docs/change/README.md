@@ -18,6 +18,27 @@ sidebar_position: 1
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+<a name="0.17.0-beta"></a>
+
+## 0.17.0-beta (2025-05-13)
+
+由于Chrome政策原因，Manifest V2被自动禁用，提前将本版本将更新至 Chrome 的正式版，如有问题请及时反馈，感谢理解。
+
+### Added
+
+- ✨ 本地/链接导入 [[70554c7](https://github.com/scriptscat/scriptcat/commit/70554c7c8e90a8c81b280cb003b4be353fa45b68)]
+- ✨ 实现 @run-in / 分离隐身模式 ([#384](https://github.com/scriptscat/scriptcat/issues/384)) by @DreamNya [[865e5f6](https://github.com/scriptscat/scriptcat/commit/865e5f6717dfb4e13ce529332f1080c28b9ee005)]
+- ✨ 实现 window.close / window.focus ([#383](https://github.com/scriptscat/scriptcat/issues/383)) by @DreamNya [[bcc2a5b](https://github.com/scriptscat/scriptcat/commit/bcc2a5b17db02cf28b451a79c1f747322e6afd30)]
+
+### Changed
+
+- ⬆️ 更新 ESLint 依赖及规则 ([#385](https://github.com/scriptscat/scriptcat/issues/385)) by @DreamNya [[e2c860d](https://github.com/scriptscat/scriptcat/commit/e2c860df414b3415353fc84bae3d87e02417ad35)]
+
+### Fixed
+
+- 🐛 修复 ESLint 支持CATApi / Headers 问题 ([#386](https://github.com/scriptscat/scriptcat/issues/386)) by @DreamNya [[7cd1dcd](https://github.com/scriptscat/scriptcat/commit/7cd1dcd3dec97233df8631d02d6e5a1116074e53)]
+
+
 <a name="0.17.0-alpha.4"></a>
 
 ## 0.17.0-alpha.4 (2025-05-03)
