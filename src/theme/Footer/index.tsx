@@ -29,7 +29,7 @@ function CustomFooter() {
                 />
               </a>
               <a
-                href="https://discord.gg/e53kpVqv"
+                href="https://discord.gg/JF76nHCCM7"
                 target="_blank"
                 className={styles.footerSocialLink}
               >
@@ -128,7 +128,7 @@ function CustomFooter() {
               </li>
               <li>
                 <a
-                  href="https://discord.gg/e53kpVqv"
+                  href="https://discord.gg/JF76nHCCM7"
                   target="_blank"
                   className={styles.footerColumnLink}
                 >
