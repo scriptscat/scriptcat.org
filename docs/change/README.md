@@ -18,6 +18,23 @@ sidebar_position: 1
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+<a name="0.17.0-beta.1"></a>
+
+## 0.17.0-beta.1 (2025-05-28)
+
+优先修复几个严重的问题并发布
+
+### Added
+
+- ✨ 实现批量脚本拖拽导入 / 批量脚本本地导入 ([#396](https://github.com/scriptscat/scriptcat/issues/396)) [[178e77d](https://github.com/scriptscat/scriptcat/commit/178e77d6a779fdacb5e8d0d24b6b852f50e09f2c)]
+- ✨ 批量脚本链接导入 ([#395](https://github.com/scriptscat/scriptcat/issues/395)) [[7a0f77e](https://github.com/scriptscat/scriptcat/commit/7a0f77ee9b627d007db861bebad6f656d1452453)]
+
+### Fixed
+
+- 🐛 修复脚本match和include问题 https://github.com/scriptscat/scriptcat/issues/398#issuecomment-2892698500 [[6c9cbf1](https://github.com/scriptscat/scriptcat/commit/6c9cbf173b5e74dbe20d8630443b125742829f58)]
+- 🐛 修复端口导致注册userScript失败的问题 [#390](https://github.com/scriptscat/scriptcat/issues/390) [[3f57e8f](https://github.com/scriptscat/scriptcat/commit/3f57e8f5000da299e959899ec9dc785c239e2c11)]
+
+
 <a name="0.17.0-beta"></a>
 
 ## 0.17.0-beta (2025-05-13)
