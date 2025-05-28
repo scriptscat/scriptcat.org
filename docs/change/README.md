@@ -31,6 +31,7 @@ sidebar_position: 1
 
 ### Fixed
 
+- 🐛 修复GM_addValueChangeListener问题 [#404](https://github.com/scriptscat/scriptcat/issues/404) [[f698722](https://github.com/scriptscat/scriptcat/commit/f6987220805892ef5a85fd99bd8b12dacbb7e979)]
 - 🐛 修复脚本match和include问题 https://github.com/scriptscat/scriptcat/issues/398#issuecomment-2892698500 [[6c9cbf1](https://github.com/scriptscat/scriptcat/commit/6c9cbf173b5e74dbe20d8630443b125742829f58)]
 - 🐛 修复端口导致注册userScript失败的问题 [#390](https://github.com/scriptscat/scriptcat/issues/390) [[3f57e8f](https://github.com/scriptscat/scriptcat/commit/3f57e8f5000da299e959899ec9dc785c239e2c11)]
 
