@@ -18,6 +18,39 @@ sidebar_position: 1
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+<a name="0.17.0-beta.2"></a>
+
+## 0.17.0-beta.2 (2025-06-04)
+
+### Added
+
+- ✨ 增加按钮可以重试数据迁移 [#409](https://github.com/scriptscat/scriptcat/issues/409) [[85a7404](https://github.com/scriptscat/scriptcat/commit/85a740497050d6347bd07ff4177b656963bba363)]
+- ✨ feat: 新增对file://协议的文件的动态加载更新 by @WhiteSevs [[6eb5bd8](https://github.com/scriptscat/scriptcat/commit/6eb5bd83a2ebf2e083603c3e7fa6b336fc08490c)]
+- ✨ feat: 新增对file协议的资源或引用自动更新 by @WhiteSevs [[7a5cc21](https://github.com/scriptscat/scriptcat/commit/7a5cc21fc2d7e4270906f346d5aa61295cac52b4)]
+- ✨ feat: 适配部分GM_info的属性 by @WhiteSevs [[51f0ea0](https://github.com/scriptscat/scriptcat/commit/51f0ea0dc7254242c7059acf69e4479b09bd605f)]
+- ✨ feat: GM_setClipboard支持cb回调函数 by @WhiteSevs [[a8373f5](https://github.com/scriptscat/scriptcat/commit/a8373f5d9798506dc5d883374b059843fd0c7a15)]
+- ✨ feat: 新增Api支持GM_setValues、GM_getValues、GM_deleteValues by @WhiteSevs [[d363e42](https://github.com/scriptscat/scriptcat/commit/d363e4289306f547236c90652e514c0b9c86a2fb)]
+- ✨ feat: GM_cookie新增配置partitionKey.topLevelSite by @WhiteSevs [[131b31f](https://github.com/scriptscat/scriptcat/commit/131b31f325531d4f0cdc30d4bc97242f1502abed)]
+- ✨ 兼容GM_registerMenuCommand [#358](https://github.com/scriptscat/scriptcat/issues/358) [[70c59e6](https://github.com/scriptscat/scriptcat/commit/70c59e6104749f028b1bfa5cba9f65f2ad7c5be2)]
+
+### Fixed
+
+- 🐛 修复userConfig默认值问题 [#409](https://github.com/scriptscat/scriptcat/issues/409) [[f1ee723](https://github.com/scriptscat/scriptcat/commit/f1ee7236ba1b568fd724e48341b687badd43e44e)]
+- 🐛 修复eslint配置无法重置的问题 [[d0c2f3b](https://github.com/scriptscat/scriptcat/commit/d0c2f3b51a25d35c4dafc733eb121d38c77a4c66)]
+- 🐛 修复vscode连接问题 [#412](https://github.com/scriptscat/scriptcat/issues/412) [#400](https://github.com/scriptscat/scriptcat/issues/400) [[6ff24e3](https://github.com/scriptscat/scriptcat/commit/6ff24e30dacfaf489f0992604008acd129ebddcf)]
+- 🐛 修复重复监听问题 [#388](https://github.com/scriptscat/scriptcat/issues/388) [[b8735d8](https://github.com/scriptscat/scriptcat/commit/b8735d8c463341204423611465eb54312d43f067)]
+- 🐛 修复GM_notification无法触发 onclick [#406](https://github.com/scriptscat/scriptcat/issues/406) [[c5e766f](https://github.com/scriptscat/scriptcat/commit/c5e766fde35ae4346d249df744ccc1973f054667)]
+- 🐛 修复后台脚本读取userConfig的问题 [[2240a62](https://github.com/scriptscat/scriptcat/commit/2240a6294cf495fed771dfdfe9497bed86b967b3)]
+- 🐛 修复GM_getValue与GM_info问题 [#393](https://github.com/scriptscat/scriptcat/issues/393) by @WhiteSevs [[e765476](https://github.com/scriptscat/scriptcat/commit/e76547617f358cbac8be1b99eff68a44968050b9)]
+- 🐛 修复message不输出错误信息 by @WhiteSevs [[04bf703](https://github.com/scriptscat/scriptcat/commit/04bf7038cff1161c8242b1b93edd7f3ba5964520)]
+- 🐛 修复GM_getTab回调函数入参为空时的值 by @WhiteSevs [[3f3cac5](https://github.com/scriptscat/scriptcat/commit/3f3cac5feb90fcc2893824a4bc920fbeacd367de)]
+- 🐛 修复GM_openInTab的返回值 by @WhiteSevs [[2fa5b33](https://github.com/scriptscat/scriptcat/commit/2fa5b337df12d777479c7d896da6a98baa9b1ad2)]
+- 🐛 修复GM.cookie不存在 by @WhiteSevs [8889f64]
+
+### Miscellaneous
+
+-  👷 improve github actions ([#407](https://github.com/scriptscat/scriptcat/issues/407)) by @Mikachu2333 [[3970658](https://github.com/scriptscat/scriptcat/commit/3970658c67e58349c86e5e5a36a973168fbd2cce)]
+
 <a name="0.17.0-beta.1"></a>
 
 ## 0.17.0-beta.1 (2025-05-28)
@@ -26,8 +59,8 @@ sidebar_position: 1
 
 ### Added
 
-- ✨ 实现批量脚本拖拽导入 / 批量脚本本地导入 ([#396](https://github.com/scriptscat/scriptcat/issues/396)) [[178e77d](https://github.com/scriptscat/scriptcat/commit/178e77d6a779fdacb5e8d0d24b6b852f50e09f2c)]
-- ✨ 批量脚本链接导入 ([#395](https://github.com/scriptscat/scriptcat/issues/395)) [[7a0f77e](https://github.com/scriptscat/scriptcat/commit/7a0f77ee9b627d007db861bebad6f656d1452453)]
+- ✨ 实现批量脚本拖拽导入 / 批量脚本本地导入 ([#396](https://github.com/scriptscat/scriptcat/issues/396)) by @DreamNya [[178e77d](https://github.com/scriptscat/scriptcat/commit/178e77d6a779fdacb5e8d0d24b6b852f50e09f2c)]
+- ✨ 批量脚本链接导入 ([#395](https://github.com/scriptscat/scriptcat/issues/395)) by @DreamNya [[7a0f77e](https://github.com/scriptscat/scriptcat/commit/7a0f77ee9b627d007db861bebad6f656d1452453)]
 
 ### Fixed
 

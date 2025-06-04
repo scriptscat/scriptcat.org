@@ -23,8 +23,8 @@ API 的详细定义,请看`tempermonkey.d.ts`或者内置编辑器提示,文档�
 获取脚本相关信息(参考`tempermonkey.d.ts`且并不完全)
 
 ### GM_cookie
->
-> v0.17.0-alpha 后删除store与tabid相关的参数，现在会根据当前所在的窗口来决定获取隐身窗口还是普通窗口的 cookie
+
+> v0.17.0-alpha 后删除 store 与 tabid 相关的参数，现在会根据当前所在的窗口来决定获取隐身窗口还是普通窗口的 cookie
 
 必须使用`@connect`声明操作的 host,且经过用户授权才可使用.虽然兼容 TM 的`GM_cookie.list`操作,但是为了统一,不建议这样.
 
@@ -187,7 +187,7 @@ declare namespace GM_Types {
     user?: string;
     password?: string;
     nocache?: boolean;
-    redirect?: "follow" | "error" | "manual";// 为了与tm保持一致, 在v0.17.0后废弃maxRedirects, 使用redirect替代, 会强制使用fetch模式
+    redirect?: "follow" | "error" | "manual"; // 为了与tm保持一致, 在v0.17.0后废弃maxRedirects, 使用redirect替代, 会强制使用fetch模式
 
     onload?: Listener<XHRResponse>;
     onloadstart?: Listener<XHRResponse>;
@@ -234,8 +234,8 @@ declare function GM_listValues(): string[];
 ```
 
 ### GM_add/removeValueChangeListener
->
-> tabid于0.17.0-alpha后删除, 详情见[GM_cookie](#gm_cookie)
+
+> tabid 于 0.17.0-alpha 后删除, 详情见[GM_cookie](#gm_cookie)
 
 对值的监听操作,add 会返回一个监听 id,使用 remove 可以取消监听.可以使用这个方法实现一个简单的通信,使用[**storageName**](meta.md#storagename-%F0%9F%A7%AA)可以实现跨脚本通信.
 
@@ -320,8 +320,15 @@ declare function GM_addStyle(css: string): HTMLElement;
 ```ts
 declare function GM_registerMenuCommand(
   name: string,
-  listener: Function,
-  accessKey?: string
+  listener: () => void,
+  optionsOrAccessKey?:
+    | string
+    | {
+        id?: number | string;
+        accessKey?: string;
+        autoClose?: boolean;
+        title?: string;
+      }
 ): number;
 ```
 
@@ -393,7 +400,7 @@ declare namespace GM_Types {
 
 ### GM_addElement
 
-在页面中插入元素,可以绕过CSP限制
+在页面中插入元素,可以绕过 CSP 限制
 
 ```ts
 declare function GM_addElement(tag: string, attribubutes: any);
