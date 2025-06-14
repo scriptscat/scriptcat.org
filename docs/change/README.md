@@ -18,6 +18,28 @@ sidebar_position: 1
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+<a name="0.17.0-beta.3"></a>
+
+## 0.17.0-beta.3 (2025-06-14)
+
+增加了一个新API: `CAT_registerMenuInput` 可以尝鲜，后续还会进行修改和优化
+
+### Added
+
+- ✨ 实现 CAT_registerMenuInput 支持快捷输入交互 ([#411](https://github.com/scriptscat/scriptcat/issues/411)) by @DreamNya [[79cb27c](https://github.com/scriptscat/scriptcat/commit/79cb27ca08804b3b818cb8bdc3c8682c425d1cc0)]
+- ✨ GM_xmlhttpRequest新增cookiePartition参数 by @WhiteSevs
+[[3774aa3](https://github.com/scriptscat/scriptcat/commit/3774aa3acebeadb6b08162625a9af29a9599fa96)]
+- ✨ feat: 适配GM_deleteValue、GM_setValues和GM_deleteValues单独的权限请求 by @WhiteSevs [[15b4b16](https://github.com/scriptscat/scriptcat/commit/15b4b16bfa2578985ff8281d5a0f69a16aa7f36c)]
+
+### Fixed
+
+- 🐛 修复权限通配符设置问题 [#416](https://github.com/scriptscat/scriptcat/issues/416) [[1994cc8](https://github.com/scriptscat/scriptcat/commit/1994cc896f383d8132ca324ae89a686588e9dc13)]
+- 🐛 修复自动切换主题与tsconfig types问题 [[1083dd0](https://github.com/scriptscat/scriptcat/commit/1083dd0d048c70b1afd250915fb74c24b42efe48)]
+- 🐛 修复界面模式切换 [[165c46c](https://github.com/scriptscat/scriptcat/commit/165c46c700019b4742ffcae20f24f5f67fd2aab3)]
+- 🐛 处理node v23无法构建的问题 [#415](https://github.com/scriptscat/scriptcat/issues/415) [[5274edf](https://github.com/scriptscat/scriptcat/commit/5274edf857b841ba65988048e12bd850940de37d)]
+- 🐛 修复删除脚本resource数据未删除的问题 [[c93e39e](https://github.com/scriptscat/scriptcat/commit/c93e39e5a57ff9fff9fc868b477a710f27fe4808)]
+- 🐛 修复vscode连接问题 [[e3b6604](https://github.com/scriptscat/scriptcat/commit/e3b6604d1640f64a964b6a7d3a4badbcca578eba)]
+
 <a name="0.17.0-beta.2"></a>
 
 ## 0.17.0-beta.2 (2025-06-04)
