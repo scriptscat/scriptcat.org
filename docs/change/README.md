@@ -18,6 +18,34 @@ sidebar_position: 1
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+<a name="0.17.0-beta.4"></a>
+
+## 0.17.0-beta.4 (2025-06-20)
+
+### Added
+
+- ✨ 弹出页面增加快速检查脚本更新 [#375](https://github.com/scriptscat/scriptcat/issues/375) [[4807f76](https://github.com/scriptscat/scriptcat/commit/4807f760aa559d02d480589c27113ab6fa623e19)]
+- ✨ 站点匹配在列表里可以展示并支持点击 [#419](https://github.com/scriptscat/scriptcat/issues/419) [[661b7b0](https://github.com/scriptscat/scriptcat/commit/661b7b02a594e7a1a18cb17847582c4e5e4e5944)]
+- ✨ 云同步同步脚本顺序与是否开启 [#253](https://github.com/scriptscat/scriptcat/issues/253) [#381](https://github.com/scriptscat/scriptcat/issues/381) ([#421](https://github.com/scriptscat/scriptcat/issues/421)) [[fb7e7fc](https://github.com/scriptscat/scriptcat/commit/fb7e7fc94447b2360027a4c22a34f5fb0b9d8e96)]
+- ✨ 显示当前正在编辑的脚本名字 [#105](https://github.com/scriptscat/scriptcat/issues/105) [[1316e98](https://github.com/scriptscat/scriptcat/commit/1316e9850f7ab8197682372fd821725a5ea196d3)]
+- ✨ 增加黑名单页面提示 [[8ffd017](https://github.com/scriptscat/scriptcat/commit/8ffd017eba5be5605c2fea0298f25aee3a5c6572)]
+- ✨ 实现网站黑名单功能 [#230](https://github.com/scriptscat/scriptcat/issues/230) [[aec3d4b](https://github.com/scriptscat/scriptcat/commit/aec3d4b7659cd7a73d23d2506770af51bdb295c2)]
+- ✨ UserConfig增加一个保存提示 [#344](https://github.com/scriptscat/scriptcat/issues/344) [[d509e1c](https://github.com/scriptscat/scriptcat/commit/d509e1c95db703cf9360a4467ee669aecbf5521b)]
+- ✨ UserConfig添加switch类型 [#340](https://github.com/scriptscat/scriptcat/issues/340) [[6fc98f3](https://github.com/scriptscat/scriptcat/commit/6fc98f3e0d96b1e46532e9dc15ca193a97820922)]
+
+### Fixed
+
+- 🐛 修复备份导入顺序问题 [[b8941af](https://github.com/scriptscat/scriptcat/commit/b8941afd9e4097bdebe06af99249e30850d92d5d)]
+- 🐛 修复gm xhr携带origin的问题 [#420](https://github.com/scriptscat/scriptcat/issues/420) [[e5ff4e2](https://github.com/scriptscat/scriptcat/commit/e5ff4e2f0d63306dc0b9b26566f1c1b608a416dc)]
+- 🐛 处理v138+版本的userScript检测 [#418](https://github.com/scriptscat/scriptcat/issues/418) [[365f2f8](https://github.com/scriptscat/scriptcat/commit/365f2f891055cea955c4cc5f8c66b70cede1d0dd)]
+- 🐛 修复onxxx处理 [#418](https://github.com/scriptscat/scriptcat/issues/418) [[7aa50e7](https://github.com/scriptscat/scriptcat/commit/7aa50e7cca10376c86094b8f7eb66705abdbc6cb)]
+- 🐛 修复静默更新问题 [[1769af0](https://github.com/scriptscat/scriptcat/commit/1769af0313acc85c4e513192753c2e8658bee5b6)]
+- 🐛 修复定时脚本中配置无效的问题 [#315](https://github.com/scriptscat/scriptcat/issues/315) [[d360391](https://github.com/scriptscat/scriptcat/commit/d3603914988d578f36932b358c6d6a7ab7f857cb)]
+- 🐛 修复service worker与offscreen消息通信问题 [[8207fcc](https://github.com/scriptscat/scriptcat/commit/8207fcc6d5c5bbe4536dc68e8a2f731720c99788)]
+- 🐛 处理只定义了GM_*但GM.*不生效的问题 [#323](https://github.com/scriptscat/scriptcat/issues/323) [[2232fed](https://github.com/scriptscat/scriptcat/commit/2232fedccd1fef54f719f8e751ca9b4d976a8626)]
+- 🐛 修复GM.cookie问题 [[ec44068](https://github.com/scriptscat/scriptcat/commit/ec440680f1b73eca42aff6c9533ccb39913cc79b)]
+
+
 <a name="0.17.0-beta.3"></a>
 
 ## 0.17.0-beta.3 (2025-06-14)
