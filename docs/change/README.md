@@ -18,6 +18,22 @@ sidebar_position: 1
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+<a name="0.17.0"></a>
+
+## 0.17.0 (2025-06-23)
+
+🎉 第一个Manifest V3的正式版本，含有多重大变化，如有问题，请反馈给我们：[BUG反馈](https://github.com/scriptscat/scriptcat/issues/new?template=bug_report.md)。
+
+请注意，如果你使用的 Windows 8/7/XP 系统，或者浏览器内核版本低于\<120，需要自行手动安装[旧版脚本猫](https://bbs.tampermonkey.net.cn/thread-3068-1-1.html)，v0.16.6 是最后一个支持 Manifest V2 的版本，安装步骤可以参考：[加载解压缩方式安装扩展](https://docs.scriptcat.org/docs/use/use/#%E5%8A%A0%E8%BD%BD%E8%A7%A3%E5%8E%8B%E7%BC%A9%E6%96%B9%E5%BC%8F%E5%AE%89%E8%A3%85%E6%89%A9%E5%B1%95)。
+
+- 💥 Manifest V2 迁移至 Manifest V3
+- 💥 储存引擎切换
+- 💥 [新功能](https://docs.scriptcat.org/docs/change/v0.17/)
+- 🐛 BUG问题修复
+- 🐛 兼容性问题修复
+
+更多更新内容请看：[0.17.0-alpha.3](https://docs.scriptcat.org/docs/change/#0170-alpha3-2025-04-25)
+
 <a name="0.17.0-beta.4"></a>
 
 ## 0.17.0-beta.4 (2025-06-20)
