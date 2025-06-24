@@ -18,6 +18,32 @@ sidebar_position: 1
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+<a name="0.18.0"></a>
+
+## 0.18.0 (2025-06-24)
+
+此版本修复了一些比较严重的兼容性问题，尽快发版解决，另外由于chrome商店正式版版本号命名存在问题，从v0.17直接升至v0.18，v0.18.0-beta版本内容与此版本一致
+
+### Added
+
+- ✨ 优化更新日志打开逻辑 [[859a516](https://github.com/scriptscat/scriptcat/commit/859a516a3d6cf56c26c55099a60e15a52b031845)]
+- ✨ GM_notification适配参数tag、url及onclick的回调函数的参数 ([#431](https://github.com/scriptscat/scriptcat/issues/431)) by @WhiteSevs [[ba044de](https://github.com/scriptscat/scriptcat/commit/ba044deba28265e96b20b7862755d9e9ccd286dd)]
+
+### Fixed
+
+- 🐛 修复一些特殊匹配 [#441](https://github.com/scriptscat/scriptcat/issues/441) [[1b4830e](https://github.com/scriptscat/scriptcat/commit/1b4830e618728881c74aa94d2bd9f452124cffe6)]
+- 🐛 修复一些特殊匹配 [[dc024af](https://github.com/scriptscat/scriptcat/commit/dc024af4b0461f925b28fa04f7e1da79099d589a)]
+- 🐛 修复沙盒window问题 [[e19d6f3](https://github.com/scriptscat/scriptcat/commit/e19d6f3d1b66b97482dad0ffbba37401d83ba6d3)]
+- 🐛 处理特殊的match [#440](https://github.com/scriptscat/scriptcat/issues/440) [[00d83ca](https://github.com/scriptscat/scriptcat/commit/00d83ca59cb04b389ada53b73e1d8038a8639397)]
+- 🐛 删除注入代码中的await [[6b7878b](https://github.com/scriptscat/scriptcat/commit/6b7878bd0804b725a67c37edddefd1f7fde98498)]
+- 🐛 修复脚本排序问题 [#425](https://github.com/scriptscat/scriptcat/issues/425) [[c2ca896](https://github.com/scriptscat/scriptcat/commit/c2ca8963030cc9aa8efc439ce388df7450ecc6ae)]
+- 🐛 重新支持document-body [[5762b3b](https://github.com/scriptscat/scriptcat/commit/5762b3b52a9c5acea3ba7eb4b72e6454a46e6a06)]
+- 🐛 修复带search的匹配问题 [[a1a13ca](https://github.com/scriptscat/scriptcat/commit/a1a13caea08751b76ff68aa3fc5b4403d62e05c2)]
+
+### Miscellaneous
+
+-  👷 增加单元测试流程 [[231c667](https://github.com/scriptscat/scriptcat/commit/231c667e1bfc9444b7c27c6646e67271c6b63da7)]
+
 <a name="0.17.0"></a>
 
 ## 0.17.0 (2025-06-23)
