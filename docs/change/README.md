@@ -24,6 +24,8 @@ sidebar_position: 1
 
 此版本修复了一些比较严重的兼容性问题，尽快发版解决，另外由于chrome商店正式版版本号命名存在问题，从v0.17直接升至v0.18，v0.18.0-beta版本内容与此版本一致
 
+⚠️ 请注意，如果你使用的 Windows 8/7/XP 系统，或者浏览器内核版本低于\<120，需要自行手动安装[旧版脚本猫](https://bbs.tampermonkey.net.cn/thread-3068-1-1.html)，v0.16.6 是最后一个支持 Manifest V2 的版本，安装步骤可以参考：[加载解压缩方式安装扩展](https://docs.scriptcat.org/docs/use/use/#%E5%8A%A0%E8%BD%BD%E8%A7%A3%E5%8E%8B%E7%BC%A9%E6%96%B9%E5%BC%8F%E5%AE%89%E8%A3%85%E6%89%A9%E5%B1%95)。
+
 ### Added
 
 - ✨ 优化更新日志打开逻辑 [[859a516](https://github.com/scriptscat/scriptcat/commit/859a516a3d6cf56c26c55099a60e15a52b031845)]
@@ -50,7 +52,7 @@ sidebar_position: 1
 
 🎉 第一个Manifest V3的正式版本，含有多重大变化，如有问题，请反馈给我们：[BUG反馈](https://github.com/scriptscat/scriptcat/issues/new?template=bug_report.yaml)。
 
-请注意，如果你使用的 Windows 8/7/XP 系统，或者浏览器内核版本低于\<120，需要自行手动安装[旧版脚本猫](https://bbs.tampermonkey.net.cn/thread-3068-1-1.html)，v0.16.6 是最后一个支持 Manifest V2 的版本，安装步骤可以参考：[加载解压缩方式安装扩展](https://docs.scriptcat.org/docs/use/use/#%E5%8A%A0%E8%BD%BD%E8%A7%A3%E5%8E%8B%E7%BC%A9%E6%96%B9%E5%BC%8F%E5%AE%89%E8%A3%85%E6%89%A9%E5%B1%95)。
+⚠️ 请注意，如果你使用的 Windows 8/7/XP 系统，或者浏览器内核版本低于\<120，需要自行手动安装[旧版脚本猫](https://bbs.tampermonkey.net.cn/thread-3068-1-1.html)，v0.16.6 是最后一个支持 Manifest V2 的版本，安装步骤可以参考：[加载解压缩方式安装扩展](https://docs.scriptcat.org/docs/use/use/#%E5%8A%A0%E8%BD%BD%E8%A7%A3%E5%8E%8B%E7%BC%A9%E6%96%B9%E5%BC%8F%E5%AE%89%E8%A3%85%E6%89%A9%E5%B1%95)。
 
 - 💥 Manifest V2 迁移至 Manifest V3
 - 💥 储存引擎切换
