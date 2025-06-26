@@ -18,6 +18,39 @@ sidebar_position: 1
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+<a name="0.18.1"></a>
+
+## 0.18.1 (2025-06-26)
+
+修复一些bug，v0.18.1-beta版本内容与此版本一致
+
+⚠️ 请注意，如果你使用的 Windows 8/7/XP 系统，或者浏览器内核版本低于\<120，需要自行手动安装[旧版脚本猫](https://bbs.tampermonkey.net.cn/thread-3068-1-1.html)，v0.16.6 是最后一个支持 Manifest V2 的版本，安装步骤可以参考：[加载解压缩方式安装扩展](/docs/use/use/#%E5%8A%A0%E8%BD%BD%E8%A7%A3%E5%8E%8B%E7%BC%A9%E6%96%B9%E5%BC%8F%E5%AE%89%E8%A3%85%E6%89%A9%E5%B1%95)。
+
+### Changed
+
+- 🎨 优化报告问题流程 [[5f2f792](https://github.com/scriptscat/scriptcat/commit/5f2f79290d96e0bcda87b96aef57b5ebdd552a42)]
+- 💄 调整默认eslint规则 [[9525627](https://github.com/scriptscat/scriptcat/commit/9525627fdff6c9eabfadd0805b11dbd132958c61)]
+
+### Fixed
+
+- 🐛 修复后台脚本几率性加载失败 [[b9e4c86](https://github.com/scriptscat/scriptcat/commit/b9e4c869b59e7357ebcda4f86c2d49f1a4ca2aac)]
+- 🐛 修复几率性无法加载脚本的问题 [#447](https://github.com/scriptscat/scriptcat/issues/447) [[06c21b6](https://github.com/scriptscat/scriptcat/commit/06c21b647abde4a7e4ae194ad1be9ae1c51ac927)]
+- 🐛 修复运行日志跳转条件问题 [#445](https://github.com/scriptscat/scriptcat/issues/445) [[007c3f7](https://github.com/scriptscat/scriptcat/commit/007c3f72bf1df8a70e04374b14120e5ab9828010)]
+- 🐛 修复日志记录问题与暂时移除Firefox包 [#449](https://github.com/scriptscat/scriptcat/issues/449) [[7cb20d5](https://github.com/scriptscat/scriptcat/commit/7cb20d5fe4e2fac5d9318f93fce07a7c6b2e08a1)]
+- 🐛 处理tld域名 [[93ce67a](https://github.com/scriptscat/scriptcat/commit/93ce67a6bc3213264d7582a0335eb28ee38a0cb0)]
+- 🐛 修复 GM XHR 重定向 unsafeHeader 处理问题 [#444](https://github.com/scriptscat/scriptcat/issues/444) [[c0da6a0](https://github.com/scriptscat/scriptcat/commit/c0da6a06dc4d193f212caeca3050205d0df80316)]
+- 🐛 修复GM cookie与GM xhr问题 [#444](https://github.com/scriptscat/scriptcat/issues/444) [[d384f37](https://github.com/scriptscat/scriptcat/commit/d384f3776c2685909a2908a5d3bae6007c21caaa)]
+- 🐛 支持一些正则表达式 [[fa81e77](https://github.com/scriptscat/scriptcat/commit/fa81e771bb61215cc434f9aa6b74485fd8495a80)]
+- 🐛 处理一些正则匹配的情况 [[ccd4085](https://github.com/scriptscat/scriptcat/commit/ccd4085cfe7640212bde072bed30fe79c1658755)]
+- 🐛 修复某些不符合规范的match影响整体加载的问题 [#444](https://github.com/scriptscat/scriptcat/issues/444) [[d32793e](https://github.com/scriptscat/scriptcat/commit/d32793e4bf5b79cfa7e35648b198865ca45272f6)]
+- 🐛 修复定时器问题 [[96abce7](https://github.com/scriptscat/scriptcat/commit/96abce7bfd76a35f101be5437893934e8af88808)]
+
+### Miscellaneous
+
+- 🌐 添加en翻译 [[32bfa21](https://github.com/scriptscat/scriptcat/commit/32bfa214283ceb5706afc702bb76e1d1080df09f)]
+- 🌐 处理i18n [[c707094](https://github.com/scriptscat/scriptcat/commit/c70709499809766d800813d21f141fca1ea23e70)]
+
+
 <a name="0.18.0"></a>
 
 ## 0.18.0 (2025-06-24)
