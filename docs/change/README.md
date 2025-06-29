@@ -50,7 +50,6 @@ sidebar_position: 1
 - 🌐 添加en翻译 [[32bfa21](https://github.com/scriptscat/scriptcat/commit/32bfa214283ceb5706afc702bb76e1d1080df09f)]
 - 🌐 处理i18n [[c707094](https://github.com/scriptscat/scriptcat/commit/c70709499809766d800813d21f141fca1ea23e70)]
 
-
 <a name="0.18.0"></a>
 
 ## 0.18.0 (2025-06-24)
