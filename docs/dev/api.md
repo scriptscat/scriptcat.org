@@ -31,24 +31,24 @@ console.log(GM_info.scriptMetaStr);
 异步操作页面 Cookie，支持跨域、HttpOnly 和分区。
 
 > v0.17.0-alpha 后删除 store 与 tabid 相关的参数，现在会根据当前所在的窗口来决定获取隐身窗口还是普通窗口的 cookie。  
-> v5.2+ 支持 Promise 风格 API。
 
 必须使用 `@connect` 声明操作的 host，且经过用户授权才可使用。虽然兼容 TM 的 `GM_cookie.list` 操作，但是为了统一，不建议这样。
 
 * `sameSite` 未支持
 
 ```typescript
+// name和domain不能都为空
 declare function GM_cookie(
   action: GMTypes.CookieAction,
   details: GMTypes.CookieDetails,
-  ondone: (cookie: GMTypes.Cookie[], error: any | undefined) => void
+  ondone: (cookie: GMTypes.Cookie[], error: unknown | undefined) => void
 ): void;
 
 declare namespace GMTypes {
   type CookieAction = "list" | "delete" | "set";
   interface CookieDetails {
     url?: string;
-    name: string;
+    name?: string;
     value?: string;
     domain?: string;
     path?: string;
@@ -56,6 +56,7 @@ declare namespace GMTypes {
     session?: boolean;
     httpOnly?: boolean;
     expirationDate?: number;
+    partitionKey?: CookieDetailsPartitionKeyType;
   }
   interface Cookie {
     domain: string;
@@ -70,6 +71,21 @@ declare namespace GMTypes {
   }
 }
 
+// 回调形式
+GM_cookie("list", { url: "https://example.com" }, (cookies) => {
+  console.log(cookies);
+  GM_cookie("set", {
+    name: "foo",
+    value: "bar",
+    domain: "example.com"
+  }, (result) => {
+    console.log(result);
+    GM_cookie("delete", { name: "foo", domain: "example.com" }, (result) => {
+      console.log(result);
+    });
+  });
+});
+
 // Promise 形式
 const cookies = await GM.cookie.list({ url: "https://example.com" });
 await GM.cookie.set({ name: "foo", value: "bar", domain: "example.com" });
@@ -82,7 +98,7 @@ await GM.cookie.delete("foo", { domain: "example.com" });
 
 发送消息通知，提供了 `progress` 和 `buttons` 的能力（Firefox 不支持），可以显示进度条类型和按钮类型的通知，多提供了 `GM_closeNotification`、`GM_updateNotification`（Firefox 不支持）两个方法。
 
-[demo](https://bbs.tampermonkey.net.cn/thread-403-1-1.html)
+[example](https://github.com/scriptscat/scriptcat/blob/main/example/gm_notification.js)
 
 ```typescript
 declare function GM_notification(
@@ -99,21 +115,15 @@ declare function GM_closeNotification(id: string): void;
 declare function GM_updateNotification(id: string, details: GMTypes.NotificationDetails): void;
 
 declare namespace GMTypes {
-  type NotificationOnClick = (this: NotificationThis, event: NotificationOnClickEvent) => unknown;
-  type NotificationOnDone = (this: NotificationThis, user?: boolean) => unknown;
-  
-  interface NotificationButton {
-    title: string;
-    iconUrl?: string;
-  }
-  
   interface NotificationDetails {
     text?: string;
     title?: string;
+    tag?: string;
     image?: string;
     highlight?: boolean;
     silent?: boolean;
     timeout?: number;
+    url?: string;
     onclick?: NotificationOnClick;
     ondone?: NotificationOnDone;
     progress?: number;
@@ -121,6 +131,35 @@ declare namespace GMTypes {
     // 只能存在2个
     buttons?: NotificationButton[];
   }
+
+  interface NotificationThis extends NotificationDetails {
+    id: string;
+  }
+
+  type NotificationOnClickEvent = {
+    event: "click" | "buttonClick";
+    id: string;
+    isButtonClick: boolean;
+    buttonClickIndex: number | undefined;
+    byUser: boolean | undefined;
+    preventDefault: () => void;
+    highlight: NotificationDetails["highlight"];
+    image: NotificationDetails["image"];
+    silent: NotificationDetails["silent"];
+    tag: NotificationDetails["tag"];
+    text: NotificationDetails["tag"];
+    timeout: NotificationDetails["timeout"];
+    title: NotificationDetails["title"];
+    url: NotificationDetails["url"];
+  };
+  type NotificationOnClick = (this: NotificationThis, event: NotificationOnClickEvent) => unknown;
+  type NotificationOnDone = (this: NotificationThis, user?: boolean) => unknown;
+
+  interface NotificationButton {
+    title: string;
+    iconUrl?: string;
+  }
+
 }
 
 ```
@@ -131,7 +170,7 @@ GM_notification({ title: "进度", text: "加载中", progress: 50 });
 
 ### GM_xmlhttpRequest \*
 
-跨域 HTTP 请求，绕过 CSP，支持 `@connect` 声明域。部分功能缺失，cookie 功能 Firefox 暂不支持。需要用户授权才可正常访问，使用 `@connect` 描述的 host 可跳过用户授权，其它需要进行 ajax 操作的 API 同理。
+跨域 HTTP 请求，可以绕过 CSP，支持 `@connect` 声明域。部分功能缺失，cookie 功能 Firefox 暂不支持。需要用户授权才可正常访问，使用 `@connect` 描述的 host 可跳过用户授权。
 
 对于 anonymous 和 cookie 相比 TM 做了特殊处理，anonymous 为 true 且 cookie 存在时，发送的 cookie 为设置的 cookie 不会带上其他 cookie。
 
@@ -212,7 +251,7 @@ GM_xmlhttpRequest({
 日志函数，后台脚本的日志将在控制面板的运行日志中看到（点击运行状态栏）。相比于 TM 增加了一个日志的 level。
 
 ```typescript
-declare function GM_log(message: string, level?: GMTypes.LoggerLevel): any;
+declare function GM_log(message: string, level?: GMTypes.LoggerLevel): void;
 
 declare namespace GMTypes {
   type LoggerLevel = "debug" | "info" | "warn" | "error";
@@ -231,7 +270,7 @@ GM_log("调试信息", "debug");
 // 添加数据，请注意数据只能为 bool;string;number;object 四种类型，不能存储对象实例
 declare function GM_setValue(name: string, value: any): void;
 // 获取数据
-declare function GM_getValue<T>(name: string, defaultValue?: T): T | undefined;
+declare function GM_getValue(name: string, defaultValue?: any): any | undefined;
 // 删除数据，再获取会返回 undefined 或 defaultValue
 declare function GM_deleteValue(name: string): void;
 ```
@@ -259,9 +298,12 @@ console.log(GM_listValues());
 批量存取 API（扩展）。
 
 ```typescript
-declare function GM_setValues(values: Record<string, any>): void;
-declare function GM_getValues(keysOrDefaults: Record<string, any>): Record<string, any>;
-declare function GM_deleteValues(keys: string[]): void;
+// 设置多个值, values是一个对象, 键为值的名称, 值为值的内容
+declare function GM_setValues(values: { [key: string]: any }): void;
+// 获取多个值, 如果keysOrDefaults是一个对象, 则使用对象的值作为默认值
+declare function GM_getValues(keysOrDefaults: { [key: string]: any } | string[] | null | undefined): { [key: string]: any };
+// 删除多个值, names是一个字符串数组
+declare function GM_deleteValues(names: string[]): void;
 ```
 
 ```js
@@ -309,15 +351,9 @@ GM_removeValueChangeListener(id);
 打开一个新窗口。
 
 ```typescript
-declare function GM_openInTab(
-  url: string,
-  options?: GMTypes.OpenTabOptions
-): { close: () => void; onclose: () => void; closed: boolean };
-declare function GM_openInTab(
-  url: string,
-  loadInBackground: boolean
-): { close: () => void; onclose: () => void; closed: boolean };
-declare function GM_openInTab(url: string): { close: () => void; onclose: () => void; closed: boolean };
+declare function GM_openInTab(url: string, options: GMTypes.OpenTabOptions): GMTypes.Tab;
+declare function GM_openInTab(url: string, loadInBackground: boolean): GMTypes.Tab;
+declare function GM_openInTab(url: string): GMTypes.Tab;
 
 declare namespace GMTypes {
   interface OpenTabOptions {
@@ -325,6 +361,13 @@ declare namespace GMTypes {
     insert?: boolean;
     setParent?: boolean;
     useOpen?: boolean; // 这是一个实验性/不兼容其他管理器/不兼容Firefox的功能 表示使用window.open打开新窗口 #178
+  }
+
+  interface Tab {
+    close(): void;
+    onclose?: () => void;
+    closed?: boolean;
+    name?: string;
   }
 }
 ```
@@ -343,7 +386,7 @@ tab.close();
 // 获取tab数据
 declare function GM_getTab(callback: (obj: object) => void): void;
 // 保存tab数据
-declare function GM_saveTab(obj: object, callback?: () => void): void;
+declare function GM_saveTab(obj: object): void;
 // 获取所有tab数据
 declare function GM_getTabs(callback: (objs: { [key: number]: object }) => void): void;
 ```
@@ -354,20 +397,19 @@ GM_getTab(tab => console.log(tab));
 GM_getTabs(tabs => console.log(tabs));
 ```
 
-### GM_setClipboard
+### GM_setClipboard \*
 
-设置剪辑板。
+设置剪辑板，相比TM暂不支持回调。
 
 ```typescript
 declare function GM_setClipboard(
-  data: string | Blob,
-  info?: string | { type?: string; mimetype?: string },
-  callback?: () => void
+  data: string,
+  info?: string | { type?: string; mimetype?: string }
 ): void;
 ```
 
 ```js
-GM_setClipboard("Hello World", "text", () => console.log("复制完成"));
+GM_setClipboard("Hello World", "text");
 ```
 
 ### GM_addStyle
@@ -458,6 +500,7 @@ declare namespace GMTypes {
 
   interface DownloadDetails {
     method?: "GET" | "POST";
+    downloadMode?: "native" | "browser";
     url: string;
     name: string;
     headers?: { [key: string]: string };
@@ -469,7 +512,7 @@ declare namespace GMTypes {
     onerror?: Listener<DownloadError>;
     ontimeout?: () => void;
     onload?: Listener<object>;
-    onprogress?: Listener<XHRProgress<void>>;
+    onprogress?: Listener<XHRProgress>;
   }
 }
 ```
@@ -478,9 +521,6 @@ declare namespace GMTypes {
 // 回调形式
 const dl = GM_download({ url: "https://example.com/file.zip", name: "file.zip", onload: () => alert("完成") });
 dl.abort();
-
-// Promise 形式
-await GM.download("https://example.com/img.png", "img.png");
 ```
 
 ### GM_addElement
