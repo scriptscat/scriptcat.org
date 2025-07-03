@@ -18,6 +18,50 @@ sidebar_position: 1
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+<a name="0.18.2-beta"></a>
+
+## 0.18.2-beta (2025-07-03)
+
+### Added
+
+- ✨ 脚本编辑列表增加脚本搜索与批量置顶 [#462](https://github.com/scriptscat/scriptcat/issues/462) [[7c6ba17](https://github.com/scriptscat/scriptcat/commit/7c6ba1783275fbdd60c74170d5374826100e183d)]
+- ✨ 根据浏览器内核版本显示对应的提示 [[b0cb2b9](https://github.com/scriptscat/scriptcat/commit/b0cb2b9c76019059beb6eb7f73eeeccd1097adfc)]
+- ✨ 脚本编辑列表中新增删除脚本按钮 [#466](https://github.com/scriptscat/scriptcat/issues/466) [[4042845](https://github.com/scriptscat/scriptcat/commit/40428457a75d5879d99e6b0e5438993404c61ad6)]
+- ✨ 新增脚本储存面板支持批量编辑 ([#458](https://github.com/scriptscat/scriptcat/issues/458)) [[1d7800a](https://github.com/scriptscat/scriptcat/commit/1d7800a8e9576638a746c0cbafb3e3a663cd37d0)] (by @DreamNya)
+- ✨ 实现手动调整脚本执行顺序 ([#452](https://github.com/scriptscat/scriptcat/issues/452)) [[c6728c3](https://github.com/scriptscat/scriptcat/commit/c6728c33296683a42b8b7388b885edefb3422a02)] (by @DreamNya)
+
+### Changed
+
+- ⚡ 优化站点图标加载问题 [#474](https://github.com/scriptscat/scriptcat/issues/474) [[09e2a1b](https://github.com/scriptscat/scriptcat/commit/09e2a1b26b8289496ab211b4ebeb6ff4a4bb9049)]
+- 💄 优化popup页面展示 [#456](https://github.com/scriptscat/scriptcat/issues/456) [[5bfd9b2](https://github.com/scriptscat/scriptcat/commit/5bfd9b22c804438a0cfc9a2c491340afe7fcf7e2)]
+- ⚡ 优化站点icon加载速度 [[2841878](https://github.com/scriptscat/scriptcat/commit/28418789e617b903f8f5d9dbef4c8a8fcab5dc7c)]
+
+### Fixed
+
+- 🐛 修复i18n在没有支持语言下无法保存的问题 [#485](https://github.com/scriptscat/scriptcat/issues/485) Fixed the issue that i18n cannot be saved without supporting languages [[5c012a3](https://github.com/scriptscat/scriptcat/commit/5c012a3ce3c679c323983340ac2dad6ab3188fd2)]
+- 🐛 修复错误的UserConfig会导致脚本无法加载的问题 [#483](https://github.com/scriptscat/scriptcat/issues/483) fixed [#483](https://github.com/scriptscat/scriptcat/issues/483) [[bdc681b](https://github.com/scriptscat/scriptcat/commit/bdc681bc9ead6e37063b41edf880e0c82cbbb888)]
+- 🐛 固定 downloadMode 在 GM_info 總是 &quot;native&quot; ([#476](https://github.com/scriptscat/scriptcat/issues/476)) [[9c016db](https://github.com/scriptscat/scriptcat/commit/9c016db35beb763f00e45fdd5ce280edd48254bf)] (by @cyfung1031)
+- 🐛 修复列项高度不一致的问题 [#459](https://github.com/scriptscat/scriptcat/issues/459) fixed [#459](https://github.com/scriptscat/scriptcat/issues/459) [[2a1d3eb](https://github.com/scriptscat/scriptcat/commit/2a1d3eb1cc861e846a1ec11e1c6fb85dc07ff0b9)]
+- 🐛 修正 GM_addElement 中 textContent 的處理 ([#463](https://github.com/scriptscat/scriptcat/issues/463)) [[aba6caa](https://github.com/scriptscat/scriptcat/commit/aba6caa3c895e21071eddca6182ed69b6b3de07e)] (by @cyfung1031)
+- 🐛 GM_addStyle 文檔及類型補充 ([#465](https://github.com/scriptscat/scriptcat/issues/465)) [[0977759](https://github.com/scriptscat/scriptcat/commit/09777599feed3fa59ec55122f4f3ecfd107b6b58)] (by @cyfung1031)
+- 🐛 修复 notification icon问题 [#454](https://github.com/scriptscat/scriptcat/issues/454) [[64fe88e](https://github.com/scriptscat/scriptcat/commit/64fe88eefb7f1d0843dc505a19652d162502c3ed)]
+- 🐛 修复 popup新版本提示样式 ([#453](https://github.com/scriptscat/scriptcat/issues/453)) [[068ebc5](https://github.com/scriptscat/scriptcat/commit/068ebc52e1c471a805416acebd96ee79db6c1383)] (by @DreamNya)
+
+### Miscellaneous
+
+- 🌐 添加英文的贡献指南 [[e311746](https://github.com/scriptscat/scriptcat/commit/e311746260fa5c814158a82d2586beb58f3e821b)]
+- 🌐 恢复低版本浏览器提示 [[e624bfc](https://github.com/scriptscat/scriptcat/commit/e624bfcdcc18ee182273d0fbe50a8f07976610b0)]
+- 🌐 增加日语、德语翻译并设置默认语言为English [#485](https://github.com/scriptscat/scriptcat/issues/485) Add Japanese and German translations and set the default language to English [[6a7f3a8](https://github.com/scriptscat/scriptcat/commit/6a7f3a8c7c1b7fb25248018184ace526b5e56765)]
+- 📄 添加低版本浏览器提示 [[679b38c](https://github.com/scriptscat/scriptcat/commit/679b38c3db3b5332e1c4c0b68f78c177a9df7e00)]
+- ⚡ 修正雙重Promise (double-wrapped) ([#482](https://github.com/scriptscat/scriptcat/issues/482)) [[c0e76ca](https://github.com/scriptscat/scriptcat/commit/c0e76ca79667cfb6732ea377569dbd5a169903eb)] (by @cyfung1031)
+- ⚡ loadScriptFavicons可異步更新不用await ([#479](https://github.com/scriptscat/scriptcat/issues/479)) [[c1164ce](https://github.com/scriptscat/scriptcat/commit/c1164ce4f5723f8a5a95e208047e89d039cd618a)] (by @cyfung1031)
+- 🌐 翻譯修正 ([#477](https://github.com/scriptscat/scriptcat/issues/477)) [[948e113](https://github.com/scriptscat/scriptcat/commit/948e113d8e57f1c27817240063df9f4f88dfdc8e)] (by @cyfung1031)
+- 🌐 en translation improvements ([#469](https://github.com/scriptscat/scriptcat/issues/469)) [[976020b](https://github.com/scriptscat/scriptcat/commit/976020bde5bbae50735e4403190e85b3817c8529)] (by @Yay295)
+- ⚡ 优化 GM_download 实现方式 ([#455](https://github.com/scriptscat/scriptcat/issues/455)) [[a345e97](https://github.com/scriptscat/scriptcat/commit/a345e97a613fdda31a464f72c3deb4b13a6a5e31)] (by @DreamNya)
+- 🌐 添加繁体中文翻译 [[510f228](https://github.com/scriptscat/scriptcat/commit/510f22824b593d65f7cd45ba9577812dfca63c3b)]
+- 🌐 处理i18n问题 [#456](https://github.com/scriptscat/scriptcat/issues/456) [[c70ca42](https://github.com/scriptscat/scriptcat/commit/c70ca42fbed6a162c9dfb100584cc86b0201a3ee)]
+
+
 <a name="0.18.1"></a>
 
 ## 0.18.1 (2025-06-26)
