@@ -281,6 +281,8 @@ const v = GM_getValue("foo", 0);
 GM_deleteValue("foo");
 ```
 
+#### 注意：当使用 `GM_setValue` 传入 `undefined` 时，ScriptCat 会将该键删除，而不会像油猴（Tampermonkey/GreaseMonkey）那样将 `undefined` 存储为值。
+
 ### GM_listValues
 
 列出所有 key。
