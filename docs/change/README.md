@@ -318,17 +318,14 @@ Firefox的Manifest V3版本还在筹备中。
 
 ### Fixed
 
-- 🐛 修复onxxxx问题 [[9cf59a3](https://github.com/scriptscat/scriptcat/commit/9cf59a3e26360a47feb3b95136721b56820503ca)] (by 王一之)
-- 🐛 处理扩展降级问题 [#503](https://github.com/scriptscat/scriptcat/issues/503) [[faae3b8](https://github.com/scriptscat/scriptcat/commit/faae3b83c6bdfacc56bc7335545cb397e97dfa69)] (by 王一之)
-- 🐛 修正垃圾打包問題 ([#501](https://github.com/scriptscat/scriptcat/issues/501)) [[3091ec0](https://github.com/scriptscat/scriptcat/commit/3091ec02e9199b9c42949b32411f641f15cda8f7)] (by cyfung1031)
-- 🐛 修复OneDrive上传文件问题 [#366](https://github.com/scriptscat/scriptcat/issues/366) [[ad5a711](https://github.com/scriptscat/scriptcat/commit/ad5a7116c9d54b4e4a4ab53420d0e1d185612f98)] (by 王一之)
+- 🐛 修复onxxxx问题 [[9cf59a3](https://github.com/scriptscat/scriptcat/commit/9cf59a3e26360a47feb3b95136721b56820503ca)]
+- 🐛 处理扩展降级问题 [#503](https://github.com/scriptscat/scriptcat/issues/503) [[faae3b8](https://github.com/scriptscat/scriptcat/commit/faae3b83c6bdfacc56bc7335545cb397e97dfa69)]
+- 🐛 修正垃圾打包問題 ([#501](https://github.com/scriptscat/scriptcat/issues/501)) [[3091ec0](https://github.com/scriptscat/scriptcat/commit/3091ec02e9199b9c42949b32411f641f15cda8f7)] (by @cyfung1031)
+- 🐛 修复OneDrive上传文件问题 [#366](https://github.com/scriptscat/scriptcat/issues/366) [[ad5a711](https://github.com/scriptscat/scriptcat/commit/ad5a7116c9d54b4e4a4ab53420d0e1d185612f98)]
 
 ### Miscellaneous
 
-- 🌐 添加翻译文件 [[92c1951](https://github.com/scriptscat/scriptcat/commit/92c195167ef050f1725b29767697f47f3405421f)] (by 王一之)
-- 📝 修改版本号 [[0c7f08b](https://github.com/scriptscat/scriptcat/commit/0c7f08b05d27aba03d0522ecee24035941ec3e20)] (by 王一之)
-- 🌐 修改副标题以符合edge商店规则 [[f391f3a](https://github.com/scriptscat/scriptcat/commit/f391f3aa46a27bee2dc9c07099e993e74fae2a51)] (by 王一之)
-
+- 🌐 添加翻译文件 [[92c1951](https://github.com/scriptscat/scriptcat/commit/92c195167ef050f1725b29767697f47f3405421f)]
 
 <a name="0.16.6"></a>
 
