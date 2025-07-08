@@ -314,6 +314,8 @@ sidebar_position: 1
 
 这是 Manifest v2 的修复版本，后续只会处理一些非严重与功能性 bug，推荐更新你的浏览器到最新版本并安装最新版本的ScriptCat(v0.17.0+)。
 
+Firefox的Manifest V3版本还在筹备中。
+
 ### Fixed
 
 - 🐛 修复onxxxx问题 [[9cf59a3](https://github.com/scriptscat/scriptcat/commit/9cf59a3e26360a47feb3b95136721b56820503ca)] (by 王一之)
