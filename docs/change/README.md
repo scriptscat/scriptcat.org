@@ -18,9 +18,12 @@ sidebar_position: 1
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+<a name="0.18.2"></a>
 <a name="0.18.2-beta"></a>
 
-## 0.18.2-beta (2025-07-03)
+## 0.18.2 (2025-07-08)
+
+> v0.18.2-beta版本内容与此版本一致
 
 ### Added
 
