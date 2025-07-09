@@ -311,6 +311,22 @@ sidebar_position: 1
 
 **Full Changelog**: https://github.com/scriptscat/scriptcat/compare/v0.16.6...v0.17.0-alpha.3
 
+<a name="0.16.8"></a>
+
+## 0.16.8 (2025-07-09)
+
+### Fixed
+
+- 🐛 修复Firefox兼容问题 ([#510](https://github.com/scriptscat/scriptcat/issues/510)) [[beb385d](https://github.com/scriptscat/scriptcat/commit/beb385d69faa29493887fef5089a03344cb0d9dc)] (by @cyfung1031)
+
+### Changed
+
+- ⚡ TreeShaking ([#510](https://github.com/scriptscat/scriptcat/issues/510)) [[beb385d](https://github.com/scriptscat/scriptcat/commit/beb385d69faa29493887fef5089a03344cb0d9dc)] (by @cyfung1031)
+
+### Miscellaneous
+
+-  👷 处理firefox打包 [[814c9c3](https://github.com/scriptscat/scriptcat/commit/814c9c3ff26815f72a59ab160bb74689451aa158)]
+
 <a name="0.16.7"></a>
 
 ## 0.16.7 (2025-07-08)
