@@ -311,11 +311,11 @@ sidebar_position: 1
 
 **Full Changelog**: https://github.com/scriptscat/scriptcat/compare/v0.16.6...v0.17.0-alpha.3
 
-<a name="0.16.8"></a>
+<a name="0.16.9"></a>
 
 ## 0.16.9 (2025-07-09)
 
-> v0.16.8 与此版本一致
+误操作导致v0.16.8在firefox被占，所以跳过了v0.16.8
 
 ### Fixed
 
