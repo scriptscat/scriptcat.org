@@ -98,6 +98,7 @@ match的别名
 * **none**: 表示不在沙盒环境中运行,直接存在页面环境中,此环境下无法使用任何的GM API,可以直接访问页面的`window`对象.
 * **unsafeWindow**在沙盒环境中如果需要访问页面的`window`对象,需要使用`unsafeWindow`来进行访问.(tm不需要声明这个,为了兼容只能去了,好不规范啊.)
 
+#### ScriptCat的行为：`@grant none` 的情况下，脚本代码仍然能够以 `GM_info` 或 `GM.info` 取得脚本资讯，但外部引入代码(`@require`)无法直接读取此资讯。
 
 ### connect
 获取网站的访问权限,请看`GM_cookie`和`GM_xmlhttpRequest`
@@ -117,6 +118,8 @@ match的别名
 ### require
 
 引入外部js文件,可以进行[资源校验](#资源校验)
+
+#### ScriptCat的行为：沒有指明 `@grant none` 的情况下，外部引入代码可以直接读取 `GM_info` 或 `GM.info` 取得脚本资讯。
 
 ### noframes
 
