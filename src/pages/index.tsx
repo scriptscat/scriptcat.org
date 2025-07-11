@@ -115,7 +115,7 @@ const storeMap: { [key: string]: MenuProps['items'][0] & { label: any; show?: bo
     key: "default",
     label: (
       <IconButton
-        href="/docs/use/use"
+        href="./docs/use/use"
         icon="logos:chrome"
         text={translate({
           id: 'homepage.hero.browser.default',
@@ -500,7 +500,7 @@ function HomepageHeader(): JSX.Element {
             </Translate>
           </p>
           <div className={styles.trustBadgesList}>
-            <img className="h-10" src="/img/home/borwsers.png" />
+            <img className="h-10" src="./img/home/borwsers.png" />
             <div className={styles.trustBadgeDivider}></div>
             <Icon icon="lucide:code" className={styles.trustBadge} />
             <Icon icon="lucide:github" className={styles.trustBadge} />
