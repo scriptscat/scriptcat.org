@@ -1,0 +1,282 @@
+{
+  "homepage.hero.title": {
+    "message": "The Ultimate Script Engine for",
+    "description": "Main title on the homepage hero section"
+  },
+  "homepage.hero.title.engine": {
+    "message": "Enhanced Browser Experience",
+    "description": "Gradient text in main title"
+  },
+  "homepage.hero.subtitle.userScript": {
+    "message": "user scripts",
+    "description": "User script highlight"
+  },
+  "homepage.hero.subtitle.possibilities": {
+    "message": ", activating infinite possibilities for your browser!",
+    "description": "Browser possibilities text"
+  },
+  "homepage.hero.subtitle.main": {
+    "message": "ScriptCat is a powerful open-source browser script engine that lets you easily customize web functionality, eliminate ads, automate tasks, and enhance your browsing experience. Compatible with Tampermonkey and provides more features and optimizations.",
+    "description": "Main subtitle description on homepage"
+  },
+  "homepage.hero.subtitle.highlight": {
+    "message": "A browser extension for executing",
+    "description": "Highlighted subtitle on homepage"
+  },
+  "homepage.hero.button.browseScripts": {
+    "message": "Browse Script Library",
+    "description": "Button text for browsing scripts"
+  },
+  "homepage.hero.browser.edge": {
+    "message": "Add to Edge Browser",
+    "description": "Button text for Edge browser"
+  },
+  "homepage.hero.browser.chrome": {
+    "message": "Add to Chrome Browser",
+    "description": "Button text for Chrome browser"
+  },
+  "homepage.hero.browser.firefox": {
+    "message": "Add to Firefox Browser",
+    "description": "Button text for Firefox browser"
+  },
+  "homepage.hero.browser.default": {
+    "message": "Install Extension to Browser",
+    "description": "Default button text for browser installation"
+  },
+  "homepage.hero.browser.crx": {
+    "message": "Download Installation Package for Manual Install",
+    "description": "Button text for manual installation"
+  },
+  "homepage.hero.trustBadges.title": {
+    "message": "Trusted and supported by the tech community",
+    "description": "Trust badges section title"
+  },
+  "homepage.features.title.powerful": {
+    "message": "Powerful Features, ",
+    "description": "Features section title part 1"
+  },
+  "homepage.features.title.possibilities": {
+    "message": "Infinite Possibilities",
+    "description": "Features section title highlight"
+  },
+  "homepage.features.subtitle": {
+    "message": "ScriptCat provides a series of powerful features that allow you to easily extend your browser's capabilities and create your own web experience.",
+    "description": "Features section subtitle"
+  },
+  "homepage.features.tampermonkey.title": {
+    "message": "Tampermonkey Compatible",
+    "description": "Feature title: Tampermonkey compatibility"
+  },
+  "homepage.features.tampermonkey.description": {
+    "message": "Fully compatible with Tampermonkey script format, seamlessly migrate existing script libraries with zero cost switching.",
+    "description": "Feature description: Tampermonkey compatibility"
+  },
+  "homepage.features.background.title": {
+    "message": "Background Scripts",
+    "description": "Feature title: Background scripts"
+  },
+  "homepage.features.background.description": {
+    "message": "Unlike regular user scripts, allows your scripts to run continuously in the background without needing to open tabs.",
+    "description": "Feature description: Background scripts"
+  },
+  "homepage.features.security.title": {
+    "message": "Safe and Reliable",
+    "description": "Feature title: Security"
+  },
+  "homepage.features.security.description": {
+    "message": "Strict permission control system, transparent script behavior, effectively prevents malicious scripts and protects your privacy.",
+    "description": "Feature description: Security"
+  },
+  "homepage.features.editor.title": {
+    "message": "Built-in Code Editor",
+    "description": "Feature title: Code editor"
+  },
+  "homepage.features.editor.description": {
+    "message": "Powerful code editor with syntax highlighting, code completion, and error hints to make script writing more efficient.",
+    "description": "Feature description: Code editor"
+  },
+  "homepage.features.api.title": {
+    "message": "Powerful APIs",
+    "description": "Feature title: APIs"
+  },
+  "homepage.features.api.description": {
+    "message": "Provides richer API interfaces than GM, supports advanced features like file storage and user configuration, extending script capabilities.",
+    "description": "Feature description: APIs"
+  },
+  "homepage.features.store.title": {
+    "message": "Script Store",
+    "description": "Feature title: Script store"
+  },
+  "homepage.features.store.description": {
+    "message": "Features a script store for one-click installation of popular scripts, or publish your works to share with the community, building an active ecosystem.",
+    "description": "Feature description: Script store"
+  },
+  "homepage.comparison.title.why": {
+    "message": "Why Choose",
+    "description": "Comparison section title part 1"
+  },
+  "homepage.comparison.subtitle": {
+    "message": "Compared to other script engines, ScriptCat provides more advantages and enhanced features",
+    "description": "Comparison section subtitle"
+  },
+  "homepage.comparison.feature": {
+    "message": "Feature",
+    "description": "Comparison table header: Feature"
+  },
+  "homepage.comparison.feature.compatibility": {
+    "message": "Script Compatibility",
+    "description": "Comparison feature: Script compatibility"
+  },
+  "homepage.comparison.feature.background": {
+    "message": "Background Scripts",
+    "description": "Comparison feature: Background scripts"
+  },
+  "homepage.comparison.feature.opensource": {
+    "message": "Open Source Free",
+    "description": "Comparison feature: Open source"
+  },
+  "homepage.comparison.feature.sync": {
+    "message": "Cloud Sync",
+    "description": "Comparison feature: Cloud sync"
+  },
+  "homepage.comparison.feature.api": {
+    "message": "More APIs",
+    "description": "Comparison feature: More APIs"
+  },
+  "homepage.comparison.feature.community": {
+    "message": "Community Support",
+    "description": "Comparison feature: Community support"
+  },
+  "homepage.comparison.label.efficient": {
+    "message": "Efficient",
+    "description": "Comparison label: Efficient"
+  },
+  "homepage.comparison.label.multiplatform": {
+    "message": "Multi-platform",
+    "description": "Comparison label: Multi-platform"
+  },
+  "homepage.scenario.title.solve": {
+    "message": "Scripts That Solve",
+    "description": "Scenario section title part 1"
+  },
+  "homepage.scenario.title.problems": {
+    "message": "Real Problems",
+    "description": "Scenario section title highlight"
+  },
+  "homepage.scenario.title.scripts": {
+    "message": "",
+    "description": "Scenario section title part 2"
+  },
+  "homepage.scenario.subtitle": {
+    "message": "See how ScriptCat can transform your browsing experience",
+    "description": "Scenario section subtitle"
+  },
+  "homepage.scenario.video.title": {
+    "message": "Video Site Enhancement",
+    "description": "Video scenario title"
+  },
+  "homepage.scenario.video.subtitle": {
+    "message": "Optimize video viewing experience",
+    "description": "Video scenario subtitle"
+  },
+  "homepage.scenario.video.tag": {
+    "message": "Popular Apps",
+    "description": "Video scenario tag"
+  },
+  "homepage.scenario.video.feature.speed": {
+    "message": "Video Speed Control",
+    "description": "Video feature: Speed control"
+  },
+  "homepage.scenario.video.feature.download": {
+    "message": "One-click Video Download",
+    "description": "Video feature: Download"
+  },
+  "homepage.scenario.video.feature.adblock": {
+    "message": "Auto Skip Ads",
+    "description": "Video feature: Ad blocking"
+  },
+  "homepage.scenario.video.feature.ui": {
+    "message": "UI Simplification",
+    "description": "Video feature: UI optimization"
+  },
+  "homepage.scenario.video.sites": {
+    "message": "Supported Sites",
+    "description": "Video scenario supported sites label"
+  },
+  "homepage.scenario.video.getScript": {
+    "message": "Get Script →",
+    "description": "Video scenario get script link"
+  },
+  "homepage.scenario.shopping.title": {
+    "message": "Shopping Assistant",
+    "description": "Shopping scenario title"
+  },
+  "homepage.scenario.shopping.subtitle": {
+    "message": "Make shopping experience easier",
+    "description": "Shopping scenario subtitle"
+  },
+  "homepage.scenario.shopping.tag": {
+    "message": "Practical Tools",
+    "description": "Shopping scenario tag"
+  },
+  "homepage.scenario.shopping.feature.history": {
+    "message": "Price History Query",
+    "description": "Shopping feature: Price history"
+  },
+  "homepage.scenario.shopping.feature.coupon": {
+    "message": "Auto Coupon Search",
+    "description": "Shopping feature: Coupon search"
+  },
+  "homepage.scenario.shopping.feature.compare": {
+    "message": "Price Comparison",
+    "description": "Shopping feature: Price comparison"
+  },
+  "homepage.scenario.shopping.feature.alert": {
+    "message": "Price Drop Alert",
+    "description": "Shopping feature: Price alert"
+  },
+  "homepage.download.title.ready": {
+    "message": "Ready to",
+    "description": "Download section title part 1"
+  },
+  "homepage.download.title.enhance": {
+    "message": "Enhance Your Browsing Experience",
+    "description": "Download section title highlight"
+  },
+  "homepage.download.title.question": {
+    "message": "?",
+    "description": "Download section title part 2"
+  },
+  "homepage.download.subtitle": {
+    "message": "Install ScriptCat now and unlock infinite possibilities for web browsing",
+    "description": "Download section subtitle"
+  },
+  "homepage.download.edge": {
+    "message": "Edge Extension Store",
+    "description": "Download button: Edge store"
+  },
+  "homepage.download.chrome": {
+    "message": "Chrome Extension Store",
+    "description": "Download button: Chrome store"
+  },
+  "homepage.download.firefox": {
+    "message": "Firefox Extension Store",
+    "description": "Download button: Firefox store"
+  },
+  "homepage.download.github": {
+    "message": "GitHub Download",
+    "description": "Download button: GitHub"
+  },
+  "homepage.download.popup.title": {
+    "message": "ScriptCat Enabled",
+    "description": "Extension popup title"
+  },
+  "homepage.download.popup.text": {
+    "message": "3 scripts are running on current page",
+    "description": "Extension popup text"
+  },
+  "homepage.footer.contributors.title": {
+    "message": "Thanks to all contributors",
+    "description": "Footer contributors section title"
+  }
+}

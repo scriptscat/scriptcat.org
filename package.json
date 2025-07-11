@@ -5,6 +5,8 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
+    "start:zh": "docusaurus start --locale zh-Hans",
+    "start:en": "docusaurus start --locale en --port 3001",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
@@ -16,9 +18,9 @@
   },
   "dependencies": {
     "@ant-design/icons": "^5.1.4",
-    "@docusaurus/core": "^3.7.0",
-    "@docusaurus/plugin-google-gtag": "^3.7.0",
-    "@docusaurus/preset-classic": "^3.7.0",
+    "@docusaurus/core": "^3.8.1",
+    "@docusaurus/plugin-google-gtag": "^3.8.1",
+    "@docusaurus/preset-classic": "^3.8.1",
     "@gracefullight/docusaurus-plugin-tailwind": "^1.0.1",
     "@mdx-js/react": "^3.0.0",
     "antd": "^5.4.7",
@@ -31,7 +33,7 @@
     "swiper": "^11.2.1"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "^3.7.0",
+    "@docusaurus/module-type-aliases": "^3.8.1",
     "@docusaurus/tsconfig": "^3.7.0",
     "@docusaurus/types": "^3.7.0",
     "@iconify/react": "^4.1.1",

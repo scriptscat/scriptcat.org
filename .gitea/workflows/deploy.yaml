@@ -33,7 +33,7 @@ jobs:
     - name: Build
       run: |
         pnpm i
-        npm run build
+        pnpm run build
 
     - name: Set up QEMU
 #      uses: docker/setup-qemu-action@v3

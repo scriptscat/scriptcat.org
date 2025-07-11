@@ -1,0 +1,282 @@
+{
+  "homepage.hero.title": {
+    "message": "浏览器增强体验的",
+    "description": "首页主标题"
+  },
+  "homepage.hero.title.engine": {
+    "message": "终极脚本引擎",
+    "description": "首页主标题梯度文本"
+  },
+  "homepage.hero.subtitle.userScript": {
+    "message": "用户脚本",
+    "description": "用户脚本高亮文本"
+  },
+  "homepage.hero.subtitle.possibilities": {
+    "message": "的浏览器扩展，激活浏览器的无限可能！",
+    "description": "浏览器可能性文本"
+  },
+  "homepage.hero.subtitle.main": {
+    "message": "ScriptCat是一个强大的开源浏览器脚本引擎，让您轻松定制网页功能，消除广告，自动执行任务，提升浏览体验。与Tampermonkey兼容，并提供更多功能和优化。",
+    "description": "首页主副标题描述"
+  },
+  "homepage.hero.subtitle.highlight": {
+    "message": "执行",
+    "description": "首页高亮副标题"
+  },
+  "homepage.hero.button.browseScripts": {
+    "message": "浏览脚本库",
+    "description": "浏览脚本按钮文本"
+  },
+  "homepage.hero.browser.edge": {
+    "message": "添加到 Edge 浏览器",
+    "description": "Edge浏览器按钮文本"
+  },
+  "homepage.hero.browser.chrome": {
+    "message": "添加到 Chrome 浏览器",
+    "description": "Chrome浏览器按钮文本"
+  },
+  "homepage.hero.browser.firefox": {
+    "message": "添加到 Firefox 浏览器",
+    "description": "Firefox浏览器按钮文本"
+  },
+  "homepage.hero.browser.default": {
+    "message": "安装扩展到浏览器",
+    "description": "默认浏览器安装按钮文本"
+  },
+  "homepage.hero.browser.crx": {
+    "message": "下载 安装包 文件手动安装",
+    "description": "手动安装按钮文本"
+  },
+  "homepage.hero.trustBadges.title": {
+    "message": "受到技术社区信任和支持",
+    "description": "信任徽章标题"
+  },
+  "homepage.features.title.powerful": {
+    "message": "强大的功能，",
+    "description": "特性区域标题第一部分"
+  },
+  "homepage.features.title.possibilities": {
+    "message": "无限可能",
+    "description": "特性区域标题高亮部分"
+  },
+  "homepage.features.subtitle": {
+    "message": "ScriptCat 提供了一系列强大的功能，让您可以轻松地扩展浏览器的能力，创造属于自己的网络体验。",
+    "description": "特性区域副标题"
+  },
+  "homepage.features.tampermonkey.title": {
+    "message": "Tampermonkey 兼容",
+    "description": "特性标题：Tampermonkey兼容性"
+  },
+  "homepage.features.tampermonkey.description": {
+    "message": "完全兼容 Tampermonkey 脚本格式，无缝迁移现有脚本库，零成本切换使用。",
+    "description": "特性描述：Tampermonkey兼容性"
+  },
+  "homepage.features.background.title": {
+    "message": "后台脚本",
+    "description": "特性标题：后台脚本"
+  },
+  "homepage.features.background.description": {
+    "message": "区别于普通用户脚本，让你的脚本可以在后台中持续运行，无须开启标签页。",
+    "description": "特性描述：后台脚本"
+  },
+  "homepage.features.security.title": {
+    "message": "安全可靠",
+    "description": "特性标题：安全性"
+  },
+  "homepage.features.security.description": {
+    "message": "严格的权限控制系统，脚本行为透明可见，有效防止恶意脚本，保护您的隐私安全。",
+    "description": "特性描述：安全性"
+  },
+  "homepage.features.editor.title": {
+    "message": "内置代码编辑器",
+    "description": "特性标题：代码编辑器"
+  },
+  "homepage.features.editor.description": {
+    "message": "强大的代码编辑器，支持语法高亮、代码补全、错误提示，让脚本编写更高效。",
+    "description": "特性描述：代码编辑器"
+  },
+  "homepage.features.api.title": {
+    "message": "强大的 API",
+    "description": "特性标题：API"
+  },
+  "homepage.features.api.description": {
+    "message": "提供比GM更丰富的 API 接口，支持文件存储、用户配置等高级功能，扩展脚本能力。",
+    "description": "特性描述：API"
+  },
+  "homepage.features.store.title": {
+    "message": "脚本商店",
+    "description": "特性标题：脚本商店"
+  },
+  "homepage.features.store.description": {
+    "message": "拥有脚本商店，一键安装热门脚本，或发布您的作品与社区分享，构建活跃的生态圈。",
+    "description": "特性描述：脚本商店"
+  },
+  "homepage.comparison.title.why": {
+    "message": "为什么选择",
+    "description": "对比区域标题第一部分"
+  },
+  "homepage.comparison.subtitle": {
+    "message": "与其他脚本引擎相比，ScriptCat 提供了更多优势和增强功能",
+    "description": "对比区域副标题"
+  },
+  "homepage.comparison.feature": {
+    "message": "特性",
+    "description": "对比表格标题：特性"
+  },
+  "homepage.comparison.feature.compatibility": {
+    "message": "脚本兼容性",
+    "description": "对比特性：脚本兼容性"
+  },
+  "homepage.comparison.feature.background": {
+    "message": "后台脚本",
+    "description": "对比特性：后台脚本"
+  },
+  "homepage.comparison.feature.opensource": {
+    "message": "开源免费",
+    "description": "对比特性：开源"
+  },
+  "homepage.comparison.feature.sync": {
+    "message": "云端同步",
+    "description": "对比特性：云端同步"
+  },
+  "homepage.comparison.feature.api": {
+    "message": "更多的 API",
+    "description": "对比特性：更多API"
+  },
+  "homepage.comparison.feature.community": {
+    "message": "社区支持",
+    "description": "对比特性：社区支持"
+  },
+  "homepage.comparison.label.efficient": {
+    "message": "高效",
+    "description": "对比标签：高效"
+  },
+  "homepage.comparison.label.multiplatform": {
+    "message": "多平台",
+    "description": "对比标签：多平台"
+  },
+  "homepage.scenario.title.solve": {
+    "message": "解决",
+    "description": "场景区域标题第一部分"
+  },
+  "homepage.scenario.title.problems": {
+    "message": "实际问题",
+    "description": "场景区域标题高亮部分"
+  },
+  "homepage.scenario.title.scripts": {
+    "message": "的脚本",
+    "description": "场景区域标题第二部分"
+  },
+  "homepage.scenario.subtitle": {
+    "message": "来看看 ScriptCat 能为您的浏览体验带来哪些改变",
+    "description": "场景区域副标题"
+  },
+  "homepage.scenario.video.title": {
+    "message": "视频网站增强",
+    "description": "视频场景标题"
+  },
+  "homepage.scenario.video.subtitle": {
+    "message": "优化视频观看体验",
+    "description": "视频场景副标题"
+  },
+  "homepage.scenario.video.tag": {
+    "message": "热门应用",
+    "description": "视频场景标签"
+  },
+  "homepage.scenario.video.feature.speed": {
+    "message": "视频倍速控制",
+    "description": "视频特性：倍速控制"
+  },
+  "homepage.scenario.video.feature.download": {
+    "message": "一键视频下载",
+    "description": "视频特性：下载"
+  },
+  "homepage.scenario.video.feature.adblock": {
+    "message": "广告自动跳过",
+    "description": "视频特性：广告拦截"
+  },
+  "homepage.scenario.video.feature.ui": {
+    "message": "界面简化优化",
+    "description": "视频特性：界面优化"
+  },
+  "homepage.scenario.video.sites": {
+    "message": "支持网站",
+    "description": "视频场景支持网站标签"
+  },
+  "homepage.scenario.video.getScript": {
+    "message": "获取脚本 →",
+    "description": "视频场景获取脚本链接"
+  },
+  "homepage.scenario.shopping.title": {
+    "message": "网购助手",
+    "description": "购物场景标题"
+  },
+  "homepage.scenario.shopping.subtitle": {
+    "message": "让购物体验更轻松",
+    "description": "购物场景副标题"
+  },
+  "homepage.scenario.shopping.tag": {
+    "message": "实用工具",
+    "description": "购物场景标签"
+  },
+  "homepage.scenario.shopping.feature.history": {
+    "message": "价格历史查询",
+    "description": "购物特性：价格历史"
+  },
+  "homepage.scenario.shopping.feature.coupon": {
+    "message": "优惠券自动查找",
+    "description": "购物特性：优惠券搜索"
+  },
+  "homepage.scenario.shopping.feature.compare": {
+    "message": "同款比价",
+    "description": "购物特性：价格对比"
+  },
+  "homepage.scenario.shopping.feature.alert": {
+    "message": "降价提醒",
+    "description": "购物特性：价格提醒"
+  },
+  "homepage.download.title.ready": {
+    "message": "准备好",
+    "description": "下载区域标题第一部分"
+  },
+  "homepage.download.title.enhance": {
+    "message": "增强您的浏览体验",
+    "description": "下载区域标题高亮部分"
+  },
+  "homepage.download.title.question": {
+    "message": "了吗？",
+    "description": "下载区域标题第二部分"
+  },
+  "homepage.download.subtitle": {
+    "message": "立即安装 ScriptCat，解锁网页浏览的无限可能",
+    "description": "下载区域副标题"
+  },
+  "homepage.download.edge": {
+    "message": "Edge 扩展商店",
+    "description": "下载按钮：Edge商店"
+  },
+  "homepage.download.chrome": {
+    "message": "Chrome 扩展商店",
+    "description": "下载按钮：Chrome商店"
+  },
+  "homepage.download.firefox": {
+    "message": "Firefox 扩展商店",
+    "description": "下载按钮：Firefox商店"
+  },
+  "homepage.download.github": {
+    "message": "GitHub 下载",
+    "description": "下载按钮：GitHub"
+  },
+  "homepage.download.popup.title": {
+    "message": "ScriptCat 已启用",
+    "description": "扩展弹窗标题"
+  },
+  "homepage.download.popup.text": {
+    "message": "3个脚本正在运行于当前页面",
+    "description": "扩展弹窗文本"
+  },
+  "homepage.footer.contributors.title": {
+    "message": "感谢所有贡献者",
+    "description": "页脚贡献者区域标题"
+  }
+}

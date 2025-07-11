@@ -11,7 +11,40 @@ import { DownOutlined, SearchOutlined } from "@ant-design/icons";
 import { browserName } from "react-device-detect";
 import type { JSX } from "react";
 import { IconCat } from "../components/IconCat";
-import type { ItemType } from "antd/es/menu/interface";
+import type { MenuProps } from "antd";
+import Translate, { translate } from '@docusaurus/Translate';
+
+// 语言检测和重定向函数
+function detectAndRedirectLanguage() {
+  // 如果已经在特定语言路径下，则不进行重定向
+  if (window.location.pathname !== '/') {
+    return;
+  }
+
+  // 检查是否已经执行过重定向，避免无限循环
+  if (sessionStorage.getItem('redirected')) {
+    return;
+  }
+
+  // 获取用户首选语言
+  const userLanguages = navigator.languages || [navigator.language];
+  
+  // 检查是否包含中文语言
+  const hasChinese = userLanguages.some(lang => 
+    lang.toLowerCase().includes('zh') || 
+    lang.toLowerCase().includes('cn')
+  );
+
+  // 标记已执行重定向
+  sessionStorage.setItem('redirected', 'true');
+
+  // 只有非中文用户才需要重定向到英文版本
+  // 中文用户保持在根路径（默认中文）
+  if (!hasChinese) {
+    // 其他语言用户跳转到英文版本
+    window.location.href = '/en/';
+  }
+}
 
 // 浏览器图标按钮组件
 const IconButton = ({ href, text, icon, target = "_blank" }) => {
@@ -38,14 +71,17 @@ const IconButton = ({ href, text, icon, target = "_blank" }) => {
 };
 
 // 浏览器商店映射
-const storeMap: { [key: string]: ItemType & { label: any; show?: boolean } } = {
+const storeMap: { [key: string]: MenuProps['items'][0] & { label: any; show?: boolean } } = {
   edge: {
     key: "edge",
     label: (
       <IconButton
         href="https://microsoftedge.microsoft.com/addons/detail/scriptcat/liilgpjgabokdklappibcjfablkpcekh"
         icon="logos:microsoft-edge"
-        text="添加到 Edge 浏览器"
+        text={translate({
+          id: 'homepage.hero.browser.edge',
+          message: '添加到 Edge 浏览器',
+        })}
       />
     ),
   },
@@ -55,7 +91,10 @@ const storeMap: { [key: string]: ItemType & { label: any; show?: boolean } } = {
       <IconButton
         href="https://chrome.google.com/webstore/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf"
         icon="logos:chrome"
-        text="添加到 Chrome 浏览器"
+        text={translate({
+          id: 'homepage.hero.browser.chrome',
+          message: '添加到 Chrome 浏览器',
+        })}
       />
     ),
   },
@@ -65,7 +104,10 @@ const storeMap: { [key: string]: ItemType & { label: any; show?: boolean } } = {
       <IconButton
         href="https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/"
         icon="logos:firefox"
-        text="添加到 Firefox 浏览器"
+        text={translate({
+          id: 'homepage.hero.browser.firefox',
+          message: '添加到 Firefox 浏览器',
+        })}
       />
     ),
   },
@@ -75,7 +117,10 @@ const storeMap: { [key: string]: ItemType & { label: any; show?: boolean } } = {
       <IconButton
         href="/docs/use/use"
         icon="logos:chrome"
-        text="安装扩展到浏览器"
+        text={translate({
+          id: 'homepage.hero.browser.default',
+          message: '安装扩展到浏览器',
+        })}
         target="_self"
       />
     ),
@@ -87,14 +132,17 @@ const storeMap: { [key: string]: ItemType & { label: any; show?: boolean } } = {
       <IconButton
         href="https://bbs.tampermonkey.net.cn/thread-3068-1-1.html"
         icon="noto:package"
-        text="下载 安装包 文件手动安装"
+        text={translate({
+          id: 'homepage.hero.browser.crx',
+          message: '下载 安装包 文件手动安装',
+        })}
       />
     ),
   },
 };
 
 // 构建商店列表
-const storeList: ItemType[] = [];
+const storeList: MenuProps['items'] = [];
 Object.keys(storeMap).forEach((key) => {
   if (storeMap[key].show !== false) {
     storeList.push(storeMap[key]);
@@ -175,9 +223,21 @@ const ScenarioCard = ({
       </div>
       <div className={styles.scenarioSites}>
         <div className={styles.scenarioSitesHeader}>
-          <span>支持网站</span>
+          <span>
+            <Translate
+              id="homepage.scenario.video.sites"
+              description="Scenario supported sites label"
+            >
+              支持网站
+            </Translate>
+          </span>
           <a href={scriptUrl} target="_blank" style={{ color: tagColor.text }}>
-            获取脚本 →
+            <Translate
+              id="homepage.scenario.video.getScript"
+              description="Scenario get script link"
+            >
+              获取脚本 →
+            </Translate>
           </a>
         </div>
         <div className={styles.scenarioSitesList}>
@@ -238,17 +298,51 @@ function HomepageHeader(): JSX.Element {
           {/*  */}
           <div className={styles.heroLeft}>
             <h1 className="text-5xl font-bold leading-tight mb-6">
-              浏览器增强体验的
+              <Translate
+                id="homepage.hero.title"
+                description="Main title on the homepage hero section"
+              >
+                浏览器增强体验的
+              </Translate>
               <br />
-              <span className={styles.gradientText}>终极脚本引擎</span>
+              <span className={styles.gradientText}>
+                <Translate
+                  id="homepage.hero.title.engine"
+                  description="Gradient text in main title"
+                >
+                  终极脚本引擎
+                </Translate>
+              </span>
             </h1>
             <p className="text-xl text-black dark:text-gray-300  mb-8 max-w-2xl">
-              ScriptCat是一个强大的开源浏览器脚本引擎，让您轻松定制网页功能，消除广告，自动执行任务，提升浏览体验。与Tampermonkey兼容，并提供更多功能和优化。
+              <Translate
+                id="homepage.hero.subtitle.main"
+                description="Main subtitle description on homepage"
+              >
+                ScriptCat是一个强大的开源浏览器脚本引擎，让您轻松定制网页功能，消除广告，自动执行任务，提升浏览体验。与Tampermonkey兼容，并提供更多功能和优化。
+              </Translate>
             </p>
             <p className={styles.heroSubtitle}>
-              执行
-              <b className={styles.heroSubtitleHighlight}>用户脚本</b>
-              的浏览器扩展，激活浏览器的无限可能！
+              <Translate
+                id="homepage.hero.subtitle.highlight"
+                description="Highlighted subtitle on homepage"
+              >
+                执行
+              </Translate>
+              <b className={styles.heroSubtitleHighlight}>
+                <Translate
+                  id="homepage.hero.subtitle.userScript"
+                  description="User script highlight"
+                >
+                  用户脚本
+                </Translate>
+              </b>
+              <Translate
+                id="homepage.hero.subtitle.possibilities"
+                description="Browser possibilities text"
+              >
+                的浏览器扩展，激活浏览器的无限可能！
+              </Translate>
             </p>
 
             <div className={styles.heroButtons}>
@@ -274,7 +368,12 @@ function HomepageHeader(): JSX.Element {
                   className={styles.btnBrowseScripts}
                 >
                   <SearchOutlined className="w-5 h-5" />
-                  浏览脚本库
+                  <Translate
+                    id="homepage.hero.button.browseScripts"
+                    description="Button text for browsing scripts"
+                  >
+                    浏览脚本库
+                  </Translate>
                 </a>
               </div>
             </div>
@@ -392,7 +491,14 @@ function HomepageHeader(): JSX.Element {
         </div>
 
         <div className={styles.trustBadges}>
-          <p className={styles.trustBadgesTitle}>受到技术社区信任和支持</p>
+          <p className={styles.trustBadgesTitle}>
+            <Translate
+              id="homepage.hero.trustBadges.title"
+              description="Trust badges section title"
+            >
+              受到技术社区信任和支持
+            </Translate>
+          </p>
           <div className={styles.trustBadgesList}>
             <img className="h-10" src="/img/home/borwsers.png" />
             <div className={styles.trustBadgeDivider}></div>
@@ -448,52 +554,102 @@ function FeaturesSection(): JSX.Element {
       <div className="container">
         <div className={styles.featuresSectionHeader}>
           <h2 className={styles.featuresSectionTitle}>
-            强大的功能，
+            <Translate
+              id="homepage.features.title.powerful"
+              description="Features section title part 1"
+            >
+              强大的功能，
+            </Translate>
             <span className={styles.featuresSectionTitleHighlight}>
-              无限可能
+              <Translate
+                id="homepage.features.title.possibilities"
+                description="Features section title highlight"
+              >
+                无限可能
+              </Translate>
             </span>
           </h2>
           <p className={styles.featuresSectionSubtitle}>
-            ScriptCat
-            提供了一系列强大的功能，让您可以轻松地扩展浏览器的能力，创造属于自己的网络体验。
+            <Translate
+              id="homepage.features.subtitle"
+              description="Features section subtitle"
+            >
+              ScriptCat 提供了一系列强大的功能，让您可以轻松地扩展浏览器的能力，创造属于自己的网络体验。
+            </Translate>
           </p>
         </div>
 
         <div className={styles.featuresGrid}>
           <FeatureCard
             icon="lucide:code"
-            title="Tampermonkey 兼容"
-            description="完全兼容 Tampermonkey 脚本格式，无缝迁移现有脚本库，零成本切换使用。"
+            title={translate({
+              id: 'homepage.features.tampermonkey.title',
+              message: 'Tampermonkey 兼容',
+            })}
+            description={translate({
+              id: 'homepage.features.tampermonkey.description',
+              message: '完全兼容 Tampermonkey 脚本格式，无缝迁移现有脚本库，零成本切换使用。',
+            })}
             color="rgba(59, 130, 246, 0.8)"
           />
           <FeatureCard
             icon="lucide:zap"
-            title="后台脚本"
-            description="区别于普通用户脚本，让你的脚本可以在后台中持续运行，无须开启标签页。"
+            title={translate({
+              id: 'homepage.features.background.title',
+              message: '后台脚本',
+            })}
+            description={translate({
+              id: 'homepage.features.background.description',
+              message: '区别于普通用户脚本，让你的脚本可以在后台中持续运行，无须开启标签页。',
+            })}
             color="rgba(99, 102, 241, 0.8)"
           />
           <FeatureCard
             icon="lucide:shield"
-            title="安全可靠"
-            description="严格的权限控制系统，脚本行为透明可见，有效防止恶意脚本，保护您的隐私安全。"
+            title={translate({
+              id: 'homepage.features.security.title',
+              message: '安全可靠',
+            })}
+            description={translate({
+              id: 'homepage.features.security.description',
+              message: '严格的权限控制系统，脚本行为透明可见，有效防止恶意脚本，保护您的隐私安全。',
+            })}
             color="rgba(168, 85, 247, 0.8)"
           />
           <FeatureCard
             icon="lucide:pencil"
-            title="内置代码编辑器"
-            description="强大的代码编辑器，支持语法高亮、代码补全、错误提示，让脚本编写更高效。"
+            title={translate({
+              id: 'homepage.features.editor.title',
+              message: '内置代码编辑器',
+            })}
+            description={translate({
+              id: 'homepage.features.editor.description',
+              message: '强大的代码编辑器，支持语法高亮、代码补全、错误提示，让脚本编写更高效。',
+            })}
             color="rgba(20, 184, 166, 0.8)"
           />
           <FeatureCard
             icon="lucide:plug"
-            title="强大的 API"
-            description="提供比GM更丰富的 API 接口，支持文件存储、用户配置等高级功能，扩展脚本能力。"
+            title={translate({
+              id: 'homepage.features.api.title',
+              message: '强大的 API',
+            })}
+            description={translate({
+              id: 'homepage.features.api.description',
+              message: '提供比GM更丰富的 API 接口，支持文件存储、用户配置等高级功能，扩展脚本能力。',
+            })}
             color="rgba(16, 185, 129, 0.8)"
           />
           <FeatureCard
             icon="lucide:box"
-            title="脚本商店"
-            description="拥有脚本商店，一键安装热门脚本，或发布您的作品与社区分享，构建活跃的生态圈。"
+            title={translate({
+              id: 'homepage.features.store.title',
+              message: '脚本商店',
+            })}
+            description={translate({
+              id: 'homepage.features.store.description',
+              message: '拥有脚本商店，一键安装热门脚本，或发布您的作品与社区分享，构建活跃的生态圈。',
+            })}
             color="rgba(244, 63, 94, 0.8)"
           />
         </div>
@@ -512,27 +668,63 @@ function ComparisonSection() {
     scriptcatLabel?: string;
     tampermonkeyLabel?: string;
   }[] = [
-    { feature: "脚本兼容性", scriptcat: true, tampermonkey: true },
+    { 
+      feature: translate({
+        id: 'homepage.comparison.feature.compatibility',
+        message: '脚本兼容性',
+      }), 
+      scriptcat: true, 
+      tampermonkey: true 
+    },
     {
-      feature: "后台脚本",
+      feature: translate({
+        id: 'homepage.comparison.feature.background',
+        message: '后台脚本',
+      }),
       scriptcat: true,
       tampermonkey: -1,
-      scriptcatLabel: "高效",
+      scriptcatLabel: translate({
+        id: 'homepage.comparison.label.efficient',
+        message: '高效',
+      }),
     },
-    { feature: "开源免费", scriptcat: true, tampermonkey: true },
+    { 
+      feature: translate({
+        id: 'homepage.comparison.feature.opensource',
+        message: '开源免费',
+      }), 
+      scriptcat: true, 
+      tampermonkey: true 
+    },
     {
-      feature: "云端同步",
+      feature: translate({
+        id: 'homepage.comparison.feature.sync',
+        message: '云端同步',
+      }),
       scriptcat: true,
       tampermonkey: true,
-      scriptcatLabel: "多平台",
+      scriptcatLabel: translate({
+        id: 'homepage.comparison.label.multiplatform',
+        message: '多平台',
+      }),
     },
     {
-      feature: "更多的 API",
+      feature: translate({
+        id: 'homepage.comparison.feature.api',
+        message: '更多的 API',
+      }),
       scriptcat: true,
       tampermonkey: -1,
       scriptcatLabel: "",
     },
-    { feature: "社区支持", scriptcat: true, tampermonkey: -1 },
+    { 
+      feature: translate({
+        id: 'homepage.comparison.feature.community',
+        message: '社区支持',
+      }), 
+      scriptcat: true, 
+      tampermonkey: -1 
+    },
   ];
 
   // 使用状态来跟踪当前高亮的行
@@ -566,7 +758,12 @@ function ComparisonSection() {
         <div className={styles.comparisonSectionHeader}>
           <div className={styles.comparisonSectionTitleWrapper}>
             <h2 className={styles.comparisonSectionTitle}>
-              为什么选择{" "}
+              <Translate
+                id="homepage.comparison.title.why"
+                description="Comparison section title part 1"
+              >
+                为什么选择
+              </Translate>{" "}
               <span className={styles.comparisonSectionTitleHighlight}>
                 ScriptCat
               </span>
@@ -574,7 +771,12 @@ function ComparisonSection() {
             <div className={styles.comparisonSectionTitleGlow}></div>
           </div>
           <p className={styles.comparisonSectionSubtitle}>
-            与其他脚本引擎相比，ScriptCat 提供了更多优势和增强功能
+            <Translate
+              id="homepage.comparison.subtitle"
+              description="Comparison section subtitle"
+            >
+              与其他脚本引擎相比，ScriptCat 提供了更多优势和增强功能
+            </Translate>
           </p>
         </div>
 
@@ -595,7 +797,12 @@ function ComparisonSection() {
                   <div className={styles.comparisonTableHeaderCell}>
                     <div className={styles.comparisonTableHeaderCellContent}>
                       <span className={styles.comparisonTableHeaderTitle}>
-                        特性
+                        <Translate
+                          id="homepage.comparison.feature"
+                          description="Comparison table header: Feature"
+                        >
+                          特性
+                        </Translate>
                       </span>
                       <div className={styles.comparisonTableHeaderLine}></div>
                     </div>
@@ -771,32 +978,85 @@ function ScenarioSection() {
       <div className="container">
         <div className={styles.scenarioSectionHeader}>
           <h2 className={styles.scenarioSectionTitle}>
-            解决
+            <Translate
+              id="homepage.scenario.title.solve"
+              description="Scenario section title part 1"
+            >
+              解决
+            </Translate>
             <span className={styles.scenarioSectionTitleHighlight}>
-              实际问题
+              <Translate
+                id="homepage.scenario.title.problems"
+                description="Scenario section title highlight"
+              >
+                实际问题
+              </Translate>
             </span>
-            的脚本
+            <Translate
+              id="homepage.scenario.title.scripts"
+              description="Scenario section title part 2"
+            >
+              的脚本
+            </Translate>
           </h2>
           <p className={styles.scenarioSectionSubtitle}>
-            来看看 ScriptCat 能为您的浏览体验带来哪些改变
+            <Translate
+              id="homepage.scenario.subtitle"
+              description="Scenario section subtitle"
+            >
+              来看看 ScriptCat 能为您的浏览体验带来哪些改变
+            </Translate>
           </p>
         </div>
 
         <div className={styles.scenarioGrid}>
           <ScenarioCard
             icon="lucide:video"
-            title="视频网站增强"
-            subtitle="优化视频观看体验"
-            tag="热门应用"
+            title={translate({
+              id: 'homepage.scenario.video.title',
+              message: '视频网站增强',
+            })}
+            subtitle={translate({
+              id: 'homepage.scenario.video.subtitle',
+              message: '优化视频观看体验',
+            })}
+            tag={translate({
+              id: 'homepage.scenario.video.tag',
+              message: '热门应用',
+            })}
             tagColor={{
               bg: "rgba(59, 130, 246, 0.1)",
               text: "var(--ifm-color-primary-light)",
             }}
             features={[
-              { icon: "lucide:fast-forward", text: "视频倍速控制" },
-              { icon: "lucide:download", text: "一键视频下载" },
-              { icon: "lucide:x-circle", text: "广告自动跳过" },
-              { icon: "lucide:layout", text: "界面简化优化" },
+              { 
+                icon: "lucide:fast-forward", 
+                text: translate({
+                  id: 'homepage.scenario.video.feature.speed',
+                  message: '视频倍速控制',
+                })
+              },
+              { 
+                icon: "lucide:download", 
+                text: translate({
+                  id: 'homepage.scenario.video.feature.download',
+                  message: '一键视频下载',
+                })
+              },
+              { 
+                icon: "lucide:x-circle", 
+                text: translate({
+                  id: 'homepage.scenario.video.feature.adblock',
+                  message: '广告自动跳过',
+                })
+              },
+              { 
+                icon: "lucide:layout", 
+                text: translate({
+                  id: 'homepage.scenario.video.feature.ui',
+                  message: '界面简化优化',
+                })
+              },
             ]}
             sites={["Bilibili", "Youtube", "Netflix", "+更多"]}
             scriptUrl="https://scriptcat.org/search?keyword=视频"
@@ -804,18 +1064,51 @@ function ScenarioSection() {
 
           <ScenarioCard
             icon="lucide:shopping-cart"
-            title="网购助手"
-            subtitle="让购物体验更轻松"
-            tag="实用工具"
+            title={translate({
+              id: 'homepage.scenario.shopping.title',
+              message: '网购助手',
+            })}
+            subtitle={translate({
+              id: 'homepage.scenario.shopping.subtitle',
+              message: '让购物体验更轻松',
+            })}
+            tag={translate({
+              id: 'homepage.scenario.shopping.tag',
+              message: '实用工具',
+            })}
             tagColor={{
               bg: "rgba(99, 102, 241, 0.1)",
               text: "var(--ifm-color-primary-light)",
             }}
             features={[
-              { icon: "lucide:trending-down", text: "价格历史查询" },
-              { icon: "lucide:percent", text: "优惠券自动查找" },
-              { icon: "lucide:search", text: "同款比价" },
-              { icon: "lucide:bell", text: "降价提醒" },
+              { 
+                icon: "lucide:trending-down", 
+                text: translate({
+                  id: 'homepage.scenario.shopping.feature.history',
+                  message: '价格历史查询',
+                })
+              },
+              { 
+                icon: "lucide:percent", 
+                text: translate({
+                  id: 'homepage.scenario.shopping.feature.coupon',
+                  message: '优惠券自动查找',
+                })
+              },
+              { 
+                icon: "lucide:search", 
+                text: translate({
+                  id: 'homepage.scenario.shopping.feature.compare',
+                  message: '同款比价',
+                })
+              },
+              { 
+                icon: "lucide:bell", 
+                text: translate({
+                  id: 'homepage.scenario.shopping.feature.alert',
+                  message: '降价提醒',
+                })
+              },
             ]}
             sites={["淘宝", "京东", "亚马逊", "+更多"]}
             scriptUrl="https://scriptcat.org/search?keyword=购物"
@@ -840,14 +1133,34 @@ function DownloadSection() {
           <div className={styles.downloadCardContent}>
             <div className={styles.downloadCardLeft}>
               <h2 className={styles.downloadCardTitle}>
-                准备好
+                <Translate
+                  id="homepage.download.title.ready"
+                  description="Download section title part 1"
+                >
+                  准备好
+                </Translate>
                 <span className={styles.downloadCardTitleHighlight}>
-                  增强您的浏览体验
+                  <Translate
+                    id="homepage.download.title.enhance"
+                    description="Download section title highlight"
+                  >
+                    增强您的浏览体验
+                  </Translate>
                 </span>
-                了吗？
+                <Translate
+                  id="homepage.download.title.question"
+                  description="Download section title part 2"
+                >
+                  了吗？
+                </Translate>
               </h2>
               <p className={styles.downloadCardSubtitle}>
-                立即安装 ScriptCat，解锁网页浏览的无限可能
+                <Translate
+                  id="homepage.download.subtitle"
+                  description="Download section subtitle"
+                >
+                  立即安装 ScriptCat，解锁网页浏览的无限可能
+                </Translate>
               </p>
               <div className={styles.downloadCardButtons}>
                 <a
@@ -859,7 +1172,12 @@ function DownloadSection() {
                     icon="ri:edge-new-line"
                     className={styles.downloadCardButtonIcon}
                   />
-                  Edge 扩展商店
+                  <Translate
+                    id="homepage.download.edge"
+                    description="Download button: Edge store"
+                  >
+                    Edge 扩展商店
+                  </Translate>
                 </a>
                 <a
                   href="https://chrome.google.com/webstore/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf"
@@ -870,7 +1188,12 @@ function DownloadSection() {
                     icon="lucide:chrome"
                     className={styles.downloadCardButtonIcon}
                   />
-                  Chrome 扩展商店
+                  <Translate
+                    id="homepage.download.chrome"
+                    description="Download button: Chrome store"
+                  >
+                    Chrome 扩展商店
+                  </Translate>
                 </a>
                 <a
                   href="https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/"
@@ -881,7 +1204,12 @@ function DownloadSection() {
                     icon="ri:firefox-line"
                     className={styles.downloadCardButtonIcon}
                   />
-                  Firefox 扩展商店
+                  <Translate
+                    id="homepage.download.firefox"
+                    description="Download button: Firefox store"
+                  >
+                    Firefox 扩展商店
+                  </Translate>
                 </a>
                 <a
                   href="https://github.com/scriptscat/scriptcat/releases"
@@ -892,7 +1220,12 @@ function DownloadSection() {
                     icon="lucide:github"
                     className={styles.downloadCardButtonIcon}
                   />
-                  GitHub 下载
+                  <Translate
+                    id="homepage.download.github"
+                    description="Download button: GitHub"
+                  >
+                    GitHub 下载
+                  </Translate>
                 </a>
               </div>
             </div>
@@ -932,10 +1265,20 @@ function DownloadSection() {
                         <IconCat />
                       </div>
                       <h4 className={styles.scriptcatPopupTitle}>
-                        ScriptCat 已启用
+                        <Translate
+                          id="homepage.download.popup.title"
+                          description="Extension popup title"
+                        >
+                          ScriptCat 已启用
+                        </Translate>
                       </h4>
                       <p className={styles.scriptcatPopupText}>
-                        3个脚本正在运行于当前页面
+                        <Translate
+                          id="homepage.download.popup.text"
+                          description="Extension popup text"
+                        >
+                          3个脚本正在运行于当前页面
+                        </Translate>
                       </p>
                     </div>
                   </div>
@@ -955,7 +1298,14 @@ function Footer() {
     <footer className={styles.footer}>
       {/* 贡献者区域 */}
       <div className={styles.footerContributors}>
-        <h4 className={styles.footerContributorsTitle}>感谢所有贡献者</h4>
+        <h4 className={styles.footerContributorsTitle}>
+          <Translate
+            id="homepage.footer.contributors.title"
+            description="Footer contributors section title"
+          >
+            感谢所有贡献者
+          </Translate>
+        </h4>
         <div className="flex justify-center w-full">
           <a href="https://github.com/scriptscat/scriptcat/graphs/contributors">
             <img src="https://contrib.rocks/image?repo=scriptscat/scriptcat&max=1000" />
@@ -999,6 +1349,12 @@ function useBackgroundColor(lightColor: string, darkColor: string) {
 
 export default function Home(): JSX.Element {
   useBackgroundColor("#f5f8fc", "#0f172a");
+  
+  // 在组件挂载时执行语言检测和重定向
+  useEffect(() => {
+    detectAndRedirectLanguage();
+  }, []);
+
   return (
     <Layout
       title="首页"

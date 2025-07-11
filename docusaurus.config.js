@@ -16,8 +16,8 @@ const config = {
   trailingSlash: true,
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "facebook", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  organizationName: "scriptscat", // Usually your GitHub org/user name.
+  projectName: "scriptcat.org", // Usually your repo name.
 
   plugins: [["@gracefullight/docusaurus-plugin-tailwind", {}]],
 
@@ -27,6 +27,18 @@ const config = {
   i18n: {
     defaultLocale: "zh-Hans",
     locales: ["zh-Hans", "en"],
+    localeConfigs: {
+      "zh-Hans": {
+        label: "简体中文",
+        direction: "ltr",
+        htmlLang: "zh-Hans",
+      },
+      en: {
+        label: "English",
+        direction: "ltr",
+        htmlLang: "en",
+      },
+    },
   },
 
   presets: [
@@ -98,6 +110,10 @@ const config = {
           {
             href: "https://github.com/scriptscat/scriptcat",
             label: "GitHub",
+            position: "right",
+          },
+          {
+            type: "localeDropdown",
             position: "right",
           },
         ],
