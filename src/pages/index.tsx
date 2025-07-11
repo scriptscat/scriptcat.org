@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import clsx from "clsx";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
+import Head from '@docusaurus/Head';
 import { Dropdown, Space } from "antd";
 import styles from "./index.module.css";
 import { Icon } from "@iconify/react";
@@ -1362,24 +1363,37 @@ export default function Home(): JSX.Element {
   }, []);
 
   return (
-    <Layout
-      title={translate({
-        id: 'homepage.meta.title',
-        message: '首页',
-      })}
-      description={translate({
-        id: 'homepage.meta.description',
-        message: '脚本猫,一个可以执行用户脚本的浏览器扩展,万物皆可脚本化,让你的浏览器可以做更多的事情!',
-      })}
-    >
-      <div className={styles.homeContainer}>
-        <HomepageHeader />
-        <FeaturesSection />
-        <ComparisonSection />
-        <ScenarioSection />
-        <DownloadSection />
-        <Footer />
-      </div>
-    </Layout>
+    <>
+      <Head>
+        <meta 
+          name="description" 
+          content={translate({
+            id: 'homepage.meta.description',
+            message: 'ScriptCat是一个强大的开源浏览器脚本引擎，让您轻松自定义网页功能、屏蔽广告、自动化任务，提升浏览体验。兼容Tampermonkey，提供更多功能和优化。',
+          })}
+        />
+        <meta name="keywords" content="ScriptCat,用户脚本,浏览器扩展,userscript,tampermonkey,violentmonkey,自动化,网页自定义,脚本管理,广告屏蔽" />
+      </Head>
+      
+      <Layout
+        title={translate({
+          id: 'homepage.meta.title',
+          message: '首页',
+        })}
+        description={translate({
+          id: 'homepage.meta.description',
+          message: '脚本猫,一个可以执行用户脚本的浏览器扩展,万物皆可脚本化,让你的浏览器可以做更多的事情!',
+        })}
+      >
+        <div className={styles.homeContainer}>
+          <HomepageHeader />
+          <FeaturesSection />
+          <ComparisonSection />
+          <ScenarioSection />
+          <DownloadSection />
+          <Footer />
+        </div>
+      </Layout>
+    </>
   );
 }

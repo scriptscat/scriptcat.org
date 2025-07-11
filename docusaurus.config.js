@@ -74,7 +74,11 @@ const config = {
         {
           name: "keywords",
           content:
-            "scriptcat,userscript,backscript,browser extension,浏览器扩展,用户脚本,后台脚本,脚本猫",
+            "scriptcat,userscript,browser extension,浏览器扩展,用户脚本,后台脚本,脚本猫,tampermonkey,violentmonkey,greasemonkey,javascript,自动化脚本,网页增强",
+        },
+        {
+          name: "description",
+          content: "ScriptCat 是一个可以执行自定义脚本的浏览器扩展，支持用户脚本、后台脚本等多种脚本类型。提供强大的脚本管理、同步、订阅等功能。",
         },
       ],
       navbar: {

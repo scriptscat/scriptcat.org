@@ -1,4 +1,28 @@
 {
+  "homepage.meta.title": {
+    "message": "ScriptCat - Powerful Browser Script Engine",
+    "description": "Homepage meta title for SEO"
+  },
+  "homepage.meta.description": {
+    "message": "ScriptCat is a powerful open-source browser script engine that lets you easily customize web functionality, eliminate ads, automate tasks, and enhance your browsing experience. Compatible with Tampermonkey with more features.",
+    "description": "Homepage meta description for SEO"
+  },
+  "homepage.og.title": {
+    "message": "ScriptCat - Powerful Browser Script Engine",
+    "description": "Open Graph title for social sharing"
+  },
+  "homepage.og.description": {
+    "message": "Open-source browser script engine that makes your browser do more. Supports userscripts, background scripts, compatible with Tampermonkey, more powerful features.",
+    "description": "Open Graph description for social sharing"
+  },
+  "homepage.twitter.title": {
+    "message": "ScriptCat - Powerful Browser Script Engine",
+    "description": "Twitter card title"
+  },
+  "homepage.twitter.description": {
+    "message": "Open-source browser script engine that makes your browser do more",
+    "description": "Twitter card description"
+  },
   "homepage.hero.title": {
     "message": "The Ultimate Script Engine for",
     "description": "Main title on the homepage hero section"
@@ -282,14 +306,6 @@
   "homepage.footer.contributors.title": {
     "message": "Thanks to all contributors",
     "description": "Footer contributors section title"
-  },
-  "homepage.meta.title": {
-    "message": "Home",
-    "description": "Homepage meta title"
-  },
-  "homepage.meta.description": {
-    "message": "ScriptCat, a browser extension that executes user scripts, making everything scriptable and enabling your browser to do more!",
-    "description": "Homepage meta description"
   },
   "footer.description": {
     "message": "A powerful browser script engine that makes your web experience richer and more colorful.",
