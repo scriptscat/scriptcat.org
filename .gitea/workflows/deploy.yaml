@@ -32,7 +32,7 @@ jobs:
 
     - name: Build
       run: |
-        pnpm i
+        pnpm install --frozen-lockfile
         pnpm run build
 
     - name: Set up QEMU
