@@ -235,6 +235,10 @@
     "message": "降价提醒",
     "description": "购物特性：价格提醒"
   },
+  "homepage.scenario.sites.more": {
+    "message": "+更多",
+    "description": "场景卡片中的更多网站指示器"
+  },
   "homepage.download.title.ready": {
     "message": "准备好",
     "description": "下载区域标题第一部分"
@@ -278,5 +282,97 @@
   "homepage.footer.contributors.title": {
     "message": "感谢所有贡献者",
     "description": "页脚贡献者区域标题"
+  },
+  "homepage.meta.title": {
+    "message": "首页",
+    "description": "首页元标题"
+  },
+  "homepage.meta.description": {
+    "message": "脚本猫,一个可以执行用户脚本的浏览器扩展,万物皆可脚本化,让你的浏览器可以做更多的事情!",
+    "description": "首页元描述"
+  },
+  "footer.description": {
+    "message": "强大的浏览器脚本引擎，让您的上网体验更加丰富多彩。",
+    "description": "页脚描述"
+  },
+  "footer.product.title": {
+    "message": "产品",
+    "description": "页脚产品栏标题"
+  },
+  "footer.product.features": {
+    "message": "特性介绍",
+    "description": "页脚产品特性链接"
+  },
+  "footer.product.scriptStore": {
+    "message": "脚本商店",
+    "description": "页脚产品脚本商店链接"
+  },
+  "footer.product.changelog": {
+    "message": "更新日志",
+    "description": "页脚产品更新日志链接"
+  },
+  "footer.resources.title": {
+    "message": "资源",
+    "description": "页脚资源栏标题"
+  },
+  "footer.resources.devDocs": {
+    "message": "开发文档",
+    "description": "页脚资源开发文档链接"
+  },
+  "footer.resources.apiReference": {
+    "message": "API 参考",
+    "description": "页脚资源API参考链接"
+  },
+  "footer.resources.examples": {
+    "message": "示例脚本",
+    "description": "页脚资源示例脚本链接"
+  },
+  "footer.resources.faq": {
+    "message": "常见问题",
+    "description": "页脚资源常见问题链接"
+  },
+  "footer.community.title": {
+    "message": "社区",
+    "description": "页脚社区栏标题"
+  },
+  "footer.community.forum": {
+    "message": "论坛讨论",
+    "description": "页脚社区论坛链接"
+  },
+  "footer.community.discord": {
+    "message": "Discord 频道",
+    "description": "页脚社区Discord链接"
+  },
+  "footer.community.contributing": {
+    "message": "贡献指南",
+    "description": "页脚社区贡献指南链接"
+  },
+  "footer.community.issues": {
+    "message": "报告问题",
+    "description": "页脚社区报告问题链接"
+  },
+  "footer.community.contact": {
+    "message": "联系团队",
+    "description": "页脚社区联系团队链接"
+  },
+  "footer.community.recruiting": {
+    "message": "招募中",
+    "description": "页脚社区招募标签"
+  },
+  "footer.copyright.allRightsReserved": {
+    "message": "保留所有权利。",
+    "description": "页脚版权所有权利保留文本"
+  },
+  "footer.copyright.privacy": {
+    "message": "隐私政策",
+    "description": "页脚版权隐私政策链接"
+  },
+  "footer.copyright.terms": {
+    "message": "使用条款",
+    "description": "页脚版权使用条款链接"
+  },
+  "footer.copyright.license": {
+    "message": "许可协议",
+    "description": "页脚版权许可协议链接"
   }
 }

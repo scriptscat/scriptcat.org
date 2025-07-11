@@ -235,6 +235,10 @@
     "message": "Price Drop Alert",
     "description": "Shopping feature: Price alert"
   },
+  "homepage.scenario.sites.more": {
+    "message": "+More",
+    "description": "More sites indicator in scenario cards"
+  },
   "homepage.download.title.ready": {
     "message": "Ready to",
     "description": "Download section title part 1"
@@ -278,5 +282,97 @@
   "homepage.footer.contributors.title": {
     "message": "Thanks to all contributors",
     "description": "Footer contributors section title"
+  },
+  "homepage.meta.title": {
+    "message": "Home",
+    "description": "Homepage meta title"
+  },
+  "homepage.meta.description": {
+    "message": "ScriptCat, a browser extension that executes user scripts, making everything scriptable and enabling your browser to do more!",
+    "description": "Homepage meta description"
+  },
+  "footer.description": {
+    "message": "A powerful browser script engine that makes your web experience richer and more colorful.",
+    "description": "Footer description"
+  },
+  "footer.product.title": {
+    "message": "Product",
+    "description": "Footer product section title"
+  },
+  "footer.product.features": {
+    "message": "Features",
+    "description": "Footer product features link"
+  },
+  "footer.product.scriptStore": {
+    "message": "Script Store",
+    "description": "Footer product script store link"
+  },
+  "footer.product.changelog": {
+    "message": "Changelog",
+    "description": "Footer product changelog link"
+  },
+  "footer.resources.title": {
+    "message": "Resources",
+    "description": "Footer resources section title"
+  },
+  "footer.resources.devDocs": {
+    "message": "Developer Docs",
+    "description": "Footer resources development docs link"
+  },
+  "footer.resources.apiReference": {
+    "message": "API Reference",
+    "description": "Footer resources API reference link"
+  },
+  "footer.resources.examples": {
+    "message": "Example Scripts",
+    "description": "Footer resources example scripts link"
+  },
+  "footer.resources.faq": {
+    "message": "FAQ",
+    "description": "Footer resources FAQ link"
+  },
+  "footer.community.title": {
+    "message": "Community",
+    "description": "Footer community section title"
+  },
+  "footer.community.forum": {
+    "message": "Forum Discussion",
+    "description": "Footer community forum link"
+  },
+  "footer.community.discord": {
+    "message": "Discord Channel",
+    "description": "Footer community Discord link"
+  },
+  "footer.community.contributing": {
+    "message": "Contributing Guide",
+    "description": "Footer community contributing guide link"
+  },
+  "footer.community.issues": {
+    "message": "Report Issues",
+    "description": "Footer community report issues link"
+  },
+  "footer.community.contact": {
+    "message": "Contact Team",
+    "description": "Footer community contact team link"
+  },
+  "footer.community.recruiting": {
+    "message": "Recruiting",
+    "description": "Footer community recruiting badge"
+  },
+  "footer.copyright.allRightsReserved": {
+    "message": "All rights reserved.",
+    "description": "Footer copyright all rights reserved text"
+  },
+  "footer.copyright.privacy": {
+    "message": "Privacy Policy",
+    "description": "Footer copyright privacy policy link"
+  },
+  "footer.copyright.terms": {
+    "message": "Terms of Use",
+    "description": "Footer copyright terms of use link"
+  },
+  "footer.copyright.license": {
+    "message": "License Agreement",
+    "description": "Footer copyright license link"
   }
 }

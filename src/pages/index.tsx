@@ -1058,7 +1058,10 @@ function ScenarioSection() {
                 })
               },
             ]}
-            sites={["Bilibili", "Youtube", "Netflix", "+更多"]}
+            sites={["Bilibili", "Youtube", "Netflix", translate({
+              id: 'homepage.scenario.sites.more',
+              message: '+更多',
+            })]}
             scriptUrl="https://scriptcat.org/search?keyword=视频"
           />
 
@@ -1110,7 +1113,10 @@ function ScenarioSection() {
                 })
               },
             ]}
-            sites={["淘宝", "京东", "亚马逊", "+更多"]}
+            sites={["淘宝", "京东", "亚马逊", translate({
+              id: 'homepage.scenario.sites.more',
+              message: '+更多',
+            })]}
             scriptUrl="https://scriptcat.org/search?keyword=购物"
           />
         </div>
@@ -1357,8 +1363,14 @@ export default function Home(): JSX.Element {
 
   return (
     <Layout
-      title="首页"
-      description="脚本猫,一个可以执行用户脚本的浏览器扩展,万物皆可脚本化,让你的浏览器可以做更多的事情!"
+      title={translate({
+        id: 'homepage.meta.title',
+        message: '首页',
+      })}
+      description={translate({
+        id: 'homepage.meta.description',
+        message: '脚本猫,一个可以执行用户脚本的浏览器扩展,万物皆可脚本化,让你的浏览器可以做更多的事情!',
+      })}
     >
       <div className={styles.homeContainer}>
         <HomepageHeader />
