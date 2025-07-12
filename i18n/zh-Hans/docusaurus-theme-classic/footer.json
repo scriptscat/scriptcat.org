@@ -1,0 +1,42 @@
+{
+  "link.title.Docs": {
+    "message": "Docs",
+    "description": "The title of the footer links column with title=Docs in the footer"
+  },
+  "link.title.Community": {
+    "message": "Community",
+    "description": "The title of the footer links column with title=Community in the footer"
+  },
+  "link.title.More": {
+    "message": "More",
+    "description": "The title of the footer links column with title=More in the footer"
+  },
+  "link.item.label.使用指南": {
+    "message": "使用指南",
+    "description": "The label of footer link with label=使用指南 linking to /docs/use"
+  },
+  "link.item.label.开发指南": {
+    "message": "开发指南",
+    "description": "The label of footer link with label=开发指南 linking to /docs/dev"
+  },
+  "link.item.label.油猴中文网": {
+    "message": "油猴中文网",
+    "description": "The label of footer link with label=油猴中文网 linking to https://bbs.tampermonkey.net.cn/"
+  },
+  "link.item.label.脚本猫脚本站": {
+    "message": "脚本猫脚本站",
+    "description": "The label of footer link with label=脚本猫脚本站 linking to https://scriptcat.org/"
+  },
+  "link.item.label.Discord": {
+    "message": "Discord",
+    "description": "The label of footer link with label=Discord linking to https://discord.gg/JF76nHCCM7"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "The label of footer link with label=GitHub linking to https://github.com/scriptscat/scriptcat"
+  },
+  "copyright": {
+    "message": "Copyright © 2025 ScriptCat, Inc. Built with Docusaurus.",
+    "description": "The footer copyright"
+  }
+}
