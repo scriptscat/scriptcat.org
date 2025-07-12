@@ -3,9 +3,7 @@ id: privacy
 title: Privacy Policy
 ---
 
-# ScriptCat Privacy Policy
-
-Welcome to visit our products. ScriptCat (including services provided by products such as apps and websites, hereinafter referred to as "products and services") is developed and operated by scriptcat.org (hereinafter referred to as "we"). Ensuring the data security and privacy protection of users is our top priority. This privacy policy sets out the data collected when you access and use our products and services and how it is processed.
+Welcome to our product. ScriptCat (including services provided by the App and website products, hereinafter referred to as "products and services") is developed and operated by scriptcat.org (hereinafter referred to as "we"). Ensuring user data security and privacy protection is our top priority. This privacy policy sets out the data collected when you visit and use our products and services and how it is processed.
 
 Please be sure to read carefully and confirm that you fully understand all the rules and key points of this Privacy Policy before continuing to use our products. Once you choose to use it, you are deemed to agree to the entire content of this Privacy Policy and agree to our collection and use of you in accordance with it. related information. If you have any questions about this policy while reading, you can contact our customer service for consultation. Please contact us through yz@ggnb.top or the feedback method in the product. If you do not agree to the relevant agreement or any of its terms, you should stop using our products and services.
 

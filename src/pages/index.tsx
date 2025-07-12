@@ -15,37 +15,7 @@ import { IconCat } from "../components/IconCat";
 import type { MenuProps } from "antd";
 import Translate, { translate } from '@docusaurus/Translate';
 
-// 语言检测和重定向函数
-function detectAndRedirectLanguage() {
-  // 如果已经在特定语言路径下，则不进行重定向
-  if (window.location.pathname !== '/') {
-    return;
-  }
 
-  // 检查是否已经执行过重定向，避免无限循环
-  if (sessionStorage.getItem('redirected')) {
-    return;
-  }
-
-  // 获取用户首选语言
-  const userLanguages = navigator.languages || [navigator.language];
-  
-  // 检查是否包含中文语言
-  const hasChinese = userLanguages.some(lang => 
-    lang.toLowerCase().includes('zh') || 
-    lang.toLowerCase().includes('cn')
-  );
-
-  // 标记已执行重定向
-  sessionStorage.setItem('redirected', 'true');
-
-  // 只有非中文用户才需要重定向到英文版本
-  // 中文用户保持在根路径（默认中文）
-  if (!hasChinese) {
-    // 其他语言用户跳转到英文版本
-    window.location.href = '/en/';
-  }
-}
 
 // 浏览器图标按钮组件
 const IconButton = ({ href, text, icon, target = "_blank" }) => {
@@ -1357,11 +1327,6 @@ function useBackgroundColor(lightColor: string, darkColor: string) {
 export default function Home(): JSX.Element {
   useBackgroundColor("#f5f8fc", "#0f172a");
   
-  // 在组件挂载时执行语言检测和重定向
-  useEffect(() => {
-    detectAndRedirectLanguage();
-  }, []);
-
   return (
     <>
       <Head>
