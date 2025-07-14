@@ -665,7 +665,7 @@ function ComparisonSection() {
         message: '开源免费',
       }), 
       scriptcat: true, 
-      tampermonkey: true 
+      tampermonkey: false 
     },
     {
       feature: translate({
