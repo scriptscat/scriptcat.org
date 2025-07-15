@@ -1,7 +1,7 @@
 export function IconCat() {
   return (
     <img
-      src="./img/logo.png"
+      src="/img/logo.png"
       alt=" Icon"
       style={{
         width: '2rem',
