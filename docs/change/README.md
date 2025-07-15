@@ -5,14 +5,96 @@ sidebar_position: 1
 
 # 更新日志
 
-Beta版本更新日志请查看 [Beta 更新日志](./beta.md)
+Beta 版本更新日志请查看 [Beta 更新日志](./beta.md)
+
+<a name="1.0.0-beta"></a>
+
+## 1.0.0-beta (2025-07-14)
+
+🎉 准备向 v1.0.0 进发，非常感谢哥哥们的支持！
+
+### Added
+
+- ✨ 优化日志打印 [[8693b93](https://github.com/scriptscat/scriptcat/commit/8693b9338bdd916ffad58572949e67d14cc2c109)]
+- ✨ 实现异步 GM 函数 ([8caebe9](https://github.com/scriptscat/scriptcat/commit/8caebe9ae4f6f6b304b54cbb870a4cebd6341704))
+- ✨ 链接导入脚本时可以按回车键确定 ([#537](https://github.com/scriptscat/scriptcat/issues/537)) [[45a17df](https://github.com/scriptscat/scriptcat/commit/45a17df8f35a943a489c0f5980ac3f65fb0e8e5f)] (by @TC999)
+- ✨ 增加 Prettier 的 ESLint 统一代码格式化风格 [[0f84a19](https://github.com/scriptscat/scriptcat/commit/0f84a19c42823baab60f2b379d187073be7879f9)]
+- ✨ 安装/更新脚本时增加下拉框 [#508](https://github.com/scriptscat/scriptcat/issues/508) [[790584d](https://github.com/scriptscat/scriptcat/commit/790584d078eb4bbf2179aec5297c5574d7b30167)]
+- ✨ 增加脚本单独的检查更新选项 [#508](https://github.com/scriptscat/scriptcat/issues/508) ([41ac880](https://github.com/scriptscat/scriptcat/commit/41ac880855fafe3a4e7a87cc05169f77d8a8f59c))
+- 🎉 准备跨入 v1.0.0 [[4aa4eef](https://github.com/scriptscat/scriptcat/commit/4aa4eefc05caa8477a1399734fd4f3f4dd758bc9)]
+- ✨ 实现异步 GM 函数 ([#492](https://github.com/scriptscat/scriptcat/issues/492)) [[cb8edf7](https://github.com/scriptscat/scriptcat/commit/cb8edf7809667068f4a2682afba82bc24302d717)] (by @cyfung1031)
+- ✨ 支持 GoogleDrive ([#490](https://github.com/scriptscat/scriptcat/issues/490)) [[dc38f7f](https://github.com/scriptscat/scriptcat/commit/dc38f7f38fca13febe197a3ced4e817cacec5920)] (by @wangyizhi)
+
+### Changed
+
+- ⚡ 优化脚本资源加载 ([4651ae4](https://github.com/scriptscat/scriptcat/commit/4651ae4964a94af83a5cc23c02be4b351db7dce9))
+- ⚡ 强化错误检查，加入自定义 esline-rules ([#542](https://github.com/scriptscat/scriptcat/issues/542)) [[c5ac3e3](https://github.com/scriptscat/scriptcat/commit/c5ac3e34176b10ab5f52e705da3d0764aae5519d)] (by @cyfung1031)
+- ⚡ React 優化 ([#530](https://github.com/scriptscat/scriptcat/issues/530)) [[45f73b7](https://github.com/scriptscat/scriptcat/commit/45f73b72b2a907d7e74929a571b24160982edbbb)] (by @cyfung1031)
+- ♻️ 重构 MainWorld 沙盒 proxyContext（效能优化，保持 TM 沙盒行为） ([#524](https://github.com/scriptscat/scriptcat/issues/524)) [[331087c](https://github.com/scriptscat/scriptcat/commit/331087c2e86580fc514fe5ffb4c2b1e665d4da71)] (by @cyfung1031)
+- ⚡ React 元件 key ([#526](https://github.com/scriptscat/scriptcat/issues/526)) [[df995ed](https://github.com/scriptscat/scriptcat/commit/df995ed2e63800cf523e8ba868bed991829894ef)] (by @cyfung1031)
+- 💄 调整 UI ([#523](https://github.com/scriptscat/scriptcat/issues/523)) [[ec1fcd2](https://github.com/scriptscat/scriptcat/commit/ec1fcd27083dce2b988e9aecade215f097978c8e)] (by @rkscv)
+- ⚡ GM 优化 及其他更新 ([#519](https://github.com/scriptscat/scriptcat/issues/519)) [[3d3be2c](https://github.com/scriptscat/scriptcat/commit/3d3be2ccae3a5218ecca91605f6b483a8d9aa2e4)] (by @cyfung1031)
+- ⚡ GM 注入优化 ([#517](https://github.com/scriptscat/scriptcat/issues/517)) [[1d6d52a](https://github.com/scriptscat/scriptcat/commit/1d6d52af3ff75cf547216284e0e837f3a44e7639)] (by @cyfung1031)
+- ⚡ 輕微調整 ([#512](https://github.com/scriptscat/scriptcat/issues/512)) [[b3ceea3](https://github.com/scriptscat/scriptcat/commit/b3ceea35edb29bf735cb75f216c041d18cf901d3)] (by @cyfung1031)
+- 📝 更新文档 ([#488](https://github.com/scriptscat/scriptcat/issues/488)) ([89b9848](https://github.com/scriptscat/scriptcat/commit/89b984866e90f0fd610da973b0952d801fe07a27))
+- ⚡ TreeShaking ([#509](https://github.com/scriptscat/scriptcat/issues/509)) [[4e70591](https://github.com/scriptscat/scriptcat/commit/4e705916a406d13eb09ee1aa2839b6ffeb484222)] (by @cyfung1031)
+- ⚡ Tree Shaking ([#505](https://github.com/scriptscat/scriptcat/issues/505)) [[05a71f0](https://github.com/scriptscat/scriptcat/commit/05a71f0afe7087f90c7be9c3a694986b8f0f65f8)] (by @cyfung1031)
+- 🎨 修改.d.ts [#475](https://github.com/scriptscat/scriptcat/issues/475) [[a3adc00](https://github.com/scriptscat/scriptcat/commit/a3adc00708232835463d8f2ac6c49d7de259cb4f)]
+- ⚡ 加快 Render ([#491](https://github.com/scriptscat/scriptcat/issues/491)) [[1b266be](https://github.com/scriptscat/scriptcat/commit/1b266bec9b17053ea046f25ce0aab2f32afb6e9c)] (by @cyfung1031)
+- 🎨 修复 eslint 问题 ([f49e20f](https://github.com/scriptscat/scriptcat/commit/f49e20faa78ca377f3404323cd13a5a7a5c27dca))
+
+### Fixed
+
+- 🐛 修复脚本列表打勾时筛选会失效的问题 [#507](https://github.com/scriptscat/scriptcat/issues/507) ([8830490](https://github.com/scriptscat/scriptcat/commit/8830490007102d91df1f7dd4647f9fdf3de1417b))
+- 🐛 脚本名宽度设置为固定宽度 [#495](https://github.com/scriptscat/scriptcat/issues/495) ([33edabd](https://github.com/scriptscat/scriptcat/commit/33edabdb7bbde618f6a88237f15fd6e87d4ee4ab))
+- 🐛 调整 init ([#543](https://github.com/scriptscat/scriptcat/issues/543)) [[0341d3c](https://github.com/scriptscat/scriptcat/commit/0341d3cf0442fc2e9c4c6dba4fbfb3a89dc522f1)] (by @cyfung1031)
+- 🐛 favicon 超时 ([#540](https://github.com/scriptscat/scriptcat/issues/540)) [[4484f01](https://github.com/scriptscat/scriptcat/commit/4484f0180895fd53c3f03045c758de8fdad49679)] (by @cyfung1031)
+- 🐛 修复 GM download done 属性丢失的问题 [[ed465e8](https://github.com/scriptscat/scriptcat/commit/ed465e8622277643286b9d32ccb62947230f5706)]
+- 🐛 MV3 兼容 Opera 以及 Firefox 调整 ([#534](https://github.com/scriptscat/scriptcat/issues/534)) [[645a58f](https://github.com/scriptscat/scriptcat/commit/645a58f67af9f2d6b69ffbbb5e0d008dc726d80b)] (by @cyfung1031)
+- 🐛 React 代码格式 lint ([#536](https://github.com/scriptscat/scriptcat/issues/536)) [[9ab4b22](https://github.com/scriptscat/scriptcat/commit/9ab4b225e803c337bf9c86f77fc2c64200ee4635)] (by @cyfung1031)
+- 🐛 修复 textarea 占位符换行问题 ([#538](https://github.com/scriptscat/scriptcat/issues/538)) [[9de4bb6](https://github.com/scriptscat/scriptcat/commit/9de4bb6cc02ca15363a2491eee2c9b387ebf5c4b)] (by @rkscv)
+- 💚 修复 lint 问题 [[8cf0ce8](https://github.com/scriptscat/scriptcat/commit/8cf0ce8ebd172aec86b9f250711e4375fc00aa81)]
+- 🐛 修复 GM_cookie.set 操作 [#520](https://github.com/scriptscat/scriptcat/issues/520) [[3d49376](https://github.com/scriptscat/scriptcat/commit/3d493768678b86c0a0f48040e7670a69bd714547)]
+- 🐛 修复 finalUrl 的问题 [[93fe904](https://github.com/scriptscat/scriptcat/commit/93fe904ed3cd4e819ca4549e77d288884022e0f2)]
+- 🐛 修复脚本名称中有特殊字符导致脚本加载失败的问题 [#516](https://github.com/scriptscat/scriptcat/issues/516) [[07631ef](https://github.com/scriptscat/scriptcat/commit/07631ef972b456574b2a0ed4e9ce4298b084c5e7)]
+- 🐛 修复 sandbox 关键字导致后台脚本无法正常运行的问题 ([e11dd11](https://github.com/scriptscat/scriptcat/commit/e11dd113cadcb0216448b4019d4f8cfba8522129))
+- 🐛 修复 GM API 加载问题 [[9f6bffc](https://github.com/scriptscat/scriptcat/commit/9f6bffc323cf524d767a0aa66b8e09411d6476c7)]
+- 🐛 修复 Google Drive 授权提示问题 [[b08187a](https://github.com/scriptscat/scriptcat/commit/b08187a9f580ebe8fca4f313315028e8895d09a7)]
+- 🐛 兼容 TM 的 GM_info [#478](https://github.com/scriptscat/scriptcat/issues/478) [[de49c50](https://github.com/scriptscat/scriptcat/commit/de49c50f1835acdaec7c47782deb55811e676f88)]
+- 🐛 处理窄屏显示问题 [#495](https://github.com/scriptscat/scriptcat/issues/495) [[a23f6d1](https://github.com/scriptscat/scriptcat/commit/a23f6d1e12863149e026dfe1691861a17deaeed8)]
+- 🐛 处理 GM_setValue 的返回值 [#493](https://github.com/scriptscat/scriptcat/issues/493) [[dfc24a5](https://github.com/scriptscat/scriptcat/commit/dfc24a50bc71f4cb65d1e81f520ce4c350696d19)]
+- 🐛 addStyle 代碼修正 ([#500](https://github.com/scriptscat/scriptcat/issues/500)) [[1f346cc](https://github.com/scriptscat/scriptcat/commit/1f346cc64e26b148b402756731e5d22a6260ccca)] (by @cyfung1031)
+
+### Miscellaneous
+
+- 🌐 添加俄语翻译 ([ea056b0](https://github.com/scriptscat/scriptcat/commit/ea056b088c4404df860f151ce67aadcc48257765))
+- 🌐 删除语言映射 ([ab66fb5](https://github.com/scriptscat/scriptcat/commit/ab66fb5eb01762299164379d151c29b8139135ad))
+- 🌐 根据前缀去匹配 ([505e112](https://github.com/scriptscat/scriptcat/commit/505e112d3ccb3365da2bb403f37bc6482a59051b))
+- ⬆️ 升级 vitest [[bbc2550](https://github.com/scriptscat/scriptcat/commit/bbc2550fe2ed5105a1d27666ec68ca484e424ac3)]
+- 🌐 增加 i18n 翻译 ([#525](https://github.com/scriptscat/scriptcat/issues/525)) [[8f677ce](https://github.com/scriptscat/scriptcat/commit/8f677cea06cc3f31902276b18112d353f4f3730e)] (by @cyfung1031)
+- 📝 修复文档 pnpm 错误 ([#527](https://github.com/scriptscat/scriptcat/issues/527)) [[324301a](https://github.com/scriptscat/scriptcat/commit/324301ab1b448e778c50bed47d40a18d9db76786)] (by @cyfung1031)
+- 🌐 修复 i18n 路径 [[4fc50cd](https://github.com/scriptscat/scriptcat/commit/4fc50cd15ed871f675ad3cdcb48fc91c0e3abd91)]
+- 🧪 添加 GM.\*的单元测试 [[4e91b36](https://github.com/scriptscat/scriptcat/commit/4e91b36b64220153fefe8b3a91575e0c302bf757)]
+- ⚡ 更快导入腳本 ([#498](https://github.com/scriptscat/scriptcat/issues/498)) ([6b7ee3d](https://github.com/scriptscat/scriptcat/commit/6b7ee3d177b7d48e59e1e31053d9007265a4d5cc))
+- ♻️ 庫引用整理 ([#494](https://github.com/scriptscat/scriptcat/issues/494)) ([55e2ecd](https://github.com/scriptscat/scriptcat/commit/55e2ecd35ffbf41a8e07eadf2da89f0afbc3685e))
+- 🔨 添加更新日志生成脚本 ([a4f5dd4](https://github.com/scriptscat/scriptcat/commit/a4f5dd4c096a593c23a33d72a04352ceb016f50a))
+- 📝 Update README [[b1d64f0](https://github.com/scriptscat/scriptcat/commit/b1d64f011e81ebd6a07ac2cd6ee62ecb23ec1c2a)]
+- 📝 Update README ([b20e36e](https://github.com/scriptscat/scriptcat/commit/b20e36ef889bae990c765d9c361434c5261fcbd1))
+- Merge branch 'release/mv3' [[eead31f](https://github.com/scriptscat/scriptcat/commit/eead31fa67a06c47bde214427b9860b3a1c98a3d)]
+- 🌐 处理 arco i18n 问题 [#507](https://github.com/scriptscat/scriptcat/issues/507) [[79ad287](https://github.com/scriptscat/scriptcat/commit/79ad287553e0bb679c2ab811dc924b9e18059c4c)]
+- 👷 调整 eslint 规则 [[ee54ff6](https://github.com/scriptscat/scriptcat/commit/ee54ff676db7b5761abc48be0d2b1cef465fb40f)]
+- 🔨 修改 changlog 生成脚本 [[924d4f8](https://github.com/scriptscat/scriptcat/commit/924d4f8d28e3764301112993ebb8e7f96a7a96fd)]
+- 📝 Release v0.19.0-beta [[25fcffc](https://github.com/scriptscat/scriptcat/commit/25fcffcd43d5c08d77ebe32cfa6ea8eb70186038)]
+- 🌐 issue 模板提供英文版本 [[37217d4](https://github.com/scriptscat/scriptcat/commit/37217d423d7e410893c68ef74963a6c14c38fafe)]
+- 📝 调整 readme [[acb5731](https://github.com/scriptscat/scriptcat/commit/acb5731df5141052312251073e1408426242b2e4)]
+- 🌐 Update i18n README.md ([#487](https://github.com/scriptscat/scriptcat/issues/487)) [[a0d6417](https://github.com/scriptscat/scriptcat/commit/a0d641782666315eed4937d6e62bff6944d65e9d)] (by @MaxZhang)
 
 <a name="0.18.2"></a>
 <a name="0.18.2-beta"></a>
 
 ## 0.18.2 (2025-07-08)
 
-> v0.18.2-beta版本内容与此版本一致
+> v0.18.2-beta 版本内容与此版本一致
 
 ### Added
 
@@ -25,107 +107,106 @@ Beta版本更新日志请查看 [Beta 更新日志](./beta.md)
 ### Changed
 
 - ⚡ 优化站点图标加载问题 [#474](https://github.com/scriptscat/scriptcat/issues/474) [[09e2a1b](https://github.com/scriptscat/scriptcat/commit/09e2a1b26b8289496ab211b4ebeb6ff4a4bb9049)]
-- 💄 优化popup页面展示 [#456](https://github.com/scriptscat/scriptcat/issues/456) [[5bfd9b2](https://github.com/scriptscat/scriptcat/commit/5bfd9b22c804438a0cfc9a2c491340afe7fcf7e2)]
-- ⚡ 优化站点icon加载速度 [[2841878](https://github.com/scriptscat/scriptcat/commit/28418789e617b903f8f5d9dbef4c8a8fcab5dc7c)]
+- 💄 优化 popup 页面展示 [#456](https://github.com/scriptscat/scriptcat/issues/456) [[5bfd9b2](https://github.com/scriptscat/scriptcat/commit/5bfd9b22c804438a0cfc9a2c491340afe7fcf7e2)]
+- ⚡ 优化站点 icon 加载速度 [[2841878](https://github.com/scriptscat/scriptcat/commit/28418789e617b903f8f5d9dbef4c8a8fcab5dc7c)]
 
 ### Fixed
 
-- 🐛 修复i18n在没有支持语言下无法保存的问题 [#485](https://github.com/scriptscat/scriptcat/issues/485) Fixed the issue that i18n cannot be saved without supporting languages [[5c012a3](https://github.com/scriptscat/scriptcat/commit/5c012a3ce3c679c323983340ac2dad6ab3188fd2)]
-- 🐛 修复错误的UserConfig会导致脚本无法加载的问题 [#483](https://github.com/scriptscat/scriptcat/issues/483) fixed [#483](https://github.com/scriptscat/scriptcat/issues/483) [[bdc681b](https://github.com/scriptscat/scriptcat/commit/bdc681bc9ead6e37063b41edf880e0c82cbbb888)]
+- 🐛 修复 i18n 在没有支持语言下无法保存的问题 [#485](https://github.com/scriptscat/scriptcat/issues/485) Fixed the issue that i18n cannot be saved without supporting languages [[5c012a3](https://github.com/scriptscat/scriptcat/commit/5c012a3ce3c679c323983340ac2dad6ab3188fd2)]
+- 🐛 修复错误的 UserConfig 会导致脚本无法加载的问题 [#483](https://github.com/scriptscat/scriptcat/issues/483) fixed [#483](https://github.com/scriptscat/scriptcat/issues/483) [[bdc681b](https://github.com/scriptscat/scriptcat/commit/bdc681bc9ead6e37063b41edf880e0c82cbbb888)]
 - 🐛 固定 downloadMode 在 GM_info 總是 &quot;native&quot; ([#476](https://github.com/scriptscat/scriptcat/issues/476)) [[9c016db](https://github.com/scriptscat/scriptcat/commit/9c016db35beb763f00e45fdd5ce280edd48254bf)] (by @cyfung1031)
 - 🐛 修复列项高度不一致的问题 [#459](https://github.com/scriptscat/scriptcat/issues/459) fixed [#459](https://github.com/scriptscat/scriptcat/issues/459) [[2a1d3eb](https://github.com/scriptscat/scriptcat/commit/2a1d3eb1cc861e846a1ec11e1c6fb85dc07ff0b9)]
 - 🐛 修正 GM_addElement 中 textContent 的處理 ([#463](https://github.com/scriptscat/scriptcat/issues/463)) [[aba6caa](https://github.com/scriptscat/scriptcat/commit/aba6caa3c895e21071eddca6182ed69b6b3de07e)] (by @cyfung1031)
 - 🐛 GM_addStyle 文檔及類型補充 ([#465](https://github.com/scriptscat/scriptcat/issues/465)) [[0977759](https://github.com/scriptscat/scriptcat/commit/09777599feed3fa59ec55122f4f3ecfd107b6b58)] (by @cyfung1031)
-- 🐛 修复 notification icon问题 [#454](https://github.com/scriptscat/scriptcat/issues/454) [[64fe88e](https://github.com/scriptscat/scriptcat/commit/64fe88eefb7f1d0843dc505a19652d162502c3ed)]
-- 🐛 修复 popup新版本提示样式 ([#453](https://github.com/scriptscat/scriptcat/issues/453)) [[068ebc5](https://github.com/scriptscat/scriptcat/commit/068ebc52e1c471a805416acebd96ee79db6c1383)] (by @DreamNya)
+- 🐛 修复 notification icon 问题 [#454](https://github.com/scriptscat/scriptcat/issues/454) [[64fe88e](https://github.com/scriptscat/scriptcat/commit/64fe88eefb7f1d0843dc505a19652d162502c3ed)]
+- 🐛 修复 popup 新版本提示样式 ([#453](https://github.com/scriptscat/scriptcat/issues/453)) [[068ebc5](https://github.com/scriptscat/scriptcat/commit/068ebc52e1c471a805416acebd96ee79db6c1383)] (by @DreamNya)
 
 ### Miscellaneous
 
 - 🌐 添加英文的贡献指南 [[e311746](https://github.com/scriptscat/scriptcat/commit/e311746260fa5c814158a82d2586beb58f3e821b)]
 - 🌐 恢复低版本浏览器提示 [[e624bfc](https://github.com/scriptscat/scriptcat/commit/e624bfcdcc18ee182273d0fbe50a8f07976610b0)]
-- 🌐 增加日语、德语翻译并设置默认语言为English [#485](https://github.com/scriptscat/scriptcat/issues/485) Add Japanese and German translations and set the default language to English [[6a7f3a8](https://github.com/scriptscat/scriptcat/commit/6a7f3a8c7c1b7fb25248018184ace526b5e56765)]
+- 🌐 增加日语、德语翻译并设置默认语言为 English [#485](https://github.com/scriptscat/scriptcat/issues/485) Add Japanese and German translations and set the default language to English [[6a7f3a8](https://github.com/scriptscat/scriptcat/commit/6a7f3a8c7c1b7fb25248018184ace526b5e56765)]
 - 📄 添加低版本浏览器提示 [[679b38c](https://github.com/scriptscat/scriptcat/commit/679b38c3db3b5332e1c4c0b68f78c177a9df7e00)]
-- ⚡ 修正雙重Promise (double-wrapped) ([#482](https://github.com/scriptscat/scriptcat/issues/482)) [[c0e76ca](https://github.com/scriptscat/scriptcat/commit/c0e76ca79667cfb6732ea377569dbd5a169903eb)] (by @cyfung1031)
-- ⚡ loadScriptFavicons可異步更新不用await ([#479](https://github.com/scriptscat/scriptcat/issues/479)) [[c1164ce](https://github.com/scriptscat/scriptcat/commit/c1164ce4f5723f8a5a95e208047e89d039cd618a)] (by @cyfung1031)
+- ⚡ 修正雙重 Promise (double-wrapped) ([#482](https://github.com/scriptscat/scriptcat/issues/482)) [[c0e76ca](https://github.com/scriptscat/scriptcat/commit/c0e76ca79667cfb6732ea377569dbd5a169903eb)] (by @cyfung1031)
+- ⚡ loadScriptFavicons 可異步更新不用 await ([#479](https://github.com/scriptscat/scriptcat/issues/479)) [[c1164ce](https://github.com/scriptscat/scriptcat/commit/c1164ce4f5723f8a5a95e208047e89d039cd618a)] (by @cyfung1031)
 - 🌐 翻譯修正 ([#477](https://github.com/scriptscat/scriptcat/issues/477)) [[948e113](https://github.com/scriptscat/scriptcat/commit/948e113d8e57f1c27817240063df9f4f88dfdc8e)] (by @cyfung1031)
 - 🌐 en translation improvements ([#469](https://github.com/scriptscat/scriptcat/issues/469)) [[976020b](https://github.com/scriptscat/scriptcat/commit/976020bde5bbae50735e4403190e85b3817c8529)] (by @Yay295)
 - ⚡ 优化 GM_download 实现方式 ([#455](https://github.com/scriptscat/scriptcat/issues/455)) [[a345e97](https://github.com/scriptscat/scriptcat/commit/a345e97a613fdda31a464f72c3deb4b13a6a5e31)] (by @DreamNya)
 - 🌐 添加繁体中文翻译 [[510f228](https://github.com/scriptscat/scriptcat/commit/510f22824b593d65f7cd45ba9577812dfca63c3b)]
-- 🌐 处理i18n问题 [#456](https://github.com/scriptscat/scriptcat/issues/456) [[c70ca42](https://github.com/scriptscat/scriptcat/commit/c70ca42fbed6a162c9dfb100584cc86b0201a3ee)]
-
+- 🌐 处理 i18n 问题 [#456](https://github.com/scriptscat/scriptcat/issues/456) [[c70ca42](https://github.com/scriptscat/scriptcat/commit/c70ca42fbed6a162c9dfb100584cc86b0201a3ee)]
 
 <a name="0.18.1"></a>
 
 ## 0.18.1 (2025-06-26)
 
-修复一些bug，v0.18.1-beta版本内容与此版本一致
+修复一些 bug，v0.18.1-beta 版本内容与此版本一致
 
 ⚠️ 请注意，如果你使用的 Windows 8/7/XP 系统，或者浏览器内核版本低于\<120，需要自行手动安装[旧版脚本猫](https://bbs.tampermonkey.net.cn/thread-3068-1-1.html)，v0.16.6 是最后一个支持 Manifest V2 的版本，安装步骤可以参考：[加载解压缩方式安装扩展](/docs/use/use/#%E5%8A%A0%E8%BD%BD%E8%A7%A3%E5%8E%8B%E7%BC%A9%E6%96%B9%E5%BC%8F%E5%AE%89%E8%A3%85%E6%89%A9%E5%B1%95)。
 
 ### Changed
 
 - 🎨 优化报告问题流程 [[5f2f792](https://github.com/scriptscat/scriptcat/commit/5f2f79290d96e0bcda87b96aef57b5ebdd552a42)]
-- 💄 调整默认eslint规则 [[9525627](https://github.com/scriptscat/scriptcat/commit/9525627fdff6c9eabfadd0805b11dbd132958c61)]
+- 💄 调整默认 eslint 规则 [[9525627](https://github.com/scriptscat/scriptcat/commit/9525627fdff6c9eabfadd0805b11dbd132958c61)]
 
 ### Fixed
 
 - 🐛 修复后台脚本几率性加载失败 [[b9e4c86](https://github.com/scriptscat/scriptcat/commit/b9e4c869b59e7357ebcda4f86c2d49f1a4ca2aac)]
 - 🐛 修复几率性无法加载脚本的问题 [#447](https://github.com/scriptscat/scriptcat/issues/447) [[06c21b6](https://github.com/scriptscat/scriptcat/commit/06c21b647abde4a7e4ae194ad1be9ae1c51ac927)]
 - 🐛 修复运行日志跳转条件问题 [#445](https://github.com/scriptscat/scriptcat/issues/445) [[007c3f7](https://github.com/scriptscat/scriptcat/commit/007c3f72bf1df8a70e04374b14120e5ab9828010)]
-- 🐛 修复日志记录问题与暂时移除Firefox包 [#449](https://github.com/scriptscat/scriptcat/issues/449) [[7cb20d5](https://github.com/scriptscat/scriptcat/commit/7cb20d5fe4e2fac5d9318f93fce07a7c6b2e08a1)]
-- 🐛 处理tld域名 [[93ce67a](https://github.com/scriptscat/scriptcat/commit/93ce67a6bc3213264d7582a0335eb28ee38a0cb0)]
+- 🐛 修复日志记录问题与暂时移除 Firefox 包 [#449](https://github.com/scriptscat/scriptcat/issues/449) [[7cb20d5](https://github.com/scriptscat/scriptcat/commit/7cb20d5fe4e2fac5d9318f93fce07a7c6b2e08a1)]
+- 🐛 处理 tld 域名 [[93ce67a](https://github.com/scriptscat/scriptcat/commit/93ce67a6bc3213264d7582a0335eb28ee38a0cb0)]
 - 🐛 修复 GM XHR 重定向 unsafeHeader 处理问题 [#444](https://github.com/scriptscat/scriptcat/issues/444) [[c0da6a0](https://github.com/scriptscat/scriptcat/commit/c0da6a06dc4d193f212caeca3050205d0df80316)]
-- 🐛 修复GM cookie与GM xhr问题 [#444](https://github.com/scriptscat/scriptcat/issues/444) [[d384f37](https://github.com/scriptscat/scriptcat/commit/d384f3776c2685909a2908a5d3bae6007c21caaa)]
+- 🐛 修复 GM cookie 与 GM xhr 问题 [#444](https://github.com/scriptscat/scriptcat/issues/444) [[d384f37](https://github.com/scriptscat/scriptcat/commit/d384f3776c2685909a2908a5d3bae6007c21caaa)]
 - 🐛 支持一些正则表达式 [[fa81e77](https://github.com/scriptscat/scriptcat/commit/fa81e771bb61215cc434f9aa6b74485fd8495a80)]
 - 🐛 处理一些正则匹配的情况 [[ccd4085](https://github.com/scriptscat/scriptcat/commit/ccd4085cfe7640212bde072bed30fe79c1658755)]
-- 🐛 修复某些不符合规范的match影响整体加载的问题 [#444](https://github.com/scriptscat/scriptcat/issues/444) [[d32793e](https://github.com/scriptscat/scriptcat/commit/d32793e4bf5b79cfa7e35648b198865ca45272f6)]
+- 🐛 修复某些不符合规范的 match 影响整体加载的问题 [#444](https://github.com/scriptscat/scriptcat/issues/444) [[d32793e](https://github.com/scriptscat/scriptcat/commit/d32793e4bf5b79cfa7e35648b198865ca45272f6)]
 - 🐛 修复定时器问题 [[96abce7](https://github.com/scriptscat/scriptcat/commit/96abce7bfd76a35f101be5437893934e8af88808)]
 
 ### Miscellaneous
 
-- 🌐 添加en翻译 [[32bfa21](https://github.com/scriptscat/scriptcat/commit/32bfa214283ceb5706afc702bb76e1d1080df09f)]
-- 🌐 处理i18n [[c707094](https://github.com/scriptscat/scriptcat/commit/c70709499809766d800813d21f141fca1ea23e70)]
+- 🌐 添加 en 翻译 [[32bfa21](https://github.com/scriptscat/scriptcat/commit/32bfa214283ceb5706afc702bb76e1d1080df09f)]
+- 🌐 处理 i18n [[c707094](https://github.com/scriptscat/scriptcat/commit/c70709499809766d800813d21f141fca1ea23e70)]
 
 <a name="0.18.0"></a>
 
 ## 0.18.0 (2025-06-24)
 
-此版本修复了一些比较严重的兼容性问题，尽快发版解决，另外由于chrome商店正式版版本号命名存在问题，从v0.17直接升至v0.18，v0.18.0-beta版本内容与此版本一致
+此版本修复了一些比较严重的兼容性问题，尽快发版解决，另外由于 chrome 商店正式版版本号命名存在问题，从 v0.17 直接升至 v0.18，v0.18.0-beta 版本内容与此版本一致
 
 ⚠️ 请注意，如果你使用的 Windows 8/7/XP 系统，或者浏览器内核版本低于\<120，需要自行手动安装[旧版脚本猫](https://bbs.tampermonkey.net.cn/thread-3068-1-1.html)，v0.16.6 是最后一个支持 Manifest V2 的版本，安装步骤可以参考：[加载解压缩方式安装扩展](https://docs.scriptcat.org/docs/use/use/#%E5%8A%A0%E8%BD%BD%E8%A7%A3%E5%8E%8B%E7%BC%A9%E6%96%B9%E5%BC%8F%E5%AE%89%E8%A3%85%E6%89%A9%E5%B1%95)。
 
 ### Added
 
 - ✨ 优化更新日志打开逻辑 [[859a516](https://github.com/scriptscat/scriptcat/commit/859a516a3d6cf56c26c55099a60e15a52b031845)]
-- ✨ GM_notification适配参数tag、url及onclick的回调函数的参数 ([#431](https://github.com/scriptscat/scriptcat/issues/431)) by @WhiteSevs [[ba044de](https://github.com/scriptscat/scriptcat/commit/ba044deba28265e96b20b7862755d9e9ccd286dd)]
+- ✨ GM_notification 适配参数 tag、url 及 onclick 的回调函数的参数 ([#431](https://github.com/scriptscat/scriptcat/issues/431)) by @WhiteSevs [[ba044de](https://github.com/scriptscat/scriptcat/commit/ba044deba28265e96b20b7862755d9e9ccd286dd)]
 
 ### Fixed
 
 - 🐛 修复一些特殊匹配 [#441](https://github.com/scriptscat/scriptcat/issues/441) [[1b4830e](https://github.com/scriptscat/scriptcat/commit/1b4830e618728881c74aa94d2bd9f452124cffe6)]
 - 🐛 修复一些特殊匹配 [[dc024af](https://github.com/scriptscat/scriptcat/commit/dc024af4b0461f925b28fa04f7e1da79099d589a)]
-- 🐛 修复沙盒window问题 [[e19d6f3](https://github.com/scriptscat/scriptcat/commit/e19d6f3d1b66b97482dad0ffbba37401d83ba6d3)]
-- 🐛 处理特殊的match [#440](https://github.com/scriptscat/scriptcat/issues/440) [[00d83ca](https://github.com/scriptscat/scriptcat/commit/00d83ca59cb04b389ada53b73e1d8038a8639397)]
-- 🐛 删除注入代码中的await [[6b7878b](https://github.com/scriptscat/scriptcat/commit/6b7878bd0804b725a67c37edddefd1f7fde98498)]
+- 🐛 修复沙盒 window 问题 [[e19d6f3](https://github.com/scriptscat/scriptcat/commit/e19d6f3d1b66b97482dad0ffbba37401d83ba6d3)]
+- 🐛 处理特殊的 match [#440](https://github.com/scriptscat/scriptcat/issues/440) [[00d83ca](https://github.com/scriptscat/scriptcat/commit/00d83ca59cb04b389ada53b73e1d8038a8639397)]
+- 🐛 删除注入代码中的 await [[6b7878b](https://github.com/scriptscat/scriptcat/commit/6b7878bd0804b725a67c37edddefd1f7fde98498)]
 - 🐛 修复脚本排序问题 [#425](https://github.com/scriptscat/scriptcat/issues/425) [[c2ca896](https://github.com/scriptscat/scriptcat/commit/c2ca8963030cc9aa8efc439ce388df7450ecc6ae)]
-- 🐛 重新支持document-body [[5762b3b](https://github.com/scriptscat/scriptcat/commit/5762b3b52a9c5acea3ba7eb4b72e6454a46e6a06)]
-- 🐛 修复带search的匹配问题 [[a1a13ca](https://github.com/scriptscat/scriptcat/commit/a1a13caea08751b76ff68aa3fc5b4403d62e05c2)]
+- 🐛 重新支持 document-body [[5762b3b](https://github.com/scriptscat/scriptcat/commit/5762b3b52a9c5acea3ba7eb4b72e6454a46e6a06)]
+- 🐛 修复带 search 的匹配问题 [[a1a13ca](https://github.com/scriptscat/scriptcat/commit/a1a13caea08751b76ff68aa3fc5b4403d62e05c2)]
 
 ### Miscellaneous
 
--  👷 增加单元测试流程 [[231c667](https://github.com/scriptscat/scriptcat/commit/231c667e1bfc9444b7c27c6646e67271c6b63da7)]
+- 👷 增加单元测试流程 [[231c667](https://github.com/scriptscat/scriptcat/commit/231c667e1bfc9444b7c27c6646e67271c6b63da7)]
 
 <a name="0.17.0"></a>
 
 ## 0.17.0 (2025-06-23)
 
-🎉 第一个Manifest V3的正式版本，含有多重大变化，如有问题，请反馈给我们：[BUG反馈](https://github.com/scriptscat/scriptcat/issues/new?template=bug_report.yaml)。
+🎉 第一个 Manifest V3 的正式版本，含有多重大变化，如有问题，请反馈给我们：[BUG 反馈](https://github.com/scriptscat/scriptcat/issues/new?template=bug_report.yaml)。
 
 ⚠️ 请注意，如果你使用的 Windows 8/7/XP 系统，或者浏览器内核版本低于\<120，需要自行手动安装[旧版脚本猫](https://bbs.tampermonkey.net.cn/thread-3068-1-1.html)，v0.16.6 是最后一个支持 Manifest V2 的版本，安装步骤可以参考：[加载解压缩方式安装扩展](https://docs.scriptcat.org/docs/use/use/#%E5%8A%A0%E8%BD%BD%E8%A7%A3%E5%8E%8B%E7%BC%A9%E6%96%B9%E5%BC%8F%E5%AE%89%E8%A3%85%E6%89%A9%E5%B1%95)。
 
 - 💥 Manifest V2 迁移至 Manifest V3
 - 💥 储存引擎切换
 - 💥 [新功能](https://docs.scriptcat.org/docs/change/v0.17/)
-- 🐛 BUG问题修复
+- 🐛 BUG 问题修复
 - 🐛 兼容性问题修复
 
 更多更新内容请看：[0.17.0-alpha.3](https://docs.scriptcat.org/docs/change/#0170-alpha3-2025-04-25)
@@ -142,43 +223,42 @@ Beta版本更新日志请查看 [Beta 更新日志](./beta.md)
 - ✨ 显示当前正在编辑的脚本名字 [#105](https://github.com/scriptscat/scriptcat/issues/105) [[1316e98](https://github.com/scriptscat/scriptcat/commit/1316e9850f7ab8197682372fd821725a5ea196d3)]
 - ✨ 增加黑名单页面提示 [[8ffd017](https://github.com/scriptscat/scriptcat/commit/8ffd017eba5be5605c2fea0298f25aee3a5c6572)]
 - ✨ 实现网站黑名单功能 [#230](https://github.com/scriptscat/scriptcat/issues/230) [[aec3d4b](https://github.com/scriptscat/scriptcat/commit/aec3d4b7659cd7a73d23d2506770af51bdb295c2)]
-- ✨ UserConfig增加一个保存提示 [#344](https://github.com/scriptscat/scriptcat/issues/344) [[d509e1c](https://github.com/scriptscat/scriptcat/commit/d509e1c95db703cf9360a4467ee669aecbf5521b)]
-- ✨ UserConfig添加switch类型 [#340](https://github.com/scriptscat/scriptcat/issues/340) [[6fc98f3](https://github.com/scriptscat/scriptcat/commit/6fc98f3e0d96b1e46532e9dc15ca193a97820922)]
+- ✨ UserConfig 增加一个保存提示 [#344](https://github.com/scriptscat/scriptcat/issues/344) [[d509e1c](https://github.com/scriptscat/scriptcat/commit/d509e1c95db703cf9360a4467ee669aecbf5521b)]
+- ✨ UserConfig 添加 switch 类型 [#340](https://github.com/scriptscat/scriptcat/issues/340) [[6fc98f3](https://github.com/scriptscat/scriptcat/commit/6fc98f3e0d96b1e46532e9dc15ca193a97820922)]
 
 ### Fixed
 
 - 🐛 修复备份导入顺序问题 [[b8941af](https://github.com/scriptscat/scriptcat/commit/b8941afd9e4097bdebe06af99249e30850d92d5d)]
-- 🐛 修复gm xhr携带origin的问题 [#420](https://github.com/scriptscat/scriptcat/issues/420) [[e5ff4e2](https://github.com/scriptscat/scriptcat/commit/e5ff4e2f0d63306dc0b9b26566f1c1b608a416dc)]
-- 🐛 处理v138+版本的userScript检测 [#418](https://github.com/scriptscat/scriptcat/issues/418) [[365f2f8](https://github.com/scriptscat/scriptcat/commit/365f2f891055cea955c4cc5f8c66b70cede1d0dd)]
-- 🐛 修复onxxx处理 [#418](https://github.com/scriptscat/scriptcat/issues/418) [[7aa50e7](https://github.com/scriptscat/scriptcat/commit/7aa50e7cca10376c86094b8f7eb66705abdbc6cb)]
+- 🐛 修复 gm xhr 携带 origin 的问题 [#420](https://github.com/scriptscat/scriptcat/issues/420) [[e5ff4e2](https://github.com/scriptscat/scriptcat/commit/e5ff4e2f0d63306dc0b9b26566f1c1b608a416dc)]
+- 🐛 处理 v138+版本的 userScript 检测 [#418](https://github.com/scriptscat/scriptcat/issues/418) [[365f2f8](https://github.com/scriptscat/scriptcat/commit/365f2f891055cea955c4cc5f8c66b70cede1d0dd)]
+- 🐛 修复 onxxx 处理 [#418](https://github.com/scriptscat/scriptcat/issues/418) [[7aa50e7](https://github.com/scriptscat/scriptcat/commit/7aa50e7cca10376c86094b8f7eb66705abdbc6cb)]
 - 🐛 修复静默更新问题 [[1769af0](https://github.com/scriptscat/scriptcat/commit/1769af0313acc85c4e513192753c2e8658bee5b6)]
 - 🐛 修复定时脚本中配置无效的问题 [#315](https://github.com/scriptscat/scriptcat/issues/315) [[d360391](https://github.com/scriptscat/scriptcat/commit/d3603914988d578f36932b358c6d6a7ab7f857cb)]
-- 🐛 修复service worker与offscreen消息通信问题 [[8207fcc](https://github.com/scriptscat/scriptcat/commit/8207fcc6d5c5bbe4536dc68e8a2f731720c99788)]
-- 🐛 处理只定义了GM_*但GM.*不生效的问题 [#323](https://github.com/scriptscat/scriptcat/issues/323) [[2232fed](https://github.com/scriptscat/scriptcat/commit/2232fedccd1fef54f719f8e751ca9b4d976a8626)]
-- 🐛 修复GM.cookie问题 [[ec44068](https://github.com/scriptscat/scriptcat/commit/ec440680f1b73eca42aff6c9533ccb39913cc79b)]
-
+- 🐛 修复 service worker 与 offscreen 消息通信问题 [[8207fcc](https://github.com/scriptscat/scriptcat/commit/8207fcc6d5c5bbe4536dc68e8a2f731720c99788)]
+- 🐛 处理只定义了 GM\_*但 GM.*不生效的问题 [#323](https://github.com/scriptscat/scriptcat/issues/323) [[2232fed](https://github.com/scriptscat/scriptcat/commit/2232fedccd1fef54f719f8e751ca9b4d976a8626)]
+- 🐛 修复 GM.cookie 问题 [[ec44068](https://github.com/scriptscat/scriptcat/commit/ec440680f1b73eca42aff6c9533ccb39913cc79b)]
 
 <a name="0.17.0-beta.3"></a>
 
 ## 0.17.0-beta.3 (2025-06-14)
 
-增加了一个新API: `CAT_registerMenuInput` 可以尝鲜，后续还会进行修改和优化
+增加了一个新 API: `CAT_registerMenuInput` 可以尝鲜，后续还会进行修改和优化
 
 ### Added
 
 - ✨ 实现 CAT_registerMenuInput 支持快捷输入交互 ([#411](https://github.com/scriptscat/scriptcat/issues/411)) by @DreamNya [[79cb27c](https://github.com/scriptscat/scriptcat/commit/79cb27ca08804b3b818cb8bdc3c8682c425d1cc0)]
-- ✨ GM_xmlhttpRequest新增cookiePartition参数 by @WhiteSevs
-[[3774aa3](https://github.com/scriptscat/scriptcat/commit/3774aa3acebeadb6b08162625a9af29a9599fa96)]
-- ✨ feat: 适配GM_deleteValue、GM_setValues和GM_deleteValues单独的权限请求 by @WhiteSevs [[15b4b16](https://github.com/scriptscat/scriptcat/commit/15b4b16bfa2578985ff8281d5a0f69a16aa7f36c)]
+- ✨ GM_xmlhttpRequest 新增 cookiePartition 参数 by @WhiteSevs
+  [[3774aa3](https://github.com/scriptscat/scriptcat/commit/3774aa3acebeadb6b08162625a9af29a9599fa96)]
+- ✨ feat: 适配 GM_deleteValue、GM_setValues 和 GM_deleteValues 单独的权限请求 by @WhiteSevs [[15b4b16](https://github.com/scriptscat/scriptcat/commit/15b4b16bfa2578985ff8281d5a0f69a16aa7f36c)]
 
 ### Fixed
 
 - 🐛 修复权限通配符设置问题 [#416](https://github.com/scriptscat/scriptcat/issues/416) [[1994cc8](https://github.com/scriptscat/scriptcat/commit/1994cc896f383d8132ca324ae89a686588e9dc13)]
-- 🐛 修复自动切换主题与tsconfig types问题 [[1083dd0](https://github.com/scriptscat/scriptcat/commit/1083dd0d048c70b1afd250915fb74c24b42efe48)]
+- 🐛 修复自动切换主题与 tsconfig types 问题 [[1083dd0](https://github.com/scriptscat/scriptcat/commit/1083dd0d048c70b1afd250915fb74c24b42efe48)]
 - 🐛 修复界面模式切换 [[165c46c](https://github.com/scriptscat/scriptcat/commit/165c46c700019b4742ffcae20f24f5f67fd2aab3)]
-- 🐛 处理node v23无法构建的问题 [#415](https://github.com/scriptscat/scriptcat/issues/415) [[5274edf](https://github.com/scriptscat/scriptcat/commit/5274edf857b841ba65988048e12bd850940de37d)]
-- 🐛 修复删除脚本resource数据未删除的问题 [[c93e39e](https://github.com/scriptscat/scriptcat/commit/c93e39e5a57ff9fff9fc868b477a710f27fe4808)]
-- 🐛 修复vscode连接问题 [[e3b6604](https://github.com/scriptscat/scriptcat/commit/e3b6604d1640f64a964b6a7d3a4badbcca578eba)]
+- 🐛 处理 node v23 无法构建的问题 [#415](https://github.com/scriptscat/scriptcat/issues/415) [[5274edf](https://github.com/scriptscat/scriptcat/commit/5274edf857b841ba65988048e12bd850940de37d)]
+- 🐛 修复删除脚本 resource 数据未删除的问题 [[c93e39e](https://github.com/scriptscat/scriptcat/commit/c93e39e5a57ff9fff9fc868b477a710f27fe4808)]
+- 🐛 修复 vscode 连接问题 [[e3b6604](https://github.com/scriptscat/scriptcat/commit/e3b6604d1640f64a964b6a7d3a4badbcca578eba)]
 
 <a name="0.17.0-beta.2"></a>
 
@@ -187,31 +267,31 @@ Beta版本更新日志请查看 [Beta 更新日志](./beta.md)
 ### Added
 
 - ✨ 增加按钮可以重试数据迁移 [#409](https://github.com/scriptscat/scriptcat/issues/409) [[85a7404](https://github.com/scriptscat/scriptcat/commit/85a740497050d6347bd07ff4177b656963bba363)]
-- ✨ feat: 新增对file://协议的文件的动态加载更新 by @WhiteSevs [[6eb5bd8](https://github.com/scriptscat/scriptcat/commit/6eb5bd83a2ebf2e083603c3e7fa6b336fc08490c)]
-- ✨ feat: 新增对file协议的资源或引用自动更新 by @WhiteSevs [[7a5cc21](https://github.com/scriptscat/scriptcat/commit/7a5cc21fc2d7e4270906f346d5aa61295cac52b4)]
-- ✨ feat: 适配部分GM_info的属性 by @WhiteSevs [[51f0ea0](https://github.com/scriptscat/scriptcat/commit/51f0ea0dc7254242c7059acf69e4479b09bd605f)]
-- ✨ feat: GM_setClipboard支持cb回调函数 by @WhiteSevs [[a8373f5](https://github.com/scriptscat/scriptcat/commit/a8373f5d9798506dc5d883374b059843fd0c7a15)]
-- ✨ feat: 新增Api支持GM_setValues、GM_getValues、GM_deleteValues by @WhiteSevs [[d363e42](https://github.com/scriptscat/scriptcat/commit/d363e4289306f547236c90652e514c0b9c86a2fb)]
-- ✨ feat: GM_cookie新增配置partitionKey.topLevelSite by @WhiteSevs [[131b31f](https://github.com/scriptscat/scriptcat/commit/131b31f325531d4f0cdc30d4bc97242f1502abed)]
-- ✨ 兼容GM_registerMenuCommand [#358](https://github.com/scriptscat/scriptcat/issues/358) [[70c59e6](https://github.com/scriptscat/scriptcat/commit/70c59e6104749f028b1bfa5cba9f65f2ad7c5be2)]
+- ✨ feat: 新增对 file://协议的文件的动态加载更新 by @WhiteSevs [[6eb5bd8](https://github.com/scriptscat/scriptcat/commit/6eb5bd83a2ebf2e083603c3e7fa6b336fc08490c)]
+- ✨ feat: 新增对 file 协议的资源或引用自动更新 by @WhiteSevs [[7a5cc21](https://github.com/scriptscat/scriptcat/commit/7a5cc21fc2d7e4270906f346d5aa61295cac52b4)]
+- ✨ feat: 适配部分 GM_info 的属性 by @WhiteSevs [[51f0ea0](https://github.com/scriptscat/scriptcat/commit/51f0ea0dc7254242c7059acf69e4479b09bd605f)]
+- ✨ feat: GM_setClipboard 支持 cb 回调函数 by @WhiteSevs [[a8373f5](https://github.com/scriptscat/scriptcat/commit/a8373f5d9798506dc5d883374b059843fd0c7a15)]
+- ✨ feat: 新增 Api 支持 GM_setValues、GM_getValues、GM_deleteValues by @WhiteSevs [[d363e42](https://github.com/scriptscat/scriptcat/commit/d363e4289306f547236c90652e514c0b9c86a2fb)]
+- ✨ feat: GM_cookie 新增配置 partitionKey.topLevelSite by @WhiteSevs [[131b31f](https://github.com/scriptscat/scriptcat/commit/131b31f325531d4f0cdc30d4bc97242f1502abed)]
+- ✨ 兼容 GM_registerMenuCommand [#358](https://github.com/scriptscat/scriptcat/issues/358) [[70c59e6](https://github.com/scriptscat/scriptcat/commit/70c59e6104749f028b1bfa5cba9f65f2ad7c5be2)]
 
 ### Fixed
 
-- 🐛 修复userConfig默认值问题 [#409](https://github.com/scriptscat/scriptcat/issues/409) [[f1ee723](https://github.com/scriptscat/scriptcat/commit/f1ee7236ba1b568fd724e48341b687badd43e44e)]
-- 🐛 修复eslint配置无法重置的问题 [[d0c2f3b](https://github.com/scriptscat/scriptcat/commit/d0c2f3b51a25d35c4dafc733eb121d38c77a4c66)]
-- 🐛 修复vscode连接问题 [#412](https://github.com/scriptscat/scriptcat/issues/412) [#400](https://github.com/scriptscat/scriptcat/issues/400) [[6ff24e3](https://github.com/scriptscat/scriptcat/commit/6ff24e30dacfaf489f0992604008acd129ebddcf)]
+- 🐛 修复 userConfig 默认值问题 [#409](https://github.com/scriptscat/scriptcat/issues/409) [[f1ee723](https://github.com/scriptscat/scriptcat/commit/f1ee7236ba1b568fd724e48341b687badd43e44e)]
+- 🐛 修复 eslint 配置无法重置的问题 [[d0c2f3b](https://github.com/scriptscat/scriptcat/commit/d0c2f3b51a25d35c4dafc733eb121d38c77a4c66)]
+- 🐛 修复 vscode 连接问题 [#412](https://github.com/scriptscat/scriptcat/issues/412) [#400](https://github.com/scriptscat/scriptcat/issues/400) [[6ff24e3](https://github.com/scriptscat/scriptcat/commit/6ff24e30dacfaf489f0992604008acd129ebddcf)]
 - 🐛 修复重复监听问题 [#388](https://github.com/scriptscat/scriptcat/issues/388) [[b8735d8](https://github.com/scriptscat/scriptcat/commit/b8735d8c463341204423611465eb54312d43f067)]
-- 🐛 修复GM_notification无法触发 onclick [#406](https://github.com/scriptscat/scriptcat/issues/406) [[c5e766f](https://github.com/scriptscat/scriptcat/commit/c5e766fde35ae4346d249df744ccc1973f054667)]
-- 🐛 修复后台脚本读取userConfig的问题 [[2240a62](https://github.com/scriptscat/scriptcat/commit/2240a6294cf495fed771dfdfe9497bed86b967b3)]
-- 🐛 修复GM_getValue与GM_info问题 [#393](https://github.com/scriptscat/scriptcat/issues/393) by @WhiteSevs [[e765476](https://github.com/scriptscat/scriptcat/commit/e76547617f358cbac8be1b99eff68a44968050b9)]
-- 🐛 修复message不输出错误信息 by @WhiteSevs [[04bf703](https://github.com/scriptscat/scriptcat/commit/04bf7038cff1161c8242b1b93edd7f3ba5964520)]
-- 🐛 修复GM_getTab回调函数入参为空时的值 by @WhiteSevs [[3f3cac5](https://github.com/scriptscat/scriptcat/commit/3f3cac5feb90fcc2893824a4bc920fbeacd367de)]
-- 🐛 修复GM_openInTab的返回值 by @WhiteSevs [[2fa5b33](https://github.com/scriptscat/scriptcat/commit/2fa5b337df12d777479c7d896da6a98baa9b1ad2)]
-- 🐛 修复GM.cookie不存在 by @WhiteSevs [8889f64]
+- 🐛 修复 GM_notification 无法触发 onclick [#406](https://github.com/scriptscat/scriptcat/issues/406) [[c5e766f](https://github.com/scriptscat/scriptcat/commit/c5e766fde35ae4346d249df744ccc1973f054667)]
+- 🐛 修复后台脚本读取 userConfig 的问题 [[2240a62](https://github.com/scriptscat/scriptcat/commit/2240a6294cf495fed771dfdfe9497bed86b967b3)]
+- 🐛 修复 GM_getValue 与 GM_info 问题 [#393](https://github.com/scriptscat/scriptcat/issues/393) by @WhiteSevs [[e765476](https://github.com/scriptscat/scriptcat/commit/e76547617f358cbac8be1b99eff68a44968050b9)]
+- 🐛 修复 message 不输出错误信息 by @WhiteSevs [[04bf703](https://github.com/scriptscat/scriptcat/commit/04bf7038cff1161c8242b1b93edd7f3ba5964520)]
+- 🐛 修复 GM_getTab 回调函数入参为空时的值 by @WhiteSevs [[3f3cac5](https://github.com/scriptscat/scriptcat/commit/3f3cac5feb90fcc2893824a4bc920fbeacd367de)]
+- 🐛 修复 GM_openInTab 的返回值 by @WhiteSevs [[2fa5b33](https://github.com/scriptscat/scriptcat/commit/2fa5b337df12d777479c7d896da6a98baa9b1ad2)]
+- 🐛 修复 GM.cookie 不存在 by @WhiteSevs [8889f64]
 
 ### Miscellaneous
 
--  👷 improve github actions ([#407](https://github.com/scriptscat/scriptcat/issues/407)) by @Mikachu2333 [[3970658](https://github.com/scriptscat/scriptcat/commit/3970658c67e58349c86e5e5a36a973168fbd2cce)]
+- 👷 improve github actions ([#407](https://github.com/scriptscat/scriptcat/issues/407)) by @Mikachu2333 [[3970658](https://github.com/scriptscat/scriptcat/commit/3970658c67e58349c86e5e5a36a973168fbd2cce)]
 
 <a name="0.17.0-beta.1"></a>
 
@@ -226,16 +306,15 @@ Beta版本更新日志请查看 [Beta 更新日志](./beta.md)
 
 ### Fixed
 
-- 🐛 修复GM_addValueChangeListener问题 [#404](https://github.com/scriptscat/scriptcat/issues/404) [[f698722](https://github.com/scriptscat/scriptcat/commit/f6987220805892ef5a85fd99bd8b12dacbb7e979)]
-- 🐛 修复脚本match和include问题 https://github.com/scriptscat/scriptcat/issues/398#issuecomment-2892698500 [[6c9cbf1](https://github.com/scriptscat/scriptcat/commit/6c9cbf173b5e74dbe20d8630443b125742829f58)]
-- 🐛 修复端口导致注册userScript失败的问题 [#390](https://github.com/scriptscat/scriptcat/issues/390) [[3f57e8f](https://github.com/scriptscat/scriptcat/commit/3f57e8f5000da299e959899ec9dc785c239e2c11)]
-
+- 🐛 修复 GM_addValueChangeListener 问题 [#404](https://github.com/scriptscat/scriptcat/issues/404) [[f698722](https://github.com/scriptscat/scriptcat/commit/f6987220805892ef5a85fd99bd8b12dacbb7e979)]
+- 🐛 修复脚本 match 和 include 问题 https://github.com/scriptscat/scriptcat/issues/398#issuecomment-2892698500 [[6c9cbf1](https://github.com/scriptscat/scriptcat/commit/6c9cbf173b5e74dbe20d8630443b125742829f58)]
+- 🐛 修复端口导致注册 userScript 失败的问题 [#390](https://github.com/scriptscat/scriptcat/issues/390) [[3f57e8f](https://github.com/scriptscat/scriptcat/commit/3f57e8f5000da299e959899ec9dc785c239e2c11)]
 
 <a name="0.17.0-beta"></a>
 
 ## 0.17.0-beta (2025-05-13)
 
-由于Chrome政策原因，Manifest V2被自动禁用，提前将本版本将更新至 Chrome 的正式版，如有问题请及时反馈，感谢理解。
+由于 Chrome 政策原因，Manifest V2 被自动禁用，提前将本版本将更新至 Chrome 的正式版，如有问题请及时反馈，感谢理解。
 
 ### Added
 
@@ -249,8 +328,7 @@ Beta版本更新日志请查看 [Beta 更新日志](./beta.md)
 
 ### Fixed
 
-- 🐛 修复 ESLint 支持CATApi / Headers 问题 ([#386](https://github.com/scriptscat/scriptcat/issues/386)) by @DreamNya [[7cd1dcd](https://github.com/scriptscat/scriptcat/commit/7cd1dcd3dec97233df8631d02d6e5a1116074e53)]
-
+- 🐛 修复 ESLint 支持 CATApi / Headers 问题 ([#386](https://github.com/scriptscat/scriptcat/issues/386)) by @DreamNya [[7cd1dcd](https://github.com/scriptscat/scriptcat/commit/7cd1dcd3dec97233df8631d02d6e5a1116074e53)]
 
 <a name="0.17.0-alpha.4"></a>
 
@@ -304,11 +382,11 @@ Beta版本更新日志请查看 [Beta 更新日志](./beta.md)
 
 ## 0.16.9 (2025-07-09)
 
-误操作导致v0.16.8在firefox被占，所以跳过了v0.16.8
+误操作导致 v0.16.8 在 firefox 被占，所以跳过了 v0.16.8
 
 ### Fixed
 
-- 🐛 修复Firefox兼容问题 ([#510](https://github.com/scriptscat/scriptcat/issues/510)) [[beb385d](https://github.com/scriptscat/scriptcat/commit/beb385d69faa29493887fef5089a03344cb0d9dc)] (by @cyfung1031)
+- 🐛 修复 Firefox 兼容问题 ([#510](https://github.com/scriptscat/scriptcat/issues/510)) [[beb385d](https://github.com/scriptscat/scriptcat/commit/beb385d69faa29493887fef5089a03344cb0d9dc)] (by @cyfung1031)
 
 ### Changed
 
@@ -316,22 +394,22 @@ Beta版本更新日志请查看 [Beta 更新日志](./beta.md)
 
 ### Miscellaneous
 
--  👷 处理firefox打包 [[814c9c3](https://github.com/scriptscat/scriptcat/commit/814c9c3ff26815f72a59ab160bb74689451aa158)]
+- 👷 处理 firefox 打包 [[814c9c3](https://github.com/scriptscat/scriptcat/commit/814c9c3ff26815f72a59ab160bb74689451aa158)]
 
 <a name="0.16.7"></a>
 
 ## 0.16.7 (2025-07-08)
 
-这是 Manifest v2 的修复版本，后续只会处理一些非严重与功能性 bug，推荐更新你的浏览器到最新版本并安装最新版本的ScriptCat(v0.17.0+)。
+这是 Manifest v2 的修复版本，后续只会处理一些非严重与功能性 bug，推荐更新你的浏览器到最新版本并安装最新版本的 ScriptCat(v0.17.0+)。
 
-Firefox的Manifest V3版本还在筹备中。
+Firefox 的 Manifest V3 版本还在筹备中。
 
 ### Fixed
 
-- 🐛 修复onxxxx问题 [[9cf59a3](https://github.com/scriptscat/scriptcat/commit/9cf59a3e26360a47feb3b95136721b56820503ca)]
+- 🐛 修复 onxxxx 问题 [[9cf59a3](https://github.com/scriptscat/scriptcat/commit/9cf59a3e26360a47feb3b95136721b56820503ca)]
 - 🐛 处理扩展降级问题 [#503](https://github.com/scriptscat/scriptcat/issues/503) [[faae3b8](https://github.com/scriptscat/scriptcat/commit/faae3b83c6bdfacc56bc7335545cb397e97dfa69)]
 - 🐛 修正垃圾打包問題 ([#501](https://github.com/scriptscat/scriptcat/issues/501)) [[3091ec0](https://github.com/scriptscat/scriptcat/commit/3091ec02e9199b9c42949b32411f641f15cda8f7)] (by @cyfung1031)
-- 🐛 修复OneDrive上传文件问题 [#366](https://github.com/scriptscat/scriptcat/issues/366) [[ad5a711](https://github.com/scriptscat/scriptcat/commit/ad5a7116c9d54b4e4a4ab53420d0e1d185612f98)]
+- 🐛 修复 OneDrive 上传文件问题 [#366](https://github.com/scriptscat/scriptcat/issues/366) [[ad5a711](https://github.com/scriptscat/scriptcat/commit/ad5a7116c9d54b4e4a4ab53420d0e1d185612f98)]
 
 ### Miscellaneous
 
