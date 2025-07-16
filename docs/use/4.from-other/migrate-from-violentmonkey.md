@@ -18,7 +18,7 @@
 
 ![image-20250716222326368](./img/migrate-from-tampermonkey/image-20250716222326368.webp)
 
-选择`工具`，然后点击`导入文件`，选择之前导出的 Tampermonkey 压缩包文件，点击`打开`即可导入。
+选择`工具`，然后点击`导入文件`，选择之前导出的 Violentmonkey 压缩包文件，点击`打开`即可导入。
 
 ![image-20250716222403452](./img/migrate-from-tampermonkey/image-20250716222403452.webp)
 
