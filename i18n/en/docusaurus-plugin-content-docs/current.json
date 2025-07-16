@@ -6,5 +6,9 @@
   "sidebar.use.category.服务协议": {
     "message": "Service Agreement",
     "description": "The label for category 服务协议 in sidebar use"
+  },
+  "sidebar.use.category.从其它管理器迁移": {
+    "message": "Migrate from other managers",
+    "description": "The label for category 从其它管理器迁移 in sidebar use"
   }
 }
