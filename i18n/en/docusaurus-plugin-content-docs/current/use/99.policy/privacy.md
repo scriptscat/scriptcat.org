@@ -3,36 +3,70 @@ id: privacy
 title: Privacy Policy
 ---
 
-Welcome to our product. ScriptCat (including services provided by the App and website products, hereinafter referred to as "products and services") is developed and operated by scriptcat.org (hereinafter referred to as "we"). Ensuring user data security and privacy protection is our top priority. This privacy policy sets out the data collected when you visit and use our products and services and how it is processed.
+Welcome to ScriptCat browser extension! ScriptCat (hereinafter referred to as "our product") is a browser extension developed and operated by scriptcat.org (hereinafter referred to as "we").
 
-Please be sure to read carefully and confirm that you fully understand all the rules and key points of this Privacy Policy before continuing to use our products. Once you choose to use it, you are deemed to agree to the entire content of this Privacy Policy and agree to our collection and use of you in accordance with it. related information. If you have any questions about this policy while reading, you can contact our customer service for consultation. Please contact us through yz@ggnb.top or the feedback method in the product. If you do not agree to the relevant agreement or any of its terms, you should stop using our products and services.
+**We deeply understand the importance of privacy protection, and therefore adhere to the principle of privacy-first from the initial design.**
 
-This privacy policy helps you understand the following:
+If you have any questions about this policy during reading, please contact us through [yz@ggnb.top](mailto:yz@ggnb.top) or the feedback feature in our product.
 
-1. How we collect and use your personal information;
-2. How we store and protect your personal information;
-3. How we share, transfer and publicly disclose your personal information;
+## Core Commitment
 
-### 1. How we collect and use your personal information
+**We solemnly promise: ScriptCat will not collect your personal information, will not access your script content or browsing data.**
 
-Personal information refers to various types of information recorded electronically or in other ways that can identify the identity of a specific natural person or reflect the activities of a specific natural person alone or in combination with other information. Since our products and services do not require such information, we are pleased to inform you that we will not collect any personal information about you.
+## Detailed Description
 
-### 2. How do we store and protect your personal information
+### 1. We Do Not Collect Any Personal Information
 
-As a general rule, we only retain your personal information for as long as necessary to fulfill the purposes for which it was collected. We will retain your personal information for as long as strictly necessary to manage our relationship with you (for example, when you open an account and obtain services from our products). We may need to retain your archived personal information beyond the expiration of the above periods for the purpose of complying with legal obligations or to demonstrate that a right or contract satisfies applicable statutes of limitations requirements and will not be able to delete it at your request. When your personal data is no longer necessary for the purposes or archival purposes for which we are subject to legal obligations or statutory limitations, we ensure that they are completely deleted or anonymized.
-We use industry-standard security measures to protect the personal information you provide and encrypt key data to prevent unauthorized access, public disclosure, use, modification, damage or loss. We will take all reasonable and feasible measures to protect your personal information. We will use encryption technology to ensure the confidentiality of data; we will use trusted protection mechanisms to prevent data from malicious attacks.
+ScriptCat's design philosophy is to protect user privacy. Our product:
 
-### 3. How do we share, transfer and publicly disclose your personal information
+- **Will not collect** your personal identity information (such as name, email, phone number, etc.)
+- **Will not collect** your browsing history, search history, or other online activity data
+- **Will not collect** your device information, location information, or other technical identifiers
+- **Will not collect** your installed script content or usage preferences
 
-When needed to manage our daily business activities and to pursue our legitimate interests to better serve our customers, we will use your personal information in a compliant and appropriate manner. For comprehensive consideration of business and various aspects, we only use these data for ourselves and do not share them with any third parties.
-We may share your personal information externally in accordance with laws and regulations, or in accordance with the mandatory requirements of government authorities. Subject to complying with laws and regulations, when we receive the above request to disclose information, we will require the issuance of corresponding legal documents, such as a subpoena or a letter of investigation. We firmly believe that we should be as transparent as the law allows about the information we are asked to provide.
-In the following situations, sharing, transferring, and publicly disclosing your personal information does not require your prior authorization and consent:
+### 2. Local Data Processing
 
-1. Directly related to national security and national defense security;
-2. Directly related to criminal investigation, prosecution, trial and execution of judgments;
-3. For the protection of your or other personal life, property and other major legitimate rights and interests, but it is difficult to obtain the consent of the person;
-4. Personal information that you disclose to the public by yourself;
-5. Collecting personal information from legally disclosed information, such as legal news reports, government information disclosure and other channels.
-6. Necessary to sign and perform the contract according to the requirements of the personal information subject;
-7. Necessary to maintain the safe and stable operation of the products or services provided, such as discovering and handling product or service failures;
-8. Other situations stipulated by laws and regulations.
+ScriptCat's core functions run entirely on your local device:
+
+- User scripts and their configurations are primarily stored in your local browser
+- All script execution and data processing are completed locally
+- We cannot access your script content, browsing data, or other personal information
+
+**About Cloud Sync Function:**
+
+- Cloud sync is an optional feature that requires your active enablement
+- Sync data is transmitted directly between your device and the cloud service you choose
+- To ensure the stability of sync services, we temporarily store necessary technical credentials, but we do not access your sync content
+
+### 3. Data Security Assurance
+
+Since we do not collect any personal information, there is no issue of personal information storage. We promise:
+
+- All your data is saved on your own device
+- We cannot access your local data
+- Even if we wanted to, we cannot obtain your personal information
+
+### 4. About Third-Party Services
+
+While ScriptCat itself does not collect data, please note:
+
+- User scripts you install may interact with third-party websites or services
+- These interactions are governed by the privacy policies of the respective third parties and are not within the scope of this policy
+- We recommend that you understand the functions and permissions before installing scripts
+
+### 5. Policy Updates
+
+We may update this privacy policy based on legal requirements or product feature changes. The updated policy will be published on our official website, and we recommend that you check regularly to understand the latest content. Continued use of our product indicates your acceptance of the updated policy.
+
+### 6. Contact Us
+
+If you have any questions or suggestions about this privacy policy, please contact us:
+
+- Email: [yz@ggnb.top](mailto:yz@ggnb.top)
+- Through the feedback feature in our product
+
+---
+
+Last updated: July 2025
+
+Thank you for trusting ScriptCat! We will continue to adhere to the principle of privacy-first and provide you with secure and reliable services.
