@@ -18,6 +18,30 @@ sidebar_position: 1
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+<a name="1.0.0-beta.2"></a>
+
+## 1.0.0-beta.2 (2025-07-29)
+
+### Added
+
+- ✨ 增加徽标和菜单设置并调整设置页面 [#573](https://github.com/scriptscat/scriptcat/issues/573) [[23e9b19](https://github.com/scriptscat/scriptcat/commit/23e9b19912c64ed2dafeabd66513519e1465b00e)] 
+- ⚡ 优化资源加载, 并行加载异步资源 ([#574](https://github.com/scriptscat/scriptcat/issues/574)) ([5910c0b](https://github.com/scriptscat/scriptcat/commit/5910c0b3baf540aeb1f12fed5a4796eef3dec71c)) by @zhangenming
+- ✨ 开启开关单独控制隐身模式与主窗口 [#571](https://github.com/scriptscat/scriptcat/issues/571) ([38a33b1](https://github.com/scriptscat/scriptcat/commit/38a33b107275be0e1b2aa31eaa2055939c5356f0))
+- ✨ Ctrl+Enter 确定导入 [#537](https://github.com/scriptscat/scriptcat/issues/537) [[06a7a01](https://github.com/scriptscat/scriptcat/commit/06a7a01f0ff82b5d99b558fdff29bc45524b7501)] 
+- ✨ 优化安装、权限等的打开窗口交互 ([0d9ba53](https://github.com/scriptscat/scriptcat/commit/0d9ba53ba3b42f948eb82b34a7257eb46b973055))
+- ✨ 安装本地脚本时可以进行监听 [#275](https://github.com/scriptscat/scriptcat/issues/275) ([d9b0eee](https://github.com/scriptscat/scriptcat/commit/d9b0eeede1a8b114f79a43fade99d825323c63f6))
+
+### Changed
+
+- 🎨 调整菜单选项 [#573](https://github.com/scriptscat/scriptcat/issues/573) [[3677278](https://github.com/scriptscat/scriptcat/commit/367727851faf7ec73b9d751fab5787219d77fe9a)] 
+
+### Fixed
+
+- 🐛 修复 GM cookie list 获取不全的问题 [[3046200](https://github.com/scriptscat/scriptcat/commit/3046200562e7f92e307cb4a52e32723f67490f2d)] 
+- 🐛 修复并发创建菜单的报错 [#580](https://github.com/scriptscat/scriptcat/issues/580) [[4855fec](https://github.com/scriptscat/scriptcat/commit/4855fec67a89bb36ab0f1855bc679926a0e74dc3)] 
+- 🐛 处理一些特殊的沙盒关键字 ([9ced958](https://github.com/scriptscat/scriptcat/commit/9ced958144f2d883c9044e6e4ad4f9dd53951ece))
+- 🐛 修复脚本设置网站匹配更新不断累积 include 的问题 [#581](https://github.com/scriptscat/scriptcat/issues/581) [[9d31872](https://github.com/scriptscat/scriptcat/commit/9d31872775116d60e093f7ca31d62449963f059d)] 
+
 <a name="1.0.0-beta.1"></a>
 
 ## 1.0.0-beta.1 (2025-07-22)
