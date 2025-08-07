@@ -101,7 +101,7 @@ const storeMap: { [key: string]: MenuProps['items'][0] & { label: any; show?: bo
     key: "crx",
     label: (
       <IconButton
-        href="https://bbs.tampermonkey.net.cn/thread-3068-1-1.html"
+        href="https://github.com/scriptscat/scriptcat/releases"
         icon="noto:package"
         text={translate({
           id: 'homepage.hero.browser.crx',
