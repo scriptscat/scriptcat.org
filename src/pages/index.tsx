@@ -634,10 +634,12 @@ function ComparisonSection() {
   // 对比数据
   const comparisonData: {
     feature: string;
-    scriptcat: boolean;
+    scriptcat: boolean | -1;
     tampermonkey: boolean | -1;
+    violentmonkey: boolean | -1;
     scriptcatLabel?: string;
     tampermonkeyLabel?: string;
+    violentmonkeyLabel?: string;
   }[] = [
     { 
       feature: translate({
@@ -645,19 +647,8 @@ function ComparisonSection() {
         message: '脚本兼容性',
       }), 
       scriptcat: true, 
-      tampermonkey: true 
-    },
-    {
-      feature: translate({
-        id: 'homepage.comparison.feature.background',
-        message: '后台脚本',
-      }),
-      scriptcat: true,
-      tampermonkey: -1,
-      scriptcatLabel: translate({
-        id: 'homepage.comparison.label.efficient',
-        message: '高效',
-      }),
+      tampermonkey: true,
+      violentmonkey: true
     },
     { 
       feature: translate({
@@ -665,7 +656,17 @@ function ComparisonSection() {
         message: '开源免费',
       }), 
       scriptcat: true, 
-      tampermonkey: false 
+      tampermonkey: -1,
+      violentmonkey: true,
+    },
+    { 
+      feature: translate({
+        id: 'homepage.comparison.feature.mv3',
+        message: 'MV3支持',
+      }), 
+      scriptcat: true, 
+      tampermonkey: true,
+      violentmonkey: -1,
     },
     {
       feature: translate({
@@ -674,6 +675,7 @@ function ComparisonSection() {
       }),
       scriptcat: true,
       tampermonkey: true,
+      violentmonkey: true,
       scriptcatLabel: translate({
         id: 'homepage.comparison.label.multiplatform',
         message: '多平台',
@@ -681,11 +683,25 @@ function ComparisonSection() {
     },
     {
       feature: translate({
-        id: 'homepage.comparison.feature.api',
-        message: '更多的 API',
+        id: 'homepage.comparison.feature.background',
+        message: '后台脚本',
       }),
       scriptcat: true,
-      tampermonkey: -1,
+      tampermonkey: false,
+      violentmonkey: false,
+      scriptcatLabel: translate({
+        id: 'homepage.comparison.label.efficient',
+        message: '高效',
+      }),
+    },
+    {
+      feature: translate({
+        id: 'homepage.comparison.feature.api',
+        message: '强大 API',
+      }),
+      scriptcat: true,
+      tampermonkey: false,
+      violentmonkey: false,
       scriptcatLabel: "",
     },
     { 
@@ -694,12 +710,78 @@ function ComparisonSection() {
         message: '社区支持',
       }), 
       scriptcat: true, 
-      tampermonkey: -1 
+      tampermonkey: -1,
+      violentmonkey: -1,
     },
   ];
 
   // 使用状态来跟踪当前高亮的行
   const [highlightedRow, setHighlightedRow] = useState<number | null>(null);
+
+  const renderCell = (state: boolean | -1, stateLabel: string | undefined, b?: boolean) => {
+    return (
+      <div className={styles.comparisonTableCell}>
+        <div className={styles.comparisonTableCellInner}>
+          {state === true ? (
+            <div className={styles.comparisonTableCellCheck}>
+              {stateLabel ? (
+                <div
+                  className={
+                    styles.comparisonTableCellWithLabel
+                  }
+                >
+                  <div
+                    className={
+                      b ? styles.comparisonTableCellCheckIcon : styles.comparisonTableCellCheckIconGray
+                    }
+                  >
+                    <Icon icon="lucide:check" />
+                    {b ? <div
+                      className={
+                        styles.comparisonTableCellCheckRing
+                      }
+                    ></div> : ""}
+                  </div>
+                  <span
+                    className={
+                      b ? styles.comparisonTableCellLabel : styles.comparisonTableCellLabelGray
+                    }
+                  >
+                    {stateLabel}
+                  </span>
+                </div>
+              ) : (
+                <div
+                  className={
+                    b ? styles.comparisonTableCellCheckIcon : styles.comparisonTableCellCheckIconGray
+                  }
+                >
+                  <Icon icon="lucide:check" />
+                  {b ? <div
+                    className={
+                      styles.comparisonTableCellCheckRing
+                    }
+                  ></div> : ""}
+                </div>
+              )}
+              {b ?
+                <div
+                  className={styles.comparisonTableCellGlow}
+                ></div> : ""}
+            </div>
+          ) : state === -1 ? (
+            <div className={styles.comparisonTableCellCross}>
+              <Icon icon="lucide:x" />
+            </div>
+          ) : (
+            <div className={styles.comparisonTableCellMinus}>
+              <Icon icon="lucide:minus" />
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  };
 
   return (
     <section className={styles.comparisonSection}>
@@ -787,7 +869,7 @@ function ComparisonSection() {
                             className={styles.comparisonTableHeaderIconRing}
                           ></div>
                         </div>
-                        <span className={styles.comparisonTableHeaderTitle}>
+                        <span className={styles.comparisonTableHeaderTitle} style={{ fontSize: "120%" }}>
                           ScriptCat
                         </span>
                       </div>
@@ -800,8 +882,20 @@ function ComparisonSection() {
                         <div className={styles.comparisonTableHeaderIcon}>
                           <Icon icon="lucide:code" />
                         </div>
-                        <span className={styles.comparisonTableHeaderTitle}>
+                        <span className={styles.comparisonTableHeaderTitle} style={{ "fontStretch": "extra-condensed", fontSize: "115%" }}>
                           Tampermonkey
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className={styles.comparisonTableHeaderCell}>
+                    <div className={styles.comparisonTableHeaderCellContent}>
+                      <div className={styles.comparisonTableHeaderLogo}>
+                        <div className={styles.comparisonTableHeaderIcon}>
+                          <Icon icon="lucide:code" />
+                        </div>
+                        <span className={styles.comparisonTableHeaderTitle} style={{ "fontStretch": "extra-condensed", fontSize: "115%" }}>
+                          Violentmonkey
                         </span>
                       </div>
                     </div>
@@ -831,105 +925,9 @@ function ComparisonSection() {
                           ></div>
                         </div>
                       </div>
-                      <div className={styles.comparisonTableCell}>
-                        <div className={styles.comparisonTableCellInner}>
-                          {row.scriptcat ? (
-                            <div className={styles.comparisonTableCellCheck}>
-                              {row.scriptcatLabel ? (
-                                <div
-                                  className={
-                                    styles.comparisonTableCellWithLabel
-                                  }
-                                >
-                                  <div
-                                    className={
-                                      styles.comparisonTableCellCheckIcon
-                                    }
-                                  >
-                                    <Icon icon="lucide:check" />
-                                    <div
-                                      className={
-                                        styles.comparisonTableCellCheckRing
-                                      }
-                                    ></div>
-                                  </div>
-                                  <span
-                                    className={styles.comparisonTableCellLabel}
-                                  >
-                                    {row.scriptcatLabel}
-                                  </span>
-                                </div>
-                              ) : (
-                                <div
-                                  className={
-                                    styles.comparisonTableCellCheckIcon
-                                  }
-                                >
-                                  <Icon icon="lucide:check" />
-                                  <div
-                                    className={
-                                      styles.comparisonTableCellCheckRing
-                                    }
-                                  ></div>
-                                </div>
-                              )}
-                              <div
-                                className={styles.comparisonTableCellGlow}
-                              ></div>
-                            </div>
-                          ) : (
-                            <div className={styles.comparisonTableCellMinus}>
-                              <Icon icon="lucide:minus" />
-                            </div>
-                          )}
-                        </div>
-                      </div>
-                      <div className={styles.comparisonTableCell}>
-                        <div className={styles.comparisonTableCellInner}>
-                          {row.tampermonkey === true ? (
-                            <div className={styles.comparisonTableCellCheck}>
-                              {row.tampermonkeyLabel ? (
-                                <div
-                                  className={
-                                    styles.comparisonTableCellWithLabel
-                                  }
-                                >
-                                  <div
-                                    className={
-                                      styles.comparisonTableCellCheckIconGray
-                                    }
-                                  >
-                                    <Icon icon="lucide:check" />
-                                  </div>
-                                  <span
-                                    className={
-                                      styles.comparisonTableCellLabelGray
-                                    }
-                                  >
-                                    {row.tampermonkeyLabel}
-                                  </span>
-                                </div>
-                              ) : (
-                                <div
-                                  className={
-                                    styles.comparisonTableCellCheckIconGray
-                                  }
-                                >
-                                  <Icon icon="lucide:check" />
-                                </div>
-                              )}
-                            </div>
-                          ) : row.tampermonkey === -1 ? (
-                            <div className={styles.comparisonTableCellCross}>
-                              <Icon icon="lucide:x" />
-                            </div>
-                          ) : (
-                            <div className={styles.comparisonTableCellMinus}>
-                              <Icon icon="lucide:minus" />
-                            </div>
-                          )}
-                        </div>
-                      </div>
+                      {renderCell(row.scriptcat, row.scriptcatLabel, true)}
+                      {renderCell(row.tampermonkey, row.tampermonkeyLabel, false)}
+                      {renderCell(row.violentmonkey, row.violentmonkeyLabel, false)}
                     </div>
                   ))}
                 </div>

@@ -114,6 +114,9 @@
   "homepage.comparison.feature.opensource": {
     "message": "开源免费"
   },
+  "homepage.comparison.feature.mv3": {
+    "message": "MV3支持"
+  },
   "homepage.comparison.feature.sync": {
     "message": "云端同步"
   },
@@ -121,7 +124,7 @@
     "message": "多平台"
   },
   "homepage.comparison.feature.api": {
-    "message": "更多的 API"
+    "message": "强大 API"
   },
   "homepage.comparison.feature.community": {
     "message": "社区支持"

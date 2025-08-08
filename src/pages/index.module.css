@@ -1,3 +1,14 @@
+:root {
+  --comparison-table-grid: 25% 25% 25% 25%;
+}
+
+/* 移动端优化：调整表格列宽 */
+@media (max-width: 767px) {
+  :root {
+    --comparison-table-grid: 40% 20% 20% 20%;
+  }
+}
+
 /* 主容器样式 */
 .homeContainer {
   min-height: 100vh;
@@ -1513,18 +1524,11 @@
 /* 表格头部样式 */
 .comparisonTableHeader {
   display: grid;
-  grid-template-columns: 40% 30% 30%;
+  grid-template-columns: var(--comparison-table-grid);
   background: linear-gradient(to right, rgba(243, 244, 246, 0.7), rgba(249, 250, 251, 0.7));
   border-bottom: 1px solid rgba(209, 213, 219, 0.5);
   position: relative;
   z-index: 2;
-}
-
-/* 移动端优化：调整表格头部列宽 */
-@media (max-width: 767px) {
-  .comparisonTableHeader {
-    grid-template-columns: 50% 25% 25%;
-  }
 }
 
 [data-theme='dark'] .comparisonTableHeader {
@@ -1536,6 +1540,8 @@
   padding: 1.75rem 2rem;
   position: relative;
   overflow: hidden;
+  place-content: center;
+  place-items: center;
 }
 
 /* 移动端优化：调整表格头部单元格内边距 */
@@ -1561,7 +1567,7 @@
 
 /* 移动端优化：调整表格头部标题尺寸 */
 @media (max-width: 767px) {
-  .comparisonTableHeaderTitle {
+  .comparisonTableHeaderCell ~ .comparisonTableHeaderCell .comparisonTableHeaderTitle {
     font-size: 1rem;
     letter-spacing: -0.3px;
     display: none;
@@ -1727,18 +1733,11 @@
 
 .comparisonTableRow {
   display: grid;
-  grid-template-columns: 40% 30% 30%;
+  grid-template-columns: var(--comparison-table-grid);
   border-bottom: 1px solid rgba(209, 213, 219, 0.3);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-}
-
-/* 移动端优化：调整表格行列宽 */
-@media (max-width: 767px) {
-  .comparisonTableRow {
-    grid-template-columns: 50% 25% 25%;
-  }
 }
 
 [data-theme='dark'] .comparisonTableRow {
@@ -1808,6 +1807,8 @@
   padding: 1.5rem 2rem;
   position: relative;
   overflow: hidden;
+  place-content: center;
+  place-items: center;
 }
 
 /* 移动端优化：调整表格单元格内边距 */
@@ -1822,7 +1823,6 @@
   z-index: 2;
   transition: transform 0.3s ease;
   display: flex;
-  justify-content: center;
 }
 
 .comparisonTableRow:hover .comparisonTableCellInner {

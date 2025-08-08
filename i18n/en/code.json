@@ -159,13 +159,17 @@
     "message": "Open Source Free",
     "description": "Comparison feature: Open source"
   },
+  "homepage.comparison.feature.mv3": {
+    "message": "MV3 Support",
+    "description": "Comparison feature: MV3 Support"
+  },
   "homepage.comparison.feature.sync": {
     "message": "Cloud Sync",
     "description": "Comparison feature: Cloud sync"
   },
   "homepage.comparison.feature.api": {
-    "message": "More APIs",
-    "description": "Comparison feature: More APIs"
+    "message": "Powerful APIs",
+    "description": "Comparison feature: Powerful APIs"
   },
   "homepage.comparison.feature.community": {
     "message": "Community Support",
