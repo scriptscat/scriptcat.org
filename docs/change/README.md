@@ -9,6 +9,19 @@ Beta 版本更新日志请查看 [Beta 更新日志](./beta.md)
 
 ⚠️ 请注意，如果你使用的 Windows 8/7/XP 系统，或者浏览器内核版本低于\<120，需要自行手动安装[旧版脚本猫](https://bbs.tampermonkey.net.cn/thread-3068-1-1.html)，v0.16.x 是最后一个支持 Manifest V2 的版本，安装步骤可以参考：[加载解压缩方式安装扩展](/docs/use/use/#%E5%8A%A0%E8%BD%BD%E8%A7%A3%E5%8E%8B%E7%BC%A9%E6%96%B9%E5%BC%8F%E5%AE%89%E8%A3%85%E6%89%A9%E5%B1%95)。
 
+
+## 1.0.1 (2025-08-16)
+
+尽快修复一些影响较大的问题
+
+### Fixed
+
+- 🐛 修复某些匹配情况 [#629](https://github.com/scriptscat/scriptcat/issues/629) [[3334b0c](https://github.com/scriptscat/scriptcat/commit/3334b0cb40138ddaad30b54f516df83316b8bb64)]
+- 🐛 修复资源哈希校验 [[db7d6c7](https://github.com/scriptscat/scriptcat/commit/db7d6c7351a88f35709163b610e0f5b1fda79a33)]
+- 🐛 修复某些.user.js链接无法安装脚本的问题 [#599](https://github.com/scriptscat/scriptcat/issues/599) [[61f7ad1](https://github.com/scriptscat/scriptcat/commit/61f7ad111b40ba0bbd2f04bb2c3e72713116237f)]
+- 🐛 修复@connect *不生效的问题 [#623](https://github.com/scriptscat/scriptcat/issues/623) [[744c182](https://github.com/scriptscat/scriptcat/commit/744c18227d8f89ce6f65d6ae70d7f002aec410dd)]
+
+
 <a name="1.0.0"></a>
 
 ## 1.0.0 (2025-08-12)
