@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { Avatar, Card, Image, Space, Typography } from "antd";
 import Link from "@docusaurus/Link";
 import Meta from "antd/es/card/Meta";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/modules";
 import { Autoplay } from "swiper/modules";
+import Translate from '@docusaurus/Translate';
 
 import "swiper/css";
 
@@ -117,31 +118,78 @@ const comments = {
     {
       avatar:
         "https://bbs.tampermonkey.net.cn/uc_server/data/avatar/000/00/00/02_avatar_middle.jpg",
-      username: "李恒道",
-      description: "油中创始人之一",
-      content: "我们脚本猫真是太棒啦！",
+      username: (
+        <Translate id="homepage.comments.lihengdao.username">
+          李恒道
+        </Translate>
+      ),
+      description: (
+        <Translate id="homepage.comments.lihengdao.description">
+          油中创始人之一
+        </Translate>
+      ),
+      content: (
+        <Translate id="homepage.comments.lihengdao.content">
+          我们脚本猫真是太棒啦！
+        </Translate>
+      ),
     },
     {
       avatar:
         "https://bbs.tampermonkey.net.cn/uc_server/data/avatar/noavatar.svg",
-      username: "为考试发愁",
-      description: "学生",
-      content:
-        "感谢油中如此丰富的学习资源，让我受益匪浅，更好地发展自己的技术能力。脚本猫是一个非常好用的浏览器扩展，为我提供了便捷和高效的功能。",
+      username: (
+        <Translate id="homepage.comments.student.username">
+          为考试发愁
+        </Translate>
+      ),
+      description: (
+        <Translate id="homepage.comments.student.description">
+          学生
+        </Translate>
+      ),
+      content: (
+        <Translate id="homepage.comments.student.content">
+          感谢油中如此丰富的学习资源，让我受益匪浅，更好地发展自己的技术能力。脚本猫是一个非常好用的浏览器扩展，为我提供了便捷和高效的功能。
+        </Translate>
+      ),
     },
     {
       avatar:
         "https://bbs.tampermonkey.net.cn/uc_server/data/avatar/000/04/10/07_avatar_big.jpg",
-      username: "言小溪enncy",
-      description: "著名脚本作者",
-      content: "由衷感谢油中",
+      username: (
+        <Translate id="homepage.comments.enncy.username">
+          言小溪enncy
+        </Translate>
+      ),
+      description: (
+        <Translate id="homepage.comments.enncy.description">
+          著名脚本作者
+        </Translate>
+      ),
+      content: (
+        <Translate id="homepage.comments.enncy.content">
+          由衷感谢油中
+        </Translate>
+      ),
     },
     {
       avatar:
         "https://bbs.tampermonkey.net.cn/uc_server/data/avatar/000/02/37/09_avatar_big.jpg",
-      username: "仟羽",
-      description: "Chrome 用户",
-      content: "一开始，人们都以为这是小众js插件。。。。直到。。。",
+      username: (
+        <Translate id="homepage.comments.qianyu.username">
+          仟羽
+        </Translate>
+      ),
+      description: (
+        <Translate id="homepage.comments.qianyu.description">
+          Chrome 用户
+        </Translate>
+      ),
+      content: (
+        <Translate id="homepage.comments.qianyu.content">
+          一开始，人们都以为这是小众js插件。。。。直到。。。
+        </Translate>
+      ),
     },
   ],
   right: [

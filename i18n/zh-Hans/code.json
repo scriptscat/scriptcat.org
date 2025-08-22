@@ -837,5 +837,41 @@
   "homepage.comments.qianyu.content": {
     "message": "一开始，人们都以为这是小众js插件。。。。直到。。。",
     "description": "仟羽的评论内容"
+  },
+  "homepage.comments.wwwwwllllk.username": {
+    "message": "wwwwwllllk",
+    "description": "wwwwwllllk在社区评论中的用户名"
+  },
+  "homepage.comments.wwwwwllllk.description": {
+    "message": "前端开发人员",
+    "description": "wwwwwllllk在社区评论中的描述"
+  },
+  "homepage.comments.wwwwwllllk.content": {
+    "message": "使用脚本猫来提高自己的互联网体验，来油中认识志同道合的人。",
+    "description": "wwwwwllllk的评论内容"
+  },
+  "homepage.comments.oraer.username": {
+    "message": "Oraer",
+    "description": "Oraer在社区评论中的用户名"
+  },
+  "homepage.comments.oraer.description": {
+    "message": "Chrome 用户",
+    "description": "Oraer在社区评论中的描述"
+  },
+  "homepage.comments.oraer.content": {
+    "message": "初识油猴！学习油猴！超越油猴！",
+    "description": "Oraer的评论内容"
+  },
+  "homepage.comments.bigonion.username": {
+    "message": "bigonion",
+    "description": "bigonion在社区评论中的用户名"
+  },
+  "homepage.comments.bigonion.description": {
+    "message": "脚本猫开发者",
+    "description": "bigonion在社区评论中的描述"
+  },
+  "homepage.comments.bigonion.content": {
+    "message": "Scriptcat is the future.",
+    "description": "bigonion的评论内容"
   }
 }
