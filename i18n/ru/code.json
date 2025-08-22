@@ -82,5 +82,53 @@
   "homepage.features.secure.description": {
     "message": "Механизм песочницы, управление разрешениями, обеспечение безопасного выполнения скриптов",
     "description": "Description for secure and reliable section"
+  },
+  "homepage.comments.lihengdao.username": {
+    "message": "Ли Хэндао",
+    "description": "Имя пользователя Ли Хэндао в комментариях сообщества"
+  },
+  "homepage.comments.lihengdao.description": {
+    "message": "Соучредитель Tampermonkey CN",
+    "description": "Описание Ли Хэндао в комментариях сообщества"
+  },
+  "homepage.comments.lihengdao.content": {
+    "message": "ScriptCat просто потрясающий!",
+    "description": "Содержание комментария Ли Хэндао"
+  },
+  "homepage.comments.student.username": {
+    "message": "Беспокоится об экзаменах",
+    "description": "Имя пользователя студента в комментариях сообщества"
+  },
+  "homepage.comments.student.description": {
+    "message": "Студент",
+    "description": "Описание студента в комментариях сообщества"
+  },
+  "homepage.comments.student.content": {
+    "message": "Благодарю за богатые учебные ресурсы сообщества, я многому научился и смог лучше развить свои технические навыки. ScriptCat - очень полезное расширение браузера, которое предоставляет мне удобные и эффективные функции.",
+    "description": "Содержание комментария студента"
+  },
+  "homepage.comments.enncy.username": {
+    "message": "Янь Сяоси (enncy)",
+    "description": "Имя пользователя enncy в комментариях сообщества"
+  },
+  "homepage.comments.enncy.description": {
+    "message": "Известный автор скриптов",
+    "description": "Описание enncy в комментариях сообщества"
+  },
+  "homepage.comments.enncy.content": {
+    "message": "Искренняя благодарность сообществу",
+    "description": "Содержание комментария enncy"
+  },
+  "homepage.comments.qianyu.username": {
+    "message": "Цянь Юй",
+    "description": "Имя пользователя Цянь Юй в комментариях сообщества"
+  },
+  "homepage.comments.qianyu.description": {
+    "message": "Пользователь Chrome",
+    "description": "Описание Цянь Юй в комментариях сообщества"
+  },
+  "homepage.comments.qianyu.content": {
+    "message": "Сначала люди думали, что это нишевый JS плагин... пока...",
+    "description": "Содержание комментария Цянь Юй"
   }
 }

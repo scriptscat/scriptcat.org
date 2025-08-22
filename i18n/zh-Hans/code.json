@@ -789,5 +789,53 @@
   "theme.tags.tagsPageTitle": {
     "message": "标签",
     "description": "The title of the tag list page"
+  },
+  "homepage.comments.lihengdao.username": {
+    "message": "李恒道",
+    "description": "李恒道在社区评论中的用户名"
+  },
+  "homepage.comments.lihengdao.description": {
+    "message": "油中创始人之一",
+    "description": "李恒道在社区评论中的描述"
+  },
+  "homepage.comments.lihengdao.content": {
+    "message": "我们脚本猫真是太棒啦！",
+    "description": "李恒道的评论内容"
+  },
+  "homepage.comments.student.username": {
+    "message": "为考试发愁",
+    "description": "学生用户在社区评论中的用户名"
+  },
+  "homepage.comments.student.description": {
+    "message": "学生",
+    "description": "学生用户在社区评论中的描述"
+  },
+  "homepage.comments.student.content": {
+    "message": "感谢油中如此丰富的学习资源，让我受益匪浅，更好地发展自己的技术能力。脚本猫是一个非常好用的浏览器扩展，为我提供了便捷和高效的功能。",
+    "description": "学生用户的评论内容"
+  },
+  "homepage.comments.enncy.username": {
+    "message": "言小溪enncy",
+    "description": "enncy在社区评论中的用户名"
+  },
+  "homepage.comments.enncy.description": {
+    "message": "著名脚本作者",
+    "description": "enncy在社区评论中的描述"
+  },
+  "homepage.comments.enncy.content": {
+    "message": "由衷感谢油中",
+    "description": "enncy的评论内容"
+  },
+  "homepage.comments.qianyu.username": {
+    "message": "仟羽",
+    "description": "仟羽在社区评论中的用户名"
+  },
+  "homepage.comments.qianyu.description": {
+    "message": "Chrome 用户",
+    "description": "仟羽在社区评论中的描述"
+  },
+  "homepage.comments.qianyu.content": {
+    "message": "一开始，人们都以为这是小众js插件。。。。直到。。。",
+    "description": "仟羽的评论内容"
   }
 }

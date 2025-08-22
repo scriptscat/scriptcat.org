@@ -82,5 +82,53 @@
   "homepage.features.secure.description": {
     "message": "Sandbox-Mechanismus, Berechtigungsverwaltung, sichere Skriptausführung gewährleisten",
     "description": "Description for secure and reliable section"
+  },
+  "homepage.comments.lihengdao.username": {
+    "message": "Li Hengdao",
+    "description": "Li Hengdaos Benutzername in Community-Kommentaren"
+  },
+  "homepage.comments.lihengdao.description": {
+    "message": "Mitbegründer von Tampermonkey CN",
+    "description": "Li Hengdaos Beschreibung in Community-Kommentaren"
+  },
+  "homepage.comments.lihengdao.content": {
+    "message": "ScriptCat ist absolut fantastisch!",
+    "description": "Li Hengdaos Kommentarinhalt"
+  },
+  "homepage.comments.student.username": {
+    "message": "Sorgen wegen Prüfungen",
+    "description": "Studentischer Benutzername in Community-Kommentaren"
+  },
+  "homepage.comments.student.description": {
+    "message": "Student",
+    "description": "Studentische Beschreibung in Community-Kommentaren"
+  },
+  "homepage.comments.student.content": {
+    "message": "Danke an die Community für die reichen Lernressourcen, ich habe viel gelernt und konnte meine technischen Fähigkeiten besser entwickeln. ScriptCat ist eine sehr nützliche Browser-Erweiterung, die mir praktische und effiziente Funktionen bietet.",
+    "description": "Studentischer Kommentarinhalt"
+  },
+  "homepage.comments.enncy.username": {
+    "message": "Yan Xiaoxi (enncy)",
+    "description": "enncys Benutzername in Community-Kommentaren"
+  },
+  "homepage.comments.enncy.description": {
+    "message": "Berühmter Skript-Autor",
+    "description": "enncys Beschreibung in Community-Kommentaren"
+  },
+  "homepage.comments.enncy.content": {
+    "message": "Herzlichen Dank an die Community",
+    "description": "enncys Kommentarinhalt"
+  },
+  "homepage.comments.qianyu.username": {
+    "message": "Qian Yu",
+    "description": "Qian Yus Benutzername in Community-Kommentaren"
+  },
+  "homepage.comments.qianyu.description": {
+    "message": "Chrome-Benutzer",
+    "description": "Qian Yus Beschreibung in Community-Kommentaren"
+  },
+  "homepage.comments.qianyu.content": {
+    "message": "Anfangs dachten die Leute, das sei ein Nischen-JS-Plugin... bis...",
+    "description": "Qian Yus Kommentarinhalt"
   }
 }

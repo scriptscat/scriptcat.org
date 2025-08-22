@@ -82,5 +82,53 @@
   "homepage.features.secure.description": {
     "message": "サンドボックス機構、権限管理、スクリプトの安全な実行を保証",
     "description": "Description for secure and reliable section"
+  },
+  "homepage.comments.lihengdao.username": {
+    "message": "李恒道",
+    "description": "コミュニティコメントでの李恒道のユーザー名"
+  },
+  "homepage.comments.lihengdao.description": {
+    "message": "Tampermonkey中国語版共同創設者",
+    "description": "コミュニティコメントでの李恒道の説明"
+  },
+  "homepage.comments.lihengdao.content": {
+    "message": "ScriptCatは本当に素晴らしいです！",
+    "description": "李恒道のコメント内容"
+  },
+  "homepage.comments.student.username": {
+    "message": "試験を心配する人",
+    "description": "コミュニティコメントでの学生ユーザーのユーザー名"
+  },
+  "homepage.comments.student.description": {
+    "message": "学生",
+    "description": "コミュニティコメントでの学生ユーザーの説明"
+  },
+  "homepage.comments.student.content": {
+    "message": "コミュニティの豊富な学習リソースに感謝します。多くのことを学び、技術力をより良く向上させることができました。ScriptCatは非常に便利なブラウザ拡張機能で、便利で効率的な機能を提供してくれます。",
+    "description": "学生ユーザーのコメント内容"
+  },
+  "homepage.comments.enncy.username": {
+    "message": "言小溪enncy",
+    "description": "コミュニティコメントでのenncyのユーザー名"
+  },
+  "homepage.comments.enncy.description": {
+    "message": "有名なスクリプト作者",
+    "description": "コミュニティコメントでのenncyの説明"
+  },
+  "homepage.comments.enncy.content": {
+    "message": "コミュニティに心から感謝します",
+    "description": "enncyのコメント内容"
+  },
+  "homepage.comments.qianyu.username": {
+    "message": "仟羽",
+    "description": "コミュニティコメントでの仟羽のユーザー名"
+  },
+  "homepage.comments.qianyu.description": {
+    "message": "Chromeユーザー",
+    "description": "コミュニティコメントでの仟羽の説明"
+  },
+  "homepage.comments.qianyu.content": {
+    "message": "最初、人々はこれがニッチなJSプラグインだと思っていました...しかし...",
+    "description": "仟羽のコメント内容"
   }
 }

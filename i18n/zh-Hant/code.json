@@ -82,5 +82,53 @@
   "homepage.features.secure.description": {
     "message": "沙盒機制，權限管理，保障腳本安全執行",
     "description": "Description for secure and reliable section"
+  },
+  "homepage.comments.lihengdao.username": {
+    "message": "李恆道",
+    "description": "李恆道在社群評論中的使用者名稱"
+  },
+  "homepage.comments.lihengdao.description": {
+    "message": "油中創始人之一",
+    "description": "李恆道在社群評論中的描述"
+  },
+  "homepage.comments.lihengdao.content": {
+    "message": "我們腳本貓真是太棒啦！",
+    "description": "李恆道的評論內容"
+  },
+  "homepage.comments.student.username": {
+    "message": "為考試發愁",
+    "description": "學生使用者在社群評論中的使用者名稱"
+  },
+  "homepage.comments.student.description": {
+    "message": "學生",
+    "description": "學生使用者在社群評論中的描述"
+  },
+  "homepage.comments.student.content": {
+    "message": "感謝油中如此豐富的學習資源，讓我受益匪淺，更好地發展自己的技術能力。腳本貓是一個非常好用的瀏覽器擴充功能，為我提供了便捷和高效的功能。",
+    "description": "學生使用者的評論內容"
+  },
+  "homepage.comments.enncy.username": {
+    "message": "言小溪enncy",
+    "description": "enncy在社群評論中的使用者名稱"
+  },
+  "homepage.comments.enncy.description": {
+    "message": "著名腳本作者",
+    "description": "enncy在社群評論中的描述"
+  },
+  "homepage.comments.enncy.content": {
+    "message": "由衷感謝油中",
+    "description": "enncy的評論內容"
+  },
+  "homepage.comments.qianyu.username": {
+    "message": "仟羽",
+    "description": "仟羽在社群評論中的使用者名稱"
+  },
+  "homepage.comments.qianyu.description": {
+    "message": "Chrome 使用者",
+    "description": "仟羽在社群評論中的描述"
+  },
+  "homepage.comments.qianyu.content": {
+    "message": "一開始，人們都以為這是小眾js外掛。。。。直到。。。",
+    "description": "仟羽的評論內容"
   }
 }

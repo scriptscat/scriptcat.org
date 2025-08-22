@@ -82,5 +82,53 @@
   "homepage.features.secure.description": {
     "message": "Cơ chế sandbox, quản lý quyền, đảm bảo thực thi script an toàn",
     "description": "Description for secure and reliable section"
+  },
+  "homepage.comments.lihengdao.username": {
+    "message": "Li Hengdao",
+    "description": "Tên người dùng của Li Hengdao trong bình luận cộng đồng"
+  },
+  "homepage.comments.lihengdao.description": {
+    "message": "Đồng sáng lập Tampermonkey CN",
+    "description": "Mô tả của Li Hengdao trong bình luận cộng đồng"
+  },
+  "homepage.comments.lihengdao.content": {
+    "message": "ScriptCat thật tuyệt vời!",
+    "description": "Nội dung bình luận của Li Hengdao"
+  },
+  "homepage.comments.student.username": {
+    "message": "Lo lắng về kỳ thi",
+    "description": "Tên người dùng sinh viên trong bình luận cộng đồng"
+  },
+  "homepage.comments.student.description": {
+    "message": "Sinh viên",
+    "description": "Mô tả sinh viên trong bình luận cộng đồng"
+  },
+  "homepage.comments.student.content": {
+    "message": "Cảm ơn cộng đồng với những tài nguyên học tập phong phú, tôi đã học được rất nhiều và có thể phát triển kỹ năng kỹ thuật của mình tốt hơn. ScriptCat là một tiện ích mở rộng trình duyệt rất hữu ích, cung cấp cho tôi các chức năng tiện lợi và hiệu quả.",
+    "description": "Nội dung bình luận của sinh viên"
+  },
+  "homepage.comments.enncy.username": {
+    "message": "Yan Xiaoxi (enncy)",
+    "description": "Tên người dùng của enncy trong bình luận cộng đồng"
+  },
+  "homepage.comments.enncy.description": {
+    "message": "Tác giả script nổi tiếng",
+    "description": "Mô tả của enncy trong bình luận cộng đồng"
+  },
+  "homepage.comments.enncy.content": {
+    "message": "Chân thành cảm ơn cộng đồng",
+    "description": "Nội dung bình luận của enncy"
+  },
+  "homepage.comments.qianyu.username": {
+    "message": "Qian Yu",
+    "description": "Tên người dùng của Qian Yu trong bình luận cộng đồng"
+  },
+  "homepage.comments.qianyu.description": {
+    "message": "Người dùng Chrome",
+    "description": "Mô tả của Qian Yu trong bình luận cộng đồng"
+  },
+  "homepage.comments.qianyu.content": {
+    "message": "Ban đầu, mọi người nghĩ đây là một plugin JS thích hợp... cho đến khi...",
+    "description": "Nội dung bình luận của Qian Yu"
   }
 }
