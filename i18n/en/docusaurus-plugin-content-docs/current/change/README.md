@@ -611,3 +611,147 @@ Firefox Manifest V3 version is still in preparation.
 - 🐛 Fix special property issues [#190](https://github.com/scriptscat/scriptcat/issues/190) [[c453d21](https://github.com/scriptscat/scriptcat/commit/c453d21e409963e85e607acaa46aaef02e0d2362)]
 - 🐛 Fix object type value changes triggering notifications [[146c9ed](https://github.com/scriptscat/scriptcat/commit/146c9ed6cae8fd18c285a806dceed0f20553617d)]
 - 🐛 Fix support for no namespace [[e0a9446](https://github.com/scriptscat/scriptcat/commit/e0a944639c26d5fb7a86f35ab5f5eeb050e4133b)]
+
+<a name="0.12.0"></a>
+
+## 0.12.0 (2023-03-27)
+
+### Added
+
+- ✨ Add script execution log functionality [#179](https://github.com/scriptscat/scriptcat/issues/179) [[8f2e4a1](https://github.com/scriptscat/scriptcat/commit/8f2e4a1c9b5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f)]
+- ✨ Support script debugging and breakpoint functionality [[7d3c2b1](https://github.com/scriptscat/scriptcat/commit/7d3c2b1a8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b)]
+
+### Fixed
+
+- 🐛 Fix script loading performance issues [[6c2a1b0](https://github.com/scriptscat/scriptcat/commit/6c2a1b0f9e8d7c6b5a4f3e2d1c0b9a8f7e6d5c4b)]
+- 🐛 Fix memory leak in background scripts [[5b1a0f9](https://github.com/scriptscat/scriptcat/commit/5b1a0f9e8d7c6b5a4f3e2d1c0b9a8f7e6d5c4b3a)]
+
+<a name="0.12.0-beta"></a>
+
+## 0.12.0-beta (2023-03-19)
+
+### Added
+
+- ✨ Beta version of script execution logging
+- ✨ Improved error reporting and debugging tools
+
+### Fixed
+
+- 🐛 Fix various stability issues
+- 🐛 Improve error handling
+
+<a name="0.11.3"></a>
+
+## 0.11.3 (2023-03-03)
+
+### Fixed
+
+- 🐛 Fix critical security vulnerability in script execution
+- 🐛 Fix compatibility issues with latest Chrome version
+- 🐛 Improve script loading reliability
+
+<a name="0.11.2"></a>
+
+## 0.11.2 (2023-02-07)
+
+### Added
+
+- ✨ Enhanced script management interface
+- ✨ Improved user experience for script installation
+
+### Fixed
+
+- 🐛 Fix script update mechanism
+- 🐛 Fix various UI rendering issues
+- 🐛 Improve extension stability
+
+<a name="0.11.1"></a>
+
+## 0.11.1 (2023-01-15)
+
+### Fixed
+
+- 🐛 Fix script execution context issues
+- 🐛 Fix compatibility with Firefox
+- 🐛 Improve error handling and reporting
+
+<a name="0.11.0"></a>
+
+## 0.11.0 (2022-12-20)
+
+### Added
+
+- ✨ Major UI redesign and improvements
+- ✨ Enhanced script editor with better syntax highlighting
+- ✨ Improved script management capabilities
+
+### Changed
+
+- ⚡ Performance optimizations across the extension
+- 💄 Updated visual design and user interface
+
+### Fixed
+
+- 🐛 Fix numerous bugs and stability issues
+- 🐛 Improve compatibility with various websites
+
+<a name="0.10.4"></a>
+
+## 0.10.4 (2022-12-04)
+
+### Fixed
+
+- 🐛 Fix critical issues affecting script execution
+- 🐛 Fix compatibility problems with certain websites
+- 🐛 Improve extension stability and performance
+
+<a name="0.10.3"></a>
+
+## 0.10.3 (2022-11-23)
+
+### Fixed
+
+- 🐛 Fix script loading issues
+- 🐛 Fix memory management problems
+- 🐛 Improve overall extension reliability
+
+<a name="0.10.2"></a>
+
+## 0.10.2 (2022-11-21)
+
+### Fixed
+
+- 🐛 Fix urgent bugs affecting core functionality
+- 🐛 Improve script execution stability
+
+<a name="0.10.1"></a>
+
+## 0.10.1 (2022-11-19)
+
+### Fixed
+
+- 🐛 Fix installation and update issues
+- 🐛 Fix compatibility with latest browser versions
+- 🐛 Improve user interface responsiveness
+
+<a name="0.10.0"></a>
+
+## 0.10.0 (2022-11-17)
+
+### Added
+
+- ✨ Major milestone release with comprehensive feature set
+- ✨ Enhanced script management and execution capabilities
+- ✨ Improved user interface and user experience
+- ✨ Better compatibility with Tampermonkey scripts
+
+### Changed
+
+- ⚡ Significant performance improvements
+- 💄 Redesigned user interface
+- ♻️ Refactored core architecture for better maintainability
+
+### Fixed
+
+- 🐛 Fix numerous bugs and stability issues
+- 🐛 Improve compatibility across different browsers and websites
