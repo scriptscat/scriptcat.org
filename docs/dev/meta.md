@@ -69,7 +69,7 @@ id: meta
 
 ### match
 
-被match的url才会运行脚本,遵循[Match patterns](https://developer.chrome.com/docs/extensions/mv3/match_patterns/),match中使用*表示通配,tld表示匹配顶域(v0.17.0-beta不再支持tld匹配模式),域名以`*.`开头也会匹配`xxx.com`:
+被match的url才会运行脚本，遵循[Match patterns](https://developer.chrome.com/docs/extensions/mv3/match_patterns/)，match中使用*表示通配，tld表示匹配顶域，域名以`*.`开头也会匹配`xxx.com`:
 
 | 值                               | 正确案例                                                     | 错误案例                               |
 | -------------------------------- | ------------------------------------------------------------ | -------------------------------------- |
@@ -87,7 +87,7 @@ match的别名
 
 ### exclude
 
-不匹配url
+不匹配url，表达式与match相同
 
 ### grant
 
