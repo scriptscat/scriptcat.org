@@ -207,3 +207,26 @@ sidebar_position: 1
 - 🌐 issue 模板提供英文版本 [[37217d4](https://github.com/scriptscat/scriptcat/commit/37217d423d7e410893c68ef74963a6c14c38fafe)]
 - 📝 调整 readme [[acb5731](https://github.com/scriptscat/scriptcat/commit/acb5731df5141052312251073e1408426242b2e4)]
 - 🌐 Update i18n README.md ([#487](https://github.com/scriptscat/scriptcat/issues/487)) [[a0d6417](https://github.com/scriptscat/scriptcat/commit/a0d641782666315eed4937d6e62bff6944d65e9d)] (by @MaxZhang)
+
+## 0.16.11-beta (2025-08-25)
+
+### Added
+
+- ✨ 优化安装的打开窗口交互 [#548](https://github.com/scriptscat/scriptcat/issues/548) [[3348f26](https://github.com/scriptscat/scriptcat/commit/3348f269de04f4d1cb6583c4b83d5cf20f6a6cc7)]
+
+### Changed
+
+- 🎨 (MV2) 增强 chrome.tabs.create 兼容性 ([#640](https://github.com/scriptscat/scriptcat/issues/640)) [[eb4d1ab](https://github.com/scriptscat/scriptcat/commit/eb4d1ab1dd3e298e733bb07235b1c8b2858131d1)] (by @cyfung1031)
+- ⚡ 基於 MV3 版修正小量共通功能代码 ([#614](https://github.com/scriptscat/scriptcat/issues/614)) [[51f3d0c](https://github.com/scriptscat/scriptcat/commit/51f3d0c15129444b1cdabf0a936e1f01473e03f5)] (by @cyfung1031)
+
+### Fixed
+
+- 🐛 修复 SRI 资源校验 [[d24d9ad](https://github.com/scriptscat/scriptcat/commit/d24d9ad3f924d3ec9c677f937c711e9b32f691e5)]
+- 💚 修复 lint 问题 [[2b33a70](https://github.com/scriptscat/scriptcat/commit/2b33a706a1bf80b1cc4c7b26449a371f2dc0ab99)]
+- 🐛 修复 firefox service worker csp 的问题 [#533](https://github.com/scriptscat/scriptcat/issues/533) [[a1cb2e0](https://github.com/scriptscat/scriptcat/commit/a1cb2e0318f64a7362ed7b25e29218bfb35fcde5)]
+- 🐛 修复下拉列表选项显示不全的问题 ([#552](https://github.com/scriptscat/scriptcat/issues/552)) [[73d6c65](https://github.com/scriptscat/scriptcat/commit/73d6c65bea67ce4ab382ab8619df2859738421c3)]
+- 🐛 设置 monaco 为英文 [[77c872d](https://github.com/scriptscat/scriptcat/commit/77c872d233c371ead9e152477cfce9c690ec2fb1)]
+
+### Miscellaneous
+
+- 🌐 处理翻译问题 [[d0ab618](https://github.com/scriptscat/scriptcat/commit/d0ab61816ffe085beb5244180f0ada4b557dd5de)]
