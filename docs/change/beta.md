@@ -208,6 +208,8 @@ sidebar_position: 1
 - 📝 调整 readme [[acb5731](https://github.com/scriptscat/scriptcat/commit/acb5731df5141052312251073e1408426242b2e4)]
 - 🌐 Update i18n README.md ([#487](https://github.com/scriptscat/scriptcat/issues/487)) [[a0d6417](https://github.com/scriptscat/scriptcat/commit/a0d641782666315eed4937d6e62bff6944d65e9d)] (by @MaxZhang)
 
+<a name="0.16.11-beta"></a>
+
 ## 0.16.11-beta (2025-08-25)
 
 ### Added
