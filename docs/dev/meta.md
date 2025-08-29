@@ -50,10 +50,16 @@ id: meta
 | document-start | 在前端匹配到网址后,以最快的速度注入脚本到页面中              | v0.3.0 |
 | document-end   | DOM加载完成后注入脚本,此时页面脚本和图像等资源可能仍在加载   | v0.3.0 |
 | document-idle  | 所有内容加载完成后注入脚本                                   | v0.3.0 |
-| document-body  | 脚本只会在页面中有body元素时才会注入                         | v0.6.2-v0.17.0-beta(🔥移除) |
+| document-body  | 脚本只会在页面中有body元素时才会注入                         | v0.6.2 |
 | document-menu  | 在页面右键时会显示一个菜单,点击时运行脚本,脚本名称作为菜单名称 | v0.3.4-v0.9.4(🔥移除) |
 
 对于menu图标可参考:[Unicode Symbols](https://unicode-table.com/en/)和[emoji](https://www.emojiall.com/zh-hans)
+
+### early-start (v1.2.0+)
+
+当 run-at 为 document-start 时，脚本会尽早执行，但是依旧无法保证比页面更快的加载
+
+当你定义了 `@run-at document-start` 后，可以再增加`@early-start`来让脚本比页面更快加载：[example](https://github.com/scriptscat/scriptcat/blob/main/example/early-start.js)
 
 ### storageName 🧪
 
