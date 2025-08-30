@@ -210,7 +210,7 @@ export default function HomepageFeatures(): JSX.Element {
           </p>
         </div>
         <div className="flex-1 py-10">
-          <Link to="/docs/dev/backgroud/">
+          <Link to="/docs/dev/background/">
             <Image src="/img/home/feature.png" preview={false} />
           </Link>
         </div>
