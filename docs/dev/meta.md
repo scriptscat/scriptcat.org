@@ -2,7 +2,6 @@
 id: meta
 ---
 
-
 # 描述文档
 
 `==UserScript==` 中的内容,用于描述脚本所需要的权限和脚本的信息作用等,在脚本的最开始的位置.
@@ -17,7 +16,6 @@ id: meta
 // @crontab      * * once * *
 // ==/UserScript==
 ```
-
 
 ## 主要值
 
@@ -45,17 +43,21 @@ id: meta
 
 脚本的运行时间
 
-| 值             | 运行时                                                       | 支持   |
-| -------------- | ------------------------------------------------------------ | ------ |
-| document-start | 在前端匹配到网址后,以最快的速度注入脚本到页面中              | v0.3.0 |
-| document-end   | DOM加载完成后注入脚本,此时页面脚本和图像等资源可能仍在加载   | v0.3.0 |
-| document-idle  | 所有内容加载完成后注入脚本                                   | v0.3.0 |
-| document-body  | 脚本只会在页面中有body元素时才会注入                         | v0.6.2 |
-| document-menu  | 在页面右键时会显示一个菜单,点击时运行脚本,脚本名称作为菜单名称 | v0.3.4-v0.9.4(🔥移除) |
+| 值             | 运行时                                                         | 支持                   |
+| -------------- | -------------------------------------------------------------- | ---------------------- |
+| document-start | 在前端匹配到网址后,以最快的速度注入脚本到页面中                | v0.3.0                 |
+| document-end   | DOM 加载完成后注入脚本,此时页面脚本和图像等资源可能仍在加载    | v0.3.0                 |
+| document-idle  | 所有内容加载完成后注入脚本                                     | v0.3.0                 |
+| document-body  | 脚本只会在页面中有 body 元素时才会注入                         | v0.6.2                 |
+| document-menu  | 在页面右键时会显示一个菜单,点击时运行脚本,脚本名称作为菜单名称 | v0.3.4-v0.9.4(🔥 移除) |
 
-对于menu图标可参考:[Unicode Symbols](https://unicode-table.com/en/)和[emoji](https://www.emojiall.com/zh-hans)
+对于 menu 图标可参考:[Unicode Symbols](https://unicode-table.com/en/)和[emoji](https://www.emojiall.com/zh-hans)
 
-### early-start (v1.2.0+)
+### run-in
+
+指定脚本注入的环境：`@run-in normal-tabs` 普通标签、`@run-in incognito-tabs` 隐身标签
+
+### early-start (v1.1.0+)
 
 当 run-at 为 document-start 时，脚本会尽早执行，但是依旧无法保证比页面更快的加载
 
@@ -71,44 +73,44 @@ id: meta
 
 ### crontab
 
-表示脚本为定时脚本,需要有cron表达式值,只能存在一个cron表达式,会在后台环境中定时运行,具体请看[定时脚本](./background.md#定时脚本)
+表示脚本为定时脚本,需要有 cron 表达式值,只能存在一个 cron 表达式,会在后台环境中定时运行,具体请看[定时脚本](./background.md#定时脚本)
 
 ### match
 
-被match的url才会运行脚本，遵循[Match patterns](https://developer.chrome.com/docs/extensions/mv3/match_patterns/)，match中使用*表示通配，tld表示匹配顶域，域名以`*.`开头也会匹配`xxx.com`:
+被 match 的 url 才会运行脚本，遵循[Match patterns](https://developer.chrome.com/docs/extensions/mv3/match_patterns/)，match 中使用*表示通配，tld 表示匹配顶域，域名以`*.`开头也会匹配`xxx.com`:
 
-| 值                               | 正确案例                                                     | 错误案例                               |
-| -------------------------------- | ------------------------------------------------------------ | -------------------------------------- |
-| `http://scriptcat.org/doc/match` | http://scriptcat.org/doc/match                               | http://scriptcat.org/doc/runAt         |
-| `*://*/param?*`                  | https://scriptcat.org/param\|http://scriptcat.org/param?search=油猴 | https://scriptcat.org/test/param       |
-| `*://*/prefix*suffix`            | http://scriptcat.org/prefix/suffix\|http://scriptcat.org/prefix/mid/suffix\|http://scriptcat.org/prefixsuffix | http://scriptcat.org/prefix/suffix/end |
-| `http*://scriptcat.org/*`        | https://scriptcat.org/\|https://scriptcat.org/doc\|http://scriptcat.org/doc/match\|http://scriptcat.org/param?search=油猴 | https://doc.scriptcat.org/             |
-| `http*://scriptcat.org/doc/*`    | https://scriptcat.org/doc\|http://scriptcat.org/doc/match    | http://scriptcat.org/param?search=油猴 |
-| `http*://scriptcat.tld/doc/*`    | https://scriptcat.cn/doc\|http://scriptcat.net.cn/doc/match    | http://google.com/param?search=油猴 |
-| `http*://*.scriptcat.org/doc/*`    | https://scriptcat.cn/doc\|http://www.scriptcat.net.cn/doc/match    | http://google.com/param?search=油猴 |
+| 值                               | 正确案例                                                                                                                                | 错误案例                                 |
+| -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| `http://scriptcat.org/doc/match` | `http://scriptcat.org/doc/match`                                                                                                        | `http://scriptcat.org/doc/runAt`         |
+| `*://*/param?*`                  | `https://scriptcat.org/param` \| `http://scriptcat.org/param?search=油猴`                                                               | `https://scriptcat.org/test/param`       |
+| `*://*/prefix*suffix`            | `http://scriptcat.org/prefix/suffix` \| `http://scriptcat.org/prefix/mid/suffix` \| `http://scriptcat.org/prefixsuffix`                 | `http://scriptcat.org/prefix/suffix/end` |
+| `http*://scriptcat.org/*`        | `https://scriptcat.org/` \| `https://scriptcat.org/doc` \| `http://scriptcat.org/doc/match` \| `http://scriptcat.org/param?search=油猴` | `https://doc.scriptcat.org/`             |
+| `http*://scriptcat.org/doc/*`    | `https://scriptcat.org/doc` \| `http://scriptcat.org/doc/match`                                                                         | `http://scriptcat.org/param?search=油猴` |
+| `http*://scriptcat.tld/doc/*`    | `https://scriptcat.cn/doc` \| `http://scriptcat.net.cn/doc/match`                                                                       | `http://google.com/param?search=油猴`    |
+| `http*://*.scriptcat.org/doc/*`  | `https://scriptcat.cn/doc` \| `http://www.scriptcat.net.cn/doc/match`                                                                   | `http://google.com/param?search=油猴`    |
 
 ### include
 
-match的别名
+可以使用 * 进行模糊匹配，允许不标准的 URL
 
 ### exclude
 
-不匹配url，表达式与match相同
+不匹配 url，表达式与 include 相同
 
 ### grant
 
-申请API权限,需要申请了API之后才能调用,api列表请看:[API文档](./api.md)和[CAT API文档](./cat-api.md).
+申请 API 权限,需要申请了 API 之后才能调用,api 列表请看:[API 文档](./api.md)和[CAT API 文档](./cat-api.md).
 
 两个特殊的值:
 
-* **none**: 表示不在沙盒环境中运行,直接存在页面环境中,此环境下无法使用任何的GM API,可以直接访问页面的`window`对象.
-* **unsafeWindow**在沙盒环境中如果需要访问页面的`window`对象,需要使用`unsafeWindow`来进行访问.(tm不需要声明这个,为了兼容只能去了,好不规范啊.)
-
+- **none**: 表示不在沙盒环境中运行,直接存在页面环境中,此环境下无法使用任何的 GM API,可以直接访问页面的`window`对象.
+- **unsafeWindow**在沙盒环境中如果需要访问页面的`window`对象,需要使用`unsafeWindow`来进行访问.(tm 不需要声明这个,为了兼容只能去了,好不规范啊.)
 
 ### connect
+
 获取网站的访问权限,请看`GM_cookie`和`GM_xmlhttpRequest`
 
-### resource 
+### resource
 
 引入资源文件,声明完`@resource`后,可使用`GM_getResourceText`/`GM_getResourceURL`获取信息
 
@@ -122,7 +124,7 @@ match的别名
 
 ### require
 
-引入外部js文件,可以进行[资源校验](#资源校验)
+引入外部 js 文件,可以进行[资源校验](#资源校验)
 
 ### noframes
 
@@ -161,7 +163,7 @@ match的别名
 
 ### supportURL
 
-支持站点,bug反馈页面
+支持站点,bug 反馈页面
 
 ### homepage, homepageURL, website
 
@@ -177,14 +179,13 @@ match的别名
 
 ### icon64， icon64URL
 
-64x64大小的脚本图标
-
+64x64 大小的脚本图标
 
 ### 附注
 
 ### 资源校验
 
-使用md5,sha1,sha224,sha256,sha384,sha512方法对资源进行校验防止篡改,不同的校验方式之间可用`;`或者`,`分开,例如:
+使用 md5,sha1,sha224,sha256,sha384,sha512 方法对资源进行校验防止篡改,不同的校验方式之间可用`;`或者`,`分开,例如:
 
 ```js
 // @require https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js#md5=d55836f30c097da753179f82fa6f108f;sha256=a476ab8560837a51938aa6e1720c8be87c2862b6221690e9de7ffac113811a90
