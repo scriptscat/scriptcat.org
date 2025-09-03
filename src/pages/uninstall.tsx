@@ -161,7 +161,6 @@ export default function Uninstall(): JSX.Element {
         <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 py-12 px-4">
           <div className="max-w-2xl mx-auto">
             <Card
-              className="text-center shadow-xl border-0 rounded-2xl overflow-hidden"
               styles={{
                 body: { padding: "3rem 2rem" },
               }}
@@ -330,7 +329,6 @@ export default function Uninstall(): JSX.Element {
               <Col xs={24} lg={16}>
                 {/* 主要表单卡片 */}
                 <Card
-                  className="shadow-xl border-0 rounded-2xl overflow-hidden"
                   styles={{
                     body: { padding: "2.5rem" },
                   }}
@@ -455,7 +453,6 @@ export default function Uninstall(): JSX.Element {
                         </span>
                       </div>
                     }
-                    className="rounded-2xl shadow-lg border-0"
                     styles={{
                       body: { padding: "1.5rem" },
                     }}
@@ -508,7 +505,6 @@ export default function Uninstall(): JSX.Element {
                         </span>
                       </div>
                     }
-                    className="rounded-2xl shadow-lg border-0"
                     styles={{
                       body: { padding: "1.5rem" },
                     }}
