@@ -26,7 +26,7 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: "zh-Hans",
-    locales: ["zh-Hans", "en"],
+    locales: ["zh-Hans", "en", "ja", "ru", "vi", "de", "zh-Hant", "es", "fr", "ar", "it", "pt"],
     localeConfigs: {
       "zh-Hans": {
         label: "简体中文",
@@ -37,6 +37,56 @@ const config = {
         label: "English",
         direction: "ltr",
         htmlLang: "en",
+      },
+      ja: {
+        label: "日本語",
+        direction: "ltr",
+        htmlLang: "ja",
+      },
+      ru: {
+        label: "Русский",
+        direction: "ltr",
+        htmlLang: "ru",
+      },
+      vi: {
+        label: "Tiếng Việt",
+        direction: "ltr",
+        htmlLang: "vi",
+      },
+      de: {
+        label: "Deutsch",
+        direction: "ltr",
+        htmlLang: "de",
+      },
+      "zh-Hant": {
+        label: "繁體中文",
+        direction: "ltr",
+        htmlLang: "zh-Hant",
+      },
+      es: {
+        label: "Español",
+        direction: "ltr",
+        htmlLang: "es",
+      },
+      fr: {
+        label: "Français",
+        direction: "ltr",
+        htmlLang: "fr",
+      },
+      ar: {
+        label: "العربية",
+        direction: "rtl",
+        htmlLang: "ar",
+      },
+      it: {
+        label: "Italiano",
+        direction: "ltr",
+        htmlLang: "it",
+      },
+      pt: {
+        label: "Português",
+        direction: "ltr",
+        htmlLang: "pt",
       },
     },
   },

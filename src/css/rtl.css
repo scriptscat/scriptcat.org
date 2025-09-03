@@ -1,0 +1,235 @@
+/* RTL (Right-to-Left) Support for Arabic */
+
+/* Apply RTL styles only when html has dir="rtl" attribute */
+html[dir="rtl"] {
+  direction: rtl;
+}
+
+/* RTL Navigation adjustments */
+html[dir="rtl"] .navbar__items {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .navbar__item {
+  margin-left: 0;
+  margin-right: var(--ifm-navbar-item-padding-horizontal);
+}
+
+html[dir="rtl"] .navbar__brand {
+  margin-right: 0;
+  margin-left: var(--ifm-navbar-padding-horizontal);
+}
+
+/* RTL Sidebar adjustments */
+html[dir="rtl"] .theme-doc-sidebar-container {
+  border-right: none;
+  border-left: 1px solid var(--ifm-toc-border-color);
+}
+
+html[dir="rtl"] .menu__link {
+  padding-left: 0;
+  padding-right: var(--ifm-menu-link-padding-horizontal);
+}
+
+html[dir="rtl"] .menu__list-item--collapsed .menu__list {
+  margin-left: 0;
+  margin-right: var(--ifm-menu-link-padding-horizontal);
+}
+
+/* RTL Content adjustments */
+html[dir="rtl"] .markdown > h1,
+html[dir="rtl"] .markdown > h2,
+html[dir="rtl"] .markdown > h3,
+html[dir="rtl"] .markdown > h4,
+html[dir="rtl"] .markdown > h5,
+html[dir="rtl"] .markdown > h6 {
+  text-align: right;
+}
+
+html[dir="rtl"] .markdown ul,
+html[dir="rtl"] .markdown ol {
+  padding-left: 0;
+  padding-right: 2rem;
+}
+
+/* RTL Pagination adjustments */
+html[dir="rtl"] .pagination-nav__link {
+  text-align: right;
+}
+
+html[dir="rtl"] .pagination-nav__link--prev {
+  text-align: left;
+}
+
+html[dir="rtl"] .pagination-nav__link--next {
+  text-align: right;
+}
+
+/* RTL Footer adjustments */
+html[dir="rtl"] .footer__links {
+  text-align: right;
+}
+
+html[dir="rtl"] .footer__link-item {
+  text-align: right;
+}
+
+/* RTL Homepage features adjustments */
+html[dir="rtl"] .homepage-features {
+  direction: rtl;
+}
+
+html[dir="rtl"] .homepage-features .col {
+  text-align: right;
+}
+
+html[dir="rtl"] .homepage-features h3 {
+  text-align: right;
+}
+
+html[dir="rtl"] .homepage-features p {
+  text-align: right;
+}
+
+/* RTL Comments section adjustments */
+html[dir="rtl"] .ant-card {
+  text-align: right;
+}
+
+html[dir="rtl"] .ant-card-meta-title {
+  text-align: right;
+}
+
+html[dir="rtl"] .ant-card-meta-description {
+  text-align: right;
+}
+
+html[dir="rtl"] .ant-card-body {
+  text-align: right;
+}
+
+/* RTL Swiper adjustments */
+html[dir="rtl"] .swiper {
+  direction: rtl;
+}
+
+html[dir="rtl"] .swiper-slide {
+  text-align: right;
+}
+
+/* RTL Button adjustments */
+html[dir="rtl"] .button {
+  text-align: center;
+}
+
+/* RTL Code block adjustments */
+html[dir="rtl"] .prism-code {
+  direction: ltr; /* Keep code blocks LTR for readability */
+  text-align: left;
+}
+
+html[dir="rtl"] .codeBlockTitle_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module {
+  text-align: right;
+}
+
+/* RTL Table adjustments */
+html[dir="rtl"] table {
+  direction: rtl;
+}
+
+html[dir="rtl"] th,
+html[dir="rtl"] td {
+  text-align: right;
+}
+
+/* RTL Search adjustments */
+html[dir="rtl"] .navbar__search-input {
+  text-align: right;
+}
+
+/* RTL Breadcrumb adjustments */
+html[dir="rtl"] .breadcrumbs {
+  direction: rtl;
+}
+
+html[dir="rtl"] .breadcrumbs__item {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+html[dir="rtl"] .breadcrumbs__link {
+  text-align: right;
+}
+
+/* RTL TOC (Table of Contents) adjustments */
+html[dir="rtl"] .table-of-contents {
+  text-align: right;
+}
+
+html[dir="rtl"] .table-of-contents__link {
+  text-align: right;
+  padding-left: 0;
+  padding-right: 0.5rem;
+}
+
+/* RTL Alert/Admonition adjustments */
+html[dir="rtl"] .alert {
+  text-align: right;
+}
+
+html[dir="rtl"] .admonition {
+  text-align: right;
+}
+
+/* RTL Language selector adjustments */
+html[dir="rtl"] .navbar__item.dropdown {
+  text-align: right;
+}
+
+html[dir="rtl"] .dropdown__menu {
+  text-align: right;
+}
+
+/* Ensure proper font rendering for Arabic */
+html[dir="rtl"] {
+  font-family: 'Segoe UI', 'Tahoma', 'Arial', 'Helvetica Neue', sans-serif;
+}
+
+/* Fix any layout issues with flexbox in RTL */
+html[dir="rtl"] .row {
+  direction: rtl;
+}
+
+html[dir="rtl"] .col {
+  direction: rtl;
+}
+
+/* Ensure icons and images maintain proper orientation */
+html[dir="rtl"] .navbar__logo {
+  transform: none; /* Don't flip logos */
+}
+
+html[dir="rtl"] img {
+  transform: none; /* Don't flip images by default */
+}
+
+/* Fix any margin/padding issues in RTL */
+html[dir="rtl"] .margin-left--md {
+  margin-left: 0;
+  margin-right: 1rem;
+}
+
+html[dir="rtl"] .margin-right--md {
+  margin-right: 0;
+  margin-left: 1rem;
+}
+
+html[dir="rtl"] .padding-left--md {
+  padding-left: 0;
+  padding-right: 1rem;
+}
+
+html[dir="rtl"] .padding-right--md {
+  padding-right: 0;
+  padding-left: 1rem;
+}
