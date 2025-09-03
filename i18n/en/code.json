@@ -394,5 +394,117 @@
   "footer.copyright.license": {
     "message": "License Agreement",
     "description": "Footer copyright license link"
+  },
+  "uninstall.title": {
+    "message": "ScriptCat Uninstall Survey",
+    "description": "Title of the uninstall survey page"
+  },
+  "uninstall.description": {
+    "message": "Thank you for using ScriptCat. Please tell us why you're uninstalling.",
+    "description": "Description of the uninstall survey page"
+  },
+  "uninstall.header.title": {
+    "message": "Sorry to see you uninstall ScriptCat",
+    "description": "Main header title on uninstall survey page"
+  },
+  "uninstall.header.subtitle": {
+    "message": "If you'd like, we'd appreciate hearing your thoughts to help us continue improving",
+    "description": "Subtitle on uninstall survey page"
+  },
+  "uninstall.question.reason": {
+    "message": "What's the main reason you're uninstalling ScriptCat?",
+    "description": "Question about uninstall reason"
+  },
+  "uninstall.question.feedback": {
+    "message": "Would you mind sharing more details if convenient?",
+    "description": "Question about detailed feedback"
+  },
+  "uninstall.reason.bugs": {
+    "message": "Encountered errors or bugs",
+    "description": "Uninstall reason: bugs"
+  },
+  "uninstall.reason.no_need": {
+    "message": "No longer need ScriptCat",
+    "description": "Uninstall reason: no longer need"
+  },
+  "uninstall.reason.features": {
+    "message": "Missing features I need",
+    "description": "Uninstall reason: missing features"
+  },
+  "uninstall.reason.alternative": {
+    "message": "Found a better alternative",
+    "description": "Uninstall reason: found alternative"
+  },
+  "uninstall.reason.other": {
+    "message": "Other reasons",
+    "description": "Uninstall reason: other"
+  },
+  "uninstall.feedback.placeholder": {
+    "message": "Please share your specific issues, suggestions, or other thoughts...",
+    "description": "Placeholder text for feedback textarea"
+  },
+  "uninstall.button.submit": {
+    "message": "Submit Feedback",
+    "description": "Submit button text"
+  },
+  "uninstall.warning.selectReason": {
+    "message": "Please select an uninstall reason",
+    "description": "Warning when no reason is selected"
+  },
+  "uninstall.success.submitted": {
+    "message": "Thank you for your feedback!",
+    "description": "Success message after submission"
+  },
+  "uninstall.error.submit": {
+    "message": "Submission failed, please try again later",
+    "description": "Error message when submission fails"
+  },
+  "uninstall.thanks.title": {
+    "message": "Thank you for your feedback!",
+    "description": "Thank you page title"
+  },
+  "uninstall.thanks.message": {
+    "message": "Your feedback is invaluable to us and will help us improve ScriptCat.",
+    "description": "Thank you page message"
+  },
+  "uninstall.thanks.backHome": {
+    "message": "Back to Home",
+    "description": "Back to home button"
+  },
+  "uninstall.thanks.reportIssue": {
+    "message": "Report Issue",
+    "description": "Report issue button"
+  },
+  "uninstall.reinstall.message": {
+    "message": "If you change your mind, you can always reinstall:",
+    "description": "Reinstall message"
+  },
+  "uninstall.thanks.considerReinstall": {
+    "message": "If you change your mind, you're always welcome back",
+    "description": "Consider reinstall message"
+  },
+  "uninstall.thanks.submitAnother": {
+    "message": "Submit Other Feedback",
+    "description": "Submit another feedback button"
+  },
+  "uninstall.sidebar.reinstall.title": {
+    "message": "You're Always Welcome Back",
+    "description": "Sidebar reinstall title"
+  },
+  "uninstall.sidebar.help.title": {
+    "message": "Need Help?",
+    "description": "Sidebar help title"
+  },
+  "uninstall.sidebar.help.description": {
+    "message": "Having trouble? We're here to help you solve it",
+    "description": "Sidebar help description"
+  },
+  "uninstall.sidebar.help.github": {
+    "message": "GitHub Issues",
+    "description": "GitHub issues button"
+  },
+  "uninstall.sidebar.help.docs": {
+    "message": "View Documentation",
+    "description": "View docs button"
   }
 }

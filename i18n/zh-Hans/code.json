@@ -789,5 +789,117 @@
   "theme.tags.tagsPageTitle": {
     "message": "标签",
     "description": "The title of the tag list page"
+  },
+  "uninstall.title": {
+    "message": "ScriptCat 卸载调查",
+    "description": "Title of the uninstall survey page"
+  },
+  "uninstall.description": {
+    "message": "感谢您使用 ScriptCat，请告诉我们您卸载的原因",
+    "description": "Description of the uninstall survey page"
+  },
+  "uninstall.header.title": {
+    "message": "很遗憾看到您卸载了 ScriptCat",
+    "description": "Main header title on uninstall survey page"
+  },
+  "uninstall.header.subtitle": {
+    "message": "如果您愿意，希望能分享一下您的想法，这对我们持续改进会很有帮助",
+    "description": "Subtitle on uninstall survey page"
+  },
+  "uninstall.question.reason": {
+    "message": "您卸载 ScriptCat 的主要原因是？",
+    "description": "Question about uninstall reason"
+  },
+  "uninstall.question.feedback": {
+    "message": "如果方便的话，能否分享更多细节？",
+    "description": "Question about detailed feedback"
+  },
+  "uninstall.reason.bugs": {
+    "message": "遇到了错误或bug",
+    "description": "Uninstall reason: bugs"
+  },
+  "uninstall.reason.no_need": {
+    "message": "不再需要脚本猫",
+    "description": "Uninstall reason: no longer need"
+  },
+  "uninstall.reason.features": {
+    "message": "缺少我需要的功能",
+    "description": "Uninstall reason: missing features"
+  },
+  "uninstall.reason.alternative": {
+    "message": "找到了更好的替代品",
+    "description": "Uninstall reason: found alternative"
+  },
+  "uninstall.reason.other": {
+    "message": "其他原因",
+    "description": "Uninstall reason: other"
+  },
+  "uninstall.feedback.placeholder": {
+    "message": "请分享您的具体问题、建议或其他想法...",
+    "description": "Placeholder text for feedback textarea"
+  },
+  "uninstall.button.submit": {
+    "message": "提交反馈",
+    "description": "Submit button text"
+  },
+  "uninstall.warning.selectReason": {
+    "message": "请选择卸载原因",
+    "description": "Warning when no reason is selected"
+  },
+  "uninstall.success.submitted": {
+    "message": "感谢您的反馈！",
+    "description": "Success message after submission"
+  },
+  "uninstall.error.submit": {
+    "message": "提交失败，请稍后重试",
+    "description": "Error message when submission fails"
+  },
+  "uninstall.thanks.title": {
+    "message": "感谢您的反馈！",
+    "description": "Thank you page title"
+  },
+  "uninstall.thanks.message": {
+    "message": "您的反馈对我们非常宝贵，将帮助我们改进 ScriptCat。",
+    "description": "Thank you page message"
+  },
+  "uninstall.thanks.backHome": {
+    "message": "返回首页",
+    "description": "Back to home button"
+  },
+  "uninstall.thanks.reportIssue": {
+    "message": "报告问题",
+    "description": "Report issue button"
+  },
+  "uninstall.reinstall.message": {
+    "message": "如果您改变主意，可以随时重新安装：",
+    "description": "Reinstall message"
+  },
+  "uninstall.thanks.considerReinstall": {
+    "message": "如果您改变主意，随时欢迎回来",
+    "description": "Consider reinstall message"
+  },
+  "uninstall.thanks.submitAnother": {
+    "message": "提交其他反馈",
+    "description": "Submit another feedback button"
+  },
+  "uninstall.sidebar.reinstall.title": {
+    "message": "随时欢迎回来",
+    "description": "Sidebar reinstall title"
+  },
+  "uninstall.sidebar.help.title": {
+    "message": "需要帮助？",
+    "description": "Sidebar help title"
+  },
+  "uninstall.sidebar.help.description": {
+    "message": "遇到问题？我们很乐意帮助您解决",
+    "description": "Sidebar help description"
+  },
+  "uninstall.sidebar.help.github": {
+    "message": "GitHub 问题",
+    "description": "GitHub issues button"
+  },
+  "uninstall.sidebar.help.docs": {
+    "message": "查看文档",
+    "description": "View docs button"
   }
 }
