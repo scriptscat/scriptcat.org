@@ -29,11 +29,11 @@ import {
   SmileOutlined,
   HomeOutlined,
   GithubOutlined,
-  ChromeOutlined,
-  FireOutlined,
 } from "@ant-design/icons";
+import { Icon } from "@iconify/react";
 import Translate, { translate } from "@docusaurus/Translate";
 import { useTheme } from "../components/useTheme";
+import { submitFeedback, type FeedbackRequest, type FeedbackReason } from "../service/system";
 
 const { Title, Paragraph, Text } = Typography;
 const { TextArea } = Input;
@@ -41,7 +41,7 @@ const { TextArea } = Input;
 // 卸载原因选项
 const uninstallReasons = [
   {
-    key: "bugs",
+    key: "bug" as FeedbackReason,
     icon: <BugOutlined />,
     label: translate({
       id: "uninstall.reason.bugs",
@@ -49,7 +49,7 @@ const uninstallReasons = [
     }),
   },
   {
-    key: "no_need",
+    key: "unused" as FeedbackReason,
     icon: <SafetyOutlined />,
     label: translate({
       id: "uninstall.reason.no_need",
@@ -57,7 +57,7 @@ const uninstallReasons = [
     }),
   },
   {
-    key: "features",
+    key: "feature" as FeedbackReason,
     icon: <ToolOutlined />,
     label: translate({
       id: "uninstall.reason.features",
@@ -65,7 +65,7 @@ const uninstallReasons = [
     }),
   },
   {
-    key: "alternative",
+    key: "better" as FeedbackReason,
     icon: <ThunderboltOutlined />,
     label: translate({
       id: "uninstall.reason.alternative",
@@ -73,7 +73,7 @@ const uninstallReasons = [
     }),
   },
   {
-    key: "other",
+    key: "other" as FeedbackReason,
     icon: <MessageOutlined />,
     label: translate({
       id: "uninstall.reason.other",
@@ -84,7 +84,7 @@ const uninstallReasons = [
 
 export default function Uninstall(): JSX.Element {
   const [form] = Form.useForm();
-  const [selectedReason, setSelectedReason] = useState<string>("");
+  const [selectedReason, setSelectedReason] = useState<FeedbackReason | "">("");
   const [feedback, setFeedback] = useState<string>("");
   const [submitting, setSubmitting] = useState<boolean>(false);
   const [submitted, setSubmitted] = useState<boolean>(false);
@@ -104,16 +104,13 @@ export default function Uninstall(): JSX.Element {
     setSubmitting(true);
 
     try {
-      // 模拟API调用
-      console.log("Uninstall feedback:", {
-        reason: selectedReason,
-        feedback,
-        timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent,
-      });
+      // 调用实际的反馈API
+      const feedbackRequest: FeedbackRequest = {
+        reason: selectedReason as FeedbackReason,
+        content: feedback || "", // 如果没有填写反馈内容，则为空字符串
+      };
 
-      // 模拟提交延迟
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      await submitFeedback(feedbackRequest);
 
       setSubmitted(true);
       message.success(
@@ -123,6 +120,7 @@ export default function Uninstall(): JSX.Element {
         })
       );
     } catch (error) {
+      console.error("Submit feedback error:", error);
       message.error(
         translate({
           id: "uninstall.error.submit",
@@ -147,7 +145,7 @@ export default function Uninstall(): JSX.Element {
       <Layout
         title={translate({
           id: "uninstall.title",
-          message: "ScriptCat 卸载调查",
+          message: "卸载调查",
         })}
         description={translate({
           id: "uninstall.description",
@@ -232,7 +230,7 @@ export default function Uninstall(): JSX.Element {
                     <Space wrap>
                       <Button
                         size="small"
-                        icon={<ChromeOutlined />}
+                        icon={<Icon icon="logos:chrome" />}
                         href="https://chrome.google.com/webstore/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf"
                         target="_blank"
                         className="rounded-md"
@@ -241,6 +239,7 @@ export default function Uninstall(): JSX.Element {
                       </Button>
                       <Button
                         size="small"
+                        icon={<Icon icon="logos:microsoft-edge" />}
                         href="https://microsoftedge.microsoft.com/addons/detail/scriptcat/liilgpjgabokdklappibcjfablkpcekh"
                         target="_blank"
                         className="rounded-md"
@@ -249,7 +248,7 @@ export default function Uninstall(): JSX.Element {
                       </Button>
                       <Button
                         size="small"
-                        icon={<FireOutlined />}
+                        icon={<Icon icon="logos:firefox" />}
                         href="https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/"
                         target="_blank"
                         className="rounded-md"
@@ -413,7 +412,7 @@ export default function Uninstall(): JSX.Element {
                           id: "uninstall.feedback.placeholder",
                           message: "请分享您的具体问题、建议或其他想法...",
                         })}
-                        maxLength={500}
+                        maxLength={1000}
                         showCount
                         className="resize-none rounded-lg"
                       />
@@ -465,7 +464,7 @@ export default function Uninstall(): JSX.Element {
 
                     <Space direction="vertical" className="w-full" size="small">
                       <Button
-                        icon={<ChromeOutlined />}
+                        icon={<Icon icon="logos:chrome" />}
                         href="https://chrome.google.com/webstore/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf"
                         target="_blank"
                         block
@@ -474,6 +473,7 @@ export default function Uninstall(): JSX.Element {
                         Chrome 商店
                       </Button>
                       <Button
+                        icon={<Icon icon="logos:microsoft-edge" />}
                         href="https://microsoftedge.microsoft.com/addons/detail/scriptcat/liilgpjgabokdklappibcjfablkpcekh"
                         target="_blank"
                         block
@@ -482,7 +482,7 @@ export default function Uninstall(): JSX.Element {
                         Edge 商店
                       </Button>
                       <Button
-                        icon={<FireOutlined />}
+                        icon={<Icon icon="logos:firefox" />}
                         href="https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/"
                         target="_blank"
                         block

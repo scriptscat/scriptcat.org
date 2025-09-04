@@ -791,7 +791,7 @@
     "description": "The title of the tag list page"
   },
   "uninstall.title": {
-    "message": "ScriptCat 卸载调查",
+    "message": "卸载调查",
     "description": "Title of the uninstall survey page"
   },
   "uninstall.description": {
