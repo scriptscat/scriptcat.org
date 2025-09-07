@@ -9,6 +9,24 @@ Beta 版本更新日志请查看 [Beta 更新日志](./beta.md)
 
 ⚠️ 请注意，如果你使用的 Windows 8/7/XP 系统，或者浏览器内核版本低于\<120，需要自行手动安装[旧版脚本猫](https://bbs.tampermonkey.net.cn/thread-3068-1-1.html)，v0.16.x 是最后一个支持 Manifest V2 的版本，安装步骤可以参考：[加载解压缩方式安装扩展](/docs/use/use/#%E5%8A%A0%E8%BD%BD%E8%A7%A3%E5%8E%8B%E7%BC%A9%E6%96%B9%E5%BC%8F%E5%AE%89%E8%A3%85%E6%89%A9%E5%B1%95)。
 
+<a name="1.1.0"></a>
+
+## 1.1.0 (2025-09-04)
+
+众多bug修复，和兼容性问题处理，支持了 Dropbox，新增 @early-start 支持比页面更快加载，更多详细内容请看 v1.1.0-beta.x 的更新日志
+
+### Added
+
+- ✨ 添加脚本运行环境设置 [#628](https://github.com/scriptscat/scriptcat/issues/628) [[0d4a89e](https://github.com/scriptscat/scriptcat/commit/0d4a89efaecf0331dcc7fbb6df006b93a1525846)]
+- ✨ 当没有后台脚本时默认收起 [#626](https://github.com/scriptscat/scriptcat/issues/626) ([9d0aac6](https://github.com/scriptscat/scriptcat/commit/9d0aac6aae11b96707ca1f7c024a24e9d55f217b))
+- ✨ 支持 Dropbox [#575](https://github.com/scriptscat/scriptcat/issues/575) [[2c66f21](https://github.com/scriptscat/scriptcat/commit/2c66f21f5118bd83a0eaa0f1baa3a31f2233e5b2)]
+- ✨ 优化 external.Tampermonkey 当 TM 和 SC 同时启动时，如 TM 没有安装，则查 SC 的安装状态 ([#703](https://github.com/scriptscat/scriptcat/issues/703)) [[d0115c3](https://github.com/scriptscat/scriptcat/commit/d0115c33657260d803b6091139601b1b20407d4e)] (by @cyfung1031)
+- ✨ 新增 @early-start 实现比页面更快加载 ([#649](https://github.com/scriptscat/scriptcat/issues/649)) [[eb097dd](https://github.com/scriptscat/scriptcat/commit/eb097dd146dcd6f8ca712ed883571dbfb3d09f20)]
+- ✨ 全局代码搜索 ([#662](https://github.com/scriptscat/scriptcat/issues/662)) [[f8eafb7](https://github.com/scriptscat/scriptcat/commit/f8eafb7f955dad62c1b41ac477e929bf00c65982)] (by @RenjiYuusei)
+- ✨ 添加卸载扩展后的调查页面 [[6404c8f](https://github.com/scriptscat/scriptcat/commit/6404c8f74aff09b15725a92f8afdfc0d71ac188f)]
+- 📝 修改安装打开的页面和命名空间 ([6f2f000](https://github.com/scriptscat/scriptcat/commit/6f2f000612908b7a88f6b70c2831092805c63bc7))
+- ✨ 添加移动端安装二维码 ([348237c](https://github.com/scriptscat/scriptcat/commit/348237c7ce9771c69025386926b1f73710cf6f42))
+
 ## 1.0.2 (2025-08-25)
 
 影响较大问题修复
@@ -438,7 +456,6 @@ Beta 版本更新日志请查看 [Beta 更新日志](./beta.md)
 
 **Full Changelog**: https://github.com/scriptscat/scriptcat/compare/v0.16.6...v0.17.0-alpha.3
 
-
 <a name="0.16.11"></a>
 
 ## 0.16.11 (2025-08-26)
@@ -463,7 +480,6 @@ Beta 版本更新日志请查看 [Beta 更新日志](./beta.md)
 ### Miscellaneous
 
 - 🌐 处理翻译问题 [[d0ab618](https://github.com/scriptscat/scriptcat/commit/d0ab61816ffe085beb5244180f0ada4b557dd5de)]
-
 
 <a name="0.16.9"></a>
 
