@@ -502,22 +502,23 @@ GM_addStyle(`
 `);
 ```
 
-### GM_registerMenuCommand
+### GM_registerMenuCommand *
 
 注册一个菜单选项到弹出页面中，点击时会调用 `listener` 方法，如果注册多个同名菜单，则只会第一个生效。
 
 ```typescript
-declare function GM_registerMenuCommand(
+function GM_registerMenuCommand(
   name: string,
-  listener: () => void,
-  optionsOrAccessKey?:
-    | string
+  listener?: (inputValue?: any) => void,
+  options_or_accessKey?:
     | {
         id?: number | string;
         accessKey?: string;
-        autoClose?: boolean;
-        title?: string;
+        autoClose?: boolean; // SC特有配置，默认为 true，false 时点击后不关闭弹出菜单页面
+        nested?: boolean; // SC特有配置，默认为 true，false 的话浏览器右键菜单项目由三级菜单升至二级菜单
+        individual?: boolean; // SC特有配置，默认为 false，true 表示当多iframe时，相同的菜单项不自动合并
       }
+    | string
 ): number;
 ```
 
