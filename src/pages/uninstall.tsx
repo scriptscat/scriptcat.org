@@ -90,6 +90,23 @@ export default function Uninstall(): JSX.Element {
   const [submitted, setSubmitted] = useState<boolean>(false);
   const { theme } = useTheme();
 
+  // 检测当前语言环境
+  const isEnglish = typeof window !== 'undefined' && window.location.pathname.startsWith('/en/');
+
+  // 根据语言和反馈类型获取GitHub链接
+  const getGithubUrl = (reason: FeedbackReason) => {
+    if (reason === 'bug') {
+      return isEnglish 
+        ? 'https://github.com/scriptscat/scriptcat/issues/new?template=bug_report_en.yaml'
+        : 'https://github.com/scriptscat/scriptcat/issues/new?template=bug_report.yaml';
+    } else if (reason === 'feature') {
+      return isEnglish
+        ? 'https://github.com/scriptscat/scriptcat/issues/new?template=feature_request_en.md'
+        : 'https://github.com/scriptscat/scriptcat/issues/new?template=feature_request.md';
+    }
+    return 'https://github.com/scriptscat/scriptcat/issues/new';
+  };
+
   const handleSubmit = async () => {
     if (!selectedReason) {
       message.warning(
@@ -392,6 +409,76 @@ export default function Uninstall(): JSX.Element {
                         </Row>
                       </Radio.Group>
                     </Form.Item>
+
+                    {/* Bug反馈引导提示 */}
+                    {selectedReason === "bug" && (
+                      <Alert
+                        message={
+                          <Translate id="uninstall.bug.alert.title">
+                            遇到了bug?
+                          </Translate>
+                        }
+                        description={
+                          <div>
+                            <Paragraph className="mb-2">
+                              <Translate id="uninstall.bug.alert.description">
+                                如果您遇到了错误或bug,我们建议您直接在GitHub上提交issue,这样可以获得更及时的反馈和技术支持。
+                              </Translate>
+                            </Paragraph>
+                            <Button
+                              type="primary"
+                              size="small"
+                              icon={<GithubOutlined />}
+                              href={getGithubUrl('bug')}
+                              target="_blank"
+                              className="rounded-lg"
+                            >
+                              <Translate id="uninstall.bug.alert.button">
+                                前往GitHub报告问题
+                              </Translate>
+                            </Button>
+                          </div>
+                        }
+                        type="info"
+                        showIcon
+                        className="mb-6"
+                      />
+                    )}
+
+                    {/* 功能需求引导提示 */}
+                    {selectedReason === "feature" && (
+                      <Alert
+                        message={
+                          <Translate id="uninstall.feature.alert.title">
+                            缺少某个功能?
+                          </Translate>
+                        }
+                        description={
+                          <div>
+                            <Paragraph className="mb-2">
+                              <Translate id="uninstall.feature.alert.description">
+                                我们非常重视用户的功能需求!建议您在GitHub上详细描述您需要的功能,这样可以让我们更好地了解您的需求并优先考虑实现。
+                              </Translate>
+                            </Paragraph>
+                            <Button
+                              type="primary"
+                              size="small"
+                              icon={<GithubOutlined />}
+                              href={getGithubUrl('feature')}
+                              target="_blank"
+                              className="rounded-lg"
+                            >
+                              <Translate id="uninstall.feature.alert.button">
+                                前往GitHub提出功能建议
+                              </Translate>
+                            </Button>
+                          </div>
+                        }
+                        type="info"
+                        showIcon
+                        className="mb-6"
+                      />
+                    )}
 
                     {/* 详细反馈 */}
                     <Form.Item
