@@ -901,5 +901,29 @@
   "uninstall.sidebar.help.docs": {
     "message": "查看文档",
     "description": "View docs button"
+  },
+  "uninstall.bug.alert.title": {
+    "message": "遇到了bug?",
+    "description": "Bug alert title"
+  },
+  "uninstall.bug.alert.description": {
+    "message": "如果您遇到了错误或bug,我们建议您直接在GitHub上提交issue,这样可以获得更及时的反馈和技术支持。",
+    "description": "Bug alert description"
+  },
+  "uninstall.bug.alert.button": {
+    "message": "前往GitHub报告问题",
+    "description": "Bug alert button text"
+  },
+  "uninstall.feature.alert.title": {
+    "message": "缺少某个功能?",
+    "description": "Feature alert title"
+  },
+  "uninstall.feature.alert.description": {
+    "message": "我们非常重视用户的功能需求!建议您在GitHub上详细描述您需要的功能,这样可以让我们更好地了解您的需求并优先考虑实现。",
+    "description": "Feature alert description"
+  },
+  "uninstall.feature.alert.button": {
+    "message": "前往GitHub提出功能建议",
+    "description": "Feature alert button text"
   }
 }

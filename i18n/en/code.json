@@ -506,5 +506,29 @@
   "uninstall.sidebar.help.docs": {
     "message": "View Documentation",
     "description": "View docs button"
+  },
+  "uninstall.bug.alert.title": {
+    "message": "Encountered a bug?",
+    "description": "Bug alert title"
+  },
+  "uninstall.bug.alert.description": {
+    "message": "If you encountered an error or bug, we recommend submitting an issue directly on GitHub for more timely feedback and technical support.",
+    "description": "Bug alert description"
+  },
+  "uninstall.bug.alert.button": {
+    "message": "Report Issue on GitHub",
+    "description": "Bug alert button text"
+  },
+  "uninstall.feature.alert.title": {
+    "message": "Missing a feature?",
+    "description": "Feature alert title"
+  },
+  "uninstall.feature.alert.description": {
+    "message": "We highly value user feature requests! We recommend describing your needed features in detail on GitHub, so we can better understand your needs and prioritize implementation.",
+    "description": "Feature alert description"
+  },
+  "uninstall.feature.alert.button": {
+    "message": "Suggest Feature on GitHub",
+    "description": "Feature alert button text"
   }
 }
