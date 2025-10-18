@@ -126,7 +126,7 @@ id: meta
 // @resource html https://bbs.tampermonkey.net.cn/
 // @resource xml https://bbs.tampermonkey.net.cn/sitemap.xml
 // 添加资源校验
-// @resource icon https://bbs.tampermonkey.net.cn/favicon.ico#md5=xxx;sha256=xxx
+// @resource icon https://bbs.tampermonkey.net.cn/favicon.ico#md5-xxx,sha256-xxx
 ```
 
 ### require
@@ -192,8 +192,11 @@ id: meta
 
 ### 资源校验
 
-使用 md5,sha1,sha224,sha256,sha384,sha512 方法对资源进行校验防止篡改,不同的校验方式之间可用`;`或者`,`分开,例如:
+* 使用 md5, sha1, sha256, sha384, sha512 方法对资源进行校验防止篡改。不同的校验方式之间可用`;`或者`,`分开。
+* 按照[W3C建议](https://w3c.github.io/webappsec-subresource-integrity/#hash-collision-attacks)，不建议使用md5和sha1，应使用sha384或更强的哈希值算法。
+
+例如：
 
 ```js
-// @require https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js#md5=d55836f30c097da753179f82fa6f108f;sha256=a476ab8560837a51938aa6e1720c8be87c2862b6221690e9de7ffac113811a90
+// @require https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js#md5-d55836f30c097da753179f82fa6f108f,sha256-a476ab8560837a51938aa6e1720c8be87c2862b6221690e9de7ffac113811a90
 ```
