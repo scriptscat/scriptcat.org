@@ -24,7 +24,7 @@ console.log(GM_info.version);
 console.log(GM_info.scriptMetaStr);
 ```
 
-* `isIncognito`, `sandboxMode`, `runAt`, `userAgentData` 未支持
+* `sandboxMode` 目前只有 `raw` 值。 `runAt` 未支持。 `userAgentData` 支持但不一定和TM一致。
 
 ### GM_cookie \*
 
@@ -168,20 +168,29 @@ declare namespace GMTypes {
 GM_notification({ title: "进度", text: "加载中", progress: 50 });
 ```
 
+#### 注意：`GM_closeNotification` 及 `GM_updateNotification` 為SC特有。需要更新的話應該使用 `tag`。
+
+
+```js
+GM_notification({ title: "进度", text: "加载中", progress: 50, tag: "通知01"});
+GM_notification({ title: "进度", text: "加载完成", progress: 100, tag: "通知01"}); // 更新进度
+GM_notification({ title: "进度", text: "加载完成", progress: 100, tag: "通知01", timeout: 1}); // 1ms后关闭
+```
+
 ### GM_xmlhttpRequest \*
 
-跨域 HTTP 请求，可以绕过 CSP，支持 `@connect` 声明域。部分功能缺失，cookie 功能 Firefox 暂不支持。需要用户授权才可正常访问，使用 `@connect` 描述的 host 可跳过用户授权。
+* 跨域 HTTP 请求，可以绕过 CSP，支持 `@connect` 声明域。部分功能缺失，cookie 功能 Firefox 暂不支持。需要用户授权才可正常访问，使用 `@connect` 描述的 host 可跳过用户授权。
 
-对于 anonymous 和 cookie 相比 TM 做了特殊处理，anonymous 为 true 且 cookie 存在时，发送的 cookie 为设置的 cookie 不会带上其他 cookie。
+* 对于 anonymous 和 cookie 相比 TM 做了特殊处理，anonymous 为 true 且 cookie 存在时，发送的 cookie 为设置的 cookie 不会带上其他 cookie。
 
-特殊 header 也是支持的：
+* 特殊 header 也是支持的：
 
-- user-agent
-- origin
-- referer
-- cookie
-- host
-- ...
+  - user-agent
+  - origin
+  - referer
+  - cookie
+  - host
+  - ...
 
 ```typescript
 declare function GM_xmlhttpRequest(details: GMTypes.XHRDetails): GMTypes.AbortHandle<void>;
@@ -283,6 +292,8 @@ GM_deleteValue("foo");
 
 #### 注意：当使用 `GM_setValue` 传入 `undefined` 时，ScriptCat 会将该键删除，而不会像油猴（Tampermonkey/GreaseMonkey）那样将 `undefined` 存储为值。
 
+#### 注意：由于数据操作是异步，执行 GM_setValue 或 GM_deleteValue 后立即 `window.close()` 的话会无法正确修改数据。建议使用 `await GM.setValue` 或 `await GM.deleteValue` 以确保数据操作完成。
+
 ### GM_listValues
 
 列出所有 key。
@@ -316,6 +327,8 @@ const { a, b, c = 3 } = GM_getValues({ a: 0, b: 0, c: 3 });
 // 批量删除
 GM_deleteValues(["a", "b"]);
 ```
+
+#### 注意：由于数据操作是异步，执行 GM_setValues 或 GM_deleteValues 后立即 `window.close()` 的话会无法正确修改数据。建议使用 `await GM.setValues` 或 `await GM.deleteValues` 以确保数据操作完成。
 
 ### GM_add/removeValueChangeListener
 
@@ -489,7 +502,7 @@ GM_setClipboard("Hello World", "text");
 
 ### GM_addStyle
 
-添加样式到页面中，返回样式 DOM。
+添加样式到页面中，返回样式 DOM。可以绕过 CSP 限制。
 
 ```typescript
 declare function GM_addStyle(css: string): HTMLElement;
@@ -504,7 +517,10 @@ GM_addStyle(`
 
 ### GM_registerMenuCommand *
 
-注册一个菜单选项到弹出页面中，点击时会调用 `listener` 方法，如果注册多个同名菜单，则只会第一个生效。
+* 注册一个菜单选项到弹出页面及右键菜单中，点击时会调用 `listener` 方法。
+* 默认情况下，跟TM一样，相同显示的菜单项目只会显示一个。
+* 指定 id 能更新菜单项目。
+* `name` 为空字串及没有 `listener` 的时候，会在右键菜单新增一条分隔线。
 
 ```typescript
 function GM_registerMenuCommand(
@@ -516,14 +532,15 @@ function GM_registerMenuCommand(
         accessKey?: string;
         autoClose?: boolean; // SC特有配置，默认为 true，false 时点击后不关闭弹出菜单页面
         nested?: boolean; // SC特有配置，默认为 true，false 的话浏览器右键菜单项目由三级菜单升至二级菜单
-        individual?: boolean; // SC特有配置，默认为 false，true 表示当多iframe时，相同的菜单项不自动合并
+        individual?: boolean; // SC特有配置，默认为 false，true 表示相同的菜单项不合并显示
       }
     | string
 ): number;
 ```
 
 ```js
-const cmdId = GM_registerMenuCommand("测试命令", () => alert("调用"));
+const cmdId = GM_registerMenuCommand("测试命令01", () => alert("调用01"));
+GM_registerMenuCommand("测试命令02", () => alert("调用02"), {id: "自订ID"});
 ```
 
 ### GM_unregisterMenuCommand
@@ -536,6 +553,7 @@ declare function GM_unregisterMenuCommand(id: number): void;
 
 ```js
 GM_unregisterMenuCommand(cmdId);
+GM_unregisterMenuCommand("自订ID");
 ```
 
 ### GM_getResourceText/GM_getResourceURL
@@ -556,7 +574,8 @@ const imgUrl = GM_getResourceURL("logo");
 
 ### GM_download
 
-下载文件，可设置 header 等内容，相比 TM 多了 cookie 和 anonymous 的功能。如果为 blob url，将会直接打开下载，只有 onload 事件，这是与 TM 不同的一个特性（为后台脚本无法创建下载而服务，可能会在一些生成报表的场景使用到）。
+* 下载文件，可设置 header 等内容，相比 TM 多了 cookie 和 anonymous 的功能。如果为 blob url，将会直接打开下载，只有 onload 事件，这是与 TM 不同的一个特性（为后台脚本无法创建下载而服务，可能会在一些生成报表的场景使用到）。
+* 返回 Promise物件，并提供 `abort()` 方法。
 
 ```typescript
 declare function GM_download(details: GMTypes.DownloadDetails): GMTypes.AbortHandle<boolean>;
@@ -601,7 +620,7 @@ dl.abort();
 
 ### GM_addElement
 
-在页面中插入元素，可以绕过 CSP 限制。
+在页面中插入元素。可以绕过 CSP 限制。
 
 ```typescript
 declare function GM_addElement(tag: string, attributes: any): HTMLElement;
