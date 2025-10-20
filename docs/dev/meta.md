@@ -65,6 +65,14 @@ id: meta
 
 ### inject-into
 
+:::tip
+
+在 内容脚本环境 (`content`), `unsafeWindow`只会指向环境当前的`window`, 不能访问到页面的`window`。
+
+ScriptCat 不支持自动检查 CSP 限制来决定注入方式采用`content`或是`page`。(即 VM 的`@inject-into auto`)
+
+:::
+
 指定脚本注入的位置，支持 `page`与`content`，默认为`page`
 
 - `page`：脚本会注入到页面环境中，可以使用`unsafeWindow`访问到页面的`window`与`DOM`
@@ -192,8 +200,8 @@ id: meta
 
 ### 资源校验
 
-* 使用 md5, sha1, sha256, sha384, sha512 方法对资源进行校验防止篡改。不同的校验方式之间可用`;`或者`,`分开。
-* 按照[W3C建议](https://w3c.github.io/webappsec-subresource-integrity/#hash-collision-attacks)，不建议使用md5和sha1，应使用sha384或更强的哈希值算法。
+- 使用 md5, sha1, sha256, sha384, sha512 方法对资源进行校验防止篡改。不同的校验方式之间可用`;`或者`,`分开。
+- 按照[W3C 建议](https://w3c.github.io/webappsec-subresource-integrity/#hash-collision-attacks)，不建议使用 md5 和 sha1，应使用 sha384 或更强的哈希值算法。
 
 例如：
 
