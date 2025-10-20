@@ -418,7 +418,7 @@ declare namespace GMTypes {
 GM_notification({ title: "进度", text: "加载中", progress: 50 });
 ```
 
-#### 注意：`GM_closeNotification` 及 `GM_updateNotification` 為SC特有。需要更新的話應該使用 `tag`。
+#### 注意：`GM_closeNotification` 及 `GM_updateNotification` 为SC特有。需要更新的话应该使用 `tag`。
 
 
 ```js
@@ -523,7 +523,7 @@ GM_xmlhttpRequest({
 ### GM_download
 
 * 下载文件，可设置 header 等内容，相比 TM 多了 cookie 和 anonymous 的功能。如果为 blob url，将会直接打开下载，只有 onload 事件，这是与 TM 不同的一个特性（为后台脚本无法创建下载而服务，可能会在一些生成报表的场景使用到）。
-* 返回 Promise物件，并提供 `abort()` 方法。
+* 返回 Promise 对象，并提供 `abort()` 方法。
 
 ```typescript
 declare function GM_download(details: GMTypes.DownloadDetails): GMTypes.AbortHandle<boolean>;
@@ -632,4 +632,4 @@ await GM.cookie.set({ name: "foo", value: "bar", domain: "example.com" });
 await GM.cookie.delete("foo", { domain: "example.com" });
 ```
 
-**注意**：需在元信息中以 `@connect example.com` 声明允许域。
+**注意**：需在元信息中使用 `@connect example.com` 声明允许域。
