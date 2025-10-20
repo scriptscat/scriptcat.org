@@ -70,6 +70,9 @@ id: meta
 - `page`：脚本会注入到页面环境中，可以使用`unsafeWindow`访问到页面的`window`与`DOM`
 - `content`：脚本会注入到内容脚本环境中，无法直接访问页面的`window`对象，但是可以访问页面`DOM`，且不受`CSP`限制
 
+#### 在 内容脚本环境 (`content`), `unsafeWindow`只会指向环境当前的`window`, 不能访问到页面的`window`。
+#### ScriptCat不支持自动检查CSP限制来决定注入方式采用`content`或是`page`。(即VM的`@inject-into auto`)
+
 ### storageName 🧪
 
 `Value`的存储空间，同一`storageName`下的数据可以共享和通信。这是脚本猫独有的.
