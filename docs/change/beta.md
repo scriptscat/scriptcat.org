@@ -29,11 +29,11 @@ sidebar_position: 1
 ### Changed
 
 - ♻️ null 代码调整 ([#852](https://github.com/scriptscat/scriptcat/issues/852)) [[fa1031d](https://github.com/scriptscat/scriptcat/commit/fa1031df9c3e8bc2550f429e7cf8d1c3869a1ea3)] (by @cyfung1031)
-- ♻️ &#x60;GMApiRequest&#x60; 代码调整，&#x60;GM_log&#x60; 代码修正，&#x60;@connect&#x60;判断修正 ([#849](https://github.com/scriptscat/scriptcat/issues/849)) [[ee4a8b2](https://github.com/scriptscat/scriptcat/commit/ee4a8b28715fb48fa627f5231c8dc30e55c006ed)] (by @cyfung1031)
+- ♻️ GMApiRequest 代码调整，GM_log 代码修正，@connect判断修正 ([#849](https://github.com/scriptscat/scriptcat/issues/849)) [[ee4a8b2](https://github.com/scriptscat/scriptcat/commit/ee4a8b28715fb48fa627f5231c8dc30e55c006ed)] (by @cyfung1031)
 
 ### Removed
 
-- 🔥 弃掉 &#x60;GM_openInTab({ useOpen: true })&#x60; ([#867](https://github.com/scriptscat/scriptcat/issues/867)) [[aa61335](https://github.com/scriptscat/scriptcat/commit/aa613354c7b7c84d461000ed0362cf9916c8aa39)] (by @cyfung1031)
+- 🔥 弃掉 `GM_openInTab({ useOpen: true })` ([#867](https://github.com/scriptscat/scriptcat/issues/867)) [[aa61335](https://github.com/scriptscat/scriptcat/commit/aa613354c7b7c84d461000ed0362cf9916c8aa39)] (by @cyfung1031)
 
 ### Fixed
 
