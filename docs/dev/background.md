@@ -1,5 +1,5 @@
 ---
-id: backgroud
+id: background
 ---
 
 # 后台脚本

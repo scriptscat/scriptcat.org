@@ -65,6 +65,8 @@ jobs:
         file: deploy/docker/Dockerfile
         tags: ${{ env.REGISTRY }}/${{ env.REPOSITORY }}:${{ steps.vars.outputs.sha_short }}
         context: .
+        cache-from: type=gha
+        cache-to: type=gha,mode=max
         build-args: |
           BASEIMAGE=${{ env.BASEIMAGE }}/nginx:1.25
 

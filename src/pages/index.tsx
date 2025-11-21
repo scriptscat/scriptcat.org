@@ -2,9 +2,8 @@
 
 import { useEffect, useState } from "react";
 import clsx from "clsx";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
-import Head from '@docusaurus/Head';
+import Head from "@docusaurus/Head";
 import { Dropdown, Space } from "antd";
 import styles from "./index.module.css";
 import { Icon } from "@iconify/react";
@@ -13,9 +12,7 @@ import { browserName } from "react-device-detect";
 import type { JSX } from "react";
 import { IconCat } from "../components/IconCat";
 import type { MenuProps } from "antd";
-import Translate, { translate } from '@docusaurus/Translate';
-
-
+import Translate, { translate } from "@docusaurus/Translate";
 
 // 浏览器图标按钮组件
 const IconButton = ({ href, text, icon, target = "_blank" }) => {
@@ -42,7 +39,9 @@ const IconButton = ({ href, text, icon, target = "_blank" }) => {
 };
 
 // 浏览器商店映射
-const storeMap: { [key: string]: MenuProps['items'][0] & { label: any; show?: boolean } } = {
+const storeMap: {
+  [key: string]: MenuProps["items"][0] & { label: any; show?: boolean };
+} = {
   edge: {
     key: "edge",
     label: (
@@ -50,8 +49,8 @@ const storeMap: { [key: string]: MenuProps['items'][0] & { label: any; show?: bo
         href="https://microsoftedge.microsoft.com/addons/detail/scriptcat/liilgpjgabokdklappibcjfablkpcekh"
         icon="logos:microsoft-edge"
         text={translate({
-          id: 'homepage.hero.browser.edge',
-          message: '添加到 Edge 浏览器',
+          id: "homepage.hero.browser.edge",
+          message: "添加到 Edge 浏览器",
         })}
       />
     ),
@@ -63,8 +62,8 @@ const storeMap: { [key: string]: MenuProps['items'][0] & { label: any; show?: bo
         href="https://chrome.google.com/webstore/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf"
         icon="logos:chrome"
         text={translate({
-          id: 'homepage.hero.browser.chrome',
-          message: '添加到 Chrome 浏览器',
+          id: "homepage.hero.browser.chrome",
+          message: "添加到 Chrome 浏览器",
         })}
       />
     ),
@@ -76,8 +75,8 @@ const storeMap: { [key: string]: MenuProps['items'][0] & { label: any; show?: bo
         href="https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/"
         icon="logos:firefox"
         text={translate({
-          id: 'homepage.hero.browser.firefox',
-          message: '添加到 Firefox 浏览器',
+          id: "homepage.hero.browser.firefox",
+          message: "添加到 Firefox 浏览器",
         })}
       />
     ),
@@ -89,8 +88,8 @@ const storeMap: { [key: string]: MenuProps['items'][0] & { label: any; show?: bo
         href="./docs/use/use"
         icon="logos:chrome"
         text={translate({
-          id: 'homepage.hero.browser.default',
-          message: '安装扩展到浏览器',
+          id: "homepage.hero.browser.default",
+          message: "安装扩展到浏览器",
         })}
         target="_self"
       />
@@ -104,8 +103,8 @@ const storeMap: { [key: string]: MenuProps['items'][0] & { label: any; show?: bo
         href="https://github.com/scriptscat/scriptcat/releases"
         icon="noto:package"
         text={translate({
-          id: 'homepage.hero.browser.crx',
-          message: '下载 安装包 文件手动安装',
+          id: "homepage.hero.browser.crx",
+          message: "下载 安装包 文件手动安装",
         })}
       />
     ),
@@ -113,7 +112,7 @@ const storeMap: { [key: string]: MenuProps['items'][0] & { label: any; show?: bo
 };
 
 // 构建商店列表
-const storeList: MenuProps['items'] = [];
+const storeList: MenuProps["items"] = [];
 Object.keys(storeMap).forEach((key) => {
   if (storeMap[key].show !== false) {
     storeList.push(storeMap[key]);
@@ -225,37 +224,6 @@ const ScenarioCard = ({
 
 // 主页头部组件
 function HomepageHeader(): JSX.Element {
-  const { siteConfig } = useDocusaurusContext();
-  const [theme, setTheme] = useState("light");
-
-  // 检测 data-theme 属性
-  useEffect(() => {
-    const updateTheme = () => {
-      const currentTheme =
-        document.documentElement.getAttribute("data-theme") || "light";
-      setTheme(currentTheme);
-    };
-
-    // 初始化
-    updateTheme();
-
-    // 创建一个 MutationObserver 来监听 data-theme 属性变化
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        if (
-          mutation.type === "attributes" &&
-          mutation.attributeName === "data-theme"
-        ) {
-          updateTheme();
-        }
-      });
-    });
-
-    observer.observe(document.documentElement, { attributes: true });
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <header className={clsx("hero", styles.heroBanner)}>
       <div className={styles.heroBackground}>
@@ -485,36 +453,6 @@ function HomepageHeader(): JSX.Element {
 
 // 主要特性区域组件
 function FeaturesSection(): JSX.Element {
-  const [theme, setTheme] = useState("light");
-
-  // 检测 data-theme 属性
-  useEffect(() => {
-    const updateTheme = () => {
-      const currentTheme =
-        document.documentElement.getAttribute("data-theme") || "light";
-      setTheme(currentTheme);
-    };
-
-    // 初始化
-    updateTheme();
-
-    // 创建一个 MutationObserver 来监听 data-theme 属性变化
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        if (
-          mutation.type === "attributes" &&
-          mutation.attributeName === "data-theme"
-        ) {
-          updateTheme();
-        }
-      });
-    });
-
-    observer.observe(document.documentElement, { attributes: true });
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <section className={styles.featuresSection}>
       <div className={styles.featuresSectionBg}>
@@ -545,7 +483,8 @@ function FeaturesSection(): JSX.Element {
               id="homepage.features.subtitle"
               description="Features section subtitle"
             >
-              ScriptCat 提供了一系列强大的功能，让您可以轻松地扩展浏览器的能力，创造属于自己的网络体验。
+              ScriptCat
+              提供了一系列强大的功能，让您可以轻松地扩展浏览器的能力，创造属于自己的网络体验。
             </Translate>
           </p>
         </div>
@@ -554,72 +493,78 @@ function FeaturesSection(): JSX.Element {
           <FeatureCard
             icon="lucide:code"
             title={translate({
-              id: 'homepage.features.tampermonkey.title',
-              message: 'Tampermonkey 兼容',
+              id: "homepage.features.tampermonkey.title",
+              message: "Tampermonkey 兼容",
             })}
             description={translate({
-              id: 'homepage.features.tampermonkey.description',
-              message: '完全兼容 Tampermonkey 脚本格式，无缝迁移现有脚本库，零成本切换使用。',
+              id: "homepage.features.tampermonkey.description",
+              message:
+                "完全兼容 Tampermonkey 脚本格式，无缝迁移现有脚本库，零成本切换使用。",
             })}
             color="rgba(59, 130, 246, 0.8)"
           />
           <FeatureCard
             icon="lucide:zap"
             title={translate({
-              id: 'homepage.features.background.title',
-              message: '后台脚本',
+              id: "homepage.features.background.title",
+              message: "后台脚本",
             })}
             description={translate({
-              id: 'homepage.features.background.description',
-              message: '区别于普通用户脚本，让你的脚本可以在后台中持续运行，无须开启标签页。',
+              id: "homepage.features.background.description",
+              message:
+                "区别于普通用户脚本，让你的脚本可以在后台中持续运行，无须开启标签页。",
             })}
             color="rgba(99, 102, 241, 0.8)"
           />
           <FeatureCard
             icon="lucide:shield"
             title={translate({
-              id: 'homepage.features.security.title',
-              message: '安全可靠',
+              id: "homepage.features.security.title",
+              message: "安全可靠",
             })}
             description={translate({
-              id: 'homepage.features.security.description',
-              message: '严格的权限控制系统，脚本行为透明可见，有效防止恶意脚本，保护您的隐私安全。',
+              id: "homepage.features.security.description",
+              message:
+                "严格的权限控制系统，脚本行为透明可见，有效防止恶意脚本，保护您的隐私安全。",
             })}
             color="rgba(168, 85, 247, 0.8)"
           />
           <FeatureCard
             icon="lucide:pencil"
             title={translate({
-              id: 'homepage.features.editor.title',
-              message: '内置代码编辑器',
+              id: "homepage.features.editor.title",
+              message: "内置代码编辑器",
             })}
             description={translate({
-              id: 'homepage.features.editor.description',
-              message: '强大的代码编辑器，支持语法高亮、代码补全、错误提示，让脚本编写更高效。',
+              id: "homepage.features.editor.description",
+              message:
+                "强大的代码编辑器，支持语法高亮、代码补全、错误提示，让脚本编写更高效。",
             })}
             color="rgba(20, 184, 166, 0.8)"
           />
           <FeatureCard
             icon="lucide:plug"
             title={translate({
-              id: 'homepage.features.api.title',
-              message: '强大的 API',
+              id: "homepage.features.api.title",
+              message: "强大的 API",
             })}
             description={translate({
-              id: 'homepage.features.api.description',
-              message: '提供比GM更丰富的 API 接口，支持文件存储、用户配置等高级功能，扩展脚本能力。',
+              id: "homepage.features.api.description",
+              message:
+                "提供比GM更丰富的 API 接口，支持文件存储、用户配置等高级功能，扩展脚本能力。",
             })}
             color="rgba(16, 185, 129, 0.8)"
           />
           <FeatureCard
             icon="lucide:box"
             title={translate({
-              id: 'homepage.features.store.title',
-              message: '脚本商店',
+              id: "homepage.features.store.title",
+              message: "脚本商店",
             })}
             description={translate({
-              id: 'homepage.features.store.description',
-              message: '拥有脚本商店，一键安装热门脚本，或发布您的作品与社区分享，构建活跃的生态圈。',
+              id: "homepage.features.store.description",
+              message:
+                "拥有脚本商店，一键安装热门脚本，或发布您的作品与社区分享，构建活跃的生态圈。",
             })}
             color="rgba(244, 63, 94, 0.8)"
           />
@@ -641,75 +586,75 @@ function ComparisonSection() {
     tampermonkeyLabel?: string;
     violentmonkeyLabel?: string;
   }[] = [
-    { 
+    {
       feature: translate({
-        id: 'homepage.comparison.feature.compatibility',
-        message: '脚本兼容性',
-      }), 
-      scriptcat: true, 
+        id: "homepage.comparison.feature.compatibility",
+        message: "脚本兼容性",
+      }),
+      scriptcat: true,
       tampermonkey: true,
-      violentmonkey: true
+      violentmonkey: true,
     },
-    { 
+    {
       feature: translate({
-        id: 'homepage.comparison.feature.opensource',
-        message: '开源免费',
-      }), 
-      scriptcat: true, 
+        id: "homepage.comparison.feature.opensource",
+        message: "开源免费",
+      }),
+      scriptcat: true,
       tampermonkey: -1,
       violentmonkey: true,
     },
-    { 
+    {
       feature: translate({
-        id: 'homepage.comparison.feature.mv3',
-        message: 'MV3支持',
-      }), 
-      scriptcat: true, 
+        id: "homepage.comparison.feature.mv3",
+        message: "MV3支持",
+      }),
+      scriptcat: true,
       tampermonkey: true,
       violentmonkey: -1,
     },
     {
       feature: translate({
-        id: 'homepage.comparison.feature.sync',
-        message: '云端同步',
+        id: "homepage.comparison.feature.sync",
+        message: "云端同步",
       }),
       scriptcat: true,
       tampermonkey: true,
       violentmonkey: true,
       scriptcatLabel: translate({
-        id: 'homepage.comparison.label.multiplatform',
-        message: '多平台',
+        id: "homepage.comparison.label.multiplatform",
+        message: "多平台",
       }),
     },
     {
       feature: translate({
-        id: 'homepage.comparison.feature.background',
-        message: '后台脚本',
+        id: "homepage.comparison.feature.background",
+        message: "后台脚本",
       }),
       scriptcat: true,
       tampermonkey: false,
       violentmonkey: false,
       scriptcatLabel: translate({
-        id: 'homepage.comparison.label.efficient',
-        message: '高效',
+        id: "homepage.comparison.label.efficient",
+        message: "高效",
       }),
     },
     {
       feature: translate({
-        id: 'homepage.comparison.feature.api',
-        message: '强大 API',
+        id: "homepage.comparison.feature.api",
+        message: "强大 API",
       }),
       scriptcat: true,
       tampermonkey: false,
       violentmonkey: false,
       scriptcatLabel: "",
     },
-    { 
+    {
       feature: translate({
-        id: 'homepage.comparison.feature.community',
-        message: '社区支持',
-      }), 
-      scriptcat: true, 
+        id: "homepage.comparison.feature.community",
+        message: "社区支持",
+      }),
+      scriptcat: true,
       tampermonkey: -1,
       violentmonkey: -1,
     },
@@ -718,33 +663,39 @@ function ComparisonSection() {
   // 使用状态来跟踪当前高亮的行
   const [highlightedRow, setHighlightedRow] = useState<number | null>(null);
 
-  const renderCell = (state: boolean | -1, stateLabel: string | undefined, b?: boolean) => {
+  const renderCell = (
+    state: boolean | -1,
+    stateLabel: string | undefined,
+    b?: boolean
+  ) => {
     return (
       <div className={styles.comparisonTableCell}>
         <div className={styles.comparisonTableCellInner}>
           {state === true ? (
             <div className={styles.comparisonTableCellCheck}>
               {stateLabel ? (
-                <div
-                  className={
-                    styles.comparisonTableCellWithLabel
-                  }
-                >
+                <div className={styles.comparisonTableCellWithLabel}>
                   <div
                     className={
-                      b ? styles.comparisonTableCellCheckIcon : styles.comparisonTableCellCheckIconGray
+                      b
+                        ? styles.comparisonTableCellCheckIcon
+                        : styles.comparisonTableCellCheckIconGray
                     }
                   >
                     <Icon icon="lucide:check" />
-                    {b ? <div
-                      className={
-                        styles.comparisonTableCellCheckRing
-                      }
-                    ></div> : ""}
+                    {b ? (
+                      <div
+                        className={styles.comparisonTableCellCheckRing}
+                      ></div>
+                    ) : (
+                      ""
+                    )}
                   </div>
                   <span
                     className={
-                      b ? styles.comparisonTableCellLabel : styles.comparisonTableCellLabelGray
+                      b
+                        ? styles.comparisonTableCellLabel
+                        : styles.comparisonTableCellLabelGray
                     }
                   >
                     {stateLabel}
@@ -753,21 +704,20 @@ function ComparisonSection() {
               ) : (
                 <div
                   className={
-                    b ? styles.comparisonTableCellCheckIcon : styles.comparisonTableCellCheckIconGray
+                    b
+                      ? styles.comparisonTableCellCheckIcon
+                      : styles.comparisonTableCellCheckIconGray
                   }
                 >
                   <Icon icon="lucide:check" />
-                  {b ? <div
-                    className={
-                      styles.comparisonTableCellCheckRing
-                    }
-                  ></div> : ""}
+                  {b ? (
+                    <div className={styles.comparisonTableCellCheckRing}></div>
+                  ) : (
+                    ""
+                  )}
                 </div>
               )}
-              {b ?
-                <div
-                  className={styles.comparisonTableCellGlow}
-                ></div> : ""}
+              {b ? <div className={styles.comparisonTableCellGlow}></div> : ""}
             </div>
           ) : state === -1 ? (
             <div className={styles.comparisonTableCellCross}>
@@ -869,7 +819,10 @@ function ComparisonSection() {
                             className={styles.comparisonTableHeaderIconRing}
                           ></div>
                         </div>
-                        <span className={styles.comparisonTableHeaderTitle} style={{ fontSize: "120%" }}>
+                        <span
+                          className={styles.comparisonTableHeaderTitle}
+                          style={{ fontSize: "120%" }}
+                        >
                           ScriptCat
                         </span>
                       </div>
@@ -882,7 +835,13 @@ function ComparisonSection() {
                         <div className={styles.comparisonTableHeaderIcon}>
                           <Icon icon="lucide:code" />
                         </div>
-                        <span className={styles.comparisonTableHeaderTitle} style={{ "fontStretch": "extra-condensed", fontSize: "115%" }}>
+                        <span
+                          className={styles.comparisonTableHeaderTitle}
+                          style={{
+                            fontStretch: "extra-condensed",
+                            fontSize: "115%",
+                          }}
+                        >
                           Tampermonkey
                         </span>
                       </div>
@@ -894,7 +853,13 @@ function ComparisonSection() {
                         <div className={styles.comparisonTableHeaderIcon}>
                           <Icon icon="lucide:code" />
                         </div>
-                        <span className={styles.comparisonTableHeaderTitle} style={{ "fontStretch": "extra-condensed", fontSize: "115%" }}>
+                        <span
+                          className={styles.comparisonTableHeaderTitle}
+                          style={{
+                            fontStretch: "extra-condensed",
+                            fontSize: "115%",
+                          }}
+                        >
                           Violentmonkey
                         </span>
                       </div>
@@ -926,8 +891,16 @@ function ComparisonSection() {
                         </div>
                       </div>
                       {renderCell(row.scriptcat, row.scriptcatLabel, true)}
-                      {renderCell(row.tampermonkey, row.tampermonkeyLabel, false)}
-                      {renderCell(row.violentmonkey, row.violentmonkeyLabel, false)}
+                      {renderCell(
+                        row.tampermonkey,
+                        row.tampermonkeyLabel,
+                        false
+                      )}
+                      {renderCell(
+                        row.violentmonkey,
+                        row.violentmonkeyLabel,
+                        false
+                      )}
                     </div>
                   ))}
                 </div>
@@ -982,110 +955,120 @@ function ScenarioSection() {
           <ScenarioCard
             icon="lucide:video"
             title={translate({
-              id: 'homepage.scenario.video.title',
-              message: '视频网站增强',
+              id: "homepage.scenario.video.title",
+              message: "视频网站增强",
             })}
             subtitle={translate({
-              id: 'homepage.scenario.video.subtitle',
-              message: '优化视频观看体验',
+              id: "homepage.scenario.video.subtitle",
+              message: "优化视频观看体验",
             })}
             tag={translate({
-              id: 'homepage.scenario.video.tag',
-              message: '热门应用',
+              id: "homepage.scenario.video.tag",
+              message: "热门应用",
             })}
             tagColor={{
               bg: "rgba(59, 130, 246, 0.1)",
               text: "var(--ifm-color-primary-light)",
             }}
             features={[
-              { 
-                icon: "lucide:fast-forward", 
+              {
+                icon: "lucide:fast-forward",
                 text: translate({
-                  id: 'homepage.scenario.video.feature.speed',
-                  message: '视频倍速控制',
-                })
+                  id: "homepage.scenario.video.feature.speed",
+                  message: "视频倍速控制",
+                }),
               },
-              { 
-                icon: "lucide:download", 
+              {
+                icon: "lucide:download",
                 text: translate({
-                  id: 'homepage.scenario.video.feature.download',
-                  message: '一键视频下载',
-                })
+                  id: "homepage.scenario.video.feature.download",
+                  message: "一键视频下载",
+                }),
               },
-              { 
-                icon: "lucide:x-circle", 
+              {
+                icon: "lucide:x-circle",
                 text: translate({
-                  id: 'homepage.scenario.video.feature.adblock',
-                  message: '广告自动跳过',
-                })
+                  id: "homepage.scenario.video.feature.adblock",
+                  message: "广告自动跳过",
+                }),
               },
-              { 
-                icon: "lucide:layout", 
+              {
+                icon: "lucide:layout",
                 text: translate({
-                  id: 'homepage.scenario.video.feature.ui',
-                  message: '界面简化优化',
-                })
+                  id: "homepage.scenario.video.feature.ui",
+                  message: "界面简化优化",
+                }),
               },
             ]}
-            sites={["Bilibili", "Youtube", "Netflix", translate({
-              id: 'homepage.scenario.sites.more',
-              message: '+更多',
-            })]}
+            sites={[
+              "Bilibili",
+              "Youtube",
+              "Netflix",
+              translate({
+                id: "homepage.scenario.sites.more",
+                message: "+更多",
+              }),
+            ]}
             scriptUrl="https://scriptcat.org/search?keyword=视频"
           />
 
           <ScenarioCard
             icon="lucide:shopping-cart"
             title={translate({
-              id: 'homepage.scenario.shopping.title',
-              message: '网购助手',
+              id: "homepage.scenario.shopping.title",
+              message: "网购助手",
             })}
             subtitle={translate({
-              id: 'homepage.scenario.shopping.subtitle',
-              message: '让购物体验更轻松',
+              id: "homepage.scenario.shopping.subtitle",
+              message: "让购物体验更轻松",
             })}
             tag={translate({
-              id: 'homepage.scenario.shopping.tag',
-              message: '实用工具',
+              id: "homepage.scenario.shopping.tag",
+              message: "实用工具",
             })}
             tagColor={{
               bg: "rgba(99, 102, 241, 0.1)",
               text: "var(--ifm-color-primary-light)",
             }}
             features={[
-              { 
-                icon: "lucide:trending-down", 
+              {
+                icon: "lucide:trending-down",
                 text: translate({
-                  id: 'homepage.scenario.shopping.feature.history',
-                  message: '价格历史查询',
-                })
+                  id: "homepage.scenario.shopping.feature.history",
+                  message: "价格历史查询",
+                }),
               },
-              { 
-                icon: "lucide:percent", 
+              {
+                icon: "lucide:percent",
                 text: translate({
-                  id: 'homepage.scenario.shopping.feature.coupon',
-                  message: '优惠券自动查找',
-                })
+                  id: "homepage.scenario.shopping.feature.coupon",
+                  message: "优惠券自动查找",
+                }),
               },
-              { 
-                icon: "lucide:search", 
+              {
+                icon: "lucide:search",
                 text: translate({
-                  id: 'homepage.scenario.shopping.feature.compare',
-                  message: '同款比价',
-                })
+                  id: "homepage.scenario.shopping.feature.compare",
+                  message: "同款比价",
+                }),
               },
-              { 
-                icon: "lucide:bell", 
+              {
+                icon: "lucide:bell",
                 text: translate({
-                  id: 'homepage.scenario.shopping.feature.alert',
-                  message: '降价提醒',
-                })
+                  id: "homepage.scenario.shopping.feature.alert",
+                  message: "降价提醒",
+                }),
               },
             ]}
-            sites={["淘宝", "京东", "亚马逊", translate({
-              id: 'homepage.scenario.sites.more',
-              message: '+更多',
-            })]}
+            sites={[
+              "淘宝",
+              "京东",
+              "亚马逊",
+              translate({
+                id: "homepage.scenario.sites.more",
+                message: "+更多",
+              }),
+            ]}
             scriptUrl="https://scriptcat.org/search?keyword=购物"
           />
         </div>
@@ -1324,28 +1307,33 @@ function useBackgroundColor(lightColor: string, darkColor: string) {
 
 export default function Home(): JSX.Element {
   useBackgroundColor("#f5f8fc", "#0f172a");
-  
+
   return (
     <>
       <Head>
-        <meta 
-          name="description" 
+        <meta
+          name="description"
           content={translate({
-            id: 'homepage.meta.description',
-            message: 'ScriptCat是一个强大的开源浏览器脚本引擎，让您轻松自定义网页功能、屏蔽广告、自动化任务，提升浏览体验。兼容Tampermonkey，提供更多功能和优化。',
+            id: "homepage.meta.description",
+            message:
+              "ScriptCat是一个强大的开源浏览器脚本引擎，让您轻松自定义网页功能、屏蔽广告、自动化任务，提升浏览体验。兼容Tampermonkey，提供更多功能和优化。",
           })}
         />
-        <meta name="keywords" content="ScriptCat,用户脚本,浏览器扩展,userscript,tampermonkey,violentmonkey,自动化,网页自定义,脚本管理,广告屏蔽" />
+        <meta
+          name="keywords"
+          content="ScriptCat,用户脚本,浏览器扩展,userscript,tampermonkey,violentmonkey,自动化,网页自定义,脚本管理,广告屏蔽"
+        />
       </Head>
-      
+
       <Layout
         title={translate({
-          id: 'homepage.meta.title',
-          message: '首页',
+          id: "homepage.meta.title",
+          message: "首页",
         })}
         description={translate({
-          id: 'homepage.meta.description',
-          message: '脚本猫,一个可以执行用户脚本的浏览器扩展,万物皆可脚本化,让你的浏览器可以做更多的事情!',
+          id: "homepage.meta.description",
+          message:
+            "脚本猫,一个可以执行用户脚本的浏览器扩展,万物皆可脚本化,让你的浏览器可以做更多的事情!",
         })}
       >
         <div className={styles.homeContainer}>

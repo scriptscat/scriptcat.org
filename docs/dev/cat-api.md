@@ -124,3 +124,15 @@ declare function CAT_fileStorage(
 ): void;
 declare function CAT_fileStorage(action: "config"): void;
 ```
+
+### CAT_scriptLoaded
+
+当使用了 `early-start` 时，你可以使用此函数来判断脚本是否完全加载
+
+```js
+function CAT_ScriptLoaded(): Promise<void>;
+
+CAT_scriptLoaded().then(() => {
+  console.log("脚本完全加载完成");
+});
+```
