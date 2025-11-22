@@ -1,0 +1,134 @@
+{
+  "theme.ErrorPageContent.title": {
+    "message": "此頁面已當機。",
+    "description": "The title of the fallback page when the page crashed"
+  },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "回到頂部",
+    "description": "The ARIA label for the back to top button"
+  },
+  "theme.blog.archive.title": {
+    "message": "歸檔",
+    "description": "The page & hero title of the blog archive page"
+  },
+  "theme.blog.archive.description": {
+    "message": "歸檔",
+    "description": "The page & hero description of the blog archive page"
+  },
+  "theme.blog.paginator.navAriaLabel": {
+    "message": "部落格文章列表導航",
+    "description": "The ARIA label for the blog pagination"
+  },
+  "theme.blog.paginator.newerEntries": {
+    "message": "較新的文章",
+    "description": "The label used to navigate to the newer blog posts page (previous page)"
+  },
+  "theme.blog.paginator.olderEntries": {
+    "message": "較舊的文章",
+    "description": "The label used to navigate to the older blog posts page (next page)"
+  },
+  "theme.blog.post.paginator.navAriaLabel": {
+    "message": "部落格文章導航",
+    "description": "The ARIA label for the blog posts pagination"
+  },
+  "theme.blog.post.paginator.newerPost": {
+    "message": "較新的文章",
+    "description": "The blog post button label to navigate to the newer/previous post"
+  },
+  "theme.blog.post.paginator.olderPost": {
+    "message": "較舊的文章",
+    "description": "The blog post button label to navigate to the older/next post"
+  },
+  "theme.blog.post.plurals": {
+    "message": "{count} 篇文章",
+    "description": "Pluralized label for \"{count} posts\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.blog.tagTitle": {
+    "message": "有 {nPosts} 篇文章標記為「{tagName}」",
+    "description": "The title of the page for a blog tag"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "查看所有標籤",
+    "description": "The label of the link targeting the tag list page"
+  },
+  "homepage.hero.title": {
+    "message": "ScriptCat",
+    "description": "The hero title on the homepage"
+  },
+  "homepage.hero.subtitle": {
+    "message": "一個可以執行使用者腳本的瀏覽器擴充功能，萬物皆可腳本化，讓你的瀏覽器可以做更多的事情！",
+    "description": "The hero subtitle on the homepage"
+  },
+  "homepage.features.powerful.title": {
+    "message": "強大功能",
+    "description": "Title for powerful features section"
+  },
+  "homepage.features.powerful.description": {
+    "message": "完全相容 Tampermonkey，背景腳本，定時腳本，豐富的 API",
+    "description": "Description for powerful features section"
+  },
+  "homepage.features.easy.title": {
+    "message": "易於使用",
+    "description": "Title for easy to use section"
+  },
+  "homepage.features.easy.description": {
+    "message": "內建編輯器，智慧補全，語法檢查，讓腳本開發更加高效流暢",
+    "description": "Description for easy to use section"
+  },
+  "homepage.features.secure.title": {
+    "message": "安全可靠",
+    "description": "Title for secure and reliable section"
+  },
+  "homepage.features.secure.description": {
+    "message": "沙盒機制，權限管理，保障腳本安全執行",
+    "description": "Description for secure and reliable section"
+  },
+  "homepage.comments.lihengdao.username": {
+    "message": "李恆道",
+    "description": "李恆道在社群評論中的使用者名稱"
+  },
+  "homepage.comments.lihengdao.description": {
+    "message": "油中創始人之一",
+    "description": "李恆道在社群評論中的描述"
+  },
+  "homepage.comments.lihengdao.content": {
+    "message": "我們腳本貓真是太棒啦！",
+    "description": "李恆道的評論內容"
+  },
+  "homepage.comments.student.username": {
+    "message": "為考試發愁",
+    "description": "學生使用者在社群評論中的使用者名稱"
+  },
+  "homepage.comments.student.description": {
+    "message": "學生",
+    "description": "學生使用者在社群評論中的描述"
+  },
+  "homepage.comments.student.content": {
+    "message": "感謝油中如此豐富的學習資源，讓我受益匪淺，更好地發展自己的技術能力。腳本貓是一個非常好用的瀏覽器擴充功能，為我提供了便捷和高效的功能。",
+    "description": "學生使用者的評論內容"
+  },
+  "homepage.comments.enncy.username": {
+    "message": "言小溪enncy",
+    "description": "enncy在社群評論中的使用者名稱"
+  },
+  "homepage.comments.enncy.description": {
+    "message": "著名腳本作者",
+    "description": "enncy在社群評論中的描述"
+  },
+  "homepage.comments.enncy.content": {
+    "message": "由衷感謝油中",
+    "description": "enncy的評論內容"
+  },
+  "homepage.comments.qianyu.username": {
+    "message": "仟羽",
+    "description": "仟羽在社群評論中的使用者名稱"
+  },
+  "homepage.comments.qianyu.description": {
+    "message": "Chrome 使用者",
+    "description": "仟羽在社群評論中的描述"
+  },
+  "homepage.comments.qianyu.content": {
+    "message": "一開始，人們都以為這是小眾js外掛。。。。直到。。。",
+    "description": "仟羽的評論內容"
+  }
+}

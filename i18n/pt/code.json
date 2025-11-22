@@ -1,0 +1,170 @@
+{
+  "theme.ErrorPageContent.title": {
+    "message": "Esta página travou.",
+    "description": "The title of the fallback page when the page crashed"
+  },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "Voltar ao topo",
+    "description": "The ARIA label for the back to top button"
+  },
+  "theme.blog.archive.title": {
+    "message": "Arquivo",
+    "description": "The page & hero title of the blog archive page"
+  },
+  "theme.blog.archive.description": {
+    "message": "Arquivo",
+    "description": "The page & hero description of the blog archive page"
+  },
+  "theme.blog.paginator.navAriaLabel": {
+    "message": "Navegação da lista de artigos do blog",
+    "description": "The ARIA label for the blog pagination"
+  },
+  "theme.blog.paginator.newerEntries": {
+    "message": "Artigos mais recentes",
+    "description": "The label used to navigate to the newer blog posts page (previous page)"
+  },
+  "theme.blog.paginator.olderEntries": {
+    "message": "Artigos mais antigos",
+    "description": "The label used to navigate to the older blog posts page (next page)"
+  },
+  "theme.blog.post.paginator.navAriaLabel": {
+    "message": "Navegação de artigos do blog",
+    "description": "The ARIA label for the blog posts pagination"
+  },
+  "theme.blog.post.paginator.newerPost": {
+    "message": "Artigo mais recente",
+    "description": "The blog post button label to navigate to the newer/previous post"
+  },
+  "theme.blog.post.paginator.olderPost": {
+    "message": "Artigo mais antigo",
+    "description": "The blog post button label to navigate to the older/next post"
+  },
+  "theme.blog.post.plurals": {
+    "message": "{count} artigos",
+    "description": "Pluralized label for \"{count} posts\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.blog.tagTitle": {
+    "message": "{nPosts} artigos marcados com \"{tagName}\"",
+    "description": "The title of the page for a blog tag"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "Ver todas as tags",
+    "description": "The label of the link targeting the tag list page"
+  },
+  "homepage.hero.title": {
+    "message": "ScriptCat",
+    "description": "The hero title on the homepage"
+  },
+  "homepage.hero.subtitle": {
+    "message": "Uma extensão de navegador que pode executar userscripts, tudo pode ser scriptado, permita que seu navegador faça mais!",
+    "description": "The hero subtitle on the homepage"
+  },
+  "homepage.features.powerful.title": {
+    "message": "Recursos poderosos",
+    "description": "Title for powerful features section"
+  },
+  "homepage.features.powerful.description": {
+    "message": "Totalmente compatível com Tampermonkey, scripts em segundo plano, scripts agendados, API rica",
+    "description": "Description for powerful features section"
+  },
+  "homepage.features.easy.title": {
+    "message": "Fácil de usar",
+    "description": "Title for easy to use section"
+  },
+  "homepage.features.easy.description": {
+    "message": "Editor integrado, autocompletar inteligente, verificação de sintaxe, desenvolvimento de scripts mais eficiente",
+    "description": "Description for easy to use section"
+  },
+  "homepage.features.secure.title": {
+    "message": "Seguro e confiável",
+    "description": "Title for secure and reliable section"
+  },
+  "homepage.features.secure.description": {
+    "message": "Mecanismo de sandbox, gerenciamento de permissões, garante execução segura de scripts",
+    "description": "Description for secure and reliable section"
+  },
+  "homepage.comments.lihengdao.username": {
+    "message": "Li Hengdao",
+    "description": "Nome de usuário de Li Hengdao nos comentários da comunidade"
+  },
+  "homepage.comments.lihengdao.description": {
+    "message": "Co-fundador do Tampermonkey CN",
+    "description": "Descrição de Li Hengdao nos comentários da comunidade"
+  },
+  "homepage.comments.lihengdao.content": {
+    "message": "ScriptCat é absolutamente incrível!",
+    "description": "Conteúdo do comentário de Li Hengdao"
+  },
+  "homepage.comments.student.username": {
+    "message": "Preocupado com exames",
+    "description": "Nome de usuário do estudante nos comentários da comunidade"
+  },
+  "homepage.comments.student.description": {
+    "message": "Estudante",
+    "description": "Descrição do estudante nos comentários da comunidade"
+  },
+  "homepage.comments.student.content": {
+    "message": "Obrigado pelos ricos recursos de aprendizado da comunidade, aprendi muito e consegui desenvolver melhor minhas habilidades técnicas. ScriptCat é uma extensão de navegador muito útil que me fornece funcionalidades convenientes e eficientes.",
+    "description": "Conteúdo do comentário do estudante"
+  },
+  "homepage.comments.enncy.username": {
+    "message": "Yan Xiaoxi (enncy)",
+    "description": "Nome de usuário de enncy nos comentários da comunidade"
+  },
+  "homepage.comments.enncy.description": {
+    "message": "Autor de scripts famoso",
+    "description": "Descrição de enncy nos comentários da comunidade"
+  },
+  "homepage.comments.enncy.content": {
+    "message": "Agradecimentos sinceros à comunidade",
+    "description": "Conteúdo do comentário de enncy"
+  },
+  "homepage.comments.qianyu.username": {
+    "message": "Qian Yu",
+    "description": "Nome de usuário de Qian Yu nos comentários da comunidade"
+  },
+  "homepage.comments.qianyu.description": {
+    "message": "Usuário Chrome",
+    "description": "Descrição de Qian Yu nos comentários da comunidade"
+  },
+  "homepage.comments.qianyu.content": {
+    "message": "No início, as pessoas pensavam que era um plugin JS de nicho... até que...",
+    "description": "Conteúdo do comentário de Qian Yu"
+  },
+  "homepage.comments.wwwwwllllk.username": {
+    "message": "wwwwwllllk",
+    "description": "Nome de usuário de wwwwwllllk nos comentários da comunidade"
+  },
+  "homepage.comments.wwwwwllllk.description": {
+    "message": "Desenvolvedor Frontend",
+    "description": "Descrição de wwwwwllllk nos comentários da comunidade"
+  },
+  "homepage.comments.wwwwwllllk.content": {
+    "message": "Usando ScriptCat para melhorar minha experiência na internet, conhecendo pessoas com ideias similares na comunidade.",
+    "description": "Conteúdo do comentário de wwwwwllllk"
+  },
+  "homepage.comments.oraer.username": {
+    "message": "Oraer",
+    "description": "Nome de usuário de Oraer nos comentários da comunidade"
+  },
+  "homepage.comments.oraer.description": {
+    "message": "Usuário Chrome",
+    "description": "Descrição de Oraer nos comentários da comunidade"
+  },
+  "homepage.comments.oraer.content": {
+    "message": "Primeiro encontro com Tampermonkey! Aprendendo Tampermonkey! Superando Tampermonkey!",
+    "description": "Conteúdo do comentário de Oraer"
+  },
+  "homepage.comments.bigonion.username": {
+    "message": "bigonion",
+    "description": "Nome de usuário de bigonion nos comentários da comunidade"
+  },
+  "homepage.comments.bigonion.description": {
+    "message": "Desenvolvedor ScriptCat",
+    "description": "Descrição de bigonion nos comentários da comunidade"
+  },
+  "homepage.comments.bigonion.content": {
+    "message": "ScriptCat é o futuro.",
+    "description": "Conteúdo do comentário de bigonion"
+  }
+}

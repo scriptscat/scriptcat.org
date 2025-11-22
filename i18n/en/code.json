@@ -395,6 +395,89 @@
     "message": "License Agreement",
     "description": "Footer copyright license link"
   },
+  "homepage.comments.lihengdao.username": {
+    "message": "Li Hengdao",
+    "description": "Li Hengdao's username in community comments"
+  },
+  "homepage.comments.lihengdao.description": {
+    "message": "Co-founder of Tampermonkey CN",
+    "description": "Li Hengdao's description in community comments"
+  },
+  "homepage.comments.lihengdao.content": {
+    "message": "ScriptCat is absolutely amazing!",
+    "description": "Li Hengdao's comment content"
+  },
+  "homepage.comments.student.username": {
+    "message": "Worried About Exams",
+    "description": "Student user's username in community comments"
+  },
+  "homepage.comments.student.description": {
+    "message": "Student",
+    "description": "Student user's description in community comments"
+  },
+  "homepage.comments.student.content": {
+    "message": "Thanks to the rich learning resources in the community, I have benefited greatly and can better develop my technical abilities. ScriptCat is a very useful browser extension that provides me with convenient and efficient functionality.",
+    "description": "Student user's comment content"
+  },
+  "homepage.comments.enncy.username": {
+    "message": "Yan Xiaoxi (enncy)",
+    "description": "Enncy's username in community comments"
+  },
+  "homepage.comments.enncy.description": {
+    "message": "Famous Script Author",
+    "description": "Enncy's description in community comments"
+  },
+  "homepage.comments.enncy.content": {
+    "message": "Heartfelt thanks to the community",
+    "description": "Enncy's comment content"
+  },
+  "homepage.comments.qianyu.username": {
+    "message": "Qian Yu",
+    "description": "Qian Yu's username in community comments"
+  },
+  "homepage.comments.qianyu.description": {
+    "message": "Chrome User",
+    "description": "Qian Yu's description in community comments"
+  },
+  "homepage.comments.qianyu.content": {
+    "message": "At first, people thought this was a niche JS plugin... until...",
+    "description": "Qian Yu's comment content"
+  },
+  "homepage.comments.wwwwwllllk.username": {
+    "message": "wwwwwllllk",
+    "description": "wwwwwllllk's username in community comments"
+  },
+  "homepage.comments.wwwwwllllk.description": {
+    "message": "Frontend Developer",
+    "description": "wwwwwllllk's description in community comments"
+  },
+  "homepage.comments.wwwwwllllk.content": {
+    "message": "Using ScriptCat to improve my internet experience, meeting like-minded people in the community.",
+    "description": "wwwwwllllk's comment content"
+  },
+  "homepage.comments.oraer.username": {
+    "message": "Oraer",
+    "description": "Oraer's username in community comments"
+  },
+  "homepage.comments.oraer.description": {
+    "message": "Chrome User",
+    "description": "Oraer's description in community comments"
+  },
+  "homepage.comments.oraer.content": {
+    "message": "First encounter with Tampermonkey! Learning Tampermonkey! Surpassing Tampermonkey!",
+    "description": "Oraer's comment content"
+  },
+  "homepage.comments.bigonion.username": {
+    "message": "bigonion",
+    "description": "bigonion's username in community comments"
+  },
+  "homepage.comments.bigonion.description": {
+    "message": "ScriptCat Developer",
+    "description": "bigonion's description in community comments"
+  },
+  "homepage.comments.bigonion.content": {
+    "message": "ScriptCat is the future.",
+    "description": "bigonion's comment content"
   "uninstall.title": {
     "message": "Uninstall Survey",
     "description": "Title of the uninstall survey page"
