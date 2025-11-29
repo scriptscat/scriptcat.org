@@ -9,6 +9,43 @@ Beta 版本更新日志请查看 [Beta 更新日志](./beta.md)
 
 ⚠️ 请注意，如果你使用的 Windows 8/7/XP 系统，或者浏览器内核版本低于\<120，需要自行手动安装[旧版脚本猫](https://bbs.tampermonkey.net.cn/thread-3068-1-1.html)，v0.16.x 是最后一个支持 Manifest V2 的版本，安装步骤可以参考：[加载解压缩方式安装扩展](/docs/use/use/#%E5%8A%A0%E8%BD%BD%E8%A7%A3%E5%8E%8B%E7%BC%A9%E6%96%B9%E5%BC%8F%E5%AE%89%E8%A3%85%E6%89%A9%E5%B1%95)。
 
+<a name="1.2.0"></a>
+
+## 1.2.0 (2025-11-29)
+
+本次更新带来了脚本列表侧边栏、卡片视图、更友好的检查更新逻辑和编辑器配置等功能，注入与运行稳定性大幅提升，并修复 CSP、沙盒、GM API 等问题，同时带来性能与结构优化。
+
+更多详细内容请看 v1.2.0-beta.x 的更新日志 和 [v1.2](https://docs.scriptcat.org/docs/change/v1.2/) 文档。
+
+### 🚀 主要新功能
+
+- ✨ 脚本列表侧边栏 [#794](https://github.com/scriptscat/scriptcat/issues/794) (by @CodFrm)
+- ✨ 卡片视图 [#860](https://github.com/scriptscat/scriptcat/issues/860) (by @CodFrm)
+- ✨ 更友好的检查更新逻辑 [#755](https://github.com/scriptscat/scriptcat/issues/755) (by @cyfung1031)
+- ✨ 增加编辑器配置和编辑器类型定义 [#708](https://github.com/scriptscat/scriptcat/pull/708) (by @CodFrm)
+- ✨ 在 popup 显示脚本数量 ([#973](https://github.com/scriptscat/scriptcat/issues/973)) [[1134586](https://github.com/scriptscat/scriptcat/commit/1134586ff040ffc0cdddd3538e9ec493950c948a)] (by @cyfung1031)
+- ✨ 增加布局菜单隐藏代码侧边栏 [#689](https://github.com/scriptscat/scriptcat/issues/689) [[dd64da7](https://github.com/scriptscat/scriptcat/commit/dd64da719c081acbf21645e2b1e1f38653ffae8c)]
+- ✨ 增加 SC 版本检查按钮 ([#795](https://github.com/scriptscat/scriptcat/issues/795)) [[1680c66](https://github.com/scriptscat/scriptcat/commit/1680c66099120c0e497c1a1f5321f38fe0160ea0)] (by @cyfung1031)
+- ✨ 添加卸载扩展后的调查页面 [[6404c8f](https://github.com/scriptscat/scriptcat/commit/6404c8f74aff09b15725a92f8afdfc0d71ac188f)]
+
+### 🧩 GM API 变更
+
+- ✨ 支持 inject into，现在可以将脚本注入到 content 环境中了 [#711](https://github.com/scriptscat/scriptcat/issues/711)
+- ✨ GM_openInTab 支持置顶窗口、在隐身窗口打开等参数 [#788](https://github.com/scriptscat/scriptcat/pull/788) (by @cyfung1031)
+- ✨ GM_registerMenuCommand 支持二级菜单和分隔线 [#831](https://github.com/scriptscat/scriptcat/pull/831) (by @cyfung1031)
+- 🗑 删除 GM_openInTab 的 useOpen 选项 [#867](https://github.com/scriptscat/scriptcat/pull/867)
+- ♻️ 调整 `@connect` 逻辑 ([#969](https://github.com/scriptscat/scriptcat/issues/969)) [[67914d2](https://github.com/scriptscat/scriptcat/commit/67914d2b7d57fa9c69706ae57ee5d3400c2643f9)] (by @cyfung1031)
+- ♻️ 重构 `GM_xmlhttpRequest` 及相关代码 ([#901](https://github.com/scriptscat/scriptcat/issues/901)) [[fabd2e9](https://github.com/scriptscat/scriptcat/commit/fabd2e944235b460bc73df346b79d23ee4540af7)] (by @cyfung1031)
+
+### 其它
+
+- ⚡️ 稳定性和性能优化
+- 🐛 修复若干问题
+- ♻️ 代码结构优化
+- 🌐 i18n 问题处理
+
+**Full changelog:** [Compare v1.1.2...v1.2.0](https://github.com/scriptscat/scriptcat/compare/v1.1.2...v1.2.0)
+
 <a name="1.1.2"></a>
 
 ## 1.1.2 (2025-09-18)
