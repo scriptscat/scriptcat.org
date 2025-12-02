@@ -261,7 +261,8 @@ declare namespace GMTypes {
 
     /**
      * 使用 `window.open` 打开新标签，而不是 `chrome.tabs.create`
-     * 这在打开一些特殊链接时很有用
+     * 在打开一些特殊协议的链接时很有用，例如 `vscode://`, `m3u8dl://`
+     * 其他参数在这个打开方式下无效
      *
      * 相关：Issue #178 #1043
      * 默认值：false
