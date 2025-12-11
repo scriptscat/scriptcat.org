@@ -28,6 +28,8 @@ Beta 版本更新日志请查看 [Beta 更新日志](./beta.md)
 - 🐛 修复 userScripts 未定义的问题 ([#1041](https://github.com/scriptscat/scriptcat/issues/1041)) [[4f2deda](https://github.com/scriptscat/scriptcat/commit/4f2deda69aa6aae7f6e791be1cd965a440b80e33)] (by @cyfung1031)
 - 🐛 修正&#x60;AppContext&#x60;错误引用&#x60;&quot;monaco-editor&quot;&#x60; ([#983](https://github.com/scriptscat/scriptcat/issues/983)) [[4b8dae1](https://github.com/scriptscat/scriptcat/commit/4b8dae1f49208d13c4d19c4c627762fc1b04ea5e)] (by @cyfung1031)
 
+**Full changelog:** [Compare v1.2.0...v1.2.1](https://github.com/scriptscat/scriptcat/compare/v1.2.0...v1.2.1)
+
 <a name="1.2.0"></a>
 
 ## 1.2.0 (2025-11-29)
