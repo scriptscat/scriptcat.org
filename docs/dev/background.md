@@ -24,7 +24,7 @@ DOM 对象。可使用与油猴一致的 GM API 进行开发，对于兼容性�
 
 ## Cron 表达式说明
 
-脚本猫的 cron 基于 **node-cron** 实现，在标准 cron 语法上做了少量扩展。
+脚本猫的 cron 基于 [**node-cron**](https://github.com/kelektiv/node-cron/) 实现，在标准 cron 语法上做了少量扩展。
 
 ### 表达式格式
 
