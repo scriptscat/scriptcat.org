@@ -666,7 +666,7 @@ function ComparisonSection() {
   const renderCell = (
     state: boolean | -1,
     stateLabel: string | undefined,
-    b?: boolean
+    b?: boolean,
   ) => {
     return (
       <div className={styles.comparisonTableCell}>
@@ -894,12 +894,12 @@ function ComparisonSection() {
                       {renderCell(
                         row.tampermonkey,
                         row.tampermonkeyLabel,
-                        false
+                        false,
                       )}
                       {renderCell(
                         row.violentmonkey,
                         row.violentmonkeyLabel,
-                        false
+                        false,
                       )}
                     </div>
                   ))}
@@ -1282,7 +1282,7 @@ function useBackgroundColor(lightColor: string, darkColor: string) {
       const color = isDarkMode ? darkColor : lightColor;
       document.documentElement.style.setProperty(
         "--ifm-background-surface-color",
-        color
+        color,
       );
     };
 
@@ -1299,7 +1299,7 @@ function useBackgroundColor(lightColor: string, darkColor: string) {
     return () => {
       observer.disconnect();
       document.documentElement.style.removeProperty(
-        "--ifm-background-surface-color"
+        "--ifm-background-surface-color",
       );
     };
   }, [lightColor, darkColor]);
