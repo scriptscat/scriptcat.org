@@ -18,6 +18,46 @@ sidebar_position: 1
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+<a name="1.3.0-beta.3"></a>
+
+## 1.3.0-beta.3 (2026-02-07)
+
+### Added
+
+- ✨ Cron 相关修改：bug 修补、i18n、once 表达式增强、升级 cron 库 ([#1126](https://github.com/scriptscat/scriptcat/issues/1126)) (by @cyfung1031)
+
+### Changed
+
+- ♻️ 重构通讯机制：采用 storage.local 广播 + 符合 Firefox MV3 scripting 规范 + 不可追踪的动态同步 MessageFlag ([#1067](https://github.com/scriptscat/scriptcat/issues/1067)) (by @cyfung1031)
+- ⚡ 增强文本解码 ([#1166](https://github.com/scriptscat/scriptcat/issues/1166)) (by @cyfung1031)
+- 🎨 代码调整（少量） - `isContent` 变量位置 ([#1171](https://github.com/scriptscat/scriptcat/issues/1171)) (by @cyfung1031)
+- 🎨 代码调整 - Value相关的 类 & 变量名 ([#1175](https://github.com/scriptscat/scriptcat/issues/1175)) (by @cyfung1031)
+- 🎨 代码调整（少量） - ScriptClient ([#1172](https://github.com/scriptscat/scriptcat/issues/1172)) (by @cyfung1031)
+- 🎨 (TypeScript) 自订类名修订：File -> FileInfo ([#1174](https://github.com/scriptscat/scriptcat/issues/1174)) (by @cyfung1031)
+- ⬆️ 修正 rspack 的 `jsc.target` 为 es2020 / 提升内核版本 ([#1186](https://github.com/scriptscat/scriptcat/issues/1186)) (by @cyfung1031)
+- 🎨 改善charset detection ([#1140](https://github.com/scriptscat/scriptcat/issues/1140)) (by @cyfung1031)
+- 🎨 弹出的更新窗口显示时间 ([#1155](https://github.com/scriptscat/scriptcat/issues/1155)) (by @cyfung1031)
+- 🎨 locales.ts 小修正 ([#1154](https://github.com/scriptscat/scriptcat/issues/1154)) (by @cyfung1031)
+- 🎨 logo 128x128 ([#1176](https://github.com/scriptscat/scriptcat/issues/1176)) (by @cyfung1031)
+- 🎨 图像处理 ([#1177](https://github.com/scriptscat/scriptcat/issues/1177)) (by @cyfung1031)
+
+### Removed
+
+- 🔥 package.json: drop pako ([#1188](https://github.com/scriptscat/scriptcat/issues/1188)) (by @cyfung1031)
+
+### Fixed
+
+- 🐛 处理脚本编码问题 [#1115](https://github.com/scriptscat/scriptcat/issues/1115) ([#1138](https://github.com/scriptscat/scriptcat/issues/1138)) (by @CodFrm)
+- 🐛 处理value引用问题 [#1141](https://github.com/scriptscat/scriptcat/issues/1141) ([#1147](https://github.com/scriptscat/scriptcat/issues/1147)) (by @CodFrm)
+- 🐛 修复按钮渲染逻辑，避免 render 阶段副作用，改用 JSX 条件渲染 & named slot ([#1153](https://github.com/scriptscat/scriptcat/issues/1153)) (by @cyfung1031)
+- 🐛 修正 FileSystemObserver 未能持续监听问题 ([#1160](https://github.com/scriptscat/scriptcat/issues/1160)) (by @cyfung1031)
+- 🐛 fix: 兼容 TM `@match www.website.com/*` ([#1165](https://github.com/scriptscat/scriptcat/issues/1165)) (by @cyfung1031)
+- 🐛 修正 GM API 异步声明，正确返回 Promise ([#1169](https://github.com/scriptscat/scriptcat/issues/1169)) (by @cyfung1031)
+- 🐛 修正 content.js 没有 UserAgentData 问题 ([#1183](https://github.com/scriptscat/scriptcat/issues/1183)) (by @cyfung1031)
+- 🐛 修复 1.2.5 structuredClone错误 ([#1192](https://github.com/scriptscat/scriptcat/issues/1192)) (by @cyfung1031)
+- 🐛 修改 9343f2d6e49aec78d208d0e3ba3d96ec2a4d5a1c ([#1195](https://github.com/scriptscat/scriptcat/issues/1195)) (by @cyfung1031)
+- 🐛 修复grant问题 ([#1199](https://github.com/scriptscat/scriptcat/issues/1199)) (by @CodFrm)
+
 <a name="1.3.0-beta.2"></a>
 
 ## 1.3.0-beta.2 (2026-01-07)

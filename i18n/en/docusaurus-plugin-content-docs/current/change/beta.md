@@ -18,6 +18,46 @@ You can obtain pre-release versions from the [Release](https://github.com/script
 
 Additionally, besides pre-releases, ScriptCat builds the extension on [Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml) after each code commit is merged to the main branch. If you want to experience the latest features or fixes, you can download them from the [Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml) page.
 
+<a name="1.3.0-beta.3"></a>
+
+## 1.3.0-beta.3 (2026-02-07)
+
+### Added
+
+- ✨ Cron-related modifications: bug fixes, i18n, once expression enhancements, upgrade cron library ([#1126](https://github.com/scriptscat/scriptcat/issues/1126)) (by @cyfung1031)
+
+### Changed
+
+- ♻️ Refactor communication mechanism: adopt storage.local broadcast + Firefox MV3 scripting compliant + untraceable dynamic sync MessageFlag ([#1067](https://github.com/scriptscat/scriptcat/issues/1067)) (by @cyfung1031)
+- ⚡ Enhanced text decoding ([#1166](https://github.com/scriptscat/scriptcat/issues/1166)) (by @cyfung1031)
+- 🎨 Code adjustments (minor) - `isContent` variable location ([#1171](https://github.com/scriptscat/scriptcat/issues/1171)) (by @cyfung1031)
+- 🎨 Code adjustments - Value-related class & variable names ([#1175](https://github.com/scriptscat/scriptcat/issues/1175)) (by @cyfung1031)
+- 🎨 Code adjustments (minor) - ScriptClient ([#1172](https://github.com/scriptscat/scriptcat/issues/1172)) (by @cyfung1031)
+- 🎨 (TypeScript) Custom class name revision: File -> FileInfo ([#1174](https://github.com/scriptscat/scriptcat/issues/1174)) (by @cyfung1031)
+- ⬆️ Fix rspack's `jsc.target` to es2020 / Upgrade core version ([#1186](https://github.com/scriptscat/scriptcat/issues/1186)) (by @cyfung1031)
+- 🎨 Improve charset detection ([#1140](https://github.com/scriptscat/scriptcat/issues/1140)) (by @cyfung1031)
+- 🎨 Update popup window display time ([#1155](https://github.com/scriptscat/scriptcat/issues/1155)) (by @cyfung1031)
+- 🎨 Minor locales.ts corrections ([#1154](https://github.com/scriptscat/scriptcat/issues/1154)) (by @cyfung1031)
+- 🎨 Logo 128x128 ([#1176](https://github.com/scriptscat/scriptcat/issues/1176)) (by @cyfung1031)
+- 🎨 Image processing ([#1177](https://github.com/scriptscat/scriptcat/issues/1177)) (by @cyfung1031)
+
+### Removed
+
+- 🔥 package.json: drop pako ([#1188](https://github.com/scriptscat/scriptcat/issues/1188)) (by @cyfung1031)
+
+### Fixed
+
+- 🐛 Handle script encoding issues [#1115](https://github.com/scriptscat/scriptcat/issues/1115) ([#1138](https://github.com/scriptscat/scriptcat/issues/1138)) (by @CodFrm)
+- 🐛 Handle value reference issues [#1141](https://github.com/scriptscat/scriptcat/issues/1141) ([#1147](https://github.com/scriptscat/scriptcat/issues/1147)) (by @CodFrm)
+- 🐛 Fix button rendering logic, avoid render phase side effects, use JSX conditional rendering & named slots ([#1153](https://github.com/scriptscat/scriptcat/issues/1153)) (by @cyfung1031)
+- 🐛 Fix FileSystemObserver unable to continuously monitor issue ([#1160](https://github.com/scriptscat/scriptcat/issues/1160)) (by @cyfung1031)
+- 🐛 fix: TM compatibility `@match www.website.com/*` ([#1165](https://github.com/scriptscat/scriptcat/issues/1165)) (by @cyfung1031)
+- 🐛 Fix GM API async declarations, correctly return Promise ([#1169](https://github.com/scriptscat/scriptcat/issues/1169)) (by @cyfung1031)
+- 🐛 Fix content.js missing UserAgentData issue ([#1183](https://github.com/scriptscat/scriptcat/issues/1183)) (by @cyfung1031)
+- 🐛 Fix 1.2.5 structuredClone error ([#1192](https://github.com/scriptscat/scriptcat/issues/1192)) (by @cyfung1031)
+- 🐛 Fix modification 9343f2d6e49aec78d208d0e3ba3d96ec2a4d5a1c ([#1195](https://github.com/scriptscat/scriptcat/issues/1195)) (by @cyfung1031)
+- 🐛 Fix grant issues ([#1199](https://github.com/scriptscat/scriptcat/issues/1199)) (by @CodFrm)
+
 <a name="1.3.0-beta.2"></a>
 
 ## 1.3.0-beta.2 (2026-01-07)
