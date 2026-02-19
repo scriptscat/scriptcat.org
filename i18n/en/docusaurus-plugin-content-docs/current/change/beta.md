@@ -18,6 +18,31 @@ You can obtain pre-release versions from the [Release](https://github.com/script
 
 Additionally, besides pre-releases, ScriptCat builds the extension on [Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml) after each code commit is merged to the main branch. If you want to experience the latest features or fixes, you can download them from the [Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml) page.
 
+## 1.3.0-beta.4 (2026-02-19)
+
+### Added
+
+- ✨ Add Amazon S3 storage [#1146](https://github.com/scriptscat/scriptcat/issues/1146) ([#1189](https://github.com/scriptscat/scriptcat/pull/1189)) (by @CodFrm)
+- ✨ Adjust hidden editor sidebar position [#1185](https://github.com/scriptscat/scriptcat/issues/1185) ([#1254](https://github.com/scriptscat/scriptcat/pull/1254)) (by @CodFrm)
+- ✨ Accept `@version` with no or empty value ([#1216](https://github.com/scriptscat/scriptcat/pull/1216)) (by @cyfung1031)
+
+### Fixed
+
+- 🐛 Fix changelog notification opening page issue ([#1266](https://github.com/scriptscat/scriptcat/pull/1266)) (by @CodFrm)
+- 🐛 Fix unregister not executing correctly ([#1231](https://github.com/scriptscat/scriptcat/pull/1231)) (by @cyfung1031)
+- 🐛 Fix GM_addElement issue, move operation to content environment ([#1233](https://github.com/scriptscat/scriptcat/pull/1233)) (by @cyfung1031)
+- 🐛 Refactor DraggableEntry, fix card height alignment ([#1245](https://github.com/scriptscat/scriptcat/pull/1245)) (by @cyfung1031)
+- 🐛 Fix popup content following screen scroll issue ([#1263](https://github.com/scriptscat/scriptcat/pull/1263)) (by @cyfung1031) ([#1259](https://github.com/scriptscat/scriptcat/pull/1259)) (by @cyfung1031)
+- 🐛 Fix memory leak and object property exposure, and TTP XML parsing fallback to null ([#1242](https://github.com/scriptscat/scriptcat/pull/1242)) (by @cyfung1031) ([#1260](https://github.com/scriptscat/scriptcat/pull/1260)) (by @cyfung1031)
+- 🐛 Add `conflictAction` parameter to `GM_download` ([#1250](https://github.com/scriptscat/scriptcat/pull/1250)) (by @cyfung1031)
+- 🐛 Fix install link parsing failure [#1235](https://github.com/scriptscat/scriptcat/issues/1235) ([#1238](https://github.com/scriptscat/scriptcat/pull/1238)) (by @cyfung1031)
+- 🐛 Fix drag component causing focusin/focusout lag [#1224](https://github.com/scriptscat/scriptcat/issues/1224) ([#1243](https://github.com/scriptscat/scriptcat/pull/1243)) (by @CodFrm)
+- 🐛 Fix subscribeUrl origin related parts in installScript ([#1218](https://github.com/scriptscat/scriptcat/pull/1218)) (by @cyfung1031)
+- 🐛 Fix ScriptCard animation issue ([#1234](https://github.com/scriptscat/scriptcat/pull/1234)) (by @cyfung1031)
+- 🐛 Fix hide_sidebar to show_main_sidebar & hide_main_sidebar ([#1225](https://github.com/scriptscat/scriptcat/pull/1225)) (by @cyfung1031)
+- 🐛 Fix external extension API not working ([#1217](https://github.com/scriptscat/scriptcat/pull/1217)) (by @cyfung1031)
+- 🐛 Fix download filename not supporting folders ([#1203](https://github.com/scriptscat/scriptcat/pull/1203)) (by @cyfung1031)
+
 <a name="1.3.0-beta.3"></a>
 
 ## 1.3.0-beta.3 (2026-02-07)

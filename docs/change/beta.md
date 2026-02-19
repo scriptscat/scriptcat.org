@@ -18,6 +18,31 @@ sidebar_position: 1
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+## 1.3.0-beta.4 (2026-02-19)
+
+### Added
+
+- ✨ 增加 Amazon S3 存储 [#1146](https://github.com/scriptscat/scriptcat/issues/1146) ([#1189](https://github.com/scriptscat/scriptcat/pull/1189)) (by @CodFrm)
+- ✨ 调整隐藏编辑框侧边栏位置 [#1185](https://github.com/scriptscat/scriptcat/issues/1185) ([#1254](https://github.com/scriptscat/scriptcat/pull/1254)) (by @CodFrm)
+- ✨ 接受 `@version` 没有或空值 ([#1216](https://github.com/scriptscat/scriptcat/pull/1216)) (by @cyfung1031)
+
+### Fixed
+
+- 🐛 修复点击更新日志通知打开页面问题 ([#1266](https://github.com/scriptscat/scriptcat/pull/1266)) (by @CodFrm)
+- 🐛 修正反注册未正确执行 ([#1231](https://github.com/scriptscat/scriptcat/pull/1231)) (by @cyfung1031)
+- 🐛 修复 GM_addElement 问题，将操作放到content环境 ([#1233](https://github.com/scriptscat/scriptcat/pull/1233)) (by @cyfung1031)
+- 🐛 重构 DraggableEntry 、修正卡片高度对齐 ([#1245](https://github.com/scriptscat/scriptcat/pull/1245)) (by @cyfung1031)
+- 🐛 修复弹出内容跟随屏幕滚动的问题 ([#1263](https://github.com/scriptscat/scriptcat/pull/1263)) (by @cyfung1031) ([#1259](https://github.com/scriptscat/scriptcat/pull/1259)) (by @cyfung1031)
+- 🐛 修复内存泄漏和对象属性暴露及 TTP XML 解析退回至 null ([#1242](https://github.com/scriptscat/scriptcat/pull/1242)) (by @cyfung1031) ([#1260](https://github.com/scriptscat/scriptcat/pull/1260)) (by @cyfung1031)
+- 🐛 `GM_download` 添加 `conflictAction` 参数 ([#1250](https://github.com/scriptscat/scriptcat/pull/1250)) (by @cyfung1031)
+- 🐛 修复安装链接解析失败问题 [#1235](https://github.com/scriptscat/scriptcat/issues/1235) ([#1238](https://github.com/scriptscat/scriptcat/pull/1238)) (by @cyfung1031)
+- 🐛 修复拖拽组件导致触发focusin / focusout卡顿 [#1224](https://github.com/scriptscat/scriptcat/issues/1224) ([#1243](https://github.com/scriptscat/scriptcat/pull/1243)) (by @CodFrm)
+- 🐛 修正 installScript 中 subscribeUrl origin 关连部份 ([#1218](https://github.com/scriptscat/scriptcat/pull/1218)) (by @cyfung1031)
+- 🐛 修正 ScriptCard 动画问题 ([#1234](https://github.com/scriptscat/scriptcat/pull/1234)) (by @cyfung1031)
+- 🐛 修正 hide_sidebar 至 show_main_sidebar & hide_main_sidebar ([#1225](https://github.com/scriptscat/scriptcat/pull/1225)) (by @cyfung1031)
+- 🐛 修复外部扩展API无效的问题 ([#1217](https://github.com/scriptscat/scriptcat/pull/1217)) (by @cyfung1031)
+- 🐛 修复download文件名不支持文件夹的问题 ([#1203](https://github.com/scriptscat/scriptcat/pull/1203)) (by @cyfung1031)
+
 <a name="1.3.0-beta.3"></a>
 
 ## 1.3.0-beta.3 (2026-02-07)
