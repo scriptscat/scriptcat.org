@@ -9,6 +9,94 @@ For Beta version changelog, please see [Beta Changelog](./beta.md)
 
 ⚠️ Please note that if you are using Windows 8/7/XP, or your browser kernel version is lower than 120, you need to manually install the [legacy version of ScriptCat](https://github.com/scriptscat/scriptcat/releases). v0.16.x is the last version that supports Manifest V2. Installation steps can be found at: [Install Extension by Loading Unpacked](/docs/use/use/#load-unpacked-extension-installation).
 
+<a name="1.3.0"></a>
+
+## 1.3.0 (2026-03-10)
+
+This update brings Amazon S3 storage, script runtime options, installation without external website access, and more. It significantly optimizes the messaging system and React performance, fixes numerous GM API, UI, and stability issues, and includes extensive code quality improvements.
+
+### 🚀 Major New Features
+
+- ✨ Add Amazon S3 storage [#1146](https://github.com/scriptscat/scriptcat/issues/1146) ([#1189](https://github.com/scriptscat/scriptcat/pull/1189)) (by @CodFrm)
+- ✨ Script runtime options ([#895](https://github.com/scriptscat/scriptcat/pull/895)) (by @CodFrm)
+- ✨ Install without external website access + install page layout adjustments ([#842](https://github.com/scriptscat/scriptcat/pull/842)) (by @cyfung1031)
+- ✨ Show gray icon when script functionality is disabled [#897](https://github.com/scriptscat/scriptcat/issues/897) (by @CodFrm)
+- ✨ Optimize interaction when menu expanded items count is 0 [#868](https://github.com/scriptscat/scriptcat/issues/868) (by @CodFrm)
+- ✨ Default `@noframes` in template to prevent common mistakes ([#900](https://github.com/scriptscat/scriptcat/pull/900)) (by @cyfung1031)
+- ✨ Prevent install link from being misjudged as new install when script name changes ([#824](https://github.com/scriptscat/scriptcat/pull/824)) (by @cyfung1031)
+- ✨ Fix `@grant` conflict validation, add duplicate meta declaration error prompt ([#902](https://github.com/scriptscat/scriptcat/pull/902)) (by @cyfung1031)
+- ✨ Accept `@version` with no or empty value ([#1216](https://github.com/scriptscat/scriptcat/pull/1216)) (by @cyfung1031)
+- ✨ Adjust hidden editor sidebar position [#1185](https://github.com/scriptscat/scriptcat/issues/1185) ([#1254](https://github.com/scriptscat/scriptcat/pull/1254)) (by @CodFrm)
+
+### 🧩 GM API Changes
+
+- 🐛 Fix GM_addElement issue, move operation to content environment ([#1233](https://github.com/scriptscat/scriptcat/pull/1233)) (by @cyfung1031)
+- 🐛 Add `conflictAction` parameter to `GM_download` ([#1250](https://github.com/scriptscat/scriptcat/pull/1250)) (by @cyfung1031)
+- 🐛 Fix GM API async declarations, correctly return Promise ([#1169](https://github.com/scriptscat/scriptcat/pull/1169)) (by @cyfung1031)
+- ♻️ Firefox compatibility: GM_setClipboard ([#928](https://github.com/scriptscat/scriptcat/pull/928)) (by @cyfung1031)
+- 🐛 Fix GM_value issue [#1192](https://github.com/scriptscat/scriptcat/issues/1192) (by @CodFrm)
+- 🐛 Fix download filename not supporting folders ([#1203](https://github.com/scriptscat/scriptcat/pull/1203)) (by @cyfung1031)
+
+### ⚡️ Performance Improvements
+
+- ♻️ Refactor messaging system: use storage.local broadcast + Firefox MV3 scripting compliance + untraceable dynamic sync MessageFlag ([#1067](https://github.com/scriptscat/scriptcat/pull/1067)) (by @cyfung1031)
+- ⚡️ Fix React re-render issues (ScriptCard & ScriptTable) ([#1182](https://github.com/scriptscat/scriptcat/pull/1182)) (by @cyfung1031)
+- ⚡️ Fix React re-render issues (Popup) ([#1181](https://github.com/scriptscat/scriptcat/pull/1181)) (by @cyfung1031)
+- ⚡️ Optimize Repo performance ([#1232](https://github.com/scriptscat/scriptcat/pull/1232)) (by @CodFrm)
+- ⚡️ Move metadata out of chrome.storage.session ([#1027](https://github.com/scriptscat/scriptcat/pull/1027)) (by @cyfung1031)
+- ⚡️ Improve charset detection ([#1140](https://github.com/scriptscat/scriptcat/pull/1140)) (by @cyfung1031)
+- ⚡️ Store icons by URL to avoid duplicate storage across scripts ([#909](https://github.com/scriptscat/scriptcat/pull/909)) (by @cyfung1031)
+- ⚡️ Optimize parseMetadata code ([#903](https://github.com/scriptscat/scriptcat/pull/903)) (by @cyfung1031)
+- 🐛 Fix memory leaks and object property exposure ([#1242](https://github.com/scriptscat/scriptcat/pull/1242)) (by @cyfung1031)
+- ♻️ Remove Redux, simplify state management ([#1206](https://github.com/scriptscat/scriptcat/pull/1206)) (by @cyfung1031)
+
+### 🧑‍💻 Editor
+
+- ✨ Optimize Monaco Editor settings, add `/* global xxx */` fix ([#1012](https://github.com/scriptscat/scriptcat/pull/1012)) (by @cyfung1031)
+- ✨ Monaco Editor hints multilingual support and add `@require-css` hint ([#960](https://github.com/scriptscat/scriptcat/pull/960)) (by @cyfung1031)
+
+### 🐛 Bug Fixes
+
+- 🐛 Fix conflict between incognito window permission check causing repeated restarts (by @CodFrm)
+- 🐛 Fix include `*?*` expression handling [#1271](https://github.com/scriptscat/scriptcat/issues/1271) ([#1272](https://github.com/scriptscat/scriptcat/pull/1272)) (by @CodFrm)
+- 🔒 Sanitize announcement notification HTML content with DOMPurify ([#1274](https://github.com/scriptscat/scriptcat/pull/1274)) (by @CodFrm)
+- 🐛 Fix script settings - permission management control not working ([#1267](https://github.com/scriptscat/scriptcat/pull/1267)) (by @CodFrm)
+- 🐛 Fix popup content following screen scroll [#1256](https://github.com/scriptscat/scriptcat/issues/1256) ([#1263](https://github.com/scriptscat/scriptcat/pull/1263)) (by @cyfung1031)
+- 🐛 Fix install link parsing failure [#1235](https://github.com/scriptscat/scriptcat/issues/1235) ([#1260](https://github.com/scriptscat/scriptcat/pull/1260)) (by @cyfung1031)
+- 🐛 Fix drag component causing focusin/focusout lag [#1224](https://github.com/scriptscat/scriptcat/issues/1224) ([#1243](https://github.com/scriptscat/scriptcat/pull/1243)) (by @CodFrm)
+- 🐛 Fix external extension API not working ([#1217](https://github.com/scriptscat/scriptcat/pull/1217)) (by @cyfung1031)
+- 🐛 Fix grant issue ([#1199](https://github.com/scriptscat/scriptcat/pull/1199)) (by @CodFrm)
+- 🐛 Fix content.js missing UserAgentData ([#1183](https://github.com/scriptscat/scriptcat/pull/1183)) (by @cyfung1031)
+- 🐛 Handle script encoding issue [#1115](https://github.com/scriptscat/scriptcat/issues/1115) ([#1138](https://github.com/scriptscat/scriptcat/pull/1138)) (by @CodFrm)
+- 🐛 Fix script icon display [#1052](https://github.com/scriptscat/scriptcat/issues/1052) ([#1104](https://github.com/scriptscat/scriptcat/pull/1104)) (by @CodFrm)
+- 🐛 Add UnoCSS prefix to resolve CSS conflicts, fix CSS layout ([#1013](https://github.com/scriptscat/scriptcat/pull/1013)) (by @cyfung1031)
+- 🐛 Clear existing Alarm when choosing irregular script update check ([#996](https://github.com/scriptscat/scriptcat/pull/996)) (by @cyfung1031)
+- 🐛 Import & export - fix incorrect script last modified date/time ([#951](https://github.com/scriptscat/scriptcat/pull/951)) (by @cyfung1031)
+- 🐛 Fix i18n prefix language script name and description display [#1123](https://github.com/scriptscat/scriptcat/issues/1123) (by @CodFrm)
+- 🐛 Fix unregister not executing correctly ([#1231](https://github.com/scriptscat/scriptcat/pull/1231)) (by @cyfung1031)
+
+### ♻️ Refactoring & Compatibility
+
+- ♻️ userScripts / scripting API adjustments, enhance compatibility (redo #704) ([#925](https://github.com/scriptscat/scriptcat/pull/925)) (by @cyfung1031)
+- ♻️ Cron related changes: bug fixes, i18n, once expression enhancement, upgrade cron library ([#1126](https://github.com/scriptscat/scriptcat/pull/1126)) (by @cyfung1031)
+- ♻️ Refactor and optimize script icon loading ([#893](https://github.com/scriptscat/scriptcat/pull/893)) (by @CodFrm)
+- ♻️ Enhance text decoding ([#1166](https://github.com/scriptscat/scriptcat/pull/1166)) (by @cyfung1031)
+- ⬆️ Upgrade swc compatible kernel version ([#1186](https://github.com/scriptscat/scriptcat/pull/1186)) (by @cyfung1031)
+
+### 🎨 UI Improvements
+
+- 🎨 Change default extension icon badge number to script count [#989](https://github.com/scriptscat/scriptcat/issues/989) (by @CodFrm)
+- 🎨 Make install page URL prettier ([#993](https://github.com/scriptscat/scriptcat/pull/993)) (by @cyfung1031)
+- 🐛 Refactor DraggableEntry, fix card height alignment ([#1245](https://github.com/scriptscat/scriptcat/pull/1245)) (by @cyfung1031)
+
+### Misc
+
+- 🔒 Security improvements (DOMPurify, npm dependency vulnerability fixes)
+- 👷 Rspack bundling optimization, build toolchain fixes
+- ⬆️ Dependency version updates
+
+**Full changelog:** [Compare v1.2.6...v1.3.0](https://github.com/scriptscat/scriptcat/compare/v1.2.6...v1.3.0)
+
 <a name="1.2.6"></a>
 
 ## 1.2.6 (2026-02-03)

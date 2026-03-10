@@ -9,6 +9,94 @@ Beta 版本更新日志请查看 [Beta 更新日志](./beta.md)
 
 ⚠️ 请注意，如果你使用的 Windows 8/7/XP 系统，或者浏览器内核版本低于\<120，需要自行手动安装[旧版脚本猫](https://bbs.tampermonkey.net.cn/thread-3068-1-1.html)，v0.16.x 是最后一个支持 Manifest V2 的版本，安装步骤可以参考：[加载解压缩方式安装扩展](/docs/use/use/#%E5%8A%A0%E8%BD%BD%E8%A7%A3%E5%8E%8B%E7%BC%A9%E6%96%B9%E5%BC%8F%E5%AE%89%E8%A3%85%E6%89%A9%E5%B1%95)。
 
+<a name="1.3.0"></a>
+
+## 1.3.0 (2026-03-10)
+
+本次更新带来了 Amazon S3 存储、脚本运行时期选项、不依赖外部网站安装等新功能，大幅优化了通讯机制和 React 性能，修复了大量 GM API、UI 和稳定性问题，并进行了广泛的代码质量改良。
+
+### 🚀 主要新功能
+
+- ✨ 增加 Amazon S3 存储 [#1146](https://github.com/scriptscat/scriptcat/issues/1146) ([#1189](https://github.com/scriptscat/scriptcat/pull/1189)) (by @CodFrm)
+- ✨ 脚本运行时期选项 ([#895](https://github.com/scriptscat/scriptcat/pull/895)) (by @CodFrm)
+- ✨ 不依赖外部网站访问进行安装 ＋ 安装页版面调整 ([#842](https://github.com/scriptscat/scriptcat/pull/842)) (by @cyfung1031)
+- ✨ 关闭脚本功能后展示灰色图标 [#897](https://github.com/scriptscat/scriptcat/issues/897) (by @CodFrm)
+- ✨ 优化菜单展开项为0时的交互逻辑 [#868](https://github.com/scriptscat/scriptcat/issues/868) (by @CodFrm)
+- ✨ 范本预设 `@noframes` 避免新手踩坑 ([#900](https://github.com/scriptscat/scriptcat/pull/900)) (by @cyfung1031)
+- ✨ 防止脚本安装链结因脚本名字改了而被误判为安装而非更新 ([#824](https://github.com/scriptscat/scriptcat/pull/824)) (by @cyfung1031)
+- ✨ `@grant` 冲突校验修正，增加 meta 重复声明错误提示 ([#902](https://github.com/scriptscat/scriptcat/pull/902)) (by @cyfung1031)
+- ✨ 接受 `@version` 没有或空值 ([#1216](https://github.com/scriptscat/scriptcat/pull/1216)) (by @cyfung1031)
+- ✨ 调整隐藏编辑框侧边栏位置 [#1185](https://github.com/scriptscat/scriptcat/issues/1185) ([#1254](https://github.com/scriptscat/scriptcat/pull/1254)) (by @CodFrm)
+
+### 🧩 GM API 变更
+
+- 🐛 修复 GM_addElement 问题，将操作放到 content 环境 ([#1233](https://github.com/scriptscat/scriptcat/pull/1233)) (by @cyfung1031)
+- 🐛 `GM_download` 添加 `conflictAction` 参数 ([#1250](https://github.com/scriptscat/scriptcat/pull/1250)) (by @cyfung1031)
+- 🐛 修正 GM API 异步声明，正确返回 Promise ([#1169](https://github.com/scriptscat/scriptcat/pull/1169)) (by @cyfung1031)
+- ♻️ 兼容 FF: GM_setClipboard ([#928](https://github.com/scriptscat/scriptcat/pull/928)) (by @cyfung1031)
+- 🐛 修复 GM_value 问题 [#1192](https://github.com/scriptscat/scriptcat/issues/1192) (by @CodFrm)
+- 🐛 修复 download 文件名不支持文件夹的问题 ([#1203](https://github.com/scriptscat/scriptcat/pull/1203)) (by @cyfung1031)
+
+### ⚡️ 性能优化
+
+- ♻️ 重构通讯机制：采用 storage.local 广播 + 符合 Firefox MV3 scripting 规范 + 不可追踪的动态同步 MessageFlag ([#1067](https://github.com/scriptscat/scriptcat/pull/1067)) (by @cyfung1031)
+- ⚡️ 修正 React 重绘问题（ScriptCard & ScriptTable）([#1182](https://github.com/scriptscat/scriptcat/pull/1182)) (by @cyfung1031)
+- ⚡️ 修正 React 重绘问题（Popup）([#1181](https://github.com/scriptscat/scriptcat/pull/1181)) (by @cyfung1031)
+- ⚡️ 优化 Repo 性能 ([#1232](https://github.com/scriptscat/scriptcat/pull/1232)) (by @CodFrm)
+- ⚡️ 把 metadata 从 chrome.storage.session 抽走 ([#1027](https://github.com/scriptscat/scriptcat/pull/1027)) (by @cyfung1031)
+- ⚡️ 改善 charset detection ([#1140](https://github.com/scriptscat/scriptcat/pull/1140)) (by @cyfung1031)
+- ⚡️ 把 icon 根据 url 储存，避免多个脚本储存同一 icon 造成浪费 ([#909](https://github.com/scriptscat/scriptcat/pull/909)) (by @cyfung1031)
+- ⚡️ parseMetadata 代码优化 ([#903](https://github.com/scriptscat/scriptcat/pull/903)) (by @cyfung1031)
+- 🐛 修复内存泄漏和对象属性暴露 ([#1242](https://github.com/scriptscat/scriptcat/pull/1242)) (by @cyfung1031)
+- ♻️ 移除 Redux，简化状态管理 ([#1206](https://github.com/scriptscat/scriptcat/pull/1206)) (by @cyfung1031)
+
+### 🧑‍💻 编辑器
+
+- ✨ 优化 Monaco Editor 设定，加 `/* global xxx */` 修正 ([#1012](https://github.com/scriptscat/scriptcat/pull/1012)) (by @cyfung1031)
+- ✨ Monaco Editor hints 多国语言化 及 增加 `@require-css` 提示 ([#960](https://github.com/scriptscat/scriptcat/pull/960)) (by @cyfung1031)
+
+### 🐛 Bug 修复
+
+- 🐛 修复与隐身窗口检查权限冲突导致反复重启的问题 (by @CodFrm)
+- 🐛 修复 include `*?*` 表达式处理问题 [#1271](https://github.com/scriptscat/scriptcat/issues/1271) ([#1272](https://github.com/scriptscat/scriptcat/pull/1272)) (by @CodFrm)
+- 🔒 使用 DOMPurify 清理公告通知 HTML 内容 ([#1274](https://github.com/scriptscat/scriptcat/pull/1274)) (by @CodFrm)
+- 🐛 修复脚本设置-授权管理控制无效的问题 ([#1267](https://github.com/scriptscat/scriptcat/pull/1267)) (by @CodFrm)
+- 🐛 修复弹出内容跟随屏幕滚动的问题 [#1256](https://github.com/scriptscat/scriptcat/issues/1256) ([#1263](https://github.com/scriptscat/scriptcat/pull/1263)) (by @cyfung1031)
+- 🐛 修复安装链接解析失败问题 [#1235](https://github.com/scriptscat/scriptcat/issues/1235) ([#1260](https://github.com/scriptscat/scriptcat/pull/1260)) (by @cyfung1031)
+- 🐛 修复拖拽组件导致触发 focusin/focusout 卡顿 [#1224](https://github.com/scriptscat/scriptcat/issues/1224) ([#1243](https://github.com/scriptscat/scriptcat/pull/1243)) (by @CodFrm)
+- 🐛 修复外部扩展 API 无效的问题 ([#1217](https://github.com/scriptscat/scriptcat/pull/1217)) (by @cyfung1031)
+- 🐛 修复 grant 问题 ([#1199](https://github.com/scriptscat/scriptcat/pull/1199)) (by @CodFrm)
+- 🐛 修正 content.js 没有 UserAgentData 问题 ([#1183](https://github.com/scriptscat/scriptcat/pull/1183)) (by @cyfung1031)
+- 🐛 处理脚本编码问题 [#1115](https://github.com/scriptscat/scriptcat/issues/1115) ([#1138](https://github.com/scriptscat/scriptcat/pull/1138)) (by @CodFrm)
+- 🐛 修复脚本图标展示 [#1052](https://github.com/scriptscat/scriptcat/issues/1052) ([#1104](https://github.com/scriptscat/scriptcat/pull/1104)) (by @CodFrm)
+- 🐛 UnoCSS 加 prefix 解决 CSS 冲突、CSS 布局修正 ([#1013](https://github.com/scriptscat/scriptcat/pull/1013)) (by @cyfung1031)
+- 🐛 选择不定期检查脚本更新时，清除现有 Alarm ([#996](https://github.com/scriptscat/scriptcat/pull/996)) (by @cyfung1031)
+- 🐛 导入 & 导出 - 修正不依照脚本最后修改日期时间问题 ([#951](https://github.com/scriptscat/scriptcat/pull/951)) (by @cyfung1031)
+- 🐛 修复 i18n 前缀语言脚本名和描述展示 [#1123](https://github.com/scriptscat/scriptcat/issues/1123) (by @CodFrm)
+- 🐛 修正反注册未正确执行 ([#1231](https://github.com/scriptscat/scriptcat/pull/1231)) (by @cyfung1031)
+
+### ♻️ 重构与兼容性
+
+- ♻️ userScripts / scripting API 调整，增强兼容性（重做 #704）([#925](https://github.com/scriptscat/scriptcat/pull/925)) (by @cyfung1031)
+- ♻️ Cron 相关修改：bug 修补、i18n、once 表达式增强、升级 cron 库 ([#1126](https://github.com/scriptscat/scriptcat/pull/1126)) (by @cyfung1031)
+- ♻️ 重构优化脚本图标加载 ([#893](https://github.com/scriptscat/scriptcat/pull/893)) (by @CodFrm)
+- ♻️ 增强文本解码 ([#1166](https://github.com/scriptscat/scriptcat/pull/1166)) (by @cyfung1031)
+- ⬆️ 提升 swc 兼容内核版本 ([#1186](https://github.com/scriptscat/scriptcat/pull/1186)) (by @cyfung1031)
+
+### 🎨 UI 改进
+
+- 🎨 扩展图标显示数字默认修改为脚本数量 [#989](https://github.com/scriptscat/scriptcat/issues/989) (by @CodFrm)
+- 🎨 让安装页面 URL 好看一点 ([#993](https://github.com/scriptscat/scriptcat/pull/993)) (by @cyfung1031)
+- 🐛 重构 DraggableEntry、修正卡片高度对齐 ([#1245](https://github.com/scriptscat/scriptcat/pull/1245)) (by @cyfung1031)
+
+### 其它
+
+- 🔒 安全性改进（DOMPurify、npm 依赖漏洞修复）
+- 👷 rspack 打包优化、打包工具链修复
+- ⬆️ 依赖版本更新
+
+**Full changelog:** [Compare v1.2.6...v1.3.0](https://github.com/scriptscat/scriptcat/compare/v1.2.6...v1.3.0)
+
 <a name="1.2.6"></a>
 
 ## 1.2.6 (2026-02-03)
