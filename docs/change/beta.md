@@ -20,7 +20,7 @@ sidebar_position: 1
 
 ## 1.4.0-beta (2026-03-13)
 
-### Fixed
+### 🐛 Bug 修复
 
 - 🚑 修复其他扩展注入 chrome.runtime 导致环境误判的问题 [#1280](https://github.com/scriptscat/scriptcat/issues/1280) ([#1281](https://github.com/scriptscat/scriptcat/pull/1281)) (by @CodFrm)
 - 🐛 修复和优化 ScriptEditor 问题 ([#1258](https://github.com/scriptscat/scriptcat/pull/1258)) (by @cyfung1031)
@@ -29,11 +29,11 @@ sidebar_position: 1
 - 🐛 修复 include *?* 表达式处理问题 [#1271](https://github.com/scriptscat/scriptcat/issues/1271) ([#1272](https://github.com/scriptscat/scriptcat/pull/1272)) (by @CodFrm)
 - 🐛 修复 脚本设置-授权管理 控制无效的问题 ([#1267](https://github.com/scriptscat/scriptcat/pull/1267)) (by @CodFrm)
 
-### Changed
+### 🔒 安全性改进
 
 - 🔒 使用 DOMPurify 清理公告通知 HTML 内容 ([#1274](https://github.com/scriptscat/scriptcat/pull/1274)) (by @CodFrm)
 
-### Others
+### 其它
 
 - ✅ 添加 Playwright E2E 测试及 GM API 功能测试 ([#1283](https://github.com/scriptscat/scriptcat/pull/1283)) (by @CodFrm)
 - 📄 docs: update Chrome Web Store URLs to new domain ([#1279](https://github.com/scriptscat/scriptcat/pull/1279)) (by @theluckystrike)

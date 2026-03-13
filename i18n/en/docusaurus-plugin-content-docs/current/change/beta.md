@@ -20,7 +20,7 @@ Additionally, besides pre-releases, ScriptCat builds the extension on [Github Ac
 
 ## 1.4.0-beta (2026-03-13)
 
-### Fixed
+### 🐛 Bug Fixes
 
 - 🚑 Fix environment detection error caused by other extensions injecting chrome.runtime [#1280](https://github.com/scriptscat/scriptcat/issues/1280) ([#1281](https://github.com/scriptscat/scriptcat/pull/1281)) (by @CodFrm)
 - 🐛 Fix and optimize ScriptEditor issues ([#1258](https://github.com/scriptscat/scriptcat/pull/1258)) (by @cyfung1031)
@@ -29,7 +29,7 @@ Additionally, besides pre-releases, ScriptCat builds the extension on [Github Ac
 - 🐛 Fix include *?* expression handling issue [#1271](https://github.com/scriptscat/scriptcat/issues/1271) ([#1272](https://github.com/scriptscat/scriptcat/pull/1272)) (by @CodFrm)
 - 🐛 Fix script settings - permission management control not working ([#1267](https://github.com/scriptscat/scriptcat/pull/1267)) (by @CodFrm)
 
-### Changed
+### 🔒 Security Improvements
 
 - 🔒 Use DOMPurify to sanitize announcement notification HTML content ([#1274](https://github.com/scriptscat/scriptcat/pull/1274)) (by @CodFrm)
 
