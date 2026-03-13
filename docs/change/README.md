@@ -9,6 +9,18 @@ Beta 版本更新日志请查看 [Beta 更新日志](./beta.md)
 
 ⚠️ 请注意，如果你使用的 Windows 8/7/XP 系统，或者浏览器内核版本低于\<120，需要自行手动安装[旧版脚本猫](https://bbs.tampermonkey.net.cn/thread-3068-1-1.html)，v0.16.x 是最后一个支持 Manifest V2 的版本，安装步骤可以参考：[加载解压缩方式安装扩展](/docs/use/use/#%E5%8A%A0%E8%BD%BD%E8%A7%A3%E5%8E%8B%E7%BC%A9%E6%96%B9%E5%BC%8F%E5%AE%89%E8%A3%85%E6%89%A9%E5%B1%95)。
 
+<a name="1.3.1"></a>
+
+## 1.3.1 (2026-03-13)
+
+### 🐛 Bug 修复
+
+- 🚑 修复其他扩展注入 chrome.runtime 导致环境误判的问题 [#1280](https://github.com/scriptscat/scriptcat/issues/1280) ([#1281](https://github.com/scriptscat/scriptcat/pull/1281)) (by @CodFrm)
+
+### 其它
+
+- ✅ 添加 Playwright E2E 测试及 GM API 功能测试 ([#1283](https://github.com/scriptscat/scriptcat/pull/1283)) (by @CodFrm)
+
 <a name="1.3.0"></a>
 
 ## 1.3.0 (2026-03-10)

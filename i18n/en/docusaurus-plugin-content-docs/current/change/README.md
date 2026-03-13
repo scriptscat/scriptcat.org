@@ -9,6 +9,18 @@ For Beta version changelog, please see [Beta Changelog](./beta.md)
 
 ⚠️ Please note that if you are using Windows 8/7/XP, or your browser kernel version is lower than 120, you need to manually install the [legacy version of ScriptCat](https://github.com/scriptscat/scriptcat/releases). v0.16.x is the last version that supports Manifest V2. Installation steps can be found at: [Install Extension by Loading Unpacked](/docs/use/use/#load-unpacked-extension-installation).
 
+<a name="1.3.1"></a>
+
+## 1.3.1 (2026-03-13)
+
+### 🐛 Bug Fixes
+
+- 🚑 Fix environment detection error caused by other extensions injecting chrome.runtime [#1280](https://github.com/scriptscat/scriptcat/issues/1280) ([#1281](https://github.com/scriptscat/scriptcat/pull/1281)) (by @CodFrm)
+
+### Others
+
+- ✅ Add Playwright E2E tests and GM API functional tests ([#1283](https://github.com/scriptscat/scriptcat/pull/1283)) (by @CodFrm)
+
 <a name="1.3.0"></a>
 
 ## 1.3.0 (2026-03-10)
