@@ -18,6 +18,26 @@ sidebar_position: 1
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+## 1.4.0-beta (2026-03-13)
+
+### Fixed
+
+- 🚑 修复其他扩展注入 chrome.runtime 导致环境误判的问题 [#1280](https://github.com/scriptscat/scriptcat/issues/1280) ([#1281](https://github.com/scriptscat/scriptcat/pull/1281)) (by @CodFrm)
+- 🐛 修复和优化 ScriptEditor 问题 ([#1258](https://github.com/scriptscat/scriptcat/pull/1258)) (by @cyfung1031)
+- 🐛 修复与隐身窗口检查权限冲突导致反复重启的问题 (6c308f60) (by @CodFrm)
+- 🐛 修复 confirm 页面问题 ([#1275](https://github.com/scriptscat/scriptcat/pull/1275)) (by @cyfung1031)
+- 🐛 修复 include *?* 表达式处理问题 [#1271](https://github.com/scriptscat/scriptcat/issues/1271) ([#1272](https://github.com/scriptscat/scriptcat/pull/1272)) (by @CodFrm)
+- 🐛 修复 脚本设置-授权管理 控制无效的问题 ([#1267](https://github.com/scriptscat/scriptcat/pull/1267)) (by @CodFrm)
+
+### Changed
+
+- 🔒 使用 DOMPurify 清理公告通知 HTML 内容 ([#1274](https://github.com/scriptscat/scriptcat/pull/1274)) (by @CodFrm)
+
+### Others
+
+- ✅ 添加 Playwright E2E 测试及 GM API 功能测试 ([#1283](https://github.com/scriptscat/scriptcat/pull/1283)) (by @CodFrm)
+- 📄 docs: update Chrome Web Store URLs to new domain ([#1279](https://github.com/scriptscat/scriptcat/pull/1279)) (by @theluckystrike)
+
 ## 1.3.0-beta.4 (2026-02-19)
 
 ### Added

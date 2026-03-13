@@ -18,6 +18,26 @@ You can obtain pre-release versions from the [Release](https://github.com/script
 
 Additionally, besides pre-releases, ScriptCat builds the extension on [Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml) after each code commit is merged to the main branch. If you want to experience the latest features or fixes, you can download them from the [Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml) page.
 
+## 1.4.0-beta (2026-03-13)
+
+### Fixed
+
+- 🚑 Fix environment detection error caused by other extensions injecting chrome.runtime [#1280](https://github.com/scriptscat/scriptcat/issues/1280) ([#1281](https://github.com/scriptscat/scriptcat/pull/1281)) (by @CodFrm)
+- 🐛 Fix and optimize ScriptEditor issues ([#1258](https://github.com/scriptscat/scriptcat/pull/1258)) (by @cyfung1031)
+- 🐛 Fix repeated restart caused by incognito window permission check conflict (6c308f60) (by @CodFrm)
+- 🐛 Fix confirm page issues ([#1275](https://github.com/scriptscat/scriptcat/pull/1275)) (by @cyfung1031)
+- 🐛 Fix include *?* expression handling issue [#1271](https://github.com/scriptscat/scriptcat/issues/1271) ([#1272](https://github.com/scriptscat/scriptcat/pull/1272)) (by @CodFrm)
+- 🐛 Fix script settings - permission management control not working ([#1267](https://github.com/scriptscat/scriptcat/pull/1267)) (by @CodFrm)
+
+### Changed
+
+- 🔒 Use DOMPurify to sanitize announcement notification HTML content ([#1274](https://github.com/scriptscat/scriptcat/pull/1274)) (by @CodFrm)
+
+### Others
+
+- ✅ Add Playwright E2E tests and GM API functional tests ([#1283](https://github.com/scriptscat/scriptcat/pull/1283)) (by @CodFrm)
+- 📄 docs: update Chrome Web Store URLs to new domain ([#1279](https://github.com/scriptscat/scriptcat/pull/1279)) (by @theluckystrike)
+
 ## 1.3.0-beta.4 (2026-02-19)
 
 ### Added
