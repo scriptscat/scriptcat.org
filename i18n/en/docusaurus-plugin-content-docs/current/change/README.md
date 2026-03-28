@@ -24,18 +24,6 @@ For Beta version changelog, please see [Beta Changelog](./beta.md)
 - 🐛 Fix unbind button showing when no cloud drive is bound ([#1291](https://github.com/scriptscat/scriptcat/pull/1291)) (by @CodFrm)
 - 🐛 Fix popup being obscured ([#1290](https://github.com/scriptscat/scriptcat/pull/1290)) (by @cyfung1031)
 
-### ♻️ Refactoring & Compatibility
-
-- ♻️ Rename development_debugging to development_tool ([#1311](https://github.com/scriptscat/scriptcat/pull/1311)) (by @cyfung1031)
-
-### Others
-
-- 📝 Simplify & improve PR template ([#1307](https://github.com/scriptscat/scriptcat/pull/1307)) (by @cyfung1031)
-- ⬆️ NPM vulnerability fix ([#1302](https://github.com/scriptscat/scriptcat/pull/1302)) (by @cyfung1031)
-- ✅ Additional test for responseType=document ([#1262](https://github.com/scriptscat/scriptcat/pull/1262)) (by @cyfung1031)
-- ⚙️ Add pre-commit and pre-push hooks
-- ⚙️ Optimize CI pipeline and test configuration
-
 <a name="1.3.1"></a>
 
 ## 1.3.1 (2026-03-13)

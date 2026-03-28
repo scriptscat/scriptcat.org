@@ -24,18 +24,6 @@ Beta 版本更新日志请查看 [Beta 更新日志](./beta.md)
 - 🐛 修复未绑定网盘时仍显示解绑按钮的问题 ([#1291](https://github.com/scriptscat/scriptcat/pull/1291)) (by @CodFrm)
 - 🐛 修复弹出框被遮挡的问题 ([#1290](https://github.com/scriptscat/scriptcat/pull/1290)) (by @cyfung1031)
 
-### ♻️ 重构与兼容性
-
-- ♻️ development_debugging -> development_tool ([#1311](https://github.com/scriptscat/scriptcat/pull/1311)) (by @cyfung1031)
-
-### 其它
-
-- 📝 简化&改良 PR 模板 ([#1307](https://github.com/scriptscat/scriptcat/pull/1307)) (by @cyfung1031)
-- ⬆️ NPM 依赖安全更新 ([#1302](https://github.com/scriptscat/scriptcat/pull/1302)) (by @cyfung1031)
-- ✅ 补充 responseType=document 的测试 ([#1262](https://github.com/scriptscat/scriptcat/pull/1262)) (by @cyfung1031)
-- ⚙️ 添加 pre-commit 和 pre-push 钩子
-- ⚙️ 优化 CI 流水线和测试配置
-
 <a name="1.3.1"></a>
 
 ## 1.3.1 (2026-03-13)
