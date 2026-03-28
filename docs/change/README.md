@@ -9,6 +9,33 @@ Beta 版本更新日志请查看 [Beta 更新日志](./beta.md)
 
 ⚠️ 请注意，如果你使用的 Windows 8/7/XP 系统，或者浏览器内核版本低于\<120，需要自行手动安装[旧版脚本猫](https://bbs.tampermonkey.net.cn/thread-3068-1-1.html)，v0.16.x 是最后一个支持 Manifest V2 的版本，安装步骤可以参考：[加载解压缩方式安装扩展](/docs/use/use/#%E5%8A%A0%E8%BD%BD%E8%A7%A3%E5%8E%8B%E7%BC%A9%E6%96%B9%E5%BC%8F%E5%AE%89%E8%A3%85%E6%89%A9%E5%B1%95)。
 
+<a name="1.3.2"></a>
+
+## 1.3.2 (2026-03-28)
+
+### 🐛 Bug 修复
+
+- 🐛 删除 fetchScriptBody 的 Accept，避免触发 Error 406 ([#1306](https://github.com/scriptscat/scriptcat/pull/1306)) (by @cyfung1031)
+- 🐛 针对 WebDAV 修复 cookies 认证冲突 及 authType 支持 ([#1308](https://github.com/scriptscat/scriptcat/pull/1308)) (by @CodFrm)
+- 🐛 正确显示格式化错误 ([#1310](https://github.com/scriptscat/scriptcat/pull/1310)) (by @cyfung1031)
+- 🐛 设备相关配置改用 chrome.storage.local，避免跨设备同步 ([#1309](https://github.com/scriptscat/scriptcat/pull/1309)) (by @CodFrm)
+- 🐛 修复代码编辑框提示问题 ([#1301](https://github.com/scriptscat/scriptcat/pull/1301)) (by @cyfung1031)
+- 🐛 修复运行日志页面日期选择弹出框被容器裁剪的问题 ([#1292](https://github.com/scriptscat/scriptcat/pull/1292)) (by @cyfung1031)
+- 🐛 修复未绑定网盘时仍显示解绑按钮的问题 ([#1291](https://github.com/scriptscat/scriptcat/pull/1291)) (by @CodFrm)
+- 🐛 修复弹出框被遮挡的问题 ([#1290](https://github.com/scriptscat/scriptcat/pull/1290)) (by @cyfung1031)
+
+### ♻️ 重构与兼容性
+
+- ♻️ development_debugging -> development_tool ([#1311](https://github.com/scriptscat/scriptcat/pull/1311)) (by @cyfung1031)
+
+### 其它
+
+- 📝 简化&改良 PR 模板 ([#1307](https://github.com/scriptscat/scriptcat/pull/1307)) (by @cyfung1031)
+- ⬆️ NPM 依赖安全更新 ([#1302](https://github.com/scriptscat/scriptcat/pull/1302)) (by @cyfung1031)
+- ✅ 补充 responseType=document 的测试 ([#1262](https://github.com/scriptscat/scriptcat/pull/1262)) (by @cyfung1031)
+- ⚙️ 添加 pre-commit 和 pre-push 钩子
+- ⚙️ 优化 CI 流水线和测试配置
+
 <a name="1.3.1"></a>
 
 ## 1.3.1 (2026-03-13)

@@ -9,6 +9,33 @@ For Beta version changelog, please see [Beta Changelog](./beta.md)
 
 ⚠️ Please note that if you are using Windows 8/7/XP, or your browser kernel version is lower than 120, you need to manually install the [legacy version of ScriptCat](https://github.com/scriptscat/scriptcat/releases). v0.16.x is the last version that supports Manifest V2. Installation steps can be found at: [Install Extension by Loading Unpacked](/docs/use/use/#load-unpacked-extension-installation).
 
+<a name="1.3.2"></a>
+
+## 1.3.2 (2026-03-28)
+
+### 🐛 Bug Fixes
+
+- 🐛 Remove Accept header from fetchScriptBody to avoid Error 406 ([#1306](https://github.com/scriptscat/scriptcat/pull/1306)) (by @cyfung1031)
+- 🐛 Fix WebDAV cookies authentication conflict and authType support ([#1308](https://github.com/scriptscat/scriptcat/pull/1308)) (by @CodFrm)
+- 🐛 Correctly display formatting errors ([#1310](https://github.com/scriptscat/scriptcat/pull/1310)) (by @cyfung1031)
+- 🐛 Use chrome.storage.local for device-specific configs to avoid cross-device sync ([#1309](https://github.com/scriptscat/scriptcat/pull/1309)) (by @CodFrm)
+- 🐛 Fix code editor hint issues ([#1301](https://github.com/scriptscat/scriptcat/pull/1301)) (by @cyfung1031)
+- 🐛 Fix date picker popup clipping in log page ([#1292](https://github.com/scriptscat/scriptcat/pull/1292)) (by @cyfung1031)
+- 🐛 Fix unbind button showing when no cloud drive is bound ([#1291](https://github.com/scriptscat/scriptcat/pull/1291)) (by @CodFrm)
+- 🐛 Fix popup being obscured ([#1290](https://github.com/scriptscat/scriptcat/pull/1290)) (by @cyfung1031)
+
+### ♻️ Refactoring & Compatibility
+
+- ♻️ Rename development_debugging to development_tool ([#1311](https://github.com/scriptscat/scriptcat/pull/1311)) (by @cyfung1031)
+
+### Others
+
+- 📝 Simplify & improve PR template ([#1307](https://github.com/scriptscat/scriptcat/pull/1307)) (by @cyfung1031)
+- ⬆️ NPM vulnerability fix ([#1302](https://github.com/scriptscat/scriptcat/pull/1302)) (by @cyfung1031)
+- ✅ Additional test for responseType=document ([#1262](https://github.com/scriptscat/scriptcat/pull/1262)) (by @cyfung1031)
+- ⚙️ Add pre-commit and pre-push hooks
+- ⚙️ Optimize CI pipeline and test configuration
+
 <a name="1.3.1"></a>
 
 ## 1.3.1 (2026-03-13)
