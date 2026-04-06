@@ -75,8 +75,8 @@ config:
 | `name` | `string` | 是 | Skill 唯一标识名（建议英文 kebab-case） |
 | `description` | `string` | 是 | 简短描述（显示在列表中） |
 | `version` | `string` | 否 | 版本号（semver 格式，如 `1.0.0`），用于更新检查 |
-| `scripts` | `string[]` | 否 | 脚本文件路径列表（如 `["scripts/search.js"]`），URL 安装时按相对路径获取 |
-| `references` | `string[]` | 否 | 参考资料路径列表（如 `["references/api-docs.md"]`），URL 安装时按相对路径获取 |
+| `scripts` | `string[]` | 否 | 脚本文件名列表（如 `["search.js"]`），URL 安装时自动从 `scripts/` 目录获取 |
+| `references` | `string[]` | 否 | 参考资料文件名列表（如 `["api-docs.md"]`），URL 安装时自动从 `references/` 目录获取 |
 | `config` | `object` | 否 | 配置字段定义 |
 
 ### 配置字段类型
@@ -324,9 +324,9 @@ name: "translator"
 description: "多语言翻译工具，支持 100+ 种语言"
 version: "1.0.0"
 scripts:
-  - scripts/translate.js
+  - translate.js
 references:
-  - references/language-codes.md
+  - language-codes.md
 config:
   apiKey:
     title: "翻译 API Key"
