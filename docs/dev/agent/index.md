@@ -26,7 +26,7 @@ ScriptCat v1.4 引入了 Agent 智能助手系统，它为用户脚本提供了 
 | [模型](./agent-model) | `@grant CAT.agent.model` | 查询已配置的模型信息（只读） |
 | [OPFS 文件](./agent-opfs) | `@grant CAT.agent.opfs` | 读写 Agent 工作区文件 |
 | [MCP](./agent-mcp) | `@grant CAT.agent.mcp` | 管理 MCP 服务器连接 |
-| [Skill 开发](./agent-skill-dev) | — | SKILL.md + SkillScript 开发指南 |
+| [Skill 开发](./agent-skill-dev) | — | SKILL.cat.md + SkillScript 开发指南 |
 
 ## 快速上手
 
@@ -70,7 +70,7 @@ agents/
 ├── conversations/       # 对话历史
 ├── attachments/         # 附件（图片、文件）
 ├── skills/{name}/       # Skill 包文件
-│   ├── SKILL.md
+│   ├── SKILL.cat.md
 │   ├── scripts/
 │   └── references/
 ├── tasks/               # 定时任务配置和执行记录

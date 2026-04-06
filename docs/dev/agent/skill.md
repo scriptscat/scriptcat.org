@@ -40,7 +40,7 @@ const skill = await CAT.agent.skills.get(name);
 |------|------|------|
 | `name` | `string` | Skill 名称 |
 | `description` | `string` | 描述 |
-| `prompt` | `string` | SKILL.md 中 Markdown 正文部分（给 AI 的提示词） |
+| `prompt` | `string` | SKILL.cat.md 中 Markdown 正文部分（给 AI 的提示词） |
 | `config` | `Record<string, SkillConfigField>` | 配置字段定义 |
 | `toolNames` | `string[]` | 工具脚本名列表 |
 | `referenceNames` | `string[]` | 参考资料名列表 |
@@ -68,7 +68,7 @@ const record = await CAT.agent.skills.install(skillMd, scripts?, references?);
 
 | 参数 | 类型 | 说明 |
 |------|------|------|
-| `skillMd` | `string` | SKILL.md 文件内容（必填） |
+| `skillMd` | `string` | SKILL.cat.md 文件内容（必填） |
 | `scripts` | `Array<{ name, code }>` | SkillScript 文件列表 |
 | `references` | `Array<{ name, content }>` | 参考资料文件列表 |
 
