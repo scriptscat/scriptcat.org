@@ -23,8 +23,14 @@ const skills = await CAT.agent.skills.list();
 |------|------|------|
 | `name` | `string` | Skill 名称 |
 | `description` | `string` | Skill 描述 |
+| `version` | `string` | 版本号（semver） |
 | `toolNames` | `string[]` | 包含的 SkillScript 工具名列表 |
 | `referenceNames` | `string[]` | 包含的参考资料文件名列表 |
+| `hasConfig` | `boolean` | 是否有配置字段声明 |
+| `enabled` | `boolean` | 是否启用（默认 `true`） |
+| `installUrl` | `string` | 安装来源 URL（用于检查更新） |
+| `installtime` | `number` | 安装时间戳 |
+| `updatetime` | `number` | 更新时间戳 |
 
 ## get — 获取 Skill 详情
 
@@ -36,16 +42,12 @@ const skill = await CAT.agent.skills.get(name);
 
 **SkillRecord 结构：**
 
+继承 `SkillSummary` 的所有字段，额外包含：
+
 | 字段 | 类型 | 说明 |
 |------|------|------|
-| `name` | `string` | Skill 名称 |
-| `description` | `string` | 描述 |
 | `prompt` | `string` | SKILL.cat.md 中 Markdown 正文部分（给 AI 的提示词） |
-| `config` | `Record<string, SkillConfigField>` | 配置字段定义 |
-| `toolNames` | `string[]` | 工具脚本名列表 |
-| `referenceNames` | `string[]` | 参考资料名列表 |
-| `installtime` | `number` | 安装时间戳 |
-| `updatetime` | `number` | 更新时间戳 |
+| `config` | `Record<string, SkillConfigField>` | 配置字段定义（schema） |
 
 **SkillConfigField 结构：**
 

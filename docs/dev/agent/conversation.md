@@ -28,6 +28,7 @@ const conv = await CAT.agent.conversation.create(options?);
 | `commands` | `Record<string, CommandHandler>` | — | 自定义对话命令 |
 | `ephemeral` | `boolean` | `false` | 临时对话，不持久化到存储 |
 | `cache` | `boolean` | `true` | 启用 Prompt Caching（减少 Token 消耗） |
+| `background` | `boolean` | `false` | 后台对话，UI 断开后继续执行，可通过 `attach()` 重新连接 |
 
 ### 自定义工具
 
@@ -184,6 +185,25 @@ await conv.save();
 ```
 
 将对话元数据保存到存储。临时对话（`ephemeral: true`）默认不保存，调用此方法可以将其转为持久化。
+
+### attach — 重新连接后台对话
+
+```javascript
+const stream = await conv.attach();
+for await (const chunk of stream) {
+  // 接收后台对话的实时事件
+}
+```
+
+当对话以 `background: true` 创建并且仍在后台运行时，可以通过 `attach()` 重新连接，接收后续的流式事件。
+
+### 实例属性
+
+| 属性 | 类型 | 说明 |
+|------|------|------|
+| `id` | `string` | 对话 ID |
+| `title` | `string` | 对话标题 |
+| `modelId` | `string` | 使用的模型 ID |
 
 ## 多模态内容
 

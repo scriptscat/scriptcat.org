@@ -251,11 +251,23 @@ return result;
 
 **[scriptscat/skills](https://github.com/scriptscat/skills)**
 
+**Skill 列表：**
+
+| 目录 | 说明 | 安装 |
+|------|------|------|
+| `browser-automation/` | 页面分析、DOM 操作、表单填写、截图、导航 | [安装](https://raw.githubusercontent.com/scriptscat/skills/main/browser-automation/SKILL.cat.md) |
+| `scheduled-tasks/` | Cron 定时任务（internal + event 模式） | [安装](https://raw.githubusercontent.com/scriptscat/skills/main/scheduled-tasks/SKILL.cat.md) |
+| `skill-creator/` | 辅助创建、测试和打包新 Skill | [安装](https://raw.githubusercontent.com/scriptscat/skills/main/skill-creator/SKILL.cat.md) |
+| `file-parser/` | 解析常见文件格式（Excel、PDF、Word、CSV、PPT） | [安装](https://raw.githubusercontent.com/scriptscat/skills/main/file-parser/SKILL.cat.md) |
+| `scriptcat-dev/` | 脚本猫/油猴脚本开发助手 | [安装](https://raw.githubusercontent.com/scriptscat/skills/main/scriptcat-dev/SKILL.cat.md) |
+| `synology-office-sheet/` | 读写群晖 Synology Office 电子表格 | [安装](https://raw.githubusercontent.com/scriptscat/skills/main/synology-office-sheet/SKILL.cat.md) |
+| `wechat-publisher/` | 微信公众号运营助手 — 素材收集、文章编写与发布 | [安装](https://raw.githubusercontent.com/scriptscat/skills/main/wechat-publisher/SKILL.cat.md) |
+| `xiaohongshu-publisher/` | 小红书运营助手 — 笔记编写、配图生成与发布 | [安装](https://raw.githubusercontent.com/scriptscat/skills/main/xiaohongshu-publisher/SKILL.cat.md) |
+
+**示例代码：**
+
 | 目录 | 说明 |
 |------|------|
-| `browser-automation/` | 页面分析、DOM 操作、表单填写、截图、导航 |
-| `scheduled-tasks/` | Cron 定时任务（internal + event 模式） |
-| `skill-creator/` | 辅助创建、测试和打包新 Skill |
 | `examples/conversation/` | 对话 API 示例 — 聊天、流式、工具调用 |
 | `examples/dom/` | DOM API 示例 — 页面读取、表单填写、标签管理 |
 | `examples/config/` | Skill Config 示例 — 配置字段声明和 `CAT_CONFIG` 使用 |

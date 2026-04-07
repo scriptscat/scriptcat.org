@@ -150,6 +150,40 @@ const result = await CAT.agent.opfs.delete(path);
 { success: true }
 ```
 
+## readAttachment — 读取附件
+
+```javascript
+const result = await CAT.agent.opfs.readAttachment(attachmentId);
+```
+
+读取对话中的附件数据（图片、文件等）。附件 ID 来自消息中的 `ContentBlock.attachmentId`。
+
+**参数：**
+
+| 参数 | 类型 | 说明 |
+|------|------|------|
+| `attachmentId` | `string` | 附件 ID（必填） |
+
+**返回值：**
+
+| 字段 | 类型 | 说明 |
+|------|------|------|
+| `id` | `string` | 附件 ID |
+| `data` | `Blob` | 附件二进制数据 |
+| `size` | `number` | 文件大小（字节） |
+| `mimeType` | `string` | MIME 类型 |
+
+```javascript
+// 读取对话中 AI 生成的图片附件
+const messages = await conv.getMessages();
+const lastMsg = messages[messages.length - 1];
+const imageBlock = lastMsg.content.find(b => b.type === "image");
+if (imageBlock) {
+  const attachment = await CAT.agent.opfs.readAttachment(imageBlock.attachmentId);
+  console.log(`附件大小: ${attachment.size}, 类型: ${attachment.mimeType}`);
+}
+```
+
 ## Blob URL 使用注意事项
 
 - Blob URL 格式为 `blob:chrome-extension://xxx/yyy`

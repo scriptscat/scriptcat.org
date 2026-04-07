@@ -83,5 +83,25 @@ agents/
 |----------|------|------|
 | OpenAI 兼容 | OpenAI Chat Completions API | 支持 GPT-4o、DeepSeek 等兼容模型 |
 | Anthropic | Anthropic Messages API | 支持 Claude 系列，Prompt Caching |
+| 智谱 | 智谱 API | 支持 GLM 系列模型 |
 
 在管理页面的「模型配置」中添加 Provider 和 API Key 即可使用。
+
+### Skill 生态
+
+Skill 是提示词 + 工具脚本 + 参考资料的扩展包，可以为 Agent 注入专业领域知识和自定义工具。
+
+**官方 Skill 仓库：[scriptscat/skills](https://github.com/scriptscat/skills)**
+
+包含浏览器自动化、定时任务、Skill 创建工具、对话/DOM/配置示例等开箱即用的 Skill。
+
+**安装方式：**
+
+- **URL 安装** — 在浏览器中直接打开 `SKILL.cat.md` 的 URL，ScriptCat 自动拦截并弹出安装页面；也可在管理页面 → Agent → Skill 管理中粘贴 URL 安装
+- **脚本安装** — 通过 `CAT.agent.skills.install()` API 编程式安装
+
+**检查更新：**
+
+通过 URL 安装的 Skill 会记录安装来源，管理页面中可检查更新并一键升级（基于 `version` 字段的 semver 比较）。
+
+详见 [Skill 管理 API](./agent-skill) 和 [Skill 开发指南](./agent-skill-dev)。

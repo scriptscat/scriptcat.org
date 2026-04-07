@@ -29,6 +29,7 @@ const sidebars = {
       items: [
         "dev/agent/agent-conversation",
         "dev/agent/agent-dom",
+        "dev/agent/agent-skill-install",
         "dev/agent/agent-skill",
         "dev/agent/agent-task",
         "dev/agent/agent-model",

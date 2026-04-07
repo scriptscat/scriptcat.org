@@ -21,7 +21,7 @@ const models = await CAT.agent.model.list();
 |------|------|------|
 | `id` | `string` | 模型 ID |
 | `name` | `string` | 显示名称 |
-| `provider` | `"openai" \| "anthropic"` | Provider 类型 |
+| `provider` | `"openai" \| "anthropic" \| "zhipu"` | Provider 类型 |
 | `apiBaseUrl` | `string` | API 基础地址 |
 | `model` | `string` | 模型标识符（如 `gpt-4o`、`claude-sonnet-4-20250514`） |
 | `maxTokens` | `number` | 最大输出 Token 数 |
@@ -46,6 +46,14 @@ const defaultId = await CAT.agent.model.getDefault();
 ```
 
 返回用户设置的默认模型 ID 字符串。
+
+## getSummary — 获取模型列表摘要
+
+```javascript
+const summary = await CAT.agent.model.getSummary();
+```
+
+返回所有已配置模型的文本摘要字符串，适合直接注入到提示词中供 AI 参考。
 
 ## 使用场景
 
