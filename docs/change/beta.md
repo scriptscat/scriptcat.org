@@ -18,6 +18,47 @@ sidebar_position: 1
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+<a name="1.4.0-beta.1"></a>
+
+## 1.4.0-beta.1 (2026-04-07)
+
+本次更新的最大亮点是**脚本猫 AI Agent**，一个内置的 AI 智能代理系统，可以通过对话调用油猴脚本生态中的工具完成各种任务。此外还新增了 `@unwrap` 标签支持、`window.onurlchange` 事件、编辑器菜单改进，以及大量 Bug 修复。
+
+### 🚀 主要新功能
+
+- 💥 脚本猫 AI Agent — AI 驱动的智能代理系统，支持对话式交互、工具调用、Skill 系统、MCP 协议等 ([#1324](https://github.com/scriptscat/scriptcat/pull/1324)) (by @CodFrm)
+- ✨ 支持 `@unwrap` 元数据标签 ([#1213](https://github.com/scriptscat/scriptcat/pull/1213)) (by @cyfung1031)
+- ✨ 以 Navigation API 实现 TM 的 `window.onurlchange` ([#1315](https://github.com/scriptscat/scriptcat/pull/1315)) (by @cyfung1031)
+
+### 🧑‍💻 编辑器
+
+- ✨ 编辑器添加编辑菜单（查找、替换、撤销等）([#1303](https://github.com/scriptscat/scriptcat/pull/1303)) (by @CodFrm)
+- 🐛 修正 Ctrl-F / Ctrl-H 快捷键 ([#1312](https://github.com/scriptscat/scriptcat/pull/1312)) (by @cyfung1031)
+- 🐛 修复 ESLint 修复功能失效的问题 [#1079](https://github.com/scriptscat/scriptcat/issues/1079) ([#1184](https://github.com/scriptscat/scriptcat/pull/1184)) (by @cyfung1031)
+- 🐛 正确显示格式化错误 ([#1310](https://github.com/scriptscat/scriptcat/pull/1310)) (by @cyfung1031)
+- 🐛 修复代码编辑框提示问题 ([#1301](https://github.com/scriptscat/scriptcat/pull/1301)) (by @cyfung1031)
+
+### ✨ 功能改进
+
+- ✨ 获取脚本支持多平台搜索引擎选择 ([#1295](https://github.com/scriptscat/scriptcat/pull/1295)) (by @CodFrm)
+- ✨ 新增更多图标服务供应商 ([#1333](https://github.com/scriptscat/scriptcat/pull/1333)) (by @cyfung1031)
+- ✨ 脚本列表最后更新列添加检查更新图标 ([#1304](https://github.com/scriptscat/scriptcat/pull/1304)) (by @CodFrm)
+- ✨ 优化编辑冲突与脚本名称冲突处理 ([#1223](https://github.com/scriptscat/scriptcat/pull/1223)) (by @cyfung1031)
+
+### 🐛 Bug 修复
+
+- 🐛 修复 cron 表达式错误导致整个页面崩溃 ([#1327](https://github.com/scriptscat/scriptcat/pull/1327)) (by @cyfung1031)
+- 🐛 修复安装脚本触发 Error 406 的问题 ([#1306](https://github.com/scriptscat/scriptcat/pull/1306)) (by @cyfung1031)
+- 🐛 修复 WebDAV cookies 认证冲突及 authType 支持 ([#1308](https://github.com/scriptscat/scriptcat/pull/1308)) (by @CodFrm)
+- 🐛 设备相关配置改用 chrome.storage.local，避免跨设备同步 ([#1309](https://github.com/scriptscat/scriptcat/pull/1309)) (by @CodFrm)
+- 🐛 修正订阅脚本的静默更新与 connect 权限逻辑 ([#1201](https://github.com/scriptscat/scriptcat/pull/1201)) (by @cyfung1031)
+- 🐛 修复批次检查脚本时单个超时导致全部失败 ([#1265](https://github.com/scriptscat/scriptcat/pull/1265)) (by @cyfung1031)
+- 🐛 修复运行日志页面查询按钮不刷新时间 ([#1294](https://github.com/scriptscat/scriptcat/pull/1294)) (by @CodFrm)
+- 🐛 修复运行日志页面日期选择弹出框被裁剪 ([#1292](https://github.com/scriptscat/scriptcat/pull/1292)) (by @cyfung1031)
+- 🐛 修复未绑定网盘时仍显示解绑按钮 ([#1291](https://github.com/scriptscat/scriptcat/pull/1291)) (by @CodFrm)
+- 🐛 修复 ScriptEditor 脚本列表亮色显示问题 ([#1288](https://github.com/scriptscat/scriptcat/pull/1288)) (by @CodFrm)
+- 🐛 修复弹出框被遮挡的问题 ([#1290](https://github.com/scriptscat/scriptcat/pull/1290)) (by @cyfung1031)
+
 ## 1.4.0-beta (2026-03-13)
 
 ### 🐛 Bug 修复

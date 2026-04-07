@@ -18,6 +18,47 @@ You can obtain pre-release versions from the [Release](https://github.com/script
 
 Additionally, besides pre-releases, ScriptCat builds the extension on [Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml) after each code commit is merged to the main branch. If you want to experience the latest features or fixes, you can download them from the [Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml) page.
 
+<a name="1.4.0-beta.1"></a>
+
+## 1.4.0-beta.1 (2026-04-07)
+
+The highlight of this release is **ScriptCat AI Agent**, a built-in AI-powered agent system that can invoke tools from the userscript ecosystem through conversational interaction. This update also adds `@unwrap` tag support, `window.onurlchange` event, editor menu improvements, and numerous bug fixes.
+
+### 🚀 Major New Features
+
+- 💥 ScriptCat AI Agent — AI-powered intelligent agent system with conversational interaction, tool calling, Skill system, MCP protocol support, and more ([#1324](https://github.com/scriptscat/scriptcat/pull/1324)) (by @CodFrm)
+- ✨ Support `@unwrap` metadata tag ([#1213](https://github.com/scriptscat/scriptcat/pull/1213)) (by @cyfung1031)
+- ✨ Implement TM's `window.onurlchange` using Navigation API ([#1315](https://github.com/scriptscat/scriptcat/pull/1315)) (by @cyfung1031)
+
+### 🧑‍💻 Editor
+
+- ✨ Add editor menu (find, replace, undo, etc.) ([#1303](https://github.com/scriptscat/scriptcat/pull/1303)) (by @CodFrm)
+- 🐛 Fix Ctrl-F / Ctrl-H shortcuts ([#1312](https://github.com/scriptscat/scriptcat/pull/1312)) (by @cyfung1031)
+- 🐛 Fix ESLint auto-fix not working [#1079](https://github.com/scriptscat/scriptcat/issues/1079) ([#1184](https://github.com/scriptscat/scriptcat/pull/1184)) (by @cyfung1031)
+- 🐛 Correctly display formatting errors ([#1310](https://github.com/scriptscat/scriptcat/pull/1310)) (by @cyfung1031)
+- 🐛 Fix code editor tooltip issues ([#1301](https://github.com/scriptscat/scriptcat/pull/1301)) (by @cyfung1031)
+
+### ✨ Feature Improvements
+
+- ✨ Support multi-platform search engine selection for script search ([#1295](https://github.com/scriptscat/scriptcat/pull/1295)) (by @CodFrm)
+- ✨ Add more icon service providers ([#1333](https://github.com/scriptscat/scriptcat/pull/1333)) (by @cyfung1031)
+- ✨ Add update check icon in script list last update column ([#1304](https://github.com/scriptscat/scriptcat/pull/1304)) (by @CodFrm)
+- ✨ Improve edit conflict and script name conflict handling ([#1223](https://github.com/scriptscat/scriptcat/pull/1223)) (by @cyfung1031)
+
+### 🐛 Bug Fixes
+
+- 🐛 Fix cron expression errors crashing the entire page ([#1327](https://github.com/scriptscat/scriptcat/pull/1327)) (by @cyfung1031)
+- 🐛 Fix script installation triggering Error 406 ([#1306](https://github.com/scriptscat/scriptcat/pull/1306)) (by @cyfung1031)
+- 🐛 Fix WebDAV cookies authentication conflict and authType support ([#1308](https://github.com/scriptscat/scriptcat/pull/1308)) (by @CodFrm)
+- 🐛 Use chrome.storage.local for device-specific settings to avoid cross-device sync ([#1309](https://github.com/scriptscat/scriptcat/pull/1309)) (by @CodFrm)
+- 🐛 Fix subscription script silent update and connect permission logic ([#1201](https://github.com/scriptscat/scriptcat/pull/1201)) (by @cyfung1031)
+- 🐛 Fix batch script update check failing entirely when one script times out ([#1265](https://github.com/scriptscat/scriptcat/pull/1265)) (by @cyfung1031)
+- 🐛 Fix logger page query button not refreshing time ([#1294](https://github.com/scriptscat/scriptcat/pull/1294)) (by @CodFrm)
+- 🐛 Fix logger page date picker popup being clipped ([#1292](https://github.com/scriptscat/scriptcat/pull/1292)) (by @cyfung1031)
+- 🐛 Fix unbind button showing when no cloud drive is bound ([#1291](https://github.com/scriptscat/scriptcat/pull/1291)) (by @CodFrm)
+- 🐛 Fix ScriptEditor script list light theme display issue ([#1288](https://github.com/scriptscat/scriptcat/pull/1288)) (by @CodFrm)
+- 🐛 Fix popup being obscured ([#1290](https://github.com/scriptscat/scriptcat/pull/1290)) (by @cyfung1031)
+
 ## 1.4.0-beta (2026-03-13)
 
 ### 🐛 Bug Fixes
