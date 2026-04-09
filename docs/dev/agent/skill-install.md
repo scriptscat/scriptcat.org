@@ -42,6 +42,8 @@ ZIP 包的目录结构应符合标准 Skill 格式（包含 `SKILL.cat.md`）。
 
 ## 官方 Skill 列表
 
+右键`复制链接`，在SKILL管理 URL 粘贴链接也可安装
+
 | Skill | 说明 | 安装 |
 |-------|------|------|
 | [browser-automation](https://github.com/scriptscat/skills/tree/main/browser-automation) | 页面分析、DOM 操作、表单填写、截图、导航 | [安装](https://raw.githubusercontent.com/scriptscat/skills/main/browser-automation/SKILL.cat.md) |
