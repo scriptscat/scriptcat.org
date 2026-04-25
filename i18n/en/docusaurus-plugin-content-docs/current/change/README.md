@@ -9,6 +9,22 @@ For Beta version changelog, please see [Beta Changelog](./beta.md)
 
 ⚠️ Please note that if you are using Windows 8/7/XP, or your browser kernel version is lower than 120, you need to manually install the [legacy version of ScriptCat](https://github.com/scriptscat/scriptcat/releases). v0.16.x is the last version that supports Manifest V2. Installation steps can be found at: [Install Extension by Loading Unpacked](/docs/use/use/#load-unpacked-extension-installation).
 
+<a name="0.16.14"></a>
+
+## 0.16.14 (2026-04-26)
+
+### 🚀 Major New Features
+
+- ✨ FirefoxMV2 sync with MV3 main items: TypeScript upgraded to 4.9, tsconfig upgraded to es2022; script templates (normal/crontab/background) aligned with MV3; cron upgraded with `once(...)` expression support; Monaco Editor multi-language support ([#1331](https://github.com/scriptscat/scriptcat/pull/1331)) (by @cyfung1031)
+
+### ♻️ Refactoring & Compatibility
+
+- 🔥 Removed axios dependency to align with MV3 ([#1339](https://github.com/scriptscat/scriptcat/pull/1339)) (by @cyfung1031)
+
+### 🐛 Bug Fixes
+
+- 🐛 Fixed window.parent nested iframe not receiving postMessage messages ([#1335](https://github.com/scriptscat/scriptcat/pull/1335)) (by @cyfung1031)
+
 <a name="1.3.2"></a>
 
 ## 1.3.2 (2026-03-28)

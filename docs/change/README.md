@@ -9,6 +9,22 @@ Beta 版本更新日志请查看 [Beta 更新日志](./beta.md)
 
 ⚠️ 请注意，如果你使用的 Windows 8/7/XP 系统，或者浏览器内核版本低于\<120，需要自行手动安装[旧版脚本猫](https://bbs.tampermonkey.net.cn/thread-3068-1-1.html)，v0.16.x 是最后一个支持 Manifest V2 的版本，安装步骤可以参考：[加载解压缩方式安装扩展](/docs/use/use/#%E5%8A%A0%E8%BD%BD%E8%A7%A3%E5%8E%8B%E7%BC%A9%E6%96%B9%E5%BC%8F%E5%AE%89%E8%A3%85%E6%89%A9%E5%B1%95)。
 
+<a name="0.16.14"></a>
+
+## 0.16.14 (2026-04-26)
+
+### ✨ 主要新功能
+
+- ✨ FirefoxMV2 同步 MV3 主要项目：升级 TypeScript 至 4.9、tsconfig 至 es2022；脚本范本（normal/crontab/background）对齐 MV3 版本；cron 升级支持 `once(...)` 表达式；Monaco Editor 多国语言支持 ([#1331](https://github.com/scriptscat/scriptcat/pull/1331)) (by @cyfung1031)
+
+### ♻️ 重构与兼容性
+
+- 🔥 跟随 MV3 移除 axios 依赖 ([#1339](https://github.com/scriptscat/scriptcat/pull/1339)) (by @cyfung1031)
+
+### 🐛 Bug 修复
+
+- 🐛 修复 window.parent 嵌套 iframe 接收不到 postMessage 消息的问题 ([#1335](https://github.com/scriptscat/scriptcat/pull/1335)) (by @cyfung1031)
+
 <a name="1.3.2"></a>
 
 ## 1.3.2 (2026-03-28)
