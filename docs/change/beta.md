@@ -18,6 +18,46 @@ sidebar_position: 1
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+<a name="1.4.0-beta.2"></a>
+
+## 1.4.0-beta.2 (2026-05-06)
+
+本次更新主要聚焦于**云存储同步可靠性的全面加固**（Dropbox/WebDAV/Google Drive/OneDrive 等多个后端的认证、路径处理与重试逻辑修复）、**Agent 工具调用稳定性改进**，以及大量 UI 与脚本运行时 bug 修复，包括长时间运行的内存泄漏问题。
+
+### ⚡️ 性能优化
+
+- ⚡️ 移除 Baidu filesystem 对全局 DNR 规则的依赖，改为请求级禁用 cookie ([#1377](https://github.com/scriptscat/scriptcat/pull/1377)) (by @cyfung1031)
+- ⚡️ 优化获取脚本的多平台搜索引擎选择 ([#1379](https://github.com/scriptscat/scriptcat/pull/1379)) (by @cyfung1031)
+- ⚡️ 优化安装页 loadingStatus 改用 monospace 避免跳动 ([#1381](https://github.com/scriptscat/scriptcat/pull/1381)) (by @cyfung1031)
+- ⚡️ 强化 Agent prompt 可靠性——结果验证、budget 语义、安全边界 ([#1354](https://github.com/scriptscat/scriptcat/pull/1354)) (by @cyfung1031)
+
+### 🐛 Bug 修复
+
+- 🚑 修复 ScriptCat 长时间运行时可能出现的内存泄漏问题 ([#1401](https://github.com/scriptscat/scriptcat/pull/1401)) (by @cyfung1031)
+- 🐛 加固云存储同步可靠性（Dropbox/WebDAV/Google Drive/OneDrive 认证、路径处理与重试逻辑）([#1374](https://github.com/scriptscat/scriptcat/pull/1374)) ([#1375](https://github.com/scriptscat/scriptcat/pull/1375)) ([#1376](https://github.com/scriptscat/scriptcat/pull/1376)) ([#1390](https://github.com/scriptscat/scriptcat/pull/1390)) ([#1391](https://github.com/scriptscat/scriptcat/pull/1391)) ([#1392](https://github.com/scriptscat/scriptcat/pull/1392)) ([#1393](https://github.com/scriptscat/scriptcat/pull/1393)) ([#1394](https://github.com/scriptscat/scriptcat/pull/1394)) ([#1395](https://github.com/scriptscat/scriptcat/pull/1395)) (by @cyfung1031)
+- 🐛 新增 extensionEnv 处理 isIncognito (early-start & bgScript)、userAgent 与 run-in (bgScript) ([#1368](https://github.com/scriptscat/scriptcat/pull/1368)) (by @cyfung1031)
+- 🐛 修复新手指引按钮显示不全 [#1396](https://github.com/scriptscat/scriptcat/issues/1396) ([#1398](https://github.com/scriptscat/scriptcat/pull/1398)) (by @cyfung1031)
+- 🐛 修复脚本管理页面的 tooltip 提示被遮挡问题 [#1386](https://github.com/scriptscat/scriptcat/issues/1386) ([#1387](https://github.com/scriptscat/scriptcat/pull/1387)) (by @Xdy1579883916)
+- 🐛 修复 Sidebar 导致卡片模式下的尺寸调整异常 [#1179](https://github.com/scriptscat/scriptcat/issues/1179) ([#1373](https://github.com/scriptscat/scriptcat/pull/1373)) (by @cyfung1031)
+- 🐛 修正本机文件拖拉安装时错误设置 origin 问题 ([#1371](https://github.com/scriptscat/scriptcat/pull/1371)) (by @cyfung1031)
+- 🐛 修正语言切换信息 ([#1380](https://github.com/scriptscat/scriptcat/pull/1380)) (by @cyfung1031)
+- 🐛 优化日志显示 UI ([#1372](https://github.com/scriptscat/scriptcat/pull/1372)) (by @cyfung1031)
+- 🐛 解决并发 xhr 的 session rule 数量问题 ([#1353](https://github.com/scriptscat/scriptcat/pull/1353)) (by @cyfung1031)
+- 🐛 修复 UserConfigPanel CSS ([#1361](https://github.com/scriptscat/scriptcat/pull/1361)) (by @cyfung1031)
+- 🐛 create_context 的空对象改为 Object.create(null) ([#1397](https://github.com/scriptscat/scriptcat/pull/1397)) (by @cyfung1031)
+- 🐛 修复 Agent 流式 tool_call arguments 拼接错误及并行工具调用串扰问题 ([#1355](https://github.com/scriptscat/scriptcat/pull/1355)) (by @cyfung1031)
+- 🐛 修复 Agent 兼容 reasoning model ([#1357](https://github.com/scriptscat/scriptcat/pull/1357)) (by @cyfung1031)
+- 🐛 修复 Agent web_fetch/web_search 合约不一致 (7bbd6d18) (by @CodFrm)
+- 🐛 修复 Agent skill script runtime 缺失 extension env (e143c4a7) (by @CodFrm)
+
+### 🔒 安全性改进
+
+- 🔒 修复所有 npm vulnerability ([#1350](https://github.com/scriptscat/scriptcat/pull/1350)) ([#1364](https://github.com/scriptscat/scriptcat/pull/1364)) ([#1365](https://github.com/scriptscat/scriptcat/pull/1365)) (by @cyfung1031)
+
+### 其它
+
+- 🔥 移除 Crowdin 与 ach-UG 伪语言相关内容 ([#1385](https://github.com/scriptscat/scriptcat/pull/1385)) (by @CodFrm)
+
 <a name="1.4.0-beta.1"></a>
 
 ## 1.4.0-beta.1 (2026-04-07)

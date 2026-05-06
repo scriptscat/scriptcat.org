@@ -18,6 +18,46 @@ You can obtain pre-release versions from the [Release](https://github.com/script
 
 Additionally, besides pre-releases, ScriptCat builds the extension on [Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml) after each code commit is merged to the main branch. If you want to experience the latest features or fixes, you can download them from the [Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml) page.
 
+<a name="1.4.0-beta.2"></a>
+
+## 1.4.0-beta.2 (2026-05-06)
+
+This update focuses on **comprehensive cloud storage sync reliability hardening** (auth, path handling, and retry fixes for Dropbox/WebDAV/Google Drive/OneDrive backends), **Agent tool-call stability improvements**, and a large number of UI and script runtime bug fixes including a long-running memory leak.
+
+### ⚡️ Performance Improvements
+
+- ⚡️ Remove Baidu filesystem dependency on global DNR rules; disable cookies per-request instead ([#1377](https://github.com/scriptscat/scriptcat/pull/1377)) (by @cyfung1031)
+- ⚡️ Optimize multi-platform search engine selection for fetching scripts ([#1379](https://github.com/scriptscat/scriptcat/pull/1379)) (by @cyfung1031)
+- ⚡️ Use monospace for the install page loadingStatus to avoid jitter ([#1381](https://github.com/scriptscat/scriptcat/pull/1381)) (by @cyfung1031)
+- ⚡️ Strengthen Agent prompt reliability — result verification, budget semantics, safety boundaries ([#1354](https://github.com/scriptscat/scriptcat/pull/1354)) (by @cyfung1031)
+
+### 🐛 Bug Fixes
+
+- 🚑 Fix potential memory leak when ScriptCat runs for an extended period ([#1401](https://github.com/scriptscat/scriptcat/pull/1401)) (by @cyfung1031)
+- 🐛 Harden cloud sync reliability across backends (Dropbox/WebDAV/Google Drive/OneDrive auth, path handling, retry logic) ([#1374](https://github.com/scriptscat/scriptcat/pull/1374)) ([#1375](https://github.com/scriptscat/scriptcat/pull/1375)) ([#1376](https://github.com/scriptscat/scriptcat/pull/1376)) ([#1390](https://github.com/scriptscat/scriptcat/pull/1390)) ([#1391](https://github.com/scriptscat/scriptcat/pull/1391)) ([#1392](https://github.com/scriptscat/scriptcat/pull/1392)) ([#1393](https://github.com/scriptscat/scriptcat/pull/1393)) ([#1394](https://github.com/scriptscat/scriptcat/pull/1394)) ([#1395](https://github.com/scriptscat/scriptcat/pull/1395)) (by @cyfung1031)
+- 🐛 Properly populate extensionEnv with isIncognito (early-start & bgScript), userAgent and run-in for bgScript ([#1368](https://github.com/scriptscat/scriptcat/pull/1368)) (by @cyfung1031)
+- 🐛 Fix onboarding guide button being clipped [#1396](https://github.com/scriptscat/scriptcat/issues/1396) ([#1398](https://github.com/scriptscat/scriptcat/pull/1398)) (by @cyfung1031)
+- 🐛 Fix tooltip occlusion on the script management page [#1386](https://github.com/scriptscat/scriptcat/issues/1386) ([#1387](https://github.com/scriptscat/scriptcat/pull/1387)) (by @Xdy1579883916)
+- 🐛 Fix Sidebar causing layout sizing issues in card mode [#1179](https://github.com/scriptscat/scriptcat/issues/1179) ([#1373](https://github.com/scriptscat/scriptcat/pull/1373)) (by @cyfung1031)
+- 🐛 Fix incorrect origin for local file drag-and-drop installs ([#1371](https://github.com/scriptscat/scriptcat/pull/1371)) (by @cyfung1031)
+- 🐛 Fix language-switch messaging ([#1380](https://github.com/scriptscat/scriptcat/pull/1380)) (by @cyfung1031)
+- 🐛 Improve log display UI ([#1372](https://github.com/scriptscat/scriptcat/pull/1372)) (by @cyfung1031)
+- 🐛 Resolve session rule count issues with concurrent xhr ([#1353](https://github.com/scriptscat/scriptcat/pull/1353)) (by @cyfung1031)
+- 🐛 Fix UserConfigPanel CSS ([#1361](https://github.com/scriptscat/scriptcat/pull/1361)) (by @cyfung1031)
+- 🐛 Use Object.create(null) for empty objects in create_context ([#1397](https://github.com/scriptscat/scriptcat/pull/1397)) (by @cyfung1031)
+- 🐛 Fix Agent streaming tool_call argument concatenation errors and parallel tool-call cross-talk ([#1355](https://github.com/scriptscat/scriptcat/pull/1355)) (by @cyfung1031)
+- 🐛 Fix Agent compatibility with reasoning models ([#1357](https://github.com/scriptscat/scriptcat/pull/1357)) (by @cyfung1031)
+- 🐛 Fix Agent web_fetch/web_search contract inconsistency (7bbd6d18) (by @CodFrm)
+- 🐛 Fix missing extension env in Agent skill script runtime (e143c4a7) (by @CodFrm)
+
+### 🔒 Security Improvements
+
+- 🔒 Fix all npm vulnerabilities ([#1350](https://github.com/scriptscat/scriptcat/pull/1350)) ([#1364](https://github.com/scriptscat/scriptcat/pull/1364)) ([#1365](https://github.com/scriptscat/scriptcat/pull/1365)) (by @cyfung1031)
+
+### Others
+
+- 🔥 Remove Crowdin and ach-UG pseudo-locale content ([#1385](https://github.com/scriptscat/scriptcat/pull/1385)) (by @CodFrm)
+
 <a name="1.4.0-beta.1"></a>
 
 ## 1.4.0-beta.1 (2026-04-07)
