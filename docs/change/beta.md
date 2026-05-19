@@ -18,6 +18,50 @@ sidebar_position: 1
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+<a name="1.4.0-beta.3"></a>
+
+## 1.4.0-beta.3 (2026-05-19)
+
+本次更新延续 beta.2 方向，继续加固云存储同步可靠性（OneDrive/Google Drive/WebDAV 错误处理与上传流程），修复多项 ScriptEditor 与 GM xhr 异常处理问题，并新增 Ctrl+Shift+F 格式化、`@run-at context-menu` 恢复支持。
+
+### 🚀 主要新功能
+
+- ✨ 编辑器支持 Ctrl+Shift+F 格式化 ([#1415](https://github.com/scriptscat/scriptcat/pull/1415)) (by @cyfung1031)
+- ✨ 恢复 `@run-at context-menu` 支持 ([#1442](https://github.com/scriptscat/scriptcat/pull/1442)) (by @cyfung1031)
+
+### ⚡️ 性能优化
+
+- ⚡️ 优化 pushValue 处理 ([#1403](https://github.com/scriptscat/scriptcat/pull/1403)) (by @cyfung1031)
+
+### 🐛 Bug 修复
+
+- 🐛 修正云存储同步多项问题：OneDrive 零字节上传、Google Drive/OneDrive 错误规范化、S3 自定义元数据补充 modifiedDate ([#1405](https://github.com/scriptscat/scriptcat/pull/1405)) ([#1406](https://github.com/scriptscat/scriptcat/pull/1406)) ([#1408](https://github.com/scriptscat/scriptcat/pull/1408)) (by @cyfung1031)
+- 🐛 WebDAV verify 移除写探针，避免坚果云等根目录不可写服务被误杀 ([#1445](https://github.com/scriptscat/scriptcat/pull/1445)) (by @CodFrm)
+- 🐛 修复 GM_xmlhttpRequest msgConn 的 null 处理缺失 ([#1433](https://github.com/scriptscat/scriptcat/pull/1433)) (by @cyfung1031)
+- 🐛 修复 GM xhr 不正确处理异常 onloadend 的问题 ([#1412](https://github.com/scriptscat/scriptcat/pull/1412)) (by @cyfung1031)
+- 🐛 修复 ScriptEditor 列表动态更新与显示问题 ([#1414](https://github.com/scriptscat/scriptcat/pull/1414)) (by @cyfung1031)
+- 🐛 修复 ScriptEditor toolbar 中编辑相关操作的交互问题 ([#1417](https://github.com/scriptscat/scriptcat/pull/1417)) (by @cyfung1031)
+- 🐛 修复 chrome.downloads.download 代码及 Mock ([#1410](https://github.com/scriptscat/scriptcat/pull/1410)) (by @cyfung1031)
+- 🐛 修正 src/pages/install/App.tsx closeWindow ([#1435](https://github.com/scriptscat/scriptcat/pull/1435)) (by @cyfung1031)
+- 🐛 在根布局建立滚轮事件边界，避免内部滚动触发浏览器 swipe 跳页 ([#1431](https://github.com/scriptscat/scriptcat/pull/1431)) (by @cyfung1031)
+- 🐛 去重并发的初始 auth 请求 ([#1437](https://github.com/scriptscat/scriptcat/pull/1437)) (by @cyfung1031)
+- 🐛 重构 encoding.ts 以整合并改进检测机制 ([#1426](https://github.com/scriptscat/scriptcat/pull/1426)) (by @cyfung1031)
+- 🐛 加 Tooltip 否则看不到菜单 ([#1429](https://github.com/scriptscat/scriptcat/pull/1429)) (by @cyfung1031)
+- 🐛 overscroll-behavior 修正 ([#1413](https://github.com/scriptscat/scriptcat/pull/1413)) (by @cyfung1031)
+- 🐛 不支持更新的脚本不再显示更新按钮 ([#1418](https://github.com/scriptscat/scriptcat/pull/1418)) (by @cyfung1031)
+- 🐛 修复 i18n 缺失键引用 ([#1422](https://github.com/scriptscat/scriptcat/pull/1422)) (by @cyfung1031)
+- 🐛 sandbox createContext 添加 frames 修复 [#1427](https://github.com/scriptscat/scriptcat/issues/1427) ([#1428](https://github.com/scriptscat/scriptcat/pull/1428)) (by @cyfung1031)
+- 🐛 修复 SkillScript 编译时缺失 isContextMenu 字段导致的类型错误 (5fdc8e39) (by @CodFrm)
+
+### ♻️ 重构与兼容性
+
+- ♻️ 安装资源转移至 chrome.storage.local 的 tempStorage，代码部分放在 OPFS/temp_install_codes ([#1318](https://github.com/scriptscat/scriptcat/pull/1318)) (by @cyfung1031)
+- ♻️ 修复路径拼接逻辑产生的双斜杠问题 ([#1432](https://github.com/scriptscat/scriptcat/pull/1432)) (by @tomaioo)
+
+### 🌐 国际化
+
+- 🌐 改进日语界面翻译并联动优化其他语言翻译 ([#1419](https://github.com/scriptscat/scriptcat/pull/1419)) ([#1421](https://github.com/scriptscat/scriptcat/pull/1421)) (by @GoodLight999, @cyfung1031)
+
 <a name="1.4.0-beta.2"></a>
 
 ## 1.4.0-beta.2 (2026-05-06)

@@ -18,6 +18,50 @@ You can obtain pre-release versions from the [Release](https://github.com/script
 
 Additionally, besides pre-releases, ScriptCat builds the extension on [Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml) after each code commit is merged to the main branch. If you want to experience the latest features or fixes, you can download them from the [Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml) page.
 
+<a name="1.4.0-beta.3"></a>
+
+## 1.4.0-beta.3 (2026-05-19)
+
+Continuing the direction set in beta.2, this release further hardens cloud sync reliability (OneDrive/Google Drive/WebDAV error handling and upload flows), fixes a number of ScriptEditor and GM xhr exception-handling issues, and adds Ctrl+Shift+F formatting and the return of `@run-at context-menu`.
+
+### 🚀 Major New Features
+
+- ✨ Editor: Ctrl+Shift+F to format code ([#1415](https://github.com/scriptscat/scriptcat/pull/1415)) (by @cyfung1031)
+- ✨ Bring back `@run-at context-menu` support ([#1442](https://github.com/scriptscat/scriptcat/pull/1442)) (by @cyfung1031)
+
+### ⚡️ Performance Improvements
+
+- ⚡️ Optimize pushValue handling ([#1403](https://github.com/scriptscat/scriptcat/pull/1403)) (by @cyfung1031)
+
+### 🐛 Bug Fixes
+
+- 🐛 Cloud sync fixes: OneDrive zero-byte upload, Google Drive/OneDrive error normalization, S3 custom metadata modifiedDate ([#1405](https://github.com/scriptscat/scriptcat/pull/1405)) ([#1406](https://github.com/scriptscat/scriptcat/pull/1406)) ([#1408](https://github.com/scriptscat/scriptcat/pull/1408)) (by @cyfung1031)
+- 🐛 WebDAV verify: drop the write probe so services like Jianguoyun with non-writable root no longer fail verification ([#1445](https://github.com/scriptscat/scriptcat/pull/1445)) (by @CodFrm)
+- 🐛 Fix missing null handling for `GM_xmlhttpRequest` msgConn ([#1433](https://github.com/scriptscat/scriptcat/pull/1433)) (by @cyfung1031)
+- 🐛 Fix GM xhr improperly handling abnormal onloadend ([#1412](https://github.com/scriptscat/scriptcat/pull/1412)) (by @cyfung1031)
+- 🐛 Fix ScriptEditor list dynamic update and display issues ([#1414](https://github.com/scriptscat/scriptcat/pull/1414)) (by @cyfung1031)
+- 🐛 Fix interaction issues with edit-related actions in the ScriptEditor toolbar ([#1417](https://github.com/scriptscat/scriptcat/pull/1417)) (by @cyfung1031)
+- 🐛 Fix `chrome.downloads.download` code and Mock ([#1410](https://github.com/scriptscat/scriptcat/pull/1410)) (by @cyfung1031)
+- 🐛 Fix closeWindow in src/pages/install/App.tsx ([#1435](https://github.com/scriptscat/scriptcat/pull/1435)) (by @cyfung1031)
+- 🐛 Add wheel event boundary at the root layout to prevent internal scrolling from triggering browser swipe-navigation ([#1431](https://github.com/scriptscat/scriptcat/pull/1431)) (by @cyfung1031)
+- 🐛 Dedupe concurrent initial auth requests ([#1437](https://github.com/scriptscat/scriptcat/pull/1437)) (by @cyfung1031)
+- 🐛 Refactor encoding.ts to consolidate and improve detection ([#1426](https://github.com/scriptscat/scriptcat/pull/1426)) (by @cyfung1031)
+- 🐛 Add Tooltip so the menu is visible ([#1429](https://github.com/scriptscat/scriptcat/pull/1429)) (by @cyfung1031)
+- 🐛 overscroll-behavior fix ([#1413](https://github.com/scriptscat/scriptcat/pull/1413)) (by @cyfung1031)
+- 🐛 Stop showing the update button for scripts that don't support updates ([#1418](https://github.com/scriptscat/scriptcat/pull/1418)) (by @cyfung1031)
+- 🐛 Fix missing i18n key references ([#1422](https://github.com/scriptscat/scriptcat/pull/1422)) (by @cyfung1031)
+- 🐛 Add `frames` to sandbox createContext, fixing [#1427](https://github.com/scriptscat/scriptcat/issues/1427) ([#1428](https://github.com/scriptscat/scriptcat/pull/1428)) (by @cyfung1031)
+- 🐛 Fix SkillScript compilation error from missing isContextMenu field (5fdc8e39) (by @CodFrm)
+
+### ♻️ Refactoring & Compatibility
+
+- ♻️ Move install resources to `chrome.storage.local` tempStorage; code part lives in `OPFS/temp_install_codes` ([#1318](https://github.com/scriptscat/scriptcat/pull/1318)) (by @cyfung1031)
+- ♻️ Fix double-slash created by path-joining logic ([#1432](https://github.com/scriptscat/scriptcat/pull/1432)) (by @tomaioo)
+
+### 🌐 Internationalization
+
+- 🌐 Improve Japanese UI translations with companion fixes for other languages ([#1419](https://github.com/scriptscat/scriptcat/pull/1419)) ([#1421](https://github.com/scriptscat/scriptcat/pull/1421)) (by @GoodLight999, @cyfung1031)
+
 <a name="1.4.0-beta.2"></a>
 
 ## 1.4.0-beta.2 (2026-05-06)
