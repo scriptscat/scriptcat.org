@@ -16,14 +16,7 @@ Beta 版本更新日志请查看 [Beta 更新日志](./beta.md)
 ### 🐛 Bug 修复
 
 - 🐛 修复 MV2 打包脚本构建命令 [#1423](https://github.com/scriptscat/scriptcat/issues/1423) (by @CodFrm)
-
-### ♻️ 重构与兼容性
-
-- ♻️ 针对 WebExtensions API Changes (Firefox 149-152) 做修正 ([#1448](https://github.com/scriptscat/scriptcat/pull/1448)) (by @cyfung1031)
-
-### 🔒 安全性改进
-
-- 🔒 调整 MV2 内容安全策略 ([#1448](https://github.com/scriptscat/scriptcat/pull/1448)) (by @cyfung1031)
+- 🐛 针对 WebExtensions API Changes (Firefox 149-152) 做修正（含 CSP 调整）([#1448](https://github.com/scriptscat/scriptcat/pull/1448)) (by @cyfung1031)
 
 <a name="0.16.14"></a>
 

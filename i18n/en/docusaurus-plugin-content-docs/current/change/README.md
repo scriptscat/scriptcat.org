@@ -16,14 +16,7 @@ For Beta version changelog, please see [Beta Changelog](./beta.md)
 ### 🐛 Bug Fixes
 
 - 🐛 Fix MV2 packaging script build command [#1423](https://github.com/scriptscat/scriptcat/issues/1423) (by @CodFrm)
-
-### ♻️ Refactoring & Compatibility
-
-- ♻️ Adapt to WebExtensions API Changes (Firefox 149-152) ([#1448](https://github.com/scriptscat/scriptcat/pull/1448)) (by @cyfung1031)
-
-### 🔒 Security Improvements
-
-- 🔒 Adjust MV2 Content Security Policy ([#1448](https://github.com/scriptscat/scriptcat/pull/1448)) (by @cyfung1031)
+- 🐛 Adapt to WebExtensions API Changes (Firefox 149-152), including CSP adjustments ([#1448](https://github.com/scriptscat/scriptcat/pull/1448)) (by @cyfung1031)
 
 <a name="0.16.14"></a>
 
