@@ -9,6 +9,22 @@ For Beta version changelog, please see [Beta Changelog](./beta.md)
 
 ⚠️ Please note that if you are using Windows 8/7/XP, or your browser kernel version is lower than 120, you need to manually install the [legacy version of ScriptCat](https://github.com/scriptscat/scriptcat/releases). v0.16.x is the last version that supports Manifest V2. Installation steps can be found at: [Install Extension by Loading Unpacked](/docs/use/use/#load-unpacked-extension-installation).
 
+<a name="0.16.15"></a>
+
+## 0.16.15 (2026-05-19)
+
+### 🐛 Bug Fixes
+
+- 🐛 Fix MV2 packaging script build command [#1423](https://github.com/scriptscat/scriptcat/issues/1423) (by @CodFrm)
+
+### ♻️ Refactoring & Compatibility
+
+- ♻️ Adapt to WebExtensions API Changes (Firefox 149-152) ([#1448](https://github.com/scriptscat/scriptcat/pull/1448)) (by @cyfung1031)
+
+### 🔒 Security Improvements
+
+- 🔒 Adjust MV2 Content Security Policy ([#1448](https://github.com/scriptscat/scriptcat/pull/1448)) (by @cyfung1031)
+
 <a name="0.16.14"></a>
 
 ## 0.16.14 (2026-04-26)
