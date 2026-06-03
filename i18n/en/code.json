@@ -1,4 +1,32 @@
 {
+  "githubStar.button.label": {
+    "message": "Star",
+    "description": "GitHub star button label"
+  },
+  "githubStar.home.title": {
+    "message": "ScriptCat is free & open source",
+    "description": "GitHub star bar title on homepage"
+  },
+  "githubStar.home.subtitle": {
+    "message": "Give us a Star if you find it useful — it keeps us going",
+    "description": "GitHub star bar subtitle on homepage"
+  },
+  "githubStar.install.title": {
+    "message": "Enjoying ScriptCat?",
+    "description": "GitHub star bar title on install-complete page"
+  },
+  "githubStar.install.subtitle": {
+    "message": "Star us on GitHub to help more people discover it 🌟",
+    "description": "GitHub star bar subtitle on install-complete page"
+  },
+  "githubStar.changelog.title": {
+    "message": "ScriptCat keeps getting better 🚀",
+    "description": "GitHub star bar title on changelog page"
+  },
+  "githubStar.changelog.subtitle": {
+    "message": "Find these updates useful? Star us on GitHub to support our work",
+    "description": "GitHub star bar subtitle on changelog page"
+  },
   "homepage.meta.title": {
     "message": "ScriptCat - Powerful Browser Script Engine",
     "description": "Homepage meta title for SEO"

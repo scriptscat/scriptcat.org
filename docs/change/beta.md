@@ -3,7 +3,11 @@ id: beta-changelog
 sidebar_position: 1
 ---
 
+import GithubStar from '@site/src/components/GithubStar';
+
 # Beta 更新日志
+
+<GithubStar variant="bar" scene="changelog" />
 
 脚本猫的版本发布主要分为两条分支: 正式版本与预发布版本，正式版本更新日志请看：[更新日志](./README.md)
 

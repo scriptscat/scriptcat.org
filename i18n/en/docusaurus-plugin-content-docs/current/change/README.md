@@ -3,7 +3,11 @@ id: change
 sidebar_position: 1
 ---
 
+import GithubStar from '@site/src/components/GithubStar';
+
 # Changelog
+
+<GithubStar variant="bar" scene="changelog" />
 
 For Beta version changelog, please see [Beta Changelog](./beta.md)
 

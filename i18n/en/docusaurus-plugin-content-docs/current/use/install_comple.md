@@ -4,9 +4,13 @@ hide_title: true
 sidebar_class_name: hidden
 ---
 
+import GithubStar from '@site/src/components/GithubStar';
+
 # 🎉 Welcome to ScriptCat
 
 Congratulations on successfully installing the ScriptCat browser extension! ScriptCat is a powerful userscript manager that is compatible with Tampermonkey scripts and provides many more powerful features.
+
+<GithubStar variant="bar" scene="install" />
 
 ## Security Notice
 

@@ -1,6 +1,26 @@
 const API_URL = "https://scriptcat.org/api/v2";
 // const API_URL = "http://localhost:8080/api/v2";
 
+// GitHub 仓库统计
+export interface GithubStats {
+  stars: number; // star 数量
+}
+
+// 获取 GitHub 仓库统计（star 数等），由后端缓存，避免浏览器直连 GitHub 触发限流
+export async function getGithubStats(): Promise<GithubStats> {
+  const response = await fetch(`${API_URL}/github-stats`);
+  if (!response.ok) {
+    throw new Error(
+      `Failed to fetch github stats: ${response.status} ${response.statusText}`
+    );
+  }
+  const data = await response.json();
+  if (data.code !== 0) {
+    throw new Error(data.msg);
+  }
+  return data.data as GithubStats;
+}
+
 // 反馈原因类型
 export type FeedbackReason = "bug" | "unused" | "feature" | "better" | "other";
 

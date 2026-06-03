@@ -3,7 +3,11 @@ id: change
 sidebar_position: 1
 ---
 
+import GithubStar from '@site/src/components/GithubStar';
+
 # 更新日志
+
+<GithubStar variant="bar" scene="changelog" />
 
 Beta 版本更新日志请查看 [Beta 更新日志](./beta.md)
 

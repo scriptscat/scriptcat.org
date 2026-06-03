@@ -1,0 +1,115 @@
+/* ===== 共用 Star 按钮 ===== */
+.starBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  flex: 0 0 auto;
+  background-color: var(--ifm-color-primary);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(69, 148, 213, 0.28);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+.starBtn:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: var(--ifm-color-primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(69, 148, 213, 0.38);
+}
+.starIcon {
+  font-size: 1rem;
+  /* 跟随文字颜色的单色描边星，对应 GitHub 未 star 的样式 */
+  color: inherit;
+}
+.count {
+  background-color: rgba(255, 255, 255, 0.22);
+  padding: 1px 8px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+/* ===== 首页 hero 按钮版（实心站点蓝，沿用基础 .starBtn 的配色，仅调整尺寸） ===== */
+/* 白字 + 白色描边星(.starIcon color:inherit) + 半透明白 count，均继承自 .starBtn */
+.starBtnHero {
+  padding: 0.4rem 1.5rem;
+  font-size: 0.95rem;
+}
+@media (max-width: 767px) {
+  .starBtnHero {
+    font-size: 0.9rem;
+  }
+}
+
+/* ===== 文档页细长条版 ===== */
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin: 1.2rem 0 1.6rem;
+  background: linear-gradient(
+    135deg,
+    rgba(69, 148, 213, 0.09),
+    rgba(69, 148, 213, 0.03)
+  );
+  border: 1px solid rgba(69, 148, 213, 0.24);
+}
+[data-theme="dark"] .bar {
+  background: rgba(69, 148, 213, 0.12);
+  border-color: rgba(104, 168, 221, 0.3);
+}
+.barLogo {
+  flex: 0 0 auto;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(69, 148, 213, 0.2);
+}
+[data-theme="dark"] .barLogo {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.barLogo img {
+  width: 20px;
+  height: 20px;
+}
+.barText {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+.barText strong {
+  font-weight: 700;
+}
+.barSubtitle {
+  opacity: 0.65;
+}
+.starBtnBar {
+  font-size: 0.8rem;
+  padding: 0.45rem 0.8rem;
+}
+
+@media (max-width: 560px) {
+  .bar {
+    flex-wrap: wrap;
+  }
+  .barText {
+    flex-basis: calc(100% - 42px);
+  }
+  .starBtnBar {
+    margin-left: 42px;
+  }
+}
