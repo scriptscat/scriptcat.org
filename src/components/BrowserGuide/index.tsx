@@ -3,6 +3,7 @@ import { useHistory, useLocation } from '@docusaurus/router';
 import styles from './styles.module.css';
 
 type Scenario = 'allowUserScripts' | 'devMode' | 'legacy' | 'nonChromium';
+type BrowserType = 'edge' | 'edge-mobile' | 'chrome';
 
 interface ScenarioText {
   title: string;
@@ -18,6 +19,7 @@ interface BrowserGuideProps {
 interface BrowserInfo {
   isChromiumBased: boolean;
   isEdge: boolean;
+  isMobile: boolean;
   engineVersion: number;
 }
 
@@ -31,6 +33,7 @@ export default function BrowserGuide({ texts }: BrowserGuideProps) {
       setBrowserInfo({
         isChromiumBased: rdd.engineName === 'Blink',
         isEdge: rdd.isEdge || rdd.isEdgeChromium,
+        isMobile: rdd.isMobile,
         engineVersion: parseInt(rdd.engineVersion, 10) || 0,
       });
     });
@@ -41,7 +44,7 @@ export default function BrowserGuide({ texts }: BrowserGuideProps) {
     if (!browserInfo || !browserInfo.isChromiumBased) return;
     const params = new URLSearchParams(location.search);
     if (params.has('browser')) return;
-    params.set('browser', browserInfo.isEdge ? 'edge' : 'chrome');
+    params.set('browser', browserInfo.isEdge ? (browserInfo.isMobile ? 'edge-mobile' : 'edge') : 'chrome');
     history.replace({
       pathname: location.pathname,
       search: '?' + params.toString(),
@@ -54,11 +57,11 @@ export default function BrowserGuide({ texts }: BrowserGuideProps) {
   // URL ?browser= param takes priority over auto-detection
   const params = new URLSearchParams(location.search);
   const urlBrowser = params.get('browser');
-  let browserType: 'edge' | 'chrome' | null = null;
-  if (urlBrowser === 'edge' || urlBrowser === 'chrome') {
+  let browserType: BrowserType | null = null;
+  if (urlBrowser === 'edge' || urlBrowser === 'edge-mobile' || urlBrowser === 'chrome') {
     browserType = urlBrowser;
   } else if (browserInfo.isEdge) {
-    browserType = 'edge';
+    browserType = browserInfo.isMobile ? 'edge-mobile' : 'edge';
   } else if (browserInfo.isChromiumBased) {
     browserType = 'chrome';
   }
@@ -66,6 +69,14 @@ export default function BrowserGuide({ texts }: BrowserGuideProps) {
   let scenario: Scenario;
   if (!browserType) {
     scenario = 'nonChromium';
+  } else if (browserType === 'edge-mobile') {
+    if (browserInfo.engineVersion >= 138) {
+      scenario = 'allowUserScripts';
+    } else if (browserInfo.engineVersion >= 120) {
+      scenario = 'devMode';
+    } else {
+      scenario = 'legacy';
+    }
   } else if (browserType === 'edge') {
     if (browserInfo.engineVersion >= 144) {
       scenario = 'allowUserScripts';
