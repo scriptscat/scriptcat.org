@@ -22,6 +22,40 @@ You can obtain pre-release versions from the [Release](https://github.com/script
 
 Additionally, besides pre-releases, ScriptCat builds the extension on [Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml) after each code commit is merged to the main branch. If you want to experience the latest features or fixes, you can download them from the [Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml) page.
 
+<a name="1.4.0-beta.4"></a>
+
+## 1.4.0-beta.4 (2026-06-13)
+
+This release fixes Edge Android mobile popup layout, the white background flash during initial load, and cross-origin request failures when site access permission is missing; patches a prototype pollution vulnerability triggered via untrusted YAML user-config keys; refactors script resource updating and ZIP handling (replacing jszip with JSZipp); and continues to improve Firefox MV3 compatibility and localization.
+
+### 🧑‍💻 Editor
+
+- ✨ Improve Monaco quick fix and userscript metadata hints ([#1461](https://github.com/scriptscat/scriptcat/pull/1461)) (by @cyfung1031)
+- 🐛 Fix editor CSS layout issues ([#1460](https://github.com/scriptscat/scriptcat/pull/1460)) (by @cyfung1031)
+
+### 🐛 Bug Fixes
+
+- 🐛 Fix Edge Android mobile popup layout ([#686](https://github.com/scriptscat/scriptcat/issues/686)) ([#1507](https://github.com/scriptscat/scriptcat/pull/1507)) (by @CodFrm)
+- 🐛 Fix white background flash during initial load ([#1497](https://github.com/scriptscat/scriptcat/issues/1497)) ([#1498](https://github.com/scriptscat/scriptcat/pull/1498)) (by @cyfung1031)
+- 🐛 Fix cross-origin request failure when site access permission is missing ([#1477](https://github.com/scriptscat/scriptcat/pull/1477)) (by @cyfung1031)
+- 🐛 Fix message connection (GM API / port) not being cleaned up properly ([#1474](https://github.com/scriptscat/scriptcat/pull/1474)) (by @cyfung1031)
+- 🐛 Fix @match template mismatch when search is missing ([#1466](https://github.com/scriptscat/scriptcat/pull/1466)) (by @cyfung1031)
+- 🐛 Add `protoBaseDescs` to fix ancestor class inheritance in the Tampermonkey semi-sandbox ([#1463](https://github.com/scriptscat/scriptcat/pull/1463)) (by @cyfung1031)
+
+### 🔒 Security Improvements
+
+- 🔒 Fix prototype pollution via untrusted YAML user-config keys ([#1494](https://github.com/scriptscat/scriptcat/pull/1494)) (by @qdzsh)
+
+### ♻️ Refactoring & Compatibility
+
+- ♻️ Refactor script resource updating (updateResource) and concurrency control, and restore resource cache compatibility ([#1193](https://github.com/scriptscat/scriptcat/pull/1193)) (by @cyfung1031)
+- ♻️ Replace jszip with JSZipp for ZIP handling (backup import/export), and remove the unused jszip dependency ([#1479](https://github.com/scriptscat/scriptcat/pull/1479)) (by @cyfung1031)
+- ♻️ Improve Firefox MV3 compatibility ([#1457](https://github.com/scriptscat/scriptcat/pull/1457), [#1480](https://github.com/scriptscat/scriptcat/pull/1480)) (by @cyfung1031)
+
+### 🌐 Localization
+
+- 🌐 Fix multi-language terminology translations (notably improving Traditional Chinese) and add translation terminology guidelines ([#1468](https://github.com/scriptscat/scriptcat/pull/1468)) (by @cyfung1031)
+
 <a name="1.4.0-beta.3"></a>
 
 ## 1.4.0-beta.3 (2026-05-19)

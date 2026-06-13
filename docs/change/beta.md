@@ -22,6 +22,40 @@ import GithubStar from '@site/src/components/GithubStar';
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+<a name="1.4.0-beta.4"></a>
+
+## 1.4.0-beta.4 (2026-06-13)
+
+本次更新修复 Edge Android 移动端 popup 适配、初始加载白屏、缺少站点权限时跨域请求异常等多项问题，修补了通过不可信 YAML user-config 键触发的原型链污染漏洞，重构脚本资源更新与 ZIP 处理（JSZipp 替换 jszip），并继续完善 Firefox MV3 兼容与多语言翻译。
+
+### 🧑‍💻 编辑器
+
+- ✨ 优化 Monaco quick fix 与用户脚本元数据提示 ([#1461](https://github.com/scriptscat/scriptcat/pull/1461)) (by @cyfung1031)
+- 🐛 修正编辑器的 CSS 布局问题 ([#1460](https://github.com/scriptscat/scriptcat/pull/1460)) (by @cyfung1031)
+
+### 🐛 Bug 修复
+
+- 🐛 修复 Edge Android 移动端 popup 适配问题 ([#686](https://github.com/scriptscat/scriptcat/issues/686)) ([#1507](https://github.com/scriptscat/scriptcat/pull/1507)) (by @CodFrm)
+- 🐛 修复初始加载时出现白屏背景的问题 ([#1497](https://github.com/scriptscat/scriptcat/issues/1497)) ([#1498](https://github.com/scriptscat/scriptcat/pull/1498)) (by @cyfung1031)
+- 🐛 修复缺少站点访问权限时跨域请求异常的问题 ([#1477](https://github.com/scriptscat/scriptcat/pull/1477)) (by @cyfung1031)
+- 🐛 修复消息连接（GM API / 端口）未正确清理的问题 ([#1474](https://github.com/scriptscat/scriptcat/pull/1474)) (by @cyfung1031)
+- 🐛 修正缺少 search 时 @match template 不匹配的问题 ([#1466](https://github.com/scriptscat/scriptcat/pull/1466)) (by @cyfung1031)
+- 🐛 新增 `protoBaseDescs` 修正 Tampermonkey 半沙盒的祖先类继承 ([#1463](https://github.com/scriptscat/scriptcat/pull/1463)) (by @cyfung1031)
+
+### 🔒 安全性改进
+
+- 🔒 修复通过不可信 YAML user-config 键导致的原型链污染漏洞 ([#1494](https://github.com/scriptscat/scriptcat/pull/1494)) (by @qdzsh)
+
+### ♻️ 重构与兼容性
+
+- ♻️ 重构脚本资源更新逻辑（updateResource）与并发控制，并恢复资源缓存兼容性 ([#1193](https://github.com/scriptscat/scriptcat/pull/1193)) (by @cyfung1031)
+- ♻️ 使用 JSZipp 替换 jszip 处理 ZIP（备份导入/导出），并移除未使用的 jszip 依赖 ([#1479](https://github.com/scriptscat/scriptcat/pull/1479)) (by @cyfung1031)
+- ♻️ 兼容 Firefox MV3 规格 ([#1457](https://github.com/scriptscat/scriptcat/pull/1457), [#1480](https://github.com/scriptscat/scriptcat/pull/1480)) (by @cyfung1031)
+
+### 🌐 国际化
+
+- 🌐 修正多语言术语翻译（重点完善繁体中文）并新增翻译术语规范 ([#1468](https://github.com/scriptscat/scriptcat/pull/1468)) (by @cyfung1031)
+
 <a name="1.4.0-beta.3"></a>
 
 ## 1.4.0-beta.3 (2026-05-19)
