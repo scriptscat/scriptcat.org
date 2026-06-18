@@ -5,6 +5,7 @@ sidebar_class_name: hidden
 ---
 
 import GithubStar from '@site/src/components/GithubStar';
+import SponsorBlock from '@site/src/components/SponsorBlock/zh.mdx';
 
 # 🎉 欢迎使用脚本猫
 
@@ -12,35 +13,7 @@ import GithubStar from '@site/src/components/GithubStar';
 
 <GithubStar variant="bar" scene="install" />
 
-## ❤️ 赞助商
-
-> [想出现在这里？](mailto:codfrm@gmail.com)
-
-<details open>
-<summary>点击折叠</summary>
-
-[![OpenModel](/img/sponsors/openmodel-banner-1.jpg)](https://www.openmodel.ai?ref=pyGPw93M)
-
-**DeepSeek-V4-Flash 在 OpenModel 上限时免费！**
-
-一个 API，用遍所有顶级 AI 模型。
-
-OpenModel 是一个高可用、高可靠的 AI 模型调用平台，让你的应用快速稳定运行：自动故障转移、重试不重复扣费、每个 Key 可单独设额度与限频。换模型只改一个参数，新模型发布当天即可用，还能直接对接 Claude Code、Codex 和 Gemini CLI。
-
-<a href="https://www.openmodel.ai?ref=pyGPw93M" style={{color: "#1971c2", fontWeight: "bold"}}>点此链接注册</a>，立即开始使用！
-
----
-
-<table>
-<tbody>
-<tr>
-<td width="180"><a href="https://www.packyapi.com/register?aff=BOKa"><img src="/img/sponsors/packycode-banner.png" alt="PackyCode" width="150" /></a></td>
-<td>PackyCode 是一家稳定、高效的 API 中转服务商，提供 Claude Code、Codex、Gemini 等多种中转服务。具备自动故障转移、智能路由和无限并发等多种功能，让 AI 编程成为真正的生产力工具。<a href="https://www.packyapi.com/register?aff=BOKa" style={{color: "#1971c2", fontWeight: "bold"}}>点此链接注册</a>，立即开始使用！</td>
-</tr>
-</tbody>
-</table>
-
-</details>
+<SponsorBlock />
 
 ## 安全提醒
 
