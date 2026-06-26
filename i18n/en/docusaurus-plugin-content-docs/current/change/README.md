@@ -13,6 +13,96 @@ For Beta version changelog, please see [Beta Changelog](./beta.md)
 
 ⚠️ Please note that if you are using Windows 8/7/XP, or your browser kernel version is lower than 120, you need to manually install the [legacy version of ScriptCat](https://github.com/scriptscat/scriptcat/releases). v0.16.x is the last version that supports Manifest V2. Installation steps can be found at: [Install Extension by Loading Unpacked](/docs/use/use/#load-unpacked-extension-installation).
 
+<a name="1.4.0"></a>
+
+## 1.4.0 (2026-06-26)
+
+This release brings low-level refactoring in preparation for Firefox MV3, along with editor experience improvements (edit menu, Ctrl+Shift+F formatting, Monaco quick fix), multi-platform search engine selection for script discovery, new capabilities such as `@unwrap` / `window.onurlchange` / `@run-at context-menu`, comprehensive hardening of cloud storage sync reliability, and a large batch of GM API, UI, and stability fixes (including a long-running memory leak and prototype pollution security vulnerabilities). The ScriptCat AI Agent is available as a preview in dev / Beta builds and is not yet enabled in the stable release.
+
+### 🚀 Major New Features
+
+- 🧪 ScriptCat AI Agent (**Preview — available in dev / Beta builds only, not yet enabled in stable**) — AI-powered agent system with conversational interaction, tool calling, Skill system, MCP protocol, and more ([#1324](https://github.com/scriptscat/scriptcat/pull/1324)) (by @CodFrm)
+- ✨ Support the `@unwrap` metadata tag ([#1213](https://github.com/scriptscat/scriptcat/pull/1213)) (by @cyfung1031)
+- ✨ Implement TM's `window.onurlchange` via the Navigation API ([#1315](https://github.com/scriptscat/scriptcat/pull/1315)) (by @cyfung1031)
+- ✨ Restore `@run-at context-menu` support ([#1442](https://github.com/scriptscat/scriptcat/pull/1442)) (by @cyfung1031)
+- ✨ Script discovery supports multi-platform search engine selection ([#1295](https://github.com/scriptscat/scriptcat/pull/1295)) (by @CodFrm)
+- ✨ Add more icon service providers ([#1333](https://github.com/scriptscat/scriptcat/pull/1333)) (by @cyfung1031)
+- ✨ Add an update-check icon to the "last updated" column in the script list ([#1304](https://github.com/scriptscat/scriptcat/pull/1304)) (by @CodFrm)
+- ✨ Improve edit-conflict and script-name-conflict handling ([#1223](https://github.com/scriptscat/scriptcat/pull/1223)) (by @cyfung1031)
+
+### 🧑‍💻 Editor
+
+- ✨ Add an edit menu to the editor (find, replace, undo, etc.) ([#1303](https://github.com/scriptscat/scriptcat/pull/1303)) (by @CodFrm)
+- ✨ Editor supports Ctrl+Shift+F formatting ([#1415](https://github.com/scriptscat/scriptcat/pull/1415)) (by @cyfung1031)
+- ✨ Improve Monaco quick fix and user-script metadata hints ([#1461](https://github.com/scriptscat/scriptcat/pull/1461)) (by @cyfung1031)
+- 🐛 Fix Ctrl-F / Ctrl-H shortcuts ([#1312](https://github.com/scriptscat/scriptcat/pull/1312)) (by @cyfung1031)
+- 🐛 Fix ESLint fix feature not working [#1079](https://github.com/scriptscat/scriptcat/issues/1079) ([#1184](https://github.com/scriptscat/scriptcat/pull/1184)) (by @cyfung1031)
+- 🐛 Fix editor CSS layout issues ([#1460](https://github.com/scriptscat/scriptcat/pull/1460)) (by @cyfung1031)
+- 🐛 Fix ScriptEditor script list display in light theme ([#1288](https://github.com/scriptscat/scriptcat/pull/1288)) (by @CodFrm)
+- 🐛 Fix and improve ScriptEditor issues ([#1258](https://github.com/scriptscat/scriptcat/pull/1258)) (by @cyfung1031)
+
+### ⚡️ Performance Improvements
+
+- 🚑 Fix a potential memory leak during long-running ScriptCat sessions ([#1401](https://github.com/scriptscat/scriptcat/pull/1401)) (by @cyfung1031)
+- ⚡️ Remove Baidu filesystem dependency on global DNR rules, switch to per-request cookie disabling ([#1377](https://github.com/scriptscat/scriptcat/pull/1377)) (by @cyfung1031)
+- ⚡️ Optimize multi-platform search engine selection for script discovery ([#1379](https://github.com/scriptscat/scriptcat/pull/1379)) (by @cyfung1031)
+- ⚡️ Use a monospace font for the install page loadingStatus to avoid jitter ([#1381](https://github.com/scriptscat/scriptcat/pull/1381)) (by @cyfung1031)
+- ⚡️ Optimize pushValue handling ([#1403](https://github.com/scriptscat/scriptcat/pull/1403)) (by @cyfung1031)
+- ⚡️ More complete permission checks and better userScript permission hints ([#1251](https://github.com/scriptscat/scriptcat/pull/1251)) (by @cyfung1031)
+- ⚡️ Improve MessageConnect memory management and cleanup mechanism ([#1248](https://github.com/scriptscat/scriptcat/pull/1248)) (by @cyfung1031)
+
+### 🐛 Bug Fixes
+
+- 🐛 Harden cloud storage sync reliability (Dropbox / WebDAV / Google Drive / OneDrive authentication, path handling, and retry logic) ([#1374](https://github.com/scriptscat/scriptcat/pull/1374) ~ [#1395](https://github.com/scriptscat/scriptcat/pull/1395)) (by @cyfung1031)
+- 🐛 Fix multiple cloud sync issues: OneDrive zero-byte upload, Google Drive / OneDrive error normalization, S3 custom metadata modifiedDate ([#1405](https://github.com/scriptscat/scriptcat/pull/1405)) ([#1406](https://github.com/scriptscat/scriptcat/pull/1406)) ([#1408](https://github.com/scriptscat/scriptcat/pull/1408)) (by @cyfung1031)
+- 🐛 Remove the WebDAV verify write-probe to avoid false negatives on services with a non-writable root (e.g. Nutstore) ([#1445](https://github.com/scriptscat/scriptcat/pull/1445)) (by @CodFrm)
+- 🐛 Fix cross-origin request failure when site access permission is missing ([#1477](https://github.com/scriptscat/scriptcat/pull/1477)) (by @cyfung1031)
+- 🐛 Fix Edge Android mobile popup adaptation [#686](https://github.com/scriptscat/scriptcat/issues/686) ([#1507](https://github.com/scriptscat/scriptcat/pull/1507)) (by @CodFrm)
+- 🐛 Fix white background flash during initial load [#1497](https://github.com/scriptscat/scriptcat/issues/1497) ([#1498](https://github.com/scriptscat/scriptcat/pull/1498)) (by @cyfung1031)
+- 🐛 Fix message connections (GM API / ports) not being cleaned up properly ([#1474](https://github.com/scriptscat/scriptcat/pull/1474)) (by @cyfung1031)
+- 🐛 Fix `@match` template mismatch when search is missing ([#1466](https://github.com/scriptscat/scriptcat/pull/1466)) (by @cyfung1031)
+- 🐛 Add `protoBaseDescs` to fix ancestor-class inheritance in the Tampermonkey semi-sandbox ([#1463](https://github.com/scriptscat/scriptcat/pull/1463)) (by @cyfung1031)
+- 🐛 Fix missing null handling for `GM_xmlhttpRequest` msgConn ([#1433](https://github.com/scriptscat/scriptcat/pull/1433)) (by @cyfung1031)
+- 🐛 Fix GM xhr not handling abnormal onloadend correctly ([#1412](https://github.com/scriptscat/scriptcat/pull/1412)) (by @cyfung1031)
+- 🐛 Fix ScriptEditor list dynamic update and display issues ([#1414](https://github.com/scriptscat/scriptcat/pull/1414)) (by @cyfung1031)
+- 🐛 Fix session rule count issue with concurrent xhr ([#1353](https://github.com/scriptscat/scriptcat/pull/1353)) (by @cyfung1031)
+- 🐛 Fix entire page crash caused by an invalid cron expression ([#1327](https://github.com/scriptscat/scriptcat/pull/1327)) (by @cyfung1031)
+- 🐛 Fix all scripts failing when a single script times out during batch update check ([#1265](https://github.com/scriptscat/scriptcat/pull/1265)) (by @cyfung1031)
+- 🐛 Add extensionEnv handling for isIncognito, userAgent, and run-in ([#1368](https://github.com/scriptscat/scriptcat/pull/1368)) (by @cyfung1031)
+- 🐛 Fix onboarding guide button being partially hidden [#1396](https://github.com/scriptscat/scriptcat/issues/1396) ([#1398](https://github.com/scriptscat/scriptcat/pull/1398)) (by @cyfung1031)
+- 🐛 Fix tooltip being obscured on the script management page [#1386](https://github.com/scriptscat/scriptcat/issues/1386) ([#1387](https://github.com/scriptscat/scriptcat/pull/1387)) (by @Xdy1579883916)
+- 🐛 Fix Sidebar causing abnormal resizing in card mode [#1179](https://github.com/scriptscat/scriptcat/issues/1179) ([#1373](https://github.com/scriptscat/scriptcat/pull/1373)) (by @cyfung1031)
+- 🐛 Fix incorrect origin set when installing local files via drag-and-drop ([#1371](https://github.com/scriptscat/scriptcat/pull/1371)) (by @cyfung1031)
+- 🐛 Fix language switching prompt message ([#1380](https://github.com/scriptscat/scriptcat/pull/1380)) (by @cyfung1031)
+- 🐛 Improve log display UI ([#1372](https://github.com/scriptscat/scriptcat/pull/1372)) (by @cyfung1031)
+- 🐛 Fix UserConfigPanel CSS ([#1361](https://github.com/scriptscat/scriptcat/pull/1361)) (by @cyfung1031)
+- 🐛 Use `Object.create(null)` for the empty object in create_context ([#1397](https://github.com/scriptscat/scriptcat/pull/1397)) (by @cyfung1031)
+- 🐛 Fix silent update and connect permission logic for subscribed scripts ([#1201](https://github.com/scriptscat/scriptcat/pull/1201)) (by @cyfung1031)
+- 🐛 Fix log page query button not refreshing the time ([#1294](https://github.com/scriptscat/scriptcat/pull/1294)) (by @CodFrm)
+
+### 🔒 Security Improvements
+
+- 🔒 Fix prototype pollution via untrusted YAML user-config keys ([#1494](https://github.com/scriptscat/scriptcat/pull/1494)) (by @qdzsh)
+- 🔒 Fix all npm dependency security vulnerabilities ([#1350](https://github.com/scriptscat/scriptcat/pull/1350)) ([#1364](https://github.com/scriptscat/scriptcat/pull/1364)) ([#1365](https://github.com/scriptscat/scriptcat/pull/1365)) (by @cyfung1031)
+
+### ♻️ Refactoring & Compatibility
+
+- ♻️ Low-level refactoring in preparation for Firefox MV3 adaptation ([#1457](https://github.com/scriptscat/scriptcat/pull/1457)) ([#1480](https://github.com/scriptscat/scriptcat/pull/1480)) (by @cyfung1031)
+- ♻️ Refactor script resource update logic (updateResource) and concurrency control, restore resource cache compatibility ([#1193](https://github.com/scriptscat/scriptcat/pull/1193)) (by @cyfung1031)
+- ♻️ Replace jszip with JSZipp for ZIP handling (backup import / export), and remove the unused jszip dependency ([#1479](https://github.com/scriptscat/scriptcat/pull/1479)) (by @cyfung1031)
+- ♻️ Unify Offscreen ↔ ServiceWorker communication over the postMessage channel ([#1299](https://github.com/scriptscat/scriptcat/pull/1299)) (by @CodFrm)
+- ♻️ Refactor VSCodeConnect code ([#1170](https://github.com/scriptscat/scriptcat/pull/1170)) (by @cyfung1031)
+- ⚡️ Compress ts.worker.js to 4MB to pass AMO validation, fix MV3 background permission error ([#1221](https://github.com/scriptscat/scriptcat/pull/1221)) (by @cyfung1031)
+
+### 🌐 Internationalization
+
+- 🌐 Fix multi-language terminology translations (mainly improving Traditional Chinese) and add translation terminology guidelines ([#1468](https://github.com/scriptscat/scriptcat/pull/1468)) (by @cyfung1031)
+
+### Others
+
+- ✨ Switch the fetchIconByDomain icon service to scriptcat.org ([#1268](https://github.com/scriptscat/scriptcat/pull/1268)) (by @cyfung1031)
+- 🔥 Remove Crowdin and ach-UG pseudo-language related content ([#1385](https://github.com/scriptscat/scriptcat/pull/1385)) (by @CodFrm)
+
 <a name="0.16.15"></a>
 
 ## 0.16.15 (2026-05-19)

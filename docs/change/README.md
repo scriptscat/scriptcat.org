@@ -13,6 +13,96 @@ Beta 版本更新日志请查看 [Beta 更新日志](./beta.md)
 
 ⚠️ 请注意，如果你使用的 Windows 8/7/XP 系统，或者浏览器内核版本低于\<120，需要自行手动安装[旧版脚本猫](https://bbs.tampermonkey.net.cn/thread-3068-1-1.html)，v0.16.x 是最后一个支持 Manifest V2 的版本，安装步骤可以参考：[加载解压缩方式安装扩展](/docs/use/use/#%E5%8A%A0%E8%BD%BD%E8%A7%A3%E5%8E%8B%E7%BC%A9%E6%96%B9%E5%BC%8F%E5%AE%89%E8%A3%85%E6%89%A9%E5%B1%95)。
 
+<a name="1.4.0"></a>
+
+## 1.4.0 (2026-06-26)
+
+本次更新为 Firefox MV3 适配进行了底层重构准备，并带来编辑器体验提升（编辑菜单、Ctrl+Shift+F 格式化、Monaco quick fix）、获取脚本多平台搜索引擎选择、`@unwrap` / `window.onurlchange` / `@run-at context-menu` 等新能力，全面加固云存储同步可靠性，并修复大量 GM API、UI 与稳定性问题（含长时间运行内存泄漏、原型链污染等安全漏洞）。脚本猫 AI Agent 作为预览功能在开发版 / Beta 版中提供，正式版暂未开放。
+
+### 🚀 主要新功能
+
+- 🧪 脚本猫 AI Agent（**预览功能，仅开发版 / Beta 版提供，正式版暂未开放**）— AI 驱动的智能代理系统，支持对话式交互、工具调用、Skill 系统、MCP 协议等 ([#1324](https://github.com/scriptscat/scriptcat/pull/1324)) (by @CodFrm)
+- ✨ 支持 `@unwrap` 元数据标签 ([#1213](https://github.com/scriptscat/scriptcat/pull/1213)) (by @cyfung1031)
+- ✨ 以 Navigation API 实现 TM 的 `window.onurlchange` ([#1315](https://github.com/scriptscat/scriptcat/pull/1315)) (by @cyfung1031)
+- ✨ 恢复 `@run-at context-menu` 支持 ([#1442](https://github.com/scriptscat/scriptcat/pull/1442)) (by @cyfung1031)
+- ✨ 获取脚本支持多平台搜索引擎选择 ([#1295](https://github.com/scriptscat/scriptcat/pull/1295)) (by @CodFrm)
+- ✨ 新增更多图标服务供应商 ([#1333](https://github.com/scriptscat/scriptcat/pull/1333)) (by @cyfung1031)
+- ✨ 脚本列表最后更新列添加检查更新图标 ([#1304](https://github.com/scriptscat/scriptcat/pull/1304)) (by @CodFrm)
+- ✨ 优化编辑冲突与脚本名称冲突处理 ([#1223](https://github.com/scriptscat/scriptcat/pull/1223)) (by @cyfung1031)
+
+### 🧑‍💻 编辑器
+
+- ✨ 编辑器添加编辑菜单（查找、替换、撤销等）([#1303](https://github.com/scriptscat/scriptcat/pull/1303)) (by @CodFrm)
+- ✨ 编辑器支持 Ctrl+Shift+F 格式化 ([#1415](https://github.com/scriptscat/scriptcat/pull/1415)) (by @cyfung1031)
+- ✨ 优化 Monaco quick fix 与用户脚本元数据提示 ([#1461](https://github.com/scriptscat/scriptcat/pull/1461)) (by @cyfung1031)
+- 🐛 修复 Ctrl-F / Ctrl-H 快捷键 ([#1312](https://github.com/scriptscat/scriptcat/pull/1312)) (by @cyfung1031)
+- 🐛 修复 ESLint 修复功能失效的问题 [#1079](https://github.com/scriptscat/scriptcat/issues/1079) ([#1184](https://github.com/scriptscat/scriptcat/pull/1184)) (by @cyfung1031)
+- 🐛 修复编辑器的 CSS 布局问题 ([#1460](https://github.com/scriptscat/scriptcat/pull/1460)) (by @cyfung1031)
+- 🐛 修复 ScriptEditor 脚本列表亮色显示问题 ([#1288](https://github.com/scriptscat/scriptcat/pull/1288)) (by @CodFrm)
+- 🐛 修复并优化 ScriptEditor 相关问题 ([#1258](https://github.com/scriptscat/scriptcat/pull/1258)) (by @cyfung1031)
+
+### ⚡️ 性能优化
+
+- 🚑 修复脚本猫长时间运行时可能出现的内存泄漏问题 ([#1401](https://github.com/scriptscat/scriptcat/pull/1401)) (by @cyfung1031)
+- ⚡️ 移除 Baidu filesystem 对全局 DNR 规则的依赖，改为请求级禁用 cookie ([#1377](https://github.com/scriptscat/scriptcat/pull/1377)) (by @cyfung1031)
+- ⚡️ 优化获取脚本的多平台搜索引擎选择 ([#1379](https://github.com/scriptscat/scriptcat/pull/1379)) (by @cyfung1031)
+- ⚡️ 优化安装页 loadingStatus 改用等宽字体避免跳动 ([#1381](https://github.com/scriptscat/scriptcat/pull/1381)) (by @cyfung1031)
+- ⚡️ 优化 pushValue 处理 ([#1403](https://github.com/scriptscat/scriptcat/pull/1403)) (by @cyfung1031)
+- ⚡️ 更完整的 permission 检查，更好的 userScript 权限提示 ([#1251](https://github.com/scriptscat/scriptcat/pull/1251)) (by @cyfung1031)
+- ⚡️ 优化 MessageConnect 的内存管理及清理机制 ([#1248](https://github.com/scriptscat/scriptcat/pull/1248)) (by @cyfung1031)
+
+### 🐛 Bug 修复
+
+- 🐛 加固云存储同步可靠性（Dropbox / WebDAV / Google Drive / OneDrive 认证、路径处理与重试逻辑）([#1374](https://github.com/scriptscat/scriptcat/pull/1374) ~ [#1395](https://github.com/scriptscat/scriptcat/pull/1395)) (by @cyfung1031)
+- 🐛 修复云存储同步多项问题：OneDrive 零字节上传、Google Drive / OneDrive 错误规范化、S3 自定义元数据补充 modifiedDate ([#1405](https://github.com/scriptscat/scriptcat/pull/1405)) ([#1406](https://github.com/scriptscat/scriptcat/pull/1406)) ([#1408](https://github.com/scriptscat/scriptcat/pull/1408)) (by @cyfung1031)
+- 🐛 WebDAV verify 移除写探针，避免坚果云等根目录不可写服务被误判 ([#1445](https://github.com/scriptscat/scriptcat/pull/1445)) (by @CodFrm)
+- 🐛 修复缺少站点访问权限时跨域请求异常的问题 ([#1477](https://github.com/scriptscat/scriptcat/pull/1477)) (by @cyfung1031)
+- 🐛 修复 Edge Android 移动端 popup 适配问题 [#686](https://github.com/scriptscat/scriptcat/issues/686) ([#1507](https://github.com/scriptscat/scriptcat/pull/1507)) (by @CodFrm)
+- 🐛 修复初始加载时出现白屏背景的问题 [#1497](https://github.com/scriptscat/scriptcat/issues/1497) ([#1498](https://github.com/scriptscat/scriptcat/pull/1498)) (by @cyfung1031)
+- 🐛 修复消息连接（GM API / 端口）未正确清理的问题 ([#1474](https://github.com/scriptscat/scriptcat/pull/1474)) (by @cyfung1031)
+- 🐛 修复缺少 search 时 `@match` template 不匹配的问题 ([#1466](https://github.com/scriptscat/scriptcat/pull/1466)) (by @cyfung1031)
+- 🐛 新增 `protoBaseDescs` 修正 Tampermonkey 半沙盒的祖先类继承 ([#1463](https://github.com/scriptscat/scriptcat/pull/1463)) (by @cyfung1031)
+- 🐛 修复 `GM_xmlhttpRequest` msgConn 的 null 处理缺失 ([#1433](https://github.com/scriptscat/scriptcat/pull/1433)) (by @cyfung1031)
+- 🐛 修复 GM xhr 不正确处理异常 onloadend 的问题 ([#1412](https://github.com/scriptscat/scriptcat/pull/1412)) (by @cyfung1031)
+- 🐛 修复 ScriptEditor 列表动态更新与显示问题 ([#1414](https://github.com/scriptscat/scriptcat/pull/1414)) (by @cyfung1031)
+- 🐛 解决并发 xhr 的 session rule 数量问题 ([#1353](https://github.com/scriptscat/scriptcat/pull/1353)) (by @cyfung1031)
+- 🐛 修复 cron 表达式错误导致整个页面崩溃 ([#1327](https://github.com/scriptscat/scriptcat/pull/1327)) (by @cyfung1031)
+- 🐛 修复批量检查脚本时单个超时导致全部失败 ([#1265](https://github.com/scriptscat/scriptcat/pull/1265)) (by @cyfung1031)
+- 🐛 新增 extensionEnv 处理 isIncognito、userAgent 与 run-in ([#1368](https://github.com/scriptscat/scriptcat/pull/1368)) (by @cyfung1031)
+- 🐛 修复新手指引按钮显示不全 [#1396](https://github.com/scriptscat/scriptcat/issues/1396) ([#1398](https://github.com/scriptscat/scriptcat/pull/1398)) (by @cyfung1031)
+- 🐛 修复脚本管理页面的 tooltip 提示被遮挡问题 [#1386](https://github.com/scriptscat/scriptcat/issues/1386) ([#1387](https://github.com/scriptscat/scriptcat/pull/1387)) (by @Xdy1579883916)
+- 🐛 修复 Sidebar 导致卡片模式下的尺寸调整异常 [#1179](https://github.com/scriptscat/scriptcat/issues/1179) ([#1373](https://github.com/scriptscat/scriptcat/pull/1373)) (by @cyfung1031)
+- 🐛 修复本地文件拖拽安装时错误设置 origin 的问题 ([#1371](https://github.com/scriptscat/scriptcat/pull/1371)) (by @cyfung1031)
+- 🐛 修复语言切换提示信息 ([#1380](https://github.com/scriptscat/scriptcat/pull/1380)) (by @cyfung1031)
+- 🐛 优化日志显示 UI ([#1372](https://github.com/scriptscat/scriptcat/pull/1372)) (by @cyfung1031)
+- 🐛 修复 UserConfigPanel CSS ([#1361](https://github.com/scriptscat/scriptcat/pull/1361)) (by @cyfung1031)
+- 🐛 create_context 的空对象改为 `Object.create(null)` ([#1397](https://github.com/scriptscat/scriptcat/pull/1397)) (by @cyfung1031)
+- 🐛 修复订阅脚本的静默更新与 connect 权限逻辑 ([#1201](https://github.com/scriptscat/scriptcat/pull/1201)) (by @cyfung1031)
+- 🐛 修复运行日志页面查询按钮不刷新时间 ([#1294](https://github.com/scriptscat/scriptcat/pull/1294)) (by @CodFrm)
+
+### 🔒 安全性改进
+
+- 🔒 修复通过不可信 YAML user-config 键导致的原型链污染漏洞 ([#1494](https://github.com/scriptscat/scriptcat/pull/1494)) (by @qdzsh)
+- 🔒 修复所有 npm 依赖安全漏洞 ([#1350](https://github.com/scriptscat/scriptcat/pull/1350)) ([#1364](https://github.com/scriptscat/scriptcat/pull/1364)) ([#1365](https://github.com/scriptscat/scriptcat/pull/1365)) (by @cyfung1031)
+
+### ♻️ 重构与兼容性
+
+- ♻️ 为 Firefox MV3 适配进行底层重构 ([#1457](https://github.com/scriptscat/scriptcat/pull/1457)) ([#1480](https://github.com/scriptscat/scriptcat/pull/1480)) (by @cyfung1031)
+- ♻️ 重构脚本资源更新逻辑（updateResource）与并发控制，并恢复资源缓存兼容性 ([#1193](https://github.com/scriptscat/scriptcat/pull/1193)) (by @cyfung1031)
+- ♻️ 使用 JSZipp 替换 jszip 处理 ZIP（备份导入 / 导出），并移除未使用的 jszip 依赖 ([#1479](https://github.com/scriptscat/scriptcat/pull/1479)) (by @cyfung1031)
+- ♻️ Offscreen 与 ServiceWorker 通信统一走 postMessage 通道 ([#1299](https://github.com/scriptscat/scriptcat/pull/1299)) (by @CodFrm)
+- ♻️ 重构 VSCodeConnect 代码 ([#1170](https://github.com/scriptscat/scriptcat/pull/1170)) (by @cyfung1031)
+- ⚡️ 压缩 ts.worker.js 至 4MB 以通过 AMO 验证，修复 MV3 background permission 错误 ([#1221](https://github.com/scriptscat/scriptcat/pull/1221)) (by @cyfung1031)
+
+### 🌐 国际化
+
+- 🌐 修正多语言术语翻译（重点完善繁体中文）并新增翻译术语规范 ([#1468](https://github.com/scriptscat/scriptcat/pull/1468)) (by @cyfung1031)
+
+### 其它
+
+- ✨ 将 fetchIconByDomain 图标服务改为 scriptcat.org ([#1268](https://github.com/scriptscat/scriptcat/pull/1268)) (by @cyfung1031)
+- 🔥 移除 Crowdin 与 ach-UG 伪语言相关内容 ([#1385](https://github.com/scriptscat/scriptcat/pull/1385)) (by @CodFrm)
+
 <a name="0.16.15"></a>
 
 ## 0.16.15 (2026-05-19)
