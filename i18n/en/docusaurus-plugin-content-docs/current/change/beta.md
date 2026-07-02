@@ -4,10 +4,13 @@ sidebar_position: 1
 ---
 
 import GithubStar from '@site/src/components/GithubStar';
+import SponsorBlock from '@site/src/components/SponsorBlock/en.mdx';
 
 # Beta Changelog
 
 <GithubStar variant="bar" scene="changelog" />
+
+<SponsorBlock />
 
 ScriptCat's version releases are divided into two main branches: stable releases and pre-release versions. For the stable release changelog, please see: [Changelog](./README.md)
 

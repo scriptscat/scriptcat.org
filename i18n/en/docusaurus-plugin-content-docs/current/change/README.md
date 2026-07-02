@@ -4,10 +4,13 @@ sidebar_position: 1
 ---
 
 import GithubStar from '@site/src/components/GithubStar';
+import SponsorBlock from '@site/src/components/SponsorBlock/en.mdx';
 
 # Changelog
 
 <GithubStar variant="bar" scene="changelog" />
+
+<SponsorBlock />
 
 For Beta version changelog, please see [Beta Changelog](./beta.md)
 
