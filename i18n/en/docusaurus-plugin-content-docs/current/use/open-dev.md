@@ -47,32 +47,32 @@ import SponsorBlock from '@site/src/components/SponsorBlock/en.mdx';
 
 ① Open the browser's extension management interface, or visit [edge://extensions/](edge://extensions/)
 
-![edge-open-settings](./img/5.open-dev.assets/edge-extensions-page.webp)
+![edge-open-settings](./open-dev.assets/edge-extensions-page.webp)
 
 ② In the extension management interface, find the ScriptCat extension and click `Details`
 
-![edge-extensions-details](img/5.open-dev.assets/edge-extensions-details.png)
+![edge-extensions-details](open-dev.assets/edge-extensions-details.png)
 
 ③ In the ScriptCat extension details page, find the `Allow user scripts` option and enable it. Then disable and re-enable the extension, or restart the browser to make the script functionality effective.
 
 > ⚠️⚠️⚠️ For lower version Edge browsers (\<=143 version) or users without this option, please refer to [Enable Developer Mode](#enable-developer-mode)
 
-![edge-allow-user-scripts](img/5.open-dev.assets/edge-allow-user-scripts.png)
+![edge-allow-user-scripts](open-dev.assets/edge-allow-user-scripts.png)
 
   </TabItem>
   <TabItem value="chrome" label={<div className="flex items-center gap-1"><Icon height={16} width={16} icon="logos:chrome" />Chrome</div>}>
 
 ① Open the browser's extension management interface, or visit [chrome://extensions/](chrome://extensions/)
 
-![chrome-open-settings](./img/5.open-dev.assets/chrome-extensions-page.webp)
+![chrome-open-settings](./open-dev.assets/chrome-extensions-page.webp)
 
 ② In the extension management interface, find the ScriptCat extension and click `Details`
 
-![scriptcat-extension-details](img/5.open-dev.assets/scriptcat-extension-details.webp)
+![scriptcat-extension-details](open-dev.assets/scriptcat-extension-details.webp)
 
 ③ In the ScriptCat extension details page, find the `Allow user scripts` option and enable it. Then disable and re-enable the extension, or restart the browser to make the script functionality effective.
 
-![allow-user-scripts-toggle](img/5.open-dev.assets/allow-user-scripts-toggle.webp)
+![allow-user-scripts-toggle](open-dev.assets/allow-user-scripts-toggle.webp)
 </TabItem>
   <TabItem value="edge-mobile" label={<div className="flex items-center gap-1"><Icon height={16} width={16} icon="logos:microsoft-edge" />Edge Mobile</div>}>
 
@@ -86,7 +86,7 @@ For Edge Mobile with browser engine version ≥ 138, Developer Mode is not requi
 
 > ⚠️⚠️⚠️ For browser engine versions lower than 138, or users without this option, please refer to [Enable Developer Mode](#enable-developer-mode)
 
-![edge-mobile-allow-user-scripts](./img/5.open-dev.assets/edge%20mobile%20138.png)
+![edge-mobile-allow-user-scripts](./open-dev.assets/edge%20mobile%20138.png)
 
   </TabItem>
 </Tabs>
@@ -98,11 +98,11 @@ For Edge Mobile with browser engine version ≥ 138, Developer Mode is not requi
 
 ① Open the browser's extension management interface, or visit [edge://extensions/](edge://extensions/)
 
-![edge-open-settings](./img/5.open-dev.assets/edge-extensions-page.webp)
+![edge-open-settings](./open-dev.assets/edge-extensions-page.webp)
 
 ② Enable `Developer mode` (In some browsers, this mode may be located in other options, such as 360 Browser: Advanced Management > Developer Mode)
 
-![edge-open-dev](./img/5.open-dev.assets/edge-developer-mode-toggle.webp)
+![edge-open-dev](./open-dev.assets/edge-developer-mode-toggle.webp)
 
 ③ After enabling developer mode, disable and then re-enable the extension, or restart the browser to make the script functionality effective.
 
@@ -111,11 +111,11 @@ For Edge Mobile with browser engine version ≥ 138, Developer Mode is not requi
 
 ① Open the browser's extension management interface, or visit [chrome://extensions/](chrome://extensions/)
 
-![chrome-open-settings](./img/5.open-dev.assets/chrome-extensions-page.webp)
+![chrome-open-settings](./open-dev.assets/chrome-extensions-page.webp)
 
 ② Enable `Developer mode` (In some browsers, this mode may be located in other options, such as 360 Browser: Advanced Management > Developer Mode)
 
-![chrome-open-dev](./img/5.open-dev.assets/chrome-developer-mode-toggle.webp)
+![chrome-open-dev](./open-dev.assets/chrome-developer-mode-toggle.webp)
 
 ③ After enabling developer mode, disable and then re-enable the extension, or restart the browser to make the script functionality effective.
 
@@ -125,7 +125,7 @@ For Edge Mobile with browser engine version ≥ 138, Developer Mode is not requi
 
 For Edge Mobile with browser engine versions lower than 138, or without the `Allow user scripts` option, tap the settings button at the top of the extensions page to enable Developer Mode.
 
-![edge-mobile-open-dev](./img/5.open-dev.assets/edge%20mobile.png)
+![edge-mobile-open-dev](./open-dev.assets/edge%20mobile.png)
 </TabItem>
 
 </Tabs>

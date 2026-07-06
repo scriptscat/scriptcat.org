@@ -24,17 +24,17 @@ If your browser is not in the above list, you can download the `zip`/`crx` file 
 
 ① First download the `zip` file from [Github Release](https://github.com/scriptscat/scriptcat/releases) or [Community Download](https://bbs.tampermonkey.net.cn/thread-3068-1-1.html) page. If it's a `crx` file, change its extension to `zip`.
 
-② Prepare a folder for storing the plugin, and extract the above zip file to that folder. After extraction, it should look like this (**Note: This folder cannot be deleted or moved, otherwise the extension will not work properly**) ![download-zip](./img/README.assets/download-zip.webp)
+② Prepare a folder for storing the plugin, and extract the above zip file to that folder. After extraction, it should look like this (**Note: This folder cannot be deleted or moved, otherwise the extension will not work properly**) ![download-zip](./use.assets/download-zip.webp)
 
 ③ Open the browser's extension management interface to load the unpacked extension (refer to [Enable developer mode to support manifest v3 ScriptCat](/docs/use/open-dev/) to enable developer mode first)
 
-- 1. **Edge** ![edge-load-unpacked](./img/README.assets/edge-load-unpacked.webp)
-- 2. **Chrome** ![chrome-load-unpacked](./img/README.assets/chrome-load-unpacked.webp)
+- 1. **Edge** ![edge-load-unpacked](./use.assets/edge-load-unpacked.webp)
+- 2. **Chrome** ![chrome-load-unpacked](./use.assets/chrome-load-unpacked.webp)
 
 ④ Select the folder created in step ② (after loading is complete, the ScriptCat icon will appear in the extension list in the extension management interface, and you can also see it by clicking the extension button in the upper right corner of the browser's address bar)
 
-- 1. **Edge** ![edge-load-unpacked-img](./img/README.assets/edge-load-unpacked-img.webp)
-- 2. **Chrome** ![chrome-load-unpacked-img](./img/README.assets/chrome-load-unpacked-img.webp)
+- 1. **Edge** ![edge-load-unpacked-img](./use.assets/edge-load-unpacked-img.webp)
+- 2. **Chrome** ![chrome-load-unpacked-img](./use.assets/chrome-load-unpacked-img.webp)
 
 ⑤ Click the ScriptCat icon in the upper right corner, click `┆` > Get Scripts in the upper right corner of the interface that appears, and you can go to the script site to search and install scripts.
 
