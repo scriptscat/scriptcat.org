@@ -31,6 +31,7 @@
 /docs/use/QA/index.html
 /docs/use/from-other/migrate-from-tampermonkey/index.html
 /docs/use/from-other/migrate-from-violentmonkey/index.html
+/docs/use/index.html
 /docs/use/install_comple/index.html
 /docs/use/open-dev/index.html
 /docs/use/policy/disclaimer/index.html
@@ -73,6 +74,7 @@
 /en/docs/use/QA/index.html
 /en/docs/use/from-other/migrate-from-tampermonkey/index.html
 /en/docs/use/from-other/migrate-from-violentmonkey/index.html
+/en/docs/use/index.html
 /en/docs/use/install_comple/index.html
 /en/docs/use/open-dev/index.html
 /en/docs/use/policy/disclaimer/index.html

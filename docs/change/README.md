@@ -2124,7 +2124,7 @@ Firefox 的 Manifest V3 版本还在筹备中。
 
 - 界面 UI 调整
 - 增加`GM_xmlhttpRequest`所支持的`unsafe header`和支持`arraybuffer`,`nocache`,`user`,`password`,`overrideMimeType`,功能
-- 增加运行日志查看功能,点击面板`运行状态`栏即可查看最后一次运行日志.具体请看:[console](/dev/meta.md#console)功能
+- 增加运行日志查看功能,点击面板`运行状态`栏即可查看最后一次运行日志.具体请看:[console](/dev/background.md#日志)功能
 - 修复`GM_notification`的`done`回调
 - 优化调整代码列表排序逻辑
 - 优化最后更新栏点击可进行脚本的手动检查更新

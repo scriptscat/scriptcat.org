@@ -9,8 +9,13 @@ const config = {
   tagline: "可以执行自定义脚本的浏览器扩展",
   url: "https://docs.scriptcat.org",
   baseUrl: "/",
-  onBrokenLinks: "warn",
-  onBrokenMarkdownLinks: "warn",
+  onBrokenLinks: "throw",
+  onBrokenAnchors: "throw",
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: "throw",
+    },
+  },
   favicon: "img/logo.png",
 
   trailingSlash: true,
@@ -19,7 +24,24 @@ const config = {
   organizationName: "scriptscat", // Usually your GitHub org/user name.
   projectName: "scriptcat.org", // Usually your repo name.
 
-  plugins: [["@gracefullight/docusaurus-plugin-tailwind", {}]],
+  plugins: [
+    ["@gracefullight/docusaurus-plugin-tailwind", {}],
+    [
+      "@docusaurus/plugin-client-redirects",
+      /** @type {import('@docusaurus/plugin-client-redirects').Options} */
+      ({
+        // /docs/use/use/ is the quick-start doc; /docs/use/ itself has never
+        // resolved (broken footer link + broken in-content links) — redirect
+        // it instead of renaming the existing doc, so no published URL moves.
+        redirects: [
+          {
+            to: "/docs/use/use/",
+            from: "/docs/use/",
+          },
+        ],
+      }),
+    ],
+  ],
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -51,7 +73,12 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: "https://github.com/scriptscat/scriptcat.org/edit/main",
+          // So "Edit this page" on /en/ docs opens the en source file, not zh.
+          editLocalizedFiles: true,
         },
+        // No blog/ directory exists; without this, newer Docusaurus versions
+        // emit an empty /blog/ index route that was never part of the site.
+        blog: false,
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
@@ -131,7 +158,7 @@ const config = {
             items: [
               {
                 label: "使用指南",
-                to: "/docs/use",
+                to: "/docs/use/use",
               },
               {
                 label: "开发指南",
