@@ -59,7 +59,10 @@ function checkFile(file) {
   if (NUMBER_PREFIX.test(basename(file))) issues.push("number-prefixed filename");
 
   const hideTitle = fm.hide_title === "true";
-  if (!hideTitle && /^#\s+.+$/m.test(body)) {
+  // Strip fenced code blocks first: sample "# Heading" lines inside example
+  // markdown/file snippets aren't real page headings.
+  const bodyWithoutCodeFences = body.replace(/```[\s\S]*?```/g, "");
+  if (!hideTitle && /^#\s+.+$/m.test(bodyWithoutCodeFences)) {
     issues.push("body contains an H1 (title should come from frontmatter `title` only)");
   }
 

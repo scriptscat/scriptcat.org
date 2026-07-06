@@ -1,6 +1,6 @@
-
-
-# 订阅模式
+---
+title: 订阅模式
+---
 
 文件开头必须使用`UserSubscribe`而不是`UserScript`，安装时的链接推荐使用`user.sub.js`后缀，必须使用`https`链接。
 

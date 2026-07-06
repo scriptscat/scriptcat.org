@@ -1,4 +1,6 @@
-# Script Installation
+---
+title: Script Installation
+---
 
 This page is used as an intermediate step to install a new user script in `ScriptCat`.
 

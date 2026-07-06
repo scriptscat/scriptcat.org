@@ -1,4 +1,6 @@
-# 从 Violentmonkey 迁移到 Scriptcat
+---
+title: 从 Violentmonkey 迁移到 Scriptcat
+---
 
 如果你正在使用 Violentmonkey 并希望迁移到 Scriptcat，以下是一些步骤和提示，帮助你顺利完成迁移。
 

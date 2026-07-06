@@ -1,5 +1,6 @@
-
-# Skill 管理 API
+---
+title: Skill 管理 API
+---
 
 `@grant CAT.agent.skills`
 

@@ -1,5 +1,6 @@
-
-# DOM 操作 API
+---
+title: DOM 操作 API
+---
 
 `@grant CAT.agent.dom`
 

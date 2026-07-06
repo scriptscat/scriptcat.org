@@ -9,7 +9,6 @@ import BrowserGuide from '@site/src/components/BrowserGuide';
 import GithubStar from '@site/src/components/GithubStar';
 import SponsorBlock from '@site/src/components/SponsorBlock/en.mdx';
 
-# Enable Browser User Scripts Support
 
 <GithubStar variant="bar" scene="install" />
 

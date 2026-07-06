@@ -1,8 +1,10 @@
+---
+title: Beta Changelog
+---
 
 import GithubStar from '@site/src/components/GithubStar';
 import SponsorBlock from '@site/src/components/SponsorBlock/en.mdx';
 
-# Beta Changelog
 
 <GithubStar variant="bar" scene="changelog" />
 

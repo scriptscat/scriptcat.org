@@ -1,5 +1,6 @@
-
-# Synchronization and Backup
+---
+title: Synchronization and Backup
+---
 
 Supports the following cloud storage:
 

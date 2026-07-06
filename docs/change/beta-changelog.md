@@ -1,8 +1,10 @@
+---
+title: Beta 更新日志
+---
 
 import GithubStar from '@site/src/components/GithubStar';
 import SponsorBlock from '@site/src/components/SponsorBlock/zh.mdx';
 
-# Beta 更新日志
 
 <GithubStar variant="bar" scene="changelog" />
 

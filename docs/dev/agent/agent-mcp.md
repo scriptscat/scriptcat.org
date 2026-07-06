@@ -1,5 +1,6 @@
-
-# MCP 管理 API
+---
+title: MCP 管理 API
+---
 
 `@grant CAT.agent.mcp`
 

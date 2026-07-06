@@ -1,4 +1,6 @@
-# Migrating from Violentmonkey to Scriptcat
+---
+title: Migrating from Violentmonkey to Scriptcat
+---
 
 If you are currently using Violentmonkey and want to migrate to Scriptcat, here are the steps and tips to help you complete the migration smoothly.
 

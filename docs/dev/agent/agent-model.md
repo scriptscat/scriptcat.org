@@ -1,5 +1,6 @@
-
-# 模型查询 API
+---
+title: 模型查询 API
+---
 
 `@grant CAT.agent.model`
 

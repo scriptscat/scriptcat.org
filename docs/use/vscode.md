@@ -1,8 +1,6 @@
 ---
-title: VSCode 扩展开发脚本
+title: 使用 VSCode 开发脚本
 ---
-
-# 使用 VSCode 开发脚本
 
 ScriptCat 提供了 VSCode 扩展，让你可以在 VSCode 中编写用户脚本，保存后自动同步到浏览器中的 ScriptCat，无需手动复制粘贴，大幅提升开发效率。
 

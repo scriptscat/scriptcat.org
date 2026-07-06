@@ -1,4 +1,4 @@
 {
   "i18nParityStrict": false,
-  "frontmatterStrict": false
+  "frontmatterStrict": true
 }

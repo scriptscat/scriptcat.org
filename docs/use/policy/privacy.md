@@ -1,8 +1,7 @@
 ---
-title: 隐私政策
+title: ScriptCat 隐私政策
+sidebar_label: 隐私政策
 ---
-
-# ScriptCat 隐私政策
 
 欢迎您使用 ScriptCat 浏览器扩展！ScriptCat（以下简称"我们的产品"）是由 scriptcat.org（以下简称"我们"）开发并运营的浏览器扩展。
 

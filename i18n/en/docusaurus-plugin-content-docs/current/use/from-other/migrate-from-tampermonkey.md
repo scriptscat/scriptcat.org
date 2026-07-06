@@ -1,4 +1,6 @@
-# Migrate from Tampermonkey to Scriptcat
+---
+title: Migrate from Tampermonkey to Scriptcat
+---
 
 If you are currently using Tampermonkey and want to migrate to Scriptcat, here are some steps and tips to help you complete the migration smoothly.
 

@@ -1,8 +1,6 @@
 ---
-title: Develop Scripts with the VSCode Extension
+title: Develop Scripts with VSCode
 ---
-
-# Develop Scripts with VSCode
 
 ScriptCat provides a VSCode extension that lets you write user scripts in VSCode. After saving, changes are automatically synced to ScriptCat in the browser — no manual copy-pasting required, greatly improving development efficiency.
 

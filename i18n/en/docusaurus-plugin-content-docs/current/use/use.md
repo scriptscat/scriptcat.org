@@ -1,8 +1,7 @@
 ---
 slug: /use/use
+title: Quick Start
 ---
-
-# Quick Start
 
 ScriptCat is a browser extension that can execute user scripts, compatible with Tampermonkey scripts, and provides more features. If you find any bugs or have suggestions, you can visit [GitHub Repo](https://github.com/scriptscat/scriptcat) to provide feedback.
 

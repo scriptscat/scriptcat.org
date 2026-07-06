@@ -1,8 +1,7 @@
 ---
-title: Disclaimer
+title: ScriptCat Disclaimer
+sidebar_label: Disclaimer
 ---
-
-# ScriptCat Disclaimer
 
 ScriptCat related products and services (including but not limited to browser extensions, script websites, API services, etc., collectively referred to as "Services") are developed and provided by the ScriptCat team (hereinafter referred to as "we" or "developers"). Before you start using our services, please carefully read the following disclaimer. User access, download, installation, and use of any of our products or services will be deemed as unconditional acceptance of all content of this statement.
 
