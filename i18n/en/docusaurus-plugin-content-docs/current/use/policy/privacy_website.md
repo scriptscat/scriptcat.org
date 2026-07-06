@@ -1,5 +1,4 @@
 ---
-id: privacy_website
 title: Script Website Privacy Policy
 ---
 

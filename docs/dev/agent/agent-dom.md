@@ -1,7 +1,3 @@
----
-id: agent-dom
-sidebar_position: 3
----
 
 # DOM 操作 API
 

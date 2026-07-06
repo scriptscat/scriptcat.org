@@ -1,7 +1,3 @@
----
-id: agent-skill-dev
-sidebar_position: 9
----
 
 # Skill 开发指南
 

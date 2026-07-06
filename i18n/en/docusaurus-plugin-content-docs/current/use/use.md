@@ -1,5 +1,5 @@
 ---
-id: use
+slug: /use/use
 ---
 
 # Quick Start

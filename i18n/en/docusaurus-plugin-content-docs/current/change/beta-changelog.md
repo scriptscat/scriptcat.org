@@ -1,7 +1,3 @@
----
-id: beta-changelog
-sidebar_position: 1
----
 
 import GithubStar from '@site/src/components/GithubStar';
 import SponsorBlock from '@site/src/components/SponsorBlock/en.mdx';
@@ -12,7 +8,7 @@ import SponsorBlock from '@site/src/components/SponsorBlock/en.mdx';
 
 <SponsorBlock />
 
-ScriptCat's version releases are divided into two main branches: stable releases and pre-release versions. For the stable release changelog, please see: [Changelog](./README.md)
+ScriptCat's version releases are divided into two main branches: stable releases and pre-release versions. For the stable release changelog, please see: [Changelog](./index.md)
 
 Pre-release versions are released before the official stable version. They are typically used to test new features. Pre-release version numbers contain a pre-release identifier, for example:
 `1.0.0-beta.1`.

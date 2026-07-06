@@ -1,7 +1,3 @@
----
-id: agent
-sidebar_position: 1
----
 
 # Agent 智能助手
 

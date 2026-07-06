@@ -1,7 +1,3 @@
----
-id: beta-changelog
-sidebar_position: 1
----
 
 import GithubStar from '@site/src/components/GithubStar';
 import SponsorBlock from '@site/src/components/SponsorBlock/zh.mdx';
@@ -12,7 +8,7 @@ import SponsorBlock from '@site/src/components/SponsorBlock/zh.mdx';
 
 <SponsorBlock />
 
-脚本猫的版本发布主要分为两条分支: 正式版本与预发布版本，正式版本更新日志请看：[更新日志](./README.md)
+脚本猫的版本发布主要分为两条分支: 正式版本与预发布版本，正式版本更新日志请看：[更新日志](./index.md)
 
 预发布版本是在正式发布之前的版本.它们通常用于测试新功能,预发布版本的版本号包含一个预发布标识符,例如:
 `1.0.0-beta.1`.

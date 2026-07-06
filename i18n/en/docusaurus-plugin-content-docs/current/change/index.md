@@ -1,7 +1,3 @@
----
-id: change
-sidebar_position: 1
----
 
 import GithubStar from '@site/src/components/GithubStar';
 import SponsorBlock from '@site/src/components/SponsorBlock/en.mdx';
@@ -12,7 +8,7 @@ import SponsorBlock from '@site/src/components/SponsorBlock/en.mdx';
 
 <SponsorBlock />
 
-For Beta version changelog, please see [Beta Changelog](./beta.md)
+For Beta version changelog, please see [Beta Changelog](./beta-changelog.md)
 
 ⚠️ Please note that if you are using Windows 8/7/XP, or your browser kernel version is lower than 120, you need to manually install the [legacy version of ScriptCat](https://github.com/scriptscat/scriptcat/releases). v0.16.x is the last version that supports Manifest V2. Installation steps can be found at: [Install Extension by Loading Unpacked](/docs/use/use/#load-unpacked-extension-installation).
 

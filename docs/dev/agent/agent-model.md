@@ -1,7 +1,3 @@
----
-id: agent-model
-sidebar_position: 6
----
 
 # 模型查询 API
 

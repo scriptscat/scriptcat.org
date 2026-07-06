@@ -1,5 +1,4 @@
 ---
-id: privacy
 title: Privacy Policy
 ---
 

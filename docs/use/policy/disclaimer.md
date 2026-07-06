@@ -1,5 +1,4 @@
 ---
-id: disclaimer
 title: 免责声明
 ---
 

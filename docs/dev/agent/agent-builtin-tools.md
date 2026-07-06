@@ -1,7 +1,3 @@
----
-id: agent-builtin-tools
-sidebar_position: 10
----
 
 # 内置工具参考
 

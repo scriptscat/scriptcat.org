@@ -1,5 +1,5 @@
 ---
-id: use
+slug: /use/use
 ---
 
 # 快速开始

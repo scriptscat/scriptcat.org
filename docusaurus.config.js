@@ -124,13 +124,13 @@ const config = {
           },
           {
             type: "doc",
-            docId: "dev/dev",
+            docId: "dev/index",
             position: "left",
             label: "开发文档",
           },
           {
             type: "doc",
-            docId: "change/change",
+            docId: "change/index",
             position: "right",
             label: "更新日志",
           },

@@ -1,7 +1,3 @@
----
-id: agent-skill
-sidebar_position: 4
----
 
 # Skill 管理 API
 

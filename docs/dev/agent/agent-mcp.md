@@ -1,7 +1,3 @@
----
-id: agent-mcp
-sidebar_position: 8
----
 
 # MCP 管理 API
 

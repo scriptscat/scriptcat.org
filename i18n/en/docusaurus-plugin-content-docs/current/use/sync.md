@@ -1,6 +1,3 @@
----
-id: sync
----
 
 # Synchronization and Backup
 

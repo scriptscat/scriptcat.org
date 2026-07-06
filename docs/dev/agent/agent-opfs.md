@@ -1,7 +1,3 @@
----
-id: agent-opfs
-sidebar_position: 7
----
 
 # OPFS 文件 API
 

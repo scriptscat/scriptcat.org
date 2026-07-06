@@ -1,5 +1,4 @@
 ---
-id: privacy_website
 title: 脚本站点 隐私政策
 ---
 
