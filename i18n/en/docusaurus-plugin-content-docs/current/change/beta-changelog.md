@@ -23,6 +23,44 @@ You can obtain pre-release versions from the [Release](https://github.com/script
 
 Additionally, besides pre-releases, ScriptCat builds the extension on [Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml) after each code commit is merged to the main branch. If you want to experience the latest features or fixes, you can download them from the [Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml) page.
 
+<a name="1.5.0-beta"></a>
+
+## 1.5.0-beta (2026-07-08)
+
+This pre-release brings a **brand-new UI**: a full presentation-layer rewrite based on shadcn/ui + Tailwind CSS v4 + React 19, delivering a cleaner, more consistent interface and a better overall experience. It also includes design optimizations for mobile, so mobile users get a good experience too. In addition, it adds new-script-type selection in the editor, a manual download link for local backups, and more, while fixing scheduled-task invalid-timezone and native GM_download cross-origin issues.
+
+### 🎨 UI Improvements
+
+- ♻️ Brand-new UI: a full presentation-layer rewrite based on shadcn/ui + Tailwind CSS v4 + React 19, with improved mobile adaptation for a better experience on both desktop and mobile ([#1514](https://github.com/scriptscat/scriptcat/pull/1514)) (by @CodFrm)
+
+### 🚀 Major New Features
+
+- ✨ Editor tab-bar "＋" now supports choosing the new script type ([#1544](https://github.com/scriptscat/scriptcat/pull/1544)) (by @cyfung1031)
+- ✨ Add a manual download link for local backups ([#1543](https://github.com/scriptscat/scriptcat/pull/1543)) (by @cyfung1031)
+- ✨ Enable structured_clone serialization for extension messaging on Chromium 148+ ([#1534](https://github.com/scriptscat/scriptcat/pull/1534)) (by @cyfung1031)
+- ✨ Pre-release (beta) versions now auto-open the changelog page after an update (by @CodFrm)
+
+### 🧩 GM API Changes
+
+- 🐛 Make native GM_download honor @connect, like GM_xmlhttpRequest ([#1506](https://github.com/scriptscat/scriptcat/pull/1506)) (by @DudeAint)
+
+### ⚡️ Performance Improvements
+
+- ⚡️ Optimize script loading cache and fix leftover Popup menu items ([#1511](https://github.com/scriptscat/scriptcat/pull/1511)) (by @cyfung1031)
+
+### 🧑‍💻 Editor
+
+- ♻️ Adjust `eslint-plugin-userscripts` rules ([#1510](https://github.com/scriptscat/scriptcat/pull/1510)) (by @cyfung1031)
+
+### 🐛 Bug Fixes
+
+- 🐛 Avoid scheduled-task errors caused by cron auto-detecting an invalid timezone ([#1531](https://github.com/scriptscat/scriptcat/pull/1531)) (by @cyfung1031)
+- 🐛 Fix the unavailable demo API in the crontab example ([#1542](https://github.com/scriptscat/scriptcat/pull/1542)) (by @cyfung1031)
+
+### 🌐 Localization
+
+- 🌐 Add Turkish language (by @azizaktas)
+
 <a name="1.4.0-beta.4"></a>
 
 ## 1.4.0-beta.4 (2026-06-13)

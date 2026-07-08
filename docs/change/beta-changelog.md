@@ -23,6 +23,44 @@ import SponsorBlock from '@site/src/components/SponsorBlock/zh.mdx';
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+<a name="1.5.0-beta"></a>
+
+## 1.5.0-beta (2026-07-08)
+
+本次预发布带来**全新 UI**：基于 shadcn/ui + Tailwind CSS v4 + React 19 全面重构表现层，界面更清爽、更一致，带来更好的使用体验；并针对移动端进行了设计优化，为移动端用户也提供良好的使用体验。此外还新增了编辑器新建脚本类型选择、本地备份手动下载等功能，并修复了定时任务无效时区、原生 GM_download 跨域等问题。
+
+### 🎨 UI 改进
+
+- ♻️ 全新 UI：基于 shadcn/ui + Tailwind CSS v4 + React 19 全面重构表现层，优化移动端适配，为桌面与移动端都带来更好的使用体验 ([#1514](https://github.com/scriptscat/scriptcat/pull/1514)) (by @CodFrm)
+
+### 🚀 主要新功能
+
+- ✨ 编辑器标签栏「＋」支持选择新建脚本类型 ([#1544](https://github.com/scriptscat/scriptcat/pull/1544)) (by @cyfung1031)
+- ✨ 为本地备份添加手动下载链接 ([#1543](https://github.com/scriptscat/scriptcat/pull/1543)) (by @cyfung1031)
+- ✨ Chromium 148+ 扩展消息启用 structured_clone 序列化 ([#1534](https://github.com/scriptscat/scriptcat/pull/1534)) (by @cyfung1031)
+- ✨ 预发布（beta）版本更新后自动打开更新日志页 (by @CodFrm)
+
+### 🧩 GM API 变更
+
+- 🐛 让原生 GM_download 遵循 @connect（与 GM_xmlhttpRequest 一致） ([#1506](https://github.com/scriptscat/scriptcat/pull/1506)) (by @DudeAint)
+
+### ⚡️ 性能优化
+
+- ⚡️ 优化脚本加载缓存，并修复 Popup 菜单残留 ([#1511](https://github.com/scriptscat/scriptcat/pull/1511)) (by @cyfung1031)
+
+### 🧑‍💻 编辑器
+
+- ♻️ 调整 `eslint-plugin-userscripts` 规则 ([#1510](https://github.com/scriptscat/scriptcat/pull/1510)) (by @cyfung1031)
+
+### 🐛 Bug 修复
+
+- 🐛 避免 cron 自动侦测无效时区导致定时任务相关异常 ([#1531](https://github.com/scriptscat/scriptcat/pull/1531)) (by @cyfung1031)
+- 🐛 修复 crontab 示例中不可用的演示 API ([#1542](https://github.com/scriptscat/scriptcat/pull/1542)) (by @cyfung1031)
+
+### 🌐 国际化
+
+- 🌐 新增土耳其语 (by @azizaktas)
+
 <a name="1.4.0-beta.4"></a>
 
 ## 1.4.0-beta.4 (2026-06-13)
