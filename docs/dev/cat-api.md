@@ -1,8 +1,6 @@
 ---
-id: cat-api
+title: CatApi 文档
 ---
-
-# CatApi 文档
 
 ## 说明
 

@@ -1,9 +1,6 @@
 ---
-id: agent
-sidebar_position: 1
+title: Agent 智能助手
 ---
-
-# Agent 智能助手
 
 :::caution 测试阶段
 Agent 功能目前仍处于测试阶段，以下 API 和行为可能会在正式发布前进行调整。

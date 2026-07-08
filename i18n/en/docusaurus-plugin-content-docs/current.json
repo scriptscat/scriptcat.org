@@ -10,5 +10,9 @@
   "sidebar.use.category.从其它管理器迁移": {
     "message": "Migrate from other managers",
     "description": "The label for category 从其它管理器迁移 in sidebar use"
+  },
+  "sidebar.dev.category.Agent 智能助手": {
+    "message": "Agent",
+    "description": "The label for category Agent 智能助手 in sidebar dev"
   }
 }

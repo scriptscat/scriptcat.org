@@ -1,8 +1,6 @@
 ---
-id: api
+title: API 文档
 ---
-
-# API 文档
 
 ## 说明
 
@@ -44,7 +42,7 @@ GM_log("调试信息", "debug");
 
 ### GM_get/set/deleteValue
 
-从储存中获取或者设置值，数据在同一 [**storageName**](meta.md#storagename-%F0%9F%A7%AA) 中可以共享，且可以实时的同步。
+从储存中获取或者设置值，数据在同一 [**storageName**](meta.md#storagename-) 中可以共享，且可以实时的同步。
 
 ```typescript
 // 添加数据，请注意数据只能为 bool;string;number;object 四种类型，不能存储对象实例
@@ -103,9 +101,9 @@ GM_deleteValues(["a", "b"]);
 
 ### GM_add/removeValueChangeListener
 
-> tabid 于 0.17.0-alpha 后删除，详情见 [GM_cookie](#gm_cookie)
+> tabid 于 0.17.0-alpha 后删除，详情见 [GM_cookie](#gm_cookie-)
 
-对值的监听操作，add 会返回一个监听 id，使用 remove 可以取消监听。可以使用这个方法实现一个简单的通信，使用 [**storageName**](meta.md#storagename-%F0%9F%A7%AA) 可以实现跨脚本通信。
+对值的监听操作，add 会返回一个监听 id，使用 remove 可以取消监听。可以使用这个方法实现一个简单的通信，使用 [**storageName**](meta.md#storagename-) 可以实现跨脚本通信。
 
 ```typescript
 // tabid 是只有后台脚本监听才有的参数

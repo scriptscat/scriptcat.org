@@ -1,0 +1,147 @@
+---
+title: Enable Browser User Scripts Support
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import { Icon } from "@iconify/react";
+import BrowserGuide from '@site/src/components/BrowserGuide';
+import GithubStar from '@site/src/components/GithubStar';
+import SponsorBlock from '@site/src/components/SponsorBlock/en.mdx';
+
+
+<GithubStar variant="bar" scene="install" />
+
+<BrowserGuide texts={{
+  allowUserScripts: {
+    title: "Your browser supports 'Allow User Scripts'",
+    description: "Follow the steps below to enable the 'Allow User Scripts' option to use ScriptCat normally.",
+    button: "View steps",
+    anchor: "#allow-user-scripts",
+  },
+  devMode: {
+    title: "Your browser needs 'Developer Mode' enabled",
+    description: "Follow the steps below to enable 'Developer Mode' to use ScriptCat normally.",
+    button: "View steps",
+    anchor: "#enable-developer-mode",
+  },
+  legacy: {
+    title: "Your browser version is too old",
+    description: "Your browser does not support Manifest V3. You need to manually install the legacy ScriptCat (v0.16.x). See instructions below.",
+  },
+  nonChromium: {
+    title: "Chromium-based browser not detected",
+    description: "ScriptCat currently only supports Chromium-based browsers (such as Chrome, Edge, etc.). If you are using a Chromium-based browser, please ignore this message and follow the steps below.",
+  },
+}} />
+
+<SponsorBlock />
+
+## Allow User Scripts
+
+[Allow User Scripts](https://developer.chrome.com/docs/extensions/reference/api/userScripts?hl=en#chrome_versions_138_and_newer_allow_user_scripts_toggle) is a new feature of Manifest V3 that allows user scripts to run in the browser.
+
+<Tabs groupId="browser" queryString>
+  <TabItem value="edge" label={<div className="flex items-center gap-1"><Icon height={16} width={16} icon="logos:microsoft-edge" />Edge</div>} default>
+
+① Open the browser's extension management interface, or visit [edge://extensions/](edge://extensions/)
+
+![edge-open-settings](./open-dev.assets/edge-extensions-page.webp)
+
+② In the extension management interface, find the ScriptCat extension and click `Details`
+
+![edge-extensions-details](open-dev.assets/edge-extensions-details.png)
+
+③ In the ScriptCat extension details page, find the `Allow user scripts` option and enable it. Then disable and re-enable the extension, or restart the browser to make the script functionality effective.
+
+> ⚠️⚠️⚠️ For lower version Edge browsers (\<=143 version) or users without this option, please refer to [Enable Developer Mode](#enable-developer-mode)
+
+![edge-allow-user-scripts](open-dev.assets/edge-allow-user-scripts.png)
+
+  </TabItem>
+  <TabItem value="chrome" label={<div className="flex items-center gap-1"><Icon height={16} width={16} icon="logos:chrome" />Chrome</div>}>
+
+① Open the browser's extension management interface, or visit [chrome://extensions/](chrome://extensions/)
+
+![chrome-open-settings](./open-dev.assets/chrome-extensions-page.webp)
+
+② In the extension management interface, find the ScriptCat extension and click `Details`
+
+![scriptcat-extension-details](open-dev.assets/scriptcat-extension-details.webp)
+
+③ In the ScriptCat extension details page, find the `Allow user scripts` option and enable it. Then disable and re-enable the extension, or restart the browser to make the script functionality effective.
+
+![allow-user-scripts-toggle](open-dev.assets/allow-user-scripts-toggle.webp)
+</TabItem>
+  <TabItem value="edge-mobile" label={<div className="flex items-center gap-1"><Icon height={16} width={16} icon="logos:microsoft-edge" />Edge Mobile</div>}>
+
+For Edge Mobile with browser engine version ≥ 138, Developer Mode is not required. Enable `Allow user scripts` in the extension settings instead.
+
+① Open the Edge Mobile extensions list, find the ScriptCat extension, and tap the `⋮` button on the right
+
+② In the extension settings popup, enable `Allow user scripts`
+
+③ Disable and re-enable the extension, or restart the browser to make the script functionality effective.
+
+> ⚠️⚠️⚠️ For browser engine versions lower than 138, or users without this option, please refer to [Enable Developer Mode](#enable-developer-mode)
+
+![edge-mobile-allow-user-scripts](./open-dev.assets/edge%20mobile%20138.png)
+
+  </TabItem>
+</Tabs>
+
+## Enable Developer Mode
+
+<Tabs groupId="browser" queryString>
+  <TabItem value="edge" label={<div className="flex items-center gap-1"><Icon height={16} width={16} icon="logos:microsoft-edge" /><span>Edge</span></div>} default>
+
+① Open the browser's extension management interface, or visit [edge://extensions/](edge://extensions/)
+
+![edge-open-settings](./open-dev.assets/edge-extensions-page.webp)
+
+② Enable `Developer mode` (In some browsers, this mode may be located in other options, such as 360 Browser: Advanced Management > Developer Mode)
+
+![edge-open-dev](./open-dev.assets/edge-developer-mode-toggle.webp)
+
+③ After enabling developer mode, disable and then re-enable the extension, or restart the browser to make the script functionality effective.
+
+  </TabItem>
+  <TabItem value="chrome" label={<div className="flex items-center gap-1"><Icon height={16} width={16} icon="logos:chrome" /><span>Chrome</span></div>}>
+
+① Open the browser's extension management interface, or visit [chrome://extensions/](chrome://extensions/)
+
+![chrome-open-settings](./open-dev.assets/chrome-extensions-page.webp)
+
+② Enable `Developer mode` (In some browsers, this mode may be located in other options, such as 360 Browser: Advanced Management > Developer Mode)
+
+![chrome-open-dev](./open-dev.assets/chrome-developer-mode-toggle.webp)
+
+③ After enabling developer mode, disable and then re-enable the extension, or restart the browser to make the script functionality effective.
+
+  </TabItem>
+
+<TabItem value="edge-mobile" label={<div className="flex items-center gap-1"><Icon height={16} width={16} icon="logos:microsoft-edge" /><span>Edge Mobile</span></div>}>
+
+For Edge Mobile with browser engine versions lower than 138, or without the `Allow user scripts` option, tap the settings button at the top of the extensions page to enable Developer Mode.
+
+![edge-mobile-open-dev](./open-dev.assets/edge%20mobile.png)
+</TabItem>
+
+</Tabs>
+
+:::warning Legacy Version Notice
+
+If you are using Windows 8/7/XP systems, or your browser engine version is lower than 120, you need to manually install the [legacy ScriptCat](https://bbs.tampermonkey.net.cn/thread-3068-1-1.html). v0.16.x is the last version that supports Manifest V2. Installation steps can be found at: [Load unpacked extension installation](/docs/use/use/#load-unpacked-extension-installation).
+
+:::
+
+<details>
+<summary>Technical Background: Manifest V3</summary>
+
+Due to browser restrictions, extensions are forced to upgrade to Manifest V3, and Manifest V2 extensions will be completely discontinued after June 2025. Under the limitations of Manifest V3, you must enable developer mode or user scripts functionality to use ScriptCat extension normally.
+
+Reference: [Developer mode for extension users](https://developer.chrome.com/docs/extensions/reference/api/userScripts?hl=en#developer_mode_for_extension_users), [Manifest V3](https://developer.chrome.com/docs/extensions/develop/migrate/what-is-mv3?hl=en)
+
+For browser engine versions ≥ 138, you need to enable "Allow User Scripts". For lower versions, use "Enable Developer Mode".
+
+</details>
