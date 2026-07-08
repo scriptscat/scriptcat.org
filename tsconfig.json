@@ -3,7 +3,9 @@
   "extends": "@docusaurus/tsconfig",
   "compilerOptions": {
     "baseUrl": ".",
-    "paths": {},
+    "paths": {
+      "@site/*": ["./*"]
+    },
     "jsx": "react-jsx",
   }
 }
