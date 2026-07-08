@@ -27,7 +27,7 @@ Additionally, besides pre-releases, ScriptCat builds the extension on [Github Ac
 
 ## 1.5.0-beta (2026-07-08)
 
-This pre-release brings a **brand-new UI**: a full presentation-layer rewrite based on shadcn/ui + Tailwind CSS v4 + React 19, delivering a cleaner, more consistent interface and a better overall experience. It also includes design optimizations for mobile, so mobile users get a good experience too. In addition, it adds new-script-type selection in the editor, a manual download link for local backups, and more, while fixing scheduled-task invalid-timezone and native GM_download cross-origin issues.
+This pre-release brings a **brand-new UI** with a cleaner, more consistent interface and a smoother overall experience, along with dedicated design optimizations for mobile so mobile users get a great experience too. In addition, it adds new-script-type selection in the editor, a manual download link for local backups, and more, while fixing scheduled-task invalid-timezone and native GM_download cross-origin issues. If you have any suggestions about the new UI/UX, feel free to join the discussion on [GitHub](https://github.com/scriptscat/scriptcat/discussions).
 
 ### 🎨 UI Improvements
 

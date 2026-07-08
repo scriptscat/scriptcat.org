@@ -27,7 +27,7 @@ import SponsorBlock from '@site/src/components/SponsorBlock/zh.mdx';
 
 ## 1.5.0-beta (2026-07-08)
 
-本次预发布带来**全新 UI**：基于 shadcn/ui + Tailwind CSS v4 + React 19 全面重构表现层，界面更清爽、更一致，带来更好的使用体验；并针对移动端进行了设计优化，为移动端用户也提供良好的使用体验。此外还新增了编辑器新建脚本类型选择、本地备份手动下载等功能，并修复了定时任务无效时区、原生 GM_download 跨域等问题。
+本次预发布带来**全新 UI**，界面更清爽、更一致，操作体验更顺手；并针对移动端进行了专门的设计优化，让移动端用户也能获得良好的使用体验。此外还新增了编辑器新建脚本类型选择、本地备份手动下载等功能，并修复了定时任务无效时区、原生 GM_download 跨域等问题。如果你对新的 UI/UX 有任何建议，欢迎前往 [GitHub 讨论区](https://github.com/scriptscat/scriptcat/discussions) 参与讨论。
 
 ### 🎨 UI 改进
 
