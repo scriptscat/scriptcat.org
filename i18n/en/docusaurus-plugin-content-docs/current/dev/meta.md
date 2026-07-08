@@ -121,7 +121,7 @@ Two special values:
 
 ### connect
 
-Requests access permission for a site; see `GM_cookie` and `GM_xmlhttpRequest`
+Requests access permission for a site; see `GM_cookie` and `GM_xmlhttpRequest`. `GM_download` in `native` mode also honors `@connect` (undeclared hosts trigger a confirmation prompt, unlike Tampermonkey)
 
 ### resource
 

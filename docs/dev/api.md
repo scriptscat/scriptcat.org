@@ -523,6 +523,7 @@ GM_xmlhttpRequest({
 
 * 下载文件，可设置 header 等内容，相比 TM 多了 cookie 和 anonymous 的功能。如果为 blob url，将会直接打开下载，只有 onload 事件，这是与 TM 不同的一个特性（为后台脚本无法创建下载而服务，可能会在一些生成报表的场景使用到）。
 * 返回 Promise 对象，并提供 `abort()` 方法。
+* 与 TM 不同：`native` 下载模式（默认）会遵循 `@connect`。当下载地址的域名不在脚本 `@connect` 声明内时，会弹窗询问用户，允许后才下载；已在 `@connect` 内的域名静默下载，黑名单域名始终拒绝。`browser` 下载模式不受此限制。（TM 的 `@connect` 仅作用于 `GM_xmlhttpRequest`，不影响 `GM_download`。）
 
 ```typescript
 declare function GM_download(details: GMTypes.DownloadDetails): GMTypes.AbortHandle<boolean>;

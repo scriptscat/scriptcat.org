@@ -523,6 +523,7 @@ GM_xmlhttpRequest({
 
 * Downloads a file, with headers and other options configurable; compared to Tampermonkey it also supports cookie and anonymous options. If given a blob URL, it opens the download directly and only fires the `onload` event — this differs from Tampermonkey and exists to support background scripts, which can't otherwise create a download (useful for scenarios like generating reports).
 * Returns a Promise object and provides an `abort()` method.
+* Unlike Tampermonkey, ScriptCat's `native` download mode (the default) honors `@connect`: when the download URL's host is not covered by the script's `@connect` declarations, ScriptCat prompts the user for confirmation before downloading; hosts covered by `@connect` download silently, and blacklisted hosts are always refused. The `browser` download mode is not subject to this check. (In Tampermonkey, `@connect` applies only to `GM_xmlhttpRequest`, not `GM_download`.)
 
 ```typescript
 declare function GM_download(details: GMTypes.DownloadDetails): GMTypes.AbortHandle<boolean>;
