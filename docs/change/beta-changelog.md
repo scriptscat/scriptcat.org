@@ -31,7 +31,7 @@ import SponsorBlock from '@site/src/components/SponsorBlock/zh.mdx';
 
 ### 🎨 UI 改进
 
-- ♻️ 全新 UI：基于 shadcn/ui + Tailwind CSS v4 + React 19 全面重构表现层，优化移动端适配，为桌面与移动端都带来更好的使用体验 ([#1514](https://github.com/scriptscat/scriptcat/pull/1514)) (by @CodFrm)
+- ♻️ 全新 UI：全面重构界面，优化移动端适配，为桌面与移动端都带来更好的使用体验 ([#1514](https://github.com/scriptscat/scriptcat/pull/1514)) (by @CodFrm)
 
 ### 🚀 主要新功能
 

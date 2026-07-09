@@ -60,7 +60,7 @@
     "description": "Gradient text in main title"
   },
   "homepage.hero.subtitle.userScript": {
-    "message": "user scripts",
+    "message": "userscripts",
     "description": "User script highlight"
   },
   "homepage.hero.subtitle.possibilities": {
@@ -128,7 +128,7 @@
     "description": "Feature title: Background scripts"
   },
   "homepage.features.background.description": {
-    "message": "Unlike regular user scripts, allows your scripts to run continuously in the background without needing to open tabs.",
+    "message": "Unlike regular userscripts, allows your scripts to run continuously in the background without needing to open tabs.",
     "description": "Feature description: Background scripts"
   },
   "homepage.features.security.title": {

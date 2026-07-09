@@ -31,7 +31,7 @@ This pre-release brings a **brand-new UI** with a cleaner, more consistent inter
 
 ### 🎨 UI Improvements
 
-- ♻️ Brand-new UI: a full presentation-layer rewrite based on shadcn/ui + Tailwind CSS v4 + React 19, with improved mobile adaptation for a better experience on both desktop and mobile ([#1514](https://github.com/scriptscat/scriptcat/pull/1514)) (by @CodFrm)
+- ♻️ Brand-new UI: a full interface rewrite, with improved mobile adaptation for a better experience on both desktop and mobile ([#1514](https://github.com/scriptscat/scriptcat/pull/1514)) (by @CodFrm)
 
 ### 🚀 Major New Features
 

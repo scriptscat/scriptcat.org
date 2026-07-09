@@ -6,7 +6,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "ScriptCat",
-  tagline: "可以执行自定义脚本的浏览器扩展",
+  tagline: "强大的用户脚本管理器，激活浏览器的无限可能",
   url: "https://docs.scriptcat.org",
   baseUrl: "/",
   onBrokenLinks: "throw",

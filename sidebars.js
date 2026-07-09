@@ -70,6 +70,7 @@ const sidebars = {
   change: [
     "change/index",
     "change/beta-changelog",
+    "change/v1.5",
     "change/v1.4",
     "change/v1.3",
     "change/v1.2",
