@@ -8,6 +8,7 @@
 /docs/change/v1.2/index.html
 /docs/change/v1.3/index.html
 /docs/change/v1.4/index.html
+/docs/change/v1.5/index.html
 /docs/dev/agent/agent-builtin-tools/index.html
 /docs/dev/agent/agent-conversation/index.html
 /docs/dev/agent/agent-dom/index.html
@@ -51,6 +52,7 @@
 /en/docs/change/v1.2/index.html
 /en/docs/change/v1.3/index.html
 /en/docs/change/v1.4/index.html
+/en/docs/change/v1.5/index.html
 /en/docs/dev/agent/agent-builtin-tools/index.html
 /en/docs/dev/agent/agent-conversation/index.html
 /en/docs/dev/agent/agent-dom/index.html
