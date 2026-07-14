@@ -29,6 +29,7 @@
 /docs/dev/meta/index.html
 /docs/dev/subscribe/index.html
 /docs/script_installation/index.html
+/docs/sponsor/index.html
 /docs/use/QA/index.html
 /docs/use/from-other/migrate-from-tampermonkey/index.html
 /docs/use/from-other/migrate-from-violentmonkey/index.html
@@ -73,6 +74,7 @@
 /en/docs/dev/meta/index.html
 /en/docs/dev/subscribe/index.html
 /en/docs/script_installation/index.html
+/en/docs/sponsor/index.html
 /en/docs/use/QA/index.html
 /en/docs/use/from-other/migrate-from-tampermonkey/index.html
 /en/docs/use/from-other/migrate-from-violentmonkey/index.html
