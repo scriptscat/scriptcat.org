@@ -316,10 +316,6 @@
     "message": "联系团队",
     "description": "Footer community contact team link"
   },
-  "footer.community.recruiting": {
-    "message": "招募中",
-    "description": "Footer community recruiting badge"
-  },
   "footer.copyright.allRightsReserved": {
     "message": "保留所有权利。",
     "description": "Footer copyright all rights reserved text"

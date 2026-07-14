@@ -403,10 +403,6 @@
     "message": "Contact Team",
     "description": "Footer community contact team link"
   },
-  "footer.community.recruiting": {
-    "message": "Recruiting",
-    "description": "Footer community recruiting badge"
-  },
   "footer.copyright.allRightsReserved": {
     "message": "All rights reserved.",
     "description": "Footer copyright all rights reserved text"
@@ -558,5 +554,368 @@
   "uninstall.feature.alert.button": {
     "message": "Suggest Feature on GitHub",
     "description": "Feature alert button text"
+  },
+  "home.install.edge": {
+    "message": "Add to Edge"
+  },
+  "home.install.chrome": {
+    "message": "Add to Chrome"
+  },
+  "home.install.firefox": {
+    "message": "Add to Firefox"
+  },
+  "home.install.manual": {
+    "message": "Download package & install manually"
+  },
+  "home.hero.installTo": {
+    "message": "Add to {browser}"
+  },
+  "home.hero.moreBrowsers": {
+    "message": "More browsers"
+  },
+  "home.hero.eyebrow": {
+    "message": "Open-source userscript engine · Tampermonkey-compatible"
+  },
+  "home.hero.title1": {
+    "message": "Give your browser"
+  },
+  "home.hero.title2": {
+    "message": ""
+  },
+  "home.hero.title3": {
+    "message": "superpowers"
+  },
+  "home.hero.subhead": {
+    "message": "Block ads, supercharge video, automate the boring stuff — install community scripts from the store in one click, with background scripts and powerful APIs for developers. Tampermonkey-compatible, so your existing scripts migrate at zero cost."
+  },
+  "home.hero.browse": {
+    "message": "Browse scripts"
+  },
+  "home.hero.trust": {
+    "message": "Works on Chrome · Edge · Firefox — completely free & open source"
+  },
+  "home.hero.mock.speed": {
+    "message": "Video speed control"
+  },
+  "home.hero.mock.adblock": {
+    "message": "Auto-skip ads"
+  },
+  "home.hero.mock.dark": {
+    "message": "Dark mode for pages"
+  },
+  "home.hero.mock.skip": {
+    "message": "Skip ads"
+  },
+  "home.hero.mock.running": {
+    "message": "3 scripts running on this page"
+  },
+  "home.hero.mock.add": {
+    "message": "Add from script store"
+  },
+  "home.hero.chip.installed": {
+    "message": "Script installed"
+  },
+  "home.hero.chip.installedSub": {
+    "message": "Video Enhancer v2.1"
+  },
+  "home.hero.chip.background": {
+    "message": "3 scripts running in the background"
+  },
+  "home.trust.eyebrow": {
+    "message": "TRUSTED BY USERS & DEVELOPERS WORLDWIDE"
+  },
+  "home.trust.users": {
+    "message": "Installed users"
+  },
+  "home.trust.scripts": {
+    "message": "Community scripts"
+  },
+  "home.trust.stars": {
+    "message": "GitHub Stars"
+  },
+  "home.trust.contributors": {
+    "message": "Contributors"
+  },
+  "home.sc.eyebrow": {
+    "message": "For everyone · No coding required"
+  },
+  "home.sc.title1": {
+    "message": "No code, just "
+  },
+  "home.sc.title2": {
+    "message": "one click"
+  },
+  "home.sc.title3": {
+    "message": " to fix daily annoyances"
+  },
+  "home.sc.sub": {
+    "message": "Grab a script from the store — ads, video, shopping, productivity, all handled for you."
+  },
+  "home.sc.featured.tag": {
+    "message": "Most popular"
+  },
+  "home.sc.featured.t": {
+    "message": "Video, fully enhanced"
+  },
+  "home.sc.featured.d": {
+    "message": "Speed control, auto-skip ads, one-click download, picture-in-picture — a better Bilibili / YouTube / Netflix."
+  },
+  "home.sc.featured.c1": {
+    "message": "Speed control"
+  },
+  "home.sc.featured.c2": {
+    "message": "Ad-block"
+  },
+  "home.sc.featured.c3": {
+    "message": "Download"
+  },
+  "home.sc.featured.c4": {
+    "message": "Picture-in-picture"
+  },
+  "home.sc.featured.btn": {
+    "message": "Browse video scripts"
+  },
+  "home.sc.featured.sites": {
+    "message": "Supports 20+ video sites"
+  },
+  "home.sc.adblock.t": {
+    "message": "Ad-block · Cleaner web"
+  },
+  "home.sc.adblock.d": {
+    "message": "Block ads and popups for a clean, tidy page."
+  },
+  "home.sc.adblock.l": {
+    "message": "Ad-block scripts"
+  },
+  "home.sc.shop.t": {
+    "message": "Shopping · Price compare"
+  },
+  "home.sc.shop.d": {
+    "message": "Compare prices everywhere, price-history charts, one-click coupons."
+  },
+  "home.sc.shop.l": {
+    "message": "Shopping helper"
+  },
+  "home.sc.auto.t": {
+    "message": "Productivity · Automation"
+  },
+  "home.sc.auto.d": {
+    "message": "Auto check-in, batch actions, a handy little toolbox."
+  },
+  "home.sc.auto.l": {
+    "message": "Productivity scripts"
+  },
+  "home.sc.read.t": {
+    "message": "Reading · Translation"
+  },
+  "home.sc.read.d": {
+    "message": "Dark mode, page translation, immersive reading."
+  },
+  "home.sc.read.l": {
+    "message": "Reading enhancers"
+  },
+  "home.step.eyebrow": {
+    "message": "GET STARTED IN 3 STEPS"
+  },
+  "home.step.title1": {
+    "message": "30 seconds"
+  },
+  "home.step.title2": {
+    "message": " to your first script"
+  },
+  "home.step.sub": {
+    "message": "No complex setup — just follow three steps: install and go."
+  },
+  "home.step1.t": {
+    "message": "Install the extension"
+  },
+  "home.step1.d": {
+    "message": "Add it from the Chrome / Edge / Firefox store in one click, or install manually."
+  },
+  "home.step1.p": {
+    "message": "Add to browser"
+  },
+  "home.step2.t": {
+    "message": "Browse the store"
+  },
+  "home.step2.d": {
+    "message": "Explore thousands of scripts in the ScriptCat community and pick a favorite."
+  },
+  "home.step2.p": {
+    "message": "Search: video speed"
+  },
+  "home.step3.t": {
+    "message": "One-click install"
+  },
+  "home.step3.d": {
+    "message": "Click install and the script takes effect on the page right away."
+  },
+  "home.step3.p": {
+    "message": "Installed · Active now"
+  },
+  "home.feat.eyebrow": {
+    "message": "Core features · WHY SCRIPTCAT"
+  },
+  "home.feat.title1": {
+    "message": "Powerful core, "
+  },
+  "home.feat.title2": {
+    "message": "peace of mind"
+  },
+  "home.feat.sub": {
+    "message": "From compatibility to security, from everyday users to developers — ScriptCat has it covered."
+  },
+  "home.feat.compat.t": {
+    "message": "Tampermonkey-compatible"
+  },
+  "home.feat.compat.d": {
+    "message": "Fully compatible with the userscript format and GM APIs — migrate existing scripts with zero changes and no switching cost."
+  },
+  "home.feat.compat.b": {
+    "message": "Supports GM_* APIs · identical metadata block"
+  },
+  "home.feat.store.t": {
+    "message": "Script store"
+  },
+  "home.feat.store.d": {
+    "message": "Install thousands of community scripts in one click, or publish your own and build the ecosystem together."
+  },
+  "home.feat.store.stat": {
+    "message": "{count} community scripts"
+  },
+  "home.feat.secure.t": {
+    "message": "Secure & reliable"
+  },
+  "home.feat.secure.d": {
+    "message": "Transparent, controllable permissions and visible behavior — malicious scripts stopped at the source."
+  },
+  "home.feat.sync.t": {
+    "message": "Cloud sync"
+  },
+  "home.feat.sync.d": {
+    "message": "Scripts and settings sync across devices — nothing lost when you switch or reinstall."
+  },
+  "home.feat.bg.t": {
+    "message": "Background scripts"
+  },
+  "home.feat.bg.d": {
+    "message": "Unique: scripts keep running in the background without an open tab."
+  },
+  "home.feat.api.t": {
+    "message": "Powerful APIs"
+  },
+  "home.feat.api.d": {
+    "message": "Richer than GM: file storage, scheduled tasks and cross-origin requests at your fingertips."
+  },
+  "home.feat.devTag": {
+    "message": "Developer"
+  },
+  "home.dev.eyebrow": {
+    "message": "Built for developers · FOR DEVELOPERS"
+  },
+  "home.dev.title1": {
+    "message": "Turn your browser into your "
+  },
+  "home.dev.title2": {
+    "message": "code runtime"
+  },
+  "home.dev.sub": {
+    "message": "Background scripts, rich APIs, a built-in editor and debugging tools — from your first line to production, all in one place."
+  },
+  "home.dev.bg.t": {
+    "message": "Background scripts"
+  },
+  "home.dev.bg.d": {
+    "message": "No pinned tab required — scripts keep running in the background."
+  },
+  "home.dev.api.t": {
+    "message": "Powerful APIs"
+  },
+  "home.dev.api.d": {
+    "message": "File storage, cron scheduling and cross-origin requests — all included."
+  },
+  "home.dev.editor.t": {
+    "message": "Built-in editor"
+  },
+  "home.dev.editor.d": {
+    "message": "Syntax highlighting, smart completion and error hints make scripting smooth."
+  },
+  "home.dev.debug.t": {
+    "message": "Live debugging"
+  },
+  "home.dev.debug.d": {
+    "message": "Logs, run history and error tracking — problems at a glance."
+  },
+  "home.dev.docsBtn": {
+    "message": "Read the docs"
+  },
+  "home.dev.apiBtn": {
+    "message": "API reference"
+  },
+  "home.dev.run": {
+    "message": "Run"
+  },
+  "home.comm.eyebrow": {
+    "message": "Open source · OPEN SOURCE"
+  },
+  "home.comm.title1": {
+    "message": "Built by the "
+  },
+  "home.comm.title2": {
+    "message": "community"
+  },
+  "home.comm.sub": {
+    "message": "Fully open source, transparent and free. Every line of code is auditable, every contributor is seen."
+  },
+  "home.comm.btn": {
+    "message": "Contribute on GitHub"
+  },
+  "home.cta.eyebrow": {
+    "message": "Free · Open source · No ads"
+  },
+  "home.cta.h1": {
+    "message": "Ready to give your browser"
+  },
+  "home.cta.h2": {
+    "message": "superpowers"
+  },
+  "home.cta.h3": {
+    "message": "?"
+  },
+  "home.cta.sub": {
+    "message": "Install from the store in one click, or download the package manually. 30 seconds to unlock web superpowers."
+  },
+  "home.cta.primary": {
+    "message": "Install free for {browser}"
+  },
+  "home.cta.secondary": {
+    "message": "Browse scripts"
+  },
+  "home.cta.stores": {
+    "message": "Supports Edge · Chrome · Firefox · manual package"
+  },
+  "home.cta.chip": {
+    "message": "Installed & running"
+  },
+  "home.nav.docs": {
+    "message": "Docs"
+  },
+  "home.nav.store": {
+    "message": "Script Store"
+  },
+  "home.nav.dev": {
+    "message": "Developers"
+  },
+  "home.nav.changelog": {
+    "message": "Changelog"
+  },
+  "home.nav.install": {
+    "message": "Install"
+  },
+  "home.nav.menu": {
+    "message": "Menu"
+  },
+  "home.nav.theme": {
+    "message": "Toggle theme"
   }
 }

@@ -2,12 +2,13 @@
 .footer {
   border-top: 1px solid rgba(209, 213, 219, 0.5);
   transition: background-color 0.3s ease, border-top-color 0.3s ease;
-  background-color: var(--ifm-background-surface-color);
+  background-color: #fbfcfe;
   padding-top: 2rem;
 }
 
 [data-theme="dark"] .footer {
-  border-top-color: rgba(75, 85, 99, 0.5);
+  border-top-color: rgba(255, 255, 255, 0.06);
+  background-color: #0a1119;
 }
 
 .footerGrid {
@@ -128,21 +129,6 @@
 [data-theme="dark"] .footerColumnLink:hover {
   color: var(--ifm-color-white);
 }
-
-.footerColumnLinkWithBadge {
-  display: flex;
-  align-items: center;
-}
-
-.footerColumnBadge {
-  margin-left: 0.5rem;
-  padding: 0.25rem 0.5rem;
-  background-color: rgba(59, 130, 246, 0.2);
-  border-radius: 0.25rem;
-  font-size: 0.75rem;
-  color: var(--ifm-color-primary-light);
-}
-
 
 .footerCopyright {
   border-top: 1px solid rgba(209, 213, 219, 0.5);

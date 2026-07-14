@@ -221,28 +221,18 @@ function CustomFooter() {
                 </a>
               </li>
               <li>
-                <div className={styles.footerColumnLinkWithBadge}>
-                  <a
-                    href="https://github.com/scriptscat"
-                    target="_blank"
-                    className={styles.footerColumnLink}
+                <a
+                  href="https://github.com/scriptscat"
+                  target="_blank"
+                  className={styles.footerColumnLink}
+                >
+                  <Translate
+                    id="footer.community.contact"
+                    description="Footer community contact team link"
                   >
-                    <Translate
-                      id="footer.community.contact"
-                      description="Footer community contact team link"
-                    >
-                      联系团队
-                    </Translate>
-                  </a>
-                  <span className={styles.footerColumnBadge}>
-                    <Translate
-                      id="footer.community.recruiting"
-                      description="Footer community recruiting badge"
-                    >
-                      招募中
-                    </Translate>
-                  </span>
-                </div>
+                    联系团队
+                  </Translate>
+                </a>
               </li>
             </ul>
           </div>

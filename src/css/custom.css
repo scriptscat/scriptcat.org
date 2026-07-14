@@ -63,3 +63,8 @@ a:hover {
 .hidden {
   display: none !important;
 }
+
+/* The homepage renders its own LandingNav; hide the global Docusaurus navbar there. */
+body.landing-page .navbar {
+  display: none;
+}
