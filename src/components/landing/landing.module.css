@@ -298,9 +298,18 @@
   width: 16px;
   height: 16px;
 }
+/* min-width reserves room for the longest label across both locales ("Chrome"
+   wins — it's wider than "Firefox", whose i/f are narrow). A static build can't
+   know the browser, so the label swaps from the install-guide fallback to
+   "安装到 Chrome" on hydration; without a floor that resize shoves the
+   neighbouring nav items sideways. Same trick on .installMain/.ctaPrimary.
+   Values are measured on macOS system fonts with ~6px of headroom, so other
+   platforms' metrics stay covered. */
 .lnavInstall {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  min-width: 172px;
   gap: 8px;
   padding: 10px 18px;
   border-radius: 11px;
@@ -372,6 +381,7 @@
     padding: 12px 16px;
   }
   .lnavInstall {
+    min-width: 156px;
     padding: 9px 14px;
     font-size: 14px;
   }
@@ -544,6 +554,8 @@
 .installMain {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  min-width: 248px;
   gap: 10px;
   padding: 15px 18px;
   color: #fff;
@@ -1905,6 +1917,8 @@
 .ctaPrimary {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  min-width: 244px;
   gap: 10px;
   padding: 15px 26px;
   border-radius: 13px;

@@ -8,9 +8,8 @@ import {
   InstallButton,
   LINKS,
   Logo,
-  STORES,
   abbr,
-  useActiveStore,
+  usePrimaryInstall,
 } from "./shared";
 
 /* =====================================================================
@@ -781,7 +780,7 @@ export function Community() {
    FINAL CTA
    ===================================================================== */
 export function FinalCTA() {
-  const store = STORES[useActiveStore()];
+  const { store, href, external } = usePrimaryInstall();
   return (
     <section className={styles.finalCta}>
       <div className={styles.ctaCard}>
@@ -806,11 +805,23 @@ export function FinalCTA() {
             </Translate>
           </p>
           <div className={styles.ctaBtns}>
-            <a className={styles.ctaPrimary} href={store.href} target="_blank" rel="noreferrer">
-              <Icon icon={store.icon} width={20} height={20} />
-              <Translate id="home.cta.primary" values={{ browser: store.label }}>
-                {"免费安装到 {browser}"}
-              </Translate>
+            <a
+              className={styles.ctaPrimary}
+              href={href}
+              {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
+            >
+              <Icon
+                icon={store ? store.icon : "lucide:book-open"}
+                width={20}
+                height={20}
+              />
+              {store ? (
+                <Translate id="home.cta.primary" values={{ browser: store.label }}>
+                  {"免费安装到 {browser}"}
+                </Translate>
+              ) : (
+                <Translate id="home.install.guide">查看安装指南</Translate>
+              )}
             </a>
             <a className={styles.ctaSecondaryBtn} href={LINKS.store} target="_blank" rel="noreferrer">
               <Icon icon="lucide:compass" />

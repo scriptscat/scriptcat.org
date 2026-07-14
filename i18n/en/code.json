@@ -567,6 +567,9 @@
   "home.install.manual": {
     "message": "Download package & install manually"
   },
+  "home.install.guide": {
+    "message": "Installation guide"
+  },
   "home.hero.installTo": {
     "message": "Add to {browser}"
   },
@@ -911,6 +914,9 @@
   },
   "home.nav.install": {
     "message": "Install"
+  },
+  "home.nav.installTo": {
+    "message": "Add to {browser}"
   },
   "home.nav.menu": {
     "message": "Menu"

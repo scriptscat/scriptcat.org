@@ -8,7 +8,7 @@ import useBaseUrl from "@docusaurus/useBaseUrl";
 import { useTheme } from "../useTheme";
 import styles from "./landing.module.css";
 import stats from "@site/src/data/landing-stats.json";
-import { LINKS, abbr } from "./shared";
+import { LINKS, abbr, usePrimaryInstall } from "./shared";
 
 // Custom landing-page navbar, faithful to the Pencil design. The global
 // Docusaurus navbar is hidden on the homepage (see custom.css) so this one
@@ -56,10 +56,7 @@ export function LandingNav() {
             <Icon icon="lucide:github" />
             <span>Star {abbr(stats.stars)}</span>
           </a>
-          <a className={styles.lnavInstall} href={LINKS.chrome} target="_blank" rel="noreferrer">
-            <Icon icon="lucide:download" />
-            <Translate id="home.nav.install">安装扩展</Translate>
-          </a>
+          <NavInstall />
           <button
             className={styles.lnavBurger}
             aria-label={translate({ id: "home.nav.menu", message: "菜单" })}
@@ -83,6 +80,29 @@ export function LandingNav() {
         </div>
       )}
     </nav>
+  );
+}
+
+// Points at the detected browser's store, falling back to the install guide
+// when we can't confirm one. No dropdown here — the hero's install button one
+// scroll down already offers the full browser list, and the navbar is tight.
+function NavInstall() {
+  const { store, href, external } = usePrimaryInstall();
+  return (
+    <a
+      className={styles.lnavInstall}
+      href={href}
+      {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
+    >
+      <Icon icon={store ? store.icon : "lucide:download"} />
+      {store ? (
+        <Translate id="home.nav.installTo" values={{ browser: store.label }}>
+          {"安装到 {browser}"}
+        </Translate>
+      ) : (
+        <Translate id="home.nav.install">安装扩展</Translate>
+      )}
+    </a>
   );
 }
 

@@ -1,10 +1,13 @@
-import { useEffect, useState, type ReactNode } from "react";
+import { type ReactNode } from "react";
 import { Icon } from "@iconify/react";
 import { Dropdown } from "antd";
 import type { MenuProps } from "antd";
 import Translate, { translate } from "@docusaurus/Translate";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import styles from "./landing.module.css";
+import { useInstallTarget, type InstallTarget, type StoreKey } from "./detectStore";
+
+export type { InstallTarget, StoreKey };
 
 // ScriptCat brand logo. `white` renders it (a blue silhouette PNG) as white
 // via a CSS filter, for use on colored/dark badges.
@@ -79,7 +82,6 @@ export function Eyebrow({
 }
 
 // ---- browser-adaptive install button ---------------------------------
-export type StoreKey = "chrome" | "edge" | "firefox";
 export const STORES: Record<
   StoreKey,
   { label: string; icon: string; href: string }
@@ -89,25 +91,29 @@ export const STORES: Record<
   firefox: { label: "Firefox", icon: "logos:firefox", href: LINKS.firefox },
 };
 
-function detectStore(): StoreKey {
-  if (typeof navigator === "undefined") return "chrome";
-  const ua = navigator.userAgent;
-  if (/Edg\//.test(ua)) return "edge";
-  if (/Firefox\//.test(ua)) return "firefox";
-  return "chrome";
-}
-
-// Default to Chrome on the server; refine to the real browser after mount so
-// we never get a hydration mismatch. Shared by the hero + final-CTA buttons.
-export function useActiveStore(): StoreKey {
-  const [active, setActive] = useState<StoreKey>("chrome");
-  useEffect(() => setActive(detectStore()), []);
-  return active;
+// What the primary install button should point at. `store` is null when we
+// couldn't confirm the browser, in which case we send people to the install
+// guide (an internal page, hence `external: false`) rather than guess a store.
+// Callers pick their own icon + label off `store`; the wording differs per
+// placement, but the href/target logic shouldn't be re-derived three times.
+export function usePrimaryInstall(): {
+  target: InstallTarget;
+  store: { label: string; icon: string; href: string } | null;
+  href: string;
+  external: boolean;
+} {
+  const target = useInstallTarget();
+  const store = target === "unknown" ? null : STORES[target];
+  return {
+    target,
+    store,
+    href: store ? store.href : LINKS.docs,
+    external: store !== null,
+  };
 }
 
 export function InstallButton() {
-  const active = useActiveStore();
-  const main = STORES[active];
+  const { store, href, external } = usePrimaryInstall();
 
   const items: MenuProps["items"] = [
     {
@@ -175,14 +181,20 @@ export function InstallButton() {
       <div className={styles.install}>
         <a
           className={styles.installMain}
-          href={main.href}
-          target="_blank"
-          rel="noreferrer"
+          href={href}
+          {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
         >
-          <Icon icon={main.icon} className={styles.browserIcon} />
-          <Translate id="home.hero.installTo" values={{ browser: main.label }}>
-            {"添加到 {browser} 浏览器"}
-          </Translate>
+          <Icon
+            icon={store ? store.icon : "lucide:book-open"}
+            className={styles.browserIcon}
+          />
+          {store ? (
+            <Translate id="home.hero.installTo" values={{ browser: store.label }}>
+              {"添加到 {browser} 浏览器"}
+            </Translate>
+          ) : (
+            <Translate id="home.install.guide">查看安装指南</Translate>
+          )}
         </a>
         <span className={styles.installDivider} />
         <Dropdown menu={{ items }} trigger={["hover", "click"]} placement="bottomRight">
