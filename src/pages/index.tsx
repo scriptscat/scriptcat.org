@@ -21,16 +21,6 @@ export default function Home(): JSX.Element {
       <Head>
         {/* Hide the global Docusaurus navbar on the homepage; LandingNav replaces it */}
         <body className="landing-page" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=JetBrains+Mono:wght@100..800&family=Noto+Sans+SC:wght@100..900&family=Nunito:wght@200..1000&display=swap"
-          rel="stylesheet"
-        />
         <meta
           name="keywords"
           content="ScriptCat,脚本猫,用户脚本,浏览器扩展,userscript,tampermonkey,violentmonkey,后台脚本,自动化,广告屏蔽,脚本商店"

@@ -42,14 +42,20 @@
   --lp-shadow-card: 0 10px 24px -12px rgba(14, 34, 51, 0.14);
   --lp-shadow-soft: 0 12px 26px -8px rgba(14, 34, 51, 0.14);
 
-  --lp-font-display: "Baloo 2", system-ui, sans-serif;
-  --lp-font-cjk: "Noto Sans SC", system-ui, sans-serif;
-  --lp-font-body: "Nunito", system-ui, sans-serif;
-  --lp-font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --lp-font-cjk-sys: "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB",
+    "Source Han Sans SC", "Noto Sans CJK SC", sans-serif;
+  --lp-font-sys: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial;
+  --lp-font-display: ui-rounded, "SF Pro Rounded", var(--lp-font-sys),
+    var(--lp-font-cjk-sys);
+  --lp-font-cjk: var(--lp-font-sys), var(--lp-font-cjk-sys);
+  --lp-font-body: var(--lp-font-sys), var(--lp-font-cjk-sys);
+  --lp-font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+    "Liberation Mono", monospace;
 
   background: var(--lp-bg);
   color: var(--lp-text);
-  font-family: var(--lp-font-cjk);
+  font-family: var(--lp-font-body);
 }
 
 :global([data-theme="dark"]) .page {
