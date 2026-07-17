@@ -96,11 +96,15 @@ function NavInstall() {
     >
       <Icon icon={store ? store.icon : "lucide:download"} />
       {store ? (
-        <Translate id="home.nav.installTo" values={{ browser: store.label }}>
-          {"安装到 {browser}"}
-        </Translate>
+        <span className={styles.lnavInstallLabel}>
+          <Translate id="home.nav.installTo" values={{ browser: store.label }}>
+            {"安装到 {browser}"}
+          </Translate>
+        </span>
       ) : (
-        <Translate id="home.nav.install">安装扩展</Translate>
+        <span className={styles.lnavInstallLabel}>
+          <Translate id="home.nav.install">安装扩展</Translate>
+        </span>
       )}
     </a>
   );
