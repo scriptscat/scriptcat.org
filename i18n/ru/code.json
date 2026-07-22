@@ -1,0 +1,927 @@
+{
+  "githubStar.button.label": {
+    "message": "Star",
+    "description": "GitHub star button label"
+  },
+  "githubStar.home.title": {
+    "message": "ScriptCat — бесплатный и с открытым исходным кодом",
+    "description": "GitHub star bar title on homepage"
+  },
+  "githubStar.home.subtitle": {
+    "message": "Поставьте Star, если проект полезен — это нас мотивирует",
+    "description": "GitHub star bar subtitle on homepage"
+  },
+  "githubStar.install.title": {
+    "message": "Нравится ScriptCat?",
+    "description": "GitHub star bar title on install-complete page"
+  },
+  "githubStar.install.subtitle": {
+    "message": "Поставьте Star на GitHub — так больше людей узнают о проекте 🌟",
+    "description": "GitHub star bar subtitle on install-complete page"
+  },
+  "githubStar.changelog.title": {
+    "message": "ScriptCat становится всё лучше 🚀",
+    "description": "GitHub star bar title on changelog page"
+  },
+  "githubStar.changelog.subtitle": {
+    "message": "Обновления полезны? Поддержите нас Star на GitHub",
+    "description": "GitHub star bar subtitle on changelog page"
+  },
+  "homepage.meta.title": {
+    "message": "ScriptCat — мощный движок пользовательских скриптов",
+    "description": "Homepage meta title for SEO"
+  },
+  "homepage.meta.description": {
+    "message": "ScriptCat — мощный открытый движок браузерных скриптов: настраивайте веб-страницы, блокируйте рекламу, автоматизируйте задачи и улучшайте просмотр. Совместим с Tampermonkey и предлагает больше возможностей.",
+    "description": "Homepage meta description for SEO"
+  },
+  "homepage.og.title": {
+    "message": "ScriptCat — мощный движок браузерных скриптов",
+    "description": "Open Graph title for social sharing"
+  },
+  "homepage.og.description": {
+    "message": "Открытый движок браузерных скриптов, который расширяет возможности браузера. Пользовательские и фоновые скрипты, совместимость с Tampermonkey, расширенный функционал.",
+    "description": "Open Graph description for social sharing"
+  },
+  "homepage.twitter.title": {
+    "message": "ScriptCat — мощный движок браузерных скриптов",
+    "description": "Twitter card title"
+  },
+  "homepage.twitter.description": {
+    "message": "Открытый движок браузерных скриптов, который делает больше",
+    "description": "Twitter card description"
+  },
+  "homepage.hero.title": {
+    "message": "Лучший движок скриптов для",
+    "description": "Main title on the homepage hero section"
+  },
+  "homepage.hero.title.engine": {
+    "message": "улучшенного браузера",
+    "description": "Gradient text in main title"
+  },
+  "homepage.hero.subtitle.userScript": {
+    "message": "пользовательских скриптов",
+    "description": "User script highlight"
+  },
+  "homepage.hero.subtitle.possibilities": {
+    "message": ", открывая безграничные возможности браузера!",
+    "description": "Browser possibilities text"
+  },
+  "homepage.hero.subtitle.main": {
+    "message": "ScriptCat — мощный открытый движок браузерных скриптов: легко настраивайте сайты, убирайте рекламу, автоматизируйте задачи и улучшайте веб-серфинг. Совместим с Tampermonkey и даёт дополнительные возможности и оптимизации.",
+    "description": "Main subtitle description on homepage"
+  },
+  "homepage.hero.subtitle.highlight": {
+    "message": "Расширение браузера для выполнения",
+    "description": "Highlighted subtitle on homepage"
+  },
+  "homepage.hero.button.browseScripts": {
+    "message": "Смотреть библиотеку скриптов",
+    "description": "Button text for browsing scripts"
+  },
+  "homepage.hero.browser.edge": {
+    "message": "Добавить в Edge",
+    "description": "Button text for Edge browser"
+  },
+  "homepage.hero.browser.chrome": {
+    "message": "Добавить в Chrome",
+    "description": "Button text for Chrome browser"
+  },
+  "homepage.hero.browser.firefox": {
+    "message": "Добавить в Firefox",
+    "description": "Button text for Firefox browser"
+  },
+  "homepage.hero.browser.default": {
+    "message": "Установить расширение",
+    "description": "Default button text for browser installation"
+  },
+  "homepage.hero.browser.crx": {
+    "message": "Скачать пакет для ручной установки",
+    "description": "Button text for manual installation"
+  },
+  "homepage.hero.trustBadges.title": {
+    "message": "Доверие и поддержка технического сообщества",
+    "description": "Trust badges section title"
+  },
+  "homepage.features.title.powerful": {
+    "message": "Мощные возможности, ",
+    "description": "Features section title part 1"
+  },
+  "homepage.features.title.possibilities": {
+    "message": "безграничный потенциал",
+    "description": "Features section title highlight"
+  },
+  "homepage.features.subtitle": {
+    "message": "ScriptCat предлагает набор мощных функций, чтобы легко расширять возможности браузера и создавать свой веб-опыт.",
+    "description": "Features section subtitle"
+  },
+  "homepage.features.tampermonkey.title": {
+    "message": "Совместимость с Tampermonkey",
+    "description": "Feature title: Tampermonkey compatibility"
+  },
+  "homepage.features.tampermonkey.description": {
+    "message": "Полная совместимость с форматом скриптов Tampermonkey: бесшовная миграция существующей библиотеки без затрат на переход.",
+    "description": "Feature description: Tampermonkey compatibility"
+  },
+  "homepage.features.background.title": {
+    "message": "Фоновые скрипты",
+    "description": "Feature title: Background scripts"
+  },
+  "homepage.features.background.description": {
+    "message": "В отличие от обычных пользовательских скриптов, позволяют работать в фоне без открытых вкладок.",
+    "description": "Feature description: Background scripts"
+  },
+  "homepage.features.security.title": {
+    "message": "Безопасность и надёжность",
+    "description": "Feature title: Security"
+  },
+  "homepage.features.security.description": {
+    "message": "Строгий контроль разрешений, прозрачное поведение скриптов — защита от вредоносного кода и вашей конфиденциальности.",
+    "description": "Feature description: Security"
+  },
+  "homepage.features.editor.title": {
+    "message": "Встроенный редактор кода",
+    "description": "Feature title: Code editor"
+  },
+  "homepage.features.editor.description": {
+    "message": "Мощный редактор с подсветкой синтаксиса, автодополнением и подсказками об ошибках — писать скрипты удобнее.",
+    "description": "Feature description: Code editor"
+  },
+  "homepage.features.api.title": {
+    "message": "Мощные API",
+    "description": "Feature title: APIs"
+  },
+  "homepage.features.api.description": {
+    "message": "Богаче, чем GM: файловое хранилище, пользовательские настройки и другие расширенные возможности.",
+    "description": "Feature description: APIs"
+  },
+  "homepage.features.store.title": {
+    "message": "Магазин скриптов",
+    "description": "Feature title: Script store"
+  },
+  "homepage.features.store.description": {
+    "message": "Устанавливайте популярные скрипты в один клик или публикуйте свои работы для сообщества — живая экосистема.",
+    "description": "Feature description: Script store"
+  },
+  "homepage.comparison.title.why": {
+    "message": "Почему выбирают",
+    "description": "Comparison section title part 1"
+  },
+  "homepage.comparison.subtitle": {
+    "message": "По сравнению с другими движками скриптов ScriptCat даёт больше преимуществ и расширенных функций",
+    "description": "Comparison section subtitle"
+  },
+  "homepage.comparison.feature": {
+    "message": "Функция",
+    "description": "Comparison table header: Feature"
+  },
+  "homepage.comparison.feature.compatibility": {
+    "message": "Совместимость скриптов",
+    "description": "Comparison feature: Script compatibility"
+  },
+  "homepage.comparison.feature.background": {
+    "message": "Фоновые скрипты",
+    "description": "Comparison feature: Background scripts"
+  },
+  "homepage.comparison.feature.opensource": {
+    "message": "Бесплатный open source",
+    "description": "Comparison feature: Open source"
+  },
+  "homepage.comparison.feature.mv3": {
+    "message": "Поддержка MV3",
+    "description": "Comparison feature: MV3 Support"
+  },
+  "homepage.comparison.feature.sync": {
+    "message": "Облачная синхронизация",
+    "description": "Comparison feature: Cloud sync"
+  },
+  "homepage.comparison.feature.api": {
+    "message": "Мощные API",
+    "description": "Comparison feature: Powerful APIs"
+  },
+  "homepage.comparison.feature.community": {
+    "message": "Поддержка сообщества",
+    "description": "Comparison feature: Community support"
+  },
+  "homepage.comparison.label.efficient": {
+    "message": "Эффективно",
+    "description": "Comparison label: Efficient"
+  },
+  "homepage.comparison.label.multiplatform": {
+    "message": "Кроссплатформенно",
+    "description": "Comparison label: Multi-platform"
+  },
+  "homepage.scenario.title.solve": {
+    "message": "Скрипты, которые решают ",
+    "description": "Scenario section title part 1"
+  },
+  "homepage.scenario.title.problems": {
+    "message": "реальные задачи",
+    "description": "Scenario section title highlight"
+  },
+  "homepage.scenario.title.scripts": {
+    "message": "",
+    "description": "Scenario section title part 2"
+  },
+  "homepage.scenario.subtitle": {
+    "message": "Посмотрите, как ScriptCat меняет опыт веб-сёрфинга",
+    "description": "Scenario section subtitle"
+  },
+  "homepage.scenario.video.title": {
+    "message": "Улучшение видеосайтов",
+    "description": "Video scenario title"
+  },
+  "homepage.scenario.video.subtitle": {
+    "message": "Оптимизируйте просмотр видео",
+    "description": "Video scenario subtitle"
+  },
+  "homepage.scenario.video.tag": {
+    "message": "Популярные сценарии",
+    "description": "Video scenario tag"
+  },
+  "homepage.scenario.video.feature.speed": {
+    "message": "Управление скоростью видео",
+    "description": "Video feature: Speed control"
+  },
+  "homepage.scenario.video.feature.download": {
+    "message": "Скачивание видео в один клик",
+    "description": "Video feature: Download"
+  },
+  "homepage.scenario.video.feature.adblock": {
+    "message": "Автопропуск рекламы",
+    "description": "Video feature: Ad blocking"
+  },
+  "homepage.scenario.video.feature.ui": {
+    "message": "Упрощение интерфейса",
+    "description": "Video feature: UI optimization"
+  },
+  "homepage.scenario.video.sites": {
+    "message": "Поддерживаемые сайты",
+    "description": "Video scenario supported sites label"
+  },
+  "homepage.scenario.video.getScript": {
+    "message": "Получить скрипт →",
+    "description": "Video scenario get script link"
+  },
+  "homepage.scenario.shopping.title": {
+    "message": "Помощник покупок",
+    "description": "Shopping scenario title"
+  },
+  "homepage.scenario.shopping.subtitle": {
+    "message": "Делает покупки проще",
+    "description": "Shopping scenario subtitle"
+  },
+  "homepage.scenario.shopping.tag": {
+    "message": "Практичные инструменты",
+    "description": "Shopping scenario tag"
+  },
+  "homepage.scenario.shopping.feature.history": {
+    "message": "История цен",
+    "description": "Shopping feature: Price history"
+  },
+  "homepage.scenario.shopping.feature.coupon": {
+    "message": "Автопоиск купонов",
+    "description": "Shopping feature: Coupon search"
+  },
+  "homepage.scenario.shopping.feature.compare": {
+    "message": "Сравнение цен",
+    "description": "Shopping feature: Price comparison"
+  },
+  "homepage.scenario.shopping.feature.alert": {
+    "message": "Уведомления о снижении цены",
+    "description": "Shopping feature: Price alert"
+  },
+  "homepage.scenario.sites.more": {
+    "message": "+Ещё",
+    "description": "More sites indicator in scenario cards"
+  },
+  "homepage.download.title.ready": {
+    "message": "Готовы",
+    "description": "Download section title part 1"
+  },
+  "homepage.download.title.enhance": {
+    "message": "улучшить просмотр в браузере",
+    "description": "Download section title highlight"
+  },
+  "homepage.download.title.question": {
+    "message": "?",
+    "description": "Download section title part 2"
+  },
+  "homepage.download.subtitle": {
+    "message": "Установите ScriptCat и откройте безграничные возможности веба",
+    "description": "Download section subtitle"
+  },
+  "homepage.download.edge": {
+    "message": "Магазин расширений Edge",
+    "description": "Download button: Edge store"
+  },
+  "homepage.download.chrome": {
+    "message": "Магазин расширений Chrome",
+    "description": "Download button: Chrome store"
+  },
+  "homepage.download.firefox": {
+    "message": "Магазин расширений Firefox",
+    "description": "Download button: Firefox store"
+  },
+  "homepage.download.github": {
+    "message": "Скачать с GitHub",
+    "description": "Download button: GitHub"
+  },
+  "homepage.download.popup.title": {
+    "message": "ScriptCat включён",
+    "description": "Extension popup title"
+  },
+  "homepage.download.popup.text": {
+    "message": "На этой странице работают 3 скрипта",
+    "description": "Extension popup text"
+  },
+  "homepage.footer.contributors.title": {
+    "message": "Спасибо всем участникам",
+    "description": "Footer contributors section title"
+  },
+  "footer.description": {
+    "message": "Мощный движок браузерных скриптов, который делает веб богаче и интереснее.",
+    "description": "Footer description"
+  },
+  "footer.product.title": {
+    "message": "Продукт",
+    "description": "Footer product section title"
+  },
+  "footer.product.features": {
+    "message": "Возможности",
+    "description": "Footer product features link"
+  },
+  "footer.product.scriptStore": {
+    "message": "Магазин скриптов",
+    "description": "Footer product script store link"
+  },
+  "footer.product.changelog": {
+    "message": "История изменений",
+    "description": "Footer product changelog link"
+  },
+  "footer.resources.title": {
+    "message": "Ресурсы",
+    "description": "Footer resources section title"
+  },
+  "footer.resources.devDocs": {
+    "message": "Документация разработчика",
+    "description": "Footer resources development docs link"
+  },
+  "footer.resources.apiReference": {
+    "message": "Справочник API",
+    "description": "Footer resources API reference link"
+  },
+  "footer.resources.examples": {
+    "message": "Примеры скриптов",
+    "description": "Footer resources example scripts link"
+  },
+  "footer.resources.faq": {
+    "message": "FAQ",
+    "description": "Footer resources FAQ link"
+  },
+  "footer.community.title": {
+    "message": "Сообщество",
+    "description": "Footer community section title"
+  },
+  "footer.community.forum": {
+    "message": "Форум",
+    "description": "Footer community forum link"
+  },
+  "footer.community.discord": {
+    "message": "Канал Discord",
+    "description": "Footer community Discord link"
+  },
+  "footer.community.contributing": {
+    "message": "Как внести вклад",
+    "description": "Footer community contributing guide link"
+  },
+  "footer.community.issues": {
+    "message": "Сообщить о проблеме",
+    "description": "Footer community report issues link"
+  },
+  "footer.community.contact": {
+    "message": "Связаться с командой",
+    "description": "Footer community contact team link"
+  },
+  "footer.copyright.allRightsReserved": {
+    "message": "Все права защищены.",
+    "description": "Footer copyright all rights reserved text"
+  },
+  "footer.copyright.privacy": {
+    "message": "Политика конфиденциальности",
+    "description": "Footer copyright privacy policy link"
+  },
+  "footer.copyright.terms": {
+    "message": "Условия использования",
+    "description": "Footer copyright terms of use link"
+  },
+  "footer.copyright.license": {
+    "message": "Лицензионное соглашение",
+    "description": "Footer copyright license link"
+  },
+  "uninstall.title": {
+    "message": "Опрос при удалении",
+    "description": "Title of the uninstall survey page"
+  },
+  "uninstall.description": {
+    "message": "Спасибо, что пользовались ScriptCat. Расскажите, почему вы удаляете расширение.",
+    "description": "Description of the uninstall survey page"
+  },
+  "uninstall.header.title": {
+    "message": "Жаль, что вы удаляете ScriptCat",
+    "description": "Main header title on uninstall survey page"
+  },
+  "uninstall.header.subtitle": {
+    "message": "Если несложно, поделитесь мнением — это поможет нам становиться лучше",
+    "description": "Subtitle on uninstall survey page"
+  },
+  "uninstall.question.reason": {
+    "message": "Какова основная причина удаления ScriptCat?",
+    "description": "Question about uninstall reason"
+  },
+  "uninstall.question.feedback": {
+    "message": "Можете ли вы подробнее описать ситуацию?",
+    "description": "Question about detailed feedback"
+  },
+  "uninstall.reason.bugs": {
+    "message": "Ошибки или сбои",
+    "description": "Uninstall reason: bugs"
+  },
+  "uninstall.reason.no_need": {
+    "message": "ScriptCat больше не нужен",
+    "description": "Uninstall reason: no longer need"
+  },
+  "uninstall.reason.features": {
+    "message": "Нет нужных мне функций",
+    "description": "Uninstall reason: missing features"
+  },
+  "uninstall.reason.alternative": {
+    "message": "Нашёл(ла) лучшую альтернативу",
+    "description": "Uninstall reason: found alternative"
+  },
+  "uninstall.reason.other": {
+    "message": "Другие причины",
+    "description": "Uninstall reason: other"
+  },
+  "uninstall.feedback.placeholder": {
+    "message": "Опишите конкретные проблемы, предложения или другие мысли...",
+    "description": "Placeholder text for feedback textarea"
+  },
+  "uninstall.button.submit": {
+    "message": "Отправить отзыв",
+    "description": "Submit button text"
+  },
+  "uninstall.warning.selectReason": {
+    "message": "Выберите причину удаления",
+    "description": "Warning when no reason is selected"
+  },
+  "uninstall.success.submitted": {
+    "message": "Спасибо за отзыв!",
+    "description": "Success message after submission"
+  },
+  "uninstall.error.submit": {
+    "message": "Не удалось отправить, попробуйте позже",
+    "description": "Error message when submission fails"
+  },
+  "uninstall.thanks.title": {
+    "message": "Спасибо за отзыв!",
+    "description": "Thank you page title"
+  },
+  "uninstall.thanks.message": {
+    "message": "Ваше мнение очень важно и поможет улучшить ScriptCat.",
+    "description": "Thank you page message"
+  },
+  "uninstall.thanks.backHome": {
+    "message": "На главную",
+    "description": "Back to home button"
+  },
+  "uninstall.thanks.reportIssue": {
+    "message": "Сообщить о проблеме",
+    "description": "Report issue button"
+  },
+  "uninstall.reinstall.message": {
+    "message": "Если передумаете, всегда можно установить снова:",
+    "description": "Reinstall message"
+  },
+  "uninstall.thanks.considerReinstall": {
+    "message": "Если передумаете — мы всегда рады видеть вас снова",
+    "description": "Consider reinstall message"
+  },
+  "uninstall.thanks.submitAnother": {
+    "message": "Отправить другой отзыв",
+    "description": "Submit another feedback button"
+  },
+  "uninstall.sidebar.reinstall.title": {
+    "message": "Мы всегда рады видеть вас снова",
+    "description": "Sidebar reinstall title"
+  },
+  "uninstall.sidebar.help.title": {
+    "message": "Нужна помощь?",
+    "description": "Sidebar help title"
+  },
+  "uninstall.sidebar.help.description": {
+    "message": "Возникли трудности? Мы поможем разобраться",
+    "description": "Sidebar help description"
+  },
+  "uninstall.sidebar.help.github": {
+    "message": "GitHub Issues",
+    "description": "GitHub issues button"
+  },
+  "uninstall.sidebar.help.docs": {
+    "message": "Документация",
+    "description": "View docs button"
+  },
+  "uninstall.bug.alert.title": {
+    "message": "Нашли ошибку?",
+    "description": "Bug alert title"
+  },
+  "uninstall.bug.alert.description": {
+    "message": "Если вы столкнулись с ошибкой или сбоем, рекомендуем сразу создать issue на GitHub — так обратная связь и поддержка будут быстрее.",
+    "description": "Bug alert description"
+  },
+  "uninstall.bug.alert.button": {
+    "message": "Сообщить о проблеме на GitHub",
+    "description": "Bug alert button text"
+  },
+  "uninstall.feature.alert.title": {
+    "message": "Не хватает функции?",
+    "description": "Feature alert title"
+  },
+  "uninstall.feature.alert.description": {
+    "message": "Мы ценим запросы на функции! Опишите желаемое подробно на GitHub — так мы лучше поймём потребности и приоритизируем реализацию.",
+    "description": "Feature alert description"
+  },
+  "uninstall.feature.alert.button": {
+    "message": "Предложить функцию на GitHub",
+    "description": "Feature alert button text"
+  },
+  "home.install.edge": {
+    "message": "Добавить в Edge"
+  },
+  "home.install.chrome": {
+    "message": "Добавить в Chrome"
+  },
+  "home.install.firefox": {
+    "message": "Добавить в Firefox"
+  },
+  "home.install.manual": {
+    "message": "Скачать пакет и установить вручную"
+  },
+  "home.install.guide": {
+    "message": "Инструкция по установке"
+  },
+  "home.hero.installTo": {
+    "message": "Добавить в {browser}"
+  },
+  "home.hero.moreBrowsers": {
+    "message": "Другие браузеры"
+  },
+  "home.hero.eyebrow": {
+    "message": "Открытый движок userscript · совместим с Tampermonkey"
+  },
+  "home.hero.title1": {
+    "message": "Дайте браузеру"
+  },
+  "home.hero.title2": {
+    "message": ""
+  },
+  "home.hero.title3": {
+    "message": "суперспособности"
+  },
+  "home.hero.subhead": {
+    "message": "Блокируйте рекламу, улучшайте видео, автоматизируйте рутину — устанавливайте скрипты сообщества из магазина в один клик; для разработчиков — фоновые скрипты и мощные API. Совместим с Tampermonkey: существующие скрипты переносятся без затрат."
+  },
+  "home.hero.browse": {
+    "message": "Смотреть скрипты"
+  },
+  "home.hero.trust": {
+    "message": "Работает в Chrome · Edge · Firefox — полностью бесплатно и open source"
+  },
+  "home.hero.mock.speed": {
+    "message": "Управление скоростью видео"
+  },
+  "home.hero.mock.adblock": {
+    "message": "Автопропуск рекламы"
+  },
+  "home.hero.mock.dark": {
+    "message": "Тёмная тема для страниц"
+  },
+  "home.hero.mock.skip": {
+    "message": "Пропуск рекламы"
+  },
+  "home.hero.mock.running": {
+    "message": "На этой странице работают 3 скрипта"
+  },
+  "home.hero.mock.add": {
+    "message": "Добавить из магазина скриптов"
+  },
+  "home.hero.chip.installed": {
+    "message": "Скрипт установлен"
+  },
+  "home.hero.chip.installedSub": {
+    "message": "Video Enhancer v2.1"
+  },
+  "home.hero.chip.background": {
+    "message": "3 скрипта работают в фоне"
+  },
+  "home.trust.eyebrow": {
+    "message": "ДОВЕРИЕ ПОЛЬЗОВАТЕЛЕЙ И РАЗРАБОТЧИКОВ ПО ВСЕМУ МИРУ"
+  },
+  "home.trust.users": {
+    "message": "Установок"
+  },
+  "home.trust.scripts": {
+    "message": "Скриптов сообщества"
+  },
+  "home.trust.stars": {
+    "message": "GitHub Stars"
+  },
+  "home.trust.contributors": {
+    "message": "Участников"
+  },
+  "home.sc.eyebrow": {
+    "message": "Для всех · Код не нужен"
+  },
+  "home.sc.title1": {
+    "message": "Без кода — только "
+  },
+  "home.sc.title2": {
+    "message": "один клик"
+  },
+  "home.sc.title3": {
+    "message": ", чтобы решить повседневные раздражители"
+  },
+  "home.sc.sub": {
+    "message": "Возьмите скрипт из магазина — реклама, видео, покупки, продуктивность: всё сделано за вас."
+  },
+  "home.sc.featured.tag": {
+    "message": "Самое популярное"
+  },
+  "home.sc.featured.t": {
+    "message": "Видео — полностью улучшено"
+  },
+  "home.sc.featured.d": {
+    "message": "Скорость, автопропуск рекламы, скачивание в один клик, картинка в картинке — удобнее Bilibili / YouTube / Netflix."
+  },
+  "home.sc.featured.c1": {
+    "message": "Скорость"
+  },
+  "home.sc.featured.c2": {
+    "message": "Блокировка рекламы"
+  },
+  "home.sc.featured.c3": {
+    "message": "Скачивание"
+  },
+  "home.sc.featured.c4": {
+    "message": "Картинка в картинке"
+  },
+  "home.sc.featured.btn": {
+    "message": "Видеоскрипты"
+  },
+  "home.sc.featured.sites": {
+    "message": "Поддержка 20+ видеосайтов"
+  },
+  "home.sc.adblock.t": {
+    "message": "Блокировка рекламы · Чистый веб"
+  },
+  "home.sc.adblock.d": {
+    "message": "Блокируйте рекламу и всплывающие окна — страница остаётся чистой."
+  },
+  "home.sc.adblock.l": {
+    "message": "Скрипты блокировки рекламы"
+  },
+  "home.sc.shop.t": {
+    "message": "Покупки · Сравнение цен"
+  },
+  "home.sc.shop.d": {
+    "message": "Сравнивайте цены, смотрите историю и применяйте купоны в один клик."
+  },
+  "home.sc.shop.l": {
+    "message": "Помощник покупок"
+  },
+  "home.sc.auto.t": {
+    "message": "Продуктивность · Автоматизация"
+  },
+  "home.sc.auto.d": {
+    "message": "Авто-чек-ин, пакетные действия — удобный набор инструментов."
+  },
+  "home.sc.auto.l": {
+    "message": "Скрипты продуктивности"
+  },
+  "home.sc.read.t": {
+    "message": "Чтение · Перевод"
+  },
+  "home.sc.read.d": {
+    "message": "Тёмная тема, перевод страниц, иммерсивное чтение."
+  },
+  "home.sc.read.l": {
+    "message": "Улучшения чтения"
+  },
+  "home.step.eyebrow": {
+    "message": "СТАРТ ЗА 3 ШАГА"
+  },
+  "home.step.title1": {
+    "message": "30 секунд"
+  },
+  "home.step.title2": {
+    "message": " до первого скрипта"
+  },
+  "home.step.sub": {
+    "message": "Без сложной настройки — три простых шага: установили и пользуетесь."
+  },
+  "home.step1.t": {
+    "message": "Установите расширение"
+  },
+  "home.step1.d": {
+    "message": "Добавьте из магазина Chrome / Edge / Firefox в один клик или установите вручную."
+  },
+  "home.step1.p": {
+    "message": "Добавить в браузер"
+  },
+  "home.step2.t": {
+    "message": "Откройте магазин"
+  },
+  "home.step2.d": {
+    "message": "Тысячи скриптов сообщества ScriptCat — выберите то, что нужно."
+  },
+  "home.step2.p": {
+    "message": "Поиск: скорость видео"
+  },
+  "home.step3.t": {
+    "message": "Установка в один клик"
+  },
+  "home.step3.d": {
+    "message": "Нажмите «Установить» — скрипт сразу заработает на странице."
+  },
+  "home.step3.p": {
+    "message": "Установлен · Уже активен"
+  },
+  "home.feat.eyebrow": {
+    "message": "Ключевые возможности · ПОЧЕМУ SCRIPTCAT"
+  },
+  "home.feat.title1": {
+    "message": "Мощное ядро, "
+  },
+  "home.feat.title2": {
+    "message": "спокойствие"
+  },
+  "home.feat.sub": {
+    "message": "От совместимости до безопасности, от обычных пользователей до разработчиков — ScriptCat закрывает потребности."
+  },
+  "home.feat.compat.t": {
+    "message": "Совместимость с Tampermonkey"
+  },
+  "home.feat.compat.d": {
+    "message": "Полная совместимость с форматом userscript и GM API — миграция существующих скриптов без изменений и без затрат на переход."
+  },
+  "home.feat.compat.b": {
+    "message": "Поддержка GM_* API · тот же блок метаданных"
+  },
+  "home.feat.store.t": {
+    "message": "Магазин скриптов"
+  },
+  "home.feat.store.d": {
+    "message": "Устанавливайте тысячи скриптов сообщества в один клик или публикуйте свои — развиваем экосистему вместе."
+  },
+  "home.feat.store.stat": {
+    "message": "{count} скриптов сообщества"
+  },
+  "home.feat.secure.t": {
+    "message": "Безопасность и надёжность"
+  },
+  "home.feat.secure.d": {
+    "message": "Прозрачные и управляемые разрешения, видимое поведение — вредоносные скрипты останавливаются на входе."
+  },
+  "home.feat.sync.t": {
+    "message": "Облачная синхронизация"
+  },
+  "home.feat.sync.d": {
+    "message": "Скрипты и настройки синхронизируются между устройствами — ничего не теряется при смене или переустановке."
+  },
+  "home.feat.bg.t": {
+    "message": "Фоновые скрипты"
+  },
+  "home.feat.bg.d": {
+    "message": "Уникально: скрипты продолжают работать в фоне без открытой вкладки."
+  },
+  "home.feat.api.t": {
+    "message": "Мощные API"
+  },
+  "home.feat.api.d": {
+    "message": "Богаче GM: файловое хранилище, планировщик задач и кросс-доменные запросы под рукой."
+  },
+  "home.feat.devTag": {
+    "message": "Для разработчиков"
+  },
+  "home.dev.eyebrow": {
+    "message": "Для разработчиков · FOR DEVELOPERS"
+  },
+  "home.dev.title1": {
+    "message": "Превратите браузер в "
+  },
+  "home.dev.title2": {
+    "message": "среду выполнения кода"
+  },
+  "home.dev.sub": {
+    "message": "Фоновые скрипты, богатые API, встроенный редактор и отладка — от первой строки до продакшена в одном месте."
+  },
+  "home.dev.bg.t": {
+    "message": "Фоновые скрипты"
+  },
+  "home.dev.bg.d": {
+    "message": "Не нужно держать вкладку — скрипты работают в фоне."
+  },
+  "home.dev.api.t": {
+    "message": "Мощные API"
+  },
+  "home.dev.api.d": {
+    "message": "Файловое хранилище, cron-расписание и кросс-доменные запросы — всё включено."
+  },
+  "home.dev.editor.t": {
+    "message": "Встроенный редактор"
+  },
+  "home.dev.editor.d": {
+    "message": "Подсветка синтаксиса, умное автодополнение и подсказки об ошибках — писать скрипты приятно."
+  },
+  "home.dev.debug.t": {
+    "message": "Живая отладка"
+  },
+  "home.dev.debug.d": {
+    "message": "Логи, история запусков и отслеживание ошибок — проблемы видны сразу."
+  },
+  "home.dev.docsBtn": {
+    "message": "Читать документацию"
+  },
+  "home.dev.apiBtn": {
+    "message": "Справочник API"
+  },
+  "home.dev.run": {
+    "message": "Запуск"
+  },
+  "home.comm.eyebrow": {
+    "message": "Open source · ОТКРЫТЫЙ КОД"
+  },
+  "home.comm.title1": {
+    "message": "Создано "
+  },
+  "home.comm.title2": {
+    "message": "сообществом"
+  },
+  "home.comm.sub": {
+    "message": "Полностью открытый, прозрачный и бесплатный. Каждая строка кода доступна для аудита, каждый вклад виден."
+  },
+  "home.comm.btn": {
+    "message": "Внести вклад на GitHub"
+  },
+  "home.cta.eyebrow": {
+    "message": "Бесплатно · Open source · Без рекламы"
+  },
+  "home.cta.h1": {
+    "message": "Готовы дать браузеру"
+  },
+  "home.cta.h2": {
+    "message": "суперспособности"
+  },
+  "home.cta.h3": {
+    "message": "?"
+  },
+  "home.cta.sub": {
+    "message": "Установите из магазина в один клик или скачайте пакет вручную. За 30 секунд — суперспособности для веба."
+  },
+  "home.cta.primary": {
+    "message": "Бесплатная установка для {browser}"
+  },
+  "home.cta.secondary": {
+    "message": "Смотреть скрипты"
+  },
+  "home.cta.stores": {
+    "message": "Поддержка Edge · Chrome · Firefox · ручной пакет"
+  },
+  "home.cta.chip": {
+    "message": "Установлено и работает"
+  },
+  "home.nav.docs": {
+    "message": "Документация"
+  },
+  "home.nav.store": {
+    "message": "Магазин скриптов"
+  },
+  "home.nav.dev": {
+    "message": "Разработчикам"
+  },
+  "home.nav.changelog": {
+    "message": "История изменений"
+  },
+  "home.nav.install": {
+    "message": "Установить"
+  },
+  "home.nav.installTo": {
+    "message": "Добавить в {browser}"
+  },
+  "home.nav.menu": {
+    "message": "Меню"
+  },
+  "home.nav.theme": {
+    "message": "Сменить тему"
+  }
+}
