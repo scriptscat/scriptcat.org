@@ -37,7 +37,7 @@ import SponsorBlock from '@site/src/components/SponsorBlock/en.mdx';
 
 <SponsorBlock />
 
-## Разрешить пользовательские скрипты
+## Разрешить пользовательские скрипты {#allow-user-scripts}
 
 [Allow User Scripts](https://developer.chrome.com/docs/extensions/reference/api/userScripts?hl=en#chrome_versions_138_and_newer_allow_user_scripts_toggle) — новая возможность Manifest V3, позволяющая запускать пользовательские скрипты в браузере.
 
@@ -90,7 +90,7 @@ import SponsorBlock from '@site/src/components/SponsorBlock/en.mdx';
   </TabItem>
 </Tabs>
 
-## Включение режима разработчика
+## Включение режима разработчика {#enable-developer-mode}
 
 <Tabs groupId="browser" queryString>
   <TabItem value="edge" label={<div className="flex items-center gap-1"><Icon height={16} width={16} icon="logos:microsoft-edge" /><span>Edge</span></div>} default>
@@ -131,7 +131,7 @@ import SponsorBlock from '@site/src/components/SponsorBlock/en.mdx';
 
 :::warning Устаревшие версии
 
-Если вы используете Windows 8/7/XP или версия движка браузера ниже 120, нужно вручную установить [устаревший ScriptCat](https://bbs.tampermonkey.net.cn/thread-3068-1-1.html). v0.16.x — последняя версия с поддержкой Manifest V2. Шаги установки: [Загрузка распакованного расширения](/docs/use/use/#load-unpacked-extension-installation).
+Если вы используете Windows 8/7/XP или версия движка браузера ниже 120, нужно вручную установить [устаревший ScriptCat](https://bbs.tampermonkey.net.cn/thread-3068-1-1.html). v0.16.x — последняя версия с поддержкой Manifest V2. Шаги установки: [Загрузка распакованного расширения](./use.md#load-unpacked-extension-installation).
 
 :::
 

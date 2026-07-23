@@ -27,6 +27,10 @@
     "message": "Обновления полезны? Поддержите нас Star на GitHub",
     "description": "GitHub star bar subtitle on changelog page"
   },
+  "homepage.meta.keywords": {
+    "message": "ScriptCat,пользовательские скрипты,расширение браузера,userscript,Tampermonkey,Violentmonkey,фоновые скрипты,скрипты по расписанию,автоматизация браузера,блокировка рекламы,магазин скриптов",
+    "description": "Homepage SEO keywords"
+  },
   "homepage.meta.title": {
     "message": "ScriptCat — мощный движок пользовательских скриптов",
     "description": "Homepage meta title for SEO"

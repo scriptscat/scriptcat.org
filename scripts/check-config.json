@@ -1,4 +1,11 @@
 {
+  "defaultLocale": "zh-Hans",
   "i18nParityStrict": true,
-  "frontmatterStrict": true
+  "frontmatterStrict": true,
+  "i18nDocFallbacks": {
+    "ru": {
+      "sourceLocale": "en",
+      "paths": ["change/"]
+    }
+  }
 }

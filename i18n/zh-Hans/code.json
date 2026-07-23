@@ -249,6 +249,10 @@
   "homepage.meta.description": {
     "message": "脚本猫是一个强大的用户脚本管理器，轻松定制网页、消除广告、自动执行任务等，激活浏览器的无限可能！"
   },
+  "homepage.meta.keywords": {
+    "message": "ScriptCat,脚本猫,用户脚本,浏览器扩展,userscript,Tampermonkey,Violentmonkey,后台脚本,定时脚本,浏览器自动化,广告屏蔽,脚本商店",
+    "description": "Homepage SEO keywords"
+  },
   "homepage.meta.title": {
     "message": "首页"
   },

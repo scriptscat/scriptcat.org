@@ -12,9 +12,13 @@ import { readFileSync, existsSync, readdirSync, statSync } from "node:fs";
 import { join, relative, sep, basename } from "node:path";
 
 const ROOT = new URL("..", import.meta.url).pathname;
+const I18N_DIR = join(ROOT, "i18n");
+const DOCS_PLUGIN_PATH = "docusaurus-plugin-content-docs/current";
 const DOC_DIRS = [
   join(ROOT, "docs"),
-  join(ROOT, "i18n/en/docusaurus-plugin-content-docs/current"),
+  ...readdirSync(I18N_DIR)
+    .map((locale) => join(I18N_DIR, locale, DOCS_PLUGIN_PATH))
+    .filter((dir) => existsSync(dir) && statSync(dir).isDirectory()),
 ];
 const CONFIG_FILE = join(ROOT, "scripts", "check-config.json");
 const NUMBER_PREFIX = /^\d+\.[^/]/;

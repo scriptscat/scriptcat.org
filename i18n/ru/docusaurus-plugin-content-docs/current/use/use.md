@@ -19,7 +19,7 @@ ScriptCat — браузерное расширение для запуска п
 
 Если вашего браузера нет в списке, скачайте файл `zip`/`crx` со страницы [Github Release](https://github.com/scriptscat/scriptcat/releases) и установите вручную.
 
-### Установка через загрузку распакованного расширения
+### Установка через загрузку распакованного расширения {#load-unpacked-extension-installation}
 
 ① Скачайте файл `zip` со страницы [Github Release](https://github.com/scriptscat/scriptcat/releases) или [Community Download](https://bbs.tampermonkey.net.cn/thread-3068-1-1.html). Если это файл `crx`, переименуйте расширение в `zip`.
 
@@ -49,7 +49,7 @@ ScriptCat — браузерное расширение для запуска п
 [Сайт скриптов ScriptCat](https://scriptcat.org/) — официальный сайт расширения, где можно публиковать свои скрипты.
 
 - Новый сайт скриптов
-- Фоновые / планируемые скрипты
+- Фоновые скрипты / скрипты по расписанию
 - Удобный интерфейс
 
 ### Поиск Userscript.Zone

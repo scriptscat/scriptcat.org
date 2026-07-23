@@ -253,7 +253,7 @@ return result;
 | Каталог | Описание | Установка |
 |------|------|------|
 | `browser-automation/` | Анализ страниц, операции DOM, заполнение форм, скриншоты, навигация | [Установить](https://raw.githubusercontent.com/scriptscat/skills/main/browser-automation/SKILL.cat.md) |
-| `scheduled-tasks/` | Cron-задачи (внутренний + режим событий) | [Установить](https://raw.githubusercontent.com/scriptscat/skills/main/scheduled-tasks/SKILL.cat.md) |
+| `scheduled-tasks/` | Задачи по расписанию (внутренний + режим событий) | [Установить](https://raw.githubusercontent.com/scriptscat/skills/main/scheduled-tasks/SKILL.cat.md) |
 | `skill-creator/` | Помогает создавать, тестировать и упаковывать новые Skills | [Установить](https://raw.githubusercontent.com/scriptscat/skills/main/skill-creator/SKILL.cat.md) |
 | `file-parser/` | Разбор распространённых форматов файлов (Excel, PDF, Word, CSV, PPT) | [Установить](https://raw.githubusercontent.com/scriptscat/skills/main/file-parser/SKILL.cat.md) |
 | `scriptcat-dev/` | Помощник разработки скриптов ScriptCat/Tampermonkey | [Установить](https://raw.githubusercontent.com/scriptscat/skills/main/scriptcat-dev/SKILL.cat.md) |
