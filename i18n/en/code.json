@@ -27,6 +27,10 @@
     "message": "Find these updates useful? Star us on GitHub to support our work",
     "description": "GitHub star bar subtitle on changelog page"
   },
+  "homepage.meta.keywords": {
+    "message": "ScriptCat,user scripts,browser extension,userscript,Tampermonkey,Violentmonkey,background scripts,scheduled scripts,browser automation,ad blocker,script store",
+    "description": "Homepage SEO keywords"
+  },
   "homepage.meta.title": {
     "message": "ScriptCat - Powerful Browser Script Engine",
     "description": "Homepage meta title for SEO"

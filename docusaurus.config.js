@@ -3,6 +3,35 @@
 
 import { themes as prismThemes } from "prism-react-renderer";
 
+const { defaultLocale, i18nDocFallbacks = {} } = require("./scripts/check-config.json");
+const currentLocale = process.env.DOCUSAURUS_CURRENT_LOCALE ?? defaultLocale;
+const docsFallbackLocale = i18nDocFallbacks[currentLocale]?.sourceLocale;
+const docsPath = docsFallbackLocale
+  ? `i18n/${docsFallbackLocale}/docusaurus-plugin-content-docs/current`
+  : "docs";
+
+const metadataByLocale = {
+  "zh-Hans": {
+    keywords:
+      "scriptcat,userscript,browser extension,浏览器扩展,用户脚本,后台脚本,脚本猫,tampermonkey,violentmonkey,greasemonkey,javascript,自动化脚本,网页增强",
+    description:
+      "ScriptCat 是一个可以执行自定义脚本的浏览器扩展，支持用户脚本、后台脚本等多种脚本类型。提供强大的脚本管理、同步、订阅等功能。",
+  },
+  en: {
+    keywords:
+      "scriptcat,userscript,browser extension,user scripts,background scripts,scheduled scripts,userscript manager,tampermonkey,violentmonkey,greasemonkey,javascript,browser automation",
+    description:
+      "ScriptCat is an open-source browser extension for user scripts, background scripts, and scheduled scripts, with powerful management, sync, and subscription features.",
+  },
+  ru: {
+    keywords:
+      "scriptcat,userscript,расширение браузера,пользовательские скрипты,фоновые скрипты,скрипты по расписанию,менеджер пользовательских скриптов,tampermonkey,violentmonkey,greasemonkey,javascript,автоматизация браузера",
+    description:
+      "ScriptCat — открытое расширение браузера для пользовательских, фоновых скриптов и скриптов по расписанию с удобным управлением, синхронизацией и подписками.",
+  },
+};
+const metadata = metadataByLocale[currentLocale] ?? metadataByLocale[defaultLocale];
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "ScriptCat",
@@ -47,8 +76,8 @@ const config = {
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: "zh-Hans",
-    locales: ["zh-Hans", "en"],
+    defaultLocale,
+    locales: ["zh-Hans", "en", "ru"],
     localeConfigs: {
       "zh-Hans": {
         label: "简体中文",
@@ -60,6 +89,11 @@ const config = {
         direction: "ltr",
         htmlLang: "en",
       },
+      ru: {
+        label: "Русский",
+        direction: "ltr",
+        htmlLang: "ru",
+      },
     },
   },
 
@@ -69,6 +103,11 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          // Docusaurus normally falls back to the default (Chinese) docs tree.
+          // For configured locales, use another locale as the base tree while
+          // still letting localized files override it. check:i18n restricts
+          // which paths may rely on this fallback.
+          path: docsPath,
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -100,13 +139,11 @@ const config = {
       metadata: [
         {
           name: "keywords",
-          content:
-            "scriptcat,userscript,browser extension,浏览器扩展,用户脚本,后台脚本,脚本猫,tampermonkey,violentmonkey,greasemonkey,javascript,自动化脚本,网页增强",
+          content: metadata.keywords,
         },
         {
           name: "description",
-          content:
-            "ScriptCat 是一个可以执行自定义脚本的浏览器扩展，支持用户脚本、后台脚本等多种脚本类型。提供强大的脚本管理、同步、订阅等功能。",
+          content: metadata.description,
         },
       ],
       navbar: {

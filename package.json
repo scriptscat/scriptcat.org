@@ -17,9 +17,10 @@
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc",
     "check:urls": "node scripts/check-url-inventory.mjs",
+    "check:fallbacks": "node scripts/check-i18n-fallbacks.mjs",
     "check:i18n": "node scripts/check-i18n-parity.mjs",
     "check:frontmatter": "node scripts/check-frontmatter.mjs",
-    "check": "npm run check:urls && npm run check:i18n && npm run check:frontmatter"
+    "check": "npm run check:urls && npm run check:fallbacks && npm run check:i18n && npm run check:frontmatter"
   },
   "dependencies": {
     "@ant-design/icons": "^5.1.4",
