@@ -562,7 +562,9 @@ export default function Uninstall(): JSX.Element {
                         block
                         className="rounded-lg"
                       >
-                        Chrome 商店
+                        <Translate id="uninstall.reinstall.chrome">
+                          Chrome 商店
+                        </Translate>
                       </Button>
                       <Button
                         icon={<Icon icon="logos:microsoft-edge" />}
@@ -571,16 +573,20 @@ export default function Uninstall(): JSX.Element {
                         block
                         className="rounded-lg"
                       >
-                        Edge 商店
+                        <Translate id="uninstall.reinstall.edge">
+                          Edge 商店
+                        </Translate>
                       </Button>
                       <Button
                         icon={<Icon icon="logos:firefox" />}
-                        href="https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/"
+                        href="https://addons.mozilla.org/firefox/addon/scriptcat/"
                         target="_blank"
                         block
                         className="rounded-lg"
                       >
-                        Firefox 商店
+                        <Translate id="uninstall.reinstall.firefox">
+                          Firefox 商店
+                        </Translate>
                       </Button>
                     </Space>
                   </Card>

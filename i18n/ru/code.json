@@ -507,6 +507,18 @@
     "message": "Если передумаете, всегда можно установить снова:",
     "description": "Reinstall message"
   },
+  "uninstall.reinstall.chrome": {
+    "message": "Интернет-магазин Chrome",
+    "description": "Reinstall from Chrome Web Store button"
+  },
+  "uninstall.reinstall.edge": {
+    "message": "Дополнения Edge",
+    "description": "Reinstall from Edge Add-ons button"
+  },
+  "uninstall.reinstall.firefox": {
+    "message": "Дополнения Firefox",
+    "description": "Reinstall from Firefox Add-ons button"
+  },
   "uninstall.thanks.considerReinstall": {
     "message": "Если передумаете — мы всегда рады видеть вас снова",
     "description": "Consider reinstall message"
@@ -861,6 +873,14 @@
   },
   "home.dev.run": {
     "message": "Запуск"
+  },
+  "home.dev.mock.name": {
+    "message": "Ежедневный чек-ин",
+    "description": "@name value in the editor mock code block"
+  },
+  "home.dev.mock.toast": {
+    "message": "Чек-ин выполнен",
+    "description": "Notification text in the editor mock code block"
   },
   "home.comm.eyebrow": {
     "message": "Open source · ОТКРЫТЫЙ КОД"

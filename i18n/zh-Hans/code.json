@@ -874,6 +874,18 @@
     "message": "如果您改变主意，可以随时重新安装：",
     "description": "Reinstall message"
   },
+  "uninstall.reinstall.chrome": {
+    "message": "Chrome 商店",
+    "description": "Reinstall from Chrome Web Store button"
+  },
+  "uninstall.reinstall.edge": {
+    "message": "Edge 商店",
+    "description": "Reinstall from Edge Add-ons button"
+  },
+  "uninstall.reinstall.firefox": {
+    "message": "Firefox 商店",
+    "description": "Reinstall from Firefox Add-ons button"
+  },
   "uninstall.thanks.considerReinstall": {
     "message": "如果您改变主意，随时欢迎回来",
     "description": "Consider reinstall message"
