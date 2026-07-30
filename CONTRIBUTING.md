@@ -1,8 +1,10 @@
 # 贡献指南 / Contributing Guide
 
-> EN summary: file path = doc ID = published URL, no `id:`/`sidebar_position:` frontmatter, no number-prefixed filenames, `title:` is the only page-title source (no body `# H1`), images live in a sibling `<doc-name>.assets/` folder, and every `docs/**/*.md` needs a mirror in each locale docs tree unless an explicit single-source fallback is configured. Run `pnpm run check` before opening a PR — it enforces all of this. See [REFACTOR_PROPOSAL.md](./REFACTOR_PROPOSAL.md) for the full rationale.
+> EN summary: file path = doc ID = published URL, no `id:`/`sidebar_position:` frontmatter, no number-prefixed filenames, `title:` is the only page-title source (no body `# H1`), images live in a sibling `<doc-name>.assets/` folder, and every `docs/**/*.md` needs a mirror in each locale docs tree unless an explicit single-source fallback is configured. Run `pnpm run check` before opening a PR — it enforces all of this. For locale-aware code conventions see [conventions/i18n.md](./conventions/i18n.md).
 
-本文档记录本仓库的文档结构约定，帮助人类贡献者和 AI Agent 在不读遍全部历史讨论的情况下，正确地新增/修改文档。
+本文档记录本仓库的**文档结构**约定，帮助人类贡献者和 AI Agent 在不读遍全部历史讨论的情况下，正确地新增/修改文档。
+
+改动 `src/` 下的 React 代码或 `docusaurus.config.js` 之前，另见 [conventions/i18n.md](./conventions/i18n.md)——那里记录了多语言相关的代码约定（不要写死语言名、原生 `<a>` 要补 baseUrl、文案一律走 `<Translate>` 等），每条都对应一个真实踩过的坑。
 
 ## 核心约定
 
@@ -13,7 +15,7 @@
 | 侧边栏排序 | `sidebars.js`，三个 sidebar（`use`/`dev`/`change`）均为显式列表 |
 | 图片 | `<文档名>.assets/` 同级目录 |
 | 内部链接 | 指向 `.md` 文件的相对路径（构建时会校验） |
-| URL 不变契约 | 提交的 `scripts/url-inventory.txt`，每次 PR 由 CI 校验 |
+| URL 不变契约 | 提交的 `scripts/url-inventory.txt`，由 `pnpm run check:urls` 校验 |
 
 **为什么这样做**：过去 `id:`/`sidebar_position:`/数字前缀/`README.md` 四种机制同时存在，导致侧边栏文字和页面标题可能不一致（例如"VSCode 扩展开发脚本" vs 页面实际标题"使用 VSCode 开发脚本"），且文件名与 URL 无法直接对应。现在文件路径就是 URL，看文件名就知道页面在哪。
 
@@ -39,7 +41,7 @@
 - `/docs/use/install_comple/`（`install_comple` 是历史拼写，故意保留，不是笔误）
 - `/uninstall/`
 
-`scripts/check-url-inventory.mjs` 会在每次 `pnpm run build` 后对比 `scripts/url-inventory.txt`；如果你的改动导致路由变化，CI 会失败并列出具体差异。**新增**路由是允许的（比如加一个 redirect），但需要在同一个 PR 里用 `node scripts/check-url-inventory.mjs --write` 更新这个文件，让 review 能看到你有意添加了什么。
+`scripts/check-url-inventory.mjs` 会在每次 `pnpm run build` 后对比 `scripts/url-inventory.txt`；如果你的改动导致路由变化，这个检查会失败并列出具体差异（**注意：目前仓库没有配置 CI，必须本地手动跑**）。**新增**路由是允许的（比如加一个 redirect），但需要在同一个 PR 里用 `node scripts/check-url-inventory.mjs --write` 更新这个文件，让 review 能看到你有意添加了什么。
 
 ## 翻译对照表
 
