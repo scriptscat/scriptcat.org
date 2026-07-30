@@ -46,32 +46,32 @@ import SponsorBlock from '@site/src/components/SponsorBlock/en.mdx';
 
 ① Откройте управление расширениями браузера или перейдите на [edge://extensions/](edge://extensions/)
 
-![edge-open-settings](./open-dev.assets/edge-extensions-page.webp)
+![edge-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge-extensions-page.webp)
 
 ② Найдите расширение ScriptCat и нажмите `Details` / «Сведения»
 
-![edge-extensions-details](open-dev.assets/edge-extensions-details.png)
+![edge-extensions-details](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge-extensions-details.png)
 
 ③ На странице сведений ScriptCat найдите параметр `Allow user scripts` / «Разрешить пользовательские скрипты» и включите его. Затем отключите и снова включите расширение или перезапустите браузер.
 
 > ⚠️⚠️⚠️ Для более старых Edge (≤143) или если этого параметра нет, см. [Включение режима разработчика](#enable-developer-mode)
 
-![edge-allow-user-scripts](open-dev.assets/edge-allow-user-scripts.png)
+![edge-allow-user-scripts](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge-allow-user-scripts.png)
 
   </TabItem>
   <TabItem value="chrome" label={<div className="flex items-center gap-1"><Icon height={16} width={16} icon="logos:chrome" />Chrome</div>}>
 
 ① Откройте управление расширениями или перейдите на [chrome://extensions/](chrome://extensions/)
 
-![chrome-open-settings](./open-dev.assets/chrome-extensions-page.webp)
+![chrome-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/chrome-extensions-page.webp)
 
 ② Найдите расширение ScriptCat и нажмите `Details` / «Сведения»
 
-![scriptcat-extension-details](open-dev.assets/scriptcat-extension-details.webp)
+![scriptcat-extension-details](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/scriptcat-extension-details.webp)
 
 ③ На странице сведений ScriptCat найдите `Allow user scripts` / «Разрешить пользовательские скрипты» и включите. Затем отключите и снова включите расширение или перезапустите браузер.
 
-![allow-user-scripts-toggle](open-dev.assets/allow-user-scripts-toggle.webp)
+![allow-user-scripts-toggle](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/allow-user-scripts-toggle.webp)
 </TabItem>
   <TabItem value="edge-mobile" label={<div className="flex items-center gap-1"><Icon height={16} width={16} icon="logos:microsoft-edge" />Edge Mobile</div>}>
 
@@ -85,7 +85,7 @@ import SponsorBlock from '@site/src/components/SponsorBlock/en.mdx';
 
 > ⚠️⚠️⚠️ Для движка ниже 138 или если параметра нет, см. [Включение режима разработчика](#enable-developer-mode)
 
-![edge-mobile-allow-user-scripts](./open-dev.assets/edge%20mobile%20138.png)
+![edge-mobile-allow-user-scripts](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge%20mobile%20138.png)
 
   </TabItem>
 </Tabs>
@@ -97,11 +97,11 @@ import SponsorBlock from '@site/src/components/SponsorBlock/en.mdx';
 
 ① Откройте управление расширениями или [edge://extensions/](edge://extensions/)
 
-![edge-open-settings](./open-dev.assets/edge-extensions-page.webp)
+![edge-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge-extensions-page.webp)
 
 ② Включите `Developer mode` / «Режим разработчика» (в некоторых браузерах он может быть в другом месте, например 360: Дополнительное управление > Режим разработчика)
 
-![edge-open-dev](./open-dev.assets/edge-developer-mode-toggle.webp)
+![edge-open-dev](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge-developer-mode-toggle.webp)
 
 ③ После включения отключите и снова включите расширение или перезапустите браузер.
 
@@ -110,11 +110,11 @@ import SponsorBlock from '@site/src/components/SponsorBlock/en.mdx';
 
 ① Откройте управление расширениями или [chrome://extensions/](chrome://extensions/)
 
-![chrome-open-settings](./open-dev.assets/chrome-extensions-page.webp)
+![chrome-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/chrome-extensions-page.webp)
 
 ② Включите `Developer mode` / «Режим разработчика» (в некоторых браузерах он может быть в другом месте)
 
-![chrome-open-dev](./open-dev.assets/chrome-developer-mode-toggle.webp)
+![chrome-open-dev](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/chrome-developer-mode-toggle.webp)
 
 ③ После включения отключите и снова включите расширение или перезапустите браузер.
 
@@ -124,7 +124,7 @@ import SponsorBlock from '@site/src/components/SponsorBlock/en.mdx';
 
 Для Edge Mobile с движком ниже 138 или без параметра `Allow user scripts` нажмите кнопку настроек вверху страницы расширений и включите режим разработчика.
 
-![edge-mobile-open-dev](./open-dev.assets/edge%20mobile.png)
+![edge-mobile-open-dev](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge%20mobile.png)
 </TabItem>
 
 </Tabs>

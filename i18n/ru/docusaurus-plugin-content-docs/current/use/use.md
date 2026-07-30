@@ -23,17 +23,17 @@ ScriptCat — браузерное расширение для запуска п
 
 ① Скачайте файл `zip` со страницы [Github Release](https://github.com/scriptscat/scriptcat/releases) или [Community Download](https://bbs.tampermonkey.net.cn/thread-3068-1-1.html). Если это файл `crx`, переименуйте расширение в `zip`.
 
-② Подготовьте папку для хранения плагина и распакуйте zip в эту папку. После распаковки должно получиться примерно так (**важно: эту папку нельзя удалять или перемещать, иначе расширение перестанет работать**) ![download-zip](./use.assets/download-zip.webp)
+② Подготовьте папку для хранения плагина и распакуйте zip в эту папку. После распаковки должно получиться примерно так (**важно: эту папку нельзя удалять или перемещать, иначе расширение перестанет работать**) ![download-zip](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/download-zip.webp)
 
 ③ Откройте страницу управления расширениями браузера и загрузите распакованное расширение (сначала включите режим разработчика — см. [Включение поддержки пользовательских скриптов](/docs/use/open-dev/))
 
-- 1. **Edge** ![edge-load-unpacked](./use.assets/edge-load-unpacked.webp)
-- 2. **Chrome** ![chrome-load-unpacked](./use.assets/chrome-load-unpacked.webp)
+- 1. **Edge** ![edge-load-unpacked](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/edge-load-unpacked.webp)
+- 2. **Chrome** ![chrome-load-unpacked](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/chrome-load-unpacked.webp)
 
 ④ Выберите папку, созданную на шаге ② (после загрузки в списке расширений появится значок ScriptCat; его также можно увидеть, нажав кнопку расширений справа от адресной строки)
 
-- 1. **Edge** ![edge-load-unpacked-img](./use.assets/edge-load-unpacked-img.webp)
-- 2. **Chrome** ![chrome-load-unpacked-img](./use.assets/chrome-load-unpacked-img.webp)
+- 1. **Edge** ![edge-load-unpacked-img](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/edge-load-unpacked-img.webp)
+- 2. **Chrome** ![chrome-load-unpacked-img](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/chrome-load-unpacked-img.webp)
 
 ⑤ Нажмите значок ScriptCat в правом верхнем углу, затем `┆` > «Получить скрипты» — откроется сайт скриптов, где можно искать и устанавливать скрипты.
 

@@ -3,8 +3,13 @@ import styles from "./index.module.css";
 import { IconCat } from "../../components/IconCat";
 import { Icon } from "@iconify/react";
 import Translate from '@docusaurus/Translate';
+import { useBaseUrlUtils } from "@docusaurus/useBaseUrl";
 
 function CustomFooter() {
+  // 内部链接是原生 <a>，需要手动补上带当前语言的 baseUrl（如 /ru/），
+  // 否则俄语/英文页面的页脚会把用户带回中文文档
+  const { withBaseUrl } = useBaseUrlUtils();
+
   return (
     <footer className={styles.footer}>
       <div className="container">
@@ -59,7 +64,7 @@ function CustomFooter() {
             </h4>
             <ul className={styles.footerColumnList}>
               <li>
-                <a href="/docs/use/use/" className={styles.footerColumnLink}>
+                <a href={withBaseUrl("/docs/use/use/")} className={styles.footerColumnLink}>
                   <Translate
                     id="footer.product.features"
                     description="Footer product features link"
@@ -83,7 +88,7 @@ function CustomFooter() {
                 </a>
               </li>
               <li>
-                <a href="/docs/change/" className={styles.footerColumnLink}>
+                <a href={withBaseUrl("/docs/change/")} className={styles.footerColumnLink}>
                   <Translate
                     id="footer.product.changelog"
                     description="Footer product changelog link"
@@ -107,7 +112,7 @@ function CustomFooter() {
             </h4>
             <ul className={styles.footerColumnList}>
               <li>
-                <a href="/docs/dev/" className={styles.footerColumnLink}>
+                <a href={withBaseUrl("/docs/dev/")} className={styles.footerColumnLink}>
                   <Translate
                     id="footer.resources.devDocs"
                     description="Footer resources development docs link"
@@ -117,7 +122,7 @@ function CustomFooter() {
                 </a>
               </li>
               <li>
-                <a href="/docs/dev/api/" className={styles.footerColumnLink}>
+                <a href={withBaseUrl("/docs/dev/api/")} className={styles.footerColumnLink}>
                   <Translate
                     id="footer.resources.apiReference"
                     description="Footer resources API reference link"
@@ -141,7 +146,7 @@ function CustomFooter() {
                 </a>
               </li>
               <li>
-                <a href="/docs/use/qa/" className={styles.footerColumnLink}>
+                <a href={withBaseUrl("/docs/use/qa/")} className={styles.footerColumnLink}>
                   <Translate
                     id="footer.resources.faq"
                     description="Footer resources FAQ link"
@@ -250,7 +255,7 @@ function CustomFooter() {
         </div>
         <div className={styles.footerCopyrightLinks}>
           <a
-            href="/docs/use/policy/privacy/"
+            href={withBaseUrl("/docs/use/policy/privacy/")}
             className={styles.footerCopyrightLink}
           >
             <Translate
@@ -261,7 +266,7 @@ function CustomFooter() {
             </Translate>
           </a>
           <a
-            href="/docs/use/policy/disclaimer/"
+            href={withBaseUrl("/docs/use/policy/disclaimer/")}
             className={styles.footerCopyrightLink}
           >
             <Translate

@@ -24,7 +24,7 @@
 3. 正文**不要**再写一个 `# 标题` 作为 H1——`title:` 会自动渲染为页面标题。
 4. 在 `sidebars.js` 对应的数组里加一行 `"section/xxx"`（除非这是一个故意不出现在侧边栏的隐藏页面，如 `use/install_comple`）。
 5. 在 `i18n/<locale>/docusaurus-plugin-content-docs/current/<section>/xxx.md` 为各非默认 locale 创建镜像，路径和文件名必须完全一致；`scripts/check-config.json` 中声明的单一来源 fallback 路径除外。
-6. 图片放在 `docs/<section>/xxx.assets/` 下，用 `./xxx.assets/foo.png` 引用；纯 UI 截图等语言无关的图片，英文版可以用 `@site/docs/<section>/xxx.assets/foo.png` 直接复用中文版的图片，不必重复存一份二进制文件。
+6. 图片放在 `docs/<section>/xxx.assets/` 下，用 `./xxx.assets/foo.png` 引用；纯 UI 截图等语言无关的图片，英文版可以用 `@site/docs/<section>/xxx.assets/foo.png` 直接复用中文版的图片，不必重复存一份二进制文件。俄语版沿用英文截图，统一写 `@site/i18n/en/docusaurus-plugin-content-docs/current/<section>/xxx.assets/foo.png`——`i18n/ru/` 下不放任何图片二进制，避免同一张图在仓库里存三份。
 7. 跑一次 `pnpm run build && pnpm run check`，确认全部检查通过。
 
 ## 新增一条更新日志
