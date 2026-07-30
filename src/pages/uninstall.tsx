@@ -32,6 +32,8 @@ import {
 } from "@ant-design/icons";
 import { Icon } from "@iconify/react";
 import Translate, { translate } from "@docusaurus/Translate";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import { useBaseUrlUtils } from "@docusaurus/useBaseUrl";
 import { useTheme } from "../components/useTheme";
 import { submitFeedback, type FeedbackRequest, type FeedbackReason } from "../service/system";
 
@@ -90,17 +92,20 @@ export default function Uninstall(): JSX.Element {
   const [submitted, setSubmitted] = useState<boolean>(false);
   const { theme } = useTheme();
 
-  // 检测当前语言环境
-  const isEnglish = typeof window !== 'undefined' && window.location.pathname.startsWith('/en/');
+  // 检测当前语言环境。用 currentLocale 而不是判断路径前缀，否则 /ru/ 会被当成中文
+  const { i18n } = useDocusaurusContext();
+  const { withBaseUrl } = useBaseUrlUtils();
+  // 上游仓库只有中英两套 issue 模板，所以非中文语言统一走英文模板
+  const useEnglishTemplate = i18n.currentLocale !== i18n.defaultLocale;
 
   // 根据语言和反馈类型获取GitHub链接
   const getGithubUrl = (reason: FeedbackReason) => {
     if (reason === 'bug') {
-      return isEnglish 
+      return useEnglishTemplate
         ? 'https://github.com/scriptscat/scriptcat/issues/new?template=bug_report_en.yaml'
         : 'https://github.com/scriptscat/scriptcat/issues/new?template=bug_report.yaml';
     } else if (reason === 'feature') {
-      return isEnglish
+      return useEnglishTemplate
         ? 'https://github.com/scriptscat/scriptcat/issues/new?template=feature_request_en.md'
         : 'https://github.com/scriptscat/scriptcat/issues/new?template=feature_request.md';
     }
@@ -208,7 +213,7 @@ export default function Uninstall(): JSX.Element {
                       type="primary"
                       size="large"
                       icon={<HomeOutlined />}
-                      href="/"
+                      href={withBaseUrl("/")}
                       block
                       className="h-12 rounded-lg shadow-md hover:shadow-lg transition-all duration-200"
                     >
@@ -557,7 +562,9 @@ export default function Uninstall(): JSX.Element {
                         block
                         className="rounded-lg"
                       >
-                        Chrome 商店
+                        <Translate id="uninstall.reinstall.chrome">
+                          Chrome 商店
+                        </Translate>
                       </Button>
                       <Button
                         icon={<Icon icon="logos:microsoft-edge" />}
@@ -566,16 +573,20 @@ export default function Uninstall(): JSX.Element {
                         block
                         className="rounded-lg"
                       >
-                        Edge 商店
+                        <Translate id="uninstall.reinstall.edge">
+                          Edge 商店
+                        </Translate>
                       </Button>
                       <Button
                         icon={<Icon icon="logos:firefox" />}
-                        href="https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/"
+                        href="https://addons.mozilla.org/firefox/addon/scriptcat/"
                         target="_blank"
                         block
                         className="rounded-lg"
                       >
-                        Firefox 商店
+                        <Translate id="uninstall.reinstall.firefox">
+                          Firefox 商店
+                        </Translate>
                       </Button>
                     </Space>
                   </Card>
@@ -616,7 +627,7 @@ export default function Uninstall(): JSX.Element {
                       </Button>
                       <Button
                         icon={<MessageOutlined />}
-                        href="/docs"
+                        href={withBaseUrl("/docs")}
                         block
                         className="rounded-lg"
                       >

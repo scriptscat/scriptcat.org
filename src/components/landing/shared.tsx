@@ -104,10 +104,13 @@ export function usePrimaryInstall(): {
 } {
   const target = useInstallTarget();
   const store = target === "unknown" ? null : STORES[target];
+  // Callers render this as a plain <a>, so the internal fallback needs baseUrl
+  // (which carries the active locale) applied here.
+  const guide = useBaseUrl(LINKS.docs);
   return {
     target,
     store,
-    href: store ? store.href : LINKS.docs,
+    href: store ? store.href : guide,
     external: store !== null,
   };
 }

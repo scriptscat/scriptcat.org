@@ -4,7 +4,7 @@ import { Dropdown } from "antd";
 import type { MenuProps } from "antd";
 import Translate, { translate } from "@docusaurus/Translate";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import useBaseUrl from "@docusaurus/useBaseUrl";
+import useBaseUrl, { useBaseUrlUtils } from "@docusaurus/useBaseUrl";
 import { useTheme } from "../useTheme";
 import styles from "./landing.module.css";
 import stats from "@site/src/data/landing-stats.json";
@@ -14,17 +14,22 @@ import { LINKS, abbr, usePrimaryInstall } from "./shared";
 // Docusaurus navbar is hidden on the homepage (see custom.css) so this one
 // takes its place; docs pages keep the standard navbar.
 export function LandingNav() {
-  const { i18n } = useDocusaurusContext();
-  const zh = i18n.currentLocale !== "en";
   const [open, setOpen] = useState(false);
   const logo = useBaseUrl("/img/logo.png");
-  const home = zh ? "/" : "/en/";
+  // These are plain <a> (not <Link>), so baseUrl — which carries the active
+  // locale, e.g. /ru/ — has to be applied by hand. withBaseUrl leaves the
+  // absolute store/GitHub URLs untouched.
+  const { withBaseUrl } = useBaseUrlUtils();
+  const home = useBaseUrl("/");
 
   const menu = [
-    { label: <Translate id="home.nav.docs">文档</Translate>, href: LINKS.docs },
+    { label: <Translate id="home.nav.docs">文档</Translate>, href: withBaseUrl(LINKS.docs) },
     { label: <Translate id="home.nav.store">脚本商店</Translate>, href: LINKS.store },
-    { label: <Translate id="home.nav.dev">开发者</Translate>, href: LINKS.dev },
-    { label: <Translate id="home.nav.changelog">更新日志</Translate>, href: LINKS.changelog },
+    { label: <Translate id="home.nav.dev">开发者</Translate>, href: withBaseUrl(LINKS.dev) },
+    {
+      label: <Translate id="home.nav.changelog">更新日志</Translate>,
+      href: withBaseUrl(LINKS.changelog),
+    },
   ];
 
   return (
@@ -45,7 +50,7 @@ export function LandingNav() {
 
         <div className={styles.lnavActions}>
           <ThemeToggle />
-          <LangSwitch zh={zh} homeZh="/" />
+          <LangSwitch />
           <a
             className={styles.lnavStar}
             href={LINKS.github}
@@ -143,30 +148,39 @@ function ThemeToggle() {
   );
 }
 
-function LangSwitch({ zh, homeZh }: { zh: boolean; homeZh: string }) {
-  const items: MenuProps["items"] = [
-    {
-      key: "zh",
-      label: (
-        <a className={styles.lnavLangItem} href={homeZh}>
-          简体中文
-        </a>
-      ),
-    },
-    {
-      key: "en",
-      label: (
-        <a className={styles.lnavLangItem} href="/en/">
-          English
-        </a>
-      ),
-    },
-  ];
+// The locale list and its labels come straight from docusaurus.config.js
+// (i18n.locales / i18n.localeConfigs), so adding a locale there is enough —
+// nothing to update here. LandingNav only renders on the homepage, so each
+// entry points at that locale's home rather than the translated current page.
+function LangSwitch() {
+  const { i18n, siteConfig } = useDocusaurusContext();
+  const { currentLocale, defaultLocale, locales, localeConfigs } = i18n;
+  // siteConfig.baseUrl already carries the active locale (e.g. "/ru/"); strip
+  // that back off to recover the site root and build the other homes from it.
+  const currentPath = localeConfigs[currentLocale].path;
+  const siteRoot =
+    currentLocale === defaultLocale
+      ? siteConfig.baseUrl
+      : siteConfig.baseUrl.slice(0, -(currentPath.length + 1));
+
+  const items: MenuProps["items"] = locales.map((locale) => ({
+    key: locale,
+    label: (
+      <a
+        className={styles.lnavLangItem}
+        href={locale === defaultLocale ? siteRoot : `${siteRoot}${localeConfigs[locale].path}/`}
+        lang={localeConfigs[locale].htmlLang}
+      >
+        {localeConfigs[locale].label}
+      </a>
+    ),
+  }));
+
   return (
     <Dropdown menu={{ items }} trigger={["hover", "click"]} placement="bottomRight">
       <button className={styles.lnavLang}>
         <Icon icon="lucide:globe" width={16} height={16} />
-        <span>{zh ? "简体中文" : "English"}</span>
+        <span>{localeConfigs[currentLocale].label}</span>
         <Icon icon="lucide:chevron-down" width={14} height={14} />
       </button>
     </Dropdown>

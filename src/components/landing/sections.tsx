@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react";
 import Link from "@docusaurus/Link";
-import Translate from "@docusaurus/Translate";
+import Translate, { translate } from "@docusaurus/Translate";
 import styles from "./landing.module.css";
 import stats from "@site/src/data/landing-stats.json";
 import {
@@ -538,7 +538,9 @@ export function Features() {
                 </div>
                 <div className={styles.codeBody}>
                   <div className={styles.codeComment}>{"// ==UserScript=="}</div>
-                  <div className={styles.codeMeta}>{"// @name    视频倍速控制"}</div>
+                  <div className={styles.codeMeta}>
+                    {`// @name    ${translate({ id: "home.hero.mock.speed", message: "视频倍速控制" })}`}
+                  </div>
                   <div className={styles.codeMeta}>{"// @match   *://*.bilibili.com/*"}</div>
                   <div className={styles.codeGrant}>{"// @grant   GM_setValue"}</div>
                   <div className={styles.codeComment}>{"// ==/UserScript=="}</div>
@@ -670,7 +672,9 @@ export function Developers() {
             </div>
             <div className={styles.editorCode}>
               <div className={styles.cComment}>{"// ==UserScript=="}</div>
-              <div className={styles.cMeta}>{"// @name  每日自动签到"}</div>
+              <div className={styles.cMeta}>
+                {`// @name  ${translate({ id: "home.dev.mock.name", message: "每日自动签到" })}`}
+              </div>
               <div className={styles.cMeta}>{"// @cron  0 9 * * *"}</div>
               <div className={styles.cComment}>{"// ==/UserScript=="}</div>
               <div>&nbsp;</div>
@@ -688,7 +692,9 @@ export function Developers() {
               </div>
               <div>
                 &nbsp;&nbsp;<span className={styles.cApi}>GM_notification</span>
-                <span className={styles.cStr}>('签到成功')</span>
+                <span className={styles.cStr}>
+                  {`('${translate({ id: "home.dev.mock.toast", message: "签到成功" })}')`}
+                </span>
               </div>
               <div className={styles.cPlain}>{"}"}</div>
               <div>&nbsp;</div>
@@ -700,7 +706,9 @@ export function Developers() {
           </div>
           <div className={styles.editorConsole}>
             <Logo size={15} />
-            <span>ScriptCat › 签到成功 · 200 OK</span>
+            <span>
+              {`ScriptCat › ${translate({ id: "home.dev.mock.toast", message: "签到成功" })} · 200 OK`}
+            </span>
           </div>
         </div>
       </div>

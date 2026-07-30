@@ -27,6 +27,10 @@
     "message": "Find these updates useful? Star us on GitHub to support our work",
     "description": "GitHub star bar subtitle on changelog page"
   },
+  "homepage.meta.keywords": {
+    "message": "ScriptCat,user scripts,browser extension,userscript,Tampermonkey,Violentmonkey,background scripts,scheduled scripts,browser automation,ad blocker,script store",
+    "description": "Homepage SEO keywords"
+  },
   "homepage.meta.title": {
     "message": "ScriptCat - Powerful Browser Script Engine",
     "description": "Homepage meta title for SEO"
@@ -503,6 +507,18 @@
     "message": "If you change your mind, you can always reinstall:",
     "description": "Reinstall message"
   },
+  "uninstall.reinstall.chrome": {
+    "message": "Chrome Web Store",
+    "description": "Reinstall from Chrome Web Store button"
+  },
+  "uninstall.reinstall.edge": {
+    "message": "Edge Add-ons",
+    "description": "Reinstall from Edge Add-ons button"
+  },
+  "uninstall.reinstall.firefox": {
+    "message": "Firefox Add-ons",
+    "description": "Reinstall from Firefox Add-ons button"
+  },
   "uninstall.thanks.considerReinstall": {
     "message": "If you change your mind, you're always welcome back",
     "description": "Consider reinstall message"
@@ -857,6 +873,14 @@
   },
   "home.dev.run": {
     "message": "Run"
+  },
+  "home.dev.mock.name": {
+    "message": "Daily check-in",
+    "description": "@name value in the editor mock code block"
+  },
+  "home.dev.mock.toast": {
+    "message": "Checked in",
+    "description": "Notification text in the editor mock code block"
   },
   "home.comm.eyebrow": {
     "message": "Open source · OPEN SOURCE"

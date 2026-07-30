@@ -1,8 +1,12 @@
 #!/usr/bin/env node
-// Verifies every zh-Hans doc under docs/ has an English mirror under
-// i18n/en/docusaurus-plugin-content-docs/current/ (and vice versa).
+// Verifies every default-locale doc under docs/ has a mirror in every locale
+// docs tree under i18n/ (and vice versa).
 //
 // Controlled by scripts/check-config.json: { "i18nParityStrict": boolean }.
+// Intentional single-source fallbacks can be declared with:
+//   { "i18nDocFallbacks": { "ru": {
+//       "sourceLocale": "en", "paths": ["change/"]
+//   } } }
 // While false, mismatches are printed as warnings and the script exits 0.
 // Once the translation backlog is cleared, flip it to true to hard-fail CI.
 
@@ -10,8 +14,9 @@ import { readFileSync, existsSync, readdirSync, statSync } from "node:fs";
 import { join, relative, sep } from "node:path";
 
 const ROOT = new URL("..", import.meta.url).pathname;
-const ZH_DIR = join(ROOT, "docs");
-const EN_DIR = join(ROOT, "i18n/en/docusaurus-plugin-content-docs/current");
+const DEFAULT_DIR = join(ROOT, "docs");
+const I18N_DIR = join(ROOT, "i18n");
+const DOCS_PLUGIN_PATH = "docusaurus-plugin-content-docs/current";
 const CONFIG_FILE = join(ROOT, "scripts", "check-config.json");
 
 // Node 18/20 (the CI runtime) lack fs.globSync (added in Node 22), so walk manually.
@@ -35,27 +40,77 @@ function listDocs(dir) {
 function main() {
   const config = JSON.parse(readFileSync(CONFIG_FILE, "utf8"));
   const strict = Boolean(config.i18nParityStrict);
+  const defaultLocale = config.defaultLocale;
+  const fallbacks = config.i18nDocFallbacks ?? {};
 
-  const zhDocs = listDocs(ZH_DIR);
-  const enDocs = existsSync(EN_DIR) ? listDocs(EN_DIR) : [];
-  const enSet = new Set(enDocs);
-  const zhSet = new Set(zhDocs);
+  if (!defaultLocale) {
+    console.error("scripts/check-config.json must define defaultLocale.");
+    process.exit(1);
+  }
 
-  const missing = zhDocs.filter((d) => !enSet.has(d));
-  const orphans = enDocs.filter((d) => !zhSet.has(d));
+  const defaultDocs = listDocs(DEFAULT_DIR);
+  const defaultSet = new Set(defaultDocs);
+  const localeDirs = readdirSync(I18N_DIR)
+    .filter(
+      (locale) =>
+        locale !== defaultLocale && statSync(join(I18N_DIR, locale)).isDirectory()
+    )
+    .map((locale) => ({
+      locale,
+      dir: join(I18N_DIR, locale, DOCS_PLUGIN_PATH),
+    }))
+    .sort((a, b) => a.locale.localeCompare(b.locale));
 
-  if (missing.length === 0 && orphans.length === 0) {
-    console.log(`i18n parity check passed: ${zhDocs.length} docs, all translated.`);
+  if (localeDirs.length === 0) {
+    console.error("No localized docs trees found under i18n/.");
+    process.exit(1);
+  }
+
+  let issueCount = 0;
+  const summaries = [];
+
+  for (const { locale, dir } of localeDirs) {
+    const localeDocs = existsSync(dir) ? listDocs(dir) : [];
+    const localeSet = new Set(localeDocs);
+    const fallback = fallbacks[locale];
+    const fallbackPaths = fallback?.paths ?? [];
+    const fallbackDir = fallback?.sourceLocale
+      ? join(I18N_DIR, fallback.sourceLocale, DOCS_PLUGIN_PATH)
+      : undefined;
+    const fallbackSet =
+      fallbackDir && existsSync(fallbackDir) ? new Set(listDocs(fallbackDir)) : new Set();
+
+    const missing = defaultDocs.filter((doc) => !localeSet.has(doc));
+    const fallbackDocs = missing.filter(
+      (doc) => fallbackPaths.some((prefix) => doc.startsWith(prefix)) && fallbackSet.has(doc)
+    );
+    const fallbackDocSet = new Set(fallbackDocs);
+    const unexpectedMissing = missing.filter((doc) => !fallbackDocSet.has(doc));
+    const orphans = localeDocs.filter((doc) => !defaultSet.has(doc));
+
+    if (unexpectedMissing.length > 0) {
+      console.log(`Missing ${locale} translation (${unexpectedMissing.length}):`);
+      for (const doc of unexpectedMissing) console.log(`  - ${doc}`);
+    }
+    if (orphans.length > 0) {
+      console.log(`${locale} doc with no default-locale source (${orphans.length}):`);
+      for (const doc of orphans) console.log(`  - ${doc}`);
+    }
+    if (fallbackDocs.length > 0) {
+      console.log(
+        `${locale}: ${fallbackDocs.length} docs intentionally fall back to ${fallback.sourceLocale}.`
+      );
+    }
+
+    issueCount += unexpectedMissing.length + orphans.length;
+    summaries.push(`${locale}: ${localeDocs.length} translated, ${fallbackDocs.length} fallback`);
+  }
+
+  if (issueCount === 0) {
+    console.log(
+      `i18n parity check passed: ${defaultDocs.length} default-locale docs; ${summaries.join("; ")}.`
+    );
     return;
-  }
-
-  if (missing.length > 0) {
-    console.log(`Missing English translation (${missing.length}):`);
-    for (const m of missing) console.log(`  - ${m}`);
-  }
-  if (orphans.length > 0) {
-    console.log(`English doc with no zh-Hans source (${orphans.length}):`);
-    for (const o of orphans) console.log(`  - ${o}`);
   }
 
   if (strict) {

@@ -1,0 +1,18 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.use.category.服务协议": {
+    "message": "Пользовательское соглашение",
+    "description": "The label for category 服务协议 in sidebar use"
+  },
+  "sidebar.use.category.从其它管理器迁移": {
+    "message": "Миграция из других менеджеров",
+    "description": "The label for category 从其它管理器迁移 in sidebar use"
+  },
+  "sidebar.dev.category.Agent 智能助手": {
+    "message": "Agent",
+    "description": "The label for category Agent 智能助手 in sidebar dev"
+  }
+}

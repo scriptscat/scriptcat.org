@@ -23,7 +23,11 @@ export default function Home(): JSX.Element {
         <body className="landing-page" />
         <meta
           name="keywords"
-          content="ScriptCat,脚本猫,用户脚本,浏览器扩展,userscript,tampermonkey,violentmonkey,后台脚本,自动化,广告屏蔽,脚本商店"
+          content={translate({
+            id: "homepage.meta.keywords",
+            message:
+              "ScriptCat,脚本猫,用户脚本,浏览器扩展,userscript,tampermonkey,violentmonkey,后台脚本,自动化,广告屏蔽,脚本商店",
+          })}
         />
       </Head>
       <Layout
