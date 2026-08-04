@@ -44,13 +44,17 @@ import SponsorBlock from '@site/src/components/SponsorBlock/zh.mdx';
 <Tabs groupId="browser" queryString>
   <TabItem value="edge" label={<div className="flex items-center gap-1"><Icon height={16} width={16} icon="logos:microsoft-edge" />Edge</div>} default>
 
-① 打开浏览器的扩展管理界面，或者访问 [edge://extensions/](edge://extensions/)
+① 打开浏览器的扩展列表然后点击扩展右边的三个点，
 
-![edge-open-settings](./open-dev.assets/edge-open-settings.webp)
+<img width="38" height="39" alt="image" src="https://github.com/user-attachments/assets/64d52664-9cbe-48d7-84eb-915dd727171e" /> → 
+<img width="335" height="38" alt="image" src="https://github.com/user-attachments/assets/808dfc9b-7404-4091-ac26-b0cf647b1a2e" />
 
-② 在扩展管理界面中，找到脚本猫扩展，点击`详情`
+或者直接右键单击在工具栏上的扩展图标来打开菜单 <img width="43" height="42" alt="image" src="https://github.com/user-attachments/assets/7f344714-45e6-4b79-b65b-c562dacae60a" />
 
-![image-20260130233429385](open-dev.assets/image-20260130233429385.png)
+
+② 在菜单中点击扩展管理
+
+<img width="223" height="426" alt="image" src="https://github.com/user-attachments/assets/59d89885-43e6-46ad-9c35-43a50d88ce0c" />
 
 ③ 在脚本猫扩展的详情页中，找到`允许用户脚本`选项，开启它，然后关闭扩展再开启扩展，或者重启浏览器，使脚本功能生效。
 
