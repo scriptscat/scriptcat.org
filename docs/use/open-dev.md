@@ -46,7 +46,7 @@ import SponsorBlock from '@site/src/components/SponsorBlock/zh.mdx';
 
 ① 打开浏览器的扩展列表然后点击扩展右边的三个点，
 
-<img width="38" height="39" alt="image" src="https://github.com/user-attachments/assets/64d52664-9cbe-48d7-84eb-915dd727171e" /> → 
+![edge-open-settings](./open-dev.assets/edge-open-settings.webp) 👉 
 <img width="335" height="38" alt="image" src="https://github.com/user-attachments/assets/808dfc9b-7404-4091-ac26-b0cf647b1a2e" />
 
 或者直接右键单击在工具栏上的扩展图标来打开菜单 <img width="43" height="42" alt="image" src="https://github.com/user-attachments/assets/7f344714-45e6-4b79-b65b-c562dacae60a" />
