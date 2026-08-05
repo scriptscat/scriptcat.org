@@ -31,10 +31,9 @@ archive for your platform, download and extract it, then put `sctl` (`sctl.exe` 
 sctl version
 ```
 
-ScriptCat currently requires daemon version `0.1.0` or newer. A plain source build reports `0.0.0-dev` and is
-rejected by the extension. Until a release is available, contributors building from source must inject a usable
-version as described in the sctl development guide. Do not treat a plain `go install ...@latest` as a usable
-installation.
+A plain source build reports `0.0.0-dev` to distinguish it from a release build with injected version, commit,
+and build-time metadata; this does not prevent it from connecting to ScriptCat. If no release is available,
+contributors can build it from the [sctl repository](https://github.com/scriptscat/sctl).
 
 ## 2. Start the daemon and enroll
 
@@ -50,24 +49,27 @@ control token, and logs. Choose an absolute path private to the current user:
 /absolute/path/to/sctl-data
 ```
 
-Pass the same argument to every process:
+Set the same environment variable for every sctl process:
 
 ```bash
-sctl --data-dir /absolute/path/to/sctl-data serve
-sctl --data-dir /absolute/path/to/sctl-data status
-sctl --data-dir /absolute/path/to/sctl-data mcp
+export SCTL_DATA_DIR=/absolute/path/to/sctl-data
+sctl serve
+sctl status
+sctl mcp
 ```
 
-Without `--data-dir`, sctl uses the platform's default per-user application data directory. Do not put the data
-directory in a repository or shared sync folder, and never give its `pairing.key` or `control.token` to an AI
-model.
+An explicit `--data-dir` takes precedence over the environment variable.
+
+If neither `--data-dir` nor `SCTL_DATA_DIR` is set, sctl uses the platform's default per-user application data
+directory. Do not put the data directory in a repository or shared sync folder, and never give its `pairing.key`
+or `control.token` to an AI model.
 
 ### 2.2 Start the daemon
 
 Run this in a terminal and keep the process alive:
 
 ```bash
-sctl --data-dir /absolute/path/to/sctl-data serve
+sctl serve
 ```
 
 The default address is `ws://127.0.0.1:8643`. The daemon is never auto-started by `connect`, `status`, another
@@ -77,7 +79,7 @@ manager.
 To listen explicitly on every network interface, run:
 
 ```bash
-sctl --data-dir /absolute/path/to/sctl-data --listen-address 0.0.0.0:8643 serve
+sctl --listen-address 0.0.0.0:8643 serve
 ```
 
 On the daemon host, pass the same `--listen-address` to `connect`, `status`, other CLI commands, and `sctl mcp`.
@@ -91,14 +93,14 @@ In ScriptCat's **sctl address** setting, enter an address the extension can actu
 3. Keep `sctl serve` running and execute in another terminal:
 
    ```bash
-   sctl --data-dir /absolute/path/to/sctl-data connect
+   sctl connect
    ```
 
 4. Enter the 8-character terminal code in the “Enroll sctl” dialog.
 5. Verify the connection:
 
    ```bash
-   sctl --data-dir /absolute/path/to/sctl-data status
+   sctl status
    ```
 
 The status should report a connected extension and show the daemon version.
@@ -130,18 +132,18 @@ and other secrets, while writes can directly change scripts, so enable it only w
 ## 4. Command-line usage
 
 ```bash
-sctl --data-dir <path> get                         # List scripts
-sctl --data-dir <path> get <uuid>                  # Read metadata
-sctl --data-dir <path> get <uuid> -o source        # Print full source
-sctl --data-dir <path> get <uuid> -o source --lines 20-80
-sctl --data-dir <path> grep <uuid> "fetch("         # Literal source search
-sctl --data-dir <path> grep <uuid> "pattern" -E    # Regular expression
-sctl --data-dir <path> install <url|file>
-sctl --data-dir <path> edit <uuid> --replace OLD --with NEW
-sctl --data-dir <path> enable <uuid>
-sctl --data-dir <path> disable <uuid>
-sctl --data-dir <path> delete <uuid>
-sctl --data-dir <path> status
+sctl get                         # List scripts
+sctl get <uuid>                  # Read metadata
+sctl get <uuid> -o source        # Print full source
+sctl get <uuid> -o source --lines 20-80
+sctl grep <uuid> "fetch("         # Literal source search
+sctl grep <uuid> "pattern" -E    # Regular expression
+sctl install <url|file>
+sctl edit <uuid> --replace OLD --with NEW
+sctl enable <uuid>
+sctl disable <uuid>
+sctl delete <uuid>
+sctl status
 ```
 
 `grep` is literal by default; `-E` enables regular expressions, `-i` ignores case, `-C N` adds context, and
@@ -172,9 +174,10 @@ to launch a separate `sctl mcp` process. Use absolute binary and data paths in G
   "mcpServers": {
     "scriptcat": {
       "command": "/absolute/path/to/sctl",
+      "env": {
+        "SCTL_DATA_DIR": "/absolute/path/to/sctl-data"
+      },
       "args": [
-        "--data-dir",
-        "/absolute/path/to/sctl-data",
         "mcp",
         "--name",
         "my-ai-client"
@@ -204,7 +207,7 @@ Current tools:
 ## 6. Audit and revoke
 
 - “View audit log” in the External Access card opens the log page filtered to this source.
-- `sctl --data-dir <path> status` shows daemon version, extension connectivity, and recent security events;
+- `sctl status` shows daemon version, extension connectivity, and recent security events;
   `-o json` returns complete events.
 - “Stop External Access” disconnects, deletes the extension-side pairing state, and clears session allowances.
   Re-enrollment is required afterwards.
@@ -215,21 +218,17 @@ Current tools:
 
 **The daemon is unreachable**
 
-Run `sctl --data-dir <same-path> serve` first. Requester commands never auto-start the daemon.
+Run `sctl serve` first. Requester commands never auto-start the daemon.
 
 **Control-channel authentication fails**
 
-Confirm that `serve`, CLI, and MCP configuration use the exact same absolute `--data-dir`, then restart the MCP
-client.
+Confirm that `serve`, CLI commands, and the MCP process resolve to the same absolute data directory. Check both
+`SCTL_DATA_DIR` and any explicit `--data-dir`, then restart the MCP client.
 
 **The status says “Connection failed”**
 
 Confirm that the daemon is running, the extension address matches it, and local security software is not
 blocking `127.0.0.1:8643`.
-
-**ScriptCat says “sctl version too old”**
-
-Install a release satisfying the minimum printed by `sctl version`; do not use an uninjected `0.0.0-dev` build.
 
 **A command does not return**
 
@@ -237,7 +236,7 @@ Check the browser for a source-disclosure or write confirmation page. Press `Ctr
 
 **Find logs**
 
-Logs are under `<data-dir>/logs/`. Without `--data-dir`, defaults are:
+Logs are under `<data-dir>/logs/`. If neither `--data-dir` nor `SCTL_DATA_DIR` is set, defaults are:
 
 | Platform | Log directory |
 |---|---|

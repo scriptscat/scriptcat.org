@@ -29,9 +29,8 @@ sctl 是单文件可执行程序。如果 [GitHub Releases](https://github.com/s
 sctl version
 ```
 
-脚本猫当前要求 daemon 版本至少为 `0.1.0`。普通源码构建显示为 `0.0.0-dev`，会被扩展拒绝；在正式
-发布包可用前，从源码构建的贡献者需要按 sctl 仓库的开发说明注入有效版本号。不要使用普通
-`go install ...@latest` 作为可用安装方式。
+普通源码构建显示为 `0.0.0-dev`，用于与注入了版本、提交和构建时间的正式发布包区分，不影响与
+脚本猫建立连接。尚无发布包时，也可以从 [sctl 仓库](https://github.com/scriptscat/sctl)构建。
 
 ## 二、启动 daemon 并完成接入
 
@@ -47,23 +46,27 @@ daemon、命令行和 MCP 进程必须使用同一个数据目录，其中保存
 /absolute/path/to/sctl-data
 ```
 
-每个进程都传入同一个参数：
+为每个 sctl 进程设置同一个环境变量：
 
 ```bash
-sctl --data-dir /absolute/path/to/sctl-data serve
-sctl --data-dir /absolute/path/to/sctl-data status
-sctl --data-dir /absolute/path/to/sctl-data mcp
+export SCTL_DATA_DIR=/absolute/path/to/sctl-data
+sctl serve
+sctl status
+sctl mcp
 ```
 
-如果不传 `--data-dir`，sctl 使用当前平台的默认用户数据目录。不要把数据目录放进代码仓库或多人
-共享的同步目录，也不要向 AI 模型提供其中的 `pairing.key` 或 `control.token`。
+如果同时设置环境变量和 `--data-dir`，命令行参数优先。
+
+如果既不传 `--data-dir`，也不设置 `SCTL_DATA_DIR`，sctl 使用当前平台的默认用户数据目录。不要把
+数据目录放进代码仓库或多人共享的同步目录，也不要向 AI 模型提供其中的 `pairing.key` 或
+`control.token`。
 
 ### 2. 启动 daemon
 
 在一个终端中运行并保持进程存活：
 
 ```bash
-sctl --data-dir /absolute/path/to/sctl-data serve
+sctl serve
 ```
 
 默认监听地址为 `ws://127.0.0.1:8643`。daemon 不会被 `connect`、`status`、其他 CLI 命令或
@@ -72,7 +75,7 @@ sctl --data-dir /absolute/path/to/sctl-data serve
 如需显式监听所有网络接口，可运行：
 
 ```bash
-sctl --data-dir /absolute/path/to/sctl-data --listen-address 0.0.0.0:8643 serve
+sctl --listen-address 0.0.0.0:8643 serve
 ```
 
 同一台机器上的 `connect`、`status`、其他 CLI 命令和 `sctl mcp` 也必须传入相同的
@@ -86,14 +89,14 @@ sctl --data-dir /absolute/path/to/sctl-data --listen-address 0.0.0.0:8643 serve
 3. 保持 `sctl serve` 运行，在另一个终端执行：
 
    ```bash
-   sctl --data-dir /absolute/path/to/sctl-data connect
+   sctl connect
    ```
 
 4. 在「接入 sctl」对话框中输入终端显示的 8 位配对码。
 5. 验证连接：
 
    ```bash
-   sctl --data-dir /absolute/path/to/sctl-data status
+   sctl status
    ```
 
 状态应显示扩展已连接，并列出 daemon 版本。
@@ -123,18 +126,18 @@ sctl --data-dir /absolute/path/to/sctl-data --listen-address 0.0.0.0:8643 serve
 ## 四、命令行用法
 
 ```bash
-sctl --data-dir <目录> get                         # 列出脚本
-sctl --data-dir <目录> get <uuid>                  # 读取元数据
-sctl --data-dir <目录> get <uuid> -o source        # 输出完整源码
-sctl --data-dir <目录> get <uuid> -o source --lines 20-80
-sctl --data-dir <目录> grep <uuid> "fetch("         # 按字面量搜索源码
-sctl --data-dir <目录> grep <uuid> "pattern" -E    # 使用正则表达式
-sctl --data-dir <目录> install <url|文件>
-sctl --data-dir <目录> edit <uuid> --replace OLD --with NEW
-sctl --data-dir <目录> enable <uuid>
-sctl --data-dir <目录> disable <uuid>
-sctl --data-dir <目录> delete <uuid>
-sctl --data-dir <目录> status
+sctl get                         # 列出脚本
+sctl get <uuid>                  # 读取元数据
+sctl get <uuid> -o source        # 输出完整源码
+sctl get <uuid> -o source --lines 20-80
+sctl grep <uuid> "fetch("         # 按字面量搜索源码
+sctl grep <uuid> "pattern" -E    # 使用正则表达式
+sctl install <url|文件>
+sctl edit <uuid> --replace OLD --with NEW
+sctl enable <uuid>
+sctl disable <uuid>
+sctl delete <uuid>
+sctl status
 ```
 
 `grep` 默认按字面量匹配；`-E` 使用正则，`-i` 忽略大小写，`-C N` 返回上下文，`-m N` 限制匹配数。
@@ -165,9 +168,10 @@ sctl --data-dir <目录> status
   "mcpServers": {
     "scriptcat": {
       "command": "/absolute/path/to/sctl",
+      "env": {
+        "SCTL_DATA_DIR": "/absolute/path/to/sctl-data"
+      },
       "args": [
-        "--data-dir",
-        "/absolute/path/to/sctl-data",
         "mcp",
         "--name",
         "my-ai-client"
@@ -196,7 +200,7 @@ sctl --data-dir <目录> status
 ## 六、审计与撤销
 
 - 外部接入卡片中的「查看审计日志」会打开按外部接入来源过滤的日志页。
-- `sctl --data-dir <目录> status` 显示 daemon 版本、扩展连接状态和近期安全事件摘要；`-o json`
+- `sctl status` 显示 daemon 版本、扩展连接状态和近期安全事件摘要；`-o json`
   返回完整事件。
 - 「停止外部接入」会断开连接、删除扩展侧配对信息并清除会话授权。再次使用时需要重新配对。
 - 如果只想停用某个 AI 客户端，从该客户端的 MCP 配置中删除 sctl；这不会撤销其他 CLI 或客户端。
@@ -205,19 +209,16 @@ sctl --data-dir <目录> status
 
 **提示 daemon 不可达**
 
-先运行 `sctl --data-dir <相同目录> serve`。请求命令不会自动启动 daemon。
+先运行 `sctl serve`。请求命令不会自动启动 daemon。
 
 **提示控制通道鉴权失败**
 
-确认 `serve`、CLI 和 MCP 配置使用完全相同的绝对 `--data-dir`，然后重启 MCP 客户端。
+确认 `serve`、CLI 和 MCP 进程最终使用相同的绝对数据目录；同时检查 `SCTL_DATA_DIR` 和显式
+`--data-dir`，然后重启 MCP 客户端。
 
 **状态显示「连接失败」**
 
 确认 daemon 正在运行，扩展地址与 daemon 一致，并检查本机安全软件是否拦截 `127.0.0.1:8643`。
-
-**提示「sctl 版本过旧」**
-
-安装满足 `sctl version` 所示最低版本的发布包；不要使用未注入版本的 `0.0.0-dev` 构建。
 
 **命令长时间不返回**
 
@@ -225,7 +226,7 @@ sctl --data-dir <目录> status
 
 **查看日志**
 
-日志位于 `<data-dir>/logs/`。未传 `--data-dir` 时，默认目录为：
+日志位于 `<data-dir>/logs/`。未传 `--data-dir` 且未设置 `SCTL_DATA_DIR` 时，默认目录为：
 
 | 平台 | 日志目录 |
 |---|---|
