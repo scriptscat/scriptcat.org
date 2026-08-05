@@ -15,9 +15,11 @@ CLI ─────────────────────────�
 start it automatically. ScriptCat's policies and browser confirmation UI always decide whether source disclosure
 or a write is allowed; an external program cannot approve its own request.
 
-:::info The connection stays local
-sctl listens on `127.0.0.1` only, not on your LAN or the internet. The extension connects to the daemon, the two
-sides establish a long-term key through a one-time pairing code, and later connections use mutual authentication.
+:::warning The listener is local by default
+sctl listens on `127.0.0.1` by default. It listens on another interface only when `--listen-address` is passed
+explicitly. `ws://` does not encrypt business traffic and there is no per-remote-client isolation, so use a
+non-default address only on a trusted network. The extension and daemon still establish a long-term key through
+a one-time pairing code and use mutual authentication on later connections.
 :::
 
 ## 1. Install sctl
@@ -71,6 +73,16 @@ sctl --data-dir /absolute/path/to/sctl-data serve
 The default address is `ws://127.0.0.1:8643`. The daemon is never auto-started by `connect`, `status`, another
 CLI command, or `sctl mcp`. For persistent use, run the command above with your operating system's user service
 manager.
+
+To listen explicitly on every network interface, run:
+
+```bash
+sctl --data-dir /absolute/path/to/sctl-data --listen-address 0.0.0.0:8643 serve
+```
+
+On the daemon host, pass the same `--listen-address` to `connect`, `status`, other CLI commands, and `sctl mcp`.
+In ScriptCat's **sctl address** setting, enter an address the extension can actually reach, such as
+`ws://192.168.1.10:8643`; do not enter `0.0.0.0`.
 
 ### 2.3 Enable and pair in ScriptCat
 

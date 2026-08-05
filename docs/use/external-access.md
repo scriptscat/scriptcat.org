@@ -14,9 +14,10 @@ AI 客户端 ── stdio MCP ──▶ sctl mcp ── 本地控制 API ──�
 `sctl serve` 是需要单独启动的本地 daemon；`sctl mcp` 和其他命令不会自动启动它。源码披露和写操作
 是否放行，始终由脚本猫中的策略和确认界面决定，外部程序不能批准自己的请求。
 
-:::info 连接只在本机
-sctl 的桥接端口只监听 `127.0.0.1`，不对局域网或公网开放。扩展主动连接 daemon，双方通过一次性
-配对码建立长期密钥，并在后续连接中进行双向认证。
+:::warning 默认只监听本机
+sctl 默认监听 `127.0.0.1`。只有显式传入 `--listen-address` 时才会监听其他接口；`ws://` 不加密
+业务流量，也没有逐远程客户端隔离，因此只应在可信网络中使用非默认地址。扩展与 daemon 仍会
+通过一次性配对码建立长期密钥，并在后续连接中进行双向认证。
 :::
 
 ## 一、安装 sctl
@@ -67,6 +68,16 @@ sctl --data-dir /absolute/path/to/sctl-data serve
 
 默认监听地址为 `ws://127.0.0.1:8643`。daemon 不会被 `connect`、`status`、其他 CLI 命令或
 `sctl mcp` 自动启动；需要常驻时，请使用操作系统的用户服务管理器托管上面的命令。
+
+如需显式监听所有网络接口，可运行：
+
+```bash
+sctl --data-dir /absolute/path/to/sctl-data --listen-address 0.0.0.0:8643 serve
+```
+
+同一台机器上的 `connect`、`status`、其他 CLI 命令和 `sctl mcp` 也必须传入相同的
+`--listen-address`。脚本猫设置中的 **sctl 地址**则填写扩展实际可访问的主机地址，例如
+`ws://192.168.1.10:8643`，不要填写 `0.0.0.0`。
 
 ### 3. 在脚本猫中启用并配对
 
