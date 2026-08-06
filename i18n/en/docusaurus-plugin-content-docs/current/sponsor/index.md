@@ -5,8 +5,6 @@ description: Support ScriptCat — an open-source userscript manager maintained 
 icon: heart
 ---
 
-import SponsorBlock from '@site/src/components/SponsorBlock/en.mdx';
-
 ScriptCat is an open-source project maintained by volunteers, with no company backing it. Servers, domains and other infrastructure, along with a great deal of development and maintenance time, are all sustained by community support. Every contribution helps ScriptCat go further.
 
 ## Where your sponsorship goes
@@ -35,9 +33,3 @@ A sponsor's logo and description can be shown in the following places, arranged 
 | GitHub README sponsors area | Logo + one-line intro |
 | Website sponsor page (this page) | Logo + intro |
 | Website docs pages (e.g. changelog) | Logo display |
-
-## Our sponsors
-
-Thanks to the following sponsors for supporting ScriptCat ❤️
-
-<SponsorBlock />

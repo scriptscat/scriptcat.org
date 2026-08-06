@@ -7,8 +7,6 @@ import TabItem from '@theme/TabItem';
 import { Icon } from "@iconify/react";
 import BrowserGuide from '@site/src/components/BrowserGuide';
 import GithubStar from '@site/src/components/GithubStar';
-import SponsorBlock from '@site/src/components/SponsorBlock/en.mdx';
-
 
 <GithubStar variant="bar" scene="install" />
 
@@ -34,8 +32,6 @@ import SponsorBlock from '@site/src/components/SponsorBlock/en.mdx';
     description: "ScriptCat currently only supports Chromium-based browsers (such as Chrome, Edge, etc.). If you are using a Chromium-based browser, please ignore this message and follow the steps below.",
   },
 }} />
-
-<SponsorBlock />
 
 ## Allow User Scripts
 

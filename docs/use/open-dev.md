@@ -7,8 +7,6 @@ import TabItem from '@theme/TabItem';
 import { Icon } from "@iconify/react";
 import BrowserGuide from '@site/src/components/BrowserGuide';
 import GithubStar from '@site/src/components/GithubStar';
-import SponsorBlock from '@site/src/components/SponsorBlock/zh.mdx';
-
 
 <GithubStar variant="bar" scene="install" />
 
@@ -34,8 +32,6 @@ import SponsorBlock from '@site/src/components/SponsorBlock/zh.mdx';
     description: "脚本猫目前仅支持 Chromium 内核浏览器（如 Chrome、Edge 等）。如果你确实使用的是 Chromium 内核浏览器，请忽略此提示，参考下方步骤操作。",
   },
 }} />
-
-<SponsorBlock />
 
 ## 允许用户脚本
 

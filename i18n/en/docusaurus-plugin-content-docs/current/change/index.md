@@ -3,12 +3,8 @@ title: Changelog
 ---
 
 import GithubStar from '@site/src/components/GithubStar';
-import SponsorBlock from '@site/src/components/SponsorBlock/en.mdx';
-
 
 <GithubStar variant="bar" scene="changelog" />
-
-<SponsorBlock />
 
 For Beta version changelog, please see [Beta Changelog](./beta-changelog.md)
 

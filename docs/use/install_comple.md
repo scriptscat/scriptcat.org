@@ -5,15 +5,12 @@ sidebar_class_name: hidden
 ---
 
 import GithubStar from '@site/src/components/GithubStar';
-import SponsorBlock from '@site/src/components/SponsorBlock/zh.mdx';
 
 # 🎉 欢迎使用脚本猫
 
 恭喜您成功安装脚本猫浏览器扩展！脚本猫是一个强大的用户脚本管理器，兼容油猴脚本，并提供更多强大的功能。
 
 <GithubStar variant="bar" scene="install" />
-
-<SponsorBlock />
 
 ## 安全提醒
 
