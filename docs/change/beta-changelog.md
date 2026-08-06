@@ -23,6 +23,59 @@ import SponsorBlock from '@site/src/components/SponsorBlock/zh.mdx';
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+<a name="1.5.0-beta.1"></a>
+
+## 1.5.0-beta.1 (2026-08-06)
+
+本次预发布重点带来「外部接入（MCP 桥接）」与「脚本回收站」两大特性，正式支持 Firefox MV3，新增韩语、土耳其语、巴西葡萄牙语三种语言，并修复多项 GM API、云同步与编辑器问题。
+
+### 🚀 主要新功能
+
+- 💥 新增「外部接入（MCP 桥接）」：通过本地 `sctl` 守护进程统一接入 CLI 与 MCP 客户端，脚本读写均经分级授权与人工确认页面把关，支持「拒绝 / 允许 / 本会话允许」三档控制并留存审计 ([#1573](https://github.com/scriptscat/scriptcat/pull/1573)) (by @cyfung1031)
+- 💥 新增脚本回收站：删除的脚本先入回收站，支持还原（保留原数据与权限）、彻底删除与到期自动清理，保留期可配置（默认 30 天，可设为永不） ([#1585](https://github.com/scriptscat/scriptcat/pull/1585)) (by @CodFrm)
+- 💥 正式支持 Firefox MV3，完善 sandbox/offscreen 通信 ([#1561](https://github.com/scriptscat/scriptcat/pull/1561)) (by @cyfung1031)
+- ✨ 增加 Popup 站点范围快捷操作 ([#1646](https://github.com/scriptscat/scriptcat/pull/1646)) (by @CodFrm)
+- ✨ Popup 脚本列表展开数量改为可配置，与菜单展开数量分开 ([#1645](https://github.com/scriptscat/scriptcat/pull/1645)) (by @CodFrm)
+- ✨ 图标服务新增「禁用」档，可彻底关闭 favicon 获取 ([#1637](https://github.com/scriptscat/scriptcat/pull/1637)) (by @CodFrm)
+- ✨ 未定义的元数据标签在编辑器中显示警告 ([#1608](https://github.com/scriptscat/scriptcat/pull/1608)) (by @cyfung1031)
+- ✨ 完善备份/还原/导入完整性：ScriptCat/Tampermonkey/Violentmonkey 自定义配置 + 设置备份 + 资源修复 ([#1554](https://github.com/scriptscat/scriptcat/pull/1554)) (by @CodFrm)
+
+### ♻️ 重构与兼容性
+
+- ♻️ 使用官方 MCP SDK 重构客户端 ([#1643](https://github.com/scriptscat/scriptcat/pull/1643)) (by @CodFrm)
+
+### 🐛 Bug 修复
+
+- 🐛 修复 GM_xmlhttpRequest 自定义 cookie 会追加而非覆盖同名 cookie 的问题 ([#1604](https://github.com/scriptscat/scriptcat/pull/1604)) (by @cyfung1031)
+- 🐛 修复脚本同步状态一致性与云端冲突处理 ([#1504](https://github.com/scriptscat/scriptcat/pull/1504)) (by @cyfung1031)
+- 🐛 修复日志定时清理失效 ([#1599](https://github.com/scriptscat/scriptcat/pull/1599)) (by @CodFrm)
+- 🐛 修复脚本设置缺少 context-menu 运行时机 ([#1652](https://github.com/scriptscat/scriptcat/pull/1652)) (by @CodFrm)
+- 🐛 修复安装页回退/关闭标签逻辑 ([#1594](https://github.com/scriptscat/scriptcat/pull/1594)) (by @cyfung1031)
+- 🐛 修复保存脚本改名后浏览器标签页标题未同步更新 ([#1607](https://github.com/scriptscat/scriptcat/pull/1607)) (by @cyfung1031)
+- 🐛 修复 window.focus 窗口聚焦并加强 windowId 校验 ([#1577](https://github.com/scriptscat/scriptcat/pull/1577)) (by @cyfung1031)
+- 🐛 修复编辑器激活标签页关闭按钮被隐藏 [#1556](https://github.com/scriptscat/scriptcat/issues/1556) (by @CodFrm)
+- 🐛 修复编辑器未保存时的导航保护 ([#1656](https://github.com/scriptscat/scriptcat/pull/1656)) (by @CodFrm)
+- 🐛 修正回收站同名脚本保存确认文案 ([#1622](https://github.com/scriptscat/scriptcat/pull/1622)) (by @CodFrm)
+- 🐛 selfMetadata 支持空覆盖：修复匹配/排除/标签/运行时机「删除即复活」 ([#1579](https://github.com/scriptscat/scriptcat/pull/1579)) (by @CodFrm)
+
+### 🎨 UI 改进
+
+- 💄 修复安卓端界面适配：动态视口高度 + 窄屏表格/设置行/日志统计条重排 ([#1636](https://github.com/scriptscat/scriptcat/pull/1636)) (by @RenjiYuusei)
+- 💄 增加 Popup 紧凑布局选项 ([#1551](https://github.com/scriptscat/scriptcat/pull/1551)) (by @cyfung1031)
+
+### 🌐 国际化
+
+- 🌐 新增韩语（ko-KR）翻译 ([#1568](https://github.com/scriptscat/scriptcat/pull/1568)) (by @moduvoice)
+- 🌐 新增土耳其语（tr-TR）翻译 ([#1557](https://github.com/scriptscat/scriptcat/pull/1557)) (by @azizaktas)
+- 🌐 新增巴西葡萄牙语（pt-BR）翻译 ([#1587](https://github.com/scriptscat/scriptcat/pull/1587)) (by @Lucas559-noob)
+- 🌐 补齐 pt-BR / tr-TR 的 chrome.i18n messages.json 与 Monaco 编辑器语言 ([#1605](https://github.com/scriptscat/scriptcat/pull/1605)) (by @CodFrm)
+
+### 其它
+
+- ⬆️ 升级依赖（含 TypeScript 6.0）并修复 pnpm audit 安全告警 ([#1576](https://github.com/scriptscat/scriptcat/pull/1576), [#1567](https://github.com/scriptscat/scriptcat/pull/1567)) (by @cyfung1031)
+- 脚本同步设置改为即时保存 ([#1615](https://github.com/scriptscat/scriptcat/pull/1615)) (by @CodFrm)
+- 📝 优化商店描述与 README 标语，提升「用户脚本」可发现性 ([#1553](https://github.com/scriptscat/scriptcat/pull/1553)) (by @CodFrm)
+
 <a name="1.5.0-beta"></a>
 
 ## 1.5.0-beta (2026-07-08)
