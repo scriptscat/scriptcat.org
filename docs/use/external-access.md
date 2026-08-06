@@ -22,8 +22,25 @@ sctl 默认监听 `127.0.0.1`。只有显式传入 `--listen-address` 时才会�
 
 ## 一、安装 sctl
 
+用一行命令安装最新发布版。macOS / Linux：
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/scriptscat/sctl/main/scripts/install.sh | sh
+```
+
+Windows（PowerShell）：
+
+```powershell
+irm https://raw.githubusercontent.com/scriptscat/sctl/main/scripts/install.ps1 | iex
+```
+
+安装脚本会下载当前平台的 `sctl-<版本>-<系统>-<架构>.<扩展名>` 发布包，用同一发布中的
+`checksums.txt` 校验 sha256，并安装到 `~/.local/bin`（macOS/Linux）或 `%LOCALAPPDATA%\sctl\bin`
+（Windows）。`SCTL_VERSION` 可指定安装的版本，`SCTL_INSTALL_DIR` 可覆盖安装目录；安装目录不在
+`PATH` 时脚本会打印对应的提示，但不会替你修改 shell 配置或用户 PATH。
+
 sctl 是单文件可执行程序。如果 [GitHub Releases](https://github.com/scriptscat/sctl/releases) 已提供
-你的平台对应的发布包，下载、解压并把 `sctl`（Windows 为 `sctl.exe`）放进 `PATH`。
+你的平台对应的发布包，也可以下载、解压并把 `sctl`（Windows 为 `sctl.exe`）放进 `PATH`。
 
 ```bash
 sctl version

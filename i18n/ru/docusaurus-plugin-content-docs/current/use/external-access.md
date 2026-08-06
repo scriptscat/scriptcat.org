@@ -25,9 +25,28 @@ CLI ─────────────────────────�
 
 ## 1. Установка sctl
 
+Установите последний релиз одной командой — macOS и Linux:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/scriptscat/sctl/main/scripts/install.sh | sh
+```
+
+или Windows PowerShell:
+
+```powershell
+irm https://raw.githubusercontent.com/scriptscat/sctl/main/scripts/install.ps1 | iex
+```
+
+Установщик скачивает архив релиза с дефисными именами `sctl-<версия>-<ОС>-<архитектура>.<расширение>` для
+вашей платформы, проверяет его sha256 по `checksums.txt` из того же релиза и устанавливает `sctl` в
+`~/.local/bin` (macOS/Linux) или `%LOCALAPPDATA%\sctl\bin` (Windows). `SCTL_VERSION` задаёт конкретную
+версию; `SCTL_INSTALL_DIR` переопределяет каталог установки. Если каталог установки отсутствует в `PATH`,
+установщик выводит подсказку для вашей платформы — он никогда не изменяет ваш shell-профиль или
+пользовательский `PATH`.
+
 sctl поставляется одним исполняемым файлом. Если на странице
-[GitHub Releases](https://github.com/scriptscat/sctl/releases) опубликован архив для вашей платформы, скачайте
-и распакуйте его, затем добавьте `sctl` (`sctl.exe` в Windows) в `PATH`.
+[GitHub Releases](https://github.com/scriptscat/sctl/releases) опубликован архив для вашей платформы, вы также
+можете скачать и распаковать его, затем добавить `sctl` (`sctl.exe` в Windows) в `PATH`.
 
 ```bash
 sctl version

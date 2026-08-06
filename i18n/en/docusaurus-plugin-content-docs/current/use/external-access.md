@@ -24,8 +24,27 @@ a one-time pairing code and use mutual authentication on later connections.
 
 ## 1. Install sctl
 
+Install the latest release with one command — macOS and Linux:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/scriptscat/sctl/main/scripts/install.sh | sh
+```
+
+or Windows PowerShell:
+
+```powershell
+irm https://raw.githubusercontent.com/scriptscat/sctl/main/scripts/install.ps1 | iex
+```
+
+The installer downloads the hyphen-named `sctl-<version>-<os>-<arch>.<ext>` release archive for your platform,
+verifies its sha256 against `checksums.txt` from the same release, and installs `sctl` into `~/.local/bin`
+(macOS/Linux) or `%LOCALAPPDATA%\sctl\bin` (Windows). `SCTL_VERSION` pins a specific version; `SCTL_INSTALL_DIR`
+overrides the install directory. If the install directory is not on your `PATH`, the installer prints the exact
+`PATH` hint for your platform — it never edits your shell profile or user PATH for you.
+
 sctl is a single executable. If [GitHub Releases](https://github.com/scriptscat/sctl/releases) has a published
-archive for your platform, download and extract it, then put `sctl` (`sctl.exe` on Windows) on `PATH`.
+archive for your platform, you can also download and extract it, then put `sctl` (`sctl.exe` on Windows) on
+`PATH`.
 
 ```bash
 sctl version
