@@ -1,9 +1,27 @@
 {
-  "link.title.Docs": { "message": "الوثائق" },
-  "link.item.label.使用指南": { "message": "دليل المستخدم" },
-  "link.item.label.开发指南": { "message": "دليل المطور" },
-  "link.title.Community": { "message": "المجتمع" },
-  "link.item.label.油猴中文网": { "message": "منتدى تامبرمونكي الصيني" },
-  "link.item.label.脚本猫脚本站": { "message": "متجر سكرپتات ScriptCat" },
-  "link.title.More": { "message": "المزيد" }
+  "link.title.Docs": {
+    "message": "الوثائق"
+  },
+  "link.item.label.使用指南": {
+    "message": "دليل المستخدم"
+  },
+  "link.item.label.开发指南": {
+    "message": "دليل المطور"
+  },
+  "link.title.Community": {
+    "message": "المجتمع"
+  },
+  "link.item.label.油猴中文网": {
+    "message": "منتدى تامبرمونكي الصيني"
+  },
+  "link.item.label.脚本猫脚本站": {
+    "message": "متجر سكرپتات ScriptCat"
+  },
+  "link.title.More": {
+    "message": "المزيد"
+  },
+  "copyright": {
+    "message": "حقوق النشر © {year} ScriptCat, Inc. بُني باستخدام Docusaurus.",
+    "description": "The footer copyright"
+  }
 }
