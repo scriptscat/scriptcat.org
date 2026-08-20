@@ -82,11 +82,11 @@ Espace de stockage des `Value` ; les données partageant le même `storageName` 
 
 ### background
 
-Indique que ce script est un script en arrière-plan, devant s'exécuter dans l'environnement d'arrière-plan — voir [Scripts en arrière-plan](pathname:///docs/dev/background.md#scripts-en-arrière-plan-background)
+Indique que ce script est un script en arrière-plan, devant s'exécuter dans l'environnement d'arrière-plan — voir [Scripts en arrière-plan](./background.md#scripts-en-arrière-plan-background)
 
 ### crontab
 
-Indique que le script est un script planifié, nécessitant une expression cron (une seule autorisée), exécuté périodiquement dans l'environnement d'arrière-plan — voir [Scripts planifiés](pathname:///docs/dev/background.md#scripts-planifiés-crontab)
+Indique que le script est un script planifié, nécessitant une expression cron (une seule autorisée), exécuté périodiquement dans l'environnement d'arrière-plan — voir [Scripts planifiés](./background.md#scripts-planifiés-crontab)
 
 ### match
 
@@ -112,7 +112,7 @@ Exclut des URL de la correspondance ; syntaxe identique à include
 
 ### grant
 
-Demande une permission API ; l'API ne peut être appelée qu'une fois demandée. Liste des API : [Documentation de l'API](pathname:///docs/dev/api.md) et [Documentation de l'API CAT](pathname:///docs/dev/cat-api.md).
+Demande une permission API ; l'API ne peut être appelée qu'une fois demandée. Liste des API : [Documentation de l'API](./api.md) et [Documentation de l'API CAT](./cat-api.md).
 
 Deux valeurs spéciales :
 
