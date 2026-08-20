@@ -947,5 +947,9 @@
   },
   "home.nav.theme": {
     "message": "থিম পরিবর্তন করুন"
+  },
+  "home.hero.en": {
+    "message": "আপনার ব্রাউজারের জন্য সুপারপাওয়ার।",
+    "description": "Hero subtitle tagline on homepage"
   }
 }
