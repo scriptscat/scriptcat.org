@@ -947,5 +947,9 @@
   },
   "home.nav.theme": {
     "message": "Перемкнути тему"
+  },
+  "home.hero.en": {
+    "message": "Суперсили для вашого браузера.",
+    "description": "Hero subtitle tagline on homepage"
   }
 }
