@@ -1,0 +1,34 @@
+{
+  "link.title.Docs": {
+    "message": "ডকুমেন্টেশন",
+    "description": "The link.title.Docs in the footer"
+  },
+  "link.item.label.使用指南": {
+    "message": "ব্যবহারকারী নির্দেশিকা",
+    "description": "The link.item.label.使用指南 in the footer"
+  },
+  "link.item.label.开发指南": {
+    "message": "ডেভেলপার নির্দেশিকা",
+    "description": "The link.item.label.开发指南 in the footer"
+  },
+  "link.title.Community": {
+    "message": "কমিউনিটি",
+    "description": "The link.title.Community in the footer"
+  },
+  "link.item.label.油猴中文网": {
+    "message": "Tampermonkey চাইনিজ ফোরাম",
+    "description": "The link.item.label.油猴中文网 in the footer"
+  },
+  "link.item.label.脚本猫脚本站": {
+    "message": "ScriptCat স্ক্রিপ্ট স্টোর",
+    "description": "The link.item.label.脚本猫脚本站 in the footer"
+  },
+  "link.title.More": {
+    "message": "আরও",
+    "description": "The link.title.More in the footer"
+  },
+  "copyright": {
+    "message": "কপিরাইট © {year} ScriptCat, Inc. Docusaurus দিয়ে তৈরি।",
+    "description": "The copyright in the footer"
+  }
+}
