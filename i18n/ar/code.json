@@ -914,5 +914,9 @@
   },
   "home.nav.theme": {
     "message": "تبديل المظهر"
+  },
+  "home.hero.en": {
+    "message": "قوى خارقة لمتصفحك.",
+    "description": "Hero subtitle tagline on homepage"
   }
 }
