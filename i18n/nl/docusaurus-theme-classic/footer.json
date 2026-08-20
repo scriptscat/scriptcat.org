@@ -1,0 +1,34 @@
+{
+  "link.title.Docs": {
+    "message": "Documentatie",
+    "description": "The link.title.Docs in the footer"
+  },
+  "link.item.label.使用指南": {
+    "message": "Gebruikershandleiding",
+    "description": "The link.item.label.使用指南 in the footer"
+  },
+  "link.item.label.开发指南": {
+    "message": "Ontwikkelaarshandleiding",
+    "description": "The link.item.label.开发指南 in the footer"
+  },
+  "link.title.Community": {
+    "message": "Community",
+    "description": "The link.title.Community in the footer"
+  },
+  "link.item.label.油猴中文网": {
+    "message": "Tampermonkey Chinees Forum",
+    "description": "The link.item.label.油猴中文网 in the footer"
+  },
+  "link.item.label.脚本猫脚本站": {
+    "message": "ScriptCat-scriptwinkel",
+    "description": "The link.item.label.脚本猫脚本站 in the footer"
+  },
+  "link.title.More": {
+    "message": "Meer",
+    "description": "The link.title.More in the footer"
+  },
+  "copyright": {
+    "message": "Copyright © {year} ScriptCat, Inc. Gebouwd met Docusaurus.",
+    "description": "The copyright in the footer"
+  }
+}

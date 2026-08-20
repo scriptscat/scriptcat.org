@@ -1,0 +1,18 @@
+{
+  "version.label": {
+    "message": "Volgende",
+    "description": "The label for version.label"
+  },
+  "sidebar.dev.category.Agent 智能助手": {
+    "message": "Agent",
+    "description": "The label for sidebar.dev.category.Agent 智能助手"
+  },
+  "sidebar.use.category.服务协议": {
+    "message": "Serviceovereenkomst",
+    "description": "The label for sidebar.use.category.服务协议"
+  },
+  "sidebar.use.category.从其它管理器迁移": {
+    "message": "Migreren vanuit andere beheerders",
+    "description": "The label for sidebar.use.category.从其它管理器迁移"
+  }
+}
