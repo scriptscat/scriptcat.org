@@ -1,0 +1,951 @@
+{
+  "githubStar.button.label": {
+    "message": "Star",
+    "description": "GitHub star button label"
+  },
+  "githubStar.home.title": {
+    "message": "ScriptCat은 무료이며 오픈소스입니다",
+    "description": "GitHub star bar title on homepage"
+  },
+  "githubStar.home.subtitle": {
+    "message": "유용하다면 Star를 눌러 주세요 — 저희를 계속 움직이게 합니다",
+    "description": "GitHub star bar subtitle on homepage"
+  },
+  "githubStar.install.title": {
+    "message": "ScriptCat이 마음에 드시나요?",
+    "description": "GitHub star bar title on install-complete page"
+  },
+  "githubStar.install.subtitle": {
+    "message": "GitHub에서 Star를 눌러 더 많은 사람이 발견하게 도와주세요 🌟",
+    "description": "GitHub star bar subtitle on install-complete page"
+  },
+  "githubStar.changelog.title": {
+    "message": "ScriptCat은 계속 발전합니다 🚀",
+    "description": "GitHub star bar title on changelog page"
+  },
+  "githubStar.changelog.subtitle": {
+    "message": "이 업데이트가 유용했나요? GitHub에서 Star를 눌러 저희 작업을 응원해 주세요",
+    "description": "GitHub star bar subtitle on changelog page"
+  },
+  "homepage.meta.keywords": {
+    "message": "ScriptCat,유저스크립트,브라우저 확장 프로그램,userscript,Tampermonkey,Violentmonkey,백그라운드 스크립트,예약 스크립트,브라우저 자동화,광고 차단기,스크립트 스토어",
+    "description": "Homepage SEO keywords"
+  },
+  "homepage.meta.title": {
+    "message": "ScriptCat - 강력한 브라우저 스크립트 엔진",
+    "description": "Homepage meta title for SEO"
+  },
+  "homepage.meta.description": {
+    "message": "ScriptCat은 브라우저 기능을 쉽게 사용자 지정하고, 광고를 제거하고, 작업을 자동화하며, 브라우징 경험을 향상시킬 수 있는 강력한 오픈소스 브라우저 스크립트 엔진입니다. 더 많은 기능을 갖춘 Tampermonkey 호환 엔진입니다.",
+    "description": "Homepage meta description for SEO"
+  },
+  "homepage.og.title": {
+    "message": "ScriptCat - 강력한 브라우저 스크립트 엔진",
+    "description": "Open Graph title for social sharing"
+  },
+  "homepage.og.description": {
+    "message": "브라우저가 더 많은 일을 하게 만드는 오픈소스 브라우저 스크립트 엔진. 유저스크립트, 백그라운드 스크립트 지원, Tampermonkey 호환, 더 강력한 기능.",
+    "description": "Open Graph description for social sharing"
+  },
+  "homepage.twitter.title": {
+    "message": "ScriptCat - 강력한 브라우저 스크립트 엔진",
+    "description": "Twitter card title"
+  },
+  "homepage.twitter.description": {
+    "message": "브라우저가 더 많은 일을 하게 만드는 오픈소스 브라우저 스크립트 엔진",
+    "description": "Twitter card description"
+  },
+  "homepage.hero.title": {
+    "message": "궁극의 스크립트 엔진 for",
+    "description": "Main title on the homepage hero section"
+  },
+  "homepage.hero.title.engine": {
+    "message": "향상된 브라우저 경험",
+    "description": "Gradient text in main title"
+  },
+  "homepage.hero.subtitle.userScript": {
+    "message": "유저스크립트",
+    "description": "User script highlight"
+  },
+  "homepage.hero.subtitle.possibilities": {
+    "message": ", 브라우저의 무한한 가능성을 활성화합니다!",
+    "description": "Browser possibilities text"
+  },
+  "homepage.hero.subtitle.main": {
+    "message": "ScriptCat은 브라우저 기능을 쉽게 사용자 지정하고, 광고를 제거하고, 작업을 자동화하며, 브라우징 경험을 향상시킬 수 있는 강력한 오픈소스 브라우저 스크립트 엔진입니다. Tampermonkey와 호환되며 더 많은 기능과 최적화를 제공합니다.",
+    "description": "Main subtitle description on homepage"
+  },
+  "homepage.hero.subtitle.highlight": {
+    "message": "다음을 실행하는 브라우저 확장 프로그램:",
+    "description": "Highlighted subtitle on homepage"
+  },
+  "homepage.hero.button.browseScripts": {
+    "message": "스크립트 라이브러리 둘러보기",
+    "description": "Button text for browsing scripts"
+  },
+  "homepage.hero.browser.edge": {
+    "message": "Edge 브라우저에 추가",
+    "description": "Button text for Edge browser"
+  },
+  "homepage.hero.browser.chrome": {
+    "message": "Chrome 브라우저에 추가",
+    "description": "Button text for Chrome browser"
+  },
+  "homepage.hero.browser.firefox": {
+    "message": "Firefox 브라우저에 추가",
+    "description": "Button text for Firefox browser"
+  },
+  "homepage.hero.browser.default": {
+    "message": "브라우저에 확장 프로그램 설치",
+    "description": "Default button text for browser installation"
+  },
+  "homepage.hero.browser.crx": {
+    "message": "수동 설치용 설치 패키지 다운로드",
+    "description": "Button text for manual installation"
+  },
+  "homepage.hero.trustBadges.title": {
+    "message": "기술 커뮤니티의 신뢰와 지지를 받습니다",
+    "description": "Trust badges section title"
+  },
+  "homepage.features.title.powerful": {
+    "message": "강력한 기능, ",
+    "description": "Features section title part 1"
+  },
+  "homepage.features.title.possibilities": {
+    "message": "무한한 가능성",
+    "description": "Features section title highlight"
+  },
+  "homepage.features.subtitle": {
+    "message": "ScriptCat은 브라우저 기능을 쉽게 확장하고 나만의 웹 경험을 만들 수 있는 일련의 강력한 기능을 제공합니다.",
+    "description": "Features section subtitle"
+  },
+  "homepage.features.tampermonkey.title": {
+    "message": "Tampermonkey 호환",
+    "description": "Feature title: Tampermonkey compatibility"
+  },
+  "homepage.features.tampermonkey.description": {
+    "message": "Tampermonkey 스크립트 형식과 완벽하게 호환되며 기존 스크립트 라이브러리를 전환 비용 없이 매끄럽게 마이그레이션합니다.",
+    "description": "Feature description: Tampermonkey compatibility"
+  },
+  "homepage.features.background.title": {
+    "message": "백그라운드 스크립트",
+    "description": "Feature title: Background scripts"
+  },
+  "homepage.features.background.description": {
+    "message": "일반 유저스크립트와 달리 탭을 열지 않고도 스크립트가 백그라운드에서 계속 실행되도록 합니다.",
+    "description": "Feature description: Background scripts"
+  },
+  "homepage.features.security.title": {
+    "message": "안전하고 신뢰할 수 있음",
+    "description": "Feature title: Security"
+  },
+  "homepage.features.security.description": {
+    "message": "엄격한 권한 제어 시스템, 투명한 스크립트 동작으로 악성 스크립트를 효과적으로 차단하고 개인정보를 보호합니다.",
+    "description": "Feature description: Security"
+  },
+  "homepage.features.editor.title": {
+    "message": "내장 코드 에디터",
+    "description": "Feature title: Code editor"
+  },
+  "homepage.features.editor.description": {
+    "message": "구문 강조, 코드 완성, 오류 힌트를 갖춘 강력한 코드 에디터로 스크립트 작성이 더 효율적입니다.",
+    "description": "Feature description: Code editor"
+  },
+  "homepage.features.api.title": {
+    "message": "강력한 API",
+    "description": "Feature title: APIs"
+  },
+  "homepage.features.api.description": {
+    "message": "GM보다 더 풍부한 API 인터페이스를 제공하며 파일 저장, 사용자 구성과 같은 고급 기능을 지원해 스크립트 기능을 확장합니다.",
+    "description": "Feature description: APIs"
+  },
+  "homepage.features.store.title": {
+    "message": "스크립트 스토어",
+    "description": "Feature title: Script store"
+  },
+  "homepage.features.store.description": {
+    "message": "인기 스크립트를 원클릭 설치할 수 있는 스크립트 스토어를 제공하거나 작품을 게시해 커뮤니티와 공유하며 활발한 생태계를 구축합니다.",
+    "description": "Feature description: Script store"
+  },
+  "homepage.comparison.title.why": {
+    "message": "왜 선택하는가",
+    "description": "Comparison section title part 1"
+  },
+  "homepage.comparison.subtitle": {
+    "message": "다른 스크립트 엔진과 비교해 ScriptCat은 더 많은 장점과 향상된 기능을 제공합니다",
+    "description": "Comparison section subtitle"
+  },
+  "homepage.comparison.feature": {
+    "message": "기능",
+    "description": "Comparison table header: Feature"
+  },
+  "homepage.comparison.feature.compatibility": {
+    "message": "스크립트 호환성",
+    "description": "Comparison feature: Script compatibility"
+  },
+  "homepage.comparison.feature.background": {
+    "message": "백그라운드 스크립트",
+    "description": "Comparison feature: Background scripts"
+  },
+  "homepage.comparison.feature.opensource": {
+    "message": "오픈소스 무료",
+    "description": "Comparison feature: Open source"
+  },
+  "homepage.comparison.feature.mv3": {
+    "message": "MV3 지원",
+    "description": "Comparison feature: MV3 Support"
+  },
+  "homepage.comparison.feature.sync": {
+    "message": "클라우드 동기화",
+    "description": "Comparison feature: Cloud sync"
+  },
+  "homepage.comparison.feature.api": {
+    "message": "강력한 API",
+    "description": "Comparison feature: Powerful APIs"
+  },
+  "homepage.comparison.feature.community": {
+    "message": "커뮤니티 지원",
+    "description": "Comparison feature: Community support"
+  },
+  "homepage.comparison.label.efficient": {
+    "message": "효율적",
+    "description": "Comparison label: Efficient"
+  },
+  "homepage.comparison.label.multiplatform": {
+    "message": "멀티 플랫폼",
+    "description": "Comparison label: Multi-platform"
+  },
+  "homepage.scenario.title.solve": {
+    "message": "해결하는 스크립트 ",
+    "description": "Scenario section title part 1"
+  },
+  "homepage.scenario.title.problems": {
+    "message": "실제 문제를",
+    "description": "Scenario section title highlight"
+  },
+  "homepage.scenario.title.scripts": {
+    "message": "",
+    "description": "Scenario section title part 2"
+  },
+  "homepage.scenario.subtitle": {
+    "message": "ScriptCat이 브라우징 경험을 어떻게 변화시키는지 확인하세요",
+    "description": "Scenario section subtitle"
+  },
+  "homepage.scenario.video.title": {
+    "message": "비디오 사이트 향상",
+    "description": "Video scenario title"
+  },
+  "homepage.scenario.video.subtitle": {
+    "message": "비디오 시청 경험 최적화",
+    "description": "Video scenario subtitle"
+  },
+  "homepage.scenario.video.tag": {
+    "message": "인기 앱",
+    "description": "Video scenario tag"
+  },
+  "homepage.scenario.video.feature.speed": {
+    "message": "비디오 속도 조절",
+    "description": "Video feature: Speed control"
+  },
+  "homepage.scenario.video.feature.download": {
+    "message": "원클릭 비디오 다운로드",
+    "description": "Video feature: Download"
+  },
+  "homepage.scenario.video.feature.adblock": {
+    "message": "광고 자동 건너뛰기",
+    "description": "Video feature: Ad blocking"
+  },
+  "homepage.scenario.video.feature.ui": {
+    "message": "UI 단순화",
+    "description": "Video feature: UI optimization"
+  },
+  "homepage.scenario.video.sites": {
+    "message": "지원 사이트",
+    "description": "Video scenario supported sites label"
+  },
+  "homepage.scenario.video.getScript": {
+    "message": "스크립트 받기 →",
+    "description": "Video scenario get script link"
+  },
+  "homepage.scenario.shopping.title": {
+    "message": "쇼핑 도우미",
+    "description": "Shopping scenario title"
+  },
+  "homepage.scenario.shopping.subtitle": {
+    "message": "쇼핑 경험을 더 쉽게 만드세요",
+    "description": "Shopping scenario subtitle"
+  },
+  "homepage.scenario.shopping.tag": {
+    "message": "실용 도구",
+    "description": "Shopping scenario tag"
+  },
+  "homepage.scenario.shopping.feature.history": {
+    "message": "가격 이력 조회",
+    "description": "Shopping feature: Price history"
+  },
+  "homepage.scenario.shopping.feature.coupon": {
+    "message": "자동 쿠폰 검색",
+    "description": "Shopping feature: Coupon search"
+  },
+  "homepage.scenario.shopping.feature.compare": {
+    "message": "가격 비교",
+    "description": "Shopping feature: Price comparison"
+  },
+  "homepage.scenario.shopping.feature.alert": {
+    "message": "가격 인하 알림",
+    "description": "Shopping feature: Price alert"
+  },
+  "homepage.scenario.sites.more": {
+    "message": "+더 보기",
+    "description": "More sites indicator in scenario cards"
+  },
+  "homepage.download.title.ready": {
+    "message": "준비되셨나요",
+    "description": "Download section title part 1"
+  },
+  "homepage.download.title.enhance": {
+    "message": "브라우징 경험을 향상시키세요",
+    "description": "Download section title highlight"
+  },
+  "homepage.download.title.question": {
+    "message": "?",
+    "description": "Download section title part 2"
+  },
+  "homepage.download.subtitle": {
+    "message": "지금 ScriptCat을 설치하고 웹 브라우징의 무한한 가능성을 열어 보세요",
+    "description": "Download section subtitle"
+  },
+  "homepage.download.edge": {
+    "message": "Edge 확장 프로그램 스토어",
+    "description": "Download button: Edge store"
+  },
+  "homepage.download.chrome": {
+    "message": "Chrome 확장 프로그램 스토어",
+    "description": "Download button: Chrome store"
+  },
+  "homepage.download.firefox": {
+    "message": "Firefox 확장 프로그램 스토어",
+    "description": "Download button: Firefox store"
+  },
+  "homepage.download.github": {
+    "message": "GitHub 다운로드",
+    "description": "Download button: GitHub"
+  },
+  "homepage.download.popup.title": {
+    "message": "ScriptCat 활성화됨",
+    "description": "Extension popup title"
+  },
+  "homepage.download.popup.text": {
+    "message": "현재 페이지에서 스크립트 3개가 실행 중입니다",
+    "description": "Extension popup text"
+  },
+  "homepage.footer.contributors.title": {
+    "message": "모든 기여자에게 감사드립니다",
+    "description": "Footer contributors section title"
+  },
+  "footer.description": {
+    "message": "웹 경험을 더 풍부하고 다채롭게 만들어 주는 강력한 브라우저 스크립트 엔진입니다.",
+    "description": "Footer description"
+  },
+  "footer.product.title": {
+    "message": "제품",
+    "description": "Footer product section title"
+  },
+  "footer.product.features": {
+    "message": "기능",
+    "description": "Footer product features link"
+  },
+  "footer.product.scriptStore": {
+    "message": "스크립트 스토어",
+    "description": "Footer product script store link"
+  },
+  "footer.product.changelog": {
+    "message": "변경 로그",
+    "description": "Footer product changelog link"
+  },
+  "footer.resources.title": {
+    "message": "리소스",
+    "description": "Footer resources section title"
+  },
+  "footer.resources.devDocs": {
+    "message": "개발자 문서",
+    "description": "Footer resources development docs link"
+  },
+  "footer.resources.apiReference": {
+    "message": "API 레퍼런스",
+    "description": "Footer resources API reference link"
+  },
+  "footer.resources.examples": {
+    "message": "예제 스크립트",
+    "description": "Footer resources example scripts link"
+  },
+  "footer.resources.faq": {
+    "message": "FAQ",
+    "description": "Footer resources FAQ link"
+  },
+  "footer.community.title": {
+    "message": "커뮤니티",
+    "description": "Footer community section title"
+  },
+  "footer.community.forum": {
+    "message": "포럼 토론",
+    "description": "Footer community forum link"
+  },
+  "footer.community.discord": {
+    "message": "Discord 채널",
+    "description": "Footer community Discord link"
+  },
+  "footer.community.contributing": {
+    "message": "기여 가이드",
+    "description": "Footer community contributing guide link"
+  },
+  "footer.community.issues": {
+    "message": "문제 보고",
+    "description": "Footer community report issues link"
+  },
+  "footer.community.contact": {
+    "message": "팀에 문의하기",
+    "description": "Footer community contact team link"
+  },
+  "footer.copyright.allRightsReserved": {
+    "message": "모든 권리 보유.",
+    "description": "Footer copyright all rights reserved text"
+  },
+  "footer.copyright.privacy": {
+    "message": "개인정보 처리방침",
+    "description": "Footer copyright privacy policy link"
+  },
+  "footer.copyright.terms": {
+    "message": "이용 약관",
+    "description": "Footer copyright terms of use link"
+  },
+  "footer.copyright.license": {
+    "message": "라이선스 계약",
+    "description": "Footer copyright license link"
+  },
+  "uninstall.title": {
+    "message": "제거 설문조사",
+    "description": "Title of the uninstall survey page"
+  },
+  "uninstall.description": {
+    "message": "ScriptCat을 사용해 주셔서 감사합니다. 제거하는 이유를 알려주세요.",
+    "description": "Description of the uninstall survey page"
+  },
+  "uninstall.header.title": {
+    "message": "ScriptCat을 제거하시는군요, 아쉽습니다",
+    "description": "Main header title on uninstall survey page"
+  },
+  "uninstall.header.subtitle": {
+    "message": "가능하다면 저희가 계속 개선할 수 있도록 의견을 들려주시면 감사하겠습니다",
+    "description": "Subtitle on uninstall survey page"
+  },
+  "uninstall.question.reason": {
+    "message": "ScriptCat을 제거하는 주된 이유는 무엇인가요?",
+    "description": "Question about uninstall reason"
+  },
+  "uninstall.question.feedback": {
+    "message": "가능하다면 더 자세한 내용을 공유해 주시겠어요?",
+    "description": "Question about detailed feedback"
+  },
+  "uninstall.reason.bugs": {
+    "message": "오류나 버그가 발생했습니다",
+    "description": "Uninstall reason: bugs"
+  },
+  "uninstall.reason.no_need": {
+    "message": "더 이상 ScriptCat이 필요하지 않습니다",
+    "description": "Uninstall reason: no longer need"
+  },
+  "uninstall.reason.features": {
+    "message": "필요한 기능이 없습니다",
+    "description": "Uninstall reason: missing features"
+  },
+  "uninstall.reason.alternative": {
+    "message": "더 나은 대안을 찾았습니다",
+    "description": "Uninstall reason: found alternative"
+  },
+  "uninstall.reason.other": {
+    "message": "기타 이유",
+    "description": "Uninstall reason: other"
+  },
+  "uninstall.feedback.placeholder": {
+    "message": "구체적인 문제, 제안 또는 기타 생각을 공유해 주세요...",
+    "description": "Placeholder text for feedback textarea"
+  },
+  "uninstall.button.submit": {
+    "message": "피드백 제출",
+    "description": "Submit button text"
+  },
+  "uninstall.warning.selectReason": {
+    "message": "제거 사유를 선택해 주세요",
+    "description": "Warning when no reason is selected"
+  },
+  "uninstall.success.submitted": {
+    "message": "피드백 감사합니다!",
+    "description": "Success message after submission"
+  },
+  "uninstall.error.submit": {
+    "message": "제출 실패, 나중에 다시 시도해 주세요",
+    "description": "Error message when submission fails"
+  },
+  "uninstall.thanks.title": {
+    "message": "피드백 감사합니다!",
+    "description": "Thank you page title"
+  },
+  "uninstall.thanks.message": {
+    "message": "귀하의 피드백은 저희에게 매우 소중하며 ScriptCat을 개선하는 데 도움이 됩니다.",
+    "description": "Thank you page message"
+  },
+  "uninstall.thanks.backHome": {
+    "message": "홈으로 돌아가기",
+    "description": "Back to home button"
+  },
+  "uninstall.thanks.reportIssue": {
+    "message": "문제 보고",
+    "description": "Report issue button"
+  },
+  "uninstall.reinstall.message": {
+    "message": "마음이 바뀌면 언제든 다시 설치할 수 있습니다:",
+    "description": "Reinstall message"
+  },
+  "uninstall.reinstall.chrome": {
+    "message": "Chrome 웹 스토어",
+    "description": "Reinstall from Chrome Web Store button"
+  },
+  "uninstall.reinstall.edge": {
+    "message": "Edge 부가 기능",
+    "description": "Reinstall from Edge Add-ons button"
+  },
+  "uninstall.reinstall.firefox": {
+    "message": "Firefox 부가 기능",
+    "description": "Reinstall from Firefox Add-ons button"
+  },
+  "uninstall.thanks.considerReinstall": {
+    "message": "마음이 바뀌면 언제든 다시 오신 것을 환영합니다",
+    "description": "Consider reinstall message"
+  },
+  "uninstall.thanks.submitAnother": {
+    "message": "다른 피드백 제출",
+    "description": "Submit another feedback button"
+  },
+  "uninstall.sidebar.reinstall.title": {
+    "message": "언제나 다시 환영합니다",
+    "description": "Sidebar reinstall title"
+  },
+  "uninstall.sidebar.help.title": {
+    "message": "도움이 필요하신가요?",
+    "description": "Sidebar help title"
+  },
+  "uninstall.sidebar.help.description": {
+    "message": "문제가 있나요? 해결을 도와드리겠습니다",
+    "description": "Sidebar help description"
+  },
+  "uninstall.sidebar.help.github": {
+    "message": "GitHub Issues",
+    "description": "GitHub issues button"
+  },
+  "uninstall.sidebar.help.docs": {
+    "message": "문서 보기",
+    "description": "View docs button"
+  },
+  "uninstall.bug.alert.title": {
+    "message": "버그가 발생했나요?",
+    "description": "Bug alert title"
+  },
+  "uninstall.bug.alert.description": {
+    "message": "오류나 버그가 발생했다면 더 신속한 피드백과 기술 지원을 위해 GitHub에 직접 이슈를 제출하는 것을 권장합니다.",
+    "description": "Bug alert description"
+  },
+  "uninstall.bug.alert.button": {
+    "message": "GitHub에서 문제 보고",
+    "description": "Bug alert button text"
+  },
+  "uninstall.feature.alert.title": {
+    "message": "필요한 기능이 없나요?",
+    "description": "Feature alert title"
+  },
+  "uninstall.feature.alert.description": {
+    "message": "사용자의 기능 요청을 매우 중요하게 생각합니다! 필요한 기능을 GitHub에 자세히 설명해 주시면 요구사항을 더 잘 이해하고 구현 우선순위를 정할 수 있습니다.",
+    "description": "Feature alert description"
+  },
+  "uninstall.feature.alert.button": {
+    "message": "GitHub에서 기능 제안",
+    "description": "Feature alert button text"
+  },
+  "home.install.edge": {
+    "message": "Edge에 추가"
+  },
+  "home.install.chrome": {
+    "message": "Chrome에 추가"
+  },
+  "home.install.firefox": {
+    "message": "Firefox에 추가"
+  },
+  "home.install.manual": {
+    "message": "패키지 다운로드 및 수동 설치"
+  },
+  "home.install.guide": {
+    "message": "설치 가이드"
+  },
+  "home.hero.installTo": {
+    "message": "{browser}에 추가"
+  },
+  "home.hero.moreBrowsers": {
+    "message": "더 많은 브라우저"
+  },
+  "home.hero.eyebrow": {
+    "message": "오픈소스 유저스크립트 엔진 · Tampermonkey 호환"
+  },
+  "home.hero.title1": {
+    "message": "브라우저에"
+  },
+  "home.hero.title2": {
+    "message": ""
+  },
+  "home.hero.title3": {
+    "message": "초능력을"
+  },
+  "home.hero.subhead": {
+    "message": "광고 차단, 비디오 업그레이드, 지루한 작업 자동화 — 스토어에서 커뮤니티 스크립트를 한 번의 클릭으로 설치하세요. 개발자를 위한 백그라운드 스크립트와 강력한 API도 제공합니다. Tampermonkey와 호환되므로 기존 스크립트를 비용 없이 옮길 수 있습니다."
+  },
+  "home.hero.browse": {
+    "message": "스크립트 둘러보기"
+  },
+  "home.hero.trust": {
+    "message": "Chrome · Edge · Firefox에서 작동 — 완전 무료 및 오픈소스"
+  },
+  "home.hero.mock.speed": {
+    "message": "비디오 속도 조절"
+  },
+  "home.hero.mock.adblock": {
+    "message": "광고 자동 건너뛰기"
+  },
+  "home.hero.mock.dark": {
+    "message": "페이지 다크 모드"
+  },
+  "home.hero.mock.skip": {
+    "message": "광고 건너뛰기"
+  },
+  "home.hero.mock.running": {
+    "message": "이 페이지에서 실행 중인 스크립트 3개"
+  },
+  "home.hero.mock.add": {
+    "message": "스크립트 스토어에서 추가"
+  },
+  "home.hero.chip.installed": {
+    "message": "스크립트 설치됨"
+  },
+  "home.hero.chip.installedSub": {
+    "message": "비디오 인핸서 v2.1"
+  },
+  "home.hero.chip.background": {
+    "message": "백그라운드에서 실행 중인 스크립트 3개"
+  },
+  "home.trust.eyebrow": {
+    "message": "전 세계 사용자와 개발자가 신뢰합니다"
+  },
+  "home.trust.users": {
+    "message": "설치 사용자"
+  },
+  "home.trust.scripts": {
+    "message": "커뮤니티 스크립트"
+  },
+  "home.trust.stars": {
+    "message": "GitHub Stars"
+  },
+  "home.trust.contributors": {
+    "message": "기여자"
+  },
+  "home.sc.eyebrow": {
+    "message": "모두를 위한 · 코딩 불필요"
+  },
+  "home.sc.title1": {
+    "message": "코드 없이, "
+  },
+  "home.sc.title2": {
+    "message": "한 번의 클릭"
+  },
+  "home.sc.title3": {
+    "message": "으로 일상의 불편을 해결하세요"
+  },
+  "home.sc.sub": {
+    "message": "스토어에서 스크립트 하나를 가져오세요 — 광고, 비디오, 쇼핑, 생산성, 모두 처리해 드립니다."
+  },
+  "home.sc.featured.tag": {
+    "message": "가장 인기"
+  },
+  "home.sc.featured.t": {
+    "message": "비디오, 완전히 업그레이드"
+  },
+  "home.sc.featured.d": {
+    "message": "속도 조절, 광고 자동 건너뛰기, 원클릭 다운로드, 화면 속 화면 — 더 나은 Bilibili / YouTube / Netflix."
+  },
+  "home.sc.featured.c1": {
+    "message": "속도 조절"
+  },
+  "home.sc.featured.c2": {
+    "message": "광고 차단"
+  },
+  "home.sc.featured.c3": {
+    "message": "다운로드"
+  },
+  "home.sc.featured.c4": {
+    "message": "화면 속 화면"
+  },
+  "home.sc.featured.btn": {
+    "message": "비디오 스크립트 둘러보기"
+  },
+  "home.sc.featured.sites": {
+    "message": "20개 이상의 비디오 사이트 지원"
+  },
+  "home.sc.adblock.t": {
+    "message": "광고 차단 · 깨끗한 웹"
+  },
+  "home.sc.adblock.d": {
+    "message": "광고와 팝업을 차단해 깔끔하고 정돈된 페이지를 만듭니다."
+  },
+  "home.sc.adblock.l": {
+    "message": "광고 차단 스크립트"
+  },
+  "home.sc.shop.t": {
+    "message": "쇼핑 · 가격 비교"
+  },
+  "home.sc.shop.d": {
+    "message": "어디서나 가격 비교, 가격 이력 차트, 원클릭 쿠폰."
+  },
+  "home.sc.shop.l": {
+    "message": "쇼핑 도우미"
+  },
+  "home.sc.auto.t": {
+    "message": "생산성 · 자동화"
+  },
+  "home.sc.auto.d": {
+    "message": "자동 출석 체크, 일괄 작업, 유용한 작은 도구 모음."
+  },
+  "home.sc.auto.l": {
+    "message": "생산성 스크립트"
+  },
+  "home.sc.read.t": {
+    "message": "읽기 · 번역"
+  },
+  "home.sc.read.d": {
+    "message": "다크 모드, 페이지 번역, 몰입형 읽기."
+  },
+  "home.sc.read.l": {
+    "message": "읽기 개선 스크립트"
+  },
+  "home.step.eyebrow": {
+    "message": "3단계로 시작하기"
+  },
+  "home.step.title1": {
+    "message": "30초"
+  },
+  "home.step.title2": {
+    "message": "면 첫 스크립트까지"
+  },
+  "home.step.sub": {
+    "message": "복잡한 설정 없음 — 세 단계만 따라 하면 바로 사용할 수 있습니다: 설치하고 시작하세요."
+  },
+  "home.step1.t": {
+    "message": "확장 프로그램 설치"
+  },
+  "home.step1.d": {
+    "message": "Chrome / Edge / Firefox 스토어에서 한 번의 클릭으로 추가하거나 직접 설치하세요."
+  },
+  "home.step1.p": {
+    "message": "브라우저에 추가"
+  },
+  "home.step2.t": {
+    "message": "스토어 둘러보기"
+  },
+  "home.step2.d": {
+    "message": "ScriptCat 커뮤니티의 수천 가지 스크립트를 둘러보고 마음에 드는 것을 고르세요."
+  },
+  "home.step2.p": {
+    "message": "검색: 비디오 속도"
+  },
+  "home.step3.t": {
+    "message": "원클릭 설치"
+  },
+  "home.step3.d": {
+    "message": "설치를 클릭하면 스크립트가 즉시 페이지에서 작동합니다."
+  },
+  "home.step3.p": {
+    "message": "설치됨 · 지금 활성"
+  },
+  "home.feat.eyebrow": {
+    "message": "핵심 기능 · WHY SCRIPTCAT"
+  },
+  "home.feat.title1": {
+    "message": "강력한 핵심, "
+  },
+  "home.feat.title2": {
+    "message": "마음의 평화"
+  },
+  "home.feat.sub": {
+    "message": "호환성부터 보안까지, 일반 사용자부터 개발자까지 — ScriptCat이 모두 해결합니다."
+  },
+  "home.feat.compat.t": {
+    "message": "Tampermonkey 호환"
+  },
+  "home.feat.compat.d": {
+    "message": "유저스크립트 형식과 GM API와 완벽하게 호환 — 기존 스크립트를 변경 없이, 전환 비용 없이 마이그레이션하세요."
+  },
+  "home.feat.compat.b": {
+    "message": "GM_* API 지원 · 동일한 메타데이터 블록"
+  },
+  "home.feat.store.t": {
+    "message": "스크립트 스토어"
+  },
+  "home.feat.store.d": {
+    "message": "수천 개의 커뮤니티 스크립트를 한 번의 클릭으로 설치하거나, 직접 게시하여 생태계를 함께 만들어 가세요."
+  },
+  "home.feat.store.stat": {
+    "message": "커뮤니티 스크립트 {count}개"
+  },
+  "home.feat.secure.t": {
+    "message": "안전하고 신뢰할 수 있음"
+  },
+  "home.feat.secure.d": {
+    "message": "투명하고 통제 가능한 권한과 보이는 동작 — 악성 스크립트를 원천에서 차단합니다."
+  },
+  "home.feat.sync.t": {
+    "message": "클라우드 동기화"
+  },
+  "home.feat.sync.d": {
+    "message": "스크립트와 설정이 여러 기기에서 동기화됩니다 — 기기를 바꾸거나 재설치해도 잃는 것이 없습니다."
+  },
+  "home.feat.bg.t": {
+    "message": "백그라운드 스크립트"
+  },
+  "home.feat.bg.d": {
+    "message": "특별함: 탭을 열지 않아도 스크립트가 백그라운드에서 계속 실행됩니다."
+  },
+  "home.feat.api.t": {
+    "message": "강력한 API"
+  },
+  "home.feat.api.d": {
+    "message": "GM보다 풍부합니다: 파일 저장, 예약 작업, 크로스 오리진 요청을 손쉽게 사용하세요."
+  },
+  "home.feat.devTag": {
+    "message": "개발자"
+  },
+  "home.dev.eyebrow": {
+    "message": "개발자를 위해 만들어졌습니다 · FOR DEVELOPERS"
+  },
+  "home.dev.title1": {
+    "message": "브라우저를 "
+  },
+  "home.dev.title2": {
+    "message": "코드 런타임으로"
+  },
+  "home.dev.sub": {
+    "message": "백그라운드 스크립트, 풍부한 API, 내장 에디터와 디버깅 도구 — 첫 줄부터 프로덕션까지 한곳에서 모두 처리합니다."
+  },
+  "home.dev.bg.t": {
+    "message": "백그라운드 스크립트"
+  },
+  "home.dev.bg.d": {
+    "message": "고정 탭이 필요 없습니다 — 스크립트는 백그라운드에서 계속 실행됩니다."
+  },
+  "home.dev.api.t": {
+    "message": "강력한 API"
+  },
+  "home.dev.api.d": {
+    "message": "파일 저장, cron 스케줄링, 크로스 오리진 요청 — 모두 포함되어 있습니다."
+  },
+  "home.dev.editor.t": {
+    "message": "내장 에디터"
+  },
+  "home.dev.editor.d": {
+    "message": "구문 강조, 스마트 완성, 오류 힌트로 스크립팅이 매끄러워집니다."
+  },
+  "home.dev.debug.t": {
+    "message": "실시간 디버깅"
+  },
+  "home.dev.debug.d": {
+    "message": "로그, 실행 기록, 오류 추적 — 문제를 한눈에 파악하세요."
+  },
+  "home.dev.docsBtn": {
+    "message": "문서 읽기"
+  },
+  "home.dev.apiBtn": {
+    "message": "API 레퍼런스"
+  },
+  "home.dev.run": {
+    "message": "실행"
+  },
+  "home.dev.mock.name": {
+    "message": "매일 출석 체크",
+    "description": "@name value in the editor mock code block"
+  },
+  "home.dev.mock.toast": {
+    "message": "체크인 완료",
+    "description": "Notification text in the editor mock code block"
+  },
+  "home.comm.eyebrow": {
+    "message": "오픈소스 · OPEN SOURCE"
+  },
+  "home.comm.title1": {
+    "message": "만들어졌습니다 "
+  },
+  "home.comm.title2": {
+    "message": "커뮤니티에 의해"
+  },
+  "home.comm.sub": {
+    "message": "완전한 오픈소스, 투명하고 무료입니다. 모든 코드 줄은 검증 가능하며 모든 기여자가 보입니다."
+  },
+  "home.comm.btn": {
+    "message": "GitHub에서 기여하기"
+  },
+  "home.cta.eyebrow": {
+    "message": "무료 · 오픈소스 · 광고 없음"
+  },
+  "home.cta.h1": {
+    "message": "브라우저에"
+  },
+  "home.cta.h2": {
+    "message": "초능력"
+  },
+  "home.cta.h3": {
+    "message": "을 부여할 준비가 되셨나요?"
+  },
+  "home.cta.sub": {
+    "message": "스토어에서 한 번의 클릭으로 설치하거나 패키지를 직접 다운로드하세요. 30초면 웹 초능력을 해제할 수 있습니다."
+  },
+  "home.cta.primary": {
+    "message": "{browser}에 무료 설치"
+  },
+  "home.cta.secondary": {
+    "message": "스크립트 둘러보기"
+  },
+  "home.cta.stores": {
+    "message": "Edge · Chrome · Firefox · 수동 패키지 지원"
+  },
+  "home.cta.chip": {
+    "message": "설치됨 및 실행 중"
+  },
+  "home.nav.docs": {
+    "message": "문서"
+  },
+  "home.nav.store": {
+    "message": "스크립트 스토어"
+  },
+  "home.nav.dev": {
+    "message": "개발자"
+  },
+  "home.nav.changelog": {
+    "message": "변경 로그"
+  },
+  "home.nav.install": {
+    "message": "설치"
+  },
+  "home.nav.installTo": {
+    "message": "{browser}에 추가"
+  },
+  "home.nav.menu": {
+    "message": "메뉴"
+  },
+  "home.nav.theme": {
+    "message": "테마 전환"
+  }
+}

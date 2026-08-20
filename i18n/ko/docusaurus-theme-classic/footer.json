@@ -1,0 +1,34 @@
+{
+  "link.title.Docs": {
+    "message": "문서",
+    "description": "The link.title.Docs in the footer"
+  },
+  "link.item.label.使用指南": {
+    "message": "사용 가이드",
+    "description": "The link.item.label.使用指南 in the footer"
+  },
+  "link.item.label.开发指南": {
+    "message": "개발자 가이드",
+    "description": "The link.item.label.开发指南 in the footer"
+  },
+  "link.title.Community": {
+    "message": "커뮤니티",
+    "description": "The link.title.Community in the footer"
+  },
+  "link.item.label.油猴中文网": {
+    "message": "Tampermonkey 중국 포럼",
+    "description": "The link.item.label.油猴中文网 in the footer"
+  },
+  "link.item.label.脚本猫脚本站": {
+    "message": "ScriptCat 스크립트 스토어",
+    "description": "The link.item.label.脚本猫脚本站 in the footer"
+  },
+  "link.title.More": {
+    "message": "더 보기",
+    "description": "The link.title.More in the footer"
+  },
+  "copyright": {
+    "message": "저작권 © {year} ScriptCat, Inc. Docusaurus로 제작.",
+    "description": "The copyright in the footer"
+  }
+}

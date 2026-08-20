@@ -1,0 +1,18 @@
+{
+  "item.label.使用文档": {
+    "message": "사용 가이드",
+    "description": "The label for the navbar item item.label.使用文档"
+  },
+  "item.label.开发文档": {
+    "message": "개발자 가이드",
+    "description": "The label for the navbar item item.label.开发文档"
+  },
+  "item.label.更新日志": {
+    "message": "변경 로그",
+    "description": "The label for the navbar item item.label.更新日志"
+  },
+  "item.label.脚本开发指南": {
+    "message": "스크립트 개발 가이드",
+    "description": "The label for the navbar item item.label.脚本开发指南"
+  }
+}
