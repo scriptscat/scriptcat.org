@@ -947,5 +947,9 @@
   },
   "home.nav.theme": {
     "message": "Thema wisselen"
+  },
+  "home.hero.en": {
+    "message": "Superkrachten voor je browser.",
+    "description": "Hero subtitle tagline on homepage"
   }
 }
