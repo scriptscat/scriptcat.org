@@ -1,9 +1,27 @@
 {
-  "link.title.Docs": { "message": "Documentation" },
-  "link.item.label.使用指南": { "message": "Guide Utilisateur" },
-  "link.item.label.开发指南": { "message": "Guide Développeur" },
-  "link.title.Community": { "message": "Communauté" },
-  "link.item.label.油猴中文网": { "message": "Forum chinois Tampermonkey" },
-  "link.item.label.脚本猫脚本站": { "message": "Boutique de scripts ScriptCat" },
-  "link.title.More": { "message": "Plus" }
+  "link.title.Docs": {
+    "message": "Documentation"
+  },
+  "link.item.label.使用指南": {
+    "message": "Guide Utilisateur"
+  },
+  "link.item.label.开发指南": {
+    "message": "Guide Développeur"
+  },
+  "link.title.Community": {
+    "message": "Communauté"
+  },
+  "link.item.label.油猴中文网": {
+    "message": "Forum chinois Tampermonkey"
+  },
+  "link.item.label.脚本猫脚本站": {
+    "message": "Boutique de scripts ScriptCat"
+  },
+  "link.title.More": {
+    "message": "Plus"
+  },
+  "copyright": {
+    "message": "Copyright © {year} ScriptCat, Inc. Propulsé par Docusaurus.",
+    "description": "The footer copyright"
+  }
 }
