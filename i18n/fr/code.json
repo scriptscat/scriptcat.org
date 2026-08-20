@@ -833,5 +833,9 @@
   },
   "home.nav.theme": {
     "message": "Basculer le thème"
+  },
+  "home.hero.en": {
+    "message": "Des super-pouvoirs pour votre navigateur.",
+    "description": "Hero subtitle tagline on homepage"
   }
 }
