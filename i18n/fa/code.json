@@ -1,0 +1,951 @@
+{
+  "githubStar.button.label": {
+    "message": "ستاره",
+    "description": "GitHub star button label"
+  },
+  "githubStar.home.title": {
+    "message": "ScriptCat رایگان و متن‌باز است",
+    "description": "GitHub star bar title on homepage"
+  },
+  "githubStar.home.subtitle": {
+    "message": "اگر مفید بود به ما ستاره بدهید — به ادامه کار ما کمک می‌کند",
+    "description": "GitHub star bar subtitle on homepage"
+  },
+  "githubStar.install.title": {
+    "message": "از ScriptCat لذت می‌برید؟",
+    "description": "GitHub star bar title on install-complete page"
+  },
+  "githubStar.install.subtitle": {
+    "message": "با یک ستاره در GitHub به دیگران در کشف آن کمک کنید 🌟",
+    "description": "GitHub star bar subtitle on install-complete page"
+  },
+  "githubStar.changelog.title": {
+    "message": "ScriptCat مدام بهتر می‌شود 🚀",
+    "description": "GitHub star bar title on changelog page"
+  },
+  "githubStar.changelog.subtitle": {
+    "message": "این به‌روزرسانی‌ها مفید بود؟ با یک ستاره در GitHub از کار ما حمایت کنید",
+    "description": "GitHub star bar subtitle on changelog page"
+  },
+  "homepage.meta.keywords": {
+    "message": "ScriptCat,اسکریپت کاربری,افزونه مرورگر,userscript,Tampermonkey,Violentmonkey,اسکریپت پس‌زمینه,اسکریپت زمان‌بندی‌شده,اتوماسیون مرورگر,مسدودکننده تبلیغ,فروشگاه اسکریپت",
+    "description": "Homepage SEO keywords"
+  },
+  "homepage.meta.title": {
+    "message": "ScriptCat - موتور قدرتمند اسکریپت مرورگر",
+    "description": "Homepage meta title for SEO"
+  },
+  "homepage.meta.description": {
+    "message": "ScriptCat یک موتور اسکریپت مرورگر متن‌باز و قدرتمند است که به شما اجازه می‌دهد به سادگی عملکرد وب را شخصی‌سازی کنید، تبلیغات را حذف کنید، کارها را خودکار کنید و تجربه مرور را ارتقا دهید. سازگار با Tampermonkey با امکانات بیشتر.",
+    "description": "Homepage meta description for SEO"
+  },
+  "homepage.og.title": {
+    "message": "ScriptCat - موتور قدرتمند اسکریپت مرورگر",
+    "description": "Open Graph title for social sharing"
+  },
+  "homepage.og.description": {
+    "message": "موتور اسکریپت مرورگر متن‌باز که مرورگر شما را بیشتر به کار می‌گیرد. پشتیبانی از اسکریپت‌های کاربری، اسکریپت‌های پس‌زمینه، سازگار با Tampermonkey، امکانات قدرتمندتر.",
+    "description": "Open Graph description for social sharing"
+  },
+  "homepage.twitter.title": {
+    "message": "ScriptCat - موتور قدرتمند اسکریپت مرورگر",
+    "description": "Twitter card title"
+  },
+  "homepage.twitter.description": {
+    "message": "موتور اسکریپت مرورگر متن‌باز که مرورگر شما را بیشتر به کار می‌گیرد",
+    "description": "Twitter card description"
+  },
+  "homepage.hero.title": {
+    "message": "موتور نهایی اسکریپت برای",
+    "description": "Main title on the homepage hero section"
+  },
+  "homepage.hero.title.engine": {
+    "message": "تجربه مرور ارتقا یافته",
+    "description": "Gradient text in main title"
+  },
+  "homepage.hero.subtitle.userScript": {
+    "message": "اسکریپت‌های کاربری",
+    "description": "User script highlight"
+  },
+  "homepage.hero.subtitle.possibilities": {
+    "message": "، فعال‌سازی امکانات بی‌نهایت برای مرورگر شما!",
+    "description": "Browser possibilities text"
+  },
+  "homepage.hero.subtitle.main": {
+    "message": "ScriptCat یک موتور اسکریپت مرورگر متن‌باز و قدرتمند است که به شما اجازه می‌دهد به سادگی عملکرد وب را شخصی‌سازی کنید، تبلیغات را حذف کنید، کارها را خودکار کنید و تجربه مرور را ارتقا دهید. سازگار با Tampermonkey با امکانات و بهینه‌سازی‌های بیشتر.",
+    "description": "Main subtitle description on homepage"
+  },
+  "homepage.hero.subtitle.highlight": {
+    "message": "یک افزونه مرورگر برای اجرای",
+    "description": "Highlighted subtitle on homepage"
+  },
+  "homepage.hero.button.browseScripts": {
+    "message": "مرور کتابخانه اسکریپت",
+    "description": "Button text for browsing scripts"
+  },
+  "homepage.hero.browser.edge": {
+    "message": "افزودن به مرورگر Edge",
+    "description": "Button text for Edge browser"
+  },
+  "homepage.hero.browser.chrome": {
+    "message": "افزودن به مرورگر Chrome",
+    "description": "Button text for Chrome browser"
+  },
+  "homepage.hero.browser.firefox": {
+    "message": "افزودن به مرورگر Firefox",
+    "description": "Button text for Firefox browser"
+  },
+  "homepage.hero.browser.default": {
+    "message": "نصب افزونه در مرورگر",
+    "description": "Default button text for browser installation"
+  },
+  "homepage.hero.browser.crx": {
+    "message": "دانلود بسته نصب برای نصب دستی",
+    "description": "Button text for manual installation"
+  },
+  "homepage.hero.trustBadges.title": {
+    "message": "مورد اعتماد و حمایت انجمن فناوری",
+    "description": "Trust badges section title"
+  },
+  "homepage.features.title.powerful": {
+    "message": "امکانات قدرتمند، ",
+    "description": "Features section title part 1"
+  },
+  "homepage.features.title.possibilities": {
+    "message": "امکانات بی‌نهایت",
+    "description": "Features section title highlight"
+  },
+  "homepage.features.subtitle": {
+    "message": "ScriptCat مجموعه‌ای از امکانات قدرتمند را ارائه می‌دهد که به شما اجازه می‌دهد به سادگی قابلیت‌های مرورگر را گسترش دهید و تجربه وب خود را بسازید.",
+    "description": "Features section subtitle"
+  },
+  "homepage.features.tampermonkey.title": {
+    "message": "سازگار با Tampermonkey",
+    "description": "Feature title: Tampermonkey compatibility"
+  },
+  "homepage.features.tampermonkey.description": {
+    "message": "کاملاً سازگار با فرمت اسکریپت Tampermonkey؛ کتابخانه اسکریپت موجود را با هزینه صفر و بدون زحمت منتقل کنید.",
+    "description": "Feature description: Tampermonkey compatibility"
+  },
+  "homepage.features.background.title": {
+    "message": "اسکریپت‌های پس‌زمینه",
+    "description": "Feature title: Background scripts"
+  },
+  "homepage.features.background.description": {
+    "message": "برخلاف اسکریپت‌های کاربری معمولی، به اسکریپت‌های شما اجازه می‌دهد بدون نیاز به باز کردن تب، در پس‌زمینه به طور مداوم اجرا شوند.",
+    "description": "Feature description: Background scripts"
+  },
+  "homepage.features.security.title": {
+    "message": "امن و قابل اعتماد",
+    "description": "Feature title: Security"
+  },
+  "homepage.features.security.description": {
+    "message": "سیستم کنترل مجوز سخت‌گیرانه، رفتار شفاف اسکریپت، جلوگیری مؤثر از اسکریپت‌های مخرب و محافظت از حریم خصوصی شما.",
+    "description": "Feature description: Security"
+  },
+  "homepage.features.editor.title": {
+    "message": "ویرایشگر کد داخلی",
+    "description": "Feature title: Code editor"
+  },
+  "homepage.features.editor.description": {
+    "message": "ویرایشگر کد قدرتمند با هایلایت سینتکس، تکمیل کد و راهنمای خطا برای کارآمدتر کردن اسکریپت‌نویسی.",
+    "description": "Feature description: Code editor"
+  },
+  "homepage.features.api.title": {
+    "message": "APIهای قدرتمند",
+    "description": "Feature title: APIs"
+  },
+  "homepage.features.api.description": {
+    "message": "رابط‌های API غنی‌تری نسبت به GM ارائه می‌دهد و از امکانات پیشرفته‌ای مانند ذخیره‌سازی فایل و پیکربندی کاربر پشتیبانی می‌کند.",
+    "description": "Feature description: APIs"
+  },
+  "homepage.features.store.title": {
+    "message": "فروشگاه اسکریپت",
+    "description": "Feature title: Script store"
+  },
+  "homepage.features.store.description": {
+    "message": "دارای فروشگاه اسکریپت برای نصب یک‌کلیکی اسکریپت‌های محبوب، یا انتشار آثار شما برای اشتراک با انجمن و ساختن یک اکوسیستم فعال.",
+    "description": "Feature description: Script store"
+  },
+  "homepage.comparison.title.why": {
+    "message": "چرا ScriptCat را انتخاب کنیم",
+    "description": "Comparison section title part 1"
+  },
+  "homepage.comparison.subtitle": {
+    "message": "در مقایسه با سایر موتورهای اسکریپت، ScriptCat مزایا و امکانات بیشتری ارائه می‌دهد",
+    "description": "Comparison section subtitle"
+  },
+  "homepage.comparison.feature": {
+    "message": "امکانات",
+    "description": "Comparison table header: Feature"
+  },
+  "homepage.comparison.feature.compatibility": {
+    "message": "سازگاری اسکریپت",
+    "description": "Comparison feature: Script compatibility"
+  },
+  "homepage.comparison.feature.background": {
+    "message": "اسکریپت‌های پس‌زمینه",
+    "description": "Comparison feature: Background scripts"
+  },
+  "homepage.comparison.feature.opensource": {
+    "message": "رایگان و متن‌باز",
+    "description": "Comparison feature: Open source"
+  },
+  "homepage.comparison.feature.mv3": {
+    "message": "پشتیبانی MV3",
+    "description": "Comparison feature: MV3 Support"
+  },
+  "homepage.comparison.feature.sync": {
+    "message": "همگام‌سازی ابری",
+    "description": "Comparison feature: Cloud sync"
+  },
+  "homepage.comparison.feature.api": {
+    "message": "APIهای قدرتمند",
+    "description": "Comparison feature: Powerful APIs"
+  },
+  "homepage.comparison.feature.community": {
+    "message": "پشتیبانی انجمن",
+    "description": "Comparison feature: Community support"
+  },
+  "homepage.comparison.label.efficient": {
+    "message": "کارآمد",
+    "description": "Comparison label: Efficient"
+  },
+  "homepage.comparison.label.multiplatform": {
+    "message": "چندسکویی",
+    "description": "Comparison label: Multi-platform"
+  },
+  "homepage.scenario.title.solve": {
+    "message": "اسکریپت‌هایی که ",
+    "description": "Scenario section title part 1"
+  },
+  "homepage.scenario.title.problems": {
+    "message": "مشکلات واقعی",
+    "description": "Scenario section title highlight"
+  },
+  "homepage.scenario.title.scripts": {
+    "message": "",
+    "description": "Scenario section title part 2"
+  },
+  "homepage.scenario.subtitle": {
+    "message": "ببینید ScriptCat چگونه تجربه مرور شما را متحول می‌کند",
+    "description": "Scenario section subtitle"
+  },
+  "homepage.scenario.video.title": {
+    "message": "ارتقای سایت‌های ویدیویی",
+    "description": "Video scenario title"
+  },
+  "homepage.scenario.video.subtitle": {
+    "message": "بهینه‌سازی تجربه تماشای ویدیو",
+    "description": "Video scenario subtitle"
+  },
+  "homepage.scenario.video.tag": {
+    "message": "برنامه‌های محبوب",
+    "description": "Video scenario tag"
+  },
+  "homepage.scenario.video.feature.speed": {
+    "message": "کنترل سرعت ویدیو",
+    "description": "Video feature: Speed control"
+  },
+  "homepage.scenario.video.feature.download": {
+    "message": "دانلود ویدیو با یک کلیک",
+    "description": "Video feature: Download"
+  },
+  "homepage.scenario.video.feature.adblock": {
+    "message": "رد خودکار از تبلیغ",
+    "description": "Video feature: Ad blocking"
+  },
+  "homepage.scenario.video.feature.ui": {
+    "message": "ساده‌سازی رابط",
+    "description": "Video feature: UI optimization"
+  },
+  "homepage.scenario.video.sites": {
+    "message": "سایت‌های پشتیبانی‌شده",
+    "description": "Video scenario supported sites label"
+  },
+  "homepage.scenario.video.getScript": {
+    "message": "دریافت اسکریپت ←",
+    "description": "Video scenario get script link"
+  },
+  "homepage.scenario.shopping.title": {
+    "message": "دستیار خرید",
+    "description": "Shopping scenario title"
+  },
+  "homepage.scenario.shopping.subtitle": {
+    "message": "تجربه خرید را آسان‌تر کنید",
+    "description": "Shopping scenario subtitle"
+  },
+  "homepage.scenario.shopping.tag": {
+    "message": "ابزارهای کاربردی",
+    "description": "Shopping scenario tag"
+  },
+  "homepage.scenario.shopping.feature.history": {
+    "message": "استعلام تاریخچه قیمت",
+    "description": "Shopping feature: Price history"
+  },
+  "homepage.scenario.shopping.feature.coupon": {
+    "message": "جستجوی خودکار کوپن",
+    "description": "Shopping feature: Coupon search"
+  },
+  "homepage.scenario.shopping.feature.compare": {
+    "message": "مقایسه قیمت",
+    "description": "Shopping feature: Price comparison"
+  },
+  "homepage.scenario.shopping.feature.alert": {
+    "message": "هشدار کاهش قیمت",
+    "description": "Shopping feature: Price alert"
+  },
+  "homepage.scenario.sites.more": {
+    "message": "بیشتر+",
+    "description": "More sites indicator in scenario cards"
+  },
+  "homepage.download.title.ready": {
+    "message": "آماده‌اید",
+    "description": "Download section title part 1"
+  },
+  "homepage.download.title.enhance": {
+    "message": "تجربه مرور خود را ارتقا دهید",
+    "description": "Download section title highlight"
+  },
+  "homepage.download.title.question": {
+    "message": "؟",
+    "description": "Download section title part 2"
+  },
+  "homepage.download.subtitle": {
+    "message": "همین حالا ScriptCat را نصب کنید و امکانات بی‌نهایت مرور وب را باز کنید",
+    "description": "Download section subtitle"
+  },
+  "homepage.download.edge": {
+    "message": "فروشگاه افزونه Edge",
+    "description": "Download button: Edge store"
+  },
+  "homepage.download.chrome": {
+    "message": "فروشگاه افزونه Chrome",
+    "description": "Download button: Chrome store"
+  },
+  "homepage.download.firefox": {
+    "message": "فروشگاه افزونه Firefox",
+    "description": "Download button: Firefox store"
+  },
+  "homepage.download.github": {
+    "message": "دانلود از GitHub",
+    "description": "Download button: GitHub"
+  },
+  "homepage.download.popup.title": {
+    "message": "ScriptCat فعال شد",
+    "description": "Extension popup title"
+  },
+  "homepage.download.popup.text": {
+    "message": "۳ اسکریپت در حال اجرا در این صفحه هستند",
+    "description": "Extension popup text"
+  },
+  "homepage.footer.contributors.title": {
+    "message": "با تشکر از همه مشارکت‌کنندگان",
+    "description": "Footer contributors section title"
+  },
+  "footer.description": {
+    "message": "یک موتور قدرتمند اسکریپت مرورگر که تجربه وب شما را غنی‌تر و رنگارنگ‌تر می‌کند.",
+    "description": "Footer description"
+  },
+  "footer.product.title": {
+    "message": "محصول",
+    "description": "Footer product section title"
+  },
+  "footer.product.features": {
+    "message": "امکانات",
+    "description": "Footer product features link"
+  },
+  "footer.product.scriptStore": {
+    "message": "فروشگاه اسکریپت",
+    "description": "Footer product script store link"
+  },
+  "footer.product.changelog": {
+    "message": "تغییرات",
+    "description": "Footer product changelog link"
+  },
+  "footer.resources.title": {
+    "message": "منابع",
+    "description": "Footer resources section title"
+  },
+  "footer.resources.devDocs": {
+    "message": "مستندات توسعه",
+    "description": "Footer resources development docs link"
+  },
+  "footer.resources.apiReference": {
+    "message": "مرجع API",
+    "description": "Footer resources API reference link"
+  },
+  "footer.resources.examples": {
+    "message": "اسکریپت‌های نمونه",
+    "description": "Footer resources example scripts link"
+  },
+  "footer.resources.faq": {
+    "message": "سوالات متداول",
+    "description": "Footer resources FAQ link"
+  },
+  "footer.community.title": {
+    "message": "انجمن",
+    "description": "Footer community section title"
+  },
+  "footer.community.forum": {
+    "message": "بحث در انجمن",
+    "description": "Footer community forum link"
+  },
+  "footer.community.discord": {
+    "message": "کانال Discord",
+    "description": "Footer community Discord link"
+  },
+  "footer.community.contributing": {
+    "message": "راهنمای مشارکت",
+    "description": "Footer community contributing guide link"
+  },
+  "footer.community.issues": {
+    "message": "گزارش مشکلات",
+    "description": "Footer community report issues link"
+  },
+  "footer.community.contact": {
+    "message": "تماس با تیم",
+    "description": "Footer community contact team link"
+  },
+  "footer.copyright.allRightsReserved": {
+    "message": "تمامی حقوق محفوظ است.",
+    "description": "Footer copyright all rights reserved text"
+  },
+  "footer.copyright.privacy": {
+    "message": "حریم خصوصی",
+    "description": "Footer copyright privacy policy link"
+  },
+  "footer.copyright.terms": {
+    "message": "شرایط استفاده",
+    "description": "Footer copyright terms of use link"
+  },
+  "footer.copyright.license": {
+    "message": "توافق‌نامه مجوز",
+    "description": "Footer copyright license link"
+  },
+  "uninstall.title": {
+    "message": "نظرسنجی حذف نصب",
+    "description": "Title of the uninstall survey page"
+  },
+  "uninstall.description": {
+    "message": "از استفاده از ScriptCat متشکریم. لطفاً به ما بگویید چرا در حال حذف نصب هستید.",
+    "description": "Description of the uninstall survey page"
+  },
+  "uninstall.header.title": {
+    "message": "متأسفیم که در حال حذف نصب ScriptCat هستید",
+    "description": "Main header title on uninstall survey page"
+  },
+  "uninstall.header.subtitle": {
+    "message": "اگر مایلید، خوشحال می‌شویم نظرات شما را بشنویم تا به بهبود مستمر کمک کنیم",
+    "description": "Subtitle on uninstall survey page"
+  },
+  "uninstall.question.reason": {
+    "message": "دلیل اصلی حذف نصب ScriptCat چیست؟",
+    "description": "Question about uninstall reason"
+  },
+  "uninstall.question.feedback": {
+    "message": "اگر راحت‌اید، جزئیات بیشتری به اشتراک می‌گذارید؟",
+    "description": "Question about detailed feedback"
+  },
+  "uninstall.reason.bugs": {
+    "message": "با خطا یا باگ مواجه شدم",
+    "description": "Uninstall reason: bugs"
+  },
+  "uninstall.reason.no_need": {
+    "message": "دیگر به ScriptCat نیاز ندارم",
+    "description": "Uninstall reason: no longer need"
+  },
+  "uninstall.reason.features": {
+    "message": "امکانات مورد نیاز من موجود نیست",
+    "description": "Uninstall reason: missing features"
+  },
+  "uninstall.reason.alternative": {
+    "message": "جایگزین بهتری پیدا کردم",
+    "description": "Uninstall reason: found alternative"
+  },
+  "uninstall.reason.other": {
+    "message": "دلایل دیگر",
+    "description": "Uninstall reason: other"
+  },
+  "uninstall.feedback.placeholder": {
+    "message": "لطفاً مشکلات، پیشنهادها یا نظرات خاص خود را بنویسید...",
+    "description": "Placeholder text for feedback textarea"
+  },
+  "uninstall.button.submit": {
+    "message": "ارسال بازخورد",
+    "description": "Submit button text"
+  },
+  "uninstall.warning.selectReason": {
+    "message": "لطفاً یک دلیل حذف نصب را انتخاب کنید",
+    "description": "Warning when no reason is selected"
+  },
+  "uninstall.success.submitted": {
+    "message": "از بازخورد شما متشکریم!",
+    "description": "Success message after submission"
+  },
+  "uninstall.error.submit": {
+    "message": "ارسال ناموفق بود، لطفاً بعداً دوباره تلاش کنید",
+    "description": "Error message when submission fails"
+  },
+  "uninstall.thanks.title": {
+    "message": "از بازخورد شما متشکریم!",
+    "description": "Thank you page title"
+  },
+  "uninstall.thanks.message": {
+    "message": "بازخورد شما برای ما بی‌نهایت ارزشمند است و به بهبود ScriptCat کمک می‌کند.",
+    "description": "Thank you page message"
+  },
+  "uninstall.thanks.backHome": {
+    "message": "بازگشت به خانه",
+    "description": "Back to home button"
+  },
+  "uninstall.thanks.reportIssue": {
+    "message": "گزارش مشکل",
+    "description": "Report issue button"
+  },
+  "uninstall.reinstall.message": {
+    "message": "اگر نظرتان عوض شد، همیشه می‌توانید دوباره نصب کنید:",
+    "description": "Reinstall message"
+  },
+  "uninstall.reinstall.chrome": {
+    "message": "فروشگاه وب Chrome",
+    "description": "Reinstall from Chrome Web Store button"
+  },
+  "uninstall.reinstall.edge": {
+    "message": "افزونه‌های Edge",
+    "description": "Reinstall from Edge Add-ons button"
+  },
+  "uninstall.reinstall.firefox": {
+    "message": "افزونه‌های Firefox",
+    "description": "Reinstall from Firefox Add-ons button"
+  },
+  "uninstall.thanks.considerReinstall": {
+    "message": "اگر نظرتان عوض شد، همیشه خوش آمدید",
+    "description": "Consider reinstall message"
+  },
+  "uninstall.thanks.submitAnother": {
+    "message": "ارسال بازخورد دیگر",
+    "description": "Submit another feedback button"
+  },
+  "uninstall.sidebar.reinstall.title": {
+    "message": "همیشه خوش آمدید",
+    "description": "Sidebar reinstall title"
+  },
+  "uninstall.sidebar.help.title": {
+    "message": "نیاز به کمک دارید؟",
+    "description": "Sidebar help title"
+  },
+  "uninstall.sidebar.help.description": {
+    "message": "مشکلی دارید؟ ما اینجاییم تا به حل آن کمک کنیم",
+    "description": "Sidebar help description"
+  },
+  "uninstall.sidebar.help.github": {
+    "message": "مسائل GitHub",
+    "description": "GitHub issues button"
+  },
+  "uninstall.sidebar.help.docs": {
+    "message": "مشاهده مستندات",
+    "description": "View docs button"
+  },
+  "uninstall.bug.alert.title": {
+    "message": "با باگ مواجه شدید؟",
+    "description": "Bug alert title"
+  },
+  "uninstall.bug.alert.description": {
+    "message": "اگر با خطا یا مشکل مواجه شدید، پیشنهاد می‌کنیم مستقیماً در GitHub issue ثبت کنید تا بازخورد و پشتیبانی فنی به‌موقع‌تری دریافت کنید.",
+    "description": "Bug alert description"
+  },
+  "uninstall.bug.alert.button": {
+    "message": "گزارش مشکل در GitHub",
+    "description": "Bug alert button text"
+  },
+  "uninstall.feature.alert.title": {
+    "message": "امکاناتی کم دارید؟",
+    "description": "Feature alert title"
+  },
+  "uninstall.feature.alert.description": {
+    "message": "برای درخواست‌های امکانات شما ارزش زیادی قائل هستیم! پیشنهاد می‌کنیم امکانات مورد نیاز خود را با جزئیات در GitHub توضیح دهید تا بهتر نیازهای شما را درک کرده و اجرا را اولویت‌بندی کنیم.",
+    "description": "Feature alert description"
+  },
+  "uninstall.feature.alert.button": {
+    "message": "پیشنهاد امکانات در GitHub",
+    "description": "Feature alert button text"
+  },
+  "home.install.edge": {
+    "message": "افزودن به Edge"
+  },
+  "home.install.chrome": {
+    "message": "افزودن به Chrome"
+  },
+  "home.install.firefox": {
+    "message": "افزودن به Firefox"
+  },
+  "home.install.manual": {
+    "message": "دانلود بسته و نصب دستی"
+  },
+  "home.install.guide": {
+    "message": "راهنمای نصب"
+  },
+  "home.hero.installTo": {
+    "message": "افزودن به {browser}"
+  },
+  "home.hero.moreBrowsers": {
+    "message": "مرورگرهای بیشتر"
+  },
+  "home.hero.eyebrow": {
+    "message": "موتور اسکریپت کاربری متن‌باز · سازگار با Tampermonkey"
+  },
+  "home.hero.title1": {
+    "message": "به مرورگرتان"
+  },
+  "home.hero.title2": {
+    "message": ""
+  },
+  "home.hero.title3": {
+    "message": "ابرقدرت بدهید"
+  },
+  "home.hero.subhead": {
+    "message": "تبلیغات را مسدود کنید، ویدیو را ارتقا دهید، کارهای تکراری را خودکار کنید — اسکریپت‌های انجمن را در یک کلیک از فروشگاه نصب کنید، همراه با اسکریپت‌های پس‌زمینه و APIهای قدرتمند برای توسعه‌دهندگان. سازگار با Tampermonkey، پس اسکریپت‌های فعلی شما بدون هزینه منتقل می‌شوند."
+  },
+  "home.hero.browse": {
+    "message": "مرور اسکریپت‌ها"
+  },
+  "home.hero.trust": {
+    "message": "کار می‌کند روی Chrome · Edge · Firefox — کاملاً رایگان و متن‌باز"
+  },
+  "home.hero.mock.speed": {
+    "message": "کنترل سرعت ویدیو"
+  },
+  "home.hero.mock.adblock": {
+    "message": "رد شدن خودکار از تبلیغ"
+  },
+  "home.hero.mock.dark": {
+    "message": "حالت تاریک صفحات"
+  },
+  "home.hero.mock.skip": {
+    "message": "رد شدن از تبلیغ"
+  },
+  "home.hero.mock.running": {
+    "message": "۳ اسکریپت در حال اجرا در این صفحه"
+  },
+  "home.hero.mock.add": {
+    "message": "افزودن از فروشگاه اسکریپت"
+  },
+  "home.hero.chip.installed": {
+    "message": "اسکریپت نصب شد"
+  },
+  "home.hero.chip.installedSub": {
+    "message": "تقویت‌کننده ویدیو v2.1"
+  },
+  "home.hero.chip.background": {
+    "message": "۳ اسکریپت در حال اجرا در پس‌زمینه"
+  },
+  "home.trust.eyebrow": {
+    "message": "مورد اعتماد کاربران و توسعه‌دهندگان در سراسر جهان"
+  },
+  "home.trust.users": {
+    "message": "کاربران نصب‌کننده"
+  },
+  "home.trust.scripts": {
+    "message": "اسکریپت‌های انجمن"
+  },
+  "home.trust.stars": {
+    "message": "ستاره‌های GitHub"
+  },
+  "home.trust.contributors": {
+    "message": "مشارکت‌کنندگان"
+  },
+  "home.sc.eyebrow": {
+    "message": "برای همه · بدون نیاز به کدنویسی"
+  },
+  "home.sc.title1": {
+    "message": "بدون کدنویسی، فقط "
+  },
+  "home.sc.title2": {
+    "message": "یک کلیک"
+  },
+  "home.sc.title3": {
+    "message": " برای رفع دردسرهای روزمره"
+  },
+  "home.sc.sub": {
+    "message": "از فروشگاه یک اسکریپت بردارید — تبلیغ، ویدیو، خرید، بهره‌وری، همه برایتان انجام می‌شود."
+  },
+  "home.sc.featured.tag": {
+    "message": "محبوب‌ترین"
+  },
+  "home.sc.featured.t": {
+    "message": "ویدیو، کاملاً ارتقا یافته"
+  },
+  "home.sc.featured.d": {
+    "message": "کنترل سرعت، رد خودکار تبلیغ، دانلود یک‌کلیکی، تصویر در تصویر — تجربه‌ای بهتر از Bilibili / YouTube / Netflix."
+  },
+  "home.sc.featured.c1": {
+    "message": "کنترل سرعت"
+  },
+  "home.sc.featured.c2": {
+    "message": "مسدودسازی تبلیغ"
+  },
+  "home.sc.featured.c3": {
+    "message": "دانلود"
+  },
+  "home.sc.featured.c4": {
+    "message": "تصویر در تصویر"
+  },
+  "home.sc.featured.btn": {
+    "message": "مرور اسکریپت‌های ویدیو"
+  },
+  "home.sc.featured.sites": {
+    "message": "پشتیبانی از ۲۰+ سایت ویدیویی"
+  },
+  "home.sc.adblock.t": {
+    "message": "مسدودسازی تبلیغ · وب تمیزتر"
+  },
+  "home.sc.adblock.d": {
+    "message": "مسدود کردن تبلیغات و پنجره‌های بازشو برای صفحه‌ای تمیز و مرتب."
+  },
+  "home.sc.adblock.l": {
+    "message": "اسکریپت‌های مسدودکننده تبلیغ"
+  },
+  "home.sc.shop.t": {
+    "message": "خرید · مقایسه قیمت"
+  },
+  "home.sc.shop.d": {
+    "message": "مقایسه قیمت در همه‌جا، نمودار تاریخچه قیمت، کوپن یک‌کلیکی."
+  },
+  "home.sc.shop.l": {
+    "message": "دستیار خرید"
+  },
+  "home.sc.auto.t": {
+    "message": "بهره‌وری · اتوماسیون"
+  },
+  "home.sc.auto.d": {
+    "message": "ثبت‌نام خودکار، عملیات دسته‌ای، یک جعبه‌ابزار کوچک کاربردی."
+  },
+  "home.sc.auto.l": {
+    "message": "اسکریپت‌های بهره‌وری"
+  },
+  "home.sc.read.t": {
+    "message": "مطالعه · ترجمه"
+  },
+  "home.sc.read.d": {
+    "message": "حالت تاریک، ترجمه صفحه، مطالعه غوطه‌ور."
+  },
+  "home.sc.read.l": {
+    "message": "ابزارهای مطالعه"
+  },
+  "home.step.eyebrow": {
+    "message": "شروع در ۳ مرحله"
+  },
+  "home.step.title1": {
+    "message": "۳۰ ثانیه"
+  },
+  "home.step.title2": {
+    "message": " تا اولین اسکریپت شما"
+  },
+  "home.step.sub": {
+    "message": "بدون تنظیمات پیچیده — فقط سه مرحله را دنبال کنید: نصب کنید و شروع کنید."
+  },
+  "home.step1.t": {
+    "message": "افزونه را نصب کنید"
+  },
+  "home.step1.d": {
+    "message": "در یک کلیک از فروشگاه Chrome / Edge / Firefox اضافه کنید، یا دستی نصب کنید."
+  },
+  "home.step1.p": {
+    "message": "افزودن به مرورگر"
+  },
+  "home.step2.t": {
+    "message": "فروشگاه را مرور کنید"
+  },
+  "home.step2.d": {
+    "message": "هزاران اسکریپت را در انجمن ScriptCat کاوش کنید و مورد علاقه‌تان را انتخاب کنید."
+  },
+  "home.step2.p": {
+    "message": "جستجو: سرعت ویدیو"
+  },
+  "home.step3.t": {
+    "message": "نصب یک‌کلیکی"
+  },
+  "home.step3.d": {
+    "message": "روی نصب کلیک کنید و اسکریپت بلافاصله روی صفحه اثر می‌گذارد."
+  },
+  "home.step3.p": {
+    "message": "نصب‌شده · اکنون فعال"
+  },
+  "home.feat.eyebrow": {
+    "message": "امکانات اصلی · WHY SCRIPTCAT"
+  },
+  "home.feat.title1": {
+    "message": "هسته قدرتمند، "
+  },
+  "home.feat.title2": {
+    "message": "آرامش خیال"
+  },
+  "home.feat.sub": {
+    "message": "از سازگاری تا امنیت، از کاربران عادی تا توسعه‌دهندگان — ScriptCat همه را پوشش می‌دهد."
+  },
+  "home.feat.compat.t": {
+    "message": "سازگار با Tampermonkey"
+  },
+  "home.feat.compat.d": {
+    "message": "کاملاً سازگار با فرمت اسکریپت کاربری و APIهای GM — اسکریپت‌های موجود را بدون هیچ تغییری و بدون هزینه مهاجرت منتقل کنید."
+  },
+  "home.feat.compat.b": {
+    "message": "پشتیبانی از APIهای GM_* · بلوک متادیتای یکسان"
+  },
+  "home.feat.store.t": {
+    "message": "فروشگاه اسکریپت"
+  },
+  "home.feat.store.d": {
+    "message": "هزاران اسکریپت انجمن را در یک کلیک نصب کنید، یا آثار خود را منتشر کنید و اکوسیستم را با هم بسازید."
+  },
+  "home.feat.store.stat": {
+    "message": "{count} اسکریپت انجمن"
+  },
+  "home.feat.secure.t": {
+    "message": "امن و قابل اعتماد"
+  },
+  "home.feat.secure.d": {
+    "message": "مجوزهای شفاف و قابل کنترل و رفتار قابل مشاهده — اسکریپت‌های مخرب در همان ابتدا متوقف می‌شوند."
+  },
+  "home.feat.sync.t": {
+    "message": "همگام‌سازی ابری"
+  },
+  "home.feat.sync.d": {
+    "message": "اسکریپت‌ها و تنظیمات بین دستگاه‌ها همگام می‌شوند — هنگام تعویض یا نصب مجدد چیزی از دست نمی‌رود."
+  },
+  "home.feat.bg.t": {
+    "message": "اسکریپت‌های پس‌زمینه"
+  },
+  "home.feat.bg.d": {
+    "message": "ویژه: اسکریپت‌ها بدون باز بودن تب، در پس‌زمینه به اجرا ادامه می‌دهند."
+  },
+  "home.feat.api.t": {
+    "message": "APIهای قدرتمند"
+  },
+  "home.feat.api.d": {
+    "message": "غنی‌تر از GM: ذخیره‌سازی فایل، وظایف زمان‌بندی‌شده و درخواست‌های بین‌دامنه‌ای در دسترس شما."
+  },
+  "home.feat.devTag": {
+    "message": "توسعه‌دهنده"
+  },
+  "home.dev.eyebrow": {
+    "message": "ساخته‌شده برای توسعه‌دهندگان · FOR DEVELOPERS"
+  },
+  "home.dev.title1": {
+    "message": "مرورگرتان را به "
+  },
+  "home.dev.title2": {
+    "message": "محیط اجرای کد"
+  },
+  "home.dev.sub": {
+    "message": "اسکریپت‌های پس‌زمینه، APIهای غنی، ویرایشگر داخلی و ابزارهای اشکال‌زدایی — از اولین خط تا استقرار، همه در یک‌جا."
+  },
+  "home.dev.bg.t": {
+    "message": "اسکریپت‌های پس‌زمینه"
+  },
+  "home.dev.bg.d": {
+    "message": "بدون نیاز به تب پین‌شده — اسکریپت‌ها در پس‌زمینه به کار خود ادامه می‌دهند."
+  },
+  "home.dev.api.t": {
+    "message": "APIهای قدرتمند"
+  },
+  "home.dev.api.d": {
+    "message": "ذخیره‌سازی فایل، زمان‌بندی cron و درخواست‌های بین‌دامنه‌ای — همه گنجانده شده."
+  },
+  "home.dev.editor.t": {
+    "message": "ویرایشگر داخلی"
+  },
+  "home.dev.editor.d": {
+    "message": "هایلایت سینتکس، تکمیل هوشمند و راهنمای خطا، اسکریپت‌نویسی را روان می‌کند."
+  },
+  "home.dev.debug.t": {
+    "message": "اشکال‌زدایی زنده"
+  },
+  "home.dev.debug.d": {
+    "message": "لاگ‌ها، تاریخچه اجرا و ردیابی خطا — مشکلات در یک نگاه."
+  },
+  "home.dev.docsBtn": {
+    "message": "خواندن مستندات"
+  },
+  "home.dev.apiBtn": {
+    "message": "مرجع API"
+  },
+  "home.dev.run": {
+    "message": "اجرا"
+  },
+  "home.dev.mock.name": {
+    "message": "ثبت‌نام روزانه",
+    "description": "@name value in the editor mock code block"
+  },
+  "home.dev.mock.toast": {
+    "message": "ثبت شد",
+    "description": "Notification text in the editor mock code block"
+  },
+  "home.comm.eyebrow": {
+    "message": "متن‌باز · OPEN SOURCE"
+  },
+  "home.comm.title1": {
+    "message": "ساخته‌شده توسط "
+  },
+  "home.comm.title2": {
+    "message": "انجمن"
+  },
+  "home.comm.sub": {
+    "message": "کاملاً متن‌باز، شفاف و رایگان. هر خط کد قابل بررسی است، هر مشارکت‌کننده دیده می‌شود."
+  },
+  "home.comm.btn": {
+    "message": "مشارکت در GitHub"
+  },
+  "home.cta.eyebrow": {
+    "message": "رایگان · متن‌باز · بدون تبلیغ"
+  },
+  "home.cta.h1": {
+    "message": "آماده‌اید به مرورگرتان"
+  },
+  "home.cta.h2": {
+    "message": "ابرقدرت"
+  },
+  "home.cta.h3": {
+    "message": "بدهید؟"
+  },
+  "home.cta.sub": {
+    "message": "در یک کلیک از فروشگاه نصب کنید یا بسته را دستی دانلود کنید. در ۳۰ ثانیه ابرقدرت‌های وب را فعال کنید."
+  },
+  "home.cta.primary": {
+    "message": "نصب رایگان برای {browser}"
+  },
+  "home.cta.secondary": {
+    "message": "مرور اسکریپت‌ها"
+  },
+  "home.cta.stores": {
+    "message": "پشتیبانی از Edge · Chrome · Firefox · بسته دستی"
+  },
+  "home.cta.chip": {
+    "message": "نصب‌شده و فعال"
+  },
+  "home.nav.docs": {
+    "message": "مستندات"
+  },
+  "home.nav.store": {
+    "message": "فروشگاه اسکریپت"
+  },
+  "home.nav.dev": {
+    "message": "توسعه‌دهندگان"
+  },
+  "home.nav.changelog": {
+    "message": "تغییرات"
+  },
+  "home.nav.install": {
+    "message": "نصب"
+  },
+  "home.nav.installTo": {
+    "message": "افزودن به {browser}"
+  },
+  "home.nav.menu": {
+    "message": "منو"
+  },
+  "home.nav.theme": {
+    "message": "تغییر تم"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "link.title.Docs": {
+    "message": "مستندات",
+    "description": "The link.title.Docs in the footer"
+  },
+  "link.item.label.使用指南": {
+    "message": "راهنمای کاربر",
+    "description": "The link.item.label.使用指南 in the footer"
+  },
+  "link.item.label.开发指南": {
+    "message": "راهنمای توسعه",
+    "description": "The link.item.label.开发指南 in the footer"
+  },
+  "link.title.Community": {
+    "message": "انجمن",
+    "description": "The link.title.Community in the footer"
+  },
+  "link.item.label.油猴中文网": {
+    "message": "انجمن چینی Tampermonkey",
+    "description": "The link.item.label.油猴中文网 in the footer"
+  },
+  "link.item.label.脚本猫脚本站": {
+    "message": "فروشگاه اسکریپت ScriptCat",
+    "description": "The link.item.label.脚本猫脚本站 in the footer"
+  },
+  "link.title.More": {
+    "message": "بیشتر",
+    "description": "The link.title.More in the footer"
+  },
+  "copyright": {
+    "message": "کپی‌رایت © {year} ScriptCat, Inc. ساخته‌شده با Docusaurus.",
+    "description": "The copyright in the footer"
+  }
+}
