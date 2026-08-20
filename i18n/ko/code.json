@@ -947,5 +947,9 @@
   },
   "home.nav.theme": {
     "message": "테마 전환"
+  },
+  "home.hero.en": {
+    "message": "브라우저를 위한 초능력.",
+    "description": "Hero subtitle tagline on homepage"
   }
 }
