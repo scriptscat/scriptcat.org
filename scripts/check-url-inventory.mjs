@@ -8,8 +8,9 @@
 
 import { readdirSync, statSync, readFileSync, writeFileSync, existsSync } from "node:fs";
 import { join, relative, sep } from "node:path";
+import { fileURLToPath } from "node:url";
 
-const ROOT = new URL("..", import.meta.url).pathname;
+const ROOT = fileURLToPath(new URL("..", import.meta.url));
 const BUILD_DIR = join(ROOT, "build");
 const BASELINE_FILE = join(ROOT, "scripts", "url-inventory.txt");
 const PAGE_FILES = new Set(["index.html", "404.html", "opensearch.xml"]);

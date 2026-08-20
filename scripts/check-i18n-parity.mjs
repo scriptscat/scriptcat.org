@@ -12,8 +12,9 @@
 
 import { readFileSync, existsSync, readdirSync, statSync } from "node:fs";
 import { join, relative, sep } from "node:path";
+import { fileURLToPath } from "node:url";
 
-const ROOT = new URL("..", import.meta.url).pathname;
+const ROOT = fileURLToPath(new URL("..", import.meta.url));
 const DEFAULT_DIR = join(ROOT, "docs");
 const I18N_DIR = join(ROOT, "i18n");
 const DOCS_PLUGIN_PATH = "docusaurus-plugin-content-docs/current";

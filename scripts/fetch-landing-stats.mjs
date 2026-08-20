@@ -18,8 +18,11 @@
 
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs";
 import { join, dirname, relative } from "node:path";
+import { fileURLToPath } from "node:url";
 
-const ROOT = new URL("..", import.meta.url).pathname;
+// fileURLToPath (not .pathname) so ROOT is a valid Windows path too —
+// URL.pathname leaves a leading slash before the drive letter ("C:\C:\...").
+const ROOT = fileURLToPath(new URL("..", import.meta.url));
 const OUT_FILE = join(ROOT, "src", "data", "landing-stats.json");
 
 // Repos whose contributor lists get aggregated (deduped) into one number/list.

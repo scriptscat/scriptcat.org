@@ -10,8 +10,9 @@
 
 import { readFileSync, existsSync, readdirSync, statSync } from "node:fs";
 import { join, relative, sep, basename } from "node:path";
+import { fileURLToPath } from "node:url";
 
-const ROOT = new URL("..", import.meta.url).pathname;
+const ROOT = fileURLToPath(new URL("..", import.meta.url));
 const I18N_DIR = join(ROOT, "i18n");
 const DOCS_PLUGIN_PATH = "docusaurus-plugin-content-docs/current";
 const DOC_DIRS = [
@@ -41,10 +42,11 @@ function listDocs(dir) {
 }
 
 function parseFrontmatter(text) {
-  const match = /^---\n([\s\S]*?)\n---\n?/.exec(text);
+  // CRLF-tolerant: git may check files out with CRLF on Windows.
+  const match = /^---\r?\n([\s\S]*?)\r?\n---\r?\n?/.exec(text);
   if (!match) return { fm: {}, body: text };
   const fm = {};
-  for (const line of match[1].split("\n")) {
+  for (const line of match[1].split(/\r?\n/)) {
     const m = /^([\w-]+):\s*(.*)$/.exec(line);
     if (m) fm[m[1]] = m[2].trim();
   }
