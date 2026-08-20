@@ -947,5 +947,9 @@
   },
   "home.nav.theme": {
     "message": "Temayı değiştir"
+  },
+  "home.hero.en": {
+    "message": "Tarayıcınız için süper güçler.",
+    "description": "Hero subtitle tagline on homepage"
   }
 }
