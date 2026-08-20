@@ -55,7 +55,12 @@ function main() {
     process.exit(1);
   }
 
-  const baseline = readFileSync(BASELINE_FILE, "utf8").split("\n").filter(Boolean).sort();
+  // CRLF-tolerant: git may check the baseline out with CRLF on Windows.
+  const baseline = readFileSync(BASELINE_FILE, "utf8")
+    .split(/\r?\n/)
+    .map((l) => l.replace(/\r$/, ""))
+    .filter(Boolean)
+    .sort();
   const baselineSet = new Set(baseline);
   const currentSet = new Set(routes);
 
