@@ -1,0 +1,18 @@
+{
+  "item.label.使用文档": {
+    "message": "Kullanıcı Rehberi",
+    "description": "The label for the navbar item item.label.使用文档"
+  },
+  "item.label.开发文档": {
+    "message": "Geliştirici Rehberi",
+    "description": "The label for the navbar item item.label.开发文档"
+  },
+  "item.label.更新日志": {
+    "message": "Değişiklik Günlüğü",
+    "description": "The label for the navbar item item.label.更新日志"
+  },
+  "item.label.脚本开发指南": {
+    "message": "Komut Dosyası Geliştirme Rehberi",
+    "description": "The label for the navbar item item.label.脚本开发指南"
+  }
+}

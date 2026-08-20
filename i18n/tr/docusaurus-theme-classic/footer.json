@@ -1,0 +1,34 @@
+{
+  "link.title.Docs": {
+    "message": "Belgeler",
+    "description": "The link.title.Docs in the footer"
+  },
+  "link.item.label.使用指南": {
+    "message": "Kullanıcı Rehberi",
+    "description": "The link.item.label.使用指南 in the footer"
+  },
+  "link.item.label.开发指南": {
+    "message": "Geliştirici Rehberi",
+    "description": "The link.item.label.开发指南 in the footer"
+  },
+  "link.title.Community": {
+    "message": "Topluluk",
+    "description": "The link.title.Community in the footer"
+  },
+  "link.item.label.油猴中文网": {
+    "message": "Tampermonkey Çin Forumu",
+    "description": "The link.item.label.油猴中文网 in the footer"
+  },
+  "link.item.label.脚本猫脚本站": {
+    "message": "ScriptCat Komut Dosyası Mağazası",
+    "description": "The link.item.label.脚本猫脚本站 in the footer"
+  },
+  "link.title.More": {
+    "message": "Daha Fazla",
+    "description": "The link.title.More in the footer"
+  },
+  "copyright": {
+    "message": "Telif hakkı © {year} ScriptCat, Inc. Docusaurus ile oluşturuldu.",
+    "description": "The copyright in the footer"
+  }
+}
