@@ -38,7 +38,9 @@ export function Hero() {
               </span>
             </span>
           </h1>
-          <div className={styles.heroEn}>Superpowers for your browser.</div>
+          <div className={styles.heroEn}>
+            <Translate id="home.hero.en">Superpowers for your browser.</Translate>
+          </div>
           <p className={styles.heroSubhead}>
             <Translate id="home.hero.subhead">
               去广告、增强视频、自动化操作 ——

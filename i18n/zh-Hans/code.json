@@ -937,5 +937,9 @@
   "uninstall.feature.alert.button": {
     "message": "前往GitHub提出功能建议",
     "description": "Feature alert button text"
+  },
+  "home.hero.en": {
+    "message": "为您的浏览器赋予超能力。",
+    "description": "Hero subtitle tagline on homepage"
   }
 }
