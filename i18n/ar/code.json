@@ -1,0 +1,918 @@
+{
+  "githubStar.button.label": {
+    "message": "Star",
+    "description": "GitHub star button label"
+  },
+  "githubStar.home.title": {
+    "message": "ScriptCat مجاني ومفتوح المصدر",
+    "description": "GitHub star bar title on homepage"
+  },
+  "githubStar.home.subtitle": {
+    "message": "إذا أعجبك، امنحنا نجمة لدعم صيانته المستمرة",
+    "description": "GitHub star bar subtitle on homepage"
+  },
+  "githubStar.install.title": {
+    "message": "هل يعجبك ScriptCat؟",
+    "description": "GitHub star bar title on install-complete page"
+  },
+  "githubStar.install.subtitle": {
+    "message": "امنحنا نجمة على GitHub لمساعدة المزيد من الأشخاص على اكتشافه 🌟",
+    "description": "GitHub star bar subtitle on install-complete page"
+  },
+  "githubStar.changelog.title": {
+    "message": "ScriptCat يتحسن باستمرار 🚀",
+    "description": "GitHub star bar title on changelog page"
+  },
+  "githubStar.changelog.subtitle": {
+    "message": "هل تجد هذه التحديثات مفيدة؟ امنحنا نجمة على GitHub لدعم عملنا",
+    "description": "GitHub star bar subtitle on changelog page"
+  },
+  "homepage.meta.keywords": {
+    "message": "ScriptCat,user scripts,browser extension,userscript,Tampermonkey,Violentmonkey,background scripts,scheduled scripts,browser automation,ad blocker,script store",
+    "description": "Homepage SEO keywords"
+  },
+  "homepage.meta.title": {
+    "message": "ScriptCat - محرك سكرپتات المستخدم لمتصفحك"
+  },
+  "homepage.meta.description": {
+    "message": "ScriptCat هو محرك سكرپتات متصفح مفتوح المصدر وقوي يتيح لك تخصيص وظائف الويب بسهولة، وإزالة الإعلانات، وأتمتة المهام، وتحسين تجربة التصفح. متوافق مع Tampermonkey مع المزيد من الميزات."
+  },
+  "homepage.og.title": {
+    "message": "ScriptCat - A Powerful Userscript Engine"
+  },
+  "homepage.og.description": {
+    "message": "Elevate your browsing experience with ScriptCat. Fully compatible with Tampermonkey."
+  },
+  "homepage.twitter.title": {
+    "message": "ScriptCat - Powerful Browser Script Engine",
+    "description": "Twitter card title"
+  },
+  "homepage.twitter.description": {
+    "message": "Open-source browser script engine that makes your browser do more",
+    "description": "Twitter card description"
+  },
+  "homepage.hero.title": {
+    "message": "برمج متصفحك، وأطلق العنان لإمكانيات لا حدود لها"
+  },
+  "homepage.hero.title.engine": {
+    "message": "Enhanced Browser Experience",
+    "description": "Gradient text in main title"
+  },
+  "homepage.hero.subtitle.userScript": {
+    "message": "user scripts",
+    "description": "User script highlight"
+  },
+  "homepage.hero.subtitle.possibilities": {
+    "message": ", activating infinite possibilities for your browser!",
+    "description": "Browser possibilities text"
+  },
+  "homepage.hero.subtitle.main": {
+    "message": "ScriptCat is a powerful open-source browser script engine that lets you easily customize web functionality, eliminate ads, automate tasks, and enhance your browsing experience. Compatible with Tampermonkey and provides more features and optimizations.",
+    "description": "Main subtitle description on homepage"
+  },
+  "homepage.hero.subtitle.highlight": {
+    "message": "A browser extension for executing",
+    "description": "Highlighted subtitle on homepage"
+  },
+  "homepage.hero.button.browseScripts": {
+    "message": "Browse Script Library",
+    "description": "Button text for browsing scripts"
+  },
+  "homepage.hero.browser.edge": {
+    "message": "Add to Edge Browser",
+    "description": "Button text for Edge browser"
+  },
+  "homepage.hero.browser.chrome": {
+    "message": "Add to Chrome Browser",
+    "description": "Button text for Chrome browser"
+  },
+  "homepage.hero.browser.firefox": {
+    "message": "Add to Firefox Browser",
+    "description": "Button text for Firefox browser"
+  },
+  "homepage.hero.browser.default": {
+    "message": "Install Extension to Browser",
+    "description": "Default button text for browser installation"
+  },
+  "homepage.hero.browser.crx": {
+    "message": "Download Installation Package for Manual Install",
+    "description": "Button text for manual installation"
+  },
+  "homepage.hero.trustBadges.title": {
+    "message": "Trusted and supported by the tech community",
+    "description": "Trust badges section title"
+  },
+  "homepage.features.title.powerful": {
+    "message": "Powerful Features, ",
+    "description": "Features section title part 1"
+  },
+  "homepage.features.title.possibilities": {
+    "message": "Infinite Possibilities",
+    "description": "Features section title highlight"
+  },
+  "homepage.features.subtitle": {
+    "message": "أكثر من مجرد إضافة للمتصفح: تجربة ويب أكثر حرية وأمانًا وقوة"
+  },
+  "homepage.features.tampermonkey.title": {
+    "message": "Tampermonkey Compatible",
+    "description": "Feature title: Tampermonkey compatibility"
+  },
+  "homepage.features.tampermonkey.description": {
+    "message": "Fully compatible with Tampermonkey script format, seamlessly migrate existing script libraries with zero cost switching.",
+    "description": "Feature description: Tampermonkey compatibility"
+  },
+  "homepage.features.background.title": {
+    "message": "سكرپتات الخلفية"
+  },
+  "homepage.features.background.description": {
+    "message": "تسمح سكرپتات الخلفية الفريدة والمهام المجدولة بالأتمتة على مدار الساعة طوال أيام الأسبوع، بشكل مستقل عن DOM."
+  },
+  "homepage.features.security.title": {
+    "message": "الأمان والخصوصية"
+  },
+  "homepage.features.security.description": {
+    "message": "نظام صارم للتحكم في الأذونات وسلوك شفاف للسكرپتات يمنع السكرپتات الضارة بفعالية ويحمي خصوصيتك."
+  },
+  "homepage.features.editor.title": {
+    "message": "محرر أكواد مدمج"
+  },
+  "homepage.features.editor.description": {
+    "message": "محرر قوي مع تمييز الصيغة والإكمال التلقائي وتلميحات الأخطاء لجعل كتابة السكرپتات أكثر كفاءة."
+  },
+  "homepage.features.api.title": {
+    "message": "واجهات برمجة تطبيقات قوية"
+  },
+  "homepage.features.api.description": {
+    "message": "يوفر واجهات برمجة تطبيقات أغنى من GM، ويدعم ميزات متقدمة مثل تخزين الملفات وتكوين المستخدم."
+  },
+  "homepage.features.store.title": {
+    "message": "متجر السكرپتات"
+  },
+  "homepage.features.store.description": {
+    "message": "يوفر متجرًا لتثبيت السكرپتات الشائعة بنقرة واحدة، أو نشر أعمالك لمشاركتها مع المجتمع."
+  },
+  "homepage.comparison.title.why": {
+    "message": "لماذا تختارنا؟"
+  },
+  "homepage.comparison.subtitle": {
+    "message": "بالمقارنة مع محركات السكرپتات الأخرى، يقدم ScriptCat مزيدًا من المزايا والميزات المحسنة"
+  },
+  "homepage.comparison.feature": {
+    "message": "الميزة"
+  },
+  "homepage.comparison.feature.compatibility": {
+    "message": "توافق السكرپتات"
+  },
+  "homepage.comparison.feature.background": {
+    "message": "سكرپتات الخلفية"
+  },
+  "homepage.comparison.feature.opensource": {
+    "message": "مفتوح المصدر ومجاني"
+  },
+  "homepage.comparison.feature.mv3": {
+    "message": "دعم MV3"
+  },
+  "homepage.comparison.feature.sync": {
+    "message": "مزامنة سحابية"
+  },
+  "homepage.comparison.feature.api": {
+    "message": "APIs قوية"
+  },
+  "homepage.comparison.feature.community": {
+    "message": "دعم المجتمع"
+  },
+  "homepage.comparison.label.efficient": {
+    "message": "Efficient",
+    "description": "Comparison label: Efficient"
+  },
+  "homepage.comparison.label.multiplatform": {
+    "message": "Multi-platform",
+    "description": "Comparison label: Multi-platform"
+  },
+  "homepage.scenario.title.solve": {
+    "message": "Scripts That Solve ",
+    "description": "Scenario section title part 1"
+  },
+  "homepage.scenario.title.problems": {
+    "message": "Real Problems",
+    "description": "Scenario section title highlight"
+  },
+  "homepage.scenario.title.scripts": {
+    "message": "",
+    "description": "Scenario section title part 2"
+  },
+  "homepage.scenario.subtitle": {
+    "message": "See how ScriptCat can transform your browsing experience",
+    "description": "Scenario section subtitle"
+  },
+  "homepage.scenario.video.title": {
+    "message": "Video Site Enhancement",
+    "description": "Video scenario title"
+  },
+  "homepage.scenario.video.subtitle": {
+    "message": "Optimize video viewing experience",
+    "description": "Video scenario subtitle"
+  },
+  "homepage.scenario.video.tag": {
+    "message": "Popular Apps",
+    "description": "Video scenario tag"
+  },
+  "homepage.scenario.video.feature.speed": {
+    "message": "Video Speed Control",
+    "description": "Video feature: Speed control"
+  },
+  "homepage.scenario.video.feature.download": {
+    "message": "One-click Video Download",
+    "description": "Video feature: Download"
+  },
+  "homepage.scenario.video.feature.adblock": {
+    "message": "Auto Skip Ads",
+    "description": "Video feature: Ad blocking"
+  },
+  "homepage.scenario.video.feature.ui": {
+    "message": "UI Simplification",
+    "description": "Video feature: UI optimization"
+  },
+  "homepage.scenario.video.sites": {
+    "message": "Supported Sites",
+    "description": "Video scenario supported sites label"
+  },
+  "homepage.scenario.video.getScript": {
+    "message": "Get Script →",
+    "description": "Video scenario get script link"
+  },
+  "homepage.scenario.shopping.title": {
+    "message": "Shopping Assistant",
+    "description": "Shopping scenario title"
+  },
+  "homepage.scenario.shopping.subtitle": {
+    "message": "Make shopping experience easier",
+    "description": "Shopping scenario subtitle"
+  },
+  "homepage.scenario.shopping.tag": {
+    "message": "Practical Tools",
+    "description": "Shopping scenario tag"
+  },
+  "homepage.scenario.shopping.feature.history": {
+    "message": "Price History Query",
+    "description": "Shopping feature: Price history"
+  },
+  "homepage.scenario.shopping.feature.coupon": {
+    "message": "Auto Coupon Search",
+    "description": "Shopping feature: Coupon search"
+  },
+  "homepage.scenario.shopping.feature.compare": {
+    "message": "Price Comparison",
+    "description": "Shopping feature: Price comparison"
+  },
+  "homepage.scenario.shopping.feature.alert": {
+    "message": "Price Drop Alert",
+    "description": "Shopping feature: Price alert"
+  },
+  "homepage.scenario.sites.more": {
+    "message": "+More",
+    "description": "More sites indicator in scenario cards"
+  },
+  "homepage.download.title.ready": {
+    "message": "Ready to",
+    "description": "Download section title part 1"
+  },
+  "homepage.download.title.enhance": {
+    "message": "Enhance Your Browsing Experience",
+    "description": "Download section title highlight"
+  },
+  "homepage.download.title.question": {
+    "message": "?",
+    "description": "Download section title part 2"
+  },
+  "homepage.download.subtitle": {
+    "message": "Install ScriptCat now and unlock infinite possibilities for web browsing",
+    "description": "Download section subtitle"
+  },
+  "homepage.download.edge": {
+    "message": "Edge Extension Store",
+    "description": "Download button: Edge store"
+  },
+  "homepage.download.chrome": {
+    "message": "Chrome Extension Store",
+    "description": "Download button: Chrome store"
+  },
+  "homepage.download.firefox": {
+    "message": "Firefox Extension Store",
+    "description": "Download button: Firefox store"
+  },
+  "homepage.download.github": {
+    "message": "GitHub Download",
+    "description": "Download button: GitHub"
+  },
+  "homepage.download.popup.title": {
+    "message": "ScriptCat Enabled",
+    "description": "Extension popup title"
+  },
+  "homepage.download.popup.text": {
+    "message": "3 scripts are running on current page",
+    "description": "Extension popup text"
+  },
+  "homepage.footer.contributors.title": {
+    "message": "Thanks to all contributors",
+    "description": "Footer contributors section title"
+  },
+  "footer.description": {
+    "message": "محرك برمجيات متصفح قوي يجعل تجربة الويب الخاصة بك أكثر ثراءً وتنوعًا."
+  },
+  "footer.product.title": {
+    "message": "المنتج"
+  },
+  "footer.product.features": {
+    "message": "الميزات",
+    "description": "Footer product features link"
+  },
+  "footer.product.scriptStore": {
+    "message": "متجر السكرپتات",
+    "description": "Footer product script store link"
+  },
+  "footer.product.changelog": {
+    "message": "سجل التغييرات",
+    "description": "Footer product changelog link"
+  },
+  "footer.resources.title": {
+    "message": "الموارد"
+  },
+  "footer.resources.devDocs": {
+    "message": "وثائق المطوّر",
+    "description": "Footer resources development docs link"
+  },
+  "footer.resources.apiReference": {
+    "message": "مرجع واجهة برمجة التطبيقات",
+    "description": "Footer resources API reference link"
+  },
+  "footer.resources.examples": {
+    "message": "أمثلة السكرپتات",
+    "description": "Footer resources example scripts link"
+  },
+  "footer.resources.faq": {
+    "message": "الأسئلة الشائعة",
+    "description": "Footer resources FAQ link"
+  },
+  "footer.community.title": {
+    "message": "المجتمع"
+  },
+  "footer.community.forum": {
+    "message": "نقاش المنتدى"
+  },
+  "footer.community.discord": {
+    "message": "قناة Discord"
+  },
+  "footer.community.contributing": {
+    "message": "دليل المساهمة",
+    "description": "Footer community contributing guide link"
+  },
+  "footer.community.issues": {
+    "message": "الإبلاغ عن المشكلات",
+    "description": "Footer community report issues link"
+  },
+  "footer.community.contact": {
+    "message": "تواصل مع الفريق",
+    "description": "Footer community contact team link"
+  },
+  "footer.copyright.allRightsReserved": {
+    "message": "جميع الحقوق محفوظة."
+  },
+  "footer.copyright.privacy": {
+    "message": "سياسة الخصوصية",
+    "description": "Footer copyright privacy policy link"
+  },
+  "footer.copyright.terms": {
+    "message": "شروط الاستخدام",
+    "description": "Footer copyright terms of use link"
+  },
+  "footer.copyright.license": {
+    "message": "اتفاقية الترخيص",
+    "description": "Footer copyright license link"
+  },
+  "uninstall.title": {
+    "message": "استبيان إلغاء التثبيت",
+    "description": "Title of the uninstall survey page"
+  },
+  "uninstall.description": {
+    "message": "شكرًا لاستخدامك ScriptCat. يرجى إخبارنا بسبب إلغاء التثبيت.",
+    "description": "Description of the uninstall survey page"
+  },
+  "uninstall.header.title": {
+    "message": "نأسف لرؤيتك تُلغي تثبيت ScriptCat",
+    "description": "Main header title on uninstall survey page"
+  },
+  "uninstall.header.subtitle": {
+    "message": "إذا أردت، يسعدنا سماع آرائك لمساعدتنا على التحسين المستمر",
+    "description": "Subtitle on uninstall survey page"
+  },
+  "uninstall.question.reason": {
+    "message": "ما السبب الرئيسي لإلغاء تثبيت ScriptCat؟",
+    "description": "Question about uninstall reason"
+  },
+  "uninstall.question.feedback": {
+    "message": "هل تمانع مشاركة المزيد من التفاصيل إذا كان ذلك مناسبًا؟",
+    "description": "Question about detailed feedback"
+  },
+  "uninstall.reason.bugs": {
+    "message": "واجهت أخطاءً أو مشاكل",
+    "description": "Uninstall reason: bugs"
+  },
+  "uninstall.reason.no_need": {
+    "message": "لم أعد بحاجة إلى ScriptCat",
+    "description": "Uninstall reason: no longer need"
+  },
+  "uninstall.reason.features": {
+    "message": "تنقصني ميزات أحتاجها",
+    "description": "Uninstall reason: missing features"
+  },
+  "uninstall.reason.alternative": {
+    "message": "وجدت بديلًا أفضل",
+    "description": "Uninstall reason: found alternative"
+  },
+  "uninstall.reason.other": {
+    "message": "أسباب أخرى",
+    "description": "Uninstall reason: other"
+  },
+  "uninstall.feedback.placeholder": {
+    "message": "يرجى مشاركة مشاكلك أو اقتراحاتك أو أفكارك الأخرى...",
+    "description": "Placeholder text for feedback textarea"
+  },
+  "uninstall.button.submit": {
+    "message": "إرسال الملاحظات",
+    "description": "Submit button text"
+  },
+  "uninstall.warning.selectReason": {
+    "message": "يرجى اختيار سبب إلغاء التثبيت",
+    "description": "Warning when no reason is selected"
+  },
+  "uninstall.success.submitted": {
+    "message": "شكرًا لملاحظاتك!",
+    "description": "Success message after submission"
+  },
+  "uninstall.error.submit": {
+    "message": "فشل الإرسال، يرجى المحاولة لاحقًا",
+    "description": "Error message when submission fails"
+  },
+  "uninstall.thanks.title": {
+    "message": "شكرًا لملاحظاتك!",
+    "description": "Thank you page title"
+  },
+  "uninstall.thanks.message": {
+    "message": "ملاحظاتك ثمينة بالنسبة لنا وستساعدنا على تحسين ScriptCat.",
+    "description": "Thank you page message"
+  },
+  "uninstall.thanks.backHome": {
+    "message": "العودة إلى الصفحة الرئيسية",
+    "description": "Back to home button"
+  },
+  "uninstall.thanks.reportIssue": {
+    "message": "الإبلاغ عن مشكلة",
+    "description": "Report issue button"
+  },
+  "uninstall.reinstall.message": {
+    "message": "إذا غيّرت رأيك، يمكنك دائمًا إعادة التثبيت:",
+    "description": "Reinstall message"
+  },
+  "uninstall.reinstall.chrome": {
+    "message": "متجر Chrome",
+    "description": "Reinstall from Chrome Web Store button"
+  },
+  "uninstall.reinstall.edge": {
+    "message": "إضافات Edge",
+    "description": "Reinstall from Edge Add-ons button"
+  },
+  "uninstall.reinstall.firefox": {
+    "message": "إضافات Firefox",
+    "description": "Reinstall from Firefox Add-ons button"
+  },
+  "uninstall.thanks.considerReinstall": {
+    "message": "إذا غيّرت رأيك، نرحب بعودتك دائمًا",
+    "description": "Consider reinstall message"
+  },
+  "uninstall.thanks.submitAnother": {
+    "message": "إرسال ملاحظات أخرى",
+    "description": "Submit another feedback button"
+  },
+  "uninstall.sidebar.reinstall.title": {
+    "message": "نرحب بعودتك دائمًا",
+    "description": "Sidebar reinstall title"
+  },
+  "uninstall.sidebar.help.title": {
+    "message": "تحتاج مساعدة؟",
+    "description": "Sidebar help title"
+  },
+  "uninstall.sidebar.help.description": {
+    "message": "تواجه مشكلة؟ نحن هنا لمساعدتك في حلها",
+    "description": "Sidebar help description"
+  },
+  "uninstall.sidebar.help.github": {
+    "message": "مشكلات GitHub",
+    "description": "GitHub issues button"
+  },
+  "uninstall.sidebar.help.docs": {
+    "message": "عرض الوثائق",
+    "description": "View docs button"
+  },
+  "uninstall.bug.alert.title": {
+    "message": "واجهت مشكلة؟",
+    "description": "Bug alert title"
+  },
+  "uninstall.bug.alert.description": {
+    "message": "إذا واجهت خطأً أو مشكلة، ننصحك بتقديم تقرير مباشرةً على GitHub للحصول على استجابة أسرع ودعم فني.",
+    "description": "Bug alert description"
+  },
+  "uninstall.bug.alert.button": {
+    "message": "الإبلاغ عن مشكلة على GitHub",
+    "description": "Bug alert button text"
+  },
+  "uninstall.feature.alert.title": {
+    "message": "تنقصك ميزة؟",
+    "description": "Feature alert title"
+  },
+  "uninstall.feature.alert.description": {
+    "message": "نقدّر طلبات الميزات من المستخدمين كثيرًا! ننصحك بوصف الميزات التي تحتاجها بالتفصيل على GitHub، ليفهم احتياجاتك بشكل أفضل ويُعطيها الأولوية.",
+    "description": "Feature alert description"
+  },
+  "uninstall.feature.alert.button": {
+    "message": "اقتراح ميزة على GitHub",
+    "description": "Feature alert button text"
+  },
+  "home.install.edge": {
+    "message": "أضف إلى Edge"
+  },
+  "home.install.chrome": {
+    "message": "أضف إلى Chrome"
+  },
+  "home.install.firefox": {
+    "message": "أضف إلى Firefox"
+  },
+  "home.install.manual": {
+    "message": "حمّل الحزمة وثبّتها يدويًا"
+  },
+  "home.install.guide": {
+    "message": "دليل التثبيت"
+  },
+  "home.hero.installTo": {
+    "message": "أضِف إلى {browser}"
+  },
+  "home.hero.moreBrowsers": {
+    "message": "متصفحات أخرى"
+  },
+  "home.hero.eyebrow": {
+    "message": "محرك سكرپتات مستخدم مفتوح المصدر · متوافق مع Tampermonkey"
+  },
+  "home.hero.title1": {
+    "message": "امنح متصفحك"
+  },
+  "home.hero.title2": {
+    "message": ""
+  },
+  "home.hero.title3": {
+    "message": "قوى خارقة"
+  },
+  "home.hero.subhead": {
+    "message": "احجب الإعلانات، عزز الفيديو، وأتمت الأشياء المملة — ثبّت السكرپتات المجتمعية من المتجر بنقرة واحدة، مع سكرپتات الخلفية وواجهات برمجة قوية للمطورين. متوافق مع Tampermonkey، فسكرپتاتك الحالية تنتقل دون أي تكلفة."
+  },
+  "home.hero.browse": {
+    "message": "تصفح السكرپتات"
+  },
+  "home.hero.trust": {
+    "message": "يعمل على Chrome · Edge · Firefox — مجاني ومفتوح المصدر بالكامل"
+  },
+  "home.hero.mock.speed": {
+    "message": "التحكم في سرعة الفيديو"
+  },
+  "home.hero.mock.adblock": {
+    "message": "تخطي الإعلانات تلقائيًا"
+  },
+  "home.hero.mock.dark": {
+    "message": "الوضع الداكن للصفحات"
+  },
+  "home.hero.mock.skip": {
+    "message": "تخطي الإعلانات"
+  },
+  "home.hero.mock.running": {
+    "message": "3 سكرپتات تعمل على هذه الصفحة"
+  },
+  "home.hero.mock.add": {
+    "message": "أضف من متجر السكرپتات"
+  },
+  "home.hero.chip.installed": {
+    "message": "تم تثبيت السكرپت"
+  },
+  "home.hero.chip.installedSub": {
+    "message": "محسّن الفيديو v2.1"
+  },
+  "home.hero.chip.background": {
+    "message": "3 سكرپتات تعمل في الخلفية"
+  },
+  "home.trust.eyebrow": {
+    "message": "موثوق من المستخدمين والمطورين حول العالم"
+  },
+  "home.trust.users": {
+    "message": "المستخدمون الذين ثبّتوه"
+  },
+  "home.trust.scripts": {
+    "message": "سكرپتات مجتمعية"
+  },
+  "home.trust.stars": {
+    "message": "نجوم GitHub"
+  },
+  "home.trust.contributors": {
+    "message": "المساهمون"
+  },
+  "home.sc.eyebrow": {
+    "message": "للجميع · لا حاجة للبرمجة"
+  },
+  "home.sc.title1": {
+    "message": "بدون كود، فقط "
+  },
+  "home.sc.title2": {
+    "message": "نقرة واحدة"
+  },
+  "home.sc.title3": {
+    "message": " لحل مشاكل يومية"
+  },
+  "home.sc.sub": {
+    "message": "خذ سكرپتًا من المتجر — الإعلانات والفيديو والتسوق والإنتاجية، كل ذلك مُدار لك."
+  },
+  "home.sc.featured.tag": {
+    "message": "الأكثر شعبية"
+  },
+  "home.sc.featured.t": {
+    "message": "الفيديو، محسّن بالكامل"
+  },
+  "home.sc.featured.d": {
+    "message": "التحكم في السرعة، تخطي الإعلانات تلقائيًا، تنزيل بنقرة واحدة، صورة داخل صورة — Bilibili / YouTube / Netflix أفضل."
+  },
+  "home.sc.featured.c1": {
+    "message": "التحكم في السرعة"
+  },
+  "home.sc.featured.c2": {
+    "message": "حجب الإعلانات"
+  },
+  "home.sc.featured.c3": {
+    "message": "تنزيل"
+  },
+  "home.sc.featured.c4": {
+    "message": "صورة داخل صورة"
+  },
+  "home.sc.featured.btn": {
+    "message": "تصفح سكرپتات الفيديو"
+  },
+  "home.sc.featured.sites": {
+    "message": "يدعم أكثر من 20 موقع فيديو"
+  },
+  "home.sc.adblock.t": {
+    "message": "حجب الإعلانات · ويب أنظف"
+  },
+  "home.sc.adblock.d": {
+    "message": "احجب الإعلانات والنوافذ المنبثقة لصفحة نظيفة ومرتبة."
+  },
+  "home.sc.adblock.l": {
+    "message": "سكرپتات حجب الإعلانات"
+  },
+  "home.sc.shop.t": {
+    "message": "تسوق · مقارنة الأسعار"
+  },
+  "home.sc.shop.d": {
+    "message": "قارن الأسعار في كل مكان، رسوم بيانية لتاريخ الأسعار، كوبونات بنقرة واحدة."
+  },
+  "home.sc.shop.l": {
+    "message": "مساعد التسوق"
+  },
+  "home.sc.auto.t": {
+    "message": "إنتاجية · أتمتة"
+  },
+  "home.sc.auto.d": {
+    "message": "تسجيل تلقائي، إجراءات جماعية، صندوق أدوات صغير عملي."
+  },
+  "home.sc.auto.l": {
+    "message": "سكرپتات الإنتاجية"
+  },
+  "home.sc.read.t": {
+    "message": "قراءة · ترجمة"
+  },
+  "home.sc.read.d": {
+    "message": "الوضع الداكن، ترجمة الصفحات، قراءة غامرة."
+  },
+  "home.sc.read.l": {
+    "message": "محسّنات القراءة"
+  },
+  "home.step.eyebrow": {
+    "message": "ابدأ في 3 خطوات"
+  },
+  "home.step.title1": {
+    "message": "30 ثانية"
+  },
+  "home.step.title2": {
+    "message": " حتى أول سكرپت لك"
+  },
+  "home.step.sub": {
+    "message": "لا إعداد معقد — فقط اتبع ثلاث خطوات: ثبّت وانطلق."
+  },
+  "home.step1.t": {
+    "message": "ثبّت الإضافة"
+  },
+  "home.step1.d": {
+    "message": "أضفه من متجر Chrome / Edge / Firefox بنقرة واحدة، أو ثبّته يدويًا."
+  },
+  "home.step1.p": {
+    "message": "أضف إلى المتصفح"
+  },
+  "home.step2.t": {
+    "message": "تصفح المتجر"
+  },
+  "home.step2.d": {
+    "message": "استكشف آلاف السكرپتات في مجتمع ScriptCat واختر ما يعجبك."
+  },
+  "home.step2.p": {
+    "message": "بحث: سرعة الفيديو"
+  },
+  "home.step3.t": {
+    "message": "تثبيت بنقرة واحدة"
+  },
+  "home.step3.d": {
+    "message": "انقر تثبيت ويعمل السكرپت على الصفحة فورًا."
+  },
+  "home.step3.p": {
+    "message": "مثبَّت · نشط الآن"
+  },
+  "home.feat.eyebrow": {
+    "message": "الميزات الأساسية · لماذا ScriptCat"
+  },
+  "home.feat.title1": {
+    "message": "نواة قوية، "
+  },
+  "home.feat.title2": {
+    "message": "وراحة بال"
+  },
+  "home.feat.sub": {
+    "message": "من التوافق إلى الأمان، من المستخدمين العاديين إلى المطورين — ScriptCat يغطي كل ذلك."
+  },
+  "home.feat.compat.t": {
+    "message": "متوافق مع Tampermonkey"
+  },
+  "home.feat.compat.d": {
+    "message": "متوافق تمامًا مع صيغة سكرپتات المستخدم وواجهات GM — انقل سكرپتاتك الحالية دون أي تعديلات وبدون تكلفة انتقال."
+  },
+  "home.feat.compat.b": {
+    "message": "يدعم واجهات GM_* · كتلة بيانات وصفية متطابقة"
+  },
+  "home.feat.store.t": {
+    "message": "متجر السكرپتات"
+  },
+  "home.feat.store.d": {
+    "message": "ثبّت آلاف السكرپتات المجتمعية بنقرة واحدة، أو انشر سكرپتاتك وابنِ النظام البيئي معًا."
+  },
+  "home.feat.store.stat": {
+    "message": "{count} سكرپتًا مجتمعيًا"
+  },
+  "home.feat.secure.t": {
+    "message": "آمن وموثوق"
+  },
+  "home.feat.secure.d": {
+    "message": "أذونات شفافة وقابلة للتحكم وسلوك مرئي — السكرپتات الضارة تتوقف عند المصدر."
+  },
+  "home.feat.sync.t": {
+    "message": "مزامنة سحابية"
+  },
+  "home.feat.sync.d": {
+    "message": "السكرپتات والإعدادات تتزامن بين الأجهزة — لا شيء يضيع عند التغيير أو إعادة التثبيت."
+  },
+  "home.feat.bg.t": {
+    "message": "سكرپتات الخلفية"
+  },
+  "home.feat.bg.d": {
+    "message": "ميزة فريدة: السكرپتات تستمر في العمل في الخلفية دون تبويب مفتوح."
+  },
+  "home.feat.api.t": {
+    "message": "واجهات برمجة قوية"
+  },
+  "home.feat.api.d": {
+    "message": "أغنى من GM: تخزين الملفات والمهام المجدولة والطلبات عبر النطاقات بين يديك."
+  },
+  "home.feat.devTag": {
+    "message": "مطور"
+  },
+  "home.dev.eyebrow": {
+    "message": "مصمم للمطورين · FOR DEVELOPERS"
+  },
+  "home.dev.title1": {
+    "message": "حوّل متصفحك إلى "
+  },
+  "home.dev.title2": {
+    "message": "بيئة تشغيل الكود"
+  },
+  "home.dev.sub": {
+    "message": "سكرپتات الخلفية، واجهات برمجة غنية، محرر مدمج وأدوات تصحيح — من أول سطر لك حتى الإنتاج، كل ذلك في مكان واحد."
+  },
+  "home.dev.bg.t": {
+    "message": "سكرپتات الخلفية"
+  },
+  "home.dev.bg.d": {
+    "message": "لا حاجة لتبويب مثبَّت — السكرپتات تستمر في العمل في الخلفية."
+  },
+  "home.dev.api.t": {
+    "message": "واجهات برمجة قوية"
+  },
+  "home.dev.api.d": {
+    "message": "تخزين الملفات، جدولة cron وطلبات عبر النطاقات — كل ذلك مضمّن."
+  },
+  "home.dev.editor.t": {
+    "message": "محرر مدمج"
+  },
+  "home.dev.editor.d": {
+    "message": "تلوين الصيغة والإكمال الذكي وتلميحات الأخطاء تجعل كتابة السكرپتات سلسة."
+  },
+  "home.dev.debug.t": {
+    "message": "تصحيح أخطاء مباشر"
+  },
+  "home.dev.debug.d": {
+    "message": "السجلات وسجل التشغيل وتتبع الأخطاء — المشاكل في لمحة."
+  },
+  "home.dev.docsBtn": {
+    "message": "اقرأ الوثائق"
+  },
+  "home.dev.apiBtn": {
+    "message": "مرجع الواجهة البرمجية"
+  },
+  "home.dev.run": {
+    "message": "تشغيل"
+  },
+  "home.dev.mock.name": {
+    "message": "تسجيل يومي",
+    "description": "@name value in the editor mock code block"
+  },
+  "home.dev.mock.toast": {
+    "message": "تم التسجيل",
+    "description": "Notification text in the editor mock code block"
+  },
+  "home.comm.eyebrow": {
+    "message": "مفتوح المصدر · OPEN SOURCE"
+  },
+  "home.comm.title1": {
+    "message": "صُنع بواسطة "
+  },
+  "home.comm.title2": {
+    "message": "المجتمع"
+  },
+  "home.comm.sub": {
+    "message": "مفتوح المصدر بالكامل، شفاف ومجاني. كل سطر من الكود قابل للتدقيق، وكل مساهم ظاهر."
+  },
+  "home.comm.btn": {
+    "message": "ساهم على GitHub"
+  },
+  "home.cta.eyebrow": {
+    "message": "مجاني · مفتوح المصدر · بدون إعلانات"
+  },
+  "home.cta.h1": {
+    "message": "جاهز لتمنح متصفحك"
+  },
+  "home.cta.h2": {
+    "message": "قوى خارقة"
+  },
+  "home.cta.h3": {
+    "message": "؟"
+  },
+  "home.cta.sub": {
+    "message": "ثبّت من المتجر بنقرة واحدة، أو حمّل الحزمة يدويًا. 30 ثانية لفتح القوى الخارقة للويب."
+  },
+  "home.cta.primary": {
+    "message": "ثبّت مجانًا لـ {browser}"
+  },
+  "home.cta.secondary": {
+    "message": "تصفح السكرپتات"
+  },
+  "home.cta.stores": {
+    "message": "يدعم Edge · Chrome · Firefox · الحزمة اليدوية"
+  },
+  "home.cta.chip": {
+    "message": "مُثبَّت ويعمل"
+  },
+  "home.nav.docs": {
+    "message": "الوثائق"
+  },
+  "home.nav.store": {
+    "message": "متجر السكرپتات"
+  },
+  "home.nav.dev": {
+    "message": "المطورون"
+  },
+  "home.nav.changelog": {
+    "message": "سجل التغييرات"
+  },
+  "home.nav.install": {
+    "message": "تثبيت"
+  },
+  "home.nav.installTo": {
+    "message": "أضِف إلى {browser}"
+  },
+  "home.nav.menu": {
+    "message": "القائمة"
+  },
+  "home.nav.theme": {
+    "message": "تبديل المظهر"
+  }
+}
