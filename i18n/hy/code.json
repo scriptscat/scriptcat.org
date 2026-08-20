@@ -947,5 +947,9 @@
   },
   "home.nav.theme": {
     "message": "Փոխել թեման"
+  },
+  "home.hero.en": {
+    "message": "Գերհզորություններ ձեր բրաուզերի համար։",
+    "description": "Hero subtitle tagline on homepage"
   }
 }
