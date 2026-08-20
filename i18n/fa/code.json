@@ -947,5 +947,9 @@
   },
   "home.nav.theme": {
     "message": "تغییر تم"
+  },
+  "home.hero.en": {
+    "message": "ابرقدرت برای مرورگر شما.",
+    "description": "Hero subtitle tagline on homepage"
   }
 }
