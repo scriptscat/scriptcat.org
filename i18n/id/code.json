@@ -947,5 +947,9 @@
   },
   "home.nav.theme": {
     "message": "Ganti tema"
+  },
+  "home.hero.en": {
+    "message": "Kekuatan super untuk browser Anda.",
+    "description": "Hero subtitle tagline on homepage"
   }
 }
