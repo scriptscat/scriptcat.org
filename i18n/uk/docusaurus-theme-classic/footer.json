@@ -1,0 +1,34 @@
+{
+  "link.title.Docs": {
+    "message": "Документація",
+    "description": "The link.title.Docs in the footer"
+  },
+  "link.item.label.使用指南": {
+    "message": "Посібник користувача",
+    "description": "The link.item.label.使用指南 in the footer"
+  },
+  "link.item.label.开发指南": {
+    "message": "Посібник розробника",
+    "description": "The link.item.label.开发指南 in the footer"
+  },
+  "link.title.Community": {
+    "message": "Спільнота",
+    "description": "The link.title.Community in the footer"
+  },
+  "link.item.label.油猴中文网": {
+    "message": "Китайський форум Tampermonkey",
+    "description": "The link.item.label.油猴中文网 in the footer"
+  },
+  "link.item.label.脚本猫脚本站": {
+    "message": "Магазин скриптів ScriptCat",
+    "description": "The link.item.label.脚本猫脚本站 in the footer"
+  },
+  "link.title.More": {
+    "message": "Більше",
+    "description": "The link.title.More in the footer"
+  },
+  "copyright": {
+    "message": "Авторські права © {year} ScriptCat, Inc. Створено за допомогою Docusaurus.",
+    "description": "The copyright in the footer"
+  }
+}

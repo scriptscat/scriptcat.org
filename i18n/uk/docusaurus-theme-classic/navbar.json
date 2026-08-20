@@ -1,0 +1,18 @@
+{
+  "item.label.使用文档": {
+    "message": "Посібник користувача",
+    "description": "The label for the navbar item item.label.使用文档"
+  },
+  "item.label.开发文档": {
+    "message": "Посібник розробника",
+    "description": "The label for the navbar item item.label.开发文档"
+  },
+  "item.label.更新日志": {
+    "message": "Журнал змін",
+    "description": "The label for the navbar item item.label.更新日志"
+  },
+  "item.label.脚本开发指南": {
+    "message": "Посібник із розробки скриптів",
+    "description": "The label for the navbar item item.label.脚本开发指南"
+  }
+}

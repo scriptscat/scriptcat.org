@@ -1,0 +1,951 @@
+{
+  "githubStar.button.label": {
+    "message": "Зірка",
+    "description": "GitHub star button label"
+  },
+  "githubStar.home.title": {
+    "message": "ScriptCat — безкоштовний та відкритий",
+    "description": "GitHub star bar title on homepage"
+  },
+  "githubStar.home.subtitle": {
+    "message": "Поставте нам зірку, якщо це корисно — це допомагає нам рухатися далі",
+    "description": "GitHub star bar subtitle on homepage"
+  },
+  "githubStar.install.title": {
+    "message": "Подобається ScriptCat?",
+    "description": "GitHub star bar title on install-complete page"
+  },
+  "githubStar.install.subtitle": {
+    "message": "Поставте зірку на GitHub, щоб більше людей відкрили для себе ScriptCat 🌟",
+    "description": "GitHub star bar subtitle on install-complete page"
+  },
+  "githubStar.changelog.title": {
+    "message": "ScriptCat стає дедалі кращим 🚀",
+    "description": "GitHub star bar title on changelog page"
+  },
+  "githubStar.changelog.subtitle": {
+    "message": "Ці оновлення корисні? Поставте нам зірку на GitHub, щоб підтримати нашу роботу",
+    "description": "GitHub star bar subtitle on changelog page"
+  },
+  "homepage.meta.keywords": {
+    "message": "ScriptCat,юзерскрипти,браузерне розширення,userscript,Tampermonkey,Violentmonkey,фонові скрипти,заплановані скрипти,автоматизація браузера,блокувальник реклами,магазин скриптів",
+    "description": "Homepage SEO keywords"
+  },
+  "homepage.meta.title": {
+    "message": "ScriptCat - Потужний браузерний скриптовий рушій",
+    "description": "Homepage meta title for SEO"
+  },
+  "homepage.meta.description": {
+    "message": "ScriptCat — це потужний відкритий браузерний скриптовий рушій, який дозволяє легко налаштовувати вебфункції, прибирати рекламу, автоматизувати завдання та покращувати досвід перегляду. Сумісний із Tampermonkey з більшою кількістю функцій.",
+    "description": "Homepage meta description for SEO"
+  },
+  "homepage.og.title": {
+    "message": "ScriptCat - Потужний браузерний скриптовий рушій",
+    "description": "Open Graph title for social sharing"
+  },
+  "homepage.og.description": {
+    "message": "Відкритий браузерний скриптовий рушій, який змушує ваш браузер робити більше. Підтримує юзерскрипти, фонові скрипти, сумісний із Tampermonkey, потужніші функції.",
+    "description": "Open Graph description for social sharing"
+  },
+  "homepage.twitter.title": {
+    "message": "ScriptCat - Потужний браузерний скриптовий рушій",
+    "description": "Twitter card title"
+  },
+  "homepage.twitter.description": {
+    "message": "Відкритий браузерний скриптовий рушій, який змушує ваш браузер робити більше",
+    "description": "Twitter card description"
+  },
+  "homepage.hero.title": {
+    "message": "Найкращий скриптовий рушій для",
+    "description": "Main title on the homepage hero section"
+  },
+  "homepage.hero.title.engine": {
+    "message": "Покращеного браузерного досвіду",
+    "description": "Gradient text in main title"
+  },
+  "homepage.hero.subtitle.userScript": {
+    "message": "юзерскриптів",
+    "description": "User script highlight"
+  },
+  "homepage.hero.subtitle.possibilities": {
+    "message": ", активуючи безмежні можливості вашого браузера!",
+    "description": "Browser possibilities text"
+  },
+  "homepage.hero.subtitle.main": {
+    "message": "ScriptCat — це потужний відкритий браузерний скриптовий рушій, який дозволяє легко налаштовувати вебфункції, прибирати рекламу, автоматизувати завдання та покращувати досвід перегляду. Сумісний із Tampermonkey і надає більше функцій та оптимізацій.",
+    "description": "Main subtitle description on homepage"
+  },
+  "homepage.hero.subtitle.highlight": {
+    "message": "Браузерне розширення для виконання",
+    "description": "Highlighted subtitle on homepage"
+  },
+  "homepage.hero.button.browseScripts": {
+    "message": "Переглянути бібліотеку скриптів",
+    "description": "Button text for browsing scripts"
+  },
+  "homepage.hero.browser.edge": {
+    "message": "Додати до браузера Edge",
+    "description": "Button text for Edge browser"
+  },
+  "homepage.hero.browser.chrome": {
+    "message": "Додати до браузера Chrome",
+    "description": "Button text for Chrome browser"
+  },
+  "homepage.hero.browser.firefox": {
+    "message": "Додати до браузера Firefox",
+    "description": "Button text for Firefox browser"
+  },
+  "homepage.hero.browser.default": {
+    "message": "Встановити розширення в браузер",
+    "description": "Default button text for browser installation"
+  },
+  "homepage.hero.browser.crx": {
+    "message": "Завантажити інсталяційний пакет для ручного встановлення",
+    "description": "Button text for manual installation"
+  },
+  "homepage.hero.trustBadges.title": {
+    "message": "Нам довіряє та підтримує технічна спільнота",
+    "description": "Trust badges section title"
+  },
+  "homepage.features.title.powerful": {
+    "message": "Потужні функції, ",
+    "description": "Features section title part 1"
+  },
+  "homepage.features.title.possibilities": {
+    "message": "Безмежні можливості",
+    "description": "Features section title highlight"
+  },
+  "homepage.features.subtitle": {
+    "message": "ScriptCat надає низку потужних функцій, які дозволяють легко розширювати можливості вашого браузера та створювати власний вебдосвід.",
+    "description": "Features section subtitle"
+  },
+  "homepage.features.tampermonkey.title": {
+    "message": "Сумісний із Tampermonkey",
+    "description": "Feature title: Tampermonkey compatibility"
+  },
+  "homepage.features.tampermonkey.description": {
+    "message": "Повністю сумісний із форматом скриптів Tampermonkey, безперешкодно переносить наявні бібліотеки скриптів із нульовими витратами на перехід.",
+    "description": "Feature description: Tampermonkey compatibility"
+  },
+  "homepage.features.background.title": {
+    "message": "Фонові скрипти",
+    "description": "Feature title: Background scripts"
+  },
+  "homepage.features.background.description": {
+    "message": "На відміну від звичайних юзерскриптів, дозволяє скриптам безперервно працювати у фоновому режимі без відкриття вкладок.",
+    "description": "Feature description: Background scripts"
+  },
+  "homepage.features.security.title": {
+    "message": "Безпечно та надійно",
+    "description": "Feature title: Security"
+  },
+  "homepage.features.security.description": {
+    "message": "Сувора система контролю дозволів, прозора поведінка скриптів, ефективно запобігає шкідливим скриптам і захищає вашу конфіденційність.",
+    "description": "Feature description: Security"
+  },
+  "homepage.features.editor.title": {
+    "message": "Вбудований редактор коду",
+    "description": "Feature title: Code editor"
+  },
+  "homepage.features.editor.description": {
+    "message": "Потужний редактор коду з підсвічуванням синтаксису, доповненням коду та підказками про помилки, що робить написання скриптів ефективнішим.",
+    "description": "Feature description: Code editor"
+  },
+  "homepage.features.api.title": {
+    "message": "Потужні API",
+    "description": "Feature title: APIs"
+  },
+  "homepage.features.api.description": {
+    "message": "Надає багатші API-інтерфейси, ніж GM, підтримує розширені можливості, як-от зберігання файлів і конфігурація користувача, розширюючи можливості скриптів.",
+    "description": "Feature description: APIs"
+  },
+  "homepage.features.store.title": {
+    "message": "Магазин скриптів",
+    "description": "Feature title: Script store"
+  },
+  "homepage.features.store.description": {
+    "message": "Має магазин скриптів для встановлення популярних скриптів одним кліком або публікуйте свої роботи, щоб поділитися зі спільнотою та побудувати активну екосистему.",
+    "description": "Feature description: Script store"
+  },
+  "homepage.comparison.title.why": {
+    "message": "Чому обирають",
+    "description": "Comparison section title part 1"
+  },
+  "homepage.comparison.subtitle": {
+    "message": "Порівняно з іншими скриптовими рушіями ScriptCat надає більше переваг і розширених можливостей",
+    "description": "Comparison section subtitle"
+  },
+  "homepage.comparison.feature": {
+    "message": "Можливість",
+    "description": "Comparison table header: Feature"
+  },
+  "homepage.comparison.feature.compatibility": {
+    "message": "Сумісність скриптів",
+    "description": "Comparison feature: Script compatibility"
+  },
+  "homepage.comparison.feature.background": {
+    "message": "Фонові скрипти",
+    "description": "Comparison feature: Background scripts"
+  },
+  "homepage.comparison.feature.opensource": {
+    "message": "Відкритий код, безкоштовно",
+    "description": "Comparison feature: Open source"
+  },
+  "homepage.comparison.feature.mv3": {
+    "message": "Підтримка MV3",
+    "description": "Comparison feature: MV3 Support"
+  },
+  "homepage.comparison.feature.sync": {
+    "message": "Хмарна синхронізація",
+    "description": "Comparison feature: Cloud sync"
+  },
+  "homepage.comparison.feature.api": {
+    "message": "Потужні API",
+    "description": "Comparison feature: Powerful APIs"
+  },
+  "homepage.comparison.feature.community": {
+    "message": "Підтримка спільноти",
+    "description": "Comparison feature: Community support"
+  },
+  "homepage.comparison.label.efficient": {
+    "message": "Ефективний",
+    "description": "Comparison label: Efficient"
+  },
+  "homepage.comparison.label.multiplatform": {
+    "message": "Багатоплатформовий",
+    "description": "Comparison label: Multi-platform"
+  },
+  "homepage.scenario.title.solve": {
+    "message": "реальні проблеми",
+    "description": "Scenario section title part 1"
+  },
+  "homepage.scenario.title.problems": {
+    "message": "Скрипти, що вирішують ",
+    "description": "Scenario section title highlight"
+  },
+  "homepage.scenario.title.scripts": {
+    "message": "",
+    "description": "Scenario section title part 2"
+  },
+  "homepage.scenario.subtitle": {
+    "message": "Подивіться, як ScriptCat може змінити ваш досвід перегляду",
+    "description": "Scenario section subtitle"
+  },
+  "homepage.scenario.video.title": {
+    "message": "Покращення відеосайтів",
+    "description": "Video scenario title"
+  },
+  "homepage.scenario.video.subtitle": {
+    "message": "Оптимізуйте досвід перегляду відео",
+    "description": "Video scenario subtitle"
+  },
+  "homepage.scenario.video.tag": {
+    "message": "Популярні застосунки",
+    "description": "Video scenario tag"
+  },
+  "homepage.scenario.video.feature.speed": {
+    "message": "Контроль швидкості відео",
+    "description": "Video feature: Speed control"
+  },
+  "homepage.scenario.video.feature.download": {
+    "message": "Завантаження відео одним кліком",
+    "description": "Video feature: Download"
+  },
+  "homepage.scenario.video.feature.adblock": {
+    "message": "Автопропуск реклами",
+    "description": "Video feature: Ad blocking"
+  },
+  "homepage.scenario.video.feature.ui": {
+    "message": "Спрощення інтерфейсу",
+    "description": "Video feature: UI optimization"
+  },
+  "homepage.scenario.video.sites": {
+    "message": "Підтримувані сайти",
+    "description": "Video scenario supported sites label"
+  },
+  "homepage.scenario.video.getScript": {
+    "message": "Отримати скрипт →",
+    "description": "Video scenario get script link"
+  },
+  "homepage.scenario.shopping.title": {
+    "message": "Помічник для покупок",
+    "description": "Shopping scenario title"
+  },
+  "homepage.scenario.shopping.subtitle": {
+    "message": "Зробіть покупки простішими",
+    "description": "Shopping scenario subtitle"
+  },
+  "homepage.scenario.shopping.tag": {
+    "message": "Практичні інструменти",
+    "description": "Shopping scenario tag"
+  },
+  "homepage.scenario.shopping.feature.history": {
+    "message": "Перегляд історії цін",
+    "description": "Shopping feature: Price history"
+  },
+  "homepage.scenario.shopping.feature.coupon": {
+    "message": "Автоматичний пошук купонів",
+    "description": "Shopping feature: Coupon search"
+  },
+  "homepage.scenario.shopping.feature.compare": {
+    "message": "Порівняння цін",
+    "description": "Shopping feature: Price comparison"
+  },
+  "homepage.scenario.shopping.feature.alert": {
+    "message": "Сповіщення про зниження ціни",
+    "description": "Shopping feature: Price alert"
+  },
+  "homepage.scenario.sites.more": {
+    "message": "+Більше",
+    "description": "More sites indicator in scenario cards"
+  },
+  "homepage.download.title.ready": {
+    "message": "Готові",
+    "description": "Download section title part 1"
+  },
+  "homepage.download.title.enhance": {
+    "message": "Покращте свій досвід перегляду",
+    "description": "Download section title highlight"
+  },
+  "homepage.download.title.question": {
+    "message": "?",
+    "description": "Download section title part 2"
+  },
+  "homepage.download.subtitle": {
+    "message": "Встановіть ScriptCat зараз і відкрийте безмежні можливості веб-серфінгу",
+    "description": "Download section subtitle"
+  },
+  "homepage.download.edge": {
+    "message": "Магазин розширень Edge",
+    "description": "Download button: Edge store"
+  },
+  "homepage.download.chrome": {
+    "message": "Магазин розширень Chrome",
+    "description": "Download button: Chrome store"
+  },
+  "homepage.download.firefox": {
+    "message": "Магазин розширень Firefox",
+    "description": "Download button: Firefox store"
+  },
+  "homepage.download.github": {
+    "message": "Завантаження з GitHub",
+    "description": "Download button: GitHub"
+  },
+  "homepage.download.popup.title": {
+    "message": "ScriptCat увімкнено",
+    "description": "Extension popup title"
+  },
+  "homepage.download.popup.text": {
+    "message": "На поточній сторінці працюють 3 скрипти",
+    "description": "Extension popup text"
+  },
+  "homepage.footer.contributors.title": {
+    "message": "Дякуємо всім учасникам",
+    "description": "Footer contributors section title"
+  },
+  "footer.description": {
+    "message": "Потужний браузерний скриптовий рушій, який робить ваш вебдосвід багатшим і яскравішим.",
+    "description": "Footer description"
+  },
+  "footer.product.title": {
+    "message": "Продукт",
+    "description": "Footer product section title"
+  },
+  "footer.product.features": {
+    "message": "Можливості",
+    "description": "Footer product features link"
+  },
+  "footer.product.scriptStore": {
+    "message": "Магазин скриптів",
+    "description": "Footer product script store link"
+  },
+  "footer.product.changelog": {
+    "message": "Журнал змін",
+    "description": "Footer product changelog link"
+  },
+  "footer.resources.title": {
+    "message": "Ресурси",
+    "description": "Footer resources section title"
+  },
+  "footer.resources.devDocs": {
+    "message": "Документація для розробників",
+    "description": "Footer resources development docs link"
+  },
+  "footer.resources.apiReference": {
+    "message": "Довідник API",
+    "description": "Footer resources API reference link"
+  },
+  "footer.resources.examples": {
+    "message": "Приклади скриптів",
+    "description": "Footer resources example scripts link"
+  },
+  "footer.resources.faq": {
+    "message": "Питання та відповіді",
+    "description": "Footer resources FAQ link"
+  },
+  "footer.community.title": {
+    "message": "Спільнота",
+    "description": "Footer community section title"
+  },
+  "footer.community.forum": {
+    "message": "Обговорення на форумі",
+    "description": "Footer community forum link"
+  },
+  "footer.community.discord": {
+    "message": "Канал Discord",
+    "description": "Footer community Discord link"
+  },
+  "footer.community.contributing": {
+    "message": "Посібник із внеску",
+    "description": "Footer community contributing guide link"
+  },
+  "footer.community.issues": {
+    "message": "Повідомити про проблеми",
+    "description": "Footer community report issues link"
+  },
+  "footer.community.contact": {
+    "message": "Зв'язатися з командою",
+    "description": "Footer community contact team link"
+  },
+  "footer.copyright.allRightsReserved": {
+    "message": "Усі права захищено.",
+    "description": "Footer copyright all rights reserved text"
+  },
+  "footer.copyright.privacy": {
+    "message": "Політика конфіденційності",
+    "description": "Footer copyright privacy policy link"
+  },
+  "footer.copyright.terms": {
+    "message": "Умови використання",
+    "description": "Footer copyright terms of use link"
+  },
+  "footer.copyright.license": {
+    "message": "Ліцензійна угода",
+    "description": "Footer copyright license link"
+  },
+  "uninstall.title": {
+    "message": "Опитування про видалення",
+    "description": "Title of the uninstall survey page"
+  },
+  "uninstall.description": {
+    "message": "Дякуємо, що користувалися ScriptCat. Розкажіть, чому ви видаляєте його.",
+    "description": "Description of the uninstall survey page"
+  },
+  "uninstall.header.title": {
+    "message": "Шкода, що ви видаляєте ScriptCat",
+    "description": "Main header title on uninstall survey page"
+  },
+  "uninstall.header.subtitle": {
+    "message": "Якщо хочете, ми будемо вдячні почути ваші думки, щоб допомогти нам продовжувати вдосконалюватися",
+    "description": "Subtitle on uninstall survey page"
+  },
+  "uninstall.question.reason": {
+    "message": "Яка основна причина видалення ScriptCat?",
+    "description": "Question about uninstall reason"
+  },
+  "uninstall.question.feedback": {
+    "message": "Чи не могли б ви поділитися деталями, якщо це зручно?",
+    "description": "Question about detailed feedback"
+  },
+  "uninstall.reason.bugs": {
+    "message": "Зіткнувся з помилками або багами",
+    "description": "Uninstall reason: bugs"
+  },
+  "uninstall.reason.no_need": {
+    "message": "ScriptCat більше не потрібен",
+    "description": "Uninstall reason: no longer need"
+  },
+  "uninstall.reason.features": {
+    "message": "Бракує потрібних мені функцій",
+    "description": "Uninstall reason: missing features"
+  },
+  "uninstall.reason.alternative": {
+    "message": "Знайшов кращу альтернативу",
+    "description": "Uninstall reason: found alternative"
+  },
+  "uninstall.reason.other": {
+    "message": "Інші причини",
+    "description": "Uninstall reason: other"
+  },
+  "uninstall.feedback.placeholder": {
+    "message": "Поділіться конкретними проблемами, пропозиціями або іншими думками...",
+    "description": "Placeholder text for feedback textarea"
+  },
+  "uninstall.button.submit": {
+    "message": "Надіслати відгук",
+    "description": "Submit button text"
+  },
+  "uninstall.warning.selectReason": {
+    "message": "Виберіть причину видалення",
+    "description": "Warning when no reason is selected"
+  },
+  "uninstall.success.submitted": {
+    "message": "Дякуємо за ваш відгук!",
+    "description": "Success message after submission"
+  },
+  "uninstall.error.submit": {
+    "message": "Не вдалося надіслати, спробуйте пізніше",
+    "description": "Error message when submission fails"
+  },
+  "uninstall.thanks.title": {
+    "message": "Дякуємо за ваш відгук!",
+    "description": "Thank you page title"
+  },
+  "uninstall.thanks.message": {
+    "message": "Ваш відгук безцінний для нас і допоможе нам покращити ScriptCat.",
+    "description": "Thank you page message"
+  },
+  "uninstall.thanks.backHome": {
+    "message": "Повернутися на головну",
+    "description": "Back to home button"
+  },
+  "uninstall.thanks.reportIssue": {
+    "message": "Повідомити про проблему",
+    "description": "Report issue button"
+  },
+  "uninstall.reinstall.message": {
+    "message": "Якщо передумаєте, ви завжди можете перевстановити:",
+    "description": "Reinstall message"
+  },
+  "uninstall.reinstall.chrome": {
+    "message": "Chrome Web Store",
+    "description": "Reinstall from Chrome Web Store button"
+  },
+  "uninstall.reinstall.edge": {
+    "message": "Додатки Edge",
+    "description": "Reinstall from Edge Add-ons button"
+  },
+  "uninstall.reinstall.firefox": {
+    "message": "Додатки Firefox",
+    "description": "Reinstall from Firefox Add-ons button"
+  },
+  "uninstall.thanks.considerReinstall": {
+    "message": "Якщо передумаєте, вам завжди раді",
+    "description": "Consider reinstall message"
+  },
+  "uninstall.thanks.submitAnother": {
+    "message": "Надіслати інший відгук",
+    "description": "Submit another feedback button"
+  },
+  "uninstall.sidebar.reinstall.title": {
+    "message": "Вам завжди раді",
+    "description": "Sidebar reinstall title"
+  },
+  "uninstall.sidebar.help.title": {
+    "message": "Потрібна допомога?",
+    "description": "Sidebar help title"
+  },
+  "uninstall.sidebar.help.description": {
+    "message": "Маєте проблеми? Ми тут, щоб допомогти їх вирішити",
+    "description": "Sidebar help description"
+  },
+  "uninstall.sidebar.help.github": {
+    "message": "Issues на GitHub",
+    "description": "GitHub issues button"
+  },
+  "uninstall.sidebar.help.docs": {
+    "message": "Переглянути документацію",
+    "description": "View docs button"
+  },
+  "uninstall.bug.alert.title": {
+    "message": "Знайшли помилку?",
+    "description": "Bug alert title"
+  },
+  "uninstall.bug.alert.description": {
+    "message": "Якщо ви зіткнулися з помилкою, радимо надіслати issue безпосередньо на GitHub для швидшого зворотного зв'язку та технічної підтримки.",
+    "description": "Bug alert description"
+  },
+  "uninstall.bug.alert.button": {
+    "message": "Повідомити про проблему на GitHub",
+    "description": "Bug alert button text"
+  },
+  "uninstall.feature.alert.title": {
+    "message": "Чогось бракує?",
+    "description": "Feature alert title"
+  },
+  "uninstall.feature.alert.description": {
+    "message": "Ми дуже цінуємо запити користувачів на функції! Радимо детально описати потрібні вам функції на GitHub, щоб ми краще зрозуміли ваші потреби та визначили пріоритети впровадження.",
+    "description": "Feature alert description"
+  },
+  "uninstall.feature.alert.button": {
+    "message": "Запропонувати функцію на GitHub",
+    "description": "Feature alert button text"
+  },
+  "home.install.edge": {
+    "message": "Додати до Edge"
+  },
+  "home.install.chrome": {
+    "message": "Додати до Chrome"
+  },
+  "home.install.firefox": {
+    "message": "Додати до Firefox"
+  },
+  "home.install.manual": {
+    "message": "Завантажити пакет і встановити вручну"
+  },
+  "home.install.guide": {
+    "message": "Посібник із встановлення"
+  },
+  "home.hero.installTo": {
+    "message": "Додати до {browser}"
+  },
+  "home.hero.moreBrowsers": {
+    "message": "Більше браузерів"
+  },
+  "home.hero.eyebrow": {
+    "message": "Відкритий рушій юзерскриптів · Сумісний із Tampermonkey"
+  },
+  "home.hero.title1": {
+    "message": "Дайте вашому браузеру"
+  },
+  "home.hero.title2": {
+    "message": ""
+  },
+  "home.hero.title3": {
+    "message": "суперсили"
+  },
+  "home.hero.subhead": {
+    "message": "Блокуйте рекламу, покращуйте відео, автоматизуйте рутину — встановлюйте скрипти спільноти з магазину одним кліком, з фоновими скриптами та потужними API для розробників. Сумісний із Tampermonkey, тому ваші наявні скрипти переносяться безкоштовно."
+  },
+  "home.hero.browse": {
+    "message": "Переглянути скрипти"
+  },
+  "home.hero.trust": {
+    "message": "Працює на Chrome · Edge · Firefox — повністю безкоштовно та з відкритим кодом"
+  },
+  "home.hero.mock.speed": {
+    "message": "Контроль швидкості відео"
+  },
+  "home.hero.mock.adblock": {
+    "message": "Автоматичний пропуск реклами"
+  },
+  "home.hero.mock.dark": {
+    "message": "Темний режим для сторінок"
+  },
+  "home.hero.mock.skip": {
+    "message": "Пропустити рекламу"
+  },
+  "home.hero.mock.running": {
+    "message": "3 скрипти працюють на цій сторінці"
+  },
+  "home.hero.mock.add": {
+    "message": "Додати з магазину скриптів"
+  },
+  "home.hero.chip.installed": {
+    "message": "Скрипт встановлено"
+  },
+  "home.hero.chip.installedSub": {
+    "message": "Покращувач відео v2.1"
+  },
+  "home.hero.chip.background": {
+    "message": "3 скрипти працюють у фоновому режимі"
+  },
+  "home.trust.eyebrow": {
+    "message": "НАМ ДОВІРЯЮТЬ КОРИСТУВАЧІ ТА РОЗРОБНИКИ ПО ВСЬОМУ СВІТУ"
+  },
+  "home.trust.users": {
+    "message": "Користувачів встановили"
+  },
+  "home.trust.scripts": {
+    "message": "Скрипти спільноти"
+  },
+  "home.trust.stars": {
+    "message": "Зірки на GitHub"
+  },
+  "home.trust.contributors": {
+    "message": "Учасники"
+  },
+  "home.sc.eyebrow": {
+    "message": "Для всіх · Без потреби в кодуванні"
+  },
+  "home.sc.title1": {
+    "message": "Без коду, лише "
+  },
+  "home.sc.title2": {
+    "message": "один клік"
+  },
+  "home.sc.title3": {
+    "message": " для вирішення щоденних дрібниць"
+  },
+  "home.sc.sub": {
+    "message": "Візьміть скрипт із магазину — реклама, відео, покупки, продуктивність, усе вирішено за вас."
+  },
+  "home.sc.featured.tag": {
+    "message": "Найпопулярніше"
+  },
+  "home.sc.featured.t": {
+    "message": "Відео, повністю покращене"
+  },
+  "home.sc.featured.d": {
+    "message": "Контроль швидкості, автопропуск реклами, завантаження одним кліком, картинка в картинці — кращий Bilibili / YouTube / Netflix."
+  },
+  "home.sc.featured.c1": {
+    "message": "Контроль швидкості"
+  },
+  "home.sc.featured.c2": {
+    "message": "Блокування реклами"
+  },
+  "home.sc.featured.c3": {
+    "message": "Завантаження"
+  },
+  "home.sc.featured.c4": {
+    "message": "Картинка в картинці"
+  },
+  "home.sc.featured.btn": {
+    "message": "Переглянути відеоскрипти"
+  },
+  "home.sc.featured.sites": {
+    "message": "Підтримка 20+ відеосайтів"
+  },
+  "home.sc.adblock.t": {
+    "message": "Блокування реклами · Чистіший веб"
+  },
+  "home.sc.adblock.d": {
+    "message": "Блокуйте рекламу та спливаючі вікна для чистої та охайної сторінки."
+  },
+  "home.sc.adblock.l": {
+    "message": "Скрипти блокування реклами"
+  },
+  "home.sc.shop.t": {
+    "message": "Покупки · Порівняння цін"
+  },
+  "home.sc.shop.d": {
+    "message": "Порівнюйте ціни скрізь, графіки історії цін, купони одним кліком."
+  },
+  "home.sc.shop.l": {
+    "message": "Помічник для покупок"
+  },
+  "home.sc.auto.t": {
+    "message": "Продуктивність · Автоматизація"
+  },
+  "home.sc.auto.d": {
+    "message": "Автовідмітка, пакетні дії, зручна маленька шухлядка з інструментами."
+  },
+  "home.sc.auto.l": {
+    "message": "Скрипти продуктивності"
+  },
+  "home.sc.read.t": {
+    "message": "Читання · Переклад"
+  },
+  "home.sc.read.d": {
+    "message": "Темний режим, переклад сторінок, занурювальне читання."
+  },
+  "home.sc.read.l": {
+    "message": "Покращувачі читання"
+  },
+  "home.step.eyebrow": {
+    "message": "ПОЧНІТЬ ІЗ 3 КРОКІВ"
+  },
+  "home.step.title1": {
+    "message": "30 секунд"
+  },
+  "home.step.title2": {
+    "message": " до вашого першого скрипта"
+  },
+  "home.step.sub": {
+    "message": "Жодних складних налаштувань — просто виконайте три кроки: встановіть і користуйтеся."
+  },
+  "home.step1.t": {
+    "message": "Встановіть розширення"
+  },
+  "home.step1.d": {
+    "message": "Додайте його з магазину Chrome / Edge / Firefox одним кліком або встановіть вручну."
+  },
+  "home.step1.p": {
+    "message": "Додати до браузера"
+  },
+  "home.step2.t": {
+    "message": "Перегляньте магазин"
+  },
+  "home.step2.d": {
+    "message": "Досліджуйте тисячі скриптів у спільноті ScriptCat і оберіть улюблений."
+  },
+  "home.step2.p": {
+    "message": "Пошук: швидкість відео"
+  },
+  "home.step3.t": {
+    "message": "Встановлення одним кліком"
+  },
+  "home.step3.d": {
+    "message": "Натисніть «Встановити» — і скрипт одразу почне діяти на сторінці."
+  },
+  "home.step3.p": {
+    "message": "Встановлено · Активний зараз"
+  },
+  "home.feat.eyebrow": {
+    "message": "Ключові можливості · WHY SCRIPTCAT"
+  },
+  "home.feat.title1": {
+    "message": "Потужне ядро, "
+  },
+  "home.feat.title2": {
+    "message": "спокій у душі"
+  },
+  "home.feat.sub": {
+    "message": "Від сумісності до безпеки, від звичайних користувачів до розробників — ScriptCat усе покриває."
+  },
+  "home.feat.compat.t": {
+    "message": "Сумісний із Tampermonkey"
+  },
+  "home.feat.compat.d": {
+    "message": "Повна сумісність із форматом юзерскриптів та API GM — перенесіть наявні скрипти без жодних змін і без витрат на перехід."
+  },
+  "home.feat.compat.b": {
+    "message": "Підтримка API GM_* · ідентичний блок метаданих"
+  },
+  "home.feat.store.t": {
+    "message": "Магазин скриптів"
+  },
+  "home.feat.store.d": {
+    "message": "Встановіть тисячі скриптів спільноти одним кліком або опублікуйте власні та будуйте екосистему разом."
+  },
+  "home.feat.store.stat": {
+    "message": "{count} скриптів спільноти"
+  },
+  "home.feat.secure.t": {
+    "message": "Безпечно та надійно"
+  },
+  "home.feat.secure.d": {
+    "message": "Прозорі, контрольовані дозволи та видима поведінка — шкідливі скрипти зупиняються на джерелі."
+  },
+  "home.feat.sync.t": {
+    "message": "Хмарна синхронізація"
+  },
+  "home.feat.sync.d": {
+    "message": "Скрипти та налаштування синхронізуються між пристроями — нічого не втрачається під час переходу або перевстановлення."
+  },
+  "home.feat.bg.t": {
+    "message": "Фонові скрипти"
+  },
+  "home.feat.bg.d": {
+    "message": "Унікально: скрипти продовжують працювати у фоновому режимі без відкритої вкладки."
+  },
+  "home.feat.api.t": {
+    "message": "Потужні API"
+  },
+  "home.feat.api.d": {
+    "message": "Багатше, ніж GM: зберігання файлів, заплановані завдання та міждоменні запити під рукою."
+  },
+  "home.feat.devTag": {
+    "message": "Розробник"
+  },
+  "home.dev.eyebrow": {
+    "message": "Створено для розробників · FOR DEVELOPERS"
+  },
+  "home.dev.title1": {
+    "message": "Перетворіть ваш браузер на "
+  },
+  "home.dev.title2": {
+    "message": "середовище виконання коду"
+  },
+  "home.dev.sub": {
+    "message": "Фонові скрипти, багаті API, вбудований редактор та інструменти налагодження — від першого рядка до продакшну, усе в одному місці."
+  },
+  "home.dev.bg.t": {
+    "message": "Фонові скрипти"
+  },
+  "home.dev.bg.d": {
+    "message": "Закріплена вкладка не потрібна — скрипти продовжують працювати у фоновому режимі."
+  },
+  "home.dev.api.t": {
+    "message": "Потужні API"
+  },
+  "home.dev.api.d": {
+    "message": "Зберігання файлів, планування cron та міждоменні запити — усе включено."
+  },
+  "home.dev.editor.t": {
+    "message": "Вбудований редактор"
+  },
+  "home.dev.editor.d": {
+    "message": "Підсвічування синтаксису, розумне доповнення та підказки про помилки роблять написання скриптів плавним."
+  },
+  "home.dev.debug.t": {
+    "message": "Живе налагодження"
+  },
+  "home.dev.debug.d": {
+    "message": "Логи, історія запусків і відстеження помилок — проблеми видно одразу."
+  },
+  "home.dev.docsBtn": {
+    "message": "Читати документацію"
+  },
+  "home.dev.apiBtn": {
+    "message": "Довідник API"
+  },
+  "home.dev.run": {
+    "message": "Запустити"
+  },
+  "home.dev.mock.name": {
+    "message": "Щоденна відмітка",
+    "description": "@name value in the editor mock code block"
+  },
+  "home.dev.mock.toast": {
+    "message": "Відмічено",
+    "description": "Notification text in the editor mock code block"
+  },
+  "home.comm.eyebrow": {
+    "message": "Відкритий код · OPEN SOURCE"
+  },
+  "home.comm.title1": {
+    "message": "Створено "
+  },
+  "home.comm.title2": {
+    "message": "спільнотою"
+  },
+  "home.comm.sub": {
+    "message": "Повністю відкритий, прозорий і безкоштовний. Кожен рядок коду можна перевірити, кожен учасник помітний."
+  },
+  "home.comm.btn": {
+    "message": "Зробити внесок на GitHub"
+  },
+  "home.cta.eyebrow": {
+    "message": "Безкоштовно · Відкритий код · Без реклами"
+  },
+  "home.cta.h1": {
+    "message": "Готові дати вашому браузеру"
+  },
+  "home.cta.h2": {
+    "message": "суперсили"
+  },
+  "home.cta.h3": {
+    "message": "?"
+  },
+  "home.cta.sub": {
+    "message": "Встановіть одним кліком із магазину або завантажте пакет вручну. 30 секунд — і суперсили вебу у вас."
+  },
+  "home.cta.primary": {
+    "message": "Встановити безкоштовно для {browser}"
+  },
+  "home.cta.secondary": {
+    "message": "Переглянути скрипти"
+  },
+  "home.cta.stores": {
+    "message": "Підтримка Edge · Chrome · Firefox · ручний пакет"
+  },
+  "home.cta.chip": {
+    "message": "Встановлено та працює"
+  },
+  "home.nav.docs": {
+    "message": "Документація"
+  },
+  "home.nav.store": {
+    "message": "Магазин скриптів"
+  },
+  "home.nav.dev": {
+    "message": "Розробникам"
+  },
+  "home.nav.changelog": {
+    "message": "Журнал змін"
+  },
+  "home.nav.install": {
+    "message": "Встановити"
+  },
+  "home.nav.installTo": {
+    "message": "Додати до {browser}"
+  },
+  "home.nav.menu": {
+    "message": "Меню"
+  },
+  "home.nav.theme": {
+    "message": "Перемкнути тему"
+  }
+}
