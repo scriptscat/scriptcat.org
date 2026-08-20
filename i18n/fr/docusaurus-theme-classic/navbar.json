@@ -1,0 +1,6 @@
+{
+  "item.label.使用文档": { "message": "Guide Utilisateur" },
+  "item.label.开发文档": { "message": "Guide Développeur" },
+  "item.label.更新日志": { "message": "Journal des modifications" },
+  "item.label.脚本开发指南": { "message": "Guide de développement de scripts" }
+}
