@@ -627,7 +627,7 @@ export default function Uninstall(): JSX.Element {
                       </Button>
                       <Button
                         icon={<MessageOutlined />}
-                        href={withBaseUrl("/docs")}
+                        href={withBaseUrl("/docs/use/use")}
                         block
                         className="rounded-lg"
                       >

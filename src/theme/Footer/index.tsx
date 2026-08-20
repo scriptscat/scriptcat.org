@@ -146,7 +146,7 @@ function CustomFooter() {
                 </a>
               </li>
               <li>
-                <a href={withBaseUrl("/docs/use/qa/")} className={styles.footerColumnLink}>
+                <a href={withBaseUrl("/docs/use/QA/")} className={styles.footerColumnLink}>
                   <Translate
                     id="footer.resources.faq"
                     description="Footer resources FAQ link"
