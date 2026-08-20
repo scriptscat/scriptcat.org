@@ -1,0 +1,34 @@
+{
+  "link.title.Docs": {
+    "message": "Dokumentasi",
+    "description": "The link.title.Docs in the footer"
+  },
+  "link.item.label.使用指南": {
+    "message": "Panduan Pengguna",
+    "description": "The link.item.label.使用指南 in the footer"
+  },
+  "link.item.label.开发指南": {
+    "message": "Panduan Pengembang",
+    "description": "The link.item.label.开发指南 in the footer"
+  },
+  "link.title.Community": {
+    "message": "Komunitas",
+    "description": "The link.title.Community in the footer"
+  },
+  "link.item.label.油猴中文网": {
+    "message": "Forum Tionghoa Tampermonkey",
+    "description": "The link.item.label.油猴中文网 in the footer"
+  },
+  "link.item.label.脚本猫脚本站": {
+    "message": "Toko Skrip ScriptCat",
+    "description": "The link.item.label.脚本猫脚本站 in the footer"
+  },
+  "link.title.More": {
+    "message": "Lainnya",
+    "description": "The link.title.More in the footer"
+  },
+  "copyright": {
+    "message": "Hak cipta © {year} ScriptCat, Inc. Dibuat dengan Docusaurus.",
+    "description": "The copyright in the footer"
+  }
+}
