@@ -1,0 +1,30 @@
+{
+  "title": {
+    "message": "ScriptCat",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "ScriptCat",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  },
+  "item.label.使用文档": {
+    "message": "ব্যবহারের নির্দেশিকা",
+    "description": "Navbar item with label 使用文档"
+  },
+  "item.label.开发文档": {
+    "message": "ডেভেলপার ডকুমেন্টেশন",
+    "description": "Navbar item with label 开发文档"
+  },
+  "item.label.更新日志": {
+    "message": "পরিবর্তনের ইতিহাস",
+    "description": "Navbar item with label 更新日志"
+  },
+  "item.label.脚本开发指南": {
+    "message": "স্ক্রিপ্ট ডেভেলপমেন্ট গাইড",
+    "description": "Navbar item with label 脚本开发指南"
+  }
+}
