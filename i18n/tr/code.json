@@ -1145,5 +1145,25 @@
   },
   "home.hero.en": {
     "message": "Tarayıcınız için süper güçler."
+  },
+  "home.search.kw.adblock": {
+    "message": "reklam engelleyici",
+    "description": "Search keyword for adblock"
+  },
+  "home.search.kw.shopping": {
+    "message": "alışveriş",
+    "description": "Search keyword for shopping"
+  },
+  "home.search.kw.automation": {
+    "message": "otomasyon",
+    "description": "Search keyword for automation"
+  },
+  "home.search.kw.translation": {
+    "message": "çeviri",
+    "description": "Search keyword for translation"
+  },
+  "home.search.kw.video": {
+    "message": "video",
+    "description": "Search keyword for video"
   }
-}
+}

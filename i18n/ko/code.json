@@ -1145,5 +1145,25 @@
   },
   "home.hero.en": {
     "message": "브라우저를 위한 초능력."
+  },
+  "home.search.kw.adblock": {
+    "message": "광고 차단",
+    "description": "Search keyword for adblock"
+  },
+  "home.search.kw.shopping": {
+    "message": "쇼핑",
+    "description": "Search keyword for shopping"
+  },
+  "home.search.kw.automation": {
+    "message": "자동화",
+    "description": "Search keyword for automation"
+  },
+  "home.search.kw.translation": {
+    "message": "번역",
+    "description": "Search keyword for translation"
+  },
+  "home.search.kw.video": {
+    "message": "비디오",
+    "description": "Search keyword for video"
   }
-}
+}

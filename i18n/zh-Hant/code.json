@@ -1113,5 +1113,25 @@
   },
   "home.hero.en": {
     "message": "為您的瀏覽器賦予超能力。"
+  },
+  "home.search.kw.adblock": {
+    "message": "去廣告",
+    "description": "Search keyword for adblock"
+  },
+  "home.search.kw.shopping": {
+    "message": "購物",
+    "description": "Search keyword for shopping"
+  },
+  "home.search.kw.automation": {
+    "message": "自動化",
+    "description": "Search keyword for automation"
+  },
+  "home.search.kw.translation": {
+    "message": "翻譯",
+    "description": "Search keyword for translation"
+  },
+  "home.search.kw.video": {
+    "message": "影片",
+    "description": "Search keyword for video"
   }
-}
+}

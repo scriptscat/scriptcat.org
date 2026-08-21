@@ -1145,5 +1145,25 @@
   },
   "home.hero.en": {
     "message": "Kekuatan super untuk browser Anda."
+  },
+  "home.search.kw.adblock": {
+    "message": "blokir iklan",
+    "description": "Search keyword for adblock"
+  },
+  "home.search.kw.shopping": {
+    "message": "belanja",
+    "description": "Search keyword for shopping"
+  },
+  "home.search.kw.automation": {
+    "message": "otomatisasi",
+    "description": "Search keyword for automation"
+  },
+  "home.search.kw.translation": {
+    "message": "terjemahan",
+    "description": "Search keyword for translation"
+  },
+  "home.search.kw.video": {
+    "message": "video",
+    "description": "Search keyword for video"
   }
-}
+}

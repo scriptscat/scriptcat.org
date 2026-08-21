@@ -1145,5 +1145,25 @@
   },
   "home.hero.en": {
     "message": "Superkrachten voor je browser."
+  },
+  "home.search.kw.adblock": {
+    "message": "adblocker",
+    "description": "Search keyword for adblock"
+  },
+  "home.search.kw.shopping": {
+    "message": "winkelen",
+    "description": "Search keyword for shopping"
+  },
+  "home.search.kw.automation": {
+    "message": "automatisering",
+    "description": "Search keyword for automation"
+  },
+  "home.search.kw.translation": {
+    "message": "vertaling",
+    "description": "Search keyword for translation"
+  },
+  "home.search.kw.video": {
+    "message": "video",
+    "description": "Search keyword for video"
   }
-}
+}

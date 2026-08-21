@@ -223,7 +223,7 @@ export function Scenarios() {
       title: <Translate id="home.sc.adblock.t">去广告 · 净化</Translate>,
       desc: <Translate id="home.sc.adblock.d">屏蔽广告与弹窗，还网页一个清爽干净。</Translate>,
       link: <Translate id="home.sc.adblock.l">去广告脚本</Translate>,
-      href: LINKS.search("去广告"),
+      href: LINKS.search(translate({ id: "home.search.kw.adblock", message: "去广告" })),
     },
     {
       icon: "lucide:shopping-cart",
@@ -232,7 +232,7 @@ export function Scenarios() {
       title: <Translate id="home.sc.shop.t">网购 · 比价</Translate>,
       desc: <Translate id="home.sc.shop.d">全网比价、历史价格曲线、优惠券一键领。</Translate>,
       link: <Translate id="home.sc.shop.l">购物助手</Translate>,
-      href: LINKS.search("购物"),
+      href: LINKS.search(translate({ id: "home.search.kw.shopping", message: "购物" })),
     },
     {
       icon: "lucide:wand-sparkles",
@@ -241,7 +241,7 @@ export function Scenarios() {
       title: <Translate id="home.sc.auto.t">效率 · 自动化</Translate>,
       desc: <Translate id="home.sc.auto.d">自动签到、批量操作、贴心的快捷工具箱。</Translate>,
       link: <Translate id="home.sc.auto.l">效率脚本</Translate>,
-      href: LINKS.search("自动化"),
+      href: LINKS.search(translate({ id: "home.search.kw.automation", message: "自动化" })),
     },
     {
       icon: "lucide:book-open",
@@ -250,7 +250,7 @@ export function Scenarios() {
       title: <Translate id="home.sc.read.t">阅读 · 翻译</Translate>,
       desc: <Translate id="home.sc.read.d">夜间模式、网页翻译、沉浸式阅读体验。</Translate>,
       link: <Translate id="home.sc.read.l">阅读增强</Translate>,
-      href: LINKS.search("翻译"),
+      href: LINKS.search(translate({ id: "home.search.kw.translation", message: "翻译" })),
     },
   ];
   return (
@@ -315,7 +315,7 @@ export function Scenarios() {
             <div className={styles.featuredRight}>
               <a
                 className={`${styles.btn} ${styles.btnPrimary}`}
-                href={LINKS.search("视频")}
+                href={LINKS.search(translate({ id: "home.search.kw.video", message: "视频" }))}
                 target="_blank"
                 rel="noreferrer"
               >

@@ -1145,5 +1145,25 @@
   },
   "home.hero.en": {
     "message": "আপনার ব্রাউজারের জন্য সুপারপাওয়ার।"
+  },
+  "home.search.kw.adblock": {
+    "message": "বিজ্ঞাপন ব্লক",
+    "description": "Search keyword for adblock"
+  },
+  "home.search.kw.shopping": {
+    "message": "শপিং",
+    "description": "Search keyword for shopping"
+  },
+  "home.search.kw.automation": {
+    "message": "স্বয়ংক্রিয়",
+    "description": "Search keyword for automation"
+  },
+  "home.search.kw.translation": {
+    "message": "অনুবাদ",
+    "description": "Search keyword for translation"
+  },
+  "home.search.kw.video": {
+    "message": "ভিডিও",
+    "description": "Search keyword for video"
   }
-}
+}

@@ -1145,5 +1145,25 @@
   },
   "home.hero.en": {
     "message": "ابرقدرت برای مرورگر شما."
+  },
+  "home.search.kw.adblock": {
+    "message": "مسدودسازی تبلیغات",
+    "description": "Search keyword for adblock"
+  },
+  "home.search.kw.shopping": {
+    "message": "خرید",
+    "description": "Search keyword for shopping"
+  },
+  "home.search.kw.automation": {
+    "message": "اتوماسیون",
+    "description": "Search keyword for automation"
+  },
+  "home.search.kw.translation": {
+    "message": "ترجمه",
+    "description": "Search keyword for translation"
+  },
+  "home.search.kw.video": {
+    "message": "ویدیو",
+    "description": "Search keyword for video"
   }
-}
+}
