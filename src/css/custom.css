@@ -81,6 +81,8 @@ body.landing-page .navbar {
   background: #16212e;
   border: 1px solid #273542;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+  max-height: 60vh;
+  overflow-y: auto;
 }
 
 [data-theme="dark"] .ant-dropdown-menu-item,
@@ -113,6 +115,8 @@ body.landing-page .navbar {
   background: #ffffff;
   border: 1px solid #e6edf4;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  max-height: 60vh;
+  overflow-y: auto;
 }
 
 [data-theme="light"] .ant-dropdown-menu-item,
@@ -130,4 +134,26 @@ body.landing-page .navbar {
 
 [data-theme="light"] .lnavLangItem {
   color: #0e2233;
+}
+
+/* Scrollbar styling for language dropdown */
+.ant-dropdown-menu::-webkit-scrollbar {
+  width: 6px;
+}
+.ant-dropdown-menu::-webkit-scrollbar-track {
+  background: transparent;
+}
+[data-theme="dark"] .ant-dropdown-menu::-webkit-scrollbar-thumb {
+  background: #374a5c;
+  border-radius: 3px;
+}
+[data-theme="dark"] .ant-dropdown-menu::-webkit-scrollbar-thumb:hover {
+  background: #4a6078;
+}
+[data-theme="light"] .ant-dropdown-menu::-webkit-scrollbar-thumb {
+  background: #c1cdd8;
+  border-radius: 3px;
+}
+[data-theme="light"] .ant-dropdown-menu::-webkit-scrollbar-thumb:hover {
+  background: #a0b0c0;
 }

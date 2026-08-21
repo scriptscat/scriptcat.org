@@ -351,6 +351,8 @@
   padding: 8px 20px 16px;
   border-top: 1px solid var(--lp-border);
   background: var(--lp-surface);
+  max-height: 70vh;
+  overflow-y: auto;
 }
 .lnavPanelLink {
   padding: 12px 10px;
@@ -360,12 +362,25 @@
   font-family: var(--lp-font-cjk);
   font-size: 15px;
   font-weight: 600;
-}
-.lnavPanelLink:hover {
+}.lnavPanelLink:hover {
   background: var(--lp-bg-blue);
   color: var(--lp-brand);
   text-decoration: none;
 }
+.lnavPanelLang {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--lp-border);
+}
+.lnavPanelLang .lnavLang {
+  display: inline-flex;
+  width: auto;
+}
+.lnavPanelLang .ant-dropdown-menu {
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
 @media (max-width: 900px) {
   .lnavMenu,
   .lnavStar,
