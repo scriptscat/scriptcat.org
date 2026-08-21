@@ -30,6 +30,6 @@ Server MCP dapat menyediakan tiga jenis kemampuan:
 
 ## Menggunakannya dalam percakapan
 
-Alat dari server MCP yang diaktifkan secara otomatis muncul di daftar alat yang tersedia untuk percakapan Agent, diberi nama menggunakan pola `mcp_{nama server yang dibersihkan}_{toolName}` — AI memutuskan apakah akan memanggilnya berdasarkan maksud pengguna. Ini bekerja mirip dengan cara [Skill](../skill-install) dimuat secara otomatis; pengembang skrip biasanya tidak perlu khawatir tentang detail di baliknya.
+Alat dari server MCP yang diaktifkan secara otomatis muncul di daftar alat yang tersedia untuk percakapan Agent, diberi nama menggunakan pola `mcp_{nama server yang dibersihkan}_{toolName}` — AI memutuskan apakah akan memanggilnya berdasarkan maksud pengguna. Ini bekerja mirip dengan cara [Skill](../agent-skill-install) dimuat secara otomatis; pengembang skrip biasanya tidak perlu khawatir tentang detail di baliknya.
 
 Untuk memeriksa apakah alat MCP tertentu tersedia, tanyakan langsung ke AI dalam percakapan, atau periksa daftar alat yang ditemukan di detail server tersebut di halaman manajemen.

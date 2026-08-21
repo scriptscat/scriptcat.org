@@ -30,6 +30,6 @@ Een MCP-server kan drie soorten mogelijkheden bieden:
 
 ## Gebruik in een gesprek
 
-Tools van ingeschakelde MCP-servers verschijnen automatisch in de toollijst die beschikbaar is voor Agent-gesprekken, genoemd volgens het patroon `mcp_{gesaneerde servernaam}_{toolName}` — de AI beslist op basis van de gebruikersintentie of ze worden aangeroepen. Dit werkt op dezelfde manier als hoe [Skills](../skill-install) automatisch worden geladen; scriptontwikkelaars hoeven zich meestal geen zorgen te maken over de onderliggende details.
+Tools van ingeschakelde MCP-servers verschijnen automatisch in de toollijst die beschikbaar is voor Agent-gesprekken, genoemd volgens het patroon `mcp_{gesaneerde servernaam}_{toolName}` — de AI beslist op basis van de gebruikersintentie of ze worden aangeroepen. Dit werkt op dezelfde manier als hoe [Skills](../agent-skill-install) automatisch worden geladen; scriptontwikkelaars hoeven zich meestal geen zorgen te maken over de onderliggende details.
 
 Om te controleren of een specifieke MCP-tool beschikbaar is, vraagt u het gewoon rechtstreeks aan de AI in een gesprek, of controleert u de ontdekte toollijst in de details van die server op de beheerpagina.

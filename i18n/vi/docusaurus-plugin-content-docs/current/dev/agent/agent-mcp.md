@@ -30,6 +30,6 @@ Một server MCP có thể cung cấp ba loại khả năng:
 
 ## Sử dụng trong cuộc trò chuyện
 
-Các công cụ từ server MCP được bật tự động xuất hiện trong danh sách công cụ có sẵn cho cuộc trò chuyện Agent, được đặt tên theo mẫu `mcp_{tên server đã sanitizedName}_{toolName}` — AI quyết định có gọi chúng dựa trên ý định của người dùng. Điều này hoạt động tương tự cách [Skills](../skill-install) tự động tải; nhà phát triển script thường không cần lo lắng về các chi tiết cơ bản.
+Các công cụ từ server MCP được bật tự động xuất hiện trong danh sách công cụ có sẵn cho cuộc trò chuyện Agent, được đặt tên theo mẫu `mcp_{tên server đã sanitizedName}_{toolName}` — AI quyết định có gọi chúng dựa trên ý định của người dùng. Điều này hoạt động tương tự cách [Skills](../agent-skill-install) tự động tải; nhà phát triển script thường không cần lo lắng về các chi tiết cơ bản.
 
 Để kiểm tra xem một công cụ MCP cụ thể có khả dụng không, chỉ cần hỏi AI trực tiếp trong cuộc trò chuyện, hoặc kiểm tra danh sách công cụ đã phát hiện trong chi tiết server đó trên trang quản lý.

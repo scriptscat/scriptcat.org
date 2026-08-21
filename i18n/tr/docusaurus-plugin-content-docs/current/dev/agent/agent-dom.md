@@ -236,7 +236,7 @@ const result = await CAT.agent.dom.executeScript(code, options?);
 | `code` | `string` | — | JavaScript kodu (zorunlu) |
 | `options.tabId` | `number` | geçerli etkin sekme | Hangi sekmenin kullanılacağı |
 
-> Kod her zaman sayfanın **MAIN dünyasında** çalışır (sayfanın kendi JS'iyle aynı `window` nesnesini paylaşır), bu nedenle sayfanın kendi işlevlerini çağırabilir ve sayfa değişkenlerini doğrudan okuyabilir — ancak aynı nedenle **eklentinin blob URL'lerine erişemez** (örn. `CAT.agent.opfs.read` değerinin `"blob"` modunda döndürdüğü `Blob` ile `URL.createObjectURL()` kullanarak oluşturduğunuz bir `blob:` URL), çünkü blob URL'leri eklentinin kendi kaynağına kapsamlanmıştır. İzole bir bağlamda bir blob URL ile çalışmanız gerekiyorsa, bunun yerine bir SkillScript kullanın (bkz. [Skill Geliştirme](../skill-dev)).
+> Kod her zaman sayfanın **MAIN dünyasında** çalışır (sayfanın kendi JS'iyle aynı `window` nesnesini paylaşır), bu nedenle sayfanın kendi işlevlerini çağırabilir ve sayfa değişkenlerini doğrudan okuyabilir — ancak aynı nedenle **eklentinin blob URL'lerine erişemez** (örn. `CAT.agent.opfs.read` değerinin `"blob"` modunda döndürdüğü `Blob` ile `URL.createObjectURL()` kullanarak oluşturduğunuz bir `blob:` URL), çünkü blob URL'leri eklentinin kendi kaynağına kapsamlanmıştır. İzole bir bağlamda bir blob URL ile çalışmanız gerekiyorsa, bunun yerine bir SkillScript kullanın (bkz. [Skill Geliştirme](../agent-skill-dev)).
 
 ```javascript
 // Sayfanın kendi JS işlevini çağır / bir sayfa değişkenini oku

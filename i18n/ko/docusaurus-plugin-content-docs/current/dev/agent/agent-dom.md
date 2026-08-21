@@ -236,7 +236,7 @@ const result = await CAT.agent.dom.executeScript(code, options?);
 | `code` | `string` | — | JavaScript 코드 (필수) |
 | `options.tabId` | `number` | 현재 활성 탭 | 사용할 탭 |
 
-> 코드는 항상 페이지의 **MAIN 세계에서** 실행됩니다(페이지 자체 JS와 동일한 `window` 객체 공유). 따라서 페이지의 자체 함수를 호출하고 페이지 변수를 직접 읽을 수 있습니다 — 그러나 같은 이유로 **확장 프로그램의 blob URL에 액세스할 수 없습니다**(예: `CAT.agent.opfs.read`가 `"blob"` 모드에서 반환한 `Blob`으로 `URL.createObjectURL()`을 통해 만든 `blob:` URL). blob URL은 확장 프로그램 자체의 출처에 범위가 제한되기 때문입니다. 격리된 컨텍스트에서 blob URL로 작업해야 하는 경우 SkillScript를 대신 사용하세요 ([Skill 개발](../skill-dev) 참조).
+> 코드는 항상 페이지의 **MAIN 세계에서** 실행됩니다(페이지 자체 JS와 동일한 `window` 객체 공유). 따라서 페이지의 자체 함수를 호출하고 페이지 변수를 직접 읽을 수 있습니다 — 그러나 같은 이유로 **확장 프로그램의 blob URL에 액세스할 수 없습니다**(예: `CAT.agent.opfs.read`가 `"blob"` 모드에서 반환한 `Blob`으로 `URL.createObjectURL()`을 통해 만든 `blob:` URL). blob URL은 확장 프로그램 자체의 출처에 범위가 제한되기 때문입니다. 격리된 컨텍스트에서 blob URL로 작업해야 하는 경우 SkillScript를 대신 사용하세요 ([Skill 개발](../agent-skill-dev) 참조).
 
 ```javascript
 // 페이지 자체 JS 함수 호출 / 페이지 변수 읽기

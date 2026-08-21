@@ -228,7 +228,7 @@ const result = await CAT.agent.dom.executeScript(code, options?);
 | `code` | `string` | — | JavaScript 程式碼（必填） |
 | `options.tabId` | `number` | 目前活動分頁 | 使用哪個分頁 |
 
-> 程式碼始終在頁面的 **MAIN 世界**中執行（與頁面的 JS 共享相同的 `window` 物件），因此可以直接呼叫頁面的函數和讀取頁面變數 — 但同樣的原因**無法存取擴充套件的 blob URL**（例如透過 `CAT.agent.opfs.read` 在 `"blob"` 模式下回傳的 `Blob` 使用 `URL.createObjectURL()` 建立的 `blob:` URL），因為 blob URL 被限制在擴充套件自己的來源中。需要在隔離的上下文中使用 blob URL 時，請改用 SkillScript（參見 [Skill 開發](../skill-dev)）。
+> 程式碼始終在頁面的 **MAIN 世界**中執行（與頁面的 JS 共享相同的 `window` 物件），因此可以直接呼叫頁面的函數和讀取頁面變數 — 但同樣的原因**無法存取擴充套件的 blob URL**（例如透過 `CAT.agent.opfs.read` 在 `"blob"` 模式下回傳的 `Blob` 使用 `URL.createObjectURL()` 建立的 `blob:` URL），因為 blob URL 被限制在擴充套件自己的來源中。需要在隔離的上下文中使用 blob URL 時，請改用 SkillScript（參見 [Skill 開發](../agent-skill-dev)）。
 
 ```javascript
 // 呼叫頁面自己的 JS 函數 / 讀取頁面變數

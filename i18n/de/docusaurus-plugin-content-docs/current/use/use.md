@@ -17,7 +17,7 @@ ScriptCat ist eine Browser-Erweiterung, die Userskripte ausführen kann, kompati
 
 Wenn Ihr Browser nicht in der obigen Liste steht, können Sie die `zip`/`crx`-Datei von der [Github Release](https://github.com/scriptscat/scriptcat/releases)-Seite herunterladen und manuell installieren.
 
-### Unpacked Extension Installation
+### Unpacked Extension Installation {#load-unpacked-extension-installation}
 
 ① Laden Sie die `zip`-Datei von [Github Release](https://github.com/scriptscat/scriptcat/releases) oder [Community Download](https://bbs.tampermonkey.net.cn/thread-3068-1-1.html) herunter.
 

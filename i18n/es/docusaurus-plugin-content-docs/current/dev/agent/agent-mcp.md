@@ -30,6 +30,6 @@ Un servidor MCP puede proporcionar tres tipos de capacidad:
 
 ## Usarlo en una conversación
 
-Las herramientas de servidores MCP habilitados aparecen automáticamente en la lista de herramientas disponible para las conversaciones de Agent, nombradas usando el patrón `mcp_{nombre del servidor sanitizado}_{nombreHerramienta}` — la IA decide si llamarlas basándose en la intención del usuario. Esto funciona de manera similar a cómo [Skills](../skill-install) se cargan automáticamente; los desarrolladores de scripts normalmente no necesitan preocuparse por los detalles subyacentes.
+Las herramientas de servidores MCP habilitados aparecen automáticamente en la lista de herramientas disponible para las conversaciones de Agent, nombradas usando el patrón `mcp_{nombre del servidor sanitizado}_{nombreHerramienta}` — la IA decide si llamarlas basándose en la intención del usuario. Esto funciona de manera similar a cómo [Skills](../agent-skill-install) se cargan automáticamente; los desarrolladores de scripts normalmente no necesitan preocuparse por los detalles subyacentes.
 
 Para verificar si una herramienta MCP específica está disponible, simplemente pregúntele a la IA directamente en una conversación, o verifique la lista de herramientas descubiertas en los detalles de ese servidor en la página de administración.

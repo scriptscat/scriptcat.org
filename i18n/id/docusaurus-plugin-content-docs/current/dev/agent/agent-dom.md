@@ -236,7 +236,7 @@ const result = await CAT.agent.dom.executeScript(code, options?);
 | `code` | `string` | — | Kode JavaScript (wajib) |
 | `options.tabId` | `number` | tab aktif saat ini | Tab mana yang digunakan |
 
-> Kode selalu berjalan di **MAIN world** halaman (berbagi objek `window` yang sama dengan JS halaman itu sendiri), sehingga dapat memanggil fungsi halaman itu sendiri dan membaca variabel halaman secara langsung — tetapi untuk alasan yang sama **tidak dapat mengakses URL blob ekstensi** (mis. URL `blob:` yang Anda buat melalui `URL.createObjectURL()` dari `Blob` yang dikembalikan oleh `CAT.agent.opfs.read` dalam mode `"blob"`), karena URL blob dibatasi pada origin ekstensi itu sendiri. Jika Anda perlu bekerja dengan URL blob dalam konteks terisolasi, gunakan SkillScript sebagai gantinya (lihat [Pengembangan Skill](../skill-dev)).
+> Kode selalu berjalan di **MAIN world** halaman (berbagi objek `window` yang sama dengan JS halaman itu sendiri), sehingga dapat memanggil fungsi halaman itu sendiri dan membaca variabel halaman secara langsung — tetapi untuk alasan yang sama **tidak dapat mengakses URL blob ekstensi** (mis. URL `blob:` yang Anda buat melalui `URL.createObjectURL()` dari `Blob` yang dikembalikan oleh `CAT.agent.opfs.read` dalam mode `"blob"`), karena URL blob dibatasi pada origin ekstensi itu sendiri. Jika Anda perlu bekerja dengan URL blob dalam konteks terisolasi, gunakan SkillScript sebagai gantinya (lihat [Pengembangan Skill](../agent-skill-dev)).
 
 ```javascript
 // Panggil fungsi JS halaman itu sendiri / baca variabel halaman

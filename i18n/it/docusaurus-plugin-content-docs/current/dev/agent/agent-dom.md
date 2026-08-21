@@ -228,7 +228,7 @@ const result = await CAT.agent.dom.executeScript(code, options?);
 | `code` | `string` | — | Codice JavaScript (obbligatorio) |
 | `options.tabId` | `number` | scheda attiva corrente | Quale scheda usare |
 
-> Il codice viene sempre eseguito nel **mondo MAIN** della pagina (condividendo lo stesso oggetto `window` con il JS della pagina), quindi può chiamare le funzioni della pagina e leggere le variabili direttamente — ma per lo stesso motivo **non può accedere alle URL blob dell'estensione** (ad esempio un URL `blob:` creato con `URL.createObjectURL()` dal `Blob` restituito da `CAT.agent.opfs.read` in modalità `"blob"`), poiché le URL blob sono limitate all'origine dell'estensione. Se devi lavorare con un URL blob in un contesto isolato, usa uno SkillScript (vedi [Sviluppo Skill](../skill-dev)).
+> Il codice viene sempre eseguito nel **mondo MAIN** della pagina (condividendo lo stesso oggetto `window` con il JS della pagina), quindi può chiamare le funzioni della pagina e leggere le variabili direttamente — ma per lo stesso motivo **non può accedere alle URL blob dell'estensione** (ad esempio un URL `blob:` creato con `URL.createObjectURL()` dal `Blob` restituito da `CAT.agent.opfs.read` in modalità `"blob"`), poiché le URL blob sono limitate all'origine dell'estensione. Se devi lavorare con un URL blob in un contesto isolato, usa uno SkillScript (vedi [Sviluppo Skill](../agent-skill-dev)).
 
 ```javascript
 // Chiamare una funzione JS propria della pagina / leggere una variabile

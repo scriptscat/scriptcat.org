@@ -236,7 +236,7 @@ const result = await CAT.agent.dom.executeScript(code, options?);
 | `code` | `string` | — | كود JavaScript (إلزامي) |
 | `options.tabId` | `number` | التبويب النشط الحالي | التبويب المراد استخدامه |
 
-> يعمل الكود دائماً في **الوضع MAIN** للصفحة (بمشاركة نفس كائن `window` مع JS الصفحة نفسها)، لذا يمكنه استدعاء دوال الصفحة وقراءة متغيرات الصفحة مباشرة — لكن لنفس السبب **لا يمكنه الوصول إلى روابط blob الخاصة بالإضافة** (مثل رابط `blob:` تنشئه عبر `URL.createObjectURL()` من `Blob` الذي يرجع `CAT.agent.opfs.read` في وضع `"blob"`)، لأن روابط blob مقيدة بأصل الإضافة نفسه. إذا كنت بحاجة إلى العمل مع رابط blob في سياق معزول، استخدم SkillScript بدلاً من ذلك (انظر [تطوير Skills](../skill-dev)).
+> يعمل الكود دائماً في **الوضع MAIN** للصفحة (بمشاركة نفس كائن `window` مع JS الصفحة نفسها)، لذا يمكنه استدعاء دوال الصفحة وقراءة متغيرات الصفحة مباشرة — لكن لنفس السبب **لا يمكنه الوصول إلى روابط blob الخاصة بالإضافة** (مثل رابط `blob:` تنشئه عبر `URL.createObjectURL()` من `Blob` الذي يرجع `CAT.agent.opfs.read` في وضع `"blob"`)، لأن روابط blob مقيدة بأصل الإضافة نفسه. إذا كنت بحاجة إلى العمل مع رابط blob في سياق معزول، استخدم SkillScript بدلاً من ذلك (انظر [تطوير Skills](../agent-skill-dev)).
 
 ```javascript
 // Call a page's own JS function / read a page variable

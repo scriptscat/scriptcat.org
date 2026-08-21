@@ -228,7 +228,7 @@ const result = await CAT.agent.dom.executeScript(code, options?);
 | `code` | `string` | — | Mã JavaScript (bắt buộc) |
 | `options.tabId` | `number` | tab hoạt động hiện tại | Tab nào sử dụng |
 
-> Mã luôn chạy trong **thế giới MAIN** của trang (chia sẻ cùng đối tượng `window` với JS của trang), nên có thể gọi hàm của trang và đọc biến trực tiếp — nhưng vì lý do tương tự **không thể truy cập URL blob của extension** (ví dụ URL `blob:` tạo qua `URL.createObjectURL()` từ `Blob` trả về bởi `CAT.agent.opfs.read` ở chế độ `"blob"`), vì URL blob bị giới hạn trong gốc của extension. Nếu cần làm việc với URL blob trong ngữ cảnh cô lập, hãy dùng SkillScript (xem [Phát triển Skill](../skill-dev)).
+> Mã luôn chạy trong **thế giới MAIN** của trang (chia sẻ cùng đối tượng `window` với JS của trang), nên có thể gọi hàm của trang và đọc biến trực tiếp — nhưng vì lý do tương tự **không thể truy cập URL blob của extension** (ví dụ URL `blob:` tạo qua `URL.createObjectURL()` từ `Blob` trả về bởi `CAT.agent.opfs.read` ở chế độ `"blob"`), vì URL blob bị giới hạn trong gốc của extension. Nếu cần làm việc với URL blob trong ngữ cảnh cô lập, hãy dùng SkillScript (xem [Phát triển Skill](../agent-skill-dev)).
 
 ```javascript
 // Gọi hàm JS của trang / đọc biến trang

@@ -30,6 +30,6 @@ Bir MCP sunucusu üç tür yetenek sağlayabilir:
 
 ## Bir sohbette kullanma
 
-Etkin MCP sunucularından gelen araçlar, `mcp_{temizlenmiş sunucu adı}_{toolName}` deseniyle adlandırılarak Agent sohbetlerinin kullanabileceği araç listesinde otomatik olarak görünür — AI, kullanıcı amacına göre bunları çağırıp çağırmamaya karar verir. Bu, [Skill'lerin](../skill-install) otomatik yüklenmesine benzer şekilde çalışır; betik geliştiricilerinin genellikle altta yatan ayrıntılar hakkında endişelenmesi gerekmez.
+Etkin MCP sunucularından gelen araçlar, `mcp_{temizlenmiş sunucu adı}_{toolName}` deseniyle adlandırılarak Agent sohbetlerinin kullanabileceği araç listesinde otomatik olarak görünür — AI, kullanıcı amacına göre bunları çağırıp çağırmamaya karar verir. Bu, [Skill'lerin](../agent-skill-install) otomatik yüklenmesine benzer şekilde çalışır; betik geliştiricilerinin genellikle altta yatan ayrıntılar hakkında endişelenmesi gerekmez.
 
 Belirli bir MCP aracının kullanılabilir olup olmadığını kontrol etmek için bir sohbette doğrudan AI'ya sorabilir veya yönetim sayfasındaki o sunucunun ayrıntılarında keşfedilen araç listesini kontrol edebilirsiniz.

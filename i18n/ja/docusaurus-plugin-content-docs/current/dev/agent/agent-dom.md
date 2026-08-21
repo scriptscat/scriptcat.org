@@ -236,7 +236,7 @@ const result = await CAT.agent.dom.executeScript(code, options?);
 | `code` | `string` | — | JavaScriptコード（必須） |
 | `options.tabId` | `number` | 現在のアクティブタブ | 使用するタブ |
 
-> コードは常にページの**MAIN世界**で実行されます（ページのJSと同じ`window`オブジェクトを共有）、したがってページの関数を直接呼び出し、ページ変数を直接読み取ることができます — しかし同じ理由で**拡張機能のblob URLにはアクセスできません**（例：`CAT.agent.opfs.read`の`"blob"`モードで返された`Blob`から`URL.createObjectURL()`で作成した`blob:` URL）。分離されたコンテキストでblob URLで作業する必要がある場合は、SkillScriptを使用してください（[Skill開発](../skill-dev)を参照）。
+> コードは常にページの**MAIN世界**で実行されます（ページのJSと同じ`window`オブジェクトを共有）、したがってページの関数を直接呼び出し、ページ変数を直接読み取ることができます — しかし同じ理由で**拡張機能のblob URLにはアクセスできません**（例：`CAT.agent.opfs.read`の`"blob"`モードで返された`Blob`から`URL.createObjectURL()`で作成した`blob:` URL）。分離されたコンテキストでblob URLで作業する必要がある場合は、SkillScriptを使用してください（[Skill開発](../agent-skill-dev)を参照）。
 
 ```javascript
 // ページ自身のJS関数を呼び出し / ページ変数を読み取り

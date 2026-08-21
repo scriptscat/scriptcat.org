@@ -30,6 +30,6 @@ Un serveur MCP peut fournir trois types de capacités :
 
 ## Utilisation dans une conversation
 
-Les outils des serveurs MCP activés apparaissent automatiquement dans la liste d'outils disponible pour les conversations Agent, nommés selon le modèle `mcp_{nom de serveur assaini}_{toolName}` — l'IA décide de les appeler en fonction de l'intention de l'utilisateur. Cela fonctionne de la même manière que le chargement automatique des [Skills](../skill-install) ; les développeurs de scripts n'ont généralement pas à se soucier des détails sous-jacents.
+Les outils des serveurs MCP activés apparaissent automatiquement dans la liste d'outils disponible pour les conversations Agent, nommés selon le modèle `mcp_{nom de serveur assaini}_{toolName}` — l'IA décide de les appeler en fonction de l'intention de l'utilisateur. Cela fonctionne de la même manière que le chargement automatique des [Skills](../agent-skill-install) ; les développeurs de scripts n'ont généralement pas à se soucier des détails sous-jacents.
 
 Pour vérifier si un outil MCP spécifique est disponible, demandez simplement directement à l'IA dans une conversation, ou consultez la liste des outils découverts dans les détails de ce serveur sur la page de gestion.

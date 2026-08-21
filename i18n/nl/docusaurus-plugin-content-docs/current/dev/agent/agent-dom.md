@@ -236,7 +236,7 @@ const result = await CAT.agent.dom.executeScript(code, options?);
 | `code` | `string` | — | JavaScript-code (vereist) |
 | `options.tabId` | `number` | huidig actief tabblad | Welk tabblad u wilt gebruiken |
 
-> De code wordt altijd uitgevoerd in de **MAIN-wereld** van de pagina (deelt hetzelfde `window`-object als de eigen JS van de pagina), dus het kan de eigen functies van de pagina aanroepen en paginavariabelen rechtstreeks lezen — maar om dezelfde reden **kan het geen toegang krijgen tot de blob-URL's van de extensie** (bv. een `blob:`-URL die u maakt via `URL.createObjectURL()` van de `Blob` die door `CAT.agent.opfs.read` in de `"blob"`-modus wordt geretourneerd), omdat blob-URL's zijn gebonden aan de eigen oorsprong van de extensie. Als u met een blob-URL in een geïsoleerde context moet werken, gebruik dan in plaats daarvan een SkillScript (zie [Skill-ontwikkeling](../skill-dev)).
+> De code wordt altijd uitgevoerd in de **MAIN-wereld** van de pagina (deelt hetzelfde `window`-object als de eigen JS van de pagina), dus het kan de eigen functies van de pagina aanroepen en paginavariabelen rechtstreeks lezen — maar om dezelfde reden **kan het geen toegang krijgen tot de blob-URL's van de extensie** (bv. een `blob:`-URL die u maakt via `URL.createObjectURL()` van de `Blob` die door `CAT.agent.opfs.read` in de `"blob"`-modus wordt geretourneerd), omdat blob-URL's zijn gebonden aan de eigen oorsprong van de extensie. Als u met een blob-URL in een geïsoleerde context moet werken, gebruik dan in plaats daarvan een SkillScript (zie [Skill-ontwikkeling](../agent-skill-dev)).
 
 ```javascript
 // Roep een eigen JS-functie van de pagina aan / lees een paginavariabele

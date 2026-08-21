@@ -17,7 +17,7 @@ ScriptCat là tiện ích mở rộng trình duyệt có thể chạy script, t�
 
 Nếu trình duyệt của bạn không có trong danh sách, tải tệp `zip`/`crx` từ trang [Github Release](https://github.com/scriptscat/scriptcat/releases) và cài đặt thủ công.
 
-### Cài đặt Tiện ích Chưa Đóng gói
+### Cài đặt Tiện ích Chưa Đóng gói {#load-unpacked-extension-installation}
 
 ① Tải tệp `zip` từ [Github Release](https://github.com/scriptscat/scriptcat/releases) hoặc [Tải xuống Cộng đồng](https://bbs.tampermonkey.net.cn/thread-3068-1-1.html)
 

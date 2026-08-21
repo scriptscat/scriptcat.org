@@ -17,7 +17,7 @@ ScriptCat é uma extensão de navegador que pode executar userscripts, compatív
 
 Se seu navegador não está na lista, baixe o arquivo `zip`/`crx` na página [Github Release](https://github.com/scriptscat/scriptcat/releases) e instale manualmente.
 
-### Instalação de Extensão Desempacotada
+### Instalação de Extensão Desempacotada {#load-unpacked-extension-installation}
 
 ① Baixe o arquivo `zip` do [Github Release](https://github.com/scriptscat/scriptcat/releases) ou [Download Comunitário](https://bbs.tampermonkey.net.cn/thread-3068-1-1.html)
 

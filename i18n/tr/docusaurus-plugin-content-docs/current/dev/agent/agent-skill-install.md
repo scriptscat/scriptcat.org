@@ -92,5 +92,5 @@ const conv = await CAT.agent.conversation.create({
 
 ## Daha fazla bilgi
 
-- [Skill Yönetim API'si](./skill.md) — Skill'leri bir betikten programatik olarak yönetin
-- [Skill Geliştirme Rehberi](./skill-dev.md) — kendi Skill'inizi oluşturun
+- [Skill Yönetim API'si](./agent-skill.md) — Skill'leri bir betikten programatik olarak yönetin
+- [Skill Geliştirme Rehberi](./agent-skill-dev.md) — kendi Skill'inizi oluşturun

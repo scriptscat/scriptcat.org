@@ -19,7 +19,7 @@ ScriptCat はユーザースクリプトを実行できるブラウザ拡張機�
 
 上記リストにないブラウザの場合、[Github Release](https://github.com/scriptscat/scriptcat/releases) ページから `zip`/`crx` ファイルをダウンロードして手動でインストールできます。
 
-### パックされていない拡張機能の読み込みインストール
+### パックされていない拡張機能の読み込みインストール {#load-unpacked-extension-installation}
 
 ① [Github Release](https://github.com/scriptscat/scriptcat/releases) または[コミュニティダウンロード](https://bbs.tampermonkey.net.cn/thread-3068-1-1.html) ページから `zip` ファイルをダウンロード。`crx` ファイルの場合は、拡張子を `zip` に変更。
 
