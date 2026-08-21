@@ -4,11 +4,11 @@ title: Scripts en arrière-plan
 
 Les scripts en arrière-plan conviennent aux scripts fonctionnant en continu. Il s'agit d'un type de script propre à ScriptCat, qui s'exécute dans un bac à sable et ne peut pas manipuler le DOM. Le développement utilise les mêmes API GM que Tampermonkey ; les éventuelles différences de compatibilité sont indiquées dans la documentation.
 
-## Scripts en arrière-plan (`@background`)
+## Scripts en arrière-plan (`@background`) {#background-script-background}
 
 Un script en arrière-plan se déclare via l'attribut `@background`, qui permet au script de continuer à s'exécuter en arrière-plan une fois activé ou après le démarrage du navigateur.
 
-## Scripts planifiés (`@crontab`)
+## Scripts planifiés (`@crontab`) {#scheduled-script-crontab}
 
 > Un script planifié est un type de script en arrière-plan, adapté aux tâches **exécutées de façon répétée selon un cycle temporel**.
 

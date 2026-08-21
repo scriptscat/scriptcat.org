@@ -4,11 +4,11 @@ title: Script de Fundo
 
 Scripts de fundo são adequados para scripts que precisam continuar executando continuamente. Scripts de fundo são um tipo de script específico do ScriptCat; rodam em um sandbox e não podem acessar o DOM. Podem ser desenvolvidos usando as mesmas GM APIs do Tampermonkey, e as notas de compatibilidade são indicadas na documentação.
 
-## Script de Fundo (`@background`)
+## Script de Fundo (`@background`) {#background-script-background}
 
 Um script de fundo é declarado com o atributo `@background`. Permite que o script continue rodando em segundo plano após ser habilitado ou o navegador ser iniciado.
 
-## Script Agendado (`@crontab`)
+## Script Agendado (`@crontab`) {#scheduled-script-crontab}
 
 > Um script agendado é um tipo de script de fundo adequado para tarefas que precisam **rodar repetidamente em um ciclo de tempo**.
 

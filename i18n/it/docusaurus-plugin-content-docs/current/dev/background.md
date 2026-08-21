@@ -4,11 +4,11 @@ title: Script di Background
 
 Gli script di background sono adatti a script che devono continuare a eseguire in modo continuo. Gli script di background sono un tipo di script specifico di ScriptCat; vengono eseguiti in una sandbox e non possono accedere al DOM. Possono essere sviluppati utilizzando le stesse GM API di Tampermonkey, e le note di compatibilità sono indicate nella documentazione.
 
-## Script di Background (`@background`)
+## Script di Background (`@background`) {#background-script-background}
 
 Uno script di background viene dichiarato con l'attributo `@background`. Permette allo script di continuare a eseguire in background dopo che lo script è abilitato o il browser si avvia.
 
-## Script Pianificato (`@crontab`)
+## Script Pianificato (`@crontab`) {#scheduled-script-crontab}
 
 > Uno script pianificato è un tipo di script di background adatto a compiti che devono **eseguirsi ripetutamente su un ciclo temporale**.
 

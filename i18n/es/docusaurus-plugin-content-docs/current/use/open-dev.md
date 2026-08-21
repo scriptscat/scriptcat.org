@@ -67,7 +67,7 @@ Para Edge Mobile con versión del motor del navegador ≥ 138, no se requiere Mo
   </TabItem>
 </Tabs>
 
-## Habilitar Modo Desarrollador
+## Habilitar Modo Desarrollador {#enable-developer-mode}
 
 <Tabs groupId="browser" queryString>
   <TabItem value="edge" label={<div className="flex items-center gap-1"><Icon height={16} width={16} icon="logos:microsoft-edge" /><span>Edge</span></div>} default>

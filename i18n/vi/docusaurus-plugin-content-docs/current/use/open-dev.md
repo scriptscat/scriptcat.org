@@ -67,7 +67,7 @@ import GithubStar from '@site/src/components/GithubStar';
   </TabItem>
 </Tabs>
 
-## Bật Chế độ Nhà phát triển
+## Bật Chế độ Nhà phát triển {#enable-developer-mode}
 
 <Tabs groupId="browser" queryString>
   <TabItem value="edge" label={<div className="flex items-center gap-1"><Icon height={16} width={16} icon="logos:microsoft-edge" /><span>Edge</span></div>} default>

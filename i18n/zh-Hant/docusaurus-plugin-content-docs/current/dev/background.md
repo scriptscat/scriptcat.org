@@ -4,11 +4,11 @@ title: 背景腳本
 
 背景腳本適用於需要持續執行的腳本。背景腳本是 ScriptCat 特有的腳本類型；它們在沙箱中執行，無法存取 DOM。可以使用與 Tampermonkey 相同的 GM API 開發，相容性說明會在文件中特別標註。
 
-## 背景腳本（`@background`）
+## 背景腳本（`@background`） {#background-script-background}
 
 背景腳本使用 `@background` 屬性宣告。它讓腳本在啟用後或瀏覽器啟動後，能在背景中持續執行。
 
-## 排程腳本（`@crontab`）
+## 排程腳本（`@crontab`） {#scheduled-script-crontab}
 
 > 排程腳本是一種背景腳本，適用於需要**按照時間週期重複執行**的任務。
 

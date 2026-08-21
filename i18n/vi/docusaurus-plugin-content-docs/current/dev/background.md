@@ -4,11 +4,11 @@ title: Script Nền
 
 Script nền phù hợp với các script cần tiếp tục chạy liên tục. Script nền là loại script đặc thù của ScriptCat; chúng chạy trong sandbox và không thể truy cập DOM. Chúng có thể được phát triển sử dụng cùng GM API như Tampermonkey, và các ghi chú tương thích được chỉ ra trong tài liệu.
 
-## Script Nền (`@background`)
+## Script Nền (`@background`) {#background-script-background}
 
 Script nền được khai báo bằng thuộc tính `@background`. Nó cho phép script tiếp tục chạy nền sau khi script được kích hoạt hoặc trình duyệt khởi động.
 
-## Script Được Lên Lịch (`@crontab`)
+## Script Được Lên Lịch (`@crontab`) {#scheduled-script-crontab}
 
 > Script được lên lịch là một loại script nền phù hợp với các tác vụ cần **chạy lặp đi lặp lại theo chu kỳ thời gian**.
 

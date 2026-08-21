@@ -67,7 +67,7 @@ Per Edge Mobile con versione del motore del browser ≥ 138, la Modalità Svilup
   </TabItem>
 </Tabs>
 
-## Abilita Modalità Sviluppatore
+## Abilita Modalità Sviluppatore {#enable-developer-mode}
 
 <Tabs groupId="browser" queryString>
   <TabItem value="edge" label={<div className="flex items-center gap-1"><Icon height={16} width={16} icon="logos:microsoft-edge" /><span>Edge</span></div>} default>

@@ -4,11 +4,11 @@ title: Hintergrundskript
 
 Hintergrundskripte sind für Skripte geeignet, die kontinuierlich weiterlaufen müssen. Hintergrundskripte sind ein ScriptCat-spezifischer Skripttyp; sie laufen in einer Sandbox und können nicht auf das DOM zugreifen. Sie können mit denselben GM-APIs wie Tampermonkey entwickelt werden, und Kompatibilitätshinweise werden in der Dokumentation hervorgehoben.
 
-## Hintergrundskript (`@background`)
+## Hintergrundskript (`@background`) {#background-script-background}
 
 Ein Hintergrundskript wird mit dem `@background`-Attribut deklariert. Es lässt das Skript nach dem Aktivieren oder dem Starten des Browsers im Hintergrund weiterlaufen.
 
-## Geplantes Skript (`@crontab`)
+## Geplantes Skript (`@crontab`) {#scheduled-script-crontab}
 
 > Ein geplantes Skript ist eine Art Hintergrundskript, das für Aufgaben geeignet ist, die **zyklisch wiederholt ausgeführt werden müssen**.
 

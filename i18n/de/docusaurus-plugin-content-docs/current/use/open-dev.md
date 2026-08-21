@@ -67,7 +67,7 @@ Für Edge Mobile mit Browser-Engine-Version ≥ 138 ist kein Entwicklermodus erf
   </TabItem>
 </Tabs>
 
-## Entwicklermodus aktivieren
+## Entwicklermodus aktivieren {#enable-developer-mode}
 
 <Tabs groupId="browser" queryString>
   <TabItem value="edge" label={<div className="flex items-center gap-1"><Icon height={16} width={16} icon="logos:microsoft-edge" /><span>Edge</span></div>} default>
