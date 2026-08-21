@@ -219,7 +219,7 @@ export function Scenarios() {
     {
       icon: "lucide:shield-check",
       bg: "var(--lp-accent-soft)",
-      color: "#F05E1C",
+      color: "#c94a0d",
       title: <Translate id="home.sc.adblock.t">去广告 · 净化</Translate>,
       desc: <Translate id="home.sc.adblock.d">屏蔽广告与弹窗，还网页一个清爽干净。</Translate>,
       link: <Translate id="home.sc.adblock.l">去广告脚本</Translate>,
@@ -228,7 +228,7 @@ export function Scenarios() {
     {
       icon: "lucide:shopping-cart",
       bg: "var(--lp-amber-soft)",
-      color: "#B9791A",
+      color: "#8c5c0f",
       title: <Translate id="home.sc.shop.t">网购 · 比价</Translate>,
       desc: <Translate id="home.sc.shop.d">全网比价、历史价格曲线、优惠券一键领。</Translate>,
       link: <Translate id="home.sc.shop.l">购物助手</Translate>,
@@ -237,7 +237,7 @@ export function Scenarios() {
     {
       icon: "lucide:wand-sparkles",
       bg: "var(--lp-mint-soft)",
-      color: "#0E8A6C",
+      color: "#0b8264",
       title: <Translate id="home.sc.auto.t">效率 · 自动化</Translate>,
       desc: <Translate id="home.sc.auto.d">自动签到、批量操作、贴心的快捷工具箱。</Translate>,
       link: <Translate id="home.sc.auto.l">效率脚本</Translate>,

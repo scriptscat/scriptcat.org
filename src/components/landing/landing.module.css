@@ -14,7 +14,7 @@
   --lp-border: #e6edf4;
   --lp-ink: #0e2233;
   --lp-text: #3c4e60;
-  --lp-muted: #6e8194;
+  --lp-muted: #576d82;
   /* brand */
   --lp-brand: #1296db;
   --lp-brand-bright: #42b4f5;
@@ -22,9 +22,9 @@
   --lp-brand-soft: #dceffb;
   /* accents (stable across themes) */
   --lp-accent: #ff7a3d;
-  --lp-accent-deep: #f05e1c;
+  --lp-accent-deep: #c94a0d;
   --lp-accent-soft: #ffe7d6;
-  --lp-mint: #12b28c;
+  --lp-mint: #0b8264;
   --lp-mint-soft: #d8f3ec;
   --lp-violet: #6c5ce7;
   --lp-violet-soft: #e7e3fb;
