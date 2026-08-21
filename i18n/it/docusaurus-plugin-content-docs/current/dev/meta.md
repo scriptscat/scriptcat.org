@@ -1,247 +1,207 @@
 ---
-title: Metadata Block
+title: Blocco Metadati
 ---
 
-The content inside `==UserScript==` describes the permissions a script needs, information about the script, and so on. It sits at the very start of the script.
+Il contenuto all'interno di `==UserScript==` descrive i permessi di cui uno script ha bisogno, informazioni sullo script, ecc. Si trova all'inizio dello script.
 
 ```js
 // ==UserScript==
-// @name         New Userscript
+// @name         Nuovo Userscript
 // @namespace    https://bbs.tampermonkey.net.cn/
 // @version      0.1.0
-// @description  try to take over the world!
+// @description  provare a conquistare il mondo!
 // @author       You
 // @crontab      * * once * *
 // ==/UserScript==
 ```
 
-## Main Values
+## Valori Principali
 
 ### name
 
-Script name
+Nome dello script
 
 ### namespace
 
-Script namespace. `name + namespace` determines the script's uniqueness.
+Namespace dello script. `name + namespace` determina l'unicità dello script.
 
 ### version
 
-The script's version. It's recommended to follow [semantic versioning](https://semver.org/), so that when a version change is detected, the user is prompted to update, and so on.
+La versione dello script. Si consiglia di seguire il [versionamento semantico](https://semver.org/), in modo che quando viene rilevato un cambio di versione, venga richiesto all'utente di aggiornare.
 
 ### description
 
-A detailed description of the script
+Una descrizione dettagliata dello script
 
 ### author
 
-Script author
+Autore dello script
 
 ### run-at
 
-When the script runs
+Quando lo script viene eseguito
 
-| Value          | Runs                                                              | Supported since        |
-| -------------- | ------------------------------------------------------------------ | ---------------------- |
-| document-start | Injects the script into the page as soon as the URL matches on the frontend | v0.3.0          |
-| document-end   | Injects the script after the DOM has finished loading; page scripts and images may still be loading at this point | v0.3.0 |
-| document-idle  | Injects the script after all content has finished loading         | v0.3.0                  |
-| document-body  | The script is only injected once the page has a `body` element     | v0.6.2                  |
-| document-menu  | Shows a menu on right-click; running the script uses the script name as the menu name | v0.3.4-v0.9.4 (🔥 removed) |
+| Valore | Esecuzione | Supportato da |
+|---|---|---|
+| document-start | Inietta lo script nella pagina non appena l'URL corrisponde nel frontend | v0.3.0 |
+| document-end | Inietta lo script dopo che il DOM è stato caricato; script e immagini della pagina potrebbero ancora essere in fase di caricamento | v0.3.0 |
+| document-idle | Inietta lo script dopo che tutti i contenuti sono stati caricati | v0.3.0 |
+| document-body | Lo script viene iniettato solo quando la pagina ha un elemento `body` | v0.6.2 |
+| document-menu | Mostra un menu al clic destro; esegue lo script usando il nome dello script come nome del menu | v0.3.4-v0.9.4 (🔥 rimosso) |
 
-For menu icons, you can refer to [Unicode Symbols](https://unicode-table.com/en/) and [emoji](https://www.emojiall.com/en-US/).
+Per le icone del menu, puoi consultare [Simboli Unicode](https://unicode-table.com/en/) ed [emoji](https://www.emojiall.com/en-US/).
 
 ### run-in
 
-Specifies the environment the script is injected into: `@run-in normal-tabs` for regular tabs, `@run-in incognito-tabs` for incognito tabs.
+Specifica l'ambiente in cui viene iniettato lo script: `@run-in normal-tabs` per le schede normali, `@run-in incognito-tabs` per le schede in incognito.
 
 ### early-start (v1.1.0+)
 
-When `run-at` is `document-start`, the script runs as early as possible, but it still can't guarantee loading faster than the page.
+Quando `run-at` è `document-start`, lo script viene eseguito il prima possibile, ma non si può garantire che si carichi più velocemente della pagina.
 
-Once you've defined `@run-at document-start`, you can add `@early-start` to make the script load faster than the page: [example](https://github.com/scriptscat/scriptcat/blob/main/example/early-start.js)
+Una volta definito `@run-in document-start`, puoi aggiungere `@early-start` per far caricare lo script più velocemente della pagina: [esempio](https://github.com/scriptscat/scriptcat/blob/main/example/early-start.js)
 
 ### inject-into
 
 :::tip
 
-In the content-script environment (`content`), `unsafeWindow` only points to the environment's own current `window`, and cannot access the page's `window`.
+Nell'ambiente content-script (`content`), `unsafeWindow` punta solo al proprio `window` attuale dell'ambiente e non può accedere al `window` della pagina.
 
-ScriptCat does not support automatically checking CSP restrictions to decide whether to inject as `content` or `page` (i.e. Tampermonkey's `@inject-into auto`).
+ScriptCat non supporta il controllo automatico delle restrizioni CSP per decidere se iniettare come `content` o `page` (cioè `@inject-into auto` di Tampermonkey).
 
 :::
 
-Specifies where the script is injected, supporting `page` and `content`, defaulting to `page`.
+Specifica dove viene iniettato lo script, supportando `page` e `content`, con `page` come predefinito.
 
-- `page`: the script is injected into the page environment, and can use `unsafeWindow` to access the page's `window` and `DOM`
-- `content`: the script is injected into the content-script environment, cannot directly access the page's `window` object, but can access the page `DOM`, and is not subject to `CSP`
+- `page`: lo script viene iniettato nell'ambiente della pagina e può usare `unsafeWindow` per accedere al `window` e `DOM` della pagina
+- `content`: lo script viene iniettato nell'ambiente content-script, non può accedere direttamente all'oggetto `window` della pagina, ma può accedere al `DOM` della pagina e non è soggetto a `CSP`
 
 ### storageName 🧪
 
-The storage space for `Value`; data under the same `storageName` can be shared and communicated across scripts. This is ScriptCat-specific.
+Lo spazio di archiviazione per `Value`; i dati sotto lo stesso `storageName` possono essere condivisi e comunicati tra script. Specifico di ScriptCat.
 
 ### background
 
-Marks this script as a background script, which needs to run in the background environment. See [Background Script](./background.md#background-script-background) for details.
+Contrassegna questo script come script di background, che deve essere eseguito nell'ambiente di background. Vedi [Script di Background](./background.md#background-script-background) per i dettagli.
 
 ### crontab
 
-Marks the script as a scheduled script, which requires a cron expression value. Only one cron expression can exist, and it runs on that schedule in the background environment. See [Scheduled Script](./background.md#scheduled-script-crontab) for details.
+Contrassegna lo script come script pianificato, che richiede un valore di espressione cron. Può esistere solo un'espressione cron e viene eseguita secondo quella pianificazione nell'ambiente di background. Vedi [Script Pianificato](./background.md#scheduled-script-crontab) per i dettagli.
 
 ### match
 
-Only URLs matched by `match` will run the script, following [Match patterns](https://developer.chrome.com/docs/extensions/mv3/match_patterns/). In `match`, `*` is a wildcard, `tld` matches the top-level domain, and a domain starting with `*.` will also match `xxx.com`:
+Solo le URL che corrispondono a `match` eseguiranno lo script, seguendo i [Pattern di Corrispondenza](https://developer.chrome.com/docs/extensions/v3/match_patterns/). In `match`, `*` è un carattere jolly, `tld` corrisponde al dominio di livello superiore, e un dominio che inizia con `*.` corrisponderà anche a `xxx.com`:
 
-| Value                             | Correct examples                                                                                                                          | Incorrect examples                          |
-| --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
-| `http://scriptcat.org/doc/match`  | `http://scriptcat.org/doc/match`                                                                                                            | `http://scriptcat.org/doc/runAt`         |
-| `*://*/param?*`                   | `https://scriptcat.org/param` \| `http://scriptcat.org/param?search=tampermonkey`                                                            | `https://scriptcat.org/test/param`       |
-| `*://*/prefix*suffix`             | `http://scriptcat.org/prefix/suffix` \| `http://scriptcat.org/prefix/mid/suffix` \| `http://scriptcat.org/prefixsuffix`                      | `http://scriptcat.org/prefix/suffix/end` |
-| `http*://scriptcat.org/*`         | `https://scriptcat.org/` \| `https://scriptcat.org/doc` \| `http://scriptcat.org/doc/match` \| `http://scriptcat.org/param?search=tampermonkey` | `https://doc.scriptcat.org/`            |
-| `http*://scriptcat.org/doc/*`     | `https://scriptcat.org/doc` \| `http://scriptcat.org/doc/match`                                                                              | `http://scriptcat.org/param?search=tampermonkey` |
-| `http*://scriptcat.tld/doc/*`     | `https://scriptcat.cn/doc` \| `http://scriptcat.net.cn/doc/match`                                                                            | `http://google.com/param?search=tampermonkey` |
-| `http*://*.scriptcat.org/doc/*`   | `https://scriptcat.cn/doc` \| `http://www.scriptcat.net.cn/doc/match`                                                                        | `http://google.com/param?search=tampermonkey` |
+| Valore | Esempi corretti | Esempi errati |
+|---|---|---|
+| `http://scriptcat.org/doc/match` | `http://scriptcat.org/doc/match` | `http://scriptcat.org/doc/runAt` |
+| `*://*/param?*` | `https://scriptcat.org/param` \| `http://scriptcat.org/param?search=tampermonkey` | `https://scriptcat.org/test/param` |
+| `http*://scriptcat.org/*` | `https://scriptcat.org/` \| `https://scriptcat.org/doc` | `https://doc.scriptcat.org/` |
 
 ### include
 
-Supports `\*` for fuzzy matching, allowing non-standard URLs
+Supporta `*` per la corrispondenza fuzzy, permettendo URL non standard
 
 ### exclude
 
-URLs that should not match; uses the same expression syntax as `include`
+URL che non dovrebbero corrispondere; usa la stessa sintassi di `include`
 
 ### grant
 
-Requests API permission — an API can only be called once it has been requested. See the permission list at: [API Documentation](./api.md) and [CAT API Documentation](./cat-api.md).
+Richiede il permesso API — un'API può essere chiamata solo una volta che è stata richiesta. Vedi la lista dei permessi in: [Documentazione API](./api.md) e [Documentazione CAT API](./cat-api.md).
 
-Two special values:
+Due valori speciali:
 
-- **none**: the script does not run in the sandbox environment, but directly in the page environment. In this environment, no GM APIs are available, but the page's `window` object can be accessed directly.
-- **unsafeWindow**: in the sandbox environment, if you need to access the page's `window` object, use `unsafeWindow` to do so. (Tampermonkey doesn't require declaring this — it's kept only for compatibility, which admittedly isn't very clean.)
+- **none**: lo script non viene eseguito nell'ambiente sandbox, ma direttamente nell'ambiente della pagina. In questo ambiente, non sono disponibili le API GM, ma l'oggetto `window` della pagina può essere accessed direttamente.
+- **unsafeWindow**: nell'ambiente sandbox, se hai bisogno di accedere all'oggetto `window` della pagina, usa `unsafeWindow`. (Tampermonkey non richiede di dichiararlo — è mantenuto solo per compatibilità.)
 
 ### connect
 
-Requests access permission for a site; see `GM_cookie` and `GM_xmlhttpRequest`. `GM_download` in `native` mode also honors `@connect` (undeclared hosts trigger a confirmation prompt, unlike Tampermonkey)
+Richiede il permesso di accesso per un sito; vedi `GM_cookie` e `GM_xmlhttpRequest`. `GM_download` in modalità `native` riconosce anche `@connect` (gli host non dichiarati attivano una conferma).
 
 ### resource
 
-Includes a resource file. After declaring `@resource`, you can use `GM_getResourceText`/`GM_getResourceURL` to retrieve the information.
+Include un file risorsa. Dopo aver dichiarato `@resource`, puoi usare `GM_getResourceText`/`GM_getResourceURL` per recuperare le informazioni.
 
 ```js
 // @resource icon https://bbs.tampermonkey.net.cn/favicon.ico
 // @resource html https://bbs.tampermonkey.net.cn/
 // @resource xml https://bbs.tampermonkey.net.cn/sitemap.xml
-// Adding resource integrity verification
+// Aggiungere verifica integrità risorsa
 // @resource icon https://bbs.tampermonkey.net.cn/favicon.ico#md5-xxx,sha256-xxx
 ```
 
 ### require
 
-Includes an external JS file; supports [resource integrity verification](#resource-integrity-verification)
+Include un file JS esterno; supporta la [verifica integrità risorsa](#verifica-integrità-risorsa)
 
 ### require-css
 
-Includes an external CSS file; supports [resource integrity verification](#resource-integrity-verification)
+Include un file CSS esterno; supporta la [verifica integrità risorsa](#verifica-integrità-risorsa)
 
 ### noframes
 
-Marks the script as not running inside a `<frame>`
+Contrassegna lo script per non essere eseguito all'interno di un `<frame>`
 
 ### definition
 
-The reference address of a `.d.ts` file, enabling editor auto-completion hints
+L'indirizzo di riferimento di un file `.d.ts`, abilitando i suggerimenti di autocompletamento dell'editor
 
 ### antifeature
 
-This is related to the script marketplace; unwelcome features need to be flagged with this description value, for example:
+Questo è collegato al marketplace degli script; le funzionalità indesiderate devono essere contrassegnate con questo valore di descrizione:
 
 ```js
-// @antifeature ads This script has ads
-// @antifeature referral-link This script modifies or redirects to the author's referral link
+// @antifeature ads Questo script ha pubblicità
+// @antifeature referral-link Questo script modifica o reindirizza al link di riferimento dell'autore
 ```
 
-## Additional Description Values
+## Valori di Descrizione Aggiuntivi
 
 ### license
 
-The current script's open-source license
+La licenza open-source dello script attuale
 
 ### updateURL
 
-Update checking requires the remote script to have a `@version` tag for this to take effect.
+La verifica degli aggiornamenti richiede che lo script remoto abbia un tag `@version`.
 
-The link the script uses to check for updates; if not set, it defaults to the link's `user.js => meta.js`, or the current link if there's no `user.js`.
+Il link che lo script usa per verificare gli aggiornamenti; se non impostato, per impostazione predefinita è `user.js => meta.js` del link, o il link attuale se non c'è `user.js`.
 
-If `@updateURL` is configured, `@downloadURL` must also be configured for `@updateURL` to take effect.
+Se `@updateURL` è configurato, anche `@downloadURL` deve essere configurato affinché `@updateURL` funzioni.
 
 ### downloadURL
 
-The download address for the script update
+L'indirizzo di download per l'aggiornamento dello script
 
 ### supportURL
 
-Support site, bug report page
+Sito di supporto, pagina di segnalazione bug
 
 ### homepage, homepageURL, website
 
-Script homepage
+Homepage dello script
 
 ### source
 
-Script source code page
+Pagina del codice sorgente dello script
 
 ### icon, iconURL, defaulticon
 
-Script icon
+Icona dello script
 
 ### icon64, icon64URL
 
-64x64-sized script icon
+Icona dello script 64x64
 
-### copyright
+### Note
 
-Script copyright information
+### Verifica Integrità Risorsa
 
-### tag
+- Usa md5, sha1, sha256, sha384 o sha512 per verificare che le risorse non siano state manomesse. Più metodi di verifica possono essere separati con `;` o `,`.
+- Secondo i [recomandazioni W3C](https://w3c.github.io/webappsec-subresource-integrity/#hash-collision-attacks), md5 e sha1 non sono raccomandati; usa sha384 o un algoritmo hash più forte.
 
-Script tags, separated by commas or spaces
-
-### compatible
-
-Compatibility information shown on GreasyFork
-
-### scriptUrl
-
-The user script URL referenced by a subscription script
-
-### unwrap
-
-Makes the user script bypass sandbox wrapping and be injected and executed directly in the page's native global scope. The script can directly access and modify the page's real global variables, but will not be able to use user script privileged APIs such as `GM.*`. Commonly used in scenarios that require deep interaction with native page scripts, or when migrating an existing regular page script.
-
-### cloudCat
-
-Marks the script as exportable to a CloudCat cloud script package (SC only)
-
-### cloudServer
-
-The CloudCat cloud service used by the script
-
-### exportValue
-
-Script storage values to export when exporting as a cloud script
-
-### exportCookie
-
-Cookies to export when exporting as a cloud script
-
-### Notes
-
-### Resource Integrity Verification
-
-- Use md5, sha1, sha256, sha384, or sha512 to verify resources against tampering. Multiple verification methods can be separated with `;` or `,`.
-- Per [W3C recommendations](https://w3c.github.io/webappsec-subresource-integrity/#hash-collision-attacks), md5 and sha1 are not recommended; use sha384 or a stronger hash algorithm instead.
-
-For example:
+Esempio:
 
 ```js
 // @require https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js#md5-d55836f30c097da753179f82fa6f108f,sha256-a476ab8560837a51938aa6e1720c8be87c2862b6221690e9de7ffac113811a90

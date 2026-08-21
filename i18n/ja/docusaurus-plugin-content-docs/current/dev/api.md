@@ -1,20 +1,20 @@
 ---
-title: API Documentation
+title: API ドキュメント
 ---
 
-## Overview
+## 概要
 
-This extension's API definitions are based on the [Tampermonkey documentation](https://www.tampermonkey.net/documentation.php). Due to time and effort constraints, only part of the API has been implemented so far, and it will keep iterating. Any API that this extension extends or that differs from the original GM API is specially marked in the documentation (using a `*`). Some APIs also provide a synchronous-style counterpart following the rule `GM.*` — see the documentation content for details.
+この拡張機能の API 定義は [Tampermonkey ドキュメント](https://www.tampermonkey.net/documentation.php) に基づいています。時間と労力の制約により、現在は一部の API のみが実装されており、今後も継続的に改善されます。この拡張機能が拡張する API や、元の GM API と異なる API はドキュメントで特別にマークされています（`*` を使用）。一部の API は `GM.*` のルールに従った同期版も提供しています。詳細はドキュメント本文を参照してください。
 
-For the detailed API definitions, see `scriptcat.d.ts` or the built-in editor hints, as the documentation may not always be up to date. For APIs specific to this extension, see the [CatApi Documentation](cat-api.md).
+詳細な API 定義については `scriptcat.d.ts` またはビルトインエディタのヒントを参照してください。ドキュメントが常に最新ではない場合があります。この拡張機能固有の API については [CatApi ドキュメント](cat-api.md) を参照してください。
 
-You can also find related examples in the [example directory](https://github.com/scriptscat/scriptcat/tree/main/example).
+関連する例は [example ディレクトリ](https://github.com/scriptscat/scriptcat/tree/main/example) でも確認できます。
 
-## Definitions
+## 定義
 
 ### GM_info
 
-Gets information about the script, including metadata and runtime environment parameters. Commonly used fields include `scriptHandler`, `version`, `scriptMetaStr`, `scriptUpdateURL`, `downloadMode`, and more. See `scriptcat.d.ts` for the detailed (though not exhaustive) definition.
+スクリプトに関する情報を取得します。メタデータやランタイム環境パラメータが含まれます。よく使用されるフィールドには `scriptHandler`、`version`、`scriptMetaStr`、`scriptUpdateURL`、`downloadMode` などがあります。詳細（完全ではない）な定義は `scriptcat.d.ts` を参照してください。
 
 ```js
 console.log(GM_info.scriptHandler);
@@ -22,11 +22,11 @@ console.log(GM_info.version);
 console.log(GM_info.scriptMetaStr);
 ```
 
-* `sandboxMode` currently only has the value `raw`. `runAt` is not supported. `userAgentData` is supported, but may not exactly match Tampermonkey.
+* `sandboxMode` は現在 `raw` のみの値です。`runAt` はサポートされていません。`userAgentData` はサポートされていますが、Tampermonkey と完全に一致するとは限りません。
 
 ### GM_log \*
 
-Logging function. A background script's logs can be viewed in the dashboard's run log (click the run status column). Compared to Tampermonkey, a log `level` has been added.
+ログ関数。バックグラウンドスクリプトのログはダッシュボードの実行ログで確認できます（実行状態列をクリック）。Tampermonkey と比較して、ログ `level` が追加されています。
 
 ```typescript
 declare function GM_log(message: string, level?: GMTypes.LoggerLevel): void;
@@ -42,14 +42,14 @@ GM_log("debug info", "debug");
 
 ### GM_get/set/deleteValue
 
-Gets or sets a value in storage. Data under the same [**storageName**](meta.md#storagename-) can be shared and synced in real time.
+ストレージの値を取得または設定します。同じ [**storageName**](meta.md#storagename-) 下のデータは共有され、リアルタイムで同期されます。
 
 ```typescript
-// Add data — note that data can only be one of bool/string/number/object; you cannot store a class instance
+// データを追加 — データは bool/string/number/object のいずれかのみで、クラスインスタンスは保存できません
 declare function GM_setValue(name: string, value: any): void;
-// Get data
+// データを取得
 declare function GM_getValue(name: string, defaultValue?: any): any | undefined;
-// Delete data; getting it again returns undefined or defaultValue
+// データを削除。再取得すると undefined または defaultValue が返されます
 declare function GM_deleteValue(name: string): void;
 ```
 
@@ -59,13 +59,13 @@ const v = GM_getValue("foo", 0);
 GM_deleteValue("foo");
 ```
 
-#### Note: When `GM_setValue` is called with `undefined`, ScriptCat deletes that key, unlike Tampermonkey/GreaseMonkey, which stores `undefined` as the value.
+#### 注意: `GM_setValue` に `undefined` を渡した場合、Tampermonkey/GreaseMonkey が `undefined` を値として保存するのとは異なり、ScriptCat はそのキーを削除します。
 
-#### Note: Because data operations are asynchronous, calling `window.close()` immediately after `GM_setValue` or `GM_deleteValue` may prevent the data from being correctly updated. It's recommended to use `await GM.setValue` or `await GM.deleteValue` to ensure the data operation completes.
+#### 注意: データ操作は非同期であるため、`GM_setValue` や `GM_deleteValue` の直後に `window.close()` を呼び出すと、データが正しく更新されない場合があります。データ操作の完了を保証するには `await GM.setValue` または `await GM.deleteValue` の使用を推奨します。
 
 ### GM_listValues
 
-Lists all keys.
+すべてのキーを一覧表示します。
 
 ```typescript
 declare function GM_listValues(): string[];
@@ -77,36 +77,36 @@ console.log(GM_listValues());
 
 ### GM_setValues / GM_getValues / GM_deleteValues \*
 
-Batch get/set APIs (extension).
+バッチ取得/設定 API（拡張機能）。
 
 ```typescript
-// Sets multiple values; values is an object whose keys are the value names and whose values are the value contents
+// 複数の値を設定。values はキーが値名、値が内容のオブジェクトです
 declare function GM_setValues(values: { [key: string]: any }): void;
-// Gets multiple values; if keysOrDefaults is an object, its values are used as the defaults
+// 複数の値を取得。keysOrDefaults がオブジェクトの場合、その値がデフォルトとして使用されます
 declare function GM_getValues(keysOrDefaults: { [key: string]: any } | string[] | null | undefined): { [key: string]: any };
-// Deletes multiple values; names is an array of strings
+// 複数の値を削除。names は文字列の配列です
 declare function GM_deleteValues(names: string[]): void;
 ```
 
 ```js
-// Batch set
+// バッチセット
 GM_setValues({ a: 1, b: 2 });
-// Batch get (returns the default if not present)
+// バッチ取得（存在しない場合はデフォルトを返す）
 const { a, b, c = 3 } = GM_getValues({ a: 0, b: 0, c: 3 });
-// Batch delete
+// バッチ削除
 GM_deleteValues(["a", "b"]);
 ```
 
-#### Note: Because data operations are asynchronous, calling `window.close()` immediately after `GM_setValues` or `GM_deleteValues` may prevent the data from being correctly updated. It's recommended to use `await GM.setValues` or `await GM.deleteValues` to ensure the data operation completes.
+#### 注意: データ操作は非同期であるため、`GM_setValues` や `GM_deleteValues` の直後に `window.close()` を呼び出すと、データが正しく更新されない場合があります。データ操作の完了を保証するには `await GM.setValues` または `await GM.deleteValues` の使用を推奨します。
 
 ### GM_add/removeValueChangeListener
 
-> `tabid` was removed after 0.17.0-alpha — see [GM_cookie](#gm_cookie-) for details.
+> `tabid` は 0.17.0-alpha 以降削除されました。詳細は [GM_cookie](#gm_cookie-) を参照してください。
 
-Listens for changes to a value. `add` returns a listener id, and `remove` can be used to cancel the listener. This method can be used to implement simple communication; using [**storageName**](meta.md#storagename-) enables cross-script communication.
+値の変更をリッスンします。`add` はリッスン ID を返し、`remove` でリッスンをキャンセルできます。このメソッドはシンプルな通信を実装するために使用でき、[**storageName**](meta.md#storagename-) を使用するとスクリプト間の通信が可能になります。
 
 ```typescript
-// tabid is only present when listening from a background script
+// tabid はバックグラウンドスクリプトからリッスンする場合のみ存在します
 type ValueChangeListener = (
   name: string,
   oldValue: any,
@@ -132,12 +132,12 @@ GM_removeValueChangeListener(id);
 
 ### GM_getResourceText/GM_getResourceURL
 
-Gets resource information declared with `@resource`.
+`@resource` で宣言されたリソース情報を取得します。
 
 ```typescript
-// GM_getResourceText gets the resource's text data; byte-type data such as images returns an empty string — use GM_getResourceURL for those instead
+// GM_getResourceText はリソースのテキストデータを取得します。画像などのバイト型データは空文字列を返します — その場合は GM_getResourceURL を使用してください
 declare function GM_getResourceText(name: string): string | undefined;
-// GM_getResourceURL gets base64-encoded data; a blob URL can also be obtained via the second parameter
+// GM_getResourceURL は base64 エンコードされたデータを取得します。第二パラメータで blob URL も取得できます
 declare function GM_getResourceURL(name: string, isBlobUrl?: boolean): string | undefined;
 ```
 
@@ -148,7 +148,7 @@ const imgUrl = GM_getResourceURL("logo");
 
 ### GM_addElement
 
-Inserts an element into the page. Can bypass CSP restrictions.
+ページに要素を挿入します。CSP 制限を迂回できます。
 
 ```typescript
 declare function GM_addElement(tag: string, attributes: any): HTMLElement;
@@ -156,15 +156,15 @@ declare function GM_addElement(parentNode: Element, tag: string, attrs: any): HT
 ```
 
 ```js
-// Insert a script
+// スクリプトを挿入
 GM_addElement("script", { src: "https://example.com/app.js" });
-// Insert a style
+// スタイルを挿入
 GM_addElement(document.head, "style", { textContent: ".foo{color:blue}" });
 ```
 
 ### GM_addStyle
 
-Adds a style to the page and returns the style DOM node. Can bypass CSP restrictions.
+ページにスタイルを追加し、スタイル DOM ノードを返します。CSP 制限を迂回できます。
 
 ```typescript
 declare function GM_addStyle(css: string): HTMLElement;
@@ -179,7 +179,7 @@ GM_addStyle(`
 
 ### GM_openInTab \*
 
-Opens a new window.
+新しいウィンドウを開きます。
 
 ```typescript
 declare function GM_openInTab(url: string, options: GMTypes.OpenTabOptions): GMTypes.Tab;
@@ -188,83 +188,12 @@ declare function GM_openInTab(url: string): GMTypes.Tab;
 
 declare namespace GMTypes {
   interface OpenTabOptions {
-    /**
-     * Determines whether the new tab gets focus when opened.
-     *
-     * - `true` → the new tab is immediately switched to the foreground.
-     * - `false` → the new tab opens in the background, without stealing focus from the current page.
-     *
-     * Default: true
-     */
     active?: boolean;
-
-    /**
-     * Determines where the new tab is inserted.
-     *
-     * - If a `boolean`:
-     *   - `true` → inserted right after the current tab.
-     *   - `false` → inserted at the end of the window.
-     * - If a `number`:
-     *   - `0` → inserted one position before the current tab.
-     *   - `1` → inserted one position after the current tab.
-     *
-     * Default: true
-     */
     insert?: boolean | number;
-
-    /**
-     * Determines whether the parent tab (i.e. `openerTabId`) is set.
-     *
-     * - `true` → the browser can track which tab opened the child tab,
-     *   which helps some extensions (like tab-tree managers) identify parent/child relationships.
-     *
-     * Default: true
-     */
     setParent?: boolean;
-
-    /**
-     * Whether to open the tab in a private (incognito) window.
-     *
-     * Note: ScriptCat's manifest.json sets `"incognito": "split"`,
-     * so when running in a normal window, tabId/windowId will not be
-     * available, and only the "open a new tab" action can be performed.
-     *
-     * Default: false
-     */
     incognito?: boolean;
-
-    /**
-     * Legacy compatibility field, supported only by Tampermonkey.
-     * Its meaning is the **opposite** of `active`:
-     *
-     * - `true` → equivalent to `active = false` (loads in the background).
-     * - `false` → equivalent to `active = true` (loads in the foreground).
-     *
-     * ⚠️ Not recommended: overlaps with `active` and is easy to confuse.
-     *
-     * Default: false
-     * @deprecated Use `active` instead
-     */
     loadInBackground?: boolean;
-
-    /**
-     * Whether to pin the new tab to the left side of the browser's tab bar.
-     *
-     * - `true` → the new tab is pinned.
-     * - `false` → a regular tab.
-     *
-     * Default: false
-     */
     pinned?: boolean;
-
-    /**
-     * Uses `window.open` to open the new tab instead of `chrome.tabs.create`.
-     * Useful when opening links with certain special protocols, e.g. `vscode://`, `m3u8dl://`.
-     * Other parameters have no effect when using this open method.
-     *
-     * Related: Issue #178 #1043
-     * Default: false
-     */
     useOpen?: boolean;
   }
 
@@ -283,24 +212,16 @@ tab.onclose = () => console.log("closed");
 tab.close();
 ```
 
-### GM_closeInTab
-
-Close a tab opened by `GM_openInTab`.
-
-```typescript
-declare function GM_closeInTab(tabId: string): void;
-```
-
 ### GM_get/saveTab/GM_getTabs
 
-A method for storing data similar to `GM_setValue`, but this method's lifetime is tied to a single browser tab's open→close cycle, and it cannot be used from a background script.
+`GM_setValue` に似たデータ保存方法ですが、このメソッドのライフタイムは単一のブラウザタブのオープン→クローズ サイクルに紐づいており、バックグラウンドスクリプトからは使用できません。
 
 ```typescript
-// Get tab data
+// タブデータを取得
 declare function GM_getTab(callback: (obj: object) => void): void;
-// Save tab data
+// タブデータを保存
 declare function GM_saveTab(obj: object): void;
-// Get all tabs' data
+// すべてのタブのデータを取得
 declare function GM_getTabs(callback: (objs: { [key: number]: object }) => void): void;
 ```
 
@@ -312,10 +233,10 @@ GM_getTabs(tabs => console.log(tabs));
 
 ### GM_registerMenuCommand *
 
-* Registers a menu item that appears in the popup page and the right-click menu; clicking it calls the `listener` function.
-* By default, matching Tampermonkey, menu items with the same displayed text only show once.
-* Specifying an `id` lets you update the menu item.
-* If `name` is an empty string and there is no `listener`, a separator line is added to the right-click menu.
+* ポップアップページと右クリックメニューに表示されるメニューアイテムを登録します。クリックすると `listener` 関数が呼び出されます。
+* デフォルトでは Tampermonkey と同様に、同じ表示テキストのメニューアイテムは1つだけ表示されます。
+* `id` を指定するとメニューアイテムを更新できます。
+* `name` が空文字列で `listener` がない場合、右クリックメニューに区切り線が追加されます。
 
 ```typescript
 function GM_registerMenuCommand(
@@ -325,9 +246,9 @@ function GM_registerMenuCommand(
     | {
         id?: number | string;
         accessKey?: string;
-        autoClose?: boolean; // ScriptCat-specific option; defaults to true, and false keeps the popup menu page open after clicking
-        nested?: boolean; // ScriptCat-specific option; defaults to true, and false raises the browser's right-click menu item from a third-level to a second-level menu
-        individual?: boolean; // ScriptCat-specific option; defaults to false, and true means identical menu items are not merged together
+        autoClose?: boolean; // ScriptCat 固有のオプション。デフォルトは true。false にするとクリック後もポップアップメニューを開いたままにする
+        nested?: boolean; // ScriptCat 固有のオプション。デフォルトは true。false にするとブラウザの右クリックメニューアイテムを3階層目から2階層目に引き上げる
+        individual?: boolean; // ScriptCat 固有のオプション。デフォルトは false。true にすると同じメニューアイテムをマージしない
       }
     | string
 ): number;
@@ -340,7 +261,7 @@ GM_registerMenuCommand("Test Command 02", () => alert("Called 02"), {id: "custom
 
 ### GM_unregisterMenuCommand
 
-Removes a registered menu item by its id.
+ID を指定して登録されたメニューアイテムを削除します。
 
 ```typescript
 declare function GM_unregisterMenuCommand(id: number): void;
@@ -353,7 +274,7 @@ GM_unregisterMenuCommand("custom-id");
 
 ### GM_notification \*
 
-Sends a notification message, providing `progress` and `buttons` capabilities (not supported in Firefox), so a notification can show a progress bar or buttons. Also provides two extra methods, `GM_closeNotification` and `GM_updateNotification` (not supported in Firefox).
+通知メッセージを送信します。`progress` と `buttons` 機能を提供します（Firefox では非対応）。通知にプログレスバーやボタンを表示できます。また、`GM_closeNotification` と `GM_updateNotification` の2つの追加メソッドも提供します（Firefox では非対応）。
 
 [example](https://github.com/scriptscat/scriptcat/blob/main/example/gm_notification.js)
 
@@ -385,7 +306,7 @@ declare namespace GMTypes {
     ondone?: NotificationOnDone;
     progress?: number;
     oncreate?: NotificationOnClick;
-    // At most 2 can exist
+    // 最大2つまで
     buttons?: NotificationButton[];
   }
 
@@ -425,18 +346,17 @@ declare namespace GMTypes {
 GM_notification({ title: "Progress", text: "Loading", progress: 50 });
 ```
 
-#### Note: `GM_closeNotification` and `GM_updateNotification` are ScriptCat-specific. To update a notification, use `tag`.
-
+#### 注意: `GM_closeNotification` と `GM_updateNotification` は ScriptCat 固有です。通知を更新するには `tag` を使用してください。
 
 ```js
 GM_notification({ title: "Progress", text: "Loading", progress: 50, tag: "notification01"});
-GM_notification({ title: "Progress", text: "Done", progress: 100, tag: "notification01"}); // updates the progress
-GM_notification({ title: "Progress", text: "Done", progress: 100, tag: "notification01", timeout: 1}); // closes after 1ms
+GM_notification({ title: "Progress", text: "Done", progress: 100, tag: "notification01"}); // 進捗を更新
+GM_notification({ title: "Progress", text: "Done", progress: 100, tag: "notification01", timeout: 1}); // 1ms 後に閉じる
 ```
 
 ### GM_setClipboard \*
 
-Sets the clipboard. A callback is not yet supported, unlike Tampermonkey.
+クリップボードを設定します。Tampermonkey とは異なり、コールバックはまだサポートされていません。
 
 ```typescript
 declare function GM_setClipboard(
@@ -451,18 +371,9 @@ GM_setClipboard("Hello World", "text");
 
 ### GM_xmlhttpRequest \*
 
-* A cross-origin HTTP request that can bypass CSP, supporting domains declared with `@connect`. Some functionality is missing; the cookie feature is not currently supported in Firefox. User authorization is required for normal access; a host described by `@connect` can skip user authorization.
+* CSP を迂回できるクロスオリジン HTTP リクエスト。`@connect` で宣言されたドメインをサポートします。一部の機能が欠落しています。Cookie 機能は Firefox では現在サポートされていません。通常のアクセスにはユーザー認証が必要です。`@connect` で記述されたホストはユーザー認証をスキップできます。
 
-* `anonymous` and `cookie` are handled differently from Tampermonkey: when `anonymous` is true and `cookie` is present, only the specified cookie is sent, without any other cookies attached.
-
-* Special headers are also supported:
-
-  - user-agent
-  - origin
-  - referer
-  - cookie
-  - host
-  - ...
+* `anonymous` と `cookie` は Tampermonkey と異なる方法で処理されます。`anonymous` が true で `cookie` が存在する場合、指定された cookie のみが送信され、他の cookie は添付されません。
 
 ```typescript
 declare function GM_xmlhttpRequest(details: GMTypes.XHRDetails): GMTypes.AbortHandle<void>;
@@ -498,14 +409,14 @@ declare namespace GMTypes {
     cookie?: string;
     binary?: boolean;
     timeout?: number;
-    responseType?: "text" | "arraybuffer" | "blob" | "json" | "document" | "stream"; // stream is a fairly basic implementation in the current version
+    responseType?: "text" | "arraybuffer" | "blob" | "json" | "document" | "stream";
     overrideMimeType?: string;
     anonymous?: boolean;
     fetch?: boolean;
     user?: string;
     password?: string;
     nocache?: boolean;
-    redirect?: "follow" | "error" | "manual"; // to stay consistent with Tampermonkey, maxRedirects was deprecated after v0.17.0 in favor of redirect, which forces fetch mode
+    redirect?: "follow" | "error" | "manual";
     
     onload?: Listener<XHRResponse>;
     onloadstart?: Listener<XHRResponse>;
@@ -529,9 +440,10 @@ GM_xmlhttpRequest({
 
 ### GM_download
 
-* Downloads a file, with headers and other options configurable; compared to Tampermonkey it also supports cookie and anonymous options. If given a blob URL, it opens the download directly and only fires the `onload` event — this differs from Tampermonkey and exists to support background scripts, which can't otherwise create a download (useful for scenarios like generating reports).
-* Returns a Promise object and provides an `abort()` method.
-* Unlike Tampermonkey, ScriptCat's `native` download mode (the default) honors `@connect`: when the download URL's host is not covered by the script's `@connect` declarations, ScriptCat prompts the user for confirmation before downloading; hosts covered by `@connect` download silently, and blacklisted hosts are always refused. The `browser` download mode is not subject to this check. (In Tampermonkey, `@connect` applies only to `GM_xmlhttpRequest`, not `GM_download`.)
+* ファイルをダウンロードします。ヘッダーとその他のオプションを設定可能。Tampermonkey と比較して、cookie と anonymous オプションもサポートしています。blob URL を渡した場合、直接ダウンロードを開始し、`onload` イベントのみ発火します。これは Tampermonkey とは異なり、バックグラウンドスクリプトをサポートするためのものです。
+
+* Promise オブジェクトを返し、`abort()` メソッドを提供します。
+* Tampermonkey とは異なり、ScriptCat の `native` ダウンロードモード（デフォルト）は `@connect` を認識します。ダウンロード URL のホストがスクリプトの `@connect` 宣言でカバーされていない場合、ScriptCat はダウンロード前にユーザーに確認を促します。`@connect` でカバーされたホストはサイレントにダウンロードされ、ブラックリストされたホストは常に拒否されます。
 
 ```typescript
 declare function GM_download(details: GMTypes.DownloadDetails): GMTypes.AbortHandle<boolean>;
@@ -569,23 +481,23 @@ declare namespace GMTypes {
 ```
 
 ```js
-// Callback form
+// コールバック形式
 const dl = GM_download({ url: "https://example.com/file.zip", name: "file.zip", onload: () => alert("Done") });
 dl.abort();
 ```
 
 ### GM_cookie \*
 
-Asynchronously operates on page cookies, supporting cross-origin, HttpOnly, and partitioned cookies.
+ページのクッキーを非同期で操作します。クロスオリジン、HttpOnly、およびパーティショニングされたクッキーをサポートします。
 
-> After v0.17.0-alpha, the `store` and `tabid` related parameters were removed; ScriptCat now decides whether to get cookies from the incognito or normal window based on the window it's currently in.
+> v0.17.0-alpha 以降、`store` と `tabid` 関連のパラメータは削除されました。ScriptCat は現在のウィンドウに基づいて、プライベートまたは通常のウィンドウからクッキーを取得するかどうかを判断します。
 
-You must declare the operated host with `@connect`, and it requires user authorization to use. While compatible with Tampermonkey's `GM_cookie.list` operation, this isn't recommended, for the sake of consistency.
+操作するホストを `@connect` で宣言する必要があり、使用にはユーザー認証が必要です。Tampermonkey の `GM_cookie.list` 操作と互換性がありますが、一貫性のためにこれは推奨されません。
 
-* `sameSite` is not supported.
+* `sameSite` はサポートされていません。
 
 ```typescript
-// name and domain cannot both be empty
+// name と domain は両方とも空にできません
 declare function GM_cookie(
   action: GMTypes.CookieAction,
   details: GMTypes.CookieDetails,
@@ -619,7 +531,7 @@ declare namespace GMTypes {
   }
 }
 
-// Callback form
+// コールバック形式
 GM_cookie("list", { url: "https://example.com" }, (cookies) => {
   console.log(cookies);
   GM_cookie("set", {
@@ -634,10 +546,10 @@ GM_cookie("list", { url: "https://example.com" }, (cookies) => {
   });
 });
 
-// Promise form
+// Promise 形式
 const cookies = await GM.cookie.list({ url: "https://example.com" });
 await GM.cookie.set({ name: "foo", value: "bar", domain: "example.com" });
 await GM.cookie.delete("foo", { domain: "example.com" });
 ```
 
-**Note**: You must declare the allowed domain in the metadata using `@connect example.com`.
+**注意**: メタデータで `@connect example.com` を使用して許可されたドメインを宣言する必要があります。

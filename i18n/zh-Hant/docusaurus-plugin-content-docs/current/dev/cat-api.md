@@ -1,27 +1,27 @@
 ---
-title: CatApi Documentation
+title: CatApi 文件
 ---
 
-## Overview
+## 概覽
 
-APIs specific to this extension are all defined starting with `CAT_`.
+此擴充功能特有的 API 全部以 `CAT_` 開頭定義。
 
-You can also find related examples in the [example directory](https://github.com/scriptscat/scriptcat/tree/main/example).
+您也可以在 [example 目錄](https://github.com/scriptscat/scriptcat/tree/main/example) 找到相關範例。
 
-## Definitions
+## 定義
 
 ### CAT_setProxy
 
-> Deprecated as of the 0.9.1 stable release; may return in a beta version in the future.
+> 自 0.9.1 穩定版起已棄用；可能在測試版中回歸。
 
-Sets a proxy. Note that this feature will conflict with extensions like Proxy SwitchyOmega. Multiple scripts can use a proxy without conflicting (for example, one script providing Google access and another providing Twitter access).
+設定代理。請注意此功能會與 Proxy SwitchyOmega 等擴充功能衝突。多個腳本可以使用代理而不會衝突。
 
-Please first read up on [PAC](https://developer.mozilla.org/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file) and [Chromium's full URL restrictions in PAC](https://github.com/FelisCatus/SwitchyOmega/wiki/Chromium-Full-URL-Restriction).
+請先閱讀 [PAC](https://developer.mozilla.org/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file) 和 [Chromium 在 PAC 中的完整 URL 限制](https://github.com/FelisCatus/SwitchyOmega/wiki/Chromium-Full-URL-Restriction)。
 
 ```typescript
-declare function CAT_setProxy(rule: CATType.ProxyRule[] | string): void;
+declare function CAT_setProxy(rule: CAT_Types.ProxyRule[] | string): void;
 
-declare namespace CATType {
+declare namespace CAT_Types {
   interface ProxyRule {
     proxyServer: ProxyServer;
     matchUrl: string[];
@@ -37,9 +37,9 @@ declare namespace CATType {
 
 ### CAT_clearProxy
 
-> Deprecated as of the 0.9.1 stable release; may return in a beta version in the future.
+> 自 0.9.1 穩定版起已棄用；可能在測試版中回歸。
 
-Clears the proxy.
+清除代理。
 
 ```typescript
 declare function CAT_clearProxy(): void;
@@ -47,11 +47,11 @@ declare function CAT_clearProxy(): void;
 
 ### CAT_click
 
-> Deprecated as of the 0.9.1 stable release; may return in a beta version in the future.
+> 自 0.9.1 穩定版起已棄用；可能在測試版中回歸。
 
-A real click. This API is experimental and may change or be removed.
+真實點擊。此 API 為實驗性，可能會變更或被移除。
 
-Implemented using [Input.dispatchMouseEvent](https://chromedevtools.github.io/devtools-protocol/tot/Input/#method-dispatchMouseEvent). Make sure the element is within the visible area, and that the coordinates are relative to the window's position.
+使用 [Input.dispatchMouseEvent](https://chromedevtools.github.io/devtools-protocol/tot/Input/#method-dispatchMouseEvent) 實作。請確保元素位於可見區域內，且座標相對於視窗位置。
 
 ```ts
 declare function CAT_click(x: number, y: number): void;
@@ -59,7 +59,7 @@ declare function CAT_click(x: number, y: number): void;
 
 ### CAT_userConfig
 
-You can call this API to open the script's [UserConfig](./config.md) page.
+您可以呼叫此 API 來開啟腳本的 [UserConfig](./config.md) 頁面。
 
 ```ts
 declare function CAT_userConfig(): void;
@@ -67,21 +67,18 @@ declare function CAT_userConfig(): void;
 
 ### CAT_fileStorage
 
-Controls the storage system configured by the manager. An `app/uuid` directory will be created for this API to use; if the `baseDir` parameter is specified, it will be used as the base directory instead.
+控制管理器設定的儲存系統。此 API 會建立 `app/uuid` 目錄。
 
 ```ts
 /**
- * Controls the storage system configured by the manager. An app/uuid directory will be created for this API to use; if the baseDir parameter is specified, it will be used as the base directory instead.
- * Uploads overwrite files with the same name by default.
- * @param action Operation type: list lists all files in the given directory, upload uploads a file, download downloads a file, delete deletes a file, config opens the config page. move/mkdir and similar operations are not yet provided.
+ * 控制管理器設定的儲存系統。
+ * @param action 操作類型：list、upload、download、delete、config
  * @param details
  */
 declare function CAT_fileStorage(
   action: "list",
   details: {
-    // File path
     path?: string;
-    // Base directory; if not set, the script's uuid is used as the directory
     baseDir?: string;
     onload?: (files: CATType.FileStorageFileInfo[]) => void;
     onerror?: (error: CATType.FileStorageError) => void;
@@ -90,11 +87,9 @@ declare function CAT_fileStorage(
 declare function CAT_fileStorage(
   action: "download",
   details: {
-    file: CATType.FileStorageFileInfo; // Some platforms require the file's hash, so the file info must be passed in
+    file: CATType.FileStorageFileInfo;
     onload: (data: Blob) => void;
-    // onprogress?: (progress: number) => void;
     onerror?: (error: CATType.FileStorageError) => void;
-    // public?: boolean;
   }
 ): void;
 declare function CAT_fileStorage(
@@ -103,20 +98,16 @@ declare function CAT_fileStorage(
     path: string;
     onload?: () => void;
     onerror?: (error: CATType.FileStorageError) => void;
-    // public?: boolean;
   }
 ): void;
 declare function CAT_fileStorage(
   action: "upload",
   details: {
     path: string;
-    // Base directory; if not set, the script's uuid is used as the directory
     baseDir?: string;
     data: Blob;
     onload?: () => void;
-    // onprogress?: (progress: number) => void;
     onerror?: (error: CATType.FileStorageError) => void;
-    // public?: boolean;
   }
 ): void;
 declare function CAT_fileStorage(action: "config"): void;
@@ -124,70 +115,12 @@ declare function CAT_fileStorage(action: "config"): void;
 
 ### CAT_scriptLoaded
 
-When using `early-start`, you can use this function to determine whether the script has fully loaded.
+使用 `early-start` 時，您可以使用此函數來判斷腳本是否已完全載入。
 
 ```js
-function CAT_scriptLoaded(): Promise<void>;
+function CAT_ScriptLoaded(): Promise<void>;
 
 CAT_scriptLoaded().then(() => {
-  console.log("Script has fully loaded");
+  console.log("腳本已完全載入");
 });
 ```
-
-### CAT_createBlobUrl
-
-Create a blob URL from a Blob object. ScriptCat manages the URL lifecycle.
-
-```typescript
-declare function CAT_createBlobUrl(blob: Blob): Promise<string>;
-```
-
-### CAT_fetchBlob
-
-Fetch a blob URL and return the Blob data. Helper for `GM_xmlhttpRequest` stream responses.
-
-```typescript
-declare function CAT_fetchBlob(url: string): Promise<Blob>;
-```
-
-### CAT_fetchDocument
-
-Fetch a URL and parse it as a Document (in the content page context if available).
-
-```typescript
-declare function CAT_fetchDocument(url: string): Promise<Document | undefined>;
-```
-
-### CAT_registerMenuInput
-
-Register a menu item with an input field, allowing the user to enter a value. The callback receives the user's input.
-
-```typescript
-declare function CAT_registerMenuInput(
-  name: string,
-  listener?: (inputValue?: any) => void,
-  options_or_accessKey?:
-    | {
-        id?: number | string;
-        accessKey?: string;
-        autoClose?: boolean;
-        nested?: boolean;
-        individual?: boolean;
-        /** Input widget type. */
-        inputType?: "text" | "number" | "boolean";
-        /** Dialog title (for the input popup). */
-        title?: string;
-        /** Label shown next to the input. */
-        inputLabel?: string;
-        /** Default value for the input. */
-        inputDefaultValue?: string | number | boolean;
-        /** Placeholder text. */
-        inputPlaceholder?: string;
-      }
-    | string
-): number;
-
-/** Unregister a menu input (alias of `GM_unregisterMenuCommand`). */
-declare const CAT_unregisterMenuInput: typeof GM_unregisterMenuCommand;
-```
-

@@ -1,27 +1,27 @@
 ---
-title: CatApi Documentation
+title: Tài liệu CatApi
 ---
 
-## Overview
+## Tổng quan
 
-APIs specific to this extension are all defined starting with `CAT_`.
+Các API đặc thù của tiện ích mở rộng này đều được định nghĩa với tiền tố `CAT_`.
 
-You can also find related examples in the [example directory](https://github.com/scriptscat/scriptcat/tree/main/example).
+Bạn cũng có thể tìm các ví dụ liên quan trong [thư mục ví dụ](https://github.com/scriptscat/scriptcat/tree/main/example).
 
-## Definitions
+## Định nghĩa
 
 ### CAT_setProxy
 
-> Deprecated as of the 0.9.1 stable release; may return in a beta version in the future.
+> Đã lỗi thời từ phiên bản ổn định 0.9.1; có thể quay lại trong phiên bản beta.
 
-Sets a proxy. Note that this feature will conflict with extensions like Proxy SwitchyOmega. Multiple scripts can use a proxy without conflicting (for example, one script providing Google access and another providing Twitter access).
+Đặt proxy. Lưu ý rằng chức năng này sẽ xung đột với các tiện ích mở rộng như Proxy SwitchyOmega. Nhiều script có thể sử dụng proxy mà không xung đột.
 
-Please first read up on [PAC](https://developer.mozilla.org/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file) and [Chromium's full URL restrictions in PAC](https://github.com/FelisCatus/SwitchyOmega/wiki/Chromium-Full-URL-Restriction).
+Vui lòng đọc trước về [PAC](https://developer.mozilla.org/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file) và [các hạn chế URL đầy đủ của Chromium trong PAC](https://github.com/FelisCatus/SwitchyOmega/wiki/Chromium-Full-URL-Restriction).
 
 ```typescript
-declare function CAT_setProxy(rule: CATType.ProxyRule[] | string): void;
+declare function CAT_setProxy(rule: CAT_Types.ProxyRule[] | string): void;
 
-declare namespace CATType {
+declare namespace CAT_Types {
   interface ProxyRule {
     proxyServer: ProxyServer;
     matchUrl: string[];
@@ -37,9 +37,9 @@ declare namespace CATType {
 
 ### CAT_clearProxy
 
-> Deprecated as of the 0.9.1 stable release; may return in a beta version in the future.
+> Đã lỗi thời từ phiên bản ổn định 0.9.1; có thể quay lại trong phiên bản beta.
 
-Clears the proxy.
+Xóa proxy.
 
 ```typescript
 declare function CAT_clearProxy(): void;
@@ -47,11 +47,11 @@ declare function CAT_clearProxy(): void;
 
 ### CAT_click
 
-> Deprecated as of the 0.9.1 stable release; may return in a beta version in the future.
+> Đã lỗi thời từ phiên bản ổn định 0.9.1; có thể quay lại trong phiên bản beta.
 
-A real click. This API is experimental and may change or be removed.
+Một lần nhấp thực sự. API này mang tính thử nghiệm và có thể thay đổi hoặc bị xóa.
 
-Implemented using [Input.dispatchMouseEvent](https://chromedevtools.github.io/devtools-protocol/tot/Input/#method-dispatchMouseEvent). Make sure the element is within the visible area, and that the coordinates are relative to the window's position.
+Được triển khai bằng [Input.dispatchMouseEvent](https://chromedevtools.github.io/devtools-protocol/tot/Input/#method-dispatchMouseEvent). Đảm bảo rằng phần tử nằm trong vùng hiển thị và tọa độ tương đối so với vị trí cửa sổ.
 
 ```ts
 declare function CAT_click(x: number, y: number): void;
@@ -59,7 +59,7 @@ declare function CAT_click(x: number, y: number): void;
 
 ### CAT_userConfig
 
-You can call this API to open the script's [UserConfig](./config.md) page.
+Bạn có thể gọi API này để mở trang [UserConfig](./config.md) của script.
 
 ```ts
 declare function CAT_userConfig(): void;
@@ -67,21 +67,18 @@ declare function CAT_userConfig(): void;
 
 ### CAT_fileStorage
 
-Controls the storage system configured by the manager. An `app/uuid` directory will be created for this API to use; if the `baseDir` parameter is specified, it will be used as the base directory instead.
+Điều khiển hệ thống lưu trữ được cấu hình bởi manager. Thư mục `app/uuid` sẽ được tạo cho API này.
 
 ```ts
 /**
- * Controls the storage system configured by the manager. An app/uuid directory will be created for this API to use; if the baseDir parameter is specified, it will be used as the base directory instead.
- * Uploads overwrite files with the same name by default.
- * @param action Operation type: list lists all files in the given directory, upload uploads a file, download downloads a file, delete deletes a file, config opens the config page. move/mkdir and similar operations are not yet provided.
+ * Điều khiển hệ thống lưu trữ được cấu hình bởi manager.
+ * @param action Loại thao tác: list, upload, download, delete, config
  * @param details
  */
 declare function CAT_fileStorage(
   action: "list",
   details: {
-    // File path
     path?: string;
-    // Base directory; if not set, the script's uuid is used as the directory
     baseDir?: string;
     onload?: (files: CATType.FileStorageFileInfo[]) => void;
     onerror?: (error: CATType.FileStorageError) => void;
@@ -90,11 +87,9 @@ declare function CAT_fileStorage(
 declare function CAT_fileStorage(
   action: "download",
   details: {
-    file: CATType.FileStorageFileInfo; // Some platforms require the file's hash, so the file info must be passed in
+    file: CATType.FileStorageFileInfo;
     onload: (data: Blob) => void;
-    // onprogress?: (progress: number) => void;
     onerror?: (error: CATType.FileStorageError) => void;
-    // public?: boolean;
   }
 ): void;
 declare function CAT_fileStorage(
@@ -103,20 +98,16 @@ declare function CAT_fileStorage(
     path: string;
     onload?: () => void;
     onerror?: (error: CATType.FileStorageError) => void;
-    // public?: boolean;
   }
 ): void;
 declare function CAT_fileStorage(
   action: "upload",
   details: {
     path: string;
-    // Base directory; if not set, the script's uuid is used as the directory
     baseDir?: string;
     data: Blob;
     onload?: () => void;
-    // onprogress?: (progress: number) => void;
     onerror?: (error: CATType.FileStorageError) => void;
-    // public?: boolean;
   }
 ): void;
 declare function CAT_fileStorage(action: "config"): void;
@@ -124,70 +115,12 @@ declare function CAT_fileStorage(action: "config"): void;
 
 ### CAT_scriptLoaded
 
-When using `early-start`, you can use this function to determine whether the script has fully loaded.
+Khi sử dụng `early-start`, bạn có thể sử dụng hàm này để xác định xem script đã tải hoàn toàn chưa.
 
 ```js
-function CAT_scriptLoaded(): Promise<void>;
+function CAT_ScriptLoaded(): Promise<void>;
 
 CAT_scriptLoaded().then(() => {
-  console.log("Script has fully loaded");
+  console.log("Script đã tải hoàn toàn");
 });
 ```
-
-### CAT_createBlobUrl
-
-Create a blob URL from a Blob object. ScriptCat manages the URL lifecycle.
-
-```typescript
-declare function CAT_createBlobUrl(blob: Blob): Promise<string>;
-```
-
-### CAT_fetchBlob
-
-Fetch a blob URL and return the Blob data. Helper for `GM_xmlhttpRequest` stream responses.
-
-```typescript
-declare function CAT_fetchBlob(url: string): Promise<Blob>;
-```
-
-### CAT_fetchDocument
-
-Fetch a URL and parse it as a Document (in the content page context if available).
-
-```typescript
-declare function CAT_fetchDocument(url: string): Promise<Document | undefined>;
-```
-
-### CAT_registerMenuInput
-
-Register a menu item with an input field, allowing the user to enter a value. The callback receives the user's input.
-
-```typescript
-declare function CAT_registerMenuInput(
-  name: string,
-  listener?: (inputValue?: any) => void,
-  options_or_accessKey?:
-    | {
-        id?: number | string;
-        accessKey?: string;
-        autoClose?: boolean;
-        nested?: boolean;
-        individual?: boolean;
-        /** Input widget type. */
-        inputType?: "text" | "number" | "boolean";
-        /** Dialog title (for the input popup). */
-        title?: string;
-        /** Label shown next to the input. */
-        inputLabel?: string;
-        /** Default value for the input. */
-        inputDefaultValue?: string | number | boolean;
-        /** Placeholder text. */
-        inputPlaceholder?: string;
-      }
-    | string
-): number;
-
-/** Unregister a menu input (alias of `GM_unregisterMenuCommand`). */
-declare const CAT_unregisterMenuInput: typeof GM_unregisterMenuCommand;
-```
-

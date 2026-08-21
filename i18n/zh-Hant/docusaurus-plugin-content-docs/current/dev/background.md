@@ -1,264 +1,181 @@
 ---
-title: Background Script
+title: 背景腳本
 ---
 
-Background scripts are suited to scripts that need to keep running continuously. Background scripts are a ScriptCat-specific script type; they run in a sandbox and cannot access the DOM. They can be developed using the same GM APIs as Tampermonkey, and compatibility notes are called out in the documentation.
+背景腳本適用於需要持續執行的腳本。背景腳本是 ScriptCat 特有的腳本類型；它們在沙箱中執行，無法存取 DOM。可以使用與 Tampermonkey 相同的 GM API 開發，相容性說明會在文件中特別標註。
 
-## Background Script (`@background`)
+## 背景腳本（`@background`）
 
-A background script is declared with the `@background` attribute. It lets the script keep running in the background after the script is enabled or the browser starts.
+背景腳本使用 `@background` 屬性宣告。它讓腳本在啟用後或瀏覽器啟動後，能在背景中持續執行。
 
-## Scheduled Script (`@crontab`)
+## 排程腳本（`@crontab`）
 
-> A scheduled script is a kind of background script suited to tasks that need to **run repeatedly on a time cycle**.
+> 排程腳本是一種背景腳本，適用於需要**按照時間週期重複執行**的任務。
 
-A scheduled script is declared with the `@crontab` attribute. It supports minute-level and second-level scheduling, and provides ScriptCat's extended syntax `once` / `once(...)` to avoid running more than once within the same time cycle.
+排程腳本使用 `@crontab` 屬性宣告。支援分鐘級和秒級排程，並提供 ScriptCat 的擴展語法 `once` / `once(...)` 來避免在同一時間週期內執行多次。
 
-⚠️ Notes:
+⚠️ 注意事項：
 
-* In a single script, **only the first `@crontab` takes effect**
-* It's recommended that the script's **single execution time + retry time** not exceed the cron interval, otherwise executions may overlap
+* 在單一脚本中，**只有第一個 `@crontab` 生效**
+* 建議腳本的**單次執行時間 + 重試時間**不要超過 cron 間隔，否則執行可能會重疊
 
-## Cron Expression Notes
+## Cron 表達式說明
 
-ScriptCat's cron implementation is based on [**node-cron**](https://github.com/kelektiv/node-cron/), with a small extension on top of standard cron syntax.
+ScriptCat 的 cron 實作基於 [**node-cron**](https://github.com/kelektiv/node-cron/)，在標準 cron 語法上做了一些小擴展。
 
-### Expression Format
+### 表達式格式
 
-#### Standard 5-Field Format (Recommended)
-
-```text
-minute hour day month weekday
-```
-
-#### Extended 6-Field Format (Not Recommended)
+#### 標準 5 欄位格式（建議）
 
 ```text
-second minute hour day month weekday
+分鐘 小時 日期 月份 星期
 ```
 
-> ⚠️ The 6-field format is not recommended
-> Browser environments can't guarantee second-level precision, and it increases performance overhead — the background page may have its scheduling delayed.
-
-### Syntax Available Per Field
-
-| Syntax  | Meaning              | Example                  |
-| ------- | -------------------- | ------------------------ |
-| `*`     | Any value            | `*` (every minute/hour)  |
-| number  | Specific value       | `5` (the 5th minute)     |
-| `a,b,c` | Multiple discrete values | `1,15,30`             |
-| `a-b`   | Contiguous range      | `10-23`                  |
-| `*/n`   | Every n units          | `*/5`                   |
-| `a-b/n` | Range with step        | `10-50/10`               |
-
-#### Weekday Rules
-
-* `1–6`: Monday through Saturday
-* `0` or `7`: Sunday
-
-## The `once` Extension Syntax
-
-### What `once` Means
-
-Using `once` in a cron expression means:
-
-> **Within the current time cycle, only allow one successful execution**
-
-Even if later time points within the same cycle still match the cron rule, the script will not run again.
-
-### `once` vs. `once(...)`
-
-| Syntax        | Underlying cron value for this field | Description                                                       |
-| ------------- | ------------------------------------- | ------------------------------------------------------------------ |
-| `once`        | `*` (any value)                       | Runs on the first match within the cycle, without a specific time  |
-| `once(expr)`  | `expr`                                 | Runs only at times matching `expr` within the cycle, and only once |
-
-`once(expr)` lets you precisely specify candidate time points while still enforcing "run only once per cycle." All standard cron syntax (numbers, ranges, steps, lists) is supported inside the parentheses.
-
-Example comparison:
+#### 擴展 6 欄位格式（不建議）
 
 ```text
-* once * * *          // any minute of every hour; runs on the first match, no further runs that hour
-* once(9-17) * * *    // between 9:00 and 17:59 every day, runs once per hour
-0,30 once * * *       // whichever of minute 0 or 30 is matched first each hour runs; no further runs that hour
+秒 分鐘 小時 日期 月份 星期
 ```
 
-### The Position of `once` = the Time Cycle It Limits
+> ⚠️ 6 欄位格式不建議使用
+> 瀏覽器環境無法保證秒級精度，且會增加效能開銷——背景頁面的排程可能會延遲。
 
-Wherever `once` / `once(...)` is placed, it means "run only once within that time granularity."
+### 各欄位可用的語法
 
-| `once` position | Behavior                       |
-| ---------------- | ------------------------------- |
-| minute field      | Runs only once per minute       |
-| hour field        | Runs only once per hour         |
-| day field         | Runs only once per day          |
-| month field       | Runs only once per month        |
-| weekday field     | Runs only once per week         |
+| 語法 | 意義 | 範例 |
+|---|---|---|
+| `*` | 任意值 | `*`（每分鐘/每小時） |
+| number | 特定值 | `5`（第 5 分鐘） |
+| `a,b,c` | 多個離散值 | `1,15,30` |
+| `a-b` | 連續範圍 | `10-23` |
+| `*/n` | 每 n 個單位 | `*/5` |
+| `a-b/n` | 帶步驟的範圍 | `10-50/10` |
 
-Examples:
+#### 星期規則
 
-```text
-* once * * *       // runs only once per hour
-* * once * *       // runs only once per day
-* 9-18 once * *    // runs only once between 9:00 and 18:59 each day
-```
+* `1–6`：週一到週六
+* `0` 或 `7`：週日
 
-### `once` Combined with Ranges / Lists / Steps
+## `once` 擴展語法
 
-`once` / `once(...)` can be combined with any cron syntax, but there is only one rule:
+### `once` 的意義
 
-> **Within the same cycle, once a run has succeeded, all further matching time points are ignored**
+在 cron 表達式中使用 `once` 意味著：
 
-#### Example 1: Range
+> **在當前時間週期內，只允許一次成功執行**
 
-```text
-* 10 once * *
-```
+即使同一週期內的後續時間點仍然符合 cron 規則，腳本也不會再執行。
 
-Meaning:
+### `once` 與 `once(...)` 的比較
 
-* Every day, 10:00–10:59 are candidate times
-* After the first match of the day
-* 10:05–10:59 will no longer run
+| 語法 | 底層 cron 值 | 描述 |
+|---|---|---|
+| `once` | `*`（任意值） | 在週期內首次匹配時執行，無特定時間 |
+| `once(expr)` | `expr` | 僅在週期內匹配 `expr` 的時間執行，且僅執行一次 |
 
-#### Example 2: List
+### `once` 的位置 = 限制的時間週期
 
-```text
-* 1,3,5 once * *
-```
+不論 `once` / `once(...)` 放在哪裡，都表示「在該時間粒度內只執行一次」。
 
-Meaning:
+| `once` 位置 | 行為 |
+|---|---|
+| 分鐘欄 | 每分鐘只執行一次 |
+| 小時欄 | 每小時只執行一次 |
+| 日期欄 | 每天只執行一次 |
+| 月份欄 | 每月只執行一次 |
+| 星期欄 | 每週只執行一次 |
 
-* Every day, 1:00, 3:00, and 5:00 are candidate times
-* If 1:00 has already run
-* 3:00 and 5:00 will be skipped
+## `@crontab` 範例
 
-#### Example 3: Step
-
-```text
-* */4 once * *
-```
-
-Meaning:
-
-* Every day, 0:00, 4:00, 8:00, 12:00, 16:00, and 20:00 are candidate times
-* After the first run of the day
-* No further time points will run
-
-#### Example 4: `once(...)` Specifying Candidate Time Points
-
-```text
-* once(9-17) * * *
-```
-
-Meaning:
-
-* Every day, 9:00 through 17:00 are candidate hours
-* The cycle resets every hour; within an hour, the first match stops further runs
-* Effect: runs once per hour between 9:00 and 17:00 each day, 9 times in total
-
-```text
-* 9-18 once * *
-```
-
-Meaning:
-
-* Every day, 9:00–18:59 are candidate times
-* `once` in the day field locks the cycle to once per day
-* After the first match of the day, nothing else runs before 18:59
-
-## `@crontab` Examples
-
-### Common
+### 常用
 
 ```js
-//@crontab * * * * *        // runs once per minute
-//@crontab * * * * * *      // runs once per second (not recommended)
-//@crontab 0 */6 * * *      // runs on the hour every 6 hours
-//@crontab 15 */6 * * *     // runs at minute 15 every 6 hours
-//@crontab * once * * *     // runs at most once per hour
-//@crontab * * once * *     // runs at most once per day
-//@crontab * 10 once * *    // runs only once within the 10:00 hour each day (e.g. if it ran at 10:04, it won't run again from 10:05-10:59)
-//@crontab * */4 once * *   // checks at most once every 4 hours each day (e.g. if it ran at 4:00, it won't run again at 8, 12, 16, 20, 24, etc.)
+//@crontab * * * * *        // 每分鐘執行一次
+//@crontab * * * * * *      // 每秒執行一次（不建議）
+//@crontab 0 */6 * * *      // 每 6 小時的 0 分執行
+//@crontab 15 */6 * * *     // 每 6 小時的 15 分執行
+//@crontab * once * * *     // 每小時最多執行一次
+//@crontab * * once * *     // 每天最多執行一次
+//@crontab * 10 once * *    // 每天 10 點時段只執行一次（例如 10:04 已執行，則 10:05-10:59 不再執行）
+//@crontab * */4 once * *   // 每天每 4 小時最多執行一次（例如 4:00 已執行，則 8、12、16、20、24 等不再執行）
 ```
 
-### Advanced
+### 進階
 
 ```js
-//@crontab * 1,3,5 once * *       // runs once at 1:00, 3:00, or 5:00 each day (e.g. if it ran at 1:00, it won't run again at 3:00 or 5:00)
-//@crontab * 10-23 once * *       // runs once between 10:00 and 23:59 each day (e.g. if it ran at 10:04, it won't run again from 10:05-23:59)
-//@crontab * once 13 * *          // runs once per hour on the 13th of every month
-//@crontab * once(9-17) * * *     // runs once per hour between 9:00 and 17:00 each day
-//@crontab 0,30 once * * *        // whichever of minute 0 or 30 is matched first each hour runs; no repeat that hour
-//@crontab * 9-18 once * *        // runs only once between 9:00 and 18:00 each day
+//@crontab * 1,3,5 once * *       // 每天 1:00、3:00 或 5:00 各執行一次
+//@crontab * 10-23 once * *       // 每天 10:00 至 23:59 之間執行一次
+//@crontab * once 13 * *          // 每月 13 日每小時執行一次
+//@crontab * once(9-17) * * *     // 每天 9:00 至 17:00 之間每小時執行一次
+//@crontab 0,30 once * * *        // 每小時的 0 分或 30 分中，先匹配到的執行；該小時內不再重複
+//@crontab * 9-18 once * *        // 每天 9:00 至 18:00 之間只執行一次
 ```
 
-## Usage Recommendations
+## 使用建議
 
-### Good Fits for `once`
+### 適合使用 `once` 的任務
 
-* Tasks that **only need to run once** per day/hour
-* Status checks, sync, and reporting scripts
-* Avoiding the following problems:
+* 每天/每小時**只需執行一次**的任務
+* 狀態檢查、同步和報告腳本
+* 避免以下問題：
+  * 瀏覽器長時間未開啟
+  * 背景頁面排程延遲
+  * 瀏覽器重啟導致重複執行
 
-  * The browser hasn't been opened for a long time
-  * Background-page scheduling delays
-  * Duplicate execution caused by a browser restart
+### 不建議使用 `once` 的任務
 
-### Not Recommended for `once`
+* 必須在精確時刻執行的任務
+* 執行時間可能大幅超過 cron 間隔的腳本
+* 對執行次數有嚴格一致性要求的任務
 
-* Tasks that must run at a precise moment
-* Scripts whose execution time may significantly exceed the cron interval
-* Tasks with strict consistency requirements on the number of executions
+## 測試 Cron 表達式
 
-## Testing Cron Expressions
-
-When testing a cron expression, please **temporarily replace `once` / `once(...)` with their underlying value**:
+測試 cron 表達式時，請**暫時將 `once` / `once(...)` 替換為其底層值**：
 
 * `once` → `*`
 * `once(expr)` → `expr`
 
-Note that testing tools may not support the extended 6-field format.
+注意測試工具可能不支援 6 欄位擴展格式。
 
-Recommended tools:
+建議工具：
 
 * [crontab.guru](https://crontab.guru/)
 * [tool.lu cron calculator](https://tool.lu/crontab/)
 
-On the script list page, hover over the **run status column** to see the script's **next scheduled execution time**.
+在腳本列表頁面，將游標懸停在**執行狀態欄**可查看腳本的**下次排程執行時間**。
 
-## Logs
+## 日誌
 
-On the script list page, hovering over the `run status column` shows a tooltip with the script's run status;
-clicking it pops up the log content printed via `GM_log`.
+在腳本列表頁面，將游標懸停在 `執行狀態欄` 會顯示腳本執行狀態的工具提示；
+點擊會彈出透過 `GM_log` 印出的日誌內容。
 
 ![](@site/docs/dev/background.assets/image-20210621214143661.png)
 
 ![](@site/docs/dev/background.assets/image-20210621214124685.png)
 
-## Script Debugging
+## 腳本除錯
 
-Background scripts can be debugged directly from the script editor page, but this has the following limitations:
+背景腳本可以直接從腳本編輯器頁面除錯，但有以下限制：
 
-* `value` doesn't sync properly
-* `registerMenu` menus don't trigger properly
+* `value` 無法正確同步
+* `registerMenu` 選單無法正確觸發
 
 ![](@site/docs/dev/background.assets/image-20210903141601057.png)
 
-To debug the real runtime environment, enable **Developer Mode** in the extension settings, then open the extension's `background.html` page to debug.
+要除錯實際的執行環境，請在擴充功能設定中啟用**開發者模式**，然後開啟擴充功能的 `background.html` 頁面進行除錯。
 
-Errors raised at runtime can also be viewed in the run log.
+執行時產生的錯誤也可以在執行日誌中查看。
 
 ![image-20210903144155450](@site/docs/dev/background.assets/image-20210903144155450.png)
 
 ## Promise
 
-The following pattern is highly recommended, as it also allows the script manager to monitor script execution.
-If the script performs any asynchronous operation, it **must return a `Promise`**.
+強烈建議使用以下模式，因為它也允許腳本管理器監控腳本執行。
+如果腳本執行任何非同步操作，**必須回傳 `Promise`**。
 
 ```ts
 // ==UserScript==
-// @name         Background Script
+// @name         背景腳本
 // @namespace    wyz
 // @version      1.0.0
 // @author       wyz
@@ -266,16 +183,16 @@ If the script performs any asynchronous operation, it **must return a `Promise`*
 // ==/UserScript==
 return new Promise((resolve, reject) => {
   if (Math.round((Math.random() * 10) % 2)) {
-    resolve("ok"); // succeeded
+    resolve("ok");
   } else {
-    reject("error"); // failed, with the error reason
+    reject("error");
   }
 });
 ```
 
 ```js
 // ==UserScript==
-// @name         Scheduled script that runs once a day
+// @name         每天執行一次的排程腳本
 // @namespace    wyz
 // @version      1.0.0
 // @author       wyz
@@ -283,16 +200,16 @@ return new Promise((resolve, reject) => {
 // ==/UserScript==
 return new Promise((resolve, reject) => {
   if (Math.round((Math.random() * 10) % 2)) {
-    resolve("ok"); // succeeded
+    resolve("ok");
   } else {
-    reject("error"); // failed, with the error reason
+    reject("error");
   }
 });
 ```
 
 ```js
 // ==UserScript==
-// @name         Call an API
+// @name         呼叫 API
 // @namespace    wyz
 // @version      1.0.0
 // @author       wyz
@@ -302,32 +219,32 @@ return new Promise((resolve, reject) => {
   GM_xmlhttpRequest({
     url: "https://bbs.tampermonkey.net.cn/",
     onload() {
-      resolve("ok"); // succeeded
+      resolve("ok");
     },
     onerror() {
-      reject("error"); // failed, with the error reason
+      reject("error");
     },
   });
 });
 ```
 
-Please make sure to call `resolve` / `reject` only after the script's logic has truly finished.
-Once called, the manager considers the script's execution complete, and any subsequent GM operations will no longer take effect.
+請確保僅在腳本邏輯真正完成後才呼叫 `resolve` / `reject`。
+一旦呼叫，管理器即視為腳本執行完成，後續的 GM 操作將不再生效。
 
-## Error Retry
+## 錯誤重試
 
-ScriptCat background scripts support error retry.
-When a script fails, it can `reject` with a `CATRetryError` to trigger a retry.
+ScriptCat 背景腳本支援錯誤重試。
+當腳本失敗時，可以使用 `CATRetryError` 進行 `reject` 來觸發重試。
 
-* Minimum retry interval: 5 seconds
-* Avoid conflicting with the script's own execution time, otherwise duplicate execution may occur
+* 最小重試間隔：5 秒
+* 避免與腳本自身的執行時間衝突，否則可能發生重複執行
 
 ```js
 // ==UserScript==
-// @name         Retry example
+// @name         重試範例
 // @namespace    https://bbs.tampermonkey.net.cn/
 // @version      0.1.0
-// @description  try to take over the world!
+// @description  嘗試征服世界！
 // @author       You
 // @crontab      * * once * *
 // @grant        GM_notification
@@ -335,8 +252,8 @@ When a script fails, it can `reject` with a `CATRetryError` to trigger a retry.
 
 return new Promise((resolve, reject) => {
   GM_notification({
-    title: "retry",
-    text: "Retrying in 10 seconds",
+    title: "重試",
+    text: "10 秒後重試",
   });
   reject(new CATRetryError("xxx error", 10));
 });

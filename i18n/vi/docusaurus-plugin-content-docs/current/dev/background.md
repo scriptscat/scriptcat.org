@@ -1,264 +1,172 @@
 ---
-title: Background Script
+title: Script Nền
 ---
 
-Background scripts are suited to scripts that need to keep running continuously. Background scripts are a ScriptCat-specific script type; they run in a sandbox and cannot access the DOM. They can be developed using the same GM APIs as Tampermonkey, and compatibility notes are called out in the documentation.
+Script nền phù hợp với các script cần tiếp tục chạy liên tục. Script nền là loại script đặc thù của ScriptCat; chúng chạy trong sandbox và không thể truy cập DOM. Chúng có thể được phát triển sử dụng cùng GM API như Tampermonkey, và các ghi chú tương thích được chỉ ra trong tài liệu.
 
-## Background Script (`@background`)
+## Script Nền (`@background`)
 
-A background script is declared with the `@background` attribute. It lets the script keep running in the background after the script is enabled or the browser starts.
+Script nền được khai báo bằng thuộc tính `@background`. Nó cho phép script tiếp tục chạy nền sau khi script được kích hoạt hoặc trình duyệt khởi động.
 
-## Scheduled Script (`@crontab`)
+## Script Được Lên Lịch (`@crontab`)
 
-> A scheduled script is a kind of background script suited to tasks that need to **run repeatedly on a time cycle**.
+> Script được lên lịch là một loại script nền phù hợp với các tác vụ cần **chạy lặp đi lặp lại theo chu kỳ thời gian**.
 
-A scheduled script is declared with the `@crontab` attribute. It supports minute-level and second-level scheduling, and provides ScriptCat's extended syntax `once` / `once(...)` to avoid running more than once within the same time cycle.
+Script được lên lịch được khai báo bằng thuộc tính `@crontab`. Hỗ trợ lập lịch ở cấp độ phút và giây, và cung cấp cú pháp mở rộng của ScriptCat `once` / `once(...)` để tránh chạy nhiều hơn một lần trong cùng chu kỳ thời gian.
 
-⚠️ Notes:
+⚠️ Lưu ý:
 
-* In a single script, **only the first `@crontab` takes effect**
-* It's recommended that the script's **single execution time + retry time** not exceed the cron interval, otherwise executions may overlap
+* Trong một script, **chỉ `@crontab` đầu tiên có hiệu lực**
+* Nên đảm bảo **thời gian chạy đơn lẻ + thời gian thử lại** không vượt quá khoảng cách cron, nếu không các lần chạy có thể chồng chéo
 
-## Cron Expression Notes
+## Lưu ý về Biểu thức Cron
 
-ScriptCat's cron implementation is based on [**node-cron**](https://github.com/kelektiv/node-cron/), with a small extension on top of standard cron syntax.
+Triển khai cron của ScriptCat dựa trên [**node-cron**](https://github.com/kelektiv/node-cron/), với một phần mở rộng nhỏ trên cú pháp cron tiêu chuẩn.
 
-### Expression Format
+### Định dạng Biểu thức
 
-#### Standard 5-Field Format (Recommended)
-
-```text
-minute hour day month weekday
-```
-
-#### Extended 6-Field Format (Not Recommended)
+#### Định dạng 5 trường tiêu chuẩn (Khuyến nghị)
 
 ```text
-second minute hour day month weekday
+phút giờ ngày tháng ngày_trong_tuần
 ```
 
-> ⚠️ The 6-field format is not recommended
-> Browser environments can't guarantee second-level precision, and it increases performance overhead — the background page may have its scheduling delayed.
-
-### Syntax Available Per Field
-
-| Syntax  | Meaning              | Example                  |
-| ------- | -------------------- | ------------------------ |
-| `*`     | Any value            | `*` (every minute/hour)  |
-| number  | Specific value       | `5` (the 5th minute)     |
-| `a,b,c` | Multiple discrete values | `1,15,30`             |
-| `a-b`   | Contiguous range      | `10-23`                  |
-| `*/n`   | Every n units          | `*/5`                   |
-| `a-b/n` | Range with step        | `10-50/10`               |
-
-#### Weekday Rules
-
-* `1–6`: Monday through Saturday
-* `0` or `7`: Sunday
-
-## The `once` Extension Syntax
-
-### What `once` Means
-
-Using `once` in a cron expression means:
-
-> **Within the current time cycle, only allow one successful execution**
-
-Even if later time points within the same cycle still match the cron rule, the script will not run again.
-
-### `once` vs. `once(...)`
-
-| Syntax        | Underlying cron value for this field | Description                                                       |
-| ------------- | ------------------------------------- | ------------------------------------------------------------------ |
-| `once`        | `*` (any value)                       | Runs on the first match within the cycle, without a specific time  |
-| `once(expr)`  | `expr`                                 | Runs only at times matching `expr` within the cycle, and only once |
-
-`once(expr)` lets you precisely specify candidate time points while still enforcing "run only once per cycle." All standard cron syntax (numbers, ranges, steps, lists) is supported inside the parentheses.
-
-Example comparison:
+#### Định dạng 6 trường mở rộng (Không khuyến nghị)
 
 ```text
-* once * * *          // any minute of every hour; runs on the first match, no further runs that hour
-* once(9-17) * * *    // between 9:00 and 17:59 every day, runs once per hour
-0,30 once * * *       // whichever of minute 0 or 30 is matched first each hour runs; no further runs that hour
+giây phút giờ ngày tháng ngày_trong_tuần
 ```
 
-### The Position of `once` = the Time Cycle It Limits
+> ⚠️ Định dạng 6 trường không được khuyến nghị
+> Môi trường trình duyệt không thể đảm bảo độ chính xác đến giây và tăng tải hiệu suất.
 
-Wherever `once` / `once(...)` is placed, it means "run only once within that time granularity."
+### Cú pháp Khả dụng cho Mỗi Trường
 
-| `once` position | Behavior                       |
-| ---------------- | ------------------------------- |
-| minute field      | Runs only once per minute       |
-| hour field        | Runs only once per hour         |
-| day field         | Runs only once per day          |
-| month field       | Runs only once per month        |
-| weekday field     | Runs only once per week         |
+| Cú pháp | Ý nghĩa | Ví dụ |
+|---|---|---|
+| `*` | Bất kỳ giá trị nào | `*` (mỗi phút/giờ) |
+| number | Giá trị cụ thể | `5` (phút thứ 5) |
+| `a,b,c` | Nhiều giá trị rời rạc | `1,15,30` |
+| `a-b` | Phạm vi liên tục | `10-23` |
+| `*/n` | Mỗi n đơn vị | `*/5` |
+| `a-b/n` | Phạm vi với bước | `10-50/10` |
 
-Examples:
+#### Quy tắc Ngày trong Tuần
 
-```text
-* once * * *       // runs only once per hour
-* * once * *       // runs only once per day
-* 9-18 once * *    // runs only once between 9:00 and 18:59 each day
-```
+* `1–6`: Thứ Hai đến Thứ Bảy
+* `0` hoặc `7`: Chủ nhật
 
-### `once` Combined with Ranges / Lists / Steps
+## Cú pháp Mở rộng `once`
 
-`once` / `once(...)` can be combined with any cron syntax, but there is only one rule:
+### `once` có nghĩa gì
 
-> **Within the same cycle, once a run has succeeded, all further matching time points are ignored**
+Sử dụng `once` trong biểu thức cron có nghĩa:
 
-#### Example 1: Range
+> **Trong chu kỳ thời gian hiện tại, chỉ cho phép một lần thực thi thành công**
 
-```text
-* 10 once * *
-```
+Ngay cả các điểm thời gian sau đó trong cùng chu kỳ vẫn khớp với quy tắc cron, script sẽ không chạy lại.
 
-Meaning:
+### `once` so với `once(...)`
 
-* Every day, 10:00–10:59 are candidate times
-* After the first match of the day
-* 10:05–10:59 will no longer run
+| Cú pháp | Giá trị cron cơ bản | Mô tả |
+|---|---|---|
+| `once` | `*` (bất kỳ giá trị) | Chạy khi khớp lần đầu trong chu kỳ, không có thời gian cụ thể |
+| `once(expr)` | `expr` | Chỉ chạy tại các thời điểm khớp với `expr` trong chu kỳ, và chỉ một lần |
 
-#### Example 2: List
+### Vị trí của `once` = Chu kỳ Thời gian bị Hạn chế
 
-```text
-* 1,3,5 once * *
-```
+Bất kể `once` / `once(...)` được đặt ở đâu, nó có nghĩa "chạy chỉ một lần trong độ phân giải thời gian đó".
 
-Meaning:
+| Vị trí của `once` | Hành vi |
+|---|---|
+| Trường phút | Chỉ chạy một lần mỗi phút |
+| Trường giờ | Chỉ chạy một lần mỗi giờ |
+| Trường ngày | Chỉ chạy một lần mỗi ngày |
+| Trường tháng | Chỉ chạy một lần mỗi tháng |
+| Trường ngày tuần | Chỉ chạy một lần mỗi tuần |
 
-* Every day, 1:00, 3:00, and 5:00 are candidate times
-* If 1:00 has already run
-* 3:00 and 5:00 will be skipped
+## Ví dụ `@crontab`
 
-#### Example 3: Step
-
-```text
-* */4 once * *
-```
-
-Meaning:
-
-* Every day, 0:00, 4:00, 8:00, 12:00, 16:00, and 20:00 are candidate times
-* After the first run of the day
-* No further time points will run
-
-#### Example 4: `once(...)` Specifying Candidate Time Points
-
-```text
-* once(9-17) * * *
-```
-
-Meaning:
-
-* Every day, 9:00 through 17:00 are candidate hours
-* The cycle resets every hour; within an hour, the first match stops further runs
-* Effect: runs once per hour between 9:00 and 17:00 each day, 9 times in total
-
-```text
-* 9-18 once * *
-```
-
-Meaning:
-
-* Every day, 9:00–18:59 are candidate times
-* `once` in the day field locks the cycle to once per day
-* After the first match of the day, nothing else runs before 18:59
-
-## `@crontab` Examples
-
-### Common
+### Phổ biến
 
 ```js
-//@crontab * * * * *        // runs once per minute
-//@crontab * * * * * *      // runs once per second (not recommended)
-//@crontab 0 */6 * * *      // runs on the hour every 6 hours
-//@crontab 15 */6 * * *     // runs at minute 15 every 6 hours
-//@crontab * once * * *     // runs at most once per hour
-//@crontab * * once * *     // runs at most once per day
-//@crontab * 10 once * *    // runs only once within the 10:00 hour each day (e.g. if it ran at 10:04, it won't run again from 10:05-10:59)
-//@crontab * */4 once * *   // checks at most once every 4 hours each day (e.g. if it ran at 4:00, it won't run again at 8, 12, 16, 20, 24, etc.)
+//@crontab * * * * *        // chạy một lần mỗi phút
+//@crontab * * * * * *      // chạy một lần mỗi giây (không khuyến nghị)
+//@crontab 0 */6 * * *      // mỗi 6 giờ tại phút 0
+//@crontab 15 */6 * * *     // mỗi 6 giờ tại phút 15
+//@crontab * once * * *     // tối đa một lần mỗi giờ
+//@crontab * * once * *     // tối đa một lần mỗi ngày
+//@crontab * 10 once * *    // chỉ một lần trong giờ 10:00 mỗi ngày
+//@crontab * */4 once * *   // tối đa một lần mỗi 4 giờ mỗi ngày
 ```
 
-### Advanced
+### Nâng cao
 
 ```js
-//@crontab * 1,3,5 once * *       // runs once at 1:00, 3:00, or 5:00 each day (e.g. if it ran at 1:00, it won't run again at 3:00 or 5:00)
-//@crontab * 10-23 once * *       // runs once between 10:00 and 23:59 each day (e.g. if it ran at 10:04, it won't run again from 10:05-23:59)
-//@crontab * once 13 * *          // runs once per hour on the 13th of every month
-//@crontab * once(9-17) * * *     // runs once per hour between 9:00 and 17:00 each day
-//@crontab 0,30 once * * *        // whichever of minute 0 or 30 is matched first each hour runs; no repeat that hour
-//@crontab * 9-18 once * *        // runs only once between 9:00 and 18:00 each day
+//@crontab * 1,3,5 once * *       // một lần lúc 1:00, 3:00 hoặc 5:00 mỗi ngày
+//@crontab * 10-23 once * *       // một lần giữa 10:00 và 23:59 mỗi ngày
+//@crontab * once 13 * *          // một lần mỗi giờ vào ngày 13 mỗi tháng
+//@crontab * once(9-17) * * *     // một lần mỗi giờ giữa 9:00 và 17:00 mỗi ngày
+//@crontab 0,30 once * * *        // phút 0 hoặc 30 được khớp trước mỗi giờ; không lặp lại giờ đó
+//@crontab * 9-18 once * *        // chỉ một lần giữa 9:00 và 18:00 mỗi ngày
 ```
 
-## Usage Recommendations
+## Khuyến nghị Sử dụng
 
-### Good Fits for `once`
+### Phù hợp cho `once`
 
-* Tasks that **only need to run once** per day/hour
-* Status checks, sync, and reporting scripts
-* Avoiding the following problems:
+* Các tác vụ chỉ cần chạy **một lần mỗi ngày/giờ**
+* Script kiểm tra trạng thái, đồng bộ và báo cáo
 
-  * The browser hasn't been opened for a long time
-  * Background-page scheduling delays
-  * Duplicate execution caused by a browser restart
+### Không khuyến nghị cho `once`
 
-### Not Recommended for `once`
+* Các tác vụ phải chạy tại thời điểm chính xác
+* Script có thời gian chạy có thể vượt quá đáng kể khoảng cách cron
 
-* Tasks that must run at a precise moment
-* Scripts whose execution time may significantly exceed the cron interval
-* Tasks with strict consistency requirements on the number of executions
+## Kiểm tra Biểu thức Cron
 
-## Testing Cron Expressions
-
-When testing a cron expression, please **temporarily replace `once` / `once(...)` with their underlying value**:
+Khi kiểm tra biểu thức cron, vui lòng **thay thế tạm thời `once` / `once(...)` bằng giá trị cơ bản**:
 
 * `once` → `*`
 * `once(expr)` → `expr`
 
-Note that testing tools may not support the extended 6-field format.
-
-Recommended tools:
+Công cụ khuyến nghị:
 
 * [crontab.guru](https://crontab.guru/)
 * [tool.lu cron calculator](https://tool.lu/crontab/)
 
-On the script list page, hover over the **run status column** to see the script's **next scheduled execution time**.
+## Nhật ký
 
-## Logs
-
-On the script list page, hovering over the `run status column` shows a tooltip with the script's run status;
-clicking it pops up the log content printed via `GM_log`.
+Trên trang danh sách script, di chuột qua `cột trạng thái chạy` hiển thị tooltip với trạng thái chạy của script;
+nhấp vào hiển thị nội dung nhật ký in qua `GM_log`.
 
 ![](@site/docs/dev/background.assets/image-20210621214143661.png)
 
 ![](@site/docs/dev/background.assets/image-20210621214124685.png)
 
-## Script Debugging
+## Gỡ lỗi Script
 
-Background scripts can be debugged directly from the script editor page, but this has the following limitations:
+Script nền có thể được gỡ lỗi trực tiếp từ trang chỉnh sửa script, nhưng có những hạn chế sau:
 
-* `value` doesn't sync properly
-* `registerMenu` menus don't trigger properly
+* `value` không đồng bộ đúng
+* Menu `registerMenu` không được kích hoạt đúng
 
 ![](@site/docs/dev/background.assets/image-20210903141601057.png)
 
-To debug the real runtime environment, enable **Developer Mode** in the extension settings, then open the extension's `background.html` page to debug.
+Để gỡ lỗi môi trường chạy thực, kích hoạt **Chế độ Phát triển** trong càiặt tiện ích mở rộng, sau đó mở trang `background.html` của tiện ích để gỡ lỗi.
 
-Errors raised at runtime can also be viewed in the run log.
+Lỗi phát sinh trong quá trình chạy cũng có thể được xem trong nhật ký chạy.
 
 ![image-20210903144155450](@site/docs/dev/background.assets/image-20210903144155450.png)
 
 ## Promise
 
-The following pattern is highly recommended, as it also allows the script manager to monitor script execution.
-If the script performs any asynchronous operation, it **must return a `Promise`**.
+Cấu trúc sau được khuyến nghị mạnh mẽ, vì nó cũng cho phép trình quản lý script theo dõi việc thực thi.
+Nếu script thực hiện bất kỳ thao tác không đồng bộ nào, **nó phải trả về `Promise`**.
 
 ```ts
 // ==UserScript==
-// @name         Background Script
+// @name         Script Nền
 // @namespace    wyz
 // @version      1.0.0
 // @author       wyz
@@ -266,16 +174,16 @@ If the script performs any asynchronous operation, it **must return a `Promise`*
 // ==/UserScript==
 return new Promise((resolve, reject) => {
   if (Math.round((Math.random() * 10) % 2)) {
-    resolve("ok"); // succeeded
+    resolve("ok");
   } else {
-    reject("error"); // failed, with the error reason
+    reject("error");
   }
 });
 ```
 
 ```js
 // ==UserScript==
-// @name         Scheduled script that runs once a day
+// @name         Script được lên lịch chạy một lần mỗi ngày
 // @namespace    wyz
 // @version      1.0.0
 // @author       wyz
@@ -283,16 +191,16 @@ return new Promise((resolve, reject) => {
 // ==/UserScript==
 return new Promise((resolve, reject) => {
   if (Math.round((Math.random() * 10) % 2)) {
-    resolve("ok"); // succeeded
+    resolve("ok");
   } else {
-    reject("error"); // failed, with the error reason
+    reject("error");
   }
 });
 ```
 
 ```js
 // ==UserScript==
-// @name         Call an API
+// @name         Gọi một API
 // @namespace    wyz
 // @version      1.0.0
 // @author       wyz
@@ -302,32 +210,32 @@ return new Promise((resolve, reject) => {
   GM_xmlhttpRequest({
     url: "https://bbs.tampermonkey.net.cn/",
     onload() {
-      resolve("ok"); // succeeded
+      resolve("ok");
     },
     onerror() {
-      reject("error"); // failed, with the error reason
+      reject("error");
     },
   });
 });
 ```
 
-Please make sure to call `resolve` / `reject` only after the script's logic has truly finished.
-Once called, the manager considers the script's execution complete, and any subsequent GM operations will no longer take effect.
+Hãy đảm bảo gọi `resolve` / `reject` chỉ sau khi logic của script thực sự hoàn thành.
+Sau khi được gọi, trình quản lý coi việc thực thi script là hoàn tất, và bất kỳ thao tác GM nào tiếp theo sẽ không còn hiệu lực.
 
-## Error Retry
+## Thử lại Lỗi
 
-ScriptCat background scripts support error retry.
-When a script fails, it can `reject` with a `CATRetryError` to trigger a retry.
+Script nền của ScriptCat hỗ trợ thử lại lỗi.
+Khi script thất bại, nó có thể `reject` với `CATRetryError` để kích hoạt thử lại.
 
-* Minimum retry interval: 5 seconds
-* Avoid conflicting with the script's own execution time, otherwise duplicate execution may occur
+* Khoảng cách thử lại tối thiểu: 5 giây
+* Tránh xung đột với thời gian chạy của chính script, nếu không việc chạy trùng lặp có thể xảy ra
 
 ```js
 // ==UserScript==
-// @name         Retry example
+// @name         Ví dụ thử lại
 // @namespace    https://bbs.tampermonkey.net.cn/
 // @version      0.1.0
-// @description  try to take over the world!
+// @description  cố gắng chinh phục thế giới!
 // @author       You
 // @crontab      * * once * *
 // @grant        GM_notification
@@ -335,8 +243,8 @@ When a script fails, it can `reject` with a `CATRetryError` to trigger a retry.
 
 return new Promise((resolve, reject) => {
   GM_notification({
-    title: "retry",
-    text: "Retrying in 10 seconds",
+    title: "thử lại",
+    text: "Thử lại sau 10 giây",
   });
   reject(new CATRetryError("xxx error", 10));
 });

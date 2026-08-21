@@ -1,264 +1,172 @@
 ---
-title: Background Script
+title: Script de Fundo
 ---
 
-Background scripts are suited to scripts that need to keep running continuously. Background scripts are a ScriptCat-specific script type; they run in a sandbox and cannot access the DOM. They can be developed using the same GM APIs as Tampermonkey, and compatibility notes are called out in the documentation.
+Scripts de fundo são adequados para scripts que precisam continuar executando continuamente. Scripts de fundo são um tipo de script específico do ScriptCat; rodam em um sandbox e não podem acessar o DOM. Podem ser desenvolvidos usando as mesmas GM APIs do Tampermonkey, e as notas de compatibilidade são indicadas na documentação.
 
-## Background Script (`@background`)
+## Script de Fundo (`@background`)
 
-A background script is declared with the `@background` attribute. It lets the script keep running in the background after the script is enabled or the browser starts.
+Um script de fundo é declarado com o atributo `@background`. Permite que o script continue rodando em segundo plano após ser habilitado ou o navegador ser iniciado.
 
-## Scheduled Script (`@crontab`)
+## Script Agendado (`@crontab`)
 
-> A scheduled script is a kind of background script suited to tasks that need to **run repeatedly on a time cycle**.
+> Um script agendado é um tipo de script de fundo adequado para tarefas que precisam **rodar repetidamente em um ciclo de tempo**.
 
-A scheduled script is declared with the `@crontab` attribute. It supports minute-level and second-level scheduling, and provides ScriptCat's extended syntax `once` / `once(...)` to avoid running more than once within the same time cycle.
+Um script agendado é declarado com o atributo `@crontab`. Suporta agendamento em nível de minuto e segundo, e fornece a sintaxe estendida do ScriptCat `once` / `once(...)` para evitar executar mais de uma vez dentro do mesmo ciclo de tempo.
 
-⚠️ Notes:
+⚠️ Notas:
 
-* In a single script, **only the first `@crontab` takes effect**
-* It's recommended that the script's **single execution time + retry time** not exceed the cron interval, otherwise executions may overlap
+* Em um único script, **apenas o primeiro `@crontab` tem efeito**
+* Recomenda-se que o **tempo de execução individual + tempo de retry** não exceda o intervalo do cron, caso contrário as execuções podem se sobrepor
 
-## Cron Expression Notes
+## Notas sobre Expressões Cron
 
-ScriptCat's cron implementation is based on [**node-cron**](https://github.com/kelektiv/node-cron/), with a small extension on top of standard cron syntax.
+A implementação de cron do ScriptCat é baseada no [**node-cron**](https://github.com/kelektiv/node-cron/), com uma pequena extensão sobre a sintaxe cron padrão.
 
-### Expression Format
+### Formato da Expressão
 
-#### Standard 5-Field Format (Recommended)
-
-```text
-minute hour day month weekday
-```
-
-#### Extended 6-Field Format (Not Recommended)
+#### Formato padrão de 5 campos (Recomendado)
 
 ```text
-second minute hour day month weekday
+minuto hora dia mês dia_da_semana
 ```
 
-> ⚠️ The 6-field format is not recommended
-> Browser environments can't guarantee second-level precision, and it increases performance overhead — the background page may have its scheduling delayed.
+#### Formato estendido de 6 campos (Não recomendado)
 
-### Syntax Available Per Field
+```text
+segundo minuto hora dia mês dia_da_semana
+```
 
-| Syntax  | Meaning              | Example                  |
-| ------- | -------------------- | ------------------------ |
-| `*`     | Any value            | `*` (every minute/hour)  |
-| number  | Specific value       | `5` (the 5th minute)     |
-| `a,b,c` | Multiple discrete values | `1,15,30`             |
-| `a-b`   | Contiguous range      | `10-23`                  |
-| `*/n`   | Every n units          | `*/5`                   |
-| `a-b/n` | Range with step        | `10-50/10`               |
+> ⚠️ O formato de 6 campos não é recomendado
+> Ambientes do navegador não podem garantir precisão de segundo e aumentam a sobrecarga de desempenho.
 
-#### Weekday Rules
+### Sintaxe Disponível por Campo
 
-* `1–6`: Monday through Saturday
-* `0` or `7`: Sunday
+| Sintaxe | Significado | Exemplo |
+|---|---|---|
+| `*` | Qualquer valor | `*` (cada minuto/hora) |
+| number | Valor específico | `5` (o quinto minuto) |
+| `a,b,c` | Múltiplos valores discretos | `1,15,30` |
+| `a-b` | Intervalo contíguo | `10-23` |
+| `*/n` | A cada n unidades | `*/5` |
+| `a-b/n` | Intervalo com passo | `10-50/10` |
 
-## The `once` Extension Syntax
+#### Regras do Dia da Semana
 
-### What `once` Means
+* `1–6`: Segunda a Sábado
+* `0` ou `7`: Domingo
 
-Using `once` in a cron expression means:
+## A Sintaxe Estendida `once`
 
-> **Within the current time cycle, only allow one successful execution**
+### O que Significa `once`
 
-Even if later time points within the same cycle still match the cron rule, the script will not run again.
+Usar `once` em uma expressão cron significa:
+
+> **Dentro do ciclo de tempo atual, apenas permitir uma execução bem-sucedida**
+
+Mesmo que pontos de tempo posteriores dentro do mesmo ciclo ainda correspondam à regra do cron, o script não será executado novamente.
 
 ### `once` vs. `once(...)`
 
-| Syntax        | Underlying cron value for this field | Description                                                       |
-| ------------- | ------------------------------------- | ------------------------------------------------------------------ |
-| `once`        | `*` (any value)                       | Runs on the first match within the cycle, without a specific time  |
-| `once(expr)`  | `expr`                                 | Runs only at times matching `expr` within the cycle, and only once |
+| Sintaxe | Valor cron subjacente | Descrição |
+|---|---|---|
+| `once` | `*` (qualquer valor) | Roda na primeira correspondência dentro do ciclo, sem um tempo específico |
+| `once(expr)` | `expr` | Roda apenas em tempos que correspondem a `expr` dentro do ciclo, e apenas uma vez |
 
-`once(expr)` lets you precisely specify candidate time points while still enforcing "run only once per cycle." All standard cron syntax (numbers, ranges, steps, lists) is supported inside the parentheses.
+### A Posição de `once` = o Ciclo de Tempo que Restringe
 
-Example comparison:
+Onde `once` / `once(...)` for colocado, significa "rodar apenas uma vez dentro dessa granularidade de tempo".
 
-```text
-* once * * *          // any minute of every hour; runs on the first match, no further runs that hour
-* once(9-17) * * *    // between 9:00 and 17:59 every day, runs once per hour
-0,30 once * * *       // whichever of minute 0 or 30 is matched first each hour runs; no further runs that hour
-```
+| Posição de `once` | Comportamento |
+|---|---|
+| Campo minuto | Roda apenas uma vez por minuto |
+| Campo hora | Roda apenas uma vez por hora |
+| Campo dia | Roda apenas uma vez por dia |
+| Campo mês | Roda apenas uma vez por mês |
+| Campo dia da semana | Roda apenas uma vez por semana |
 
-### The Position of `once` = the Time Cycle It Limits
+## Exemplos de `@crontab`
 
-Wherever `once` / `once(...)` is placed, it means "run only once within that time granularity."
-
-| `once` position | Behavior                       |
-| ---------------- | ------------------------------- |
-| minute field      | Runs only once per minute       |
-| hour field        | Runs only once per hour         |
-| day field         | Runs only once per day          |
-| month field       | Runs only once per month        |
-| weekday field     | Runs only once per week         |
-
-Examples:
-
-```text
-* once * * *       // runs only once per hour
-* * once * *       // runs only once per day
-* 9-18 once * *    // runs only once between 9:00 and 18:59 each day
-```
-
-### `once` Combined with Ranges / Lists / Steps
-
-`once` / `once(...)` can be combined with any cron syntax, but there is only one rule:
-
-> **Within the same cycle, once a run has succeeded, all further matching time points are ignored**
-
-#### Example 1: Range
-
-```text
-* 10 once * *
-```
-
-Meaning:
-
-* Every day, 10:00–10:59 are candidate times
-* After the first match of the day
-* 10:05–10:59 will no longer run
-
-#### Example 2: List
-
-```text
-* 1,3,5 once * *
-```
-
-Meaning:
-
-* Every day, 1:00, 3:00, and 5:00 are candidate times
-* If 1:00 has already run
-* 3:00 and 5:00 will be skipped
-
-#### Example 3: Step
-
-```text
-* */4 once * *
-```
-
-Meaning:
-
-* Every day, 0:00, 4:00, 8:00, 12:00, 16:00, and 20:00 are candidate times
-* After the first run of the day
-* No further time points will run
-
-#### Example 4: `once(...)` Specifying Candidate Time Points
-
-```text
-* once(9-17) * * *
-```
-
-Meaning:
-
-* Every day, 9:00 through 17:00 are candidate hours
-* The cycle resets every hour; within an hour, the first match stops further runs
-* Effect: runs once per hour between 9:00 and 17:00 each day, 9 times in total
-
-```text
-* 9-18 once * *
-```
-
-Meaning:
-
-* Every day, 9:00–18:59 are candidate times
-* `once` in the day field locks the cycle to once per day
-* After the first match of the day, nothing else runs before 18:59
-
-## `@crontab` Examples
-
-### Common
+### Comuns
 
 ```js
-//@crontab * * * * *        // runs once per minute
-//@crontab * * * * * *      // runs once per second (not recommended)
-//@crontab 0 */6 * * *      // runs on the hour every 6 hours
-//@crontab 15 */6 * * *     // runs at minute 15 every 6 hours
-//@crontab * once * * *     // runs at most once per hour
-//@crontab * * once * *     // runs at most once per day
-//@crontab * 10 once * *    // runs only once within the 10:00 hour each day (e.g. if it ran at 10:04, it won't run again from 10:05-10:59)
-//@crontab * */4 once * *   // checks at most once every 4 hours each day (e.g. if it ran at 4:00, it won't run again at 8, 12, 16, 20, 24, etc.)
+//@crontab * * * * *        // uma vez por minuto
+//@crontab * * * * * *      // uma vez por segundo (não recomendado)
+//@crontab 0 */6 * * *      // a cada 6 horas no minuto 0
+//@crontab 15 */6 * * *     // a cada 6 horas no minuto 15
+//@crontab * once * * *     // no máximo uma vez por hora
+//@crontab * * once * *     // no máximo uma vez por dia
+//@crontab * 10 once * *    // apenas uma vez dentro da hora 10:00 cada dia
+//@crontab * */4 once * *   // no máximo uma vez a cada 4 horas cada dia
 ```
 
-### Advanced
+### Avançados
 
 ```js
-//@crontab * 1,3,5 once * *       // runs once at 1:00, 3:00, or 5:00 each day (e.g. if it ran at 1:00, it won't run again at 3:00 or 5:00)
-//@crontab * 10-23 once * *       // runs once between 10:00 and 23:59 each day (e.g. if it ran at 10:04, it won't run again from 10:05-23:59)
-//@crontab * once 13 * *          // runs once per hour on the 13th of every month
-//@crontab * once(9-17) * * *     // runs once per hour between 9:00 and 17:00 each day
-//@crontab 0,30 once * * *        // whichever of minute 0 or 30 is matched first each hour runs; no repeat that hour
-//@crontab * 9-18 once * *        // runs only once between 9:00 and 18:00 each day
+//@crontab * 1,3,5 once * *       // uma vez às 1:00, 3:00 ou 5:00 cada dia
+//@crontab * 10-23 once * *       // uma vez entre 10:00 e 23:59 cada dia
+//@crontab * once 13 * *          // uma vez por hora no dia 13 de cada mês
+//@crontab * once(9-17) * * *     // uma vez por hora entre 9:00 e 17:00 cada dia
+//@crontab 0,30 once * * *        // o minuto 0 ou 30 é correspondido primeiro; sem repetição naquela hora
+//@crontab * 9-18 once * *        // apenas uma vez entre 9:00 e 18:00 cada dia
 ```
 
-## Usage Recommendations
+## Recomendações de Uso
 
-### Good Fits for `once`
+### Bons Usos para `once`
 
-* Tasks that **only need to run once** per day/hour
-* Status checks, sync, and reporting scripts
-* Avoiding the following problems:
+* Tarefas que **precisam rodar apenas uma vez** por dia/hora
+* Scripts de verificação de status, sincronização e relatórios
 
-  * The browser hasn't been opened for a long time
-  * Background-page scheduling delays
-  * Duplicate execution caused by a browser restart
+### Não Recomendado para `once`
 
-### Not Recommended for `once`
+* Tarefas que devem rodar em um momento preciso
+* Scripts cujo tempo de execução pode exceder significativamente o intervalo do cron
 
-* Tasks that must run at a precise moment
-* Scripts whose execution time may significantly exceed the cron interval
-* Tasks with strict consistency requirements on the number of executions
+## Testando Expressões Cron
 
-## Testing Cron Expressions
-
-When testing a cron expression, please **temporarily replace `once` / `once(...)` with their underlying value**:
+Ao testar uma expressão cron, por favor **substitua temporariamente `once` / `once(...)` pelo seu valor subjacente**:
 
 * `once` → `*`
 * `once(expr)` → `expr`
 
-Note that testing tools may not support the extended 6-field format.
-
-Recommended tools:
+Ferramentas recomendadas:
 
 * [crontab.guru](https://crontab.guru/)
 * [tool.lu cron calculator](https://tool.lu/crontab/)
 
-On the script list page, hover over the **run status column** to see the script's **next scheduled execution time**.
+## Registros
 
-## Logs
-
-On the script list page, hovering over the `run status column` shows a tooltip with the script's run status;
-clicking it pops up the log content printed via `GM_log`.
+Na página de lista de scripts, passando o mouse sobre a `coluna de status de execução` é exibido um tooltip com o status de execução do script;
+clicando é exibido o conteúdo do registro impresso via `GM_log`.
 
 ![](@site/docs/dev/background.assets/image-20210621214143661.png)
 
 ![](@site/docs/dev/background.assets/image-20210621214124685.png)
 
-## Script Debugging
+## Depuração de Scripts
 
-Background scripts can be debugged directly from the script editor page, but this has the following limitations:
+Scripts de fundo podem ser depurados diretamente da página do editor de scripts, mas tem limitações:
 
-* `value` doesn't sync properly
-* `registerMenu` menus don't trigger properly
+* `value` não sincroniza corretamente
+* Menus `registerMenu` não são acionados corretamente
 
 ![](@site/docs/dev/background.assets/image-20210903141601057.png)
 
-To debug the real runtime environment, enable **Developer Mode** in the extension settings, then open the extension's `background.html` page to debug.
+Para depurar o ambiente de execução real, habilite o **Modo Desenvolvedor** nas configurações da extensão, depois abra a página `background.html` da extensão para depurar.
 
-Errors raised at runtime can also be viewed in the run log.
+Erros em tempo de execução também podem ser vistos no registro de execução.
 
 ![image-20210903144155450](@site/docs/dev/background.assets/image-20210903144155450.png)
 
 ## Promise
 
-The following pattern is highly recommended, as it also allows the script manager to monitor script execution.
-If the script performs any asynchronous operation, it **must return a `Promise`**.
+O padrão seguinte é altamente recomendado, pois também permite que o gerenciador de scripts monitore a execução.
+Se o script realizar qualquer operação assíncrona, **deve retornar um `Promise`**.
 
 ```ts
 // ==UserScript==
-// @name         Background Script
+// @name         Script de Fundo
 // @namespace    wyz
 // @version      1.0.0
 // @author       wyz
@@ -266,16 +174,16 @@ If the script performs any asynchronous operation, it **must return a `Promise`*
 // ==/UserScript==
 return new Promise((resolve, reject) => {
   if (Math.round((Math.random() * 10) % 2)) {
-    resolve("ok"); // succeeded
+    resolve("ok");
   } else {
-    reject("error"); // failed, with the error reason
+    reject("error");
   }
 });
 ```
 
 ```js
 // ==UserScript==
-// @name         Scheduled script that runs once a day
+// @name         Script agendado que roda uma vez por dia
 // @namespace    wyz
 // @version      1.0.0
 // @author       wyz
@@ -283,16 +191,16 @@ return new Promise((resolve, reject) => {
 // ==/UserScript==
 return new Promise((resolve, reject) => {
   if (Math.round((Math.random() * 10) % 2)) {
-    resolve("ok"); // succeeded
+    resolve("ok");
   } else {
-    reject("error"); // failed, with the error reason
+    reject("error");
   }
 });
 ```
 
 ```js
 // ==UserScript==
-// @name         Call an API
+// @name         Chamar uma API
 // @namespace    wyz
 // @version      1.0.0
 // @author       wyz
@@ -302,32 +210,32 @@ return new Promise((resolve, reject) => {
   GM_xmlhttpRequest({
     url: "https://bbs.tampermonkey.net.cn/",
     onload() {
-      resolve("ok"); // succeeded
+      resolve("ok");
     },
     onerror() {
-      reject("error"); // failed, with the error reason
+      reject("error");
     },
   });
 });
 ```
 
-Please make sure to call `resolve` / `reject` only after the script's logic has truly finished.
-Once called, the manager considers the script's execution complete, and any subsequent GM operations will no longer take effect.
+Certifique-se de chamar `resolve` / `reject` apenas depois que a lógica do script tenha realmente terminado.
+Uma vez chamado, o gerenciador considera a execução do script completa, e quaisquer operações GM subsequentes não terão mais efeito.
 
-## Error Retry
+## Retry de Erro
 
-ScriptCat background scripts support error retry.
-When a script fails, it can `reject` with a `CATRetryError` to trigger a retry.
+Scripts de fundo do ScriptCat suportam retry de erro.
+Quando um script falha, pode fazer `reject` com um `CATRetryError` para acionar um retry.
 
-* Minimum retry interval: 5 seconds
-* Avoid conflicting with the script's own execution time, otherwise duplicate execution may occur
+* Intervalo mínimo de retry: 5 segundos
+* Evite conflitos com o próprio tempo de execução do script, caso contrário execuções duplicadas podem ocorrer
 
 ```js
 // ==UserScript==
-// @name         Retry example
+// @name         Exemplo de retry
 // @namespace    https://bbs.tampermonkey.net.cn/
 // @version      0.1.0
-// @description  try to take over the world!
+// @description  tente conquistar o mundo!
 // @author       You
 // @crontab      * * once * *
 // @grant        GM_notification
@@ -336,7 +244,7 @@ When a script fails, it can `reject` with a `CATRetryError` to trigger a retry.
 return new Promise((resolve, reject) => {
   GM_notification({
     title: "retry",
-    text: "Retrying in 10 seconds",
+    text: "Repetindo em 10 segundos",
   });
   reject(new CATRetryError("xxx error", 10));
 });

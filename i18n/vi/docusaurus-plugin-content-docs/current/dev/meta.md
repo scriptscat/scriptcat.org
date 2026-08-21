@@ -1,247 +1,207 @@
 ---
-title: Metadata Block
+title: Khối Siêu dữ liệu
 ---
 
-The content inside `==UserScript==` describes the permissions a script needs, information about the script, and so on. It sits at the very start of the script.
+Nội dung bên trong `==UserScript==` mô tả các quyền mà script cần, thông tin về script, v.v. Nó nằm ở đầu script.
 
 ```js
 // ==UserScript==
-// @name         New Userscript
+// @name         Script Người dùng Mới
 // @namespace    https://bbs.tampermonkey.net.cn/
 // @version      0.1.0
-// @description  try to take over the world!
+// @description  cố gắng chinh phục thế giới!
 // @author       You
 // @crontab      * * once * *
 // ==/UserScript==
 ```
 
-## Main Values
+## Các Giá trị Chính
 
 ### name
 
-Script name
+Tên script
 
 ### namespace
 
-Script namespace. `name + namespace` determines the script's uniqueness.
+Không gian tên của script. `name + namespace` xác định tính duy nhất của script.
 
 ### version
 
-The script's version. It's recommended to follow [semantic versioning](https://semver.org/), so that when a version change is detected, the user is prompted to update, and so on.
+Phiên bản của script. Khuyến nghị tuân theo [phiên bản hóa ngữ nghĩa](https://semver.org/), để khi phát hiện thay đổi phiên bản, người dùng được yêu cầu cập nhật.
 
 ### description
 
-A detailed description of the script
+Mô tả chi tiết về script
 
 ### author
 
-Script author
+Tác giả script
 
 ### run-at
 
-When the script runs
+Khi nào script được chạy
 
-| Value          | Runs                                                              | Supported since        |
-| -------------- | ------------------------------------------------------------------ | ---------------------- |
-| document-start | Injects the script into the page as soon as the URL matches on the frontend | v0.3.0          |
-| document-end   | Injects the script after the DOM has finished loading; page scripts and images may still be loading at this point | v0.3.0 |
-| document-idle  | Injects the script after all content has finished loading         | v0.3.0                  |
-| document-body  | The script is only injected once the page has a `body` element     | v0.6.2                  |
-| document-menu  | Shows a menu on right-click; running the script uses the script name as the menu name | v0.3.4-v0.9.4 (🔥 removed) |
+| Giá trị | Thời điểm chạy | Hỗ trợ từ |
+|---|---|---|
+| document-start | Chèn script vào trang ngay khi URL khớp ở frontend | v0.3.0 |
+| document-end | Chèn script sau khi DOM đã tải xong; script và hình ảnh của trang có thể vẫn đang tải | v0.3.0 |
+| document-idle | Chèn script sau khi tất cả nội dung đã tải xong | v0.3.0 |
+| document-body | Script chỉ được chèn khi trang có phần tử `body` | v0.6.2 |
+| document-menu | Hiển thị menu khi nhấp chuột phải; chạy script sử dụng tên script làm tên menu | v0.3.4-v0.9.4 (🔥 đã xóa) |
 
-For menu icons, you can refer to [Unicode Symbols](https://unicode-table.com/en/) and [emoji](https://www.emojiall.com/en-US/).
+Để biết biểu tượng menu, bạn có thể tham khảo [Ký hiệu Unicode](https://unicode-table.com/en/) và [emoji](https://www.emojiall.com/en-US/).
 
 ### run-in
 
-Specifies the environment the script is injected into: `@run-in normal-tabs` for regular tabs, `@run-in incognito-tabs` for incognito tabs.
+Xác định môi trường mà script được chèn vào: `@run-in normal-tabs` cho tab thường, `@run-in incognito-tabs` cho tab ẩn danh.
 
 ### early-start (v1.1.0+)
 
-When `run-at` is `document-start`, the script runs as early as possible, but it still can't guarantee loading faster than the page.
+Khi `run-at` là `document-start`, script chạy càng sớm càng tốt, nhưng không thể đảm bảo nó tải nhanh hơn trang.
 
-Once you've defined `@run-at document-start`, you can add `@early-start` to make the script load faster than the page: [example](https://github.com/scriptscat/scriptcat/blob/main/example/early-start.js)
+Sau khi định nghĩa `@run-at document-start`, bạn có thể thêm `@early-start` để script tải nhanh hơn trang: [ví dụ](https://github.com/scriptscat/scriptcat/blob/main/example/early-start.js)
 
 ### inject-into
 
 :::tip
 
-In the content-script environment (`content`), `unsafeWindow` only points to the environment's own current `window`, and cannot access the page's `window`.
+Trong môi trường content-script (`content`), `unsafeWindow` chỉ trỏ đến `window` hiện tại của môi trường đó và không thể truy cập `window` của trang.
 
-ScriptCat does not support automatically checking CSP restrictions to decide whether to inject as `content` or `page` (i.e. Tampermonkey's `@inject-into auto`).
+ScriptCat không hỗ trợ kiểm tra tự động các hạn chế CSP để quyết định chèn dưới dạng `content` hay `page` (tức là `@inject-into auto` của Tampermonkey).
 
 :::
 
-Specifies where the script is injected, supporting `page` and `content`, defaulting to `page`.
+Xác định nơi script được chèn vào, hỗ trợ `page` và `content`, mặc định là `page`.
 
-- `page`: the script is injected into the page environment, and can use `unsafeWindow` to access the page's `window` and `DOM`
-- `content`: the script is injected into the content-script environment, cannot directly access the page's `window` object, but can access the page `DOM`, and is not subject to `CSP`
+- `page`: script được chèn vào môi trường trang và có thể sử dụng `unsafeWindow` để truy cập `window` và `DOM` của trang
+- `content`: script được chèn vào môi trường content-script, không thể truy cập trực tiếp đối tượng `window` của trang, nhưng có thể truy cập `DOM` của trang và không bị ràng buộc bởi `CSP`
 
 ### storageName 🧪
 
-The storage space for `Value`; data under the same `storageName` can be shared and communicated across scripts. This is ScriptCat-specific.
+Không gian lưu trữ cho `Value`; dữ liệu dưới cùng `storageName` có thể được chia sẻ và giao tiếp giữa các script. Đặc thù của ScriptCat.
 
 ### background
 
-Marks this script as a background script, which needs to run in the background environment. See [Background Script](./background.md#background-script-background) for details.
+Đánh dấu script này là script nền, cần chạy trong môi trường nền. Xem [Script Nền](./background.md#background-script-background) để biết chi tiết.
 
 ### crontab
 
-Marks the script as a scheduled script, which requires a cron expression value. Only one cron expression can exist, and it runs on that schedule in the background environment. See [Scheduled Script](./background.md#scheduled-script-crontab) for details.
+Đánh dấu script là script được lên lịch, yêu cầu giá trị biểu thức cron. Chỉ có thể tồn tại một biểu thức cron và nó chạy theo lịch trình đó trong môi trường nền. Xem [Script Được Lên Lịch](./background.md#scheduled-script-crontab) để biết chi tiết.
 
 ### match
 
-Only URLs matched by `match` will run the script, following [Match patterns](https://developer.chrome.com/docs/extensions/mv3/match_patterns/). In `match`, `*` is a wildcard, `tld` matches the top-level domain, and a domain starting with `*.` will also match `xxx.com`:
+Chỉ các URL khớp với `match` mới chạy script, tuân theo [Mẫu Khớp](https://developer.chrome.com/docs/extensions/v3/match_patterns/). Trong `match`, `*` là ký tự đại diện, `tld` khớp với tên miền cấp cao nhất, và tên miền bắt đầu bằng `*.` cũng sẽ khớp với `xxx.com`:
 
-| Value                             | Correct examples                                                                                                                          | Incorrect examples                          |
-| --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
-| `http://scriptcat.org/doc/match`  | `http://scriptcat.org/doc/match`                                                                                                            | `http://scriptcat.org/doc/runAt`         |
-| `*://*/param?*`                   | `https://scriptcat.org/param` \| `http://scriptcat.org/param?search=tampermonkey`                                                            | `https://scriptcat.org/test/param`       |
-| `*://*/prefix*suffix`             | `http://scriptcat.org/prefix/suffix` \| `http://scriptcat.org/prefix/mid/suffix` \| `http://scriptcat.org/prefixsuffix`                      | `http://scriptcat.org/prefix/suffix/end` |
-| `http*://scriptcat.org/*`         | `https://scriptcat.org/` \| `https://scriptcat.org/doc` \| `http://scriptcat.org/doc/match` \| `http://scriptcat.org/param?search=tampermonkey` | `https://doc.scriptcat.org/`            |
-| `http*://scriptcat.org/doc/*`     | `https://scriptcat.org/doc` \| `http://scriptcat.org/doc/match`                                                                              | `http://scriptcat.org/param?search=tampermonkey` |
-| `http*://scriptcat.tld/doc/*`     | `https://scriptcat.cn/doc` \| `http://scriptcat.net.cn/doc/match`                                                                            | `http://google.com/param?search=tampermonkey` |
-| `http*://*.scriptcat.org/doc/*`   | `https://scriptcat.cn/doc` \| `http://www.scriptcat.net.cn/doc/match`                                                                        | `http://google.com/param?search=tampermonkey` |
+| Giá trị | Ví dụ đúng | Ví dụ sai |
+|---|---|---|
+| `http://scriptcat.org/doc/match` | `http://scriptcat.org/doc/match` | `http://scriptcat.org/doc/runAt` |
+| `*://*/param?*` | `https://scriptcat.org/param` \| `http://scriptcat.org/param?search=tampermonkey` | `https://scriptcat.org/test/param` |
+| `http*://scriptcat.org/*` | `https://scriptcat.org/` \| `https://scriptcat.org/doc` | `https://doc.scriptcat.org/` |
 
 ### include
 
-Supports `\*` for fuzzy matching, allowing non-standard URLs
+Hỗ trợ `*` để khớp mờ, cho phép URL không tiêu chuẩn
 
 ### exclude
 
-URLs that should not match; uses the same expression syntax as `include`
+URL không nên khớp; sử dụng cùng cú pháp biểu thức như `include`
 
 ### grant
 
-Requests API permission — an API can only be called once it has been requested. See the permission list at: [API Documentation](./api.md) and [CAT API Documentation](./cat-api.md).
+Yêu cầu quyền API — một API chỉ có thể được gọi sau khi đã yêu cầu. Xem danh sách quyền tại: [Tài liệu API](./api.md) và [Tài liệu CAT API](./cat-api.md).
 
-Two special values:
+Hai giá trị đặc biệt:
 
-- **none**: the script does not run in the sandbox environment, but directly in the page environment. In this environment, no GM APIs are available, but the page's `window` object can be accessed directly.
-- **unsafeWindow**: in the sandbox environment, if you need to access the page's `window` object, use `unsafeWindow` to do so. (Tampermonkey doesn't require declaring this — it's kept only for compatibility, which admittedly isn't very clean.)
+- **none**: script không chạy trong môi trường sandbox mà chạy trực tiếp trong môi trường trang. Trong môi trường này, không có API GM nào khả dụng, nhưng đối tượng `window` của trang có thể được truy cập trực tiếp.
+- **unsafeWindow**: trong môi trường sandbox, nếu bạn cần truy cập đối tượng `window` của trang, hãy sử dụng `unsafeWindow`. (Tampermonkey không yêu cầu khai báo điều này — nó chỉ được giữ lại vì tính tương thích.)
 
 ### connect
 
-Requests access permission for a site; see `GM_cookie` and `GM_xmlhttpRequest`. `GM_download` in `native` mode also honors `@connect` (undeclared hosts trigger a confirmation prompt, unlike Tampermonkey)
+Yêu cầu quyền truy cập vào một trang web; xem `GM_cookie` và `GM_xmlhttpRequest`. `GM_download` ở chế độ `native` cũng nhận biết `@connect` (host chưa khai báo sẽ kích hoạt lời nhắc xác nhận).
 
 ### resource
 
-Includes a resource file. After declaring `@resource`, you can use `GM_getResourceText`/`GM_getResourceURL` to retrieve the information.
+Bao gồm một tệp tài nguyên. Sau khi khai báo `@resource`, bạn có thể sử dụng `GM_getResourceText`/`GM_getResourceURL` để lấy thông tin.
 
 ```js
 // @resource icon https://bbs.tampermonkey.net.cn/favicon.ico
 // @resource html https://bbs.tampermonkey.net.cn/
 // @resource xml https://bbs.tampermonkey.net.cn/sitemap.xml
-// Adding resource integrity verification
+// Thêm kiểm tra toàn vẹn tài nguyên
 // @resource icon https://bbs.tampermonkey.net.cn/favicon.ico#md5-xxx,sha256-xxx
 ```
 
 ### require
 
-Includes an external JS file; supports [resource integrity verification](#resource-integrity-verification)
+Bao gồm một tệp JS bên ngoài; hỗ trợ [kiểm tra toàn vẹn tài nguyên](#kiểm-tra-toàn-vẹn-tài-nguyên)
 
 ### require-css
 
-Includes an external CSS file; supports [resource integrity verification](#resource-integrity-verification)
+Bao gồm một tệp CSS bên ngoài; hỗ trợ [kiểm tra toàn vẹn tài nguyên](#kiểm-tra-toàn-vẹn-tài-nguyên)
 
 ### noframes
 
-Marks the script as not running inside a `<frame>`
+Đánh dấu script không chạy bên trong `<frame>`
 
 ### definition
 
-The reference address of a `.d.ts` file, enabling editor auto-completion hints
+Địa chỉ tham chiếu của tệp `.d.ts`, kích hoạt gợi ý tự động hoàn thành của trình soạn thảo
 
 ### antifeature
 
-This is related to the script marketplace; unwelcome features need to be flagged with this description value, for example:
+Điều này liên quan đến thị trường script; các tính năng không mong muốn cần được gắn cờ với giá trị mô tả này:
 
 ```js
-// @antifeature ads This script has ads
-// @antifeature referral-link This script modifies or redirects to the author's referral link
+// @antifeature ads Script này có quảng cáo
+// @antifeature referral-link Script này chỉnh sửa hoặc chuyển hướng đến liên kết giới thiệu của tác giả
 ```
 
-## Additional Description Values
+## Các Giá trị Mô tả Bổ sung
 
 ### license
 
-The current script's open-source license
+Giấy phép mã nguồn mở của script hiện tại
 
 ### updateURL
 
-Update checking requires the remote script to have a `@version` tag for this to take effect.
+Kiểm tra cập nhật yêu cầu script từ xa có thẻ `@version`.
 
-The link the script uses to check for updates; if not set, it defaults to the link's `user.js => meta.js`, or the current link if there's no `user.js`.
+Liên kết mà script sử dụng để kiểm tra cập nhật; nếu không được đặt, mặc định là `user.js => meta.js` của liên kết, hoặc liên kết hiện tại nếu không có `user.js`.
 
-If `@updateURL` is configured, `@downloadURL` must also be configured for `@updateURL` to take effect.
+Nếu `@updateURL` được cấu hình, `@downloadURL` cũng phải được cấu hình để `@updateURL` hoạt động.
 
 ### downloadURL
 
-The download address for the script update
+Địa chỉ tải xuống cho bản cập nhật script
 
 ### supportURL
 
-Support site, bug report page
+Trang web hỗ trợ, trang báo lỗi
 
 ### homepage, homepageURL, website
 
-Script homepage
+Trang chủ script
 
 ### source
 
-Script source code page
+Trang mã nguồn script
 
 ### icon, iconURL, defaulticon
 
-Script icon
+Biểu tượng script
 
 ### icon64, icon64URL
 
-64x64-sized script icon
+Biểu tượng script 64x64
 
-### copyright
+### Ghi chú
 
-Script copyright information
+### Kiểm tra Toàn vẹn Tài nguyên
 
-### tag
+- Sử dụng md5, sha1, sha256, sha384 hoặc sha512 để kiểm tra xem tài nguyên có bị thay đổi không. Nhiều phương pháp kiểm tra có thể phân tách bằng `;` hoặc `,`.
+- Theo [khuyến nghị của W3C](https://w3c.github.io/webappsec-subresource-integrity/#hash-collision-attacks), md5 và sha1 không được khuyến nghị; hãy sử dụng sha384 hoặc thuật toán hash mạnh hơn.
 
-Script tags, separated by commas or spaces
-
-### compatible
-
-Compatibility information shown on GreasyFork
-
-### scriptUrl
-
-The user script URL referenced by a subscription script
-
-### unwrap
-
-Makes the user script bypass sandbox wrapping and be injected and executed directly in the page's native global scope. The script can directly access and modify the page's real global variables, but will not be able to use user script privileged APIs such as `GM.*`. Commonly used in scenarios that require deep interaction with native page scripts, or when migrating an existing regular page script.
-
-### cloudCat
-
-Marks the script as exportable to a CloudCat cloud script package (SC only)
-
-### cloudServer
-
-The CloudCat cloud service used by the script
-
-### exportValue
-
-Script storage values to export when exporting as a cloud script
-
-### exportCookie
-
-Cookies to export when exporting as a cloud script
-
-### Notes
-
-### Resource Integrity Verification
-
-- Use md5, sha1, sha256, sha384, or sha512 to verify resources against tampering. Multiple verification methods can be separated with `;` or `,`.
-- Per [W3C recommendations](https://w3c.github.io/webappsec-subresource-integrity/#hash-collision-attacks), md5 and sha1 are not recommended; use sha384 or a stronger hash algorithm instead.
-
-For example:
+Ví dụ:
 
 ```js
 // @require https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js#md5-d55836f30c097da753179f82fa6f108f,sha256-a476ab8560837a51938aa6e1720c8be87c2862b6221690e9de7ffac113811a90

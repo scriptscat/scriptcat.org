@@ -1,12 +1,12 @@
 ---
-title: Metadata Block
+title: メタデータブロック
 ---
 
-The content inside `==UserScript==` describes the permissions a script needs, information about the script, and so on. It sits at the very start of the script.
+`==UserScript==` 内のコンテンツは、スクリプトが必要とする権限やスクリプトに関する情報を記述します。スクリプトの最初に配置します。
 
 ```js
 // ==UserScript==
-// @name         New Userscript
+// @name         新しいユーザースクリプト
 // @namespace    https://bbs.tampermonkey.net.cn/
 // @version      0.1.0
 // @description  try to take over the world!
@@ -15,233 +15,193 @@ The content inside `==UserScript==` describes the permissions a script needs, in
 // ==/UserScript==
 ```
 
-## Main Values
+## 主要な値
 
 ### name
 
-Script name
+スクリプト名
 
 ### namespace
 
-Script namespace. `name + namespace` determines the script's uniqueness.
+スクリプトの名前空間。`name + namespace` でスクリプトのユニーク性を決定します。
 
 ### version
 
-The script's version. It's recommended to follow [semantic versioning](https://semver.org/), so that when a version change is detected, the user is prompted to update, and so on.
+スクリプトのバージョン。[セマンティックバージョニング](https://semver.org/) に従うことをお勧めします。バージョンの変更が検出されると、ユーザーに更新が促されます。
 
 ### description
 
-A detailed description of the script
+スクリプトの詳細な説明
 
 ### author
 
-Script author
+スクリプトの作者
 
 ### run-at
 
-When the script runs
+スクリプトの実行タイミング
 
-| Value          | Runs                                                              | Supported since        |
-| -------------- | ------------------------------------------------------------------ | ---------------------- |
-| document-start | Injects the script into the page as soon as the URL matches on the frontend | v0.3.0          |
-| document-end   | Injects the script after the DOM has finished loading; page scripts and images may still be loading at this point | v0.3.0 |
-| document-idle  | Injects the script after all content has finished loading         | v0.3.0                  |
-| document-body  | The script is only injected once the page has a `body` element     | v0.6.2                  |
-| document-menu  | Shows a menu on right-click; running the script uses the script name as the menu name | v0.3.4-v0.9.4 (🔥 removed) |
+| 値 | 実行タイミング | サポート開始バージョン |
+|---|---|---|
+| document-start | フロントエンドで URL が一致するとすぐにページにスクリプトを注入 | v0.3.0 |
+| document-end | DOM の読み込み完了後にスクリプトを注入。ページスクリプトや画像がまだ読み込み中の場合がある | v0.3.0 |
+| document-idle | すべてのコンテンツの読み込み完了後にスクリプトを注入 | v0.3.0 |
+| document-body | ページに `body` 要素が存在する場合のみスクリプトを注入 | v0.6.2 |
+| document-menu | 右クリック時にメニューを表示。スクリプト名をメニュー名として使用 | v0.3.4-v0.9.4 (🔥 削除済み) |
 
-For menu icons, you can refer to [Unicode Symbols](https://unicode-table.com/en/) and [emoji](https://www.emojiall.com/en-US/).
+メニューのアイコンについては、[Unicode シンボル](https://unicode-table.com/en/) や [絵文字](https://www.emojiall.com/en-US/) を参照してください。
 
 ### run-in
 
-Specifies the environment the script is injected into: `@run-in normal-tabs` for regular tabs, `@run-in incognito-tabs` for incognito tabs.
+スクリプトを注入する環境を指定します：`@run-in normal-tabs` は通常のタブ、`@run-in incognito-tabs` はプライベートタブです。
 
 ### early-start (v1.1.0+)
 
-When `run-at` is `document-start`, the script runs as early as possible, but it still can't guarantee loading faster than the page.
+`run-at` が `document-start` の場合、スクリプトはできるだけ早く実行されますが、ページより早く読み込まれることは保証されません。
 
-Once you've defined `@run-at document-start`, you can add `@early-start` to make the script load faster than the page: [example](https://github.com/scriptscat/scriptcat/blob/main/example/early-start.js)
+`@run-at document-start` を定義した後に `@early-start` を追加すると、スクリプトがページより早く読み込まれます：[例](https://github.com/scriptscat/scriptcat/blob/main/example/early-start.js)
 
 ### inject-into
 
 :::tip
 
-In the content-script environment (`content`), `unsafeWindow` only points to the environment's own current `window`, and cannot access the page's `window`.
+コンテンツスクリプト環境（`content`）では、`unsafeWindow` はその環境自体の現在の `window` を指し、ページの `window` にはアクセスできません。
 
-ScriptCat does not support automatically checking CSP restrictions to decide whether to inject as `content` or `page` (i.e. Tampermonkey's `@inject-into auto`).
+ScriptCat は CSP の制限を自動的にチェックして `content` または `page` として注入するかどうかを判断する機能（Tampermonkey の `@inject-into auto`）をサポートしていません。
 
 :::
 
-Specifies where the script is injected, supporting `page` and `content`, defaulting to `page`.
+スクリプトの注入先を指定します。`page` と `content` をサポートし、デフォルトは `page` です。
 
-- `page`: the script is injected into the page environment, and can use `unsafeWindow` to access the page's `window` and `DOM`
-- `content`: the script is injected into the content-script environment, cannot directly access the page's `window` object, but can access the page `DOM`, and is not subject to `CSP`
+- `page`：スクリプトはページ環境に注入され、`unsafeWindow` を使用してページの `window` と `DOM` にアクセスできます
+- `content`：スクリプトはコンテンツスクリプト環境に注入され、ページの `window` オブジェクトには直接アクセスできませんが、ページ `DOM` にアクセスでき、`CSP` の制限を受けません
 
 ### storageName 🧪
 
-The storage space for `Value`; data under the same `storageName` can be shared and communicated across scripts. This is ScriptCat-specific.
+`Value` の保存スペース。同じ `storageName` 下のデータはスクリプト間で共有および通信できます。ScriptCat 固有の機能です。
 
 ### background
 
-Marks this script as a background script, which needs to run in the background environment. See [Background Script](./background.md#background-script-background) for details.
+このスクリプトをバックグラウンドスクリプトとしてマークします。詳細は [バックグラウンドスクリプト](./background.md#background-script-background) を参照してください。
 
 ### crontab
 
-Marks the script as a scheduled script, which requires a cron expression value. Only one cron expression can exist, and it runs on that schedule in the background environment. See [Scheduled Script](./background.md#scheduled-script-crontab) for details.
+スクリプトをスケジュールスクリプトとしてマークします。cron 式の値が必要です。cron 式は1つだけ存在でき、バックグラウンド環境でそのスケジュールで実行されます。詳細は [スケジュールスクリプト](./background.md#scheduled-script-crontab) を参照してください。
 
 ### match
 
-Only URLs matched by `match` will run the script, following [Match patterns](https://developer.chrome.com/docs/extensions/mv3/match_patterns/). In `match`, `*` is a wildcard, `tld` matches the top-level domain, and a domain starting with `*.` will also match `xxx.com`:
+`match` に一致する URL のみでスクリプトを実行します。[マッチパターン](https://developer.chrome.com/docs/extensions/v3/match_patterns/) に従います。`match` では `*` がワイルドカード、`tld` がトップレベルドメインに一致し、`*.` で始まるドメインは `xxx.com` にも一致します：
 
-| Value                             | Correct examples                                                                                                                          | Incorrect examples                          |
-| --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
-| `http://scriptcat.org/doc/match`  | `http://scriptcat.org/doc/match`                                                                                                            | `http://scriptcat.org/doc/runAt`         |
-| `*://*/param?*`                   | `https://scriptcat.org/param` \| `http://scriptcat.org/param?search=tampermonkey`                                                            | `https://scriptcat.org/test/param`       |
-| `*://*/prefix*suffix`             | `http://scriptcat.org/prefix/suffix` \| `http://scriptcat.org/prefix/mid/suffix` \| `http://scriptcat.org/prefixsuffix`                      | `http://scriptcat.org/prefix/suffix/end` |
-| `http*://scriptcat.org/*`         | `https://scriptcat.org/` \| `https://scriptcat.org/doc` \| `http://scriptcat.org/doc/match` \| `http://scriptcat.org/param?search=tampermonkey` | `https://doc.scriptcat.org/`            |
-| `http*://scriptcat.org/doc/*`     | `https://scriptcat.org/doc` \| `http://scriptcat.org/doc/match`                                                                              | `http://scriptcat.org/param?search=tampermonkey` |
-| `http*://scriptcat.tld/doc/*`     | `https://scriptcat.cn/doc` \| `http://scriptcat.net.cn/doc/match`                                                                            | `http://google.com/param?search=tampermonkey` |
-| `http*://*.scriptcat.org/doc/*`   | `https://scriptcat.cn/doc` \| `http://www.scriptcat.net.cn/doc/match`                                                                        | `http://google.com/param?search=tampermonkey` |
+| 値 | 正しい例 | 正しくない例 |
+|---|---|---|
+| `http://scriptcat.org/doc/match` | `http://scriptcat.org/doc/match` | `http://scriptcat.org/doc/runAt` |
+| `*://*/param?*` | `https://scriptcat.org/param` \| `http://scriptcat.org/param?search=tampermonkey` | `https://scriptcat.org/test/param` |
+| `http*://scriptcat.org/*` | `https://scriptcat.org/` \| `https://scriptcat.org/doc` | `https://doc.scriptcat.org/` |
 
 ### include
 
-Supports `\*` for fuzzy matching, allowing non-standard URLs
+`*` を使用したあいまい一致をサポートし、非標準 URL を許可します
 
 ### exclude
 
-URLs that should not match; uses the same expression syntax as `include`
+一致すべきでない URL。`include` と同じ式構文を使用します
 
 ### grant
 
-Requests API permission — an API can only be called once it has been requested. See the permission list at: [API Documentation](./api.md) and [CAT API Documentation](./cat-api.md).
+API 権限をリクエストします。API はリクエストされた後にのみ呼び出できます。権限リストは：[API ドキュメント](./api.md) および [CAT API ドキュメント](./cat-api.md) を参照してください。
 
-Two special values:
+2つの特殊な値：
 
-- **none**: the script does not run in the sandbox environment, but directly in the page environment. In this environment, no GM APIs are available, but the page's `window` object can be accessed directly.
-- **unsafeWindow**: in the sandbox environment, if you need to access the page's `window` object, use `unsafeWindow` to do so. (Tampermonkey doesn't require declaring this — it's kept only for compatibility, which admittedly isn't very clean.)
+- **none**：スクリプトはサンドボックス環境で実行されず、ページ環境で直接実行されます。この環境では GM API は使用できませんが、ページの `window` オブジェクトに直接アクセスできます。
+- **unsafeWindow**：サンドボックス環境でページの `window` オブジェクトにアクセスする必要がある場合は、`unsafeWindow` を使用します。（Tampermonkey はこれを宣言する必要はありません。互換性のためのみ残されています。）
 
 ### connect
 
-Requests access permission for a site; see `GM_cookie` and `GM_xmlhttpRequest`. `GM_download` in `native` mode also honors `@connect` (undeclared hosts trigger a confirmation prompt, unlike Tampermonkey)
+サイトへのアクセス権限をリクエストします。`GM_cookie` と `GM_xmlhttpRequest` を参照してください。`native` モードの `GM_download` も `@connect` を認識します（未宣言のホストは確認プロンプトを表示します）。
 
 ### resource
 
-Includes a resource file. After declaring `@resource`, you can use `GM_getResourceText`/`GM_getResourceURL` to retrieve the information.
+リソースファイルを含めます。`@resource` を宣言した後、`GM_getResourceText`/`GM_getResourceURL` を使用して情報を取得できます。
 
 ```js
 // @resource icon https://bbs.tampermonkey.net.cn/favicon.ico
 // @resource html https://bbs.tampermonkey.net.cn/
 // @resource xml https://bbs.tampermonkey.net.cn/sitemap.xml
-// Adding resource integrity verification
+// リソース整合性検証を追加
 // @resource icon https://bbs.tampermonkey.net.cn/favicon.ico#md5-xxx,sha256-xxx
 ```
 
 ### require
 
-Includes an external JS file; supports [resource integrity verification](#resource-integrity-verification)
+外部 JS ファイルを含めます。[リソース整合性検証](#リソース整合性検証) をサポートします
 
 ### require-css
 
-Includes an external CSS file; supports [resource integrity verification](#resource-integrity-verification)
+外部 CSS ファイルを含めます。[リソース整合性検証](#リソース整合性検証) をサポートします
 
 ### noframes
 
-Marks the script as not running inside a `<frame>`
+スクリプトが `<frame>` 内で実行されないことをマークします
 
 ### definition
 
-The reference address of a `.d.ts` file, enabling editor auto-completion hints
+`.d.ts` ファイルの参照アドレス。エディタの自動補完ヒントを有効にします
 
 ### antifeature
 
-This is related to the script marketplace; unwelcome features need to be flagged with this description value, for example:
+スクリプトマーケットプレイスに関連します。歓迎されない機能にはこの説明値でフラグを付ける必要があります：
 
 ```js
-// @antifeature ads This script has ads
-// @antifeature referral-link This script modifies or redirects to the author's referral link
+// @antifeature ads このスクリプトには広告が含まれています
+// @antifeature referral-link このスクリプトは著者のリファラルリンクに変更またはリダイレクトします
 ```
 
-## Additional Description Values
+## 追加の説明値
 
 ### license
 
-The current script's open-source license
+現在のスクリプトのオープンソースライセンス
 
 ### updateURL
 
-Update checking requires the remote script to have a `@version` tag for this to take effect.
+更新チェックには、リモートスクリプトに `@version` タグが必要です。
 
-The link the script uses to check for updates; if not set, it defaults to the link's `user.js => meta.js`, or the current link if there's no `user.js`.
+スクリプトが更新をチェックするリンク。設定されていない場合、デフォルトではリンクの `user.js => meta.js`、`user.js` がない場合は現在のリンクです。
 
-If `@updateURL` is configured, `@downloadURL` must also be configured for `@updateURL` to take effect.
+`@updateURL` が設定されている場合、`@updateURL` が機能するには `@downloadURL` も設定する必要があります。
 
 ### downloadURL
 
-The download address for the script update
+スクリプト更新のダウンロードアドレス
 
 ### supportURL
 
-Support site, bug report page
+サポートサイト、バグ報告ページ
 
 ### homepage, homepageURL, website
 
-Script homepage
+スクリプトホームページ
 
 ### source
 
-Script source code page
+スクリプトソースコードページ
 
 ### icon, iconURL, defaulticon
 
-Script icon
+スクリプトアイコン
 
 ### icon64, icon64URL
 
-64x64-sized script icon
-
-### copyright
-
-Script copyright information
-
-### tag
-
-Script tags, separated by commas or spaces
-
-### compatible
-
-Compatibility information shown on GreasyFork
-
-### scriptUrl
-
-The user script URL referenced by a subscription script
-
-### unwrap
-
-Makes the user script bypass sandbox wrapping and be injected and executed directly in the page's native global scope. The script can directly access and modify the page's real global variables, but will not be able to use user script privileged APIs such as `GM.*`. Commonly used in scenarios that require deep interaction with native page scripts, or when migrating an existing regular page script.
-
-### cloudCat
-
-Marks the script as exportable to a CloudCat cloud script package (SC only)
-
-### cloudServer
-
-The CloudCat cloud service used by the script
-
-### exportValue
-
-Script storage values to export when exporting as a cloud script
-
-### exportCookie
-
-Cookies to export when exporting as a cloud script
+64x64 サイズのスクリプトアイコン
 
 ### Notes
 
-### Resource Integrity Verification
+### リソース整合性検証
 
-- Use md5, sha1, sha256, sha384, or sha512 to verify resources against tampering. Multiple verification methods can be separated with `;` or `,`.
-- Per [W3C recommendations](https://w3c.github.io/webappsec-subresource-integrity/#hash-collision-attacks), md5 and sha1 are not recommended; use sha384 or a stronger hash algorithm instead.
+- md5、sha1、sha256、sha384、または sha512 を使用してリソースの改ざんを検証します。複数の検証方法を `;` または `,` で区切ることができます。
+- [W3C の推奨](https://w3c.github.io/webappsec-subresource-integrity/#hash-collision-attacks) により、md5 と sha1 は推奨されません。sha384 以上のハッシュアルゴリズムを使用してください。
 
-For example:
+例：
 
 ```js
 // @require https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js#md5-d55836f30c097da753179f82fa6f108f,sha256-a476ab8560837a51938aa6e1720c8be87c2862b6221690e9de7ffac113811a90

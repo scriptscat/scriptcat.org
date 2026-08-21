@@ -1,264 +1,263 @@
 ---
-title: Background Script
+title: バックグラウンドスクリプト
 ---
 
-Background scripts are suited to scripts that need to keep running continuously. Background scripts are a ScriptCat-specific script type; they run in a sandbox and cannot access the DOM. They can be developed using the same GM APIs as Tampermonkey, and compatibility notes are called out in the documentation.
+バックグラウンドスクリプトは、常に実行を継続する必要があるスクリプトに適しています。バックグラウンドスクリプトは ScriptCat 固有のスクリプトタイプです。サンドボックスで実行され、DOM にアクセスできません。Tampermonkey と同じ GM API を使用して開発でき、互換性に関する注記はドキュメントに記載されています。
 
-## Background Script (`@background`)
+## バックグラウンドスクリプト（`@background`）
 
-A background script is declared with the `@background` attribute. It lets the script keep running in the background after the script is enabled or the browser starts.
+バックグラウンドスクリプトは `@background` 属性で宣言します。スクリプトが有効化された後やブラウザが起動した後も、スクリプトをバックグラウンドで継続的に実行できます。
 
-## Scheduled Script (`@crontab`)
+## スケジュールスクリプト（`@crontab`）
 
-> A scheduled script is a kind of background script suited to tasks that need to **run repeatedly on a time cycle**.
+> スケジュールスクリプトは、**一定のサイクルで繰り返し実行する必要があるタスク** に適したバックグラウンドスクリプトの一種です。
 
-A scheduled script is declared with the `@crontab` attribute. It supports minute-level and second-level scheduling, and provides ScriptCat's extended syntax `once` / `once(...)` to avoid running more than once within the same time cycle.
+スケジュールスクリプトは `@crontab` 属性で宣言します。分レベルおよび秒レベルのスケジュールをサポートし、同じタイムサイクル内で複数回実行されるのを防ぐ ScriptCat の拡張構文 `once` / `once(...)` を提供します。
 
-⚠️ Notes:
+⚠️ 注意事項：
 
-* In a single script, **only the first `@crontab` takes effect**
-* It's recommended that the script's **single execution time + retry time** not exceed the cron interval, otherwise executions may overlap
+* 1つのスクリプトで **最初の `@crontab` のみが有効** です
+* スクリプトの **単一実行時間 + リトライ時間** が cron 間隔を超えないことをお勧めします。超えると実行が重複する可能性があります
 
-## Cron Expression Notes
+## Cron 式の注意事項
 
-ScriptCat's cron implementation is based on [**node-cron**](https://github.com/kelektiv/node-cron/), with a small extension on top of standard cron syntax.
+ScriptCat の cron 実装は [**node-cron**](https://github.com/kelektiv/node-cron/) をベースにしており、標準の cron 構文に小さな拡張を加えています。
 
-### Expression Format
+### 式の形式
 
-#### Standard 5-Field Format (Recommended)
-
-```text
-minute hour day month weekday
-```
-
-#### Extended 6-Field Format (Not Recommended)
+#### 標準5フィールド形式（推奨）
 
 ```text
-second minute hour day month weekday
+分 時 日 月 曜日
 ```
 
-> ⚠️ The 6-field format is not recommended
-> Browser environments can't guarantee second-level precision, and it increases performance overhead — the background page may have its scheduling delayed.
-
-### Syntax Available Per Field
-
-| Syntax  | Meaning              | Example                  |
-| ------- | -------------------- | ------------------------ |
-| `*`     | Any value            | `*` (every minute/hour)  |
-| number  | Specific value       | `5` (the 5th minute)     |
-| `a,b,c` | Multiple discrete values | `1,15,30`             |
-| `a-b`   | Contiguous range      | `10-23`                  |
-| `*/n`   | Every n units          | `*/5`                   |
-| `a-b/n` | Range with step        | `10-50/10`               |
-
-#### Weekday Rules
-
-* `1–6`: Monday through Saturday
-* `0` or `7`: Sunday
-
-## The `once` Extension Syntax
-
-### What `once` Means
-
-Using `once` in a cron expression means:
-
-> **Within the current time cycle, only allow one successful execution**
-
-Even if later time points within the same cycle still match the cron rule, the script will not run again.
-
-### `once` vs. `once(...)`
-
-| Syntax        | Underlying cron value for this field | Description                                                       |
-| ------------- | ------------------------------------- | ------------------------------------------------------------------ |
-| `once`        | `*` (any value)                       | Runs on the first match within the cycle, without a specific time  |
-| `once(expr)`  | `expr`                                 | Runs only at times matching `expr` within the cycle, and only once |
-
-`once(expr)` lets you precisely specify candidate time points while still enforcing "run only once per cycle." All standard cron syntax (numbers, ranges, steps, lists) is supported inside the parentheses.
-
-Example comparison:
+#### 拡張6フィールド形式（非推奨）
 
 ```text
-* once * * *          // any minute of every hour; runs on the first match, no further runs that hour
-* once(9-17) * * *    // between 9:00 and 17:59 every day, runs once per hour
-0,30 once * * *       // whichever of minute 0 or 30 is matched first each hour runs; no further runs that hour
+秒 分 時 日 月 曜日
 ```
 
-### The Position of `once` = the Time Cycle It Limits
+> ⚠️ 6フィールド形式は非推奨です
+> ブラウザ環境では秒レベルの精度を保証できず、パフォーマンスのオーバーヘッドが増加します。バックグラウンドページのスケジュールが遅延する可能性があります。
 
-Wherever `once` / `once(...)` is placed, it means "run only once within that time granularity."
+### 各フィールドで使用可能な構文
 
-| `once` position | Behavior                       |
-| ---------------- | ------------------------------- |
-| minute field      | Runs only once per minute       |
-| hour field        | Runs only once per hour         |
-| day field         | Runs only once per day          |
-| month field       | Runs only once per month        |
-| weekday field     | Runs only once per week         |
+| 構文 | 意味 | 例 |
+|---|---|---|
+| `*` | 任意の値 | `*`（毎分/毎時） |
+| number | 特定の値 | `5`（5分） |
+| `a,b,c` | 複数の離散値 | `1,15,30` |
+| `a-b` | 連続範囲 | `10-23` |
+| `*/n` | n単位ごと | `*/5` |
+| `a-b/n` | ステップ付き範囲 | `10-50/10` |
 
-Examples:
+#### 曜日のルール
+
+* `1–6`：月曜日から土曜日
+* `0` または `7`：日曜日
+
+## `once` 拡張構文
+
+### `once` の意味
+
+cron 式で `once` を使用すると：
+
+> **現在のタイムサイクル内で1回の成功した実行のみを許可**
+
+同じサイクル内の後続の時刻ポイントが cron ルールにマッチしても、スクリプトは再実行されません。
+
+### `once` と `once(...)` の比較
+
+| 構文 | このフィールドの基礎cron値 | 説明 |
+|---|---|---|
+| `once` | `*`（任意の値） | サイクル内で最初のマッチ時に実行。特定の時刻なし |
+| `once(expr)` | `expr` | サイクル内で `expr` にマッチする時刻のみ実行。1回のみ |
+
+`once(expr)` を使うと、候補時刻を正確に指定しながら「サイクルごとに1回のみ実行」を適用できます。括弧内ではすべての標準 cron 構文（数値、範囲、ステップ、リスト）がサポートされています。
+
+比較例：
 
 ```text
-* once * * *       // runs only once per hour
-* * once * *       // runs only once per day
-* 9-18 once * *    // runs only once between 9:00 and 18:59 each day
+* once * * *          // 毎時の任意の分。最初のマッチで実行、その時間の残りは再実行しない
+* once(9-17) * * *    // 毎日9:00〜17:59の間、1時間に1回実行
+0,30 once * * *       // 0分または30分のうち最初にマッチしたものが毎時実行。その時間の残りは再実行しない
 ```
 
-### `once` Combined with Ranges / Lists / Steps
+### `once` の位置 = 制限するタイムサイクル
 
-`once` / `once(...)` can be combined with any cron syntax, but there is only one rule:
+`once` / `once(...)` をどこに配置しても、「その時間粒度内で1回のみ実行」を意味します。
 
-> **Within the same cycle, once a run has succeeded, all further matching time points are ignored**
+| `once` の位置 | 動作 |
+|---|---|
+| 分フィールド | 1分に1回のみ実行 |
+| 時フィールド | 1時間に1回のみ実行 |
+| 日フィールド | 1日に1回のみ実行 |
+| 月フィールド | 1ヶ月に1回のみ実行 |
+| 曜日フィールド | 1週間に1回のみ実行 |
 
-#### Example 1: Range
+例：
+
+```text
+* once * * *       // 1時間に1回のみ実行
+* * once * *       // 1日に1回のみ実行
+* 9-18 once * *    // 毎日9:00〜18:59の間、1回のみ実行
+```
+
+### `once` と範囲/リスト/ステップの組み合わせ
+
+`once` / `once(...)` は任意の cron 構文と組み合わせできますが、ルールは1つだけです：
+
+> **同じサイクル内で一度実行が成功すると、その後のすべてのマッチする時刻ポイントは無視されます**
+
+#### 例1：範囲
 
 ```text
 * 10 once * *
 ```
 
-Meaning:
+意味：
 
-* Every day, 10:00–10:59 are candidate times
-* After the first match of the day
-* 10:05–10:59 will no longer run
+* 毎日10:00〜10:59が候補時刻
+* 1回目のマッチ後
+* 10:05〜10:59は再実行されない
 
-#### Example 2: List
+#### 例2：リスト
 
 ```text
 * 1,3,5 once * *
 ```
 
-Meaning:
+意味：
 
-* Every day, 1:00, 3:00, and 5:00 are candidate times
-* If 1:00 has already run
-* 3:00 and 5:00 will be skipped
+* 毎日1:00、3:00、5:00が候補時刻
+* 1:00で実行済みの場合
+* 3:00と5:00はスキップされる
 
-#### Example 3: Step
+#### 例3：ステップ
 
 ```text
 * */4 once * *
 ```
 
-Meaning:
+意味：
 
-* Every day, 0:00, 4:00, 8:00, 12:00, 16:00, and 20:00 are candidate times
-* After the first run of the day
-* No further time points will run
+* 毎日0:00、4:00、8:00、12:00、16:00、20:00が候補時刻
+* 1回目の実行後
+* その後の時刻ポイントは実行されない
 
-#### Example 4: `once(...)` Specifying Candidate Time Points
+#### 例4：`once(...)` で候補時刻を指定
 
 ```text
 * once(9-17) * * *
 ```
 
-Meaning:
+意味：
 
-* Every day, 9:00 through 17:00 are candidate hours
-* The cycle resets every hour; within an hour, the first match stops further runs
-* Effect: runs once per hour between 9:00 and 17:00 each day, 9 times in total
+* 毎日9:00〜17:00が候補時刻
+* 時ごとにサイクルがリセット。1時間以内で最初のマッチが後続の実行を停止
+* 効果：毎日9:00〜17:00の間、1時間に1回、計9回実行
 
 ```text
 * 9-18 once * *
 ```
 
-Meaning:
+意味：
 
-* Every day, 9:00–18:59 are candidate times
-* `once` in the day field locks the cycle to once per day
-* After the first match of the day, nothing else runs before 18:59
+* 毎日9:00〜18:59が候補時刻
+* 日フィールドの `once` がサイクルを1日に1回にロック
+* 1回目のマッチ後、18:59まで再実行されない
 
-## `@crontab` Examples
+## `@crontab` の例
 
-### Common
-
-```js
-//@crontab * * * * *        // runs once per minute
-//@crontab * * * * * *      // runs once per second (not recommended)
-//@crontab 0 */6 * * *      // runs on the hour every 6 hours
-//@crontab 15 */6 * * *     // runs at minute 15 every 6 hours
-//@crontab * once * * *     // runs at most once per hour
-//@crontab * * once * *     // runs at most once per day
-//@crontab * 10 once * *    // runs only once within the 10:00 hour each day (e.g. if it ran at 10:04, it won't run again from 10:05-10:59)
-//@crontab * */4 once * *   // checks at most once every 4 hours each day (e.g. if it ran at 4:00, it won't run again at 8, 12, 16, 20, 24, etc.)
-```
-
-### Advanced
+### 一般的
 
 ```js
-//@crontab * 1,3,5 once * *       // runs once at 1:00, 3:00, or 5:00 each day (e.g. if it ran at 1:00, it won't run again at 3:00 or 5:00)
-//@crontab * 10-23 once * *       // runs once between 10:00 and 23:59 each day (e.g. if it ran at 10:04, it won't run again from 10:05-23:59)
-//@crontab * once 13 * *          // runs once per hour on the 13th of every month
-//@crontab * once(9-17) * * *     // runs once per hour between 9:00 and 17:00 each day
-//@crontab 0,30 once * * *        // whichever of minute 0 or 30 is matched first each hour runs; no repeat that hour
-//@crontab * 9-18 once * *        // runs only once between 9:00 and 18:00 each day
+//@crontab * * * * *        // 1分ごとに実行
+//@crontab * * * * * *      // 1秒ごとに実行（非推奨）
+//@crontab 0 */6 * * *      // 6時間ごとに0分に実行
+//@crontab 15 */6 * * *     // 6時間ごとに15分に実行
+//@crontab * once * * *     // 1時間に最大1回実行
+//@crontab * * once * *     // 1日に最大1回実行
+//@crontab * 10 once * *    // 毎日10時の時間帯に1回のみ実行（例：10:04に実行済みなら10:05-10:59は再実行しない）
+//@crontab * */4 once * *   // 毎日4時間ごとに最大1回チェック（例：4:00に実行済みなら8、12、16、20、24などは再実行しない）
 ```
 
-## Usage Recommendations
+### 応用
 
-### Good Fits for `once`
+```js
+//@crontab * 1,3,5 once * *       // 毎日1:00、3:00、5:00のうち1回のみ実行
+//@crontab * 10-23 once * *       // 毎日10:00〜23:59の間、1回のみ実行
+//@crontab * once 13 * *          // 毎月13日に1時間に1回実行
+//@crontab * once(9-17) * * *     // 毎日9:00〜17:00の間、1時間に1回実行
+//@crontab 0,30 once * * *        // 0分または30分のうち最初にマッチしたものが毎時実行。その時間の残りは再実行しない
+//@crontab * 9-18 once * *        // 毎日9:00〜18:00の間、1回のみ実行
+```
 
-* Tasks that **only need to run once** per day/hour
-* Status checks, sync, and reporting scripts
-* Avoiding the following problems:
+## 使用上の推奨
 
-  * The browser hasn't been opened for a long time
-  * Background-page scheduling delays
-  * Duplicate execution caused by a browser restart
+### `once` に適したタスク
 
-### Not Recommended for `once`
+* **1日/1時間に1回のみ実行** が必要なタスク
+* ステータスチェック、同期、レポートスクリプト
+* 以下の問題の回避：
+  * ブラウザが長時間開かれていない
+  * バックグラウンドページのスケジュール遅延
+  * ブラウザの再起動による重複実行
 
-* Tasks that must run at a precise moment
-* Scripts whose execution time may significantly exceed the cron interval
-* Tasks with strict consistency requirements on the number of executions
+### `once` が推奨されないタスク
 
-## Testing Cron Expressions
+* 正確な時刻に実行する必要があるタスク
+* 実行時間が cron 間隔を大幅に超える可能性のあるスクリプト
+* 実行回数に厳格な整合性要件があるタスク
 
-When testing a cron expression, please **temporarily replace `once` / `once(...)` with their underlying value**:
+## Cron 式のテスト
+
+cron 式をテストする際は、**`once` / `once(...)` を基礎値に一時的に置き換えてください**：
 
 * `once` → `*`
 * `once(expr)` → `expr`
 
-Note that testing tools may not support the extended 6-field format.
+テストツールは6フィールド形式をサポートしていない場合があることをご了承ください。
 
-Recommended tools:
+推奨ツール：
 
 * [crontab.guru](https://crontab.guru/)
 * [tool.lu cron calculator](https://tool.lu/crontab/)
 
-On the script list page, hover over the **run status column** to see the script's **next scheduled execution time**.
+スクリプトリストページでは、**実行状態列** にカーソルを合わせるとスクリプトの **次回実行予定時刻** を確認できます。
 
-## Logs
+## ログ
 
-On the script list page, hovering over the `run status column` shows a tooltip with the script's run status;
-clicking it pops up the log content printed via `GM_log`.
+スクリプトリストページでは、`run status column` にカーソルを合わせるとスクリプトの実行状態を示すツールチップが表示されます。
+クリックすると `GM_log` で出力されたログコンテンツがポップアップ表示されます。
 
 ![](@site/docs/dev/background.assets/image-20210621214143661.png)
 
 ![](@site/docs/dev/background.assets/image-20210621214124685.png)
 
-## Script Debugging
+## スクリプトのデバッグ
 
-Background scripts can be debugged directly from the script editor page, but this has the following limitations:
+バックグラウンドスクリプトはスクリプトエディタページから直接デバッグできますが、以下の制限があります：
 
-* `value` doesn't sync properly
-* `registerMenu` menus don't trigger properly
+* `value` が正しく同期されない
+* `registerMenu` メニューが正しくトリガーされない
 
 ![](@site/docs/dev/background.assets/image-20210903141601057.png)
 
-To debug the real runtime environment, enable **Developer Mode** in the extension settings, then open the extension's `background.html` page to debug.
+実際のランタイム環境をデバッグするには、拡張機能の設定で **開発者モード** を有効にし、拡張機能の `background.html` ページを開いてデバッグしてください。
 
-Errors raised at runtime can also be viewed in the run log.
+ランタイムで発生したエラーは実行ログで確認することもできます。
 
 ![image-20210903144155450](@site/docs/dev/background.assets/image-20210903144155450.png)
 
 ## Promise
 
-The following pattern is highly recommended, as it also allows the script manager to monitor script execution.
-If the script performs any asynchronous operation, it **must return a `Promise`**.
+以下のパターンを強くお勧めします。スクリプト管理ツールがスクリプトの実行を監視できるようになります。
+スクリプトが非同期操作を実行する場合、**`Promise` を返す必要があります**。
 
 ```ts
 // ==UserScript==
-// @name         Background Script
+// @name         バックグラウンドスクリプト
 // @namespace    wyz
 // @version      1.0.0
 // @author       wyz
@@ -266,16 +265,16 @@ If the script performs any asynchronous operation, it **must return a `Promise`*
 // ==/UserScript==
 return new Promise((resolve, reject) => {
   if (Math.round((Math.random() * 10) % 2)) {
-    resolve("ok"); // succeeded
+    resolve("ok"); // 成功
   } else {
-    reject("error"); // failed, with the error reason
+    reject("error"); // 失敗、エラー理由付き
   }
 });
 ```
 
 ```js
 // ==UserScript==
-// @name         Scheduled script that runs once a day
+// @name         1日に1回実行されるスケジュールスクリプト
 // @namespace    wyz
 // @version      1.0.0
 // @author       wyz
@@ -283,16 +282,16 @@ return new Promise((resolve, reject) => {
 // ==/UserScript==
 return new Promise((resolve, reject) => {
   if (Math.round((Math.random() * 10) % 2)) {
-    resolve("ok"); // succeeded
+    resolve("ok"); // 成功
   } else {
-    reject("error"); // failed, with the error reason
+    reject("error"); // 失敗、エラー理由付き
   }
 });
 ```
 
 ```js
 // ==UserScript==
-// @name         Call an API
+// @name         API呼び出し
 // @namespace    wyz
 // @version      1.0.0
 // @author       wyz
@@ -302,29 +301,29 @@ return new Promise((resolve, reject) => {
   GM_xmlhttpRequest({
     url: "https://bbs.tampermonkey.net.cn/",
     onload() {
-      resolve("ok"); // succeeded
+      resolve("ok"); // 成功
     },
     onerror() {
-      reject("error"); // failed, with the error reason
+      reject("error"); // 失敗、エラー理由付き
     },
   });
 });
 ```
 
-Please make sure to call `resolve` / `reject` only after the script's logic has truly finished.
-Once called, the manager considers the script's execution complete, and any subsequent GM operations will no longer take effect.
+スクリプトのロジックが実際に完了した後にのみ `resolve` / `reject` を呼び出してください。
+呼び出された後、管理ツールはスクリプトの実行が完了したと見なし、それ以降のGM操作は効果がありません。
 
-## Error Retry
+## エラーリトライ
 
-ScriptCat background scripts support error retry.
-When a script fails, it can `reject` with a `CATRetryError` to trigger a retry.
+ScriptCat のバックグラウンドスクリプトはエラーリトライをサポートしています。
+スクリプトが失敗した場合、`CATRetryError` で `reject` してリトライをトリガーできます。
 
-* Minimum retry interval: 5 seconds
-* Avoid conflicting with the script's own execution time, otherwise duplicate execution may occur
+* 最小リトライ間隔：5秒
+* スクリプトの実行時間と競合しないようにしてください。競合すると重複実行が発生する可能性があります
 
 ```js
 // ==UserScript==
-// @name         Retry example
+// @name         リトライ例
 // @namespace    https://bbs.tampermonkey.net.cn/
 // @version      0.1.0
 // @description  try to take over the world!
@@ -336,7 +335,7 @@ When a script fails, it can `reject` with a `CATRetryError` to trigger a retry.
 return new Promise((resolve, reject) => {
   GM_notification({
     title: "retry",
-    text: "Retrying in 10 seconds",
+    text: "10秒後にリトライします",
   });
   reject(new CATRetryError("xxx error", 10));
 });

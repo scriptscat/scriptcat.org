@@ -1,247 +1,207 @@
 ---
-title: Metadata Block
+title: 元資料區塊
 ---
 
-The content inside `==UserScript==` describes the permissions a script needs, information about the script, and so on. It sits at the very start of the script.
+`==UserScript==` 內的內容描述腳本所需的權限、腳本相關資訊等。它位於腳本的最開始。
 
 ```js
 // ==UserScript==
-// @name         New Userscript
+// @name         新的使用者腳本
 // @namespace    https://bbs.tampermonkey.net.cn/
 // @version      0.1.0
-// @description  try to take over the world!
+// @description  嘗試征服世界！
 // @author       You
 // @crontab      * * once * *
 // ==/UserScript==
 ```
 
-## Main Values
+## 主要值
 
 ### name
 
-Script name
+腳本名稱
 
 ### namespace
 
-Script namespace. `name + namespace` determines the script's uniqueness.
+腳本命名空間。`name + namespace` 決定腳本的唯一性。
 
 ### version
 
-The script's version. It's recommended to follow [semantic versioning](https://semver.org/), so that when a version change is detected, the user is prompted to update, and so on.
+腳本版本。建議遵循[語意化版本控制](https://semver.org/)，以便偵測到版本變更時提示使用者更新。
 
 ### description
 
-A detailed description of the script
+腳本的詳細描述
 
 ### author
 
-Script author
+腳本作者
 
 ### run-at
 
-When the script runs
+腳本何時執行
 
-| Value          | Runs                                                              | Supported since        |
-| -------------- | ------------------------------------------------------------------ | ---------------------- |
-| document-start | Injects the script into the page as soon as the URL matches on the frontend | v0.3.0          |
-| document-end   | Injects the script after the DOM has finished loading; page scripts and images may still be loading at this point | v0.3.0 |
-| document-idle  | Injects the script after all content has finished loading         | v0.3.0                  |
-| document-body  | The script is only injected once the page has a `body` element     | v0.6.2                  |
-| document-menu  | Shows a menu on right-click; running the script uses the script name as the menu name | v0.3.4-v0.9.4 (🔥 removed) |
+| 值 | 執行時機 | 支援版本 |
+|---|---|---|
+| document-start | 在前端 URL 匹配時立即將腳本注入頁面 | v0.3.0 |
+| document-end | 在 DOM 載入完成後注入腳本；頁面腳本和圖片可能仍在載入中 | v0.3.0 |
+| document-idle | 在所有內容載入完成後注入腳本 | v0.3.0 |
+| document-body | 只有在頁面有 `body` 元素時才注入腳本 | v0.6.2 |
+| document-menu | 右鍵時顯示選單；以腳本名稱作為選單名稱執行腳本 | v0.3.4-v0.9.4 (🔥 已移除) |
 
-For menu icons, you can refer to [Unicode Symbols](https://unicode-table.com/en/) and [emoji](https://www.emojiall.com/en-US/).
+選單圖示可參考 [Unicode 符號](https://unicode-table.com/en/) 和 [表情符號](https://www.emojiall.com/en-US/)。
 
 ### run-in
 
-Specifies the environment the script is injected into: `@run-in normal-tabs` for regular tabs, `@run-in incognito-tabs` for incognito tabs.
+指定腳本注入的環境：`@run-in normal-tabs` 用於一般分頁，`@run-in incognito-tabs` 用於無痕分頁。
 
 ### early-start (v1.1.0+)
 
-When `run-at` is `document-start`, the script runs as early as possible, but it still can't guarantee loading faster than the page.
+當 `run-at` 為 `document-start` 時，腳本會盡早執行，但無法保證比頁面更快載入。
 
-Once you've defined `@run-at document-start`, you can add `@early-start` to make the script load faster than the page: [example](https://github.com/scriptscat/scriptcat/blob/main/example/early-start.js)
+定義 `@run-at document-start` 後，可以添加 `@early-start` 讓腳本比頁面更快載入：[範例](https://github.com/scriptscat/scriptcat/blob/main/example/early-start.js)
 
 ### inject-into
 
 :::tip
 
-In the content-script environment (`content`), `unsafeWindow` only points to the environment's own current `window`, and cannot access the page's `window`.
+在 content-script 環境（`content`）中，`unsafeWindow` 只指向該環境本身的目前 `window`，無法存取頁面的 `window`。
 
-ScriptCat does not support automatically checking CSP restrictions to decide whether to inject as `content` or `page` (i.e. Tampermonkey's `@inject-into auto`).
+ScriptCat 不支援自動檢查 CSP 限制來決定以 `content` 或 `page` 方式注入（即 Tampermonkey 的 `@inject-into auto`）。
 
 :::
 
-Specifies where the script is injected, supporting `page` and `content`, defaulting to `page`.
+指定腳本注入的位置，支援 `page` 和 `content`，預設為 `page`。
 
-- `page`: the script is injected into the page environment, and can use `unsafeWindow` to access the page's `window` and `DOM`
-- `content`: the script is injected into the content-script environment, cannot directly access the page's `window` object, but can access the page `DOM`, and is not subject to `CSP`
+- `page`：腳本注入到頁面環境，可使用 `unsafeWindow` 存取頁面的 `window` 和 `DOM`
+- `content`：腳本注入到 content-script 環境，無法直接存取頁面的 `window` 物件，但可存取頁面 `DOM`，不受 `CSP` 限制
 
 ### storageName 🧪
 
-The storage space for `Value`; data under the same `storageName` can be shared and communicated across scripts. This is ScriptCat-specific.
+`Value` 的儲存空間；相同 `storageName` 下的資料可在腳本間共享和通訊。ScriptCat 特有功能。
 
 ### background
 
-Marks this script as a background script, which needs to run in the background environment. See [Background Script](./background.md#background-script-background) for details.
+將此腳本標記為背景腳本，需要在背景環境中執行。詳見[背景腳本](./background.md#background-script-background)。
 
 ### crontab
 
-Marks the script as a scheduled script, which requires a cron expression value. Only one cron expression can exist, and it runs on that schedule in the background environment. See [Scheduled Script](./background.md#scheduled-script-crontab) for details.
+將腳本標記為排程腳本，需要 cron 表達式值。只能有一個 cron 表達式，並在背景環境中按該排程執行。詳見[排程腳本](./background.md#scheduled-script-crontab)。
 
 ### match
 
-Only URLs matched by `match` will run the script, following [Match patterns](https://developer.chrome.com/docs/extensions/mv3/match_patterns/). In `match`, `*` is a wildcard, `tld` matches the top-level domain, and a domain starting with `*.` will also match `xxx.com`:
+只有與 `match` 匹配的 URL 才會執行腳本，遵循[匹配模式](https://developer.chrome.com/docs/extensions/v3/match_patterns/)。在 `match` 中，`*` 是萬用字元，`tld` 匹配頂級網域，以 `*.` 開頭的網域也會匹配 `xxx.com`：
 
-| Value                             | Correct examples                                                                                                                          | Incorrect examples                          |
-| --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
-| `http://scriptcat.org/doc/match`  | `http://scriptcat.org/doc/match`                                                                                                            | `http://scriptcat.org/doc/runAt`         |
-| `*://*/param?*`                   | `https://scriptcat.org/param` \| `http://scriptcat.org/param?search=tampermonkey`                                                            | `https://scriptcat.org/test/param`       |
-| `*://*/prefix*suffix`             | `http://scriptcat.org/prefix/suffix` \| `http://scriptcat.org/prefix/mid/suffix` \| `http://scriptcat.org/prefixsuffix`                      | `http://scriptcat.org/prefix/suffix/end` |
-| `http*://scriptcat.org/*`         | `https://scriptcat.org/` \| `https://scriptcat.org/doc` \| `http://scriptcat.org/doc/match` \| `http://scriptcat.org/param?search=tampermonkey` | `https://doc.scriptcat.org/`            |
-| `http*://scriptcat.org/doc/*`     | `https://scriptcat.org/doc` \| `http://scriptcat.org/doc/match`                                                                              | `http://scriptcat.org/param?search=tampermonkey` |
-| `http*://scriptcat.tld/doc/*`     | `https://scriptcat.cn/doc` \| `http://scriptcat.net.cn/doc/match`                                                                            | `http://google.com/param?search=tampermonkey` |
-| `http*://*.scriptcat.org/doc/*`   | `https://scriptcat.cn/doc` \| `http://www.scriptcat.net.cn/doc/match`                                                                        | `http://google.com/param?search=tampermonkey` |
+| 值 | 正確範例 | 錯誤範例 |
+|---|---|---|
+| `http://scriptcat.org/doc/match` | `http://scriptcat.org/doc/match` | `http://scriptcat.org/doc/runAt` |
+| `*://*/param?*` | `https://scriptcat.org/param` \| `http://scriptcat.org/param?search=tampermonkey` | `https://scriptcat.org/test/param` |
+| `http*://scriptcat.org/*` | `https://scriptcat.org/` \| `https://scriptcat.org/doc` | `https://doc.scriptcat.org/` |
 
 ### include
 
-Supports `\*` for fuzzy matching, allowing non-standard URLs
+支援 `*` 進行模糊匹配，允許非標準 URL
 
 ### exclude
 
-URLs that should not match; uses the same expression syntax as `include`
+不應匹配的 URL；使用與 `include` 相同的表達式語法
 
 ### grant
 
-Requests API permission — an API can only be called once it has been requested. See the permission list at: [API Documentation](./api.md) and [CAT API Documentation](./cat-api.md).
+請求 API 權限——API 只有在被請求後才能呼叫。權限列表見：[API 文件](./api.md) 和 [CAT API 文件](./cat-api.md)。
 
-Two special values:
+兩個特殊值：
 
-- **none**: the script does not run in the sandbox environment, but directly in the page environment. In this environment, no GM APIs are available, but the page's `window` object can be accessed directly.
-- **unsafeWindow**: in the sandbox environment, if you need to access the page's `window` object, use `unsafeWindow` to do so. (Tampermonkey doesn't require declaring this — it's kept only for compatibility, which admittedly isn't very clean.)
+- **none**：腳本不在沙箱環境中執行，而是在頁面環境中直接執行。在此環境中，沒有可用的 GM API，但可以直接存取頁面的 `window` 物件。
+- **unsafeWindow**：在沙箱環境中，如果需要存取頁面的 `window` 物件，請使用 `unsafeWindow`。（Tampermonkey 不需要宣告此項——僅為了相容性保留。）
 
 ### connect
 
-Requests access permission for a site; see `GM_cookie` and `GM_xmlhttpRequest`. `GM_download` in `native` mode also honors `@connect` (undeclared hosts trigger a confirmation prompt, unlike Tampermonkey)
+請求網站的存取權限；見 `GM_cookie` 和 `GM_xmlhttpRequest`。`native` 模式的 `GM_download` 也識別 `@connect`（未宣告的主機會觸發確認提示）。
 
 ### resource
 
-Includes a resource file. After declaring `@resource`, you can use `GM_getResourceText`/`GM_getResourceURL` to retrieve the information.
+包含資源檔案。宣告 `@resource` 後，可使用 `GM_getResourceText`/`GM_getResourceURL` 取得資訊。
 
 ```js
 // @resource icon https://bbs.tampermonkey.net.cn/favicon.ico
 // @resource html https://bbs.tampermonkey.net.cn/
 // @resource xml https://bbs.tampermonkey.net.cn/sitemap.xml
-// Adding resource integrity verification
+// 新增資源完整性驗證
 // @resource icon https://bbs.tampermonkey.net.cn/favicon.ico#md5-xxx,sha256-xxx
 ```
 
 ### require
 
-Includes an external JS file; supports [resource integrity verification](#resource-integrity-verification)
+包含外部 JS 檔案；支援[資源完整性驗證](#資源完整性驗證)
 
 ### require-css
 
-Includes an external CSS file; supports [resource integrity verification](#resource-integrity-verification)
+包含外部 CSS 檔案；支援[資源完整性驗證](#資源完整性驗證)
 
 ### noframes
 
-Marks the script as not running inside a `<frame>`
+標記腳本不在 `<frame>` 內執行
 
 ### definition
 
-The reference address of a `.d.ts` file, enabling editor auto-completion hints
+`.d.ts` 檔案的參考地址，啟用編輯器自動完成提示
 
 ### antifeature
 
-This is related to the script marketplace; unwelcome features need to be flagged with this description value, for example:
+這與腳本市集相關；不受歡迎的功能需要用此描述值標記：
 
 ```js
-// @antifeature ads This script has ads
-// @antifeature referral-link This script modifies or redirects to the author's referral link
+// @antifeature ads 此腳本含有廣告
+// @antifeature referral-link 此腳本修改或重新導向至作者的推薦連結
 ```
 
-## Additional Description Values
+## 附加描述值
 
 ### license
 
-The current script's open-source license
+目前腳本的開源授權
 
 ### updateURL
 
-Update checking requires the remote script to have a `@version` tag for this to take effect.
+更新檢查需要遠端腳本具有 `@version` 標籤才能生效。
 
-The link the script uses to check for updates; if not set, it defaults to the link's `user.js => meta.js`, or the current link if there's no `user.js`.
+腳本用於檢查更新的連結；若未設定，預設為連結的 `user.js => meta.js`，若無 `user.js` 則為目前連結。
 
-If `@updateURL` is configured, `@downloadURL` must also be configured for `@updateURL` to take effect.
+若設定 `@updateURL`，也必須設定 `@downloadURL` 才能使 `@updateURL` 生效。
 
 ### downloadURL
 
-The download address for the script update
+腳本更新的下載地址
 
 ### supportURL
 
-Support site, bug report page
+支援網站、錯誤回報頁面
 
 ### homepage, homepageURL, website
 
-Script homepage
+腳本首頁
 
 ### source
 
-Script source code page
+腳本原始碼頁面
 
 ### icon, iconURL, defaulticon
 
-Script icon
+腳本圖示
 
 ### icon64, icon64URL
 
-64x64-sized script icon
+64x64 尺寸的腳本圖示
 
-### copyright
+### 注意事項
 
-Script copyright information
+### 資源完整性驗證
 
-### tag
+- 使用 md5、sha1、sha256、sha384 或 sha512 驗證資源未被竄改。多種驗證方法可用 `;` 或 `,` 分隔。
+- 根據 [W3C 建議](https://w3c.github.io/webappsec-subresource-integrity/#hash-collision-attacks)，不建議使用 md5 和 sha1；請使用 sha384 或更強的雜湊演算法。
 
-Script tags, separated by commas or spaces
-
-### compatible
-
-Compatibility information shown on GreasyFork
-
-### scriptUrl
-
-The user script URL referenced by a subscription script
-
-### unwrap
-
-Makes the user script bypass sandbox wrapping and be injected and executed directly in the page's native global scope. The script can directly access and modify the page's real global variables, but will not be able to use user script privileged APIs such as `GM.*`. Commonly used in scenarios that require deep interaction with native page scripts, or when migrating an existing regular page script.
-
-### cloudCat
-
-Marks the script as exportable to a CloudCat cloud script package (SC only)
-
-### cloudServer
-
-The CloudCat cloud service used by the script
-
-### exportValue
-
-Script storage values to export when exporting as a cloud script
-
-### exportCookie
-
-Cookies to export when exporting as a cloud script
-
-### Notes
-
-### Resource Integrity Verification
-
-- Use md5, sha1, sha256, sha384, or sha512 to verify resources against tampering. Multiple verification methods can be separated with `;` or `,`.
-- Per [W3C recommendations](https://w3c.github.io/webappsec-subresource-integrity/#hash-collision-attacks), md5 and sha1 are not recommended; use sha384 or a stronger hash algorithm instead.
-
-For example:
+範例：
 
 ```js
 // @require https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js#md5-d55836f30c097da753179f82fa6f108f,sha256-a476ab8560837a51938aa6e1720c8be87c2862b6221690e9de7ffac113811a90
