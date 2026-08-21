@@ -16,14 +16,14 @@ ScriptCat v1.4 引入了 Agent 系統，為使用者腳本提供了一組功能�
 
 | 模組 | 權限 | 描述 |
 |------|---------|------|
-| [對話](./conversation) | `@grant CAT.agent.conversation` | 建立 AI 對話、傳送訊息、串流回應、定義自訂工具 |
-| [DOM 操作](./dom) | `@grant CAT.agent.dom` | 頁面導航、截圖、點擊、填寫、捲動、DOM 監控 |
-| [Skill](./skill) | `@grant CAT.agent.skills` | 安裝/解除安裝/呼叫 Skill 套件 |
-| [排程任務](./task) | `@grant CAT.agent.task` | Cron 排程任務、事件監聽 |
-| [模型](./model) | `@grant CAT.agent.model` | 查詢已配置的模型資訊（唯讀） |
-| [OPFS 檔案](./opfs) | `@grant CAT.agent.opfs` | 讀寫 Agent 工作區檔案 |
-| [MCP](./mcp) | — | 配置 MCP 伺服器連接（僅管理頁面，無腳本 API） |
-| [Skill 開發](./skill-dev) | — | SKILL.cat.md + SkillScript 開發指南 |
+| [對話](./agent-conversation) | `@grant CAT.agent.conversation` | 建立 AI 對話、傳送訊息、串流回應、定義自訂工具 |
+| [DOM 操作](./agent-dom) | `@grant CAT.agent.dom` | 頁面導航、截圖、點擊、填寫、捲動、DOM 監控 |
+| [Skill](./agent-skill) | `@grant CAT.agent.skills` | 安裝/解除安裝/呼叫 Skill 套件 |
+| [排程任務](./agent-task) | `@grant CAT.agent.task` | Cron 排程任務、事件監聽 |
+| [模型](./agent-model) | `@grant CAT.agent.model` | 查詢已配置的模型資訊（唯讀） |
+| [OPFS 檔案](./agent-opfs) | `@grant CAT.agent.opfs` | 讀寫 Agent 工作區檔案 |
+| [MCP](./agent-mcp) | — | 配置 MCP 伺服器連接（僅管理頁面，無腳本 API） |
+| [Skill 開發](./agent-skill-dev) | — | SKILL.cat.md + SkillScript 開發指南 |
 
 ## 快速開始
 
@@ -101,4 +101,4 @@ Skill 是結合提示 + 工具腳本 + 參考資料的套件，讓您能夠將�
 
 透過 URL 安裝的 Skill 會記錄其安裝來源；控制面板讓您一鍵檢查更新和升級（基於 `version` 欄位的 semver 比較）。
 
-詳情請參閱 [Skill 管理 API](./skill) 和 [Skill 開發指南](./skill-dev)。
+詳情請參閱 [Skill 管理 API](./agent-skill) 和 [Skill 開發指南](./agent-skill-dev)。

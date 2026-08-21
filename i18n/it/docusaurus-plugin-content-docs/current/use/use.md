@@ -67,8 +67,8 @@ Nota: Le estensioni installate così non si aggiornano automaticamente.
 
 Dopo l'installazione di ScriptCat, il tour di onboarding inizia automaticamente.
 
-- [Installare script](/en/docs/use/script_installation/)
-- Gestire e operare: modificare, eseguire/fermare, [UserConfig](/en/docs/dev/config/)
-- [Backup](/en/docs/use/sync/) e [migrazione](/en/docs/use/from-other/migrate-from-tampermonkey/)
-- [Sincronizzazione script](/en/docs/use/sync/)
-- [Abbonamenti](/en/docs/dev/subscribe/)
+- [Installare script](/docs/use/script_installation/)
+- Gestire e operare: modificare, eseguire/fermare, [UserConfig](/docs/dev/config/)
+- [Backup](/docs/use/sync/) e [migrazione](/docs/use/from-other/migrate-from-tampermonkey/)
+- [Sincronizzazione script](/docs/use/sync/)
+- [Abbonamenti](/docs/dev/subscribe/)

@@ -16,14 +16,14 @@ Betikler bu yeteneklere `CAT.agent.*` ad alanı üzerinden çağrı yapar ve her
 
 | Modül | İzin | Açıklama |
 |------|---------|------|
-| [Sohbet](./conversation) | `@grant CAT.agent.conversation` | AI sohbetleri oluşturma, mesaj gönderme, akış yanıtları, özel araçlar tanımlama |
-| [DOM İşlemleri](./dom) | `@grant CAT.agent.dom` | Sayfa gezinme, ekran görüntüleri, tıklama, doldurma, kaydırma, DOM izleme |
-| [Skill](./skill) | `@grant CAT.agent.skills` | Skill paketlerini kurma/kaldırma/çağırma |
-| [Zamanlanmış Görevler](./task) | `@grant CAT.agent.task` | Cron zamanlanmış görevler, olay dinleme |
-| [Model](./model) | `@grant CAT.agent.model` | Yapılandırılmış model bilgilerini sorgulama (salt okunur) |
-| [OPFS Dosyaları](./opfs) | `@grant CAT.agent.opfs` | Agent çalışma alanı dosyalarını okuma/yazma |
-| [MCP](./mcp) | — | MCP sunucu bağlantılarını yapılandırma (yalnızca yönetim sayfası, betik API'si yok) |
-| [Skill Geliştirme](./skill-dev) | — | SKILL.cat.md + SkillScript geliştirme rehberi |
+| [Sohbet](./agent-conversation) | `@grant CAT.agent.conversation` | AI sohbetleri oluşturma, mesaj gönderme, akış yanıtları, özel araçlar tanımlama |
+| [DOM İşlemleri](./agent-dom) | `@grant CAT.agent.dom` | Sayfa gezinme, ekran görüntüleri, tıklama, doldurma, kaydırma, DOM izleme |
+| [Skill](./agent-skill) | `@grant CAT.agent.skills` | Skill paketlerini kurma/kaldırma/çağırma |
+| [Zamanlanmış Görevler](./agent-task) | `@grant CAT.agent.task` | Cron zamanlanmış görevler, olay dinleme |
+| [Model](./agent-model) | `@grant CAT.agent.model` | Yapılandırılmış model bilgilerini sorgulama (salt okunur) |
+| [OPFS Dosyaları](./agent-opfs) | `@grant CAT.agent.opfs` | Agent çalışma alanı dosyalarını okuma/yazma |
+| [MCP](./agent-mcp) | — | MCP sunucu bağlantılarını yapılandırma (yalnızca yönetim sayfası, betik API'si yok) |
+| [Skill Geliştirme](./agent-skill-dev) | — | SKILL.cat.md + SkillScript geliştirme rehberi |
 
 ## Hızlı Başlangıç
 
@@ -101,4 +101,4 @@ Tarayıcı otomasyonu, zamanlanmış görevler, bir Skill oluşturma aracı, soh
 
 URL ile kurulan bir Skill, kurulum kaynağını kaydeder; panel, güncellemeleri kontrol etmenize ve tek tıkla yükseltmenize olanak tanır (`version` alanının semver karşılaştırmasına dayalı).
 
-Ayrıntılar için [Skill Yönetim API'si](./skill) ve [Skill Geliştirme Rehberi](./skill-dev) bölümlerine bakın.
+Ayrıntılar için [Skill Yönetim API'si](./agent-skill) ve [Skill Geliştirme Rehberi](./agent-skill-dev) bölümlerine bakın.

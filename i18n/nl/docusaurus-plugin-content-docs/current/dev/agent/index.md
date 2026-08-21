@@ -16,14 +16,14 @@ Scripts roepen deze mogelijkheden aan via de naamruimte `CAT.agent.*`, en elke A
 
 | Module | Machtiging | Beschrijving |
 |------|---------|------|
-| [Gesprek](./conversation) | `@grant CAT.agent.conversation` | AI-gesprekken maken, berichten verzenden, reacties streamen, aangepaste tools definiëren |
-| [DOM-bewerkingen](./dom) | `@grant CAT.agent.dom` | Paginanavigatie, schermafbeeldingen, klikken, invullen, scrollen, DOM-bewaking |
-| [Skill](./skill) | `@grant CAT.agent.skills` | Skill-pakketten installeren/verwijderen/aanroepen |
-| [Geplande taken](./task) | `@grant CAT.agent.task` | Cron-geplande taken, gebeurtenisluisteren |
-| [Model](./model) | `@grant CAT.agent.model` | Geconfigureerde modelinformatie opvragen (alleen-lezen) |
-| [OPFS-bestanden](./opfs) | `@grant CAT.agent.opfs` | Agent-werkruimtebestanden lezen/schrijven |
-| [MCP](./mcp) | — | MCP-serververbindingen configureren (alleen beheerpagina, geen script-API) |
-| [Skill-ontwikkeling](./skill-dev) | — | SKILL.cat.md + SkillScript-ontwikkelgids |
+| [Gesprek](./agent-conversation) | `@grant CAT.agent.conversation` | AI-gesprekken maken, berichten verzenden, reacties streamen, aangepaste tools definiëren |
+| [DOM-bewerkingen](./agent-dom) | `@grant CAT.agent.dom` | Paginanavigatie, schermafbeeldingen, klikken, invullen, scrollen, DOM-bewaking |
+| [Skill](./agent-skill) | `@grant CAT.agent.skills` | Skill-pakketten installeren/verwijderen/aanroepen |
+| [Geplande taken](./agent-task) | `@grant CAT.agent.task` | Cron-geplande taken, gebeurtenisluisteren |
+| [Model](./agent-model) | `@grant CAT.agent.model` | Geconfigureerde modelinformatie opvragen (alleen-lezen) |
+| [OPFS-bestanden](./agent-opfs) | `@grant CAT.agent.opfs` | Agent-werkruimtebestanden lezen/schrijven |
+| [MCP](./agent-mcp) | — | MCP-serververbindingen configureren (alleen beheerpagina, geen script-API) |
+| [Skill-ontwikkeling](./agent-skill-dev) | — | SKILL.cat.md + SkillScript-ontwikkelgids |
 
 ## Snelstart
 
@@ -101,4 +101,4 @@ Bevat kant-en-klare Skills voor browserautomatisering, geplande taken, een Skill
 
 Een via URL geïnstalleerde Skill registreert de installatiebron; het dashboard maakt het mogelijk om met één klik op updates te controleren en te upgraden (op basis van semver-vergelijking van het veld `version`).
 
-Zie [Skill-beheer-API](./skill) en [Skill-ontwikkelgids](./skill-dev) voor details.
+Zie [Skill-beheer-API](./agent-skill) en [Skill-ontwikkelgids](./agent-skill-dev) voor details.

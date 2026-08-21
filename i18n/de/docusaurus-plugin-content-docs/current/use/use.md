@@ -67,8 +67,8 @@ Hinweis: Auf diese Weise installierte Erweiterungen können nicht automatisch ak
 
 Nach der Installation startet die Onboarding-Tour automatisch.
 
-- [Skripte installieren](/en/docs/use/script_installation/)
-- Verwalten & bedienen: bearbeiten, ausführen/stoppen, [UserConfig](/en/docs/dev/config/)
-- [Backup](/en/docs/use/sync/) und [Migration](/en/docs/use/from-other/migrate-from-tampermonkey/)
-- [Skript-Synchronisation](/en/docs/use/sync/)
-- [Abonnements](/en/docs/dev/subscribe/)
+- [Skripte installieren](/docs/use/script_installation/)
+- Verwalten & bedienen: bearbeiten, ausführen/stoppen, [UserConfig](/docs/dev/config/)
+- [Backup](/docs/use/sync/) und [Migration](/docs/use/from-other/migrate-from-tampermonkey/)
+- [Skript-Synchronisation](/docs/use/sync/)
+- [Abonnements](/docs/dev/subscribe/)

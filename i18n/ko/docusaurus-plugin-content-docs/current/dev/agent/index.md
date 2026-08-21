@@ -16,14 +16,14 @@ ScriptCat v1.4는 AI 대화, 브라우저 자동화, 파일 관리 및 예약 �
 
 | 모듈 | 권한 | 설명 |
 |------|---------|------|
-| [대화](./conversation) | `@grant CAT.agent.conversation` | AI 대화 생성, 메시지 전송, 스트리밍 응답, 사용자 지정 도구 정의 |
-| [DOM 작업](./dom) | `@grant CAT.agent.dom` | 페이지 탐색, 스크린샷, 클릭, 채우기, 스크롤, DOM 모니터링 |
-| [Skill](./skill) | `@grant CAT.agent.skills` | Skill 패키지 설치/제거/호출 |
-| [예약 작업](./task) | `@grant CAT.agent.task` | Cron 예약 작업, 이벤트 수신 |
-| [모델](./model) | `@grant CAT.agent.model` | 구성된 모델 정보 쿼리 (읽기 전용) |
-| [OPFS 파일](./opfs) | `@grant CAT.agent.opfs` | Agent 작업 영역 파일 읽기/쓰기 |
-| [MCP](./mcp) | — | MCP 서버 연결 구성 (관리 페이지만, 스크립트 API 없음) |
-| [Skill 개발](./skill-dev) | — | SKILL.cat.md + SkillScript 개발 가이드 |
+| [대화](./agent-conversation) | `@grant CAT.agent.conversation` | AI 대화 생성, 메시지 전송, 스트리밍 응답, 사용자 지정 도구 정의 |
+| [DOM 작업](./agent-dom) | `@grant CAT.agent.dom` | 페이지 탐색, 스크린샷, 클릭, 채우기, 스크롤, DOM 모니터링 |
+| [Skill](./agent-skill) | `@grant CAT.agent.skills` | Skill 패키지 설치/제거/호출 |
+| [예약 작업](./agent-task) | `@grant CAT.agent.task` | Cron 예약 작업, 이벤트 수신 |
+| [모델](./agent-model) | `@grant CAT.agent.model` | 구성된 모델 정보 쿼리 (읽기 전용) |
+| [OPFS 파일](./agent-opfs) | `@grant CAT.agent.opfs` | Agent 작업 영역 파일 읽기/쓰기 |
+| [MCP](./agent-mcp) | — | MCP 서버 연결 구성 (관리 페이지만, 스크립트 API 없음) |
+| [Skill 개발](./agent-skill-dev) | — | SKILL.cat.md + SkillScript 개발 가이드 |
 
 ## 빠른 시작
 
@@ -101,4 +101,4 @@ Skill은 프롬프트 + 도구 스크립트 + 참조 자료를 결합한 패키�
 
 URL로 설치된 Skill은 설치 소스를 기록합니다. 대시보드에서 업데이트를 확인하고 원클릭 업그레이드할 수 있습니다(`version` 필드의 semver 비교 기반).
 
-자세한 내용은 [Skill 관리 API](./skill) 및 [Skill 개발 가이드](./skill-dev)를 참조하세요.
+자세한 내용은 [Skill 관리 API](./agent-skill) 및 [Skill 개발 가이드](./agent-skill-dev)를 참조하세요.

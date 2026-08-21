@@ -16,14 +16,14 @@ ScriptCat v1.4 Agent সিস্টেমটি চালু করে, যা 
 
 | মডিউল | অনুমতি | বর্ণনা |
 |------|---------|------|
-| [কথোপকথন](./conversation) | `@grant CAT.agent.conversation` | AI কথোপকথন তৈরি, বার্তা পাঠানো, স্ট্রিমিং প্রতিক্রিয়া, কাস্টম টুল সংজ্ঞায়িত |
-| [DOM অপারেশন](./dom) | `@grant CAT.agent.dom` | পৃষ্ঠা নেভিগেশন, স্ক্রিনশট, ক্লিক, পূরণ, স্ক্রল, DOM পর্যবেক্ষণ |
-| [Skill](./skill) | `@grant CAT.agent.skills` | Skill প্যাকেজ ইনস্টল/আনইনস্টল/আমন্ত্রণ |
-| [নির্ধারিত কাজ](./task) | `@grant CAT.agent.task` | Cron নির্ধারিত কাজ, ইভেন্ট শোনা |
-| [মডেল](./model) | `@grant CAT.agent.model` | কনফিগার করা মডেল তথ্য জিজ্ঞাসা (শুধুমাত্র-পঠন) |
-| [OPFS ফাইল](./opfs) | `@grant CAT.agent.opfs` | Agent ওয়ার্কস্পেস ফাইল পড়া/লেখা |
-| [MCP](./mcp) | — | MCP সার্ভার সংযোগ কনফিগার করুন (শুধুমাত্র ম্যানেজমেন্ট পেজ, কোনো স্ক্রিপ্ট API নেই) |
-| [Skill উন্নয়ন](./skill-dev) | — | SKILL.cat.md + SkillScript উন্নয়ন গাইড |
+| [কথোপকথন](./agent-conversation) | `@grant CAT.agent.conversation` | AI কথোপকথন তৈরি, বার্তা পাঠানো, স্ট্রিমিং প্রতিক্রিয়া, কাস্টম টুল সংজ্ঞায়িত |
+| [DOM অপারেশন](./agent-dom) | `@grant CAT.agent.dom` | পৃষ্ঠা নেভিগেশন, স্ক্রিনশট, ক্লিক, পূরণ, স্ক্রল, DOM পর্যবেক্ষণ |
+| [Skill](./agent-skill) | `@grant CAT.agent.skills` | Skill প্যাকেজ ইনস্টল/আনইনস্টল/আমন্ত্রণ |
+| [নির্ধারিত কাজ](./agent-task) | `@grant CAT.agent.task` | Cron নির্ধারিত কাজ, ইভেন্ট শোনা |
+| [মডেল](./agent-model) | `@grant CAT.agent.model` | কনফিগার করা মডেল তথ্য জিজ্ঞাসা (শুধুমাত্র-পঠন) |
+| [OPFS ফাইল](./agent-opfs) | `@grant CAT.agent.opfs` | Agent ওয়ার্কস্পেস ফাইল পড়া/লেখা |
+| [MCP](./agent-mcp) | — | MCP সার্ভার সংযোগ কনফিগার করুন (শুধুমাত্র ম্যানেজমেন্ট পেজ, কোনো স্ক্রিপ্ট API নেই) |
+| [Skill উন্নয়ন](./agent-skill-dev) | — | SKILL.cat.md + SkillScript উন্নয়ন গাইড |
 
 ## দ্রুত শুরু
 
@@ -101,4 +101,4 @@ agents/
 
 URL-এর মাধ্যমে ইনস্টল করা একটি Skill তার ইনস্টল উৎস রেকর্ড করে; ড্যাশবোর্ড আপনাকে এক ক্লিকে আপডেট পরীক্ষা ও আপগ্রেড করতে দেয় (`version` ফিল্ডের semver তুলনার উপর ভিত্তি করে)।
 
-বিস্তারিত জানতে [Skill ম্যানেজমেন্ট API](./skill) এবং [Skill উন্নয়ন গাইড](./skill-dev) দেখুন।
+বিস্তারিত জানতে [Skill ম্যানেজমেন্ট API](./agent-skill) এবং [Skill উন্নয়ন গাইড](./agent-skill-dev) দেখুন।

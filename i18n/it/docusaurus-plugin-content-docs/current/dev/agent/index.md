@@ -16,14 +16,14 @@ Gli script chiamano queste capacità attraverso il namespace `CAT.agent.*`, e og
 
 | Modulo | Permesso | Descrizione |
 |------|---------|------|
-| [Conversazione](./conversation) | `@grant CAT.agent.conversation` | Creare conversazioni AI, inviare messaggi, trasmettere risposte, definire strumenti personalizzati |
-| [Operazioni DOM](./dom) | `@grant CAT.agent.dom` | Navigazione pagine, screenshot, clic, compilazione, scroll, monitoraggio DOM |
-| [Skill](./skill) | `@grant CAT.agent.skills` | Installare/disinstallare/invocare pacchetti Skill |
-| [Task programmati](./task) | `@grant CAT.agent.task` | Task Cron programmati, ascolto eventi |
-| [Modello](./model) | `@grant CAT.agent.model` | Interrogare informazioni sui modelli configurati (sola lettura) |
-| [File OPFS](./opfs) | `@grant CAT.agent.opfs` | Leggere/scrivere file dell'area di lavoro di Agent |
-| [MCP](./mcp) | — | Configurare connessioni server MCP (solo pagina di amministrazione, senza API script) |
-| [Sviluppo Skill](./skill-dev) | — | Guida allo sviluppo di SKILL.cat.md + SkillScript |
+| [Conversazione](./agent-conversation) | `@grant CAT.agent.conversation` | Creare conversazioni AI, inviare messaggi, trasmettere risposte, definire strumenti personalizzati |
+| [Operazioni DOM](./agent-dom) | `@grant CAT.agent.dom` | Navigazione pagine, screenshot, clic, compilazione, scroll, monitoraggio DOM |
+| [Skill](./agent-skill) | `@grant CAT.agent.skills` | Installare/disinstallare/invocare pacchetti Skill |
+| [Task programmati](./agent-task) | `@grant CAT.agent.task` | Task Cron programmati, ascolto eventi |
+| [Modello](./agent-model) | `@grant CAT.agent.model` | Interrogare informazioni sui modelli configurati (sola lettura) |
+| [File OPFS](./agent-opfs) | `@grant CAT.agent.opfs` | Leggere/scrivere file dell'area di lavoro di Agent |
+| [MCP](./agent-mcp) | — | Configurare connessioni server MCP (solo pagina di amministrazione, senza API script) |
+| [Sviluppo Skill](./agent-skill-dev) | — | Guida allo sviluppo di SKILL.cat.md + SkillScript |
 
 ## Inizio rapido
 
@@ -101,4 +101,4 @@ Include Skill pronti all'uso per automazione browser, task programmati, uno stru
 
 Uno Skill installato tramite URL registra la sua fonte di installazione; la dashboard consente di verificare gli aggiornamenti e aggiornare con un clic (basato sul confronto semver del campo `version`).
 
-Consultare [API gestione Skill](./skill) e [Guida allo sviluppo Skill](./skill-dev) per i dettagli.
+Consultare [API gestione Skill](./agent-skill) e [Guida allo sviluppo Skill](./agent-skill-dev) per i dettagli.

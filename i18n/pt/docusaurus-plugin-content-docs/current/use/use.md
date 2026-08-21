@@ -67,8 +67,8 @@ Nota: Extensões instaladas assim não são atualizadas automaticamente.
 
 Após instalar o ScriptCat, o tour de integração começa automaticamente.
 
-- [Instalar scripts](/en/docs/use/script_installation/)
-- Gerenciar e operar: editar, executar/parar, [UserConfig](/en/docs/dev/config/)
-- [Backup](/en/docs/use/sync/) e [migração](/en/docs/use/from-other/migrate-from-tampermonkey/)
-- [Sincronização de scripts](/en/docs/use/sync/)
-- [Assinaturas](/en/docs/dev/subscribe/)
+- [Instalar scripts](/docs/use/script_installation/)
+- Gerenciar e operar: editar, executar/parar, [UserConfig](/docs/dev/config/)
+- [Backup](/docs/use/sync/) e [migração](/docs/use/from-other/migrate-from-tampermonkey/)
+- [Sincronização de scripts](/docs/use/sync/)
+- [Assinaturas](/docs/dev/subscribe/)

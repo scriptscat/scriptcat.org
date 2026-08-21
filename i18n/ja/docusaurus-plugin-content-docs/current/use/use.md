@@ -76,8 +76,8 @@ ScriptCat はユーザースクリプトを実行できるブラウザ拡張機�
 
 ScriptCat をインストールすると、ダッシュボードを開くと自動的にオンボーディングツアーが開始されます（左側バーの「ヘルプセンター」からいつでも再開できます）。ツアーの内容：
 
-- [スクリプトのインストール](/en/docs/use/script_installation/)：スクリプトマーケットプレイスからのインストール、[バックグラウンドスクリプト](/en/docs/dev/background/) のサポートを含む
-- 管理と操作：編集、実行/停止、[UserConfig](/en/docs/dev/config/)
-- [バックアップ](/en/docs/use/sync/) と[他のマネージャーからの移行](/en/docs/use/from-other/migrate-from-tampermonkey/)
-- [スクリプト同期](/en/docs/use/sync/)
-- [サブスクリプション](/en/docs/dev/subscribe/)
+- [スクリプトのインストール](/docs/use/script_installation/)：スクリプトマーケットプレイスからのインストール、[バックグラウンドスクリプト](/docs/dev/background/) のサポートを含む
+- 管理と操作：編集、実行/停止、[UserConfig](/docs/dev/config/)
+- [バックアップ](/docs/use/sync/) と[他のマネージャーからの移行](/docs/use/from-other/migrate-from-tampermonkey/)
+- [スクリプト同期](/docs/use/sync/)
+- [サブスクリプション](/docs/dev/subscribe/)

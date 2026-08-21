@@ -16,14 +16,14 @@ Los scripts llaman a estas capacidades a través del namespace `CAT.agent.*`, y 
 
 | Módulo | Permiso | Descripción |
 |------|---------|------|
-| [Conversación](./conversation) | `@grant CAT.agent.conversation` | Crear conversaciones con IA, enviar mensajes, transmitir respuestas, definir herramientas personalizadas |
-| [Operaciones DOM](./dom) | `@grant CAT.agent.dom` | Navegación de páginas, capturas de pantalla, clics, llenado, desplazamiento, monitoreo DOM |
-| [Skill](./skill) | `@grant CAT.agent.skills` | Instalar/desinstalar/invocar paquetes de Skill |
-| [Tareas programadas](./task) | `@grant CAT.agent.task` | Tareas programadas Cron, escucha de eventos |
-| [Modelo](./model) | `@grant CAT.agent.model` | Consultar información de modelos configurados (solo lectura) |
-| [Archivos OPFS](./opfs) | `@grant CAT.agent.opfs` | Leer/escribir archivos del espacio de trabajo de Agent |
-| [MCP](./mcp) | — | Configurar conexiones de servidores MCP (solo página de administración, sin API de script) |
-| [Desarrollo de Skill](./skill-dev) | — | Guía de desarrollo de SKILL.cat.md + SkillScript |
+| [Conversación](./agent-conversation) | `@grant CAT.agent.conversation` | Crear conversaciones con IA, enviar mensajes, transmitir respuestas, definir herramientas personalizadas |
+| [Operaciones DOM](./agent-dom) | `@grant CAT.agent.dom` | Navegación de páginas, capturas de pantalla, clics, llenado, desplazamiento, monitoreo DOM |
+| [Skill](./agent-skill) | `@grant CAT.agent.skills` | Instalar/desinstalar/invocar paquetes de Skill |
+| [Tareas programadas](./agent-task) | `@grant CAT.agent.task` | Tareas programadas Cron, escucha de eventos |
+| [Modelo](./agent-model) | `@grant CAT.agent.model` | Consultar información de modelos configurados (solo lectura) |
+| [Archivos OPFS](./agent-opfs) | `@grant CAT.agent.opfs` | Leer/escribir archivos del espacio de trabajo de Agent |
+| [MCP](./agent-mcp) | — | Configurar conexiones de servidores MCP (solo página de administración, sin API de script) |
+| [Desarrollo de Skill](./agent-skill-dev) | — | Guía de desarrollo de SKILL.cat.md + SkillScript |
 
 ## Inicio rápido
 
@@ -101,4 +101,4 @@ Incluye Skills listos para usar para automatización del navegador, tareas progr
 
 Un Skill instalado por URL registra su fuente de instalación; el panel de control le permite verificar actualizaciones y actualizar con un clic (basado en comparación semver del campo `version`).
 
-Consulte [API de gestión de Skill](./skill) y [Guía de desarrollo de Skill](./skill-dev) para más detalles.
+Consulte [API de gestión de Skill](./agent-skill) y [Guía de desarrollo de Skill](./agent-skill-dev) para más detalles.

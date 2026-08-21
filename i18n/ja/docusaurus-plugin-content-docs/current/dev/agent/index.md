@@ -16,14 +16,14 @@ ScriptCat v1.4はAgentシステムを導入し、ユーザースクリプトにA
 
 | モジュール | 権限 | 説明 |
 |------|---------|------|
-| [会話](./conversation) | `@grant CAT.agent.conversation` | AI会話を作成、メッセージ送信、レスポンスストリーミング、カスタムツール定義 |
-| [DOM操作](./dom) | `@grant CAT.agent.dom` | ページナビゲーション、スクリーンショット、クリック、入力、スクロール、DOM監視 |
-| [Skill](./skill) | `@grant CAT.agent.skills` | Skillパッケージのインストール/アンインストール/呼び出し |
-| [スケジュールタスク](./task) | `@grant CAT.agent.task` | Cronスケジュールタスク、イベントリスニング |
-| [モデル](./model) | `@grant CAT.agent.model` | 設定されたモデル情報のクエリ（読み取り専用） |
-| [OPFSファイル](./opfs) | `@grant CAT.agent.opfs` | Agentワークスペースファイルの読み書き |
-| [MCP](./mcp) | — | MCPサーバー接続の設定（管理ページのみ、スクリプトAPIなし） |
-| [Skill開発](./skill-dev) | — | SKILL.cat.md + SkillScript開発ガイド |
+| [会話](./agent-conversation) | `@grant CAT.agent.conversation` | AI会話を作成、メッセージ送信、レスポンスストリーミング、カスタムツール定義 |
+| [DOM操作](./agent-dom) | `@grant CAT.agent.dom` | ページナビゲーション、スクリーンショット、クリック、入力、スクロール、DOM監視 |
+| [Skill](./agent-skill) | `@grant CAT.agent.skills` | Skillパッケージのインストール/アンインストール/呼び出し |
+| [スケジュールタスク](./agent-task) | `@grant CAT.agent.task` | Cronスケジュールタスク、イベントリスニング |
+| [モデル](./agent-model) | `@grant CAT.agent.model` | 設定されたモデル情報のクエリ（読み取り専用） |
+| [OPFSファイル](./agent-opfs) | `@grant CAT.agent.opfs` | Agentワークスペースファイルの読み書き |
+| [MCP](./agent-mcp) | — | MCPサーバー接続の設定（管理ページのみ、スクリプトAPIなし） |
+| [Skill開発](./agent-skill-dev) | — | SKILL.cat.md + SkillScript開発ガイド |
 
 ## クイックスタート
 
@@ -101,4 +101,4 @@ Skillは、プロンプト + ツールスクリプト + リファレンス資料
 
 URLでインストールされたSkillはインストール元を記録します。ダッシュボードでワンクリックで更新を確認し、アップグレードできます（`version` フィールドのsemver比較に基づく）。
 
-詳細は [Skill管理API](./skill) と [Skill開発ガイド](./skill-dev) を参照してください。
+詳細は [Skill管理API](./agent-skill) と [Skill開発ガイド](./agent-skill-dev) を参照してください。

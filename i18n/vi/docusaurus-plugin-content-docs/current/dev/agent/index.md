@@ -16,14 +16,14 @@ Script gọi các khả năng này thông qua namespace `CAT.agent.*`, và mỗi
 
 | Mô-đun | Quyền | Mô tả |
 |------|---------|------|
-| [Trò chuyện](./conversation) | `@grant CAT.agent.conversation` | Tạo trò chuyện AI, gửi tin nhắn, phát trực tuyến phản hồi, định nghĩa công cụ tùy chỉnh |
-| [Thao tác DOM](./dom) | `@grant CAT.agent.dom` | Điều hướng trang, chụp ảnh màn hình, nhấp, điền, cuộn, giám sát DOM |
-| [Skill](./skill) | `@grant CAT.agent.skills` | Cài đặt/gỡ bỏ/gọi các gói Skill |
-| [Tác vụ theo lịch trình](./task) | `@grant CAT.agent.task` | Tác vụ Cron theo lịch trình, lắng nghe sự kiện |
-| [Mô hình](./model) | `@grant CAT.agent.model` | Truy vấn thông tin mô hình đã cấu hình (chỉ đọc) |
-| [File OPFS](./opfs) | `@grant CAT.agent.opfs` | Đọc/ghi file không gian làm việc của Agent |
-| [MCP](./mcp) | — | Cấu hình kết nối server MCP (chỉ trang quản lý, không có API script) |
-| [Phát triển Skill](./skill-dev) | — | Hướng dẫn phát triển SKILL.cat.md + SkillScript |
+| [Trò chuyện](./agent-conversation) | `@grant CAT.agent.conversation` | Tạo trò chuyện AI, gửi tin nhắn, phát trực tuyến phản hồi, định nghĩa công cụ tùy chỉnh |
+| [Thao tác DOM](./agent-dom) | `@grant CAT.agent.dom` | Điều hướng trang, chụp ảnh màn hình, nhấp, điền, cuộn, giám sát DOM |
+| [Skill](./agent-skill) | `@grant CAT.agent.skills` | Cài đặt/gỡ bỏ/gọi các gói Skill |
+| [Tác vụ theo lịch trình](./agent-task) | `@grant CAT.agent.task` | Tác vụ Cron theo lịch trình, lắng nghe sự kiện |
+| [Mô hình](./agent-model) | `@grant CAT.agent.model` | Truy vấn thông tin mô hình đã cấu hình (chỉ đọc) |
+| [File OPFS](./agent-opfs) | `@grant CAT.agent.opfs` | Đọc/ghi file không gian làm việc của Agent |
+| [MCP](./agent-mcp) | — | Cấu hình kết nối server MCP (chỉ trang quản lý, không có API script) |
+| [Phát triển Skill](./agent-skill-dev) | — | Hướng dẫn phát triển SKILL.cat.md + SkillScript |
 
 ## Bắt đầu nhanh
 
@@ -101,4 +101,4 @@ Bao gồm Skill sẵn sàng sử dụng cho tự động hóa trình duyệt, t�
 
 Skill cài đặt qua URL ghi lại nguồn cài đặt; bảng điều khiển cho phép bạn kiểm tra cập nhật và nâng cấp bằng một cú nhấp (dựa trên so sánh semver của trường `version`).
 
-Xem [API quản lý Skill](./skill) và [Hướng dẫn phát triển Skill](./skill-dev) để biết chi tiết.
+Xem [API quản lý Skill](./agent-skill) và [Hướng dẫn phát triển Skill](./agent-skill-dev) để biết chi tiết.

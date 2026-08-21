@@ -16,14 +16,14 @@ ScriptCat v1.4 سیستم Agent را معرفی می‌کند و به اسکری
 
 | ماژول | مجوز | توضیحات |
 |------|---------|------|
-| [گفتگو](./conversation) | `@grant CAT.agent.conversation` | ایجاد گفتگوهای هوش مصنوعی، ارسال پیام، پخش پاسخ‌ها، تعریف ابزارهای سفارشی |
-| [عملیات DOM](./dom) | `@grant CAT.agent.dom` | ناوبری صفحه، اسکرین‌شات، کلیک، پر کردن، اسکرول، نظارت DOM |
-| [Skill](./skill) | `@grant CAT.agent.skills` | نصب/حذف/فراخوانی بسته‌های Skill |
-| [کارهای زمان‌بندی‌شده](./task) | `@grant CAT.agent.task` | کارهای زمان‌بندی‌شده cron، گوش دادن به رویداد |
-| [مدل](./model) | `@grant CAT.agent.model` | پرس‌وجوی اطلاعات مدل پیکربندی‌شده (فقط‌خواندنی) |
-| [فایل‌های OPFS](./opfs) | `@grant CAT.agent.opfs` | خواندن/نوشتن فایل‌های فضای کار Agent |
-| [MCP](./mcp) | — | پیکربندی اتصالات سرور MCP (فقط صفحه مدیریت، بدون API اسکریپت) |
-| [توسعه Skill](./skill-dev) | — | راهنمای توسعه SKILL.cat.md + SkillScript |
+| [گفتگو](./agent-conversation) | `@grant CAT.agent.conversation` | ایجاد گفتگوهای هوش مصنوعی، ارسال پیام، پخش پاسخ‌ها، تعریف ابزارهای سفارشی |
+| [عملیات DOM](./agent-dom) | `@grant CAT.agent.dom` | ناوبری صفحه، اسکرین‌شات، کلیک، پر کردن، اسکرول، نظارت DOM |
+| [Skill](./agent-skill) | `@grant CAT.agent.skills` | نصب/حذف/فراخوانی بسته‌های Skill |
+| [کارهای زمان‌بندی‌شده](./agent-task) | `@grant CAT.agent.task` | کارهای زمان‌بندی‌شده cron، گوش دادن به رویداد |
+| [مدل](./agent-model) | `@grant CAT.agent.model` | پرس‌وجوی اطلاعات مدل پیکربندی‌شده (فقط‌خواندنی) |
+| [فایل‌های OPFS](./agent-opfs) | `@grant CAT.agent.opfs` | خواندن/نوشتن فایل‌های فضای کار Agent |
+| [MCP](./agent-mcp) | — | پیکربندی اتصالات سرور MCP (فقط صفحه مدیریت، بدون API اسکریپت) |
+| [توسعه Skill](./agent-skill-dev) | — | راهنمای توسعه SKILL.cat.md + SkillScript |
 
 ## شروع سریع
 
@@ -101,4 +101,4 @@ agents/
 
 یک Skill نصب‌شده از طریق URL منبع نصب خود را ثبت می‌کند؛ داشبورد به شما امکان می‌دهد با یک کلیک به‌روزرسانی‌ها را بررسی و ارتقا دهید (بر اساس مقایسه semver فیلد `version`).
 
-برای جزئیات به [API مدیریت Skill](./skill) و [راهنمای توسعه Skill](./skill-dev) مراجعه کنید.
+برای جزئیات به [API مدیریت Skill](./agent-skill) و [راهنمای توسعه Skill](./agent-skill-dev) مراجعه کنید.

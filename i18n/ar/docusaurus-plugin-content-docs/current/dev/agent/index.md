@@ -16,14 +16,14 @@ title: المساعد الذكي Agent
 
 | الوحدة | إعلان الإذن | الوصف |
 |------|---------|------|
-| [الحوار](conversation) | `@grant CAT.agent.conversation` | إنشاء حوارات ذكاء اصطناعي، إرسال رسائل، استقبال متدفق (streaming)، وأدوات مخصصة |
-| [عمليات DOM](dom) | `@grant CAT.agent.dom` | التنقل في الصفحات، لقطات الشاشة، النقر، التعبئة، التمرير، ومراقبة الـ DOM |
-| [Skill](skill) | `@grant CAT.agent.skills` | تثبيت/إزالة/استدعاء حزم توسعة الـ Skill |
-| [المهام المجدولة](task) | `@grant CAT.agent.task` | مهام Cron المجدولة، والاستماع للأحداث |
-| [النموذج](model) | `@grant CAT.agent.model` | الاستعلام عن معلومات النماذج المكونة (للقراءة فقط) |
-| [ملفات OPFS](opfs) | `@grant CAT.agent.opfs` | قراءة وكتابة الملفات في مساحة عمل الـ Agent |
-| [MCP](mcp) | — | إعداد اتصالات خادم MCP (من صفحة الإدارة فقط، لا توجد واجهة برمجية للبرامج النصية) |
-| [تطوير Skill](skill-dev) | — | دليل تطوير SKILL.cat.md + SkillScript |
+| [الحوار](./agent-conversation) | `@grant CAT.agent.conversation` | إنشاء حوارات ذكاء اصطناعي، إرسال رسائل، استقبال متدفق (streaming)، وأدوات مخصصة |
+| [عمليات DOM](./agent-dom) | `@grant CAT.agent.dom` | التنقل في الصفحات، لقطات الشاشة، النقر، التعبئة، التمرير، ومراقبة الـ DOM |
+| [Skill](./agent-skill) | `@grant CAT.agent.skills` | تثبيت/إزالة/استدعاء حزم توسعة الـ Skill |
+| [المهام المجدولة](./agent-task) | `@grant CAT.agent.task` | مهام Cron المجدولة، والاستماع للأحداث |
+| [النموذج](./agent-model) | `@grant CAT.agent.model` | الاستعلام عن معلومات النماذج المكونة (للقراءة فقط) |
+| [ملفات OPFS](./agent-opfs) | `@grant CAT.agent.opfs` | قراءة وكتابة الملفات في مساحة عمل الـ Agent |
+| [MCP](./agent-mcp) | — | إعداد اتصالات خادم MCP (من صفحة الإدارة فقط، لا توجد واجهة برمجية للبرامج النصية) |
+| [تطوير Skill](./agent-skill-dev) | — | دليل تطوير SKILL.cat.md + SkillScript |
 
 ## البداية السريعة
 
@@ -101,4 +101,4 @@ agents/
 
 الـ Skills المثبتة عبر رابط تسجل مصدر التثبيت، ويمكنك التحقق من التحديثات والترقية بضغطة زر (بناءً على مقارنة semver لحقل `version`) في صفحة الإدارة.
 
-راجع [واجهة برمجة إدارة الـ Skill](skill) و [دليل تطوير الـ Skill](skill-dev).
+راجع [واجهة برمجة إدارة الـ Skill](./agent-skill) و [دليل تطوير الـ Skill](./agent-skill-dev).

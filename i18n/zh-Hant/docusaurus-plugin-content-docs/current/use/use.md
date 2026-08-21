@@ -73,8 +73,8 @@ ScriptCat 是一個可以執行使用者腳本的瀏覽器擴充功能，與 Tam
 
 安裝 ScriptCat 後，開啟控制面板會自動開始新手導覽（也可隨時從左側邊欄的「幫助中心」重新開啟）。
 
-- [安裝腳本](/en/docs/use/script_installation/)：從腳本服務市場安裝，包含[背景腳本](/en/docs/dev/background/) 支援
-- 管理與操作：編輯、執行/停止、[UserConfig](/en/docs/dev/config/)
-- [備份](/en/docs/use/sync/) 和[從其他管理器遷移](/en/docs/use/from-other/migrate-from-tampermonkey/)
-- [腳本同步](/en/docs/use/sync/)
-- [訂閱](/en/docs/dev/subscribe/)
+- [安裝腳本](/docs/use/script_installation/)：從腳本服務市場安裝，包含[背景腳本](/docs/dev/background/) 支援
+- 管理與操作：編輯、執行/停止、[UserConfig](/docs/dev/config/)
+- [備份](/docs/use/sync/) 和[從其他管理器遷移](/docs/use/from-other/migrate-from-tampermonkey/)
+- [腳本同步](/docs/use/sync/)
+- [訂閱](/docs/dev/subscribe/)

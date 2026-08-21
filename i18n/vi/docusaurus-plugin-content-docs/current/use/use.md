@@ -67,8 +67,8 @@ Lưu ý: Tiện ích cài đặt theo cách này không thể tự động cập
 
 Sau khi cài đặt ScriptCat, hướng dẫn giới thiệu tự động bắt đầu.
 
-- [Cài đặt script](/en/docs/use/script_installation/)
-- Quản lý & thao tác: chỉnh sửa, chạy/dừng, [UserConfig](/en/docs/dev/config/)
-- [Sao lưu](/en/docs/use/sync/) và [di chuyển](/en/docs/use/from-other/migrate-from-tampermonkey/)
-- [Đồng bộ script](/en/docs/use/sync/)
-- [Đăng ký](/en/docs/dev/subscribe/)
+- [Cài đặt script](/docs/use/script_installation/)
+- Quản lý & thao tác: chỉnh sửa, chạy/dừng, [UserConfig](/docs/dev/config/)
+- [Sao lưu](/docs/use/sync/) và [di chuyển](/docs/use/from-other/migrate-from-tampermonkey/)
+- [Đồng bộ script](/docs/use/sync/)
+- [Đăng ký](/docs/dev/subscribe/)

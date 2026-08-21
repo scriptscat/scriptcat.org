@@ -16,14 +16,14 @@ Skrip memanggil kemampuan ini melalui namespace `CAT.agent.*`, dan setiap API me
 
 | Modul | Izin | Deskripsi |
 |------|---------|------|
-| [Percakapan](./conversation) | `@grant CAT.agent.conversation` | Membuat percakapan AI, mengirim pesan, streaming respons, mendefinisikan alat kustom |
-| [Operasi DOM](./dom) | `@grant CAT.agent.dom` | Navigasi halaman, tangkapan layar, klik, pengisian, pengguliran, pemantauan DOM |
-| [Skill](./skill) | `@grant CAT.agent.skills` | Memasang/mencopot/memanggil paket Skill |
-| [Tugas Terjadwal](./task) | `@grant CAT.agent.task` | Tugas terjadwal cron, mendengarkan peristiwa |
-| [Model](./model) | `@grant CAT.agent.model` | Mengkueri informasi model yang dikonfigurasi (hanya baca) |
-| [File OPFS](./opfs) | `@grant CAT.agent.opfs` | Membaca/menulis file ruang kerja Agent |
-| [MCP](./mcp) | — | Mengonfigurasi koneksi server MCP (halaman manajemen saja, tanpa API skrip) |
-| [Pengembangan Skill](./skill-dev) | — | Panduan pengembangan SKILL.cat.md + SkillScript |
+| [Percakapan](./agent-conversation) | `@grant CAT.agent.conversation` | Membuat percakapan AI, mengirim pesan, streaming respons, mendefinisikan alat kustom |
+| [Operasi DOM](./agent-dom) | `@grant CAT.agent.dom` | Navigasi halaman, tangkapan layar, klik, pengisian, pengguliran, pemantauan DOM |
+| [Skill](./agent-skill) | `@grant CAT.agent.skills` | Memasang/mencopot/memanggil paket Skill |
+| [Tugas Terjadwal](./agent-task) | `@grant CAT.agent.task` | Tugas terjadwal cron, mendengarkan peristiwa |
+| [Model](./agent-model) | `@grant CAT.agent.model` | Mengkueri informasi model yang dikonfigurasi (hanya baca) |
+| [File OPFS](./agent-opfs) | `@grant CAT.agent.opfs` | Membaca/menulis file ruang kerja Agent |
+| [MCP](./agent-mcp) | — | Mengonfigurasi koneksi server MCP (halaman manajemen saja, tanpa API skrip) |
+| [Pengembangan Skill](./agent-skill-dev) | — | Panduan pengembangan SKILL.cat.md + SkillScript |
 
 ## Mulai Cepat
 
@@ -101,4 +101,4 @@ Termasuk Skill siap pakai untuk otomatisasi browser, tugas terjadwal, alat pembu
 
 Skill yang dipasang melalui URL mencatat sumber pemasangannya; dasbor memungkinkan Anda memeriksa pembaruan dan meningkatkan dengan satu klik (berdasarkan perbandingan semver bidang `version`).
 
-Lihat [API Manajemen Skill](./skill) dan [Panduan Pengembangan Skill](./skill-dev) untuk detailnya.
+Lihat [API Manajemen Skill](./agent-skill) dan [Panduan Pengembangan Skill](./agent-skill-dev) untuk detailnya.
