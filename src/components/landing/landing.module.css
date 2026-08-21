@@ -2156,7 +2156,7 @@
     transform: rotate(90deg);
   }
   :global([dir="rtl"]) .stepArrow {
-    transform: rotate(90deg);
+    transform: rotate(-90deg);
   }
 }
 
