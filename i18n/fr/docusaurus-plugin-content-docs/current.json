@@ -1,0 +1,18 @@
+{
+  "version.label": {
+    "message": "Suivant",
+    "description": "The label for version current"
+  },
+  "sidebar.dev.category.Agent 智能助手": {
+    "message": "Assistant Intelligent Agent",
+    "description": "The label for category Agent in sidebar"
+  },
+  "sidebar.use.category.服务协议": {
+    "message": "Conditions d'utilisation",
+    "description": "The label for category Service Agreement in sidebar"
+  },
+  "sidebar.use.category.从其它管理器迁移": {
+    "message": "Migration depuis d'autres gestionnaires",
+    "description": "The label for category Migrate from other managers in sidebar"
+  }
+}
