@@ -1356,6 +1356,11 @@
   height: 17px;
 }
 
+/* RTL: flip step arrows to point left */
+:global([dir="rtl"]) .stepArrow {
+  transform: scaleX(-1);
+}
+
 /* =====================================================================
    FEATURES (bento)
    ===================================================================== */
@@ -2133,6 +2138,9 @@
     flex-direction: column;
   }
   .stepArrow {
+    transform: rotate(90deg);
+  }
+  :global([dir="rtl"]) .stepArrow {
     transform: rotate(90deg);
   }
 }
