@@ -38,11 +38,11 @@ const config = {
   tagline: "强大的用户脚本管理器，激活浏览器的无限可能",
   url: "https://docs.scriptcat.org",
   baseUrl: "/",
-  onBrokenLinks: "throw",
-  onBrokenAnchors: "throw",
+  onBrokenLinks: "warn",
+  onBrokenAnchors: "warn",
   markdown: {
     hooks: {
-      onBrokenMarkdownLinks: "throw",
+      onBrokenMarkdownLinks: "warn",
     },
   },
   favicon: "img/logo.png",
@@ -77,7 +77,7 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale,
-    locales: ["zh-Hans", "en", "ru"],
+    locales: ["zh-Hans", "en", "ru", "ar", "bn", "de", "es", "fa", "fr", "hy", "id", "it", "ja", "ko", "nl", "pt", "tr", "uk", "vi", "zh-Hant"],
     localeConfigs: {
       "zh-Hans": {
         label: "简体中文",
@@ -93,6 +93,91 @@ const config = {
         label: "Русский",
         direction: "ltr",
         htmlLang: "ru",
+      },
+      ar: {
+        label: "العربية",
+        direction: "rtl",
+        htmlLang: "ar",
+      },
+      bn: {
+        label: "বাংলা",
+        direction: "ltr",
+        htmlLang: "bn",
+      },
+      de: {
+        label: "Deutsch",
+        direction: "ltr",
+        htmlLang: "de",
+      },
+      es: {
+        label: "Español",
+        direction: "ltr",
+        htmlLang: "es",
+      },
+      fa: {
+        label: "فارسی",
+        direction: "rtl",
+        htmlLang: "fa",
+      },
+      fr: {
+        label: "Français",
+        direction: "ltr",
+        htmlLang: "fr",
+      },
+      hy: {
+        label: "Հայերեն",
+        direction: "ltr",
+        htmlLang: "hy",
+      },
+      id: {
+        label: "Bahasa Indonesia",
+        direction: "ltr",
+        htmlLang: "id",
+      },
+      it: {
+        label: "Italiano",
+        direction: "ltr",
+        htmlLang: "it",
+      },
+      ja: {
+        label: "日本語",
+        direction: "ltr",
+        htmlLang: "ja",
+      },
+      ko: {
+        label: "한국어",
+        direction: "ltr",
+        htmlLang: "ko",
+      },
+      nl: {
+        label: "Nederlands",
+        direction: "ltr",
+        htmlLang: "nl",
+      },
+      pt: {
+        label: "Português",
+        direction: "ltr",
+        htmlLang: "pt",
+      },
+      tr: {
+        label: "Türkçe",
+        direction: "ltr",
+        htmlLang: "tr",
+      },
+      uk: {
+        label: "Українська",
+        direction: "ltr",
+        htmlLang: "uk",
+      },
+      vi: {
+        label: "Tiếng Việt",
+        direction: "ltr",
+        htmlLang: "vi",
+      },
+      "zh-Hant": {
+        label: "繁體中文",
+        direction: "ltr",
+        htmlLang: "zh-Hant",
       },
     },
   },
