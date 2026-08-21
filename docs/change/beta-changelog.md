@@ -19,6 +19,30 @@ import GithubStar from '@site/src/components/GithubStar';
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+<a name="1.5.0-beta.2"></a>
+
+## 1.5.0-beta.2 (2026-08-21)
+
+本次预发布重点增强内置 Agent 的对话、工具循环、持久化与 MCP 可靠性，重构 Popup 站点范围操作为可逆状态机，并修复云同步、更新页等多个问题。
+
+### 🚀 主要新功能
+
+- ♻️ Agent 对话、工具循环、持久化与 MCP 可靠性增强 [#1545](https://github.com/scriptscat/scriptcat/issues/1545) ([#1549](https://github.com/scriptscat/scriptcat/pull/1549)) (by @cyfung1031)
+- ✨ Popup 站点范围操作：S1–S4 可逆状态机 [#1590](https://github.com/scriptscat/scriptcat/issues/1590) ([#1666](https://github.com/scriptscat/scriptcat/pull/1666)) (by @CodFrm)
+
+### 🧩 GM API 变更
+
+- 🐛 修复 GM_download 传入空 url 时未触发 onerror 的兼容性问题 ([#1619](https://github.com/scriptscat/scriptcat/pull/1619)) (by @cyfung1031)
+
+### 🎨 UI 改进
+
+- 💄 更新页/安装页/编辑器体验修复，并修正被过期检查快照覆盖的更新记录 [#1650](https://github.com/scriptscat/scriptcat/issues/1650) [#1648](https://github.com/scriptscat/scriptcat/issues/1648) [#1651](https://github.com/scriptscat/scriptcat/issues/1651) ([#1677](https://github.com/scriptscat/scriptcat/pull/1677)) (by @CodFrm)
+
+### 🐛 Bug 修复
+
+- 🐛 云同步不再随 SW 冷启动触发，闹钟周期改为 30 分钟 [#1670](https://github.com/scriptscat/scriptcat/issues/1670) ([#1678](https://github.com/scriptscat/scriptcat/pull/1678)) (by @CodFrm)
+- 🐛 修复安装更新页关闭 [#1669](https://github.com/scriptscat/scriptcat/issues/1669) ([#1675](https://github.com/scriptscat/scriptcat/pull/1675)) (by @CodFrm)
+
 <a name="1.5.0-beta.1"></a>
 
 ## 1.5.0-beta.1 (2026-08-06)

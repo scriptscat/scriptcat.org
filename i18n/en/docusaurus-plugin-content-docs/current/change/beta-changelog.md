@@ -19,6 +19,30 @@ You can obtain pre-release versions from the [Release](https://github.com/script
 
 Additionally, besides pre-releases, ScriptCat builds the extension on [Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml) after each code commit is merged to the main branch. If you want to experience the latest features or fixes, you can download them from the [Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml) page.
 
+<a name="1.5.0-beta.2"></a>
+
+## 1.5.0-beta.2 (2026-08-21)
+
+This pre-release improves the built-in Agent's conversation, tool-loop, persistence, and MCP reliability, reworks the popup site-scope operations into a reversible state machine, and fixes several cloud-sync and update-page issues.
+
+### 🚀 Major New Features
+
+- ♻️ Agent conversation, tool-loop, persistence, and MCP reliability improvements [#1545](https://github.com/scriptscat/scriptcat/issues/1545) ([#1549](https://github.com/scriptscat/scriptcat/pull/1549)) (by @cyfung1031)
+- ✨ Popup site-scope operations: S1–S4 reversible state machine [#1590](https://github.com/scriptscat/scriptcat/issues/1590) ([#1666](https://github.com/scriptscat/scriptcat/pull/1666)) (by @CodFrm)
+
+### 🧩 GM API Changes
+
+- 🐛 Fix GM_download not triggering onerror when passed an empty url ([#1619](https://github.com/scriptscat/scriptcat/pull/1619)) (by @cyfung1031)
+
+### 🎨 UI Improvements
+
+- 💄 Update-page / install-page / editor UX fixes, and correct update records overwritten by stale check snapshots [#1650](https://github.com/scriptscat/scriptcat/issues/1650) [#1648](https://github.com/scriptscat/scriptcat/issues/1648) [#1651](https://github.com/scriptscat/scriptcat/issues/1651) ([#1677](https://github.com/scriptscat/scriptcat/pull/1677)) (by @CodFrm)
+
+### 🐛 Bug Fixes
+
+- 🐛 Cloud sync no longer triggers on service-worker cold starts; alarm period changed to 30 minutes [#1670](https://github.com/scriptscat/scriptcat/issues/1670) ([#1678](https://github.com/scriptscat/scriptcat/pull/1678)) (by @CodFrm)
+- 🐛 Fix the install/update page not closing properly [#1669](https://github.com/scriptscat/scriptcat/issues/1669) ([#1675](https://github.com/scriptscat/scriptcat/pull/1675)) (by @CodFrm)
+
 <a name="1.5.0-beta.1"></a>
 
 ## 1.5.0-beta.1 (2026-08-06)
