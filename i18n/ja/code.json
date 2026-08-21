@@ -1,0 +1,1114 @@
+{
+  "theme.ErrorPageContent.title": {
+    "message": "このページがクラッシュしました。",
+    "description": "The title of the fallback page when the page crashed"
+  },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "トップに戻る",
+    "description": "The ARIA label for the back to top button"
+  },
+  "theme.blog.archive.title": {
+    "message": "アーカイブ",
+    "description": "The page & hero title of the blog archive page"
+  },
+  "theme.blog.archive.description": {
+    "message": "アーカイブ",
+    "description": "The page & hero description of the blog archive page"
+  },
+  "theme.blog.paginator.navAriaLabel": {
+    "message": "ブログ記事一覧のナビゲーション",
+    "description": "The ARIA label for the blog pagination"
+  },
+  "theme.blog.paginator.newerEntries": {
+    "message": "新しい記事",
+    "description": "The label used to navigate to the newer blog posts page (previous page)"
+  },
+  "theme.blog.paginator.olderEntries": {
+    "message": "古い記事",
+    "description": "The label used to navigate to the older blog posts page (next page)"
+  },
+  "theme.blog.post.paginator.navAriaLabel": {
+    "message": "ブログ記事のナビゲーション",
+    "description": "The ARIA label for the blog posts pagination"
+  },
+  "theme.blog.post.paginator.newerPost": {
+    "message": "新しい記事",
+    "description": "The blog post button label to navigate to the newer/previous post"
+  },
+  "theme.blog.post.paginator.olderPost": {
+    "message": "古い記事",
+    "description": "The blog post button label to navigate to the older/next post"
+  },
+  "theme.blog.post.plurals": {
+    "message": "{count}件の記事",
+    "description": "Pluralized label for \"{count} posts\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.blog.tagTitle": {
+    "message": "\"{tagName}\"タグの記事が{nPosts}件あります",
+    "description": "The title of the page for a blog tag"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "すべてのタグを見る",
+    "description": "The label of the link targeting the tag list page"
+  },
+  "homepage.hero.title": {
+    "message": "究極のスクリプトエンジン"
+  },
+  "homepage.hero.subtitle": {
+    "message": "ユーザースクリプトを実行できるブラウザ拡張機能、すべてをスクリプト化可能にし、ブラウザでより多くのことを実現！",
+    "description": "The hero subtitle on the homepage"
+  },
+  "homepage.features.powerful.title": {
+    "message": "強力な機能",
+    "description": "Title for powerful features section"
+  },
+  "homepage.features.powerful.description": {
+    "message": "Tampermonkeyと完全互換、バックグラウンドスクリプト、定時スクリプト、豊富なAPIを提供",
+    "description": "Description for powerful features section"
+  },
+  "homepage.features.easy.title": {
+    "message": "簡単にお使いいただけます",
+    "description": "Title for easy to use section"
+  },
+  "homepage.features.easy.description": {
+    "message": "内蔵エディタ、インテリジェント補完、構文チェック、スクリプト開発をより効率的に",
+    "description": "Description for easy to use section"
+  },
+  "homepage.features.secure.title": {
+    "message": "安全で信頼性が高い",
+    "description": "Title for secure and reliable section"
+  },
+  "homepage.features.secure.description": {
+    "message": "サンドボックス機構、権限管理、スクリプトの安全な実行を保証",
+    "description": "Description for secure and reliable section"
+  },
+  "homepage.comments.lihengdao.username": {
+    "message": "李恒道",
+    "description": "コミュニティコメントでの李恒道のユーザー名"
+  },
+  "homepage.comments.lihengdao.description": {
+    "message": "Tampermonkey中国語版共同創設者",
+    "description": "コミュニティコメントでの李恒道の説明"
+  },
+  "homepage.comments.lihengdao.content": {
+    "message": "ScriptCatは本当に素晴らしいです！",
+    "description": "李恒道のコメント内容"
+  },
+  "homepage.comments.student.username": {
+    "message": "試験を心配する人",
+    "description": "コミュニティコメントでの学生ユーザーのユーザー名"
+  },
+  "homepage.comments.student.description": {
+    "message": "学生",
+    "description": "コミュニティコメントでの学生ユーザーの説明"
+  },
+  "homepage.comments.student.content": {
+    "message": "コミュニティの豊富な学習リソースに感謝します。多くのことを学び、技術力をより良く向上させることができました。ScriptCatは非常に便利なブラウザ拡張機能で、便利で効率的な機能を提供してくれます。",
+    "description": "学生ユーザーのコメント内容"
+  },
+  "homepage.comments.enncy.username": {
+    "message": "Yan Xiaoxi (enncy)",
+    "description": "コミュニティコメントでのenncyのユーザー名"
+  },
+  "homepage.comments.enncy.description": {
+    "message": "有名なスクリプト作者",
+    "description": "コミュニティコメントでのenncyの説明"
+  },
+  "homepage.comments.enncy.content": {
+    "message": "コミュニティに心から感謝します",
+    "description": "enncyのコメント内容"
+  },
+  "homepage.comments.qianyu.username": {
+    "message": "仟羽",
+    "description": "コミュニティコメントでの仟羽のユーザー名"
+  },
+  "homepage.comments.qianyu.description": {
+    "message": "Chromeユーザー",
+    "description": "コミュニティコメントでの仟羽の説明"
+  },
+  "homepage.comments.qianyu.content": {
+    "message": "最初、人々はこれがニッチなJSプラグインだと思っていました...しかし...",
+    "description": "仟羽のコメント内容"
+  },
+  "homepage.comments.wwwwwllllk.username": {
+    "message": "wwwwwllllk",
+    "description": "wwwwwllllk's username in community comments"
+  },
+  "homepage.comments.wwwwwllllk.description": {
+    "message": "フロントエンド開発者",
+    "description": "wwwwwllllk's description in community comments"
+  },
+  "homepage.comments.wwwwwllllk.content": {
+    "message": "ScriptCatを使ってインターネット体験を向上させ、コミュニティで志を同じくする人々と出会う。",
+    "description": "wwwwwllllk's comment content"
+  },
+  "homepage.comments.oraer.username": {
+    "message": "Oraer",
+    "description": "Oraer's username in community comments"
+  },
+  "homepage.comments.oraer.description": {
+    "message": "Chromeユーザー",
+    "description": "Oraer's description in community comments"
+  },
+  "homepage.comments.oraer.content": {
+    "message": "Tampermonkeyとの初めての出会い！Tampermonkeyを学んでいます！Tampermonkeyを超えています！",
+    "description": "Oraer's comment content"
+  },
+  "homepage.comments.bigonion.username": {
+    "message": "bigonion",
+    "description": "bigonion's username in community comments"
+  },
+  "homepage.comments.bigonion.description": {
+    "message": "ScriptCat開発者",
+    "description": "bigonion's description in community comments"
+  },
+  "homepage.comments.bigonion.content": {
+    "message": "ScriptCatは未来です。",
+    "description": "bigonion's comment content"
+  },
+  "homepage.meta.title": {
+    "message": "ScriptCat - ブラウザ向けユーザースクリプトエンジン"
+  },
+  "homepage.meta.description": {
+    "message": "ScriptCat は、Web の機能を簡単にカスタマイズし、広告を除去し、タスクを自動化して、ブラウジング体験を向上させることができる、強力なオープンソースのブラウザスクリプトエンジンです。Tampermonkey と互換性があり、さらに多くの機能を備えています。"
+  },
+  "homepage.og.title": {
+    "message": "ScriptCat - A Powerful Userscript Engine"
+  },
+  "homepage.og.description": {
+    "message": "Elevate your browsing experience with ScriptCat. Fully compatible with Tampermonkey."
+  },
+  "homepage.twitter.title": {
+    "message": "ScriptCat - 強力なブラウザスクリプトエンジン",
+    "description": "Twitter card title"
+  },
+  "homepage.twitter.description": {
+    "message": "ブラウザに強力な機能を与えるオープンソースブラウザスクリプトエンジン",
+    "description": "Twitter card description"
+  },
+  "homepage.hero.title.engine": {
+    "message": "ブラウジング体験の向上",
+    "description": "Gradient text in main title"
+  },
+  "homepage.hero.subtitle.userScript": {
+    "message": "ユーザースクリプト",
+    "description": "User script highlight"
+  },
+  "homepage.hero.subtitle.possibilities": {
+    "message": "、ブラウザに無限の可能性をもたらします！",
+    "description": "Browser possibilities text"
+  },
+  "homepage.hero.subtitle.main": {
+    "message": "ScriptCatは、Web機能のカスタマイズ、広告の排除、タスクの自動化、ブラウジング体験の向上を簡単にできる強力なオープンソースブラウザスクリプトエンジンです。Tampermonkeyと互換性があり、より多くの機能と最適化を提供します。",
+    "description": "Main subtitle description on homepage"
+  },
+  "homepage.hero.button.getStarted": {
+    "message": "Commencer"
+  },
+  "homepage.hero.button.github": {
+    "message": "GitHub"
+  },
+  "homepage.features.title.powerful": {
+    "message": "強力な機能、",
+    "description": "Features section title part 1"
+  },
+  "homepage.features.title.features": {
+    "message": "puissantes"
+  },
+  "homepage.features.subtitle": {
+    "message": "ブラウザ拡張機能の枠を超えた、より自由で安全、かつ強力なウェブ体験を"
+  },
+  "homepage.features.compatibility.title": {
+    "message": "完全な互換性"
+  },
+  "homepage.features.compatibility.description": {
+    "message": "TampermonkeyやViolentmonkeyのスクリプトと完全に互換性があり、コストなしでシームレスに移行できます。"
+  },
+  "homepage.features.background.title": {
+    "message": "バックグラウンドスクリプト"
+  },
+  "homepage.features.background.description": {
+    "message": "独自のバックグラウンドスクリプトと定期実行機能を備え、DOMに依存しない24時間365日の自動化タスクを実現します。"
+  },
+  "homepage.features.security.title": {
+    "message": "安全性とプライバシー"
+  },
+  "homepage.features.security.description": {
+    "message": "厳格な権限管理システムと透明なスクリプト動作により、悪意のあるスクリプトを効果的に防止し、プライバシーを保護します。"
+  },
+  "homepage.features.editor.title": {
+    "message": "組み込みコードエディタ"
+  },
+  "homepage.features.editor.description": {
+    "message": "構文ハイライト、自動補完、エラー表示を備えた強力なエディタにより、スクリプト作成の効率を大幅に向上させます。"
+  },
+  "homepage.features.api.title": {
+    "message": "強力なAPI"
+  },
+  "homepage.features.api.description": {
+    "message": "GM APIよりも豊富なAPIを提供。ファイルストレージやユーザー設定などの高度な機能をサポートしています。"
+  },
+  "homepage.features.store.title": {
+    "message": "スクリプトストア"
+  },
+  "homepage.features.store.description": {
+    "message": "ワンクリックで人気スクリプトをインストールできるストアを提供。自分の作品を公開してコミュニティと共有することも可能です。"
+  },
+  "homepage.comparison.title.why": {
+    "message": "選ばれる理由"
+  },
+  "homepage.comparison.subtitle": {
+    "message": "他のスクリプトエンジンと比較して、ScriptCatはより多くのメリットと強化された機能を提供します"
+  },
+  "homepage.comparison.feature": {
+    "message": "機能"
+  },
+  "homepage.comparison.feature.compatibility": {
+    "message": "互換性"
+  },
+  "homepage.comparison.feature.background": {
+    "message": "バックグラウンド実行"
+  },
+  "homepage.comparison.feature.opensource": {
+    "message": "オープンソース・無料"
+  },
+  "homepage.comparison.feature.mv3": {
+    "message": "MV3 サポート"
+  },
+  "homepage.comparison.feature.sync": {
+    "message": "クラウド同期"
+  },
+  "homepage.comparison.feature.api": {
+    "message": "強力な API"
+  },
+  "homepage.comparison.feature.community": {
+    "message": "コミュニティサポート"
+  },
+  "homepage.comparison.label.efficient": {
+    "message": "高効率"
+  },
+  "homepage.comparison.label.multiplatform": {
+    "message": "マルチプラットフォーム"
+  },
+  "homepage.scenario.title.solve": {
+    "message": "問題を解決するスクリプト",
+    "description": "Scenario section title part 1"
+  },
+  "homepage.scenario.title.problems": {
+    "message": "実際の問題",
+    "description": "Scenario section title highlight"
+  },
+  "homepage.scenario.title.scripts": {
+    "message": "",
+    "description": "Scenario section title part 2"
+  },
+  "homepage.scenario.subtitle": {
+    "message": "ScriptCatがどのようにブラウジング体験を変えるか見てみましょう",
+    "description": "Scenario section subtitle"
+  },
+  "homepage.scenario.video.title": {
+    "message": "動画サイトの強化",
+    "description": "Video scenario title"
+  },
+  "homepage.scenario.video.subtitle": {
+    "message": "動画視聴体験を最適化",
+    "description": "Video scenario subtitle"
+  },
+  "homepage.scenario.video.tag": {
+    "message": "人気アプリ",
+    "description": "Video scenario tag"
+  },
+  "homepage.scenario.video.feature.speed": {
+    "message": "動画速度制御",
+    "description": "Video feature: Speed control"
+  },
+  "homepage.scenario.video.feature.download": {
+    "message": "ワンクリック動画ダウンロード",
+    "description": "Video feature: Download"
+  },
+  "homepage.scenario.video.feature.adblock": {
+    "message": "広告自動スキップ",
+    "description": "Video feature: Ad blocking"
+  },
+  "homepage.scenario.video.feature.ui": {
+    "message": "UIの簡素化",
+    "description": "Video feature: UI optimization"
+  },
+  "homepage.scenario.video.sites": {
+    "message": "対応サイト",
+    "description": "Video scenario supported sites label"
+  },
+  "homepage.scenario.video.getScript": {
+    "message": "スクリプトを取得 →",
+    "description": "Video scenario get script link"
+  },
+  "homepage.scenario.shopping.title": {
+    "message": "ショッピングアシスタント",
+    "description": "Shopping scenario title"
+  },
+  "homepage.scenario.shopping.subtitle": {
+    "message": "ショッピング体験をもっと簡単に",
+    "description": "Shopping scenario subtitle"
+  },
+  "homepage.scenario.shopping.tag": {
+    "message": "便利なツール",
+    "description": "Shopping scenario tag"
+  },
+  "homepage.scenario.shopping.feature.history": {
+    "message": "価格履歴",
+    "description": "Shopping feature: Price history"
+  },
+  "homepage.scenario.shopping.feature.coupon": {
+    "message": "クーポン自動検索",
+    "description": "Shopping feature: Coupon search"
+  },
+  "homepage.scenario.shopping.feature.compare": {
+    "message": "価格比較",
+    "description": "Shopping feature: Price comparison"
+  },
+  "homepage.scenario.shopping.feature.alert": {
+    "message": "価格下落アラート",
+    "description": "Shopping feature: Price alert"
+  },
+  "homepage.scenario.sites.more": {
+    "message": "+もっと見る",
+    "description": "More sites indicator in scenario cards"
+  },
+  "homepage.download.title.ready": {
+    "message": "始めましょう",
+    "description": "Download section title part 1"
+  },
+  "homepage.download.title.enhance": {
+    "message": "ブラウジング体験を向上させましょう",
+    "description": "Download section title highlight"
+  },
+  "homepage.download.title.question": {
+    "message": "?",
+    "description": "Download section title part 2"
+  },
+  "homepage.download.subtitle": {
+    "message": "今すぐScriptCatをインストールして、ウェブ閲覧の無限の可能性を解放しましょう",
+    "description": "Download section subtitle"
+  },
+  "homepage.download.edge": {
+    "message": "Edge Web Store",
+    "description": "Download button: Edge store"
+  },
+  "homepage.download.chrome": {
+    "message": "Chrome Web Store",
+    "description": "Download button: Chrome store"
+  },
+  "homepage.download.firefox": {
+    "message": "Firefox Add-ons",
+    "description": "Download button: Firefox store"
+  },
+  "homepage.download.github": {
+    "message": "GitHubダウンロード",
+    "description": "Download button: GitHub"
+  },
+  "homepage.download.popup.title": {
+    "message": "ScriptCatが有効です",
+    "description": "Extension popup title"
+  },
+  "homepage.download.popup.text": {
+    "message": "現在のページで3つのスクリプトが実行されています",
+    "description": "Extension popup text"
+  },
+  "homepage.footer.contributors.title": {
+    "message": "すべての貢献者に感謝します",
+    "description": "Footer contributors section title"
+  },
+  "footer.description": {
+    "message": "ブラウザ体験をより豊かにする強力なブラウザスクリプトエンジン。"
+  },
+  "footer.product.title": {
+    "message": "製品"
+  },
+  "footer.product.features": {
+    "message": "機能",
+    "description": "Footer product features link"
+  },
+  "footer.product.scriptStore": {
+    "message": "スクリプトストア",
+    "description": "Footer product script store link"
+  },
+  "footer.product.changelog": {
+    "message": "変更履歴",
+    "description": "Footer product changelog link"
+  },
+  "footer.resources.title": {
+    "message": "リソース"
+  },
+  "footer.resources.devDocs": {
+    "message": "開発者向けドキュメント",
+    "description": "Footer resources development docs link"
+  },
+  "footer.resources.apiReference": {
+    "message": "APIリファレンス",
+    "description": "Footer resources API reference link"
+  },
+  "footer.resources.examples": {
+    "message": "サンプルスクリプト",
+    "description": "Footer resources example scripts link"
+  },
+  "footer.resources.faq": {
+    "message": "よくある質問",
+    "description": "Footer resources FAQ link"
+  },
+  "footer.community.title": {
+    "message": "コミュニティ"
+  },
+  "footer.community.forum": {
+    "message": "フォーラム"
+  },
+  "footer.community.discord": {
+    "message": "Discord チャンネル"
+  },
+  "footer.community.contributing": {
+    "message": "コントリビューションガイド",
+    "description": "Footer community contributing guide link"
+  },
+  "footer.community.issues": {
+    "message": "問題を報告",
+    "description": "Footer community report issues link"
+  },
+  "footer.community.contact": {
+    "message": "チームに連絡",
+    "description": "Footer community contact team link"
+  },
+  "footer.community.recruiting": {
+    "message": "採用情報",
+    "description": "Footer community recruiting badge"
+  },
+  "footer.copyright.allRightsReserved": {
+    "message": "無断転載を禁じます。"
+  },
+  "footer.copyright.privacy": {
+    "message": "プライバシーポリシー",
+    "description": "Footer copyright privacy policy link"
+  },
+  "footer.copyright.terms": {
+    "message": "利用規約",
+    "description": "Footer copyright terms of use link"
+  },
+  "footer.copyright.license": {
+    "message": "ライセンス契約",
+    "description": "Footer copyright license link"
+  },
+  "githubStar.install.title": {
+    "message": "ScriptCat を気に入っていますか？",
+    "description": "GitHub star bar title on install-complete page"
+  },
+  "githubStar.install.subtitle": {
+    "message": "GitHub で Star を付けて、より多くの人に知ってもらいましょう 🌟",
+    "description": "GitHub star bar subtitle on install-complete page"
+  },
+  "githubStar.changelog.title": {
+    "message": "ScriptCat は進化し続けています 🚀",
+    "description": "GitHub star bar title on changelog page"
+  },
+  "githubStar.changelog.subtitle": {
+    "message": "このアップデートが役に立ちましたか？GitHub で Star を付けて私たちの活動を支援してください",
+    "description": "GitHub star bar subtitle on changelog page"
+  },
+  "githubStar.home.title": {
+    "message": "ScriptCat は無料でオープンソースです",
+    "description": "GitHub star bar title on homepage"
+  },
+  "githubStar.home.subtitle": {
+    "message": "役に立ったと思ったら、Star を付けて開発を支援してください",
+    "description": "GitHub star bar subtitle on homepage"
+  },
+  "githubStar.button.label": {
+    "message": "Star",
+    "description": "GitHub star button label"
+  },
+  "uninstall.title": {
+    "message": "アンインストール調査",
+    "description": "Title of the uninstall survey page"
+  },
+  "uninstall.description": {
+    "message": "ScriptCat をご利用いただきありがとうございます。アンインストールする理由をお聞かせください。",
+    "description": "Description of the uninstall survey page"
+  },
+  "uninstall.header.title": {
+    "message": "ScriptCat をアンインストールされるのは残念です",
+    "description": "Main header title on uninstall survey page"
+  },
+  "uninstall.header.subtitle": {
+    "message": "よろしければ、改善に役立てるようご意見をお聞かせください",
+    "description": "Subtitle on uninstall survey page"
+  },
+  "uninstall.question.reason": {
+    "message": "ScriptCat をアンインストールする主な理由は何ですか？",
+    "description": "Question about uninstall reason"
+  },
+  "uninstall.reason.bug": {
+    "message": "エラーやバグに遭遇した"
+  },
+  "uninstall.reason.unused": {
+    "message": "もう必要ない"
+  },
+  "uninstall.reason.feature": {
+    "message": "必要な機能が足りない"
+  },
+  "uninstall.reason.better": {
+    "message": "より良い代替品を見つけた"
+  },
+  "uninstall.reason.other": {
+    "message": "その他の理由",
+    "description": "Uninstall reason: other"
+  },
+  "uninstall.bug.alert.title": {
+    "message": "バグに遭遇しましたか？",
+    "description": "Bug alert title"
+  },
+  "uninstall.bug.alert.description": {
+    "message": "エラーやバグに遭遇した場合は、より迅速なフィードバックと技術サポートのために、GitHub で直接問題を報告することをお勧めします。",
+    "description": "Bug alert description"
+  },
+  "uninstall.bug.alert.button": {
+    "message": "GitHub で問題を報告",
+    "description": "Bug alert button text"
+  },
+  "uninstall.feature.alert.title": {
+    "message": "必要な機能がありませんか？",
+    "description": "Feature alert title"
+  },
+  "uninstall.feature.alert.description": {
+    "message": "ユーザーの機能要望を大切にしています！必要な機能を GitHub で詳しく説明していただくことをお勧めします。そうすれば、ニーズをよりよく理解し、優先順位を付けることができます。",
+    "description": "Feature alert description"
+  },
+  "uninstall.feature.alert.button": {
+    "message": "GitHub で機能を提案",
+    "description": "Feature alert button text"
+  },
+  "uninstall.question.feedback": {
+    "message": "よろしければ、詳細を共有していただけますか？",
+    "description": "Question about detailed feedback"
+  },
+  "uninstall.feedback.placeholder": {
+    "message": "具体的な問題、提案、その他の考えをご共有ください...",
+    "description": "Placeholder text for feedback textarea"
+  },
+  "uninstall.button.submit": {
+    "message": "フィードバックを送信",
+    "description": "Submit button text"
+  },
+  "uninstall.sidebar.reinstall.title": {
+    "message": "いつでもお待ちしています",
+    "description": "Sidebar reinstall title"
+  },
+  "uninstall.reinstall.message": {
+    "message": "気が変わったら、いつでも再インストールできます：",
+    "description": "Reinstall message"
+  },
+  "uninstall.sidebar.help.title": {
+    "message": "ヘルプが必要ですか？",
+    "description": "Sidebar help title"
+  },
+  "uninstall.sidebar.help.description": {
+    "message": "お困りですか？解決のお手伝いをします",
+    "description": "Sidebar help description"
+  },
+  "uninstall.sidebar.help.github": {
+    "message": "GitHub Issues",
+    "description": "GitHub issues button"
+  },
+  "uninstall.sidebar.help.docs": {
+    "message": "ドキュメントを見る",
+    "description": "View docs button"
+  },
+  "homepage.hero.browser.crx": {
+    "message": "手動インストール用のインストールパッケージをダウンロード",
+    "description": "Button text for manual installation"
+  },
+  "uninstall.reason.no_need": {
+    "message": "ScriptCat がもう必要ない",
+    "description": "Uninstall reason: no longer need"
+  },
+  "uninstall.thanks.submitAnother": {
+    "message": "他のフィードバックを送信",
+    "description": "Submit another feedback button"
+  },
+  "uninstall.reason.features": {
+    "message": "必要な機能が不足している",
+    "description": "Uninstall reason: missing features"
+  },
+  "uninstall.thanks.backHome": {
+    "message": "ホームに戻る",
+    "description": "Back to home button"
+  },
+  "uninstall.thanks.message": {
+    "message": "あなたのフィードバックは私たちにとって非常に貴重で、ScriptCat の改善に役立ちます。",
+    "description": "Thank you page message"
+  },
+  "uninstall.thanks.considerReinstall": {
+    "message": "気が変わったら、いつでもお待ちしています",
+    "description": "Consider reinstall message"
+  },
+  "uninstall.thanks.title": {
+    "message": "フィードバックありがとうございます！",
+    "description": "Thank you page title"
+  },
+  "homepage.hero.button.browseScripts": {
+    "message": "スクリプトライブラリを閲覧",
+    "description": "Button text for browsing scripts"
+  },
+  "uninstall.warning.selectReason": {
+    "message": "アンインストールの理由を選択してください",
+    "description": "Warning when no reason is selected"
+  },
+  "homepage.features.tampermonkey.title": {
+    "message": "Tampermonkey Compatible",
+    "description": "Feature title: Tampermonkey compatibility"
+  },
+  "uninstall.reason.alternative": {
+    "message": "より良い代替品を見つけた",
+    "description": "Uninstall reason: found alternative"
+  },
+  "homepage.hero.browser.edge": {
+    "message": "Edgeブラウザに追加",
+    "description": "Button text for Edge browser"
+  },
+  "homepage.hero.trustBadges.title": {
+    "message": "技術コミュニティから信頼和支持されています",
+    "description": "Trust badges section title"
+  },
+  "homepage.hero.browser.chrome": {
+    "message": "Chromeブラウザに追加",
+    "description": "Button text for Chrome browser"
+  },
+  "homepage.features.tampermonkey.description": {
+    "message": "Tampermonkeyのスクリプト形式と完全に互換性があり、既存のスクリプトを中断なしに移行できます。",
+    "description": "Feature description: Tampermonkey compatibility"
+  },
+  "homepage.hero.browser.default": {
+    "message": "ブラウザに拡張機能をインストール",
+    "description": "Default button text for browser installation"
+  },
+  "uninstall.success.submitted": {
+    "message": "フィードバックありがとうございます！",
+    "description": "Success message after submission"
+  },
+  "uninstall.reason.bugs": {
+    "message": "エラーやバグに遭遇した",
+    "description": "Uninstall reason: bugs"
+  },
+  "homepage.hero.subtitle.highlight": {
+    "message": "実行するためのブラウザ拡張機能",
+    "description": "Highlighted subtitle on homepage"
+  },
+  "uninstall.thanks.reportIssue": {
+    "message": "問題を報告",
+    "description": "Report issue button"
+  },
+  "uninstall.error.submit": {
+    "message": "送信に失敗しました。後でもう一度お試しください",
+    "description": "Error message when submission fails"
+  },
+  "homepage.hero.browser.firefox": {
+    "message": "Firefoxブラウザに追加",
+    "description": "Button text for Firefox browser"
+  },
+  "homepage.features.title.possibilities": {
+    "message": "無限の可能性",
+    "description": "Features section title highlight"
+  },
+  "home.comm.btn": {
+    "message": "GitHub で貢献する"
+  },
+  "home.comm.eyebrow": {
+    "message": "オープンソース · OPEN SOURCE"
+  },
+  "home.comm.sub": {
+    "message": "完全にオープンソースで、透明かつ無料。すべてのコード行は監査可能で、すべての貢献者が認められます。"
+  },
+  "home.comm.title1": {
+    "message": ""
+  },
+  "home.comm.title2": {
+    "message": "コミュニティによって作られています"
+  },
+  "home.cta.chip": {
+    "message": "インストール済み・実行中"
+  },
+  "home.cta.eyebrow": {
+    "message": "無料 · オープンソース · 広告なし"
+  },
+  "home.cta.h1": {
+    "message": "ブラウザに"
+  },
+  "home.cta.h2": {
+    "message": "超パワーを"
+  },
+  "home.cta.h3": {
+    "message": "与えませんか？"
+  },
+  "home.cta.primary": {
+    "message": "{browser} に無料でインストール"
+  },
+  "home.cta.secondary": {
+    "message": "スクリプトを見る"
+  },
+  "home.cta.stores": {
+    "message": "Edge · Chrome · Firefox · 手動パッケージ対応"
+  },
+  "home.cta.sub": {
+    "message": "ストアからワンクリックでインストール、またはパッケージを手動でダウンロード。30秒でウェブの超パワーを解き放ちます。"
+  },
+  "home.dev.api.d": {
+    "message": "ファイルストレージ、cron スケジュール、クロスオリジンリクエスト — すべて含まれています。"
+  },
+  "home.dev.api.t": {
+    "message": "強力な API"
+  },
+  "home.dev.apiBtn": {
+    "message": "API リファレンス"
+  },
+  "home.dev.bg.d": {
+    "message": "ピン留めタブは不要 — スクリプトはバックグラウンドで動き続けます。"
+  },
+  "home.dev.bg.t": {
+    "message": "バックグラウンドスクリプト"
+  },
+  "home.dev.debug.d": {
+    "message": "ログ、実行履歴、エラー追跡 — 問題をひと目で把握。"
+  },
+  "home.dev.debug.t": {
+    "message": "ライブデバッグ"
+  },
+  "home.dev.docsBtn": {
+    "message": "ドキュメントを読む"
+  },
+  "home.dev.editor.d": {
+    "message": "構文ハイライト、スマート補完、エラーヒントでスクリプト作成がスムーズに。"
+  },
+  "home.dev.editor.t": {
+    "message": "内蔵エディター"
+  },
+  "home.dev.eyebrow": {
+    "message": "開発者のために · FOR DEVELOPERS"
+  },
+  "home.dev.mock.name": {
+    "message": "毎日のチェックイン",
+    "description": "@name value in the editor mock code block"
+  },
+  "home.dev.mock.toast": {
+    "message": "チェックインしました",
+    "description": "Notification text in the editor mock code block"
+  },
+  "home.dev.run": {
+    "message": "実行"
+  },
+  "home.dev.sub": {
+    "message": "バックグラウンドスクリプト、豊富な API、内蔵エディター、デバッグツール — 最初の一行から本番まで、すべてをひとつの場所で。"
+  },
+  "home.dev.title1": {
+    "message": "ブラウザを "
+  },
+  "home.dev.title2": {
+    "message": "コード実行環境に変える"
+  },
+  "home.feat.api.d": {
+    "message": "GM より豊富: ファイルストレージ、スケジュールタスク、クロスオリジンリクエストをすぐに使えます。"
+  },
+  "home.feat.api.t": {
+    "message": "強力な API"
+  },
+  "home.feat.bg.d": {
+    "message": "独自機能: タブを開かなくてもスクリプトはバックグラウンドで動き続けます。"
+  },
+  "home.feat.bg.t": {
+    "message": "バックグラウンドスクリプト"
+  },
+  "home.feat.compat.b": {
+    "message": "GM_* API 対応 · 同一のメタデータブロック"
+  },
+  "home.feat.compat.d": {
+    "message": "ユーザースクリプト形式と GM API に完全互換 — 既存のスクリプトを変更なしで移行でき、切り替えコストはゼロです。"
+  },
+  "home.feat.compat.t": {
+    "message": "Tampermonkey 互換"
+  },
+  "home.feat.devTag": {
+    "message": "開発者"
+  },
+  "home.feat.eyebrow": {
+    "message": "コア機能 · SCRIPTCAT を選ぶ理由"
+  },
+  "home.feat.secure.d": {
+    "message": "透過的で制御可能な権限と目に見える動作 — 悪意のあるスクリプトは発生源で止められます。"
+  },
+  "home.feat.secure.t": {
+    "message": "安全・信頼"
+  },
+  "home.feat.store.d": {
+    "message": "何千ものコミュニティスクリプトをワンクリックでインストール。自分のスクリプトを公開して、エコシステムを一緒に育てましょう。"
+  },
+  "home.feat.store.stat": {
+    "message": "{count} 件のコミュニティスクリプト"
+  },
+  "home.feat.store.t": {
+    "message": "スクリプトストア"
+  },
+  "home.feat.sub": {
+    "message": "互換性からセキュリティまで、一般ユーザーから開発者まで — ScriptCat がすべてをカバーします。"
+  },
+  "home.feat.sync.d": {
+    "message": "スクリプトと設定を端末間で同期 — 乗り換えや再インストールでも何も失いません。"
+  },
+  "home.feat.sync.t": {
+    "message": "クラウド同期"
+  },
+  "home.feat.title1": {
+    "message": "強力なコアで、"
+  },
+  "home.feat.title2": {
+    "message": "安心・安全"
+  },
+  "home.hero.browse": {
+    "message": "スクリプトを見る"
+  },
+  "home.hero.chip.background": {
+    "message": "バックグラウンドで 3 つのスクリプトが実行中"
+  },
+  "home.hero.chip.installed": {
+    "message": "スクリプトをインストールしました"
+  },
+  "home.hero.chip.installedSub": {
+    "message": "動画エンハンサー v2.1"
+  },
+  "home.hero.eyebrow": {
+    "message": "オープンソースのユーザースクリプトエンジン · Tampermonkey 互換"
+  },
+  "home.hero.installTo": {
+    "message": "{browser} に追加"
+  },
+  "home.hero.mock.adblock": {
+    "message": "広告を自動スキップ"
+  },
+  "home.hero.mock.add": {
+    "message": "スクリプトストアから追加"
+  },
+  "home.hero.mock.dark": {
+    "message": "ページのダークモード"
+  },
+  "home.hero.mock.running": {
+    "message": "このページで 3 つのスクリプトが実行中"
+  },
+  "home.hero.mock.skip": {
+    "message": "広告をスキップ"
+  },
+  "home.hero.mock.speed": {
+    "message": "動画の速度調整"
+  },
+  "home.hero.moreBrowsers": {
+    "message": "他のブラウザ"
+  },
+  "home.hero.subhead": {
+    "message": "広告をブロックし、動画を強化し、面倒なことを自動化 — ストアからコミュニティスクリプトをワンクリックでインストール。開発者向けのバックグラウンドスクリプトと強力な API も完備。Tampermonkey 互換なので、既存のスクリプトはコストゼロで移行できます。"
+  },
+  "home.hero.title1": {
+    "message": "ブラウザに"
+  },
+  "home.hero.title2": {
+    "message": ""
+  },
+  "home.hero.title3": {
+    "message": "超パワーを"
+  },
+  "home.hero.trust": {
+    "message": "Chrome · Edge · Firefox 対応 — 完全無料・オープンソース"
+  },
+  "home.install.chrome": {
+    "message": "Chrome に追加"
+  },
+  "home.install.edge": {
+    "message": "Edge に追加"
+  },
+  "home.install.firefox": {
+    "message": "Firefox に追加"
+  },
+  "home.install.guide": {
+    "message": "インストールガイド"
+  },
+  "home.install.manual": {
+    "message": "パッケージをダウンロードして手動インストール"
+  },
+  "home.nav.changelog": {
+    "message": "更新履歴"
+  },
+  "home.nav.dev": {
+    "message": "開発者"
+  },
+  "home.nav.docs": {
+    "message": "ドキュメント"
+  },
+  "home.nav.install": {
+    "message": "インストール"
+  },
+  "home.nav.installTo": {
+    "message": "{browser} に追加"
+  },
+  "home.nav.menu": {
+    "message": "メニュー"
+  },
+  "home.nav.store": {
+    "message": "スクリプトストア"
+  },
+  "home.nav.theme": {
+    "message": "テーマ切り替え"
+  },
+  "home.sc.adblock.d": {
+    "message": "広告とポップアップをブロックして、きれいで整ったページに。"
+  },
+  "home.sc.adblock.l": {
+    "message": "広告ブロックスクリプト"
+  },
+  "home.sc.adblock.t": {
+    "message": "広告ブロック · よりクリーンなウェブ"
+  },
+  "home.sc.auto.d": {
+    "message": "自動チェックイン、一括操作、便利な小さなツールボックス。"
+  },
+  "home.sc.auto.l": {
+    "message": "生産性スクリプト"
+  },
+  "home.sc.auto.t": {
+    "message": "生産性 · 自動化"
+  },
+  "home.sc.eyebrow": {
+    "message": "すべての人へ · プログラミング不要"
+  },
+  "home.sc.featured.btn": {
+    "message": "動画スクリプトを見る"
+  },
+  "home.sc.featured.c1": {
+    "message": "速度調整"
+  },
+  "home.sc.featured.c2": {
+    "message": "広告ブロック"
+  },
+  "home.sc.featured.c3": {
+    "message": "ダウンロード"
+  },
+  "home.sc.featured.c4": {
+    "message": "ピクチャーインピクチャー"
+  },
+  "home.sc.featured.d": {
+    "message": "速度調整、広告自動スキップ、ワンクリックダウンロード、ピクチャーインピクチャー — より良い Bilibili / YouTube / Netflix。"
+  },
+  "home.sc.featured.sites": {
+    "message": "20 以上の動画サイトに対応"
+  },
+  "home.sc.featured.t": {
+    "message": "動画を完全に強化"
+  },
+  "home.sc.featured.tag": {
+    "message": "一番人気"
+  },
+  "home.sc.read.d": {
+    "message": "ダークモード、ページ翻訳、没入型リーディング。"
+  },
+  "home.sc.read.l": {
+    "message": "リーディング拡張"
+  },
+  "home.sc.read.t": {
+    "message": "リーディング · 翻訳"
+  },
+  "home.sc.shop.d": {
+    "message": "どこでも価格比較、価格履歴グラフ、ワンクリッククーポン。"
+  },
+  "home.sc.shop.l": {
+    "message": "買い物アシスト"
+  },
+  "home.sc.shop.t": {
+    "message": "ショッピング · 価格比較"
+  },
+  "home.sc.sub": {
+    "message": "ストアからスクリプトを取得 — 広告、動画、買い物、生産性、すべてお任せ。"
+  },
+  "home.sc.title1": {
+    "message": "コード不要、"
+  },
+  "home.sc.title2": {
+    "message": "ワンクリック"
+  },
+  "home.sc.title3": {
+    "message": "で日常の悩みを解決"
+  },
+  "home.step.eyebrow": {
+    "message": "3 ステップでスタート"
+  },
+  "home.step.sub": {
+    "message": "複雑な設定は不要 — 3 つのステップに従うだけ: インストールしてすぐ使えます。"
+  },
+  "home.step.title1": {
+    "message": "30 秒"
+  },
+  "home.step.title2": {
+    "message": "で最初のスクリプトへ"
+  },
+  "home.step1.d": {
+    "message": "Chrome / Edge / Firefox のストアからワンクリックで追加、または手動でインストール。"
+  },
+  "home.step1.p": {
+    "message": "ブラウザに追加"
+  },
+  "home.step1.t": {
+    "message": "拡張機能をインストール"
+  },
+  "home.step2.d": {
+    "message": "ScriptCat コミュニティで何千ものスクリプトを探して、お気に入りを選びましょう。"
+  },
+  "home.step2.p": {
+    "message": "検索: 動画速度"
+  },
+  "home.step2.t": {
+    "message": "ストアを見る"
+  },
+  "home.step3.d": {
+    "message": "インストールをクリックすると、スクリプトがすぐにページで有効になります。"
+  },
+  "home.step3.p": {
+    "message": "インストール済み · 有効中"
+  },
+  "home.step3.t": {
+    "message": "ワンクリックインストール"
+  },
+  "home.trust.contributors": {
+    "message": "コントリビューター"
+  },
+  "home.trust.eyebrow": {
+    "message": "世界中のユーザーと開発者に信頼されています"
+  },
+  "home.trust.scripts": {
+    "message": "コミュニティスクリプト"
+  },
+  "home.trust.stars": {
+    "message": "GitHub スター"
+  },
+  "home.trust.users": {
+    "message": "インストールユーザー"
+  },
+  "homepage.meta.keywords": {
+    "message": "ScriptCat,ユーザースクリプト,ブラウザ拡張機能,userscript,Tampermonkey,Violentmonkey,バックグラウンドスクリプト,スケジュールスクリプト",
+    "description": "Homepage SEO keywords"
+  },
+  "uninstall.reinstall.chrome": {
+    "message": "Chrome Web Store",
+    "description": "Reinstall from Chrome Web Store button"
+  },
+  "uninstall.reinstall.edge": {
+    "message": "Edge アドオン",
+    "description": "Reinstall from Edge Add-ons button"
+  },
+  "uninstall.reinstall.firefox": {
+    "message": "Firefox アドオン",
+    "description": "Reinstall from Firefox Add-ons button"
+  },
+  "home.hero.en": {
+    "message": "ブラウザにスーパーパワーを。"
+  }
+}
