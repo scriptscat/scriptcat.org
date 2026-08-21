@@ -82,6 +82,9 @@ export function LandingNav() {
           <a className={styles.lnavPanelLink} href={LINKS.github} target="_blank" rel="noreferrer">
             GitHub · Star {abbr(stats.stars)}
           </a>
+          <div className={styles.lnavPanelLang}>
+            <LangSwitch />
+          </div>
         </div>
       )}
     </nav>
