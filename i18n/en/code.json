@@ -947,5 +947,9 @@
   },
   "home.nav.theme": {
     "message": "Toggle theme"
+  },
+  "ad.label": {
+    "message": "Advertisement",
+    "description": "Label shown above an advertisement slot"
   }
 }

@@ -947,5 +947,9 @@
   },
   "home.nav.theme": {
     "message": "Сменить тему"
+  },
+  "ad.label": {
+    "message": "Реклама",
+    "description": "Label shown above an advertisement slot"
   }
 }

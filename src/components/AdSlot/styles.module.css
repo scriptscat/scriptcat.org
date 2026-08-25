@@ -1,0 +1,45 @@
+.adSlot {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.label {
+  font-size: 0.625rem;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ifm-color-emphasis-500);
+}
+
+/* 占位块本身。接入真实广告后 .body 只负责预留高度，避免 CLS */
+.body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  background: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-emphasis-500);
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.rail .body {
+  height: 250px;
+}
+
+.inline .body {
+  height: 90px;
+}
+
+/* 窄屏放不下横条，响应式单元会改投方块，高度按方块预留 */
+@media (max-width: 996px) {
+  .inline .body {
+    height: 250px;
+  }
+}
+
+.placeholderText {
+  opacity: 0.8;
+}
