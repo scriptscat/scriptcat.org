@@ -97,6 +97,16 @@ const config = {
     },
   },
 
+  // AdSense 加载器。只需在 <head> 里出现一次，广告单元本身在
+  // src/components/AdSlot 里渲染，不要在每个位置重复引入这个脚本。
+  scripts: [
+    {
+      src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8009073269666226",
+      async: true,
+      crossorigin: "anonymous",
+    },
+  ],
+
   presets: [
     [
       "classic",

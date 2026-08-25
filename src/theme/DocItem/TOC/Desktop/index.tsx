@@ -17,7 +17,7 @@ export default function DocItemTOCDesktopWrapper(props: Props): JSX.Element {
       <div className={styles.tocScroll}>
         <Desktop {...props} />
       </div>
-      <AdSlot variant="rail" className={styles.railAd} />
+      <AdSlot variant="rail" slot="8361124136" className={styles.railAd} />
     </div>
   );
 }

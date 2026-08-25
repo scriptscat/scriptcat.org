@@ -12,7 +12,7 @@ type Props = WrapperProps<typeof FooterType>;
 export default function DocItemFooterWrapper(props: Props): JSX.Element {
   return (
     <>
-      <AdSlot variant="inline" className={styles.inlineAd} />
+      <AdSlot variant="inline" slot="9840842280" className={styles.inlineAd} />
       <Footer {...props} />
     </>
   );
