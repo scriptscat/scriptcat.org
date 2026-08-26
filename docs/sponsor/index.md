@@ -5,8 +5,6 @@ description: 支持脚本猫——一个由志愿者维护的开源用户脚本�
 icon: heart
 ---
 
-import SponsorBlock from '@site/src/components/SponsorBlock/zh.mdx';
-
 脚本猫（ScriptCat）是一个由志愿者维护的开源项目，没有商业公司背书。服务器、域名等基础设施，以及大量的开发与维护时间，都依靠社区的支持维系。你的每一份赞助，都会帮助脚本猫走得更远。
 
 ## 你的赞助用在哪里
@@ -35,9 +33,3 @@ import SponsorBlock from '@site/src/components/SponsorBlock/zh.mdx';
 | GitHub README 赞助区 | Logo + 一句介绍 |
 | 官网赞助页（本页） | Logo + 介绍 |
 | 官网文档页（如更新日志） | Logo 展示 |
-
-## 当前赞助商
-
-感谢以下赞助商对脚本猫的支持 ❤️
-
-<SponsorBlock />

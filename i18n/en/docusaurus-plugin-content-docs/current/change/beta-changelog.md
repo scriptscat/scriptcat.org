@@ -3,12 +3,8 @@ title: Beta Changelog
 ---
 
 import GithubStar from '@site/src/components/GithubStar';
-import SponsorBlock from '@site/src/components/SponsorBlock/en.mdx';
-
 
 <GithubStar variant="bar" scene="changelog" />
-
-<SponsorBlock />
 
 ScriptCat's version releases are divided into two main branches: stable releases and pre-release versions. For the stable release changelog, please see: [Changelog](./index.md)
 
@@ -22,6 +18,83 @@ You can obtain pre-release versions from the [Release](https://github.com/script
 - [Firefox](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat-pre/)
 
 Additionally, besides pre-releases, ScriptCat builds the extension on [Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml) after each code commit is merged to the main branch. If you want to experience the latest features or fixes, you can download them from the [Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml) page.
+
+<a name="1.5.0-beta.2"></a>
+
+## 1.5.0-beta.2 (2026-08-21)
+
+This pre-release improves the built-in Agent's conversation, tool-loop, persistence, and MCP reliability, reworks the popup site-scope operations into a reversible state machine, and fixes several cloud-sync and update-page issues.
+
+### 🚀 Major New Features
+
+- ♻️ Agent conversation, tool-loop, persistence, and MCP reliability improvements [#1545](https://github.com/scriptscat/scriptcat/issues/1545) ([#1549](https://github.com/scriptscat/scriptcat/pull/1549)) (by @cyfung1031)
+- ✨ Popup site-scope operations: S1–S4 reversible state machine [#1590](https://github.com/scriptscat/scriptcat/issues/1590) ([#1666](https://github.com/scriptscat/scriptcat/pull/1666)) (by @CodFrm)
+
+### 🧩 GM API Changes
+
+- 🐛 Fix GM_download not triggering onerror when passed an empty url ([#1619](https://github.com/scriptscat/scriptcat/pull/1619)) (by @cyfung1031)
+
+### 🎨 UI Improvements
+
+- 💄 Update-page / install-page / editor UX fixes, and correct update records overwritten by stale check snapshots [#1650](https://github.com/scriptscat/scriptcat/issues/1650) [#1648](https://github.com/scriptscat/scriptcat/issues/1648) [#1651](https://github.com/scriptscat/scriptcat/issues/1651) ([#1677](https://github.com/scriptscat/scriptcat/pull/1677)) (by @CodFrm)
+
+### 🐛 Bug Fixes
+
+- 🐛 Cloud sync no longer triggers on service-worker cold starts; alarm period changed to 30 minutes [#1670](https://github.com/scriptscat/scriptcat/issues/1670) ([#1678](https://github.com/scriptscat/scriptcat/pull/1678)) (by @CodFrm)
+- 🐛 Fix the install/update page not closing properly [#1669](https://github.com/scriptscat/scriptcat/issues/1669) ([#1675](https://github.com/scriptscat/scriptcat/pull/1675)) (by @CodFrm)
+
+<a name="1.5.0-beta.1"></a>
+
+## 1.5.0-beta.1 (2026-08-06)
+
+This pre-release highlights two major features — **External Access (MCP bridge)** and a **script recycle bin** — officially supports Firefox MV3, adds Korean, Turkish, and Brazilian Portuguese, and fixes a number of GM API, cloud-sync, and editor issues.
+
+### 🚀 Major New Features
+
+- 💥 New "External Access (MCP bridge)": a local `sctl` daemon unifies CLI and MCP-client access; every script read/write is gated by tiered authorization and a human confirmation page with three levels — Deny / Allow / Allow this session — and every operation is audited ([#1573](https://github.com/scriptscat/scriptcat/pull/1573)) (by @cyfung1031)
+- 💥 Script recycle bin: deleted scripts go to the recycle bin first, with restore (preserving the original data and permissions), permanent delete, and expiry-based auto-cleanup; the retention period is configurable (default 30 days, or never) ([#1585](https://github.com/scriptscat/scriptcat/pull/1585)) (by @CodFrm)
+- 💥 Official Firefox MV3 support, with improved sandbox/offscreen communication ([#1561](https://github.com/scriptscat/scriptcat/pull/1561)) (by @cyfung1031)
+- ✨ Add quick site-scope actions to the popup ([#1646](https://github.com/scriptscat/scriptcat/pull/1646)) (by @CodFrm)
+- ✨ Popup script-list expand count is now configurable, separate from the menu expand count ([#1645](https://github.com/scriptscat/scriptcat/pull/1645)) (by @CodFrm)
+- ✨ Icon service gains a "disabled" tier to fully turn off favicon fetching ([#1637](https://github.com/scriptscat/scriptcat/pull/1637)) (by @CodFrm)
+- ✨ Undefined metadata tags now show a warning in the editor ([#1608](https://github.com/scriptscat/scriptcat/pull/1608)) (by @cyfung1031)
+- ✨ Backup/restore/import completeness: ScriptCat/Tampermonkey/Violentmonkey custom config + settings backup + resource repair ([#1554](https://github.com/scriptscat/scriptcat/pull/1554)) (by @CodFrm)
+
+### ♻️ Refactoring & Compatibility
+
+- ♻️ Refactor the client onto the official MCP SDK ([#1643](https://github.com/scriptscat/scriptcat/pull/1643)) (by @CodFrm)
+
+### 🐛 Bug Fixes
+
+- 🐛 Fix GM_xmlhttpRequest custom cookies being appended instead of overriding same-name cookies ([#1604](https://github.com/scriptscat/scriptcat/pull/1604)) (by @cyfung1031)
+- 🐛 Fix script-sync state consistency and provider-safe conflict handling ([#1504](https://github.com/scriptscat/scriptcat/pull/1504)) (by @cyfung1031)
+- 🐛 Fix scheduled log cleanup no longer working ([#1599](https://github.com/scriptscat/scriptcat/pull/1599)) (by @CodFrm)
+- 🐛 Fix missing context-menu run timing in script settings ([#1652](https://github.com/scriptscat/scriptcat/pull/1652)) (by @CodFrm)
+- 🐛 Fix install-page back/close-tab logic ([#1594](https://github.com/scriptscat/scriptcat/pull/1594)) (by @cyfung1031)
+- 🐛 Fix browser tab title not updating after renaming a saved script ([#1607](https://github.com/scriptscat/scriptcat/pull/1607)) (by @cyfung1031)
+- 🐛 Fix window.focus focus behavior and harden windowId validation ([#1577](https://github.com/scriptscat/scriptcat/pull/1577)) (by @cyfung1031)
+- 🐛 Fix the editor's active-tab close button being hidden [#1556](https://github.com/scriptscat/scriptcat/issues/1556) (by @CodFrm)
+- 🐛 Fix the navigation guard for unsaved editor content ([#1656](https://github.com/scriptscat/scriptcat/pull/1656)) (by @CodFrm)
+- 🐛 Fix the recycle-bin same-name script save confirmation wording ([#1622](https://github.com/scriptscat/scriptcat/pull/1622)) (by @CodFrm)
+- 🐛 selfMetadata supports empty overrides: fix match/exclude/tag/run-at "delete then revive" ([#1579](https://github.com/scriptscat/scriptcat/pull/1579)) (by @CodFrm)
+
+### 🎨 UI Improvements
+
+- 💄 Fix Android UI adaptation: dynamic viewport height + narrow-screen table/settings-row/log-stat-bar reflow ([#1636](https://github.com/scriptscat/scriptcat/pull/1636)) (by @RenjiYuusei)
+- 💄 Add a compact layout option to the popup ([#1551](https://github.com/scriptscat/scriptcat/pull/1551)) (by @cyfung1031)
+
+### 🌐 Internationalization
+
+- 🌐 Add Korean (ko-KR) translation ([#1568](https://github.com/scriptscat/scriptcat/pull/1568)) (by @moduvoice)
+- 🌐 Add Turkish (tr-TR) translation ([#1557](https://github.com/scriptscat/scriptcat/pull/1557)) (by @azizaktas)
+- 🌐 Add Brazilian Portuguese (pt-BR) translation ([#1587](https://github.com/scriptscat/scriptcat/pull/1587)) (by @Lucas559-noob)
+- 🌐 Fill in chrome.i18n messages.json and Monaco editor languages for pt-BR / tr-TR ([#1605](https://github.com/scriptscat/scriptcat/pull/1605)) (by @CodFrm)
+
+### Others
+
+- ⬆️ Upgrade dependencies (incl. TypeScript 6.0) and fix pnpm audit warnings ([#1576](https://github.com/scriptscat/scriptcat/pull/1576), [#1567](https://github.com/scriptscat/scriptcat/pull/1567)) (by @cyfung1031)
+- Script-sync settings now save instantly ([#1615](https://github.com/scriptscat/scriptcat/pull/1615)) (by @CodFrm)
+- 📝 Improve the store description and README tagline for better "user script" discoverability ([#1553](https://github.com/scriptscat/scriptcat/pull/1553)) (by @CodFrm)
 
 <a name="1.5.0-beta"></a>
 

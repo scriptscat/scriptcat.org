@@ -3,12 +3,8 @@ title: 更新日志
 ---
 
 import GithubStar from '@site/src/components/GithubStar';
-import SponsorBlock from '@site/src/components/SponsorBlock/zh.mdx';
-
 
 <GithubStar variant="bar" scene="changelog" />
-
-<SponsorBlock />
 
 Beta 版本更新日志请查看 [Beta 更新日志](./beta-changelog.md)
 

@@ -28,6 +28,7 @@ const sidebars = {
     },
     "use/open-dev",
     "use/vscode",
+    "use/external-access",
     {
       type: "category",
       label: "服务协议",

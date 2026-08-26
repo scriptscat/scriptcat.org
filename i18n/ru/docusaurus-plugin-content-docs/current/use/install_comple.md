@@ -5,15 +5,12 @@ sidebar_class_name: hidden
 ---
 
 import GithubStar from '@site/src/components/GithubStar';
-import SponsorBlock from '@site/src/components/SponsorBlock/en.mdx';
 
 # 🎉 Добро пожаловать в ScriptCat
 
 Поздравляем: расширение ScriptCat успешно установлено! ScriptCat — мощный менеджер пользовательских скриптов, совместимый со скриптами Tampermonkey и с множеством дополнительных возможностей.
 
 <GithubStar variant="bar" scene="install" />
-
-<SponsorBlock />
 
 ## Важное о безопасности
 
