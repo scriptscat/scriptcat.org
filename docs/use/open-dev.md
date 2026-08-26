@@ -40,13 +40,15 @@ import GithubStar from '@site/src/components/GithubStar';
 <Tabs groupId="browser" queryString>
   <TabItem value="edge" label={<div className="flex items-center gap-1"><Icon height={16} width={16} icon="logos:microsoft-edge" />Edge</div>} default>
 
-① 打开浏览器的扩展管理界面，或者访问 [edge://extensions/](edge://extensions/)
+① 打开浏览器的扩展列表然后点击扩展右边的三个点
 
 ![edge-open-settings](./open-dev.assets/edge-open-settings.webp)
 
-② 在扩展管理界面中，找到脚本猫扩展，点击`详情`
+或者右键单击扩展图标，选择`管理扩展`
 
-![image-20260130233429385](open-dev.assets/image-20260130233429385.png)
+② 在菜单中点击扩展管理
+
+![alt text](./open-dev.assets/QQ_1787725815876.png)
 
 ③ 在脚本猫扩展的详情页中，找到`允许用户脚本`选项，开启它，然后关闭扩展再开启扩展，或者重启浏览器，使脚本功能生效。
 
@@ -69,7 +71,7 @@ import GithubStar from '@site/src/components/GithubStar';
 
 ![image-20250623141002831](open-dev.assets/image-20250623141002831.webp)
 </TabItem>
-  <TabItem value="edge-mobile" label={<div className="flex items-center gap-1"><Icon height={16} width={16} icon="logos:microsoft-edge" />Edge Mobile</div>}>
+<TabItem value="edge-mobile" label={<div className="flex items-center gap-1"><Icon height={16} width={16} icon="logos:microsoft-edge" />Edge Mobile</div>}>
 
 Edge Mobile 内核版本 ≥ 138 时，不需要开启开发者模式，只需要在扩展设置中启用「允许用户脚本」。
 

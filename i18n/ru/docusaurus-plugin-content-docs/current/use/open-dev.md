@@ -40,13 +40,15 @@ import GithubStar from '@site/src/components/GithubStar';
 <Tabs groupId="browser" queryString>
   <TabItem value="edge" label={<div className="flex items-center gap-1"><Icon height={16} width={16} icon="logos:microsoft-edge" />Edge</div>} default>
 
-① Откройте управление расширениями браузера или перейдите на [edge://extensions/](edge://extensions/)
+① Откройте список расширений браузера и нажмите на меню с тремя точками рядом с расширением
 
-![edge-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge-extensions-page.webp)
+![edge-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/QQ_1787726562928.png)
 
-② Найдите расширение ScriptCat и нажмите `Details` / «Сведения»
+Или щёлкните правой кнопкой мыши значок расширения и выберите `Manage extension` / «Управление расширением»
 
-![edge-extensions-details](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge-extensions-details.png)
+② В меню нажмите `Manage extension` / «Управление расширением»
+
+![Manage extension in the Edge menu](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/QQ_1787726491776.png)
 
 ③ На странице сведений ScriptCat найдите параметр `Allow user scripts` / «Разрешить пользовательские скрипты» и включите его. Затем отключите и снова включите расширение или перезапустите браузер.
 
