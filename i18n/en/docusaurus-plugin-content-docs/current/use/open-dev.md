@@ -44,13 +44,15 @@ import SponsorBlock from '@site/src/components/SponsorBlock/en.mdx';
 <Tabs groupId="browser" queryString>
   <TabItem value="edge" label={<div className="flex items-center gap-1"><Icon height={16} width={16} icon="logos:microsoft-edge" />Edge</div>} default>
 
-① Open the browser's extension management interface, or visit [edge://extensions/](edge://extensions/)
+① Open the browser's extensions list, then click the three-dot menu next to the extension
 
-![edge-open-settings](./open-dev.assets/edge-extensions-page.webp)
+![edge-open-settings](./open-dev.assets/QQ_1787726562928.png)
 
-② In the extension management interface, find the ScriptCat extension and click `Details`
+Alternatively, right-click the extension icon and select `Manage extension`
 
-![edge-extensions-details](open-dev.assets/edge-extensions-details.png)
+② Click `Manage extension` in the menu
+
+![Manage extension in the Edge menu](./open-dev.assets/QQ_1787726491776.png)
 
 ③ In the ScriptCat extension details page, find the `Allow user scripts` option and enable it. Then disable and re-enable the extension, or restart the browser to make the script functionality effective.
 
