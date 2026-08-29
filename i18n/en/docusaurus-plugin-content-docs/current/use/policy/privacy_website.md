@@ -1,37 +1,56 @@
 ---
-title: Script Website Privacy Policy
+title: Documentation Site Privacy Policy
+sidebar_label: Docs Site Privacy Policy
 ---
 
-Welcome to our product. ScriptCat (including services provided by the App and website products, hereinafter referred to as "products and services") is developed and operated by scriptcat.org (hereinafter referred to as "we"). Ensuring user data security and privacy protection is our top priority. This privacy policy sets out the data collected when you visit and use our products and services and how it is processed.
+This documentation site (docs.scriptcat.org, "the site") is developed and operated by the ScriptCat team. This policy applies only to the site; our other products have their own policies:
 
-Please be sure to read carefully and confirm that you fully understand all the rules and key points of this Privacy Policy before continuing to use our products. Once you choose to use it, you are deemed to agree to the entire content of this Privacy Policy and agree to our collection and use of you in accordance with it. related information. If you have any questions about this policy while reading, you can contact our customer service for consultation. Please contact us through yz@ggnb.top or the feedback method in the product. If you do not agree to the relevant agreement or any of its terms, you should stop using our products and services.
+- Browser extension: [ScriptCat Privacy Policy](./privacy.md)
+- Script site: see the privacy policy published on [scriptcat.org](https://scriptcat.org/)
 
-This privacy policy helps you understand the following:
+Last updated: 2026-08-25
 
-1. How we collect and use your personal information;
-2. How we store and protect your personal information;
-3. How we share, transfer and publicly disclose your personal information;
+## 1. What we do not collect
 
-### 1. How we collect and use your personal information
+Browsing this site requires no registration or sign-in. We do not ask you for your name, email address, phone number or any other identifying information, and we do not create an account for you. Apart from the third-party services listed below and the content you submit yourself, we do not collect information that directly identifies you.
 
-Personal information refers to various types of information recorded electronically or in other ways that can identify the identity of a specific natural person or reflect the activities of a specific natural person alone or in combination with other information. Since our products and services do not require such information, we are pleased to inform you that we will not collect any personal information about you.
+## 2. Third-party services we use
 
-### 2. How do we store and protect your personal information
+| Service | Purpose | Data involved |
+| --- | --- | --- |
+| Google Analytics | Traffic and page-view statistics | Cookies; IP anonymization enabled; page URL, referrer, and general browser/device information |
+| Google AdSense | Displaying ads on some pages | Cookies or similar device identifiers, used for ad serving, frequency capping and performance measurement |
+| Algolia DocSearch | Site search | The terms you type are sent to Algolia to return results |
+| ScriptCat servers | Fetching public statistics such as the GitHub star count | The information any network request carries, such as your IP address and browser type |
 
-As a general rule, we only retain your personal information for as long as necessary to fulfill the purposes for which it was collected. We will retain your personal information for as long as strictly necessary to manage our relationship with you (for example, when you open an account and obtain services from our products). We may need to retain your archived personal information beyond the expiration of the above periods for the purpose of complying with legal obligations or to demonstrate that a right or contract satisfies applicable statutes of limitations requirements and will not be able to delete it at your request. When your personal data is no longer necessary for the purposes or archival purposes for which we are subject to legal obligations or statutory limitations, we ensure that they are completely deleted or anonymized.
-We use industry-standard security measures to protect the personal information you provide and encrypt key data to prevent unauthorized access, public disclosure, use, modification, damage or loss. We will take all reasonable and feasible measures to protect your personal information. We will use encryption technology to ensure the confidentiality of data; we will use trusted protection mechanisms to prevent data from malicious attacks.
+These services are operated independently by their respective providers, and their data processing is governed by their own privacy policies.
 
-### 3. How do we share, transfer and publicly disclose your personal information
+## 3. Local storage in your browser
 
-When needed to manage our daily business activities and to pursue our legitimate interests to better serve our customers, we will use your personal information in a compliant and appropriate manner. For comprehensive consideration of business and various aspects, we only use these data for ourselves and do not share them with any third parties.
-We may share your personal information externally in accordance with laws and regulations, or in accordance with the mandatory requirements of government authorities. Subject to complying with laws and regulations, when we receive the above request to disclose information, we will require the issuance of corresponding legal documents, such as a subpoena or a letter of investigation. We firmly believe that we should be as transparent as the law allows about the information we are asked to provide.
-In the following situations, sharing, transferring, and publicly disclosing your personal information does not require your prior authorization and consent:
+To remember your preferences (such as your light/dark theme choice, and which language version you have already been redirected to) and to cache a little public data so we do not request it repeatedly, this site stores some information locally in your browser. It stays on your device, is never uploaded to our servers, and is removed when you clear your browser data.
 
-1. Directly related to national security and national defense security;
-2. Directly related to criminal investigation, prosecution, trial and execution of judgments;
-3. For the protection of your or other personal life, property and other major legitimate rights and interests, but it is difficult to obtain the consent of the person;
-4. Personal information that you disclose to the public by yourself;
-5. Collecting personal information from legally disclosed information, such as legal news reports, government information disclosure and other channels.
-6. Necessary to sign and perform the contract according to the requirements of the personal information subject;
-7. Necessary to maintain the safe and stable operation of the products or services provided, such as discovering and handling product or service failures;
-8. Other situations stipulated by laws and regulations.
+## 4. Cookies and advertising
+
+The site and its third-party services use cookies and similar technologies: Google Analytics uses them to distinguish visitors and measure traffic; and when the site displays ads, third-party vendors including Google use cookies to serve ads based on your prior visits to this site or other sites.
+
+You can:
+
+- turn off personalized advertising via [Google Ad Settings](https://www.google.com/settings/ads);
+- manage third-party advertising cookies via [aboutads.info](https://www.aboutads.info/choices/);
+- block third-party cookies in your browser settings.
+
+## 5. Content you submit yourself
+
+The uninstall feedback page submits the uninstall reason you select and the feedback you write to our servers, so that we can improve the product. The form does not require any identifying information — please do not enter sensitive personal information into it.
+
+## 6. Data retention and security
+
+Analytics and feedback data are retained only for as long as necessary to fulfil the purposes above. This site is served over HTTPS, and the documentation site itself stores no accounts, passwords or other sensitive data.
+
+## 7. Your rights
+
+You can clear your browser's local storage and cookies at any time, or opt out of personalized advertising as described in section 4. If you want to know what information we hold about you, ask us to delete feedback you have submitted, or object to how we process it, contact us at the address in the next section. Because the site creates no accounts, we usually cannot link a given record to a specific person, so please include something we can search on (for example the approximate time you submitted the feedback).
+
+## 8. Policy updates and contact
+
+Any update to this policy will be published directly on this page. If you have questions about it, contact us at [yz@ggnb.top](mailto:yz@ggnb.top).

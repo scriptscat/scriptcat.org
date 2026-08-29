@@ -1,0 +1,46 @@
+.rail {
+  position: sticky;
+  top: calc(var(--ifm-navbar-height) + 1rem);
+  max-height: calc(100vh - var(--ifm-navbar-height) - 2rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tocScroll {
+  display: flex;
+  flex: 1 1 auto;
+  /* flex 子项默认 min-height:auto，不归零的话目录撑高外层，广告会被挤出视口 */
+  min-height: 0;
+}
+
+/* 吸顶与限高交给外层 .rail，目录只负责内部滚动。
+   .theme-doc-toc-desktop 是主题的稳定公开类名，比选择子元素安全。 */
+.tocScroll :global(.theme-doc-toc-desktop) {
+  position: static;
+  top: auto;
+  max-height: none;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.railAd {
+  flex: 0 0 auto;
+  /* 与目录之间给一条分隔线，让"目录被裁切"读起来是刻意的分区而不是坏掉 */
+  border-top: 1px solid var(--ifm-toc-border-color);
+  padding-top: 0.75rem;
+}
+
+/* 矮屏（笔记本 + 浏览器工具栏）优先保证目录可用 */
+@media (max-height: 720px) {
+  .railAd {
+    display: none;
+  }
+}
+
+/* <=996px 右栏整个不渲染，这里跟随隐藏，避免 SSR 首帧闪一个空广告位 */
+@media (max-width: 996px) {
+  .rail {
+    display: none;
+  }
+}

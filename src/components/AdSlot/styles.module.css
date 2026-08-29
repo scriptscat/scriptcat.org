@@ -1,0 +1,55 @@
+.adSlot {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.label {
+  font-size: 0.625rem;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ifm-color-emphasis-500);
+}
+
+/* 预留高度避免 CLS；虚线框只属于占位状态，投放真实广告时由 .live 去掉 */
+.body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  background: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-emphasis-500);
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.rail .body {
+  /* 只预留高度，不锁死：真实单元比 250px 高时不能被裁切（AdSense 不允许遮挡广告），
+     多出来的高度由 .tocScroll 收缩让位 */
+  min-height: 250px;
+}
+
+.inline .body {
+  /* 正文位不限高，让响应式单元自己决定；min-height 负责预留避免 CLS */
+  min-height: 90px;
+}
+
+/* 窄屏放不下横条，响应式单元会改投方块，高度按方块预留 */
+@media (max-width: 996px) {
+  .inline .body {
+    min-height: 250px;
+  }
+}
+
+.live {
+  /* 真实广告接管后去掉占位样式；<ins> 自己是 block + 100% 宽，不需要 flex 居中 */
+  display: block;
+  border: none;
+  background: none;
+}
+
+.placeholderText {
+  opacity: 0.8;
+}
