@@ -1132,5 +1132,9 @@
   "home.search.kw.video": {
     "message": "فيديو",
     "description": "Search keyword for video"
+  },
+  "ad.label": {
+    "message": "Advertisement",
+    "description": "Label shown above an advertisement slot"
   }
 }

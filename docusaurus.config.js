@@ -4,6 +4,7 @@
 import { themes as prismThemes } from "prism-react-renderer";
 
 const { defaultLocale, i18nDocFallbacks = {} } = require("./scripts/check-config.json");
+const locales = ["zh-Hans", "en", "ru", "ar", "bn", "de", "es", "fa", "fr", "hy", "id", "it", "ja", "ko", "nl", "pt", "tr", "uk", "vi", "zh-Hant"];
 const currentLocale = process.env.DOCUSAURUS_CURRENT_LOCALE ?? defaultLocale;
 const docsFallbackLocale = i18nDocFallbacks[currentLocale]?.sourceLocale;
 const docsPath = docsFallbackLocale
@@ -12,26 +13,17 @@ const docsPath = docsFallbackLocale
     : `i18n/${docsFallbackLocale}/docusaurus-plugin-content-docs/current`
   : "docs";
 
-const metadataByLocale = {
-  "zh-Hans": {
-    keywords:
-      "scriptcat,userscript,browser extension,浏览器扩展,用户脚本,后台脚本,脚本猫,tampermonkey,violentmonkey,greasemonkey,javascript,自动化脚本,网页增强",
-    description:
-      "ScriptCat 是一个可以执行自定义脚本的浏览器扩展，支持用户脚本、后台脚本等多种脚本类型。提供强大的脚本管理、同步、订阅等功能。",
-  },
-  en: {
-    keywords:
-      "scriptcat,userscript,browser extension,user scripts,background scripts,scheduled scripts,userscript manager,tampermonkey,violentmonkey,greasemonkey,javascript,browser automation",
-    description:
-      "ScriptCat is an open-source browser extension for user scripts, background scripts, and scheduled scripts, with powerful management, sync, and subscription features.",
-  },
-  ru: {
-    keywords:
-      "scriptcat,userscript,расширение браузера,пользовательские скрипты,фоновые скрипты,скрипты по расписанию,менеджер пользовательских скриптов,tampermonkey,violentmonkey,greasemonkey,javascript,автоматизация браузера",
-    description:
-      "ScriptCat — открытое расширение браузера для пользовательских, фоновых скриптов и скриптов по расписанию с удобным управлением, синхронизацией и подписками.",
-  },
-};
+const metadataByLocale = Object.fromEntries(
+  locales.map((locale) => {
+    const translations = require(`./i18n/${locale}/code.json`);
+    const keywords = translations["homepage.meta.keywords"]?.message;
+    const description = translations["homepage.meta.description"]?.message;
+    if (!keywords || !description) {
+      throw new Error(`Missing homepage SEO metadata translations for locale ${locale}`);
+    }
+    return [locale, { keywords, description }];
+  })
+);
 const metadata = metadataByLocale[currentLocale] ?? metadataByLocale[defaultLocale];
 
 /** @type {import('@docusaurus/types').Config} */
@@ -79,7 +71,7 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale,
-    locales: ["zh-Hans", "en", "ru", "ar", "bn", "de", "es", "fa", "fr", "hy", "id", "it", "ja", "ko", "nl", "pt", "tr", "uk", "vi", "zh-Hant"],
+    locales,
     localeConfigs: {
       "zh-Hans": {
         label: "简体中文",

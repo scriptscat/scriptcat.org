@@ -12,13 +12,13 @@
  *
  * What it does:
  *   1. Creates i18n/<locale>/ directory structure mirroring docs/
- *   2. Copies all .md files from docs/ as untranslated placeholders
- *   3. Copies .assets directories (images) from docs/
- *   4. Creates code.json from en/ (EN translations as placeholder)
- *   5. Creates current.json with sidebar labels
- *   6. Creates docusaurus-theme-classic/ from en/
- *   7. Registers the locale in docusaurus.config.js
- *   8. Updates scripts/check-config.json if needed
+ *   2. Copies translatable English .md files as untranslated placeholders
+ *   3. Rewrites shared image references to the canonical English assets
+ *   4. Configures change/ to fall back to the English source
+ *   5. Creates code.json from en/ (EN translations as placeholder)
+ *   6. Creates current.json with sidebar labels
+ *   7. Creates docusaurus-theme-classic/ from en/
+ *   8. Registers the locale in docusaurus.config.js
  *
  * After running this script, you MUST:
  *   - Translate all .md files (use agents/i18n-terminology.md for glossary)
@@ -29,16 +29,17 @@
  */
 
 import { readFileSync, writeFileSync, mkdirSync, cpSync, existsSync, readdirSync, statSync } from "node:fs";
-import { join, relative, sep, dirname } from "node:path";
+import { join, relative, sep, dirname, posix } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
-const DOCS_DIR = join(ROOT, "docs");
 const I18N_DIR = join(ROOT, "i18n");
 const EN_DIR = join(I18N_DIR, "en");
 const DOCS_PLUGIN = "docusaurus-plugin-content-docs";
 const THEME_PLUGIN = "docusaurus-theme-classic";
+const EN_DOCS_DIR = join(EN_DIR, DOCS_PLUGIN, "current");
+const EN_ASSET_PREFIX = `@site/i18n/en/${DOCS_PLUGIN}/current`;
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
 
@@ -56,22 +57,34 @@ function walkDocs(dir, base = dir) {
   return results.sort();
 }
 
-function walkAssets(dir, base = dir) {
-  const results = [];
-  for (const entry of readdirSync(dir)) {
-    const full = join(dir, entry);
-    const stat = statSync(full);
-    if (stat.isDirectory()) {
-      results.push(...walkAssets(full, base));
-    } else if (!/\.mdx?$/.test(entry)) {
-      results.push(relative(base, full).split(sep).join("/"));
-    }
-  }
-  return results.sort();
-}
-
 function ensureDir(dir) {
   mkdirSync(dir, { recursive: true });
+}
+
+function rewriteSharedAssetReferences(content, docPath) {
+  const docDir = posix.dirname(docPath);
+  const canonical = (assetPath) => {
+    const decoded = decodeURIComponent(assetPath.replace(/^\.\//, ""));
+    return `${EN_ASSET_PREFIX}/${posix.normalize(posix.join(docDir, decoded))}`;
+  };
+  return content
+    .replace(/\]\(\/en\/docs\//g, "](/docs/")
+    .replace(/(["'])\/en\/docs\//g, "$1/docs/")
+    .replace(/(!\[[^\]]*\]\()((?!@site\/)(?:\.\/)?[^)\s]+\.assets\/[^)]+)(\))/g, (_, open, asset, close) =>
+      `${open}${canonical(asset)}${close}`
+    )
+    .replace(/(src=["'])((?!@site\/)(?:\.\/)?[^"']+\.assets\/[^"']+)(["'])/g, (_, open, asset, close) =>
+      `${open}${canonical(asset)}${close}`
+    );
+}
+
+function findMatchingBrace(source, openIndex) {
+  let depth = 0;
+  for (let index = openIndex; index < source.length; index++) {
+    if (source[index] === "{") depth++;
+    if (source[index] === "}" && --depth === 0) return index;
+  }
+  throw new Error("Could not find matching closing brace in docusaurus.config.js");
 }
 
 // ── Main ─────────────────────────────────────────────────────────────────────
@@ -111,50 +124,30 @@ function main() {
   ensureDir(docsPluginDir);
   ensureDir(themeDir);
 
-  // ── Step 2: Copy .md files from docs/ as placeholders ─────────────────────
+  // ── Step 2: Copy translatable docs as placeholders ────────────────────────
 
-  const sourceDocs = walkDocs(DOCS_DIR);
+  const sourceDocs = walkDocs(EN_DOCS_DIR).filter((docPath) => !docPath.startsWith("change/"));
   let mdCount = 0;
 
   for (const docPath of sourceDocs) {
-    const src = join(DOCS_DIR, docPath);
+    const src = join(EN_DOCS_DIR, docPath);
     const dst = join(docsPluginDir, docPath);
     ensureDir(dirname(dst));
-    cpSync(src, dst);
+    const placeholder = rewriteSharedAssetReferences(readFileSync(src, "utf8"), docPath);
+    writeFileSync(dst, placeholder);
     mdCount++;
   }
 
-  console.log(`  ✅ Copied ${mdCount} .md files from docs/`);
+  console.log(`  ✅ Copied ${mdCount} translatable .md files from the English source`);
 
-  // ── Step 3: Copy .assets directories ──────────────────────────────────────
+  // ── Step 3: Configure the changelog fallback ──────────────────────────────
 
-  let assetCount = 0;
-  const assetDirs = [];
-
-  // Walk docs/ to find .assets directories
-  function findAssetDirs(dir) {
-    for (const entry of readdirSync(dir)) {
-      const full = join(dir, entry);
-      const stat = statSync(full);
-      if (stat.isDirectory()) {
-        if (entry.endsWith(".assets")) {
-          assetDirs.push(full);
-        }
-        findAssetDirs(full);
-      }
-    }
-  }
-  findAssetDirs(DOCS_DIR);
-
-  for (const assetDir of assetDirs) {
-    const relPath = relative(DOCS_DIR, assetDir);
-    const dstDir = join(docsPluginDir, relPath);
-    cpSync(assetDir, dstDir, { recursive: true });
-    const count = walkAssets(assetDir).length;
-    assetCount += count;
-  }
-
-  console.log(`  ✅ Copied ${assetDirs.length} asset directories (${assetCount} files)`);
+  const checkConfigPath = join(ROOT, "scripts", "check-config.json");
+  const checkConfig = JSON.parse(readFileSync(checkConfigPath, "utf8"));
+  checkConfig.i18nDocFallbacks ??= {};
+  checkConfig.i18nDocFallbacks[locale] = { sourceLocale: "en", paths: ["change/"] };
+  writeFileSync(checkConfigPath, JSON.stringify(checkConfig, null, 2) + "\n");
+  console.log("  ✅ Configured change/ to fall back to en (shared assets are not copied)");
 
   // ── Step 4: Create code.json from en/ ─────────────────────────────────────
 
@@ -208,36 +201,33 @@ function main() {
   const configPath = join(ROOT, "docusaurus.config.js");
   let config = readFileSync(configPath, "utf8");
 
-  // Add to i18n.locales array
-  const localesMatch = config.match(/locales:\s*\[([^\]]+)\]/);
+  // Add to the shared locales array used by i18n and SEO metadata.
+  const localesMatch = config.match(/const locales = \[([^\]]+)\];/);
   if (localesMatch) {
     const localesStr = localesMatch[1];
     if (!localesStr.includes(`"${locale}"`)) {
       const newLocales = localesStr.trim().replace(/,\s*$/, "") + `, "${locale}"`;
       config = config.replace(
-        /locales:\s*\[[^\]]+\]/,
-        `locales: [${newLocales}]`
+        /const locales = \[[^\]]+\];/,
+        `const locales = [${newLocales}];`
       );
     }
+  } else {
+    throw new Error("Could not find the shared locales array in docusaurus.config.js");
   }
 
   // Add to localeConfigs
   const localeConfigBlock = `      "${locale}": {\n        label: "${label}",\n        direction: "${direction}",\n        htmlLang: "${htmlLang}",\n      },`;
 
-  // Find the last entry in localeConfigs and add after it
-  const lastLocaleMatch = config.match(
-    /("[a-z]{2}(?:-[A-Za-z]{2,4})?":\s*\{[^}]*\},?\s*\n\s*\})/
-  );
-  if (lastLocaleMatch) {
-    const insertPoint = config.indexOf(lastLocaleMatch[0]) + lastLocaleMatch[0].length;
-    // Find the closing of localeConfigs object
-    const closingBrace = config.indexOf("}", config.indexOf("localeConfigs"));
-    // Insert before the closing brace of localeConfigs
-    const beforeClose = config.lastIndexOf("}", closingBrace);
-    const newConfig =
-      config.slice(0, beforeClose) + "\n" + localeConfigBlock + "\n    " + config.slice(beforeClose);
-    writeFileSync(configPath, newConfig);
+  const localeConfigsStart = config.indexOf("localeConfigs:");
+  const localeConfigsOpen = config.indexOf("{", localeConfigsStart);
+  if (localeConfigsStart < 0 || localeConfigsOpen < 0) {
+    throw new Error("Could not find localeConfigs in docusaurus.config.js");
   }
+  const localeConfigsClose = findMatchingBrace(config, localeConfigsOpen);
+  config =
+    config.slice(0, localeConfigsClose) + localeConfigBlock + "\n    " + config.slice(localeConfigsClose);
+  writeFileSync(configPath, config);
 
   console.log(`  ✅ Registered "${locale}" in docusaurus.config.js`);
 
@@ -246,11 +236,12 @@ function main() {
   console.log(`\n🎉 Locale "${locale}" scaffolded successfully!\n`);
   console.log(`Next steps:`);
   console.log(`  1. Translate all ${mdCount} .md files in i18n/${locale}/${DOCS_PLUGIN}/current/`);
-  console.log(`  2. Translate i18n/${locale}/code.json (325 keys — keep key order identical to en/)`);
+  console.log(`  2. Translate i18n/${locale}/code.json (${Object.keys(enCodeJson).length} keys — keep the English key set)`);
   console.log(`  3. Translate i18n/${locale}/${THEME_PLUGIN}/navbar.json and footer.json`);
   console.log(`  4. Translate i18n/${locale}/${DOCS_PLUGIN}/current.json (4 sidebar label keys)`);
-  console.log(`  5. Add SEO metadata to docusaurus.config.js metadataByLocale.${locale}`);
-  console.log(`  6. Run: pnpm run build && pnpm run check`);
+  console.log(`  5. Translate homepage.meta.keywords and homepage.meta.description in code.json`);
+  console.log(`  6. Add ${locale} to deploy/docker/nginx.conf and the Algolia crawler`);
+  console.log(`  7. Run: pnpm run typecheck && pnpm run build && pnpm run check`);
   console.log(`\nGlossary: agents/i18n-terminology.md`);
   console.log(`Conventions: agents/i18n.md\n`);
 }
