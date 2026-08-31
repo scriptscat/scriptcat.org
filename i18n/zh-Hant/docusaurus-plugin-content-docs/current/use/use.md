@@ -17,7 +17,7 @@ ScriptCat 是一個可以執行使用者腳本的瀏覽器擴充功能，與 Tam
 
 如果您的瀏覽器不在上方清單中，可從 [Github Release](https://github.com/scriptscat/scriptcat/releases) 頁面下載 `zip`/`crx` 檔案並手動安裝。
 
-### 未打包擴充功能安裝 {#load-unpacked-extension-installation}
+### 未打包擴充功能安裝 {#加载解压缩方式安装扩展}
 
 ① 從 [Github Release](https://github.com/scriptscat/scriptcat/releases) 或[社群下載](https://bbs.tampermonkey.net.cn/thread-3068-1-1.html)頁面下載 `zip` 檔案
 

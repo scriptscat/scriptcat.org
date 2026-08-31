@@ -144,7 +144,7 @@ ScriptCat 的 cron 實作基於 [**node-cron**](https://github.com/kelektiv/node
 
 在腳本列表頁面，將游標懸停在**執行狀態欄**可查看腳本的**下次排程執行時間**。
 
-## 日誌
+## 日誌 {#日志}
 
 在腳本列表頁面，將游標懸停在 `執行狀態欄` 會顯示腳本執行狀態的工具提示；
 點擊會彈出透過 `GM_log` 印出的日誌內容。
@@ -153,7 +153,7 @@ ScriptCat 的 cron 實作基於 [**node-cron**](https://github.com/kelektiv/node
 
 ![](@site/docs/dev/background.assets/image-20210621214124685.png)
 
-## 腳本除錯
+## 腳本除錯 {#脚本调试}
 
 背景腳本可以直接從腳本編輯器頁面除錯，但有以下限制：
 

@@ -1,16 +1,16 @@
 # i18n Terminology Glossary / 多语言术语对照表
 
-EN summary: This document provides terminology and content-ownership rules for all 20 supported locales. Changelogs have Chinese and English sources only; every other locale renders the English source and reuses its images.
+EN summary: This document provides terminology and content-ownership rules for all 20 supported locales. Changelogs have Chinese and English sources only; Traditional Chinese renders the Chinese source, while other translated locales render the English source and reuse its images.
 
 本文档为所有 20 个支持的语言区域提供统一的术语参考。翻译者和 AI 工具应使用这些术语作为规范翻译，以确保整个文档站点的一致性。
 
 ## Changelog and image ownership
 
-- Changelogs under `change/`, including `change/index.md` and `change/beta-changelog.md`, are maintained only in Chinese (`docs/change/`) and English (`i18n/en/.../change/`). Every other locale declares `change/` as an English fallback in `scripts/check-config.json`; do not add translated changelog copies.
+- Changelogs under `change/`, including `change/index.md` and `change/beta-changelog.md`, are maintained only in Chinese (`docs/change/`) and English (`i18n/en/.../change/`). Traditional Chinese (`zh-Hant`) falls back to the Chinese source; every other translated locale falls back to English. Declare the source in `scripts/check-config.json` and do not add translated changelog copies.
 - A non-English document that displays the same screenshot as the English document must reference the English asset with `@site/i18n/en/docusaurus-plugin-content-docs/current/<path>` instead of copying the binary into its locale tree.
 - Keep a locale-specific image only when its visible content is genuinely localized. Do not treat a renamed, recompressed, or relocated English screenshot as a translation.
 
-更新日志（包括 `change/index.md` 和 `change/beta-changelog.md`）只维护中文与英文版本，其他语言通过 `scripts/check-config.json` 回退到英文。与英文版内容相同的图片必须直接引用英文资源；只有画面内容确实完成本地化时，才保留该语言自己的图片文件。
+更新日志（包括 `change/index.md` 和 `change/beta-changelog.md`）只维护中文与英文版本；繁体中文通过 `scripts/check-config.json` 复用中文源，其他翻译语言回退到英文。与英文版内容相同的图片必须直接引用英文资源；只有画面内容确实完成本地化时，才保留该语言自己的图片文件。
 
 ---
 

@@ -7,7 +7,9 @@ const { defaultLocale, i18nDocFallbacks = {} } = require("./scripts/check-config
 const currentLocale = process.env.DOCUSAURUS_CURRENT_LOCALE ?? defaultLocale;
 const docsFallbackLocale = i18nDocFallbacks[currentLocale]?.sourceLocale;
 const docsPath = docsFallbackLocale
-  ? `i18n/${docsFallbackLocale}/docusaurus-plugin-content-docs/current`
+  ? docsFallbackLocale === defaultLocale
+    ? "docs"
+    : `i18n/${docsFallbackLocale}/docusaurus-plugin-content-docs/current`
   : "docs";
 
 const metadataByLocale = {

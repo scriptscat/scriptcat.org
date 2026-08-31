@@ -23,6 +23,6 @@
     "tr": { "sourceLocale": "en", "paths": ["change/"] },
     "uk": { "sourceLocale": "en", "paths": ["change/"] },
     "vi": { "sourceLocale": "en", "paths": ["change/"] },
-    "zh-Hant": { "sourceLocale": "en", "paths": ["change/"] }
+    "zh-Hant": { "sourceLocale": "zh-Hans", "paths": ["change/"] }
   }
 }

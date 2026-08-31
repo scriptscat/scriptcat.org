@@ -75,7 +75,9 @@ function main() {
     const fallback = fallbacks[locale];
     const fallbackPaths = fallback?.paths ?? [];
     const fallbackDir = fallback?.sourceLocale
-      ? join(I18N_DIR, fallback.sourceLocale, DOCS_PLUGIN_PATH)
+      ? fallback.sourceLocale === defaultLocale
+        ? DEFAULT_DIR
+        : join(I18N_DIR, fallback.sourceLocale, DOCS_PLUGIN_PATH)
       : undefined;
     const fallbackSet =
       fallbackDir && existsSync(fallbackDir) ? new Set(listDocs(fallbackDir)) : new Set();
