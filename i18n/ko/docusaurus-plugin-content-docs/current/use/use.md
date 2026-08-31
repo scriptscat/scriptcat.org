@@ -23,17 +23,17 @@ ScriptCat은 사용자 스크립트를 실행할 수 있는 브라우저 확장 
 
 ① 먼저 [Github 릴리스](https://github.com/scriptscat/scriptcat/releases) 또는 [커뮤니티 다운로드](https://bbs.tampermonkey.net.cn/thread-3068-1-1.html) 페이지에서 `zip` 파일을 다운로드합니다. `crx` 파일이면 확장자를 `zip`으로 변경합니다.
 
-② 플러그인을 저장할 폴더를 준비하고 위 zip 파일을 해당 폴더에 압축 해제합니다. 압축 해제 후 다음과 같은 모양이어야 합니다 (**참고: 이 폴더는 삭제하거나 이동할 수 없습니다. 그렇지 않으면 확장 프로그램이 제대로 작동하지 않습니다**) ![download-zip](./use.assets/download-zip.webp)
+② 플러그인을 저장할 폴더를 준비하고 위 zip 파일을 해당 폴더에 압축 해제합니다. 압축 해제 후 다음과 같은 모양이어야 합니다 (**참고: 이 폴더는 삭제하거나 이동할 수 없습니다. 그렇지 않으면 확장 프로그램이 제대로 작동하지 않습니다**) ![download-zip](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/download-zip.webp)
 
 ③ 브라우저의 확장 프로그램 관리 인터페이스를 열어 압축 해제된 확장 프로그램을 로드합니다 (먼저 [manifest v3 ScriptCat을 지원하도록 개발자 모드 활성화](/docs/use/open-dev/)를 참조하여 개발자 모드를 활성화하세요)
 
-- 1. **Edge** ![edge-load-unpacked](./use.assets/edge-load-unpacked.webp)
-- 2. **Chrome** ![chrome-load-unpacked](./use.assets/chrome-load-unpacked.webp)
+- 1. **Edge** ![edge-load-unpacked](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/edge-load-unpacked.webp)
+- 2. **Chrome** ![chrome-load-unpacked](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/chrome-load-unpacked.webp)
 
 ④ ②단계에서 만든 폴더를 선택합니다 (로드가 완료되면 확장 프로그램 관리 인터페이스의 확장 프로그램 목록에 ScriptCat 아이콘이 나타나며, 브라우저 주소 표시줄 오른쪽 상단의 확장 프로그램 버튼을 클릭해도 확인할 수 있습니다)
 
-- 1. **Edge** ![edge-load-unpacked-img](./use.assets/edge-load-unpacked-img.webp)
-- 2. **Chrome** ![chrome-load-unpacked-img](./use.assets/chrome-load-unpacked-img.webp)
+- 1. **Edge** ![edge-load-unpacked-img](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/edge-load-unpacked-img.webp)
+- 2. **Chrome** ![chrome-load-unpacked-img](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/chrome-load-unpacked-img.webp)
 
 ⑤ 오른쪽 상단의 ScriptCat 아이콘을 클릭하고 나타나는 인터페이스의 오른쪽 상단에서 `┆` > 스크립트 받기를 클릭하면 스크립트 사이트에서 스크립트를 검색하고 설치할 수 있습니다.
 

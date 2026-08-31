@@ -42,7 +42,7 @@ import GithubStar from '@site/src/components/GithubStar';
 
 ① Բացեք զննարկչի ընդլայնումների կառավարման ինտերֆեյսը, կամ այցելեք [edge://extensions/](edge://extensions/)
 
-![edge-open-settings](./open-dev.assets/edge-extensions-page.webp)
+![edge-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge-extensions-page.webp)
 
 ② Ընդլայնումների կառավարման ինտերֆեյսում գտեք ScriptCat ընդլայնումը և սեղմեք `Մանրամասներ`
 
@@ -59,15 +59,15 @@ import GithubStar from '@site/src/components/GithubStar';
 
 ① Բացեք զննարկչի ընդլայնումների կառավարման ինտերֆեյսը, կամ այցելեք [chrome://extensions/](chrome://extensions/)
 
-![chrome-open-settings](./open-dev.assets/chrome-extensions-page.webp)
+![chrome-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/chrome-extensions-page.webp)
 
 ② Ընդլայնումների կառավարման ինտերֆեյսում գտեք ScriptCat ընդլայնումը և սեղմեք `Մանրամասներ`
 
-![scriptcat-extension-details](open-dev.assets/scriptcat-extension-details.webp)
+![scriptcat-extension-details](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/scriptcat-extension-details.webp)
 
 ③ ScriptCat ընդլայնման մանրամասների էջում գտեք `Թույլ տալ օգտագործողի սկրիպտները` տարբերակը և միացրեք այն: Այնուհետև անջատեք և նորից միացրեք ընդլայնումը, կամ վերագործարկեք զննարկիչը՝ սկրիպտի ֆունկցիոնալությունը գործողության մեջ դնելու համար:
 
-![allow-user-scripts-toggle](open-dev.assets/allow-user-scripts-toggle.webp)
+![allow-user-scripts-toggle](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/allow-user-scripts-toggle.webp)
 </TabItem>
   <TabItem value="edge-mobile" label={<div className="flex items-center gap-1"><Icon height={16} width={16} icon="logos:microsoft-edge" />Edge Mobile</div>}>
 
@@ -81,7 +81,7 @@ Edge Mobile-ի համար՝ զննարկչի շարժիչի ≥ 138 տարբեր
 
 > ⚠️⚠️⚠️ Զննարկչի շարժիչի 138-ից ցածր տարբերակների, կամ այս տարբերակը չունեցող օգտագործողների համար, խնդրում ենք տեսեք [Միացնել մշակողի ռեժիմը](#enable-developer-mode)
 
-![edge-mobile-allow-user-scripts](./open-dev.assets/edge%20mobile%20138.png)
+![edge-mobile-allow-user-scripts](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge mobile 138.png)
 
   </TabItem>
 </Tabs>
@@ -93,11 +93,11 @@ Edge Mobile-ի համար՝ զննարկչի շարժիչի ≥ 138 տարբեր
 
 ① Բացեք զննարկչի ընդլայնումների կառավարման ինտերֆեյսը, կամ այցելեք [edge://extensions/](edge://extensions/)
 
-![edge-open-settings](./open-dev.assets/edge-extensions-page.webp)
+![edge-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge-extensions-page.webp)
 
 ② Միացրեք `Մշակողի ռեժիմը` (որոշ զննարկիչներում այս ռեժիմը կարող է գտնվել այլ տարբերակներում, օրինակ՝ 360 զննարկիչ. Ընդլայնված կառավարում > Մշակողի ռեժիմ)
 
-![edge-open-dev](./open-dev.assets/edge-developer-mode-toggle.webp)
+![edge-open-dev](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge-developer-mode-toggle.webp)
 
 ③ Մշակողի ռեժիմը միացնելուց հետո անջատեք և նորից միացրեք ընդլայնումը, կամ վերագործարկեք զննարկիչը՝ սկրիպտի ֆունկցիոնալությունը գործողության մեջ դնելու համար:
 
@@ -106,11 +106,11 @@ Edge Mobile-ի համար՝ զննարկչի շարժիչի ≥ 138 տարբեր
 
 ① Բացեք զննարկչի ընդլայնումների կառավարման ինտերֆեյսը, կամ այցելեք [chrome://extensions/](chrome://extensions/)
 
-![chrome-open-settings](./open-dev.assets/chrome-extensions-page.webp)
+![chrome-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/chrome-extensions-page.webp)
 
 ② Միացրեք `Մշակողի ռեժիմը` (որոշ զննարկիչներում այս ռեժիմը կարող է գտնվել այլ տարբերակներում, օրինակ՝ 360 զննարկիչ. Ընդլայնված կառավարում > Մշակողի ռեժիմ)
 
-![chrome-open-dev](./open-dev.assets/chrome-developer-mode-toggle.webp)
+![chrome-open-dev](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/chrome-developer-mode-toggle.webp)
 
 ③ Մշակողի ռեժիմը միացնելուց հետո անջատեք և նորից միացրեք ընդլայնումը, կամ վերագործարկեք զննարկիչը՝ սկրիպտի ֆունկցիոնալությունը գործողության մեջ դնելու համար:
 
@@ -120,7 +120,7 @@ Edge Mobile-ի համար՝ զննարկչի շարժիչի ≥ 138 տարբեր
 
 Edge Mobile-ի համար՝ զննարկչի շարժիչի 138-ից ցածր տարբերակներով, կամ առանց `Թույլ տալ օգտագործողի սկրիպտները` տարբերակի, հպեք ընդլայնումների էջի վերևի կարգավորումների կոճակին՝ Մշակողի ռեժիմը միացնելու համար:
 
-![edge-mobile-open-dev](./open-dev.assets/edge%20mobile.png)
+![edge-mobile-open-dev](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge mobile.png)
 </TabItem>
 
 </Tabs>

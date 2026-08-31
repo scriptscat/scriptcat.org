@@ -42,7 +42,7 @@ import GithubStar from '@site/src/components/GithubStar';
 
 ① رابط مدیریت افزونه مرورگر را باز کنید، یا به [edge://extensions/](edge://extensions/) بروید
 
-![edge-open-settings](./open-dev.assets/edge-extensions-page.webp)
+![edge-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge-extensions-page.webp)
 
 ② در رابط مدیریت افزونه، افزونه ScriptCat را پیدا کنید و روی `Details` کلیک کنید
 
@@ -59,15 +59,15 @@ import GithubStar from '@site/src/components/GithubStar';
 
 ① رابط مدیریت افزونه مرورگر را باز کنید، یا به [chrome://extensions/](chrome://extensions/) بروید
 
-![chrome-open-settings](./open-dev.assets/chrome-extensions-page.webp)
+![chrome-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/chrome-extensions-page.webp)
 
 ② در رابط مدیریت افزونه، افزونه ScriptCat را پیدا کنید و روی `Details` کلیک کنید
 
-![scriptcat-extension-details](open-dev.assets/scriptcat-extension-details.webp)
+![scriptcat-extension-details](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/scriptcat-extension-details.webp)
 
 ③ در صفحه جزئیات افزونه ScriptCat، گزینه `Allow user scripts` را پیدا کنید و آن را فعال کنید. سپس افزونه را غیرفعال و دوباره فعال کنید، یا مرورگر را مجدداً راه‌اندازی کنید تا عملکرد اسکریپت مؤثر شود.
 
-![allow-user-scripts-toggle](open-dev.assets/allow-user-scripts-toggle.webp)
+![allow-user-scripts-toggle](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/allow-user-scripts-toggle.webp)
 </TabItem>
   <TabItem value="edge-mobile" label={<div className="flex items-center gap-1"><Icon height={16} width={16} icon="logos:microsoft-edge" />Edge Mobile</div>}>
 
@@ -81,7 +81,7 @@ import GithubStar from '@site/src/components/GithubStar';
 
 > ⚠️⚠️⚠️ برای نسخه‌های موتور مرورگر پایین‌تر از 138، یا کاربرانی که این گزینه را ندارند، لطفاً به [فعال‌سازی حالت توسعه‌دهنده](#enable-developer-mode) مراجعه کنید
 
-![edge-mobile-allow-user-scripts](./open-dev.assets/edge%20mobile%20138.png)
+![edge-mobile-allow-user-scripts](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge mobile 138.png)
 
   </TabItem>
 </Tabs>
@@ -93,11 +93,11 @@ import GithubStar from '@site/src/components/GithubStar';
 
 ① رابط مدیریت افزونه مرورگر را باز کنید، یا به [edge://extensions/](edge://extensions/) بروید
 
-![edge-open-settings](./open-dev.assets/edge-extensions-page.webp)
+![edge-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge-extensions-page.webp)
 
 ② `حالت توسعه‌دهنده` را فعال کنید (در برخی مرورگرها، این حالت ممکن است در گزینه‌های دیگر قرار داشته باشد، مانند مرورگر 360: مدیریت پیشرفته > حالت توسعه‌دهنده)
 
-![edge-open-dev](./open-dev.assets/edge-developer-mode-toggle.webp)
+![edge-open-dev](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge-developer-mode-toggle.webp)
 
 ③ پس از فعال کردن حالت توسعه‌دهنده، افزونه را غیرفعال و سپس دوباره فعال کنید، یا مرورگر را مجدداً راه‌اندازی کنید تا عملکرد اسکریپت مؤثر شود.
 
@@ -106,11 +106,11 @@ import GithubStar from '@site/src/components/GithubStar';
 
 ① رابط مدیریت افزونه مرورگر را باز کنید، یا به [chrome://extensions/](chrome://extensions/) بروید
 
-![chrome-open-settings](./open-dev.assets/chrome-extensions-page.webp)
+![chrome-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/chrome-extensions-page.webp)
 
 ② `حالت توسعه‌دهنده` را فعال کنید (در برخی مرورگرها، این حالت ممکن است در گزینه‌های دیگر قرار داشته باشد، مانند مرورگر 360: مدیریت پیشرفته > حالت توسعه‌دهنده)
 
-![chrome-open-dev](./open-dev.assets/chrome-developer-mode-toggle.webp)
+![chrome-open-dev](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/chrome-developer-mode-toggle.webp)
 
 ③ پس از فعال کردن حالت توسعه‌دهنده، افزونه را غیرفعال و سپس دوباره فعال کنید، یا مرورگر را مجدداً راه‌اندازی کنید تا عملکرد اسکریپت مؤثر شود.
 
@@ -120,7 +120,7 @@ import GithubStar from '@site/src/components/GithubStar';
 
 برای Edge Mobile با نسخه‌های موتور مرورگر پایین‌تر از 138، یا بدون گزینه `Allow user scripts`، روی دکمه تنظیمات بالای صفحه افزونه‌ها ضربه بزنید تا حالت توسعه‌دهنده فعال شود.
 
-![edge-mobile-open-dev](./open-dev.assets/edge%20mobile.png)
+![edge-mobile-open-dev](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge mobile.png)
 </TabItem>
 
 </Tabs>

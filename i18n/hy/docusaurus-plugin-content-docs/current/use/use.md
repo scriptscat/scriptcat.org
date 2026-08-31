@@ -23,17 +23,17 @@ ScriptCat-ը զննարկչի ընդլայնում է, որը կարող է կա
 
 ① Նախ ներբեռնեք `zip` ֆայլը [Github Release](https://github.com/scriptscat/scriptcat/releases) կամ [Համայնքի ներբեռնման](https://bbs.tampermonkey.net.cn/thread-3068-1-1.html) էջից: Եթե դա `crx` ֆայլ է, փոխեք դրա ընդլայնումը `zip`-ի:
 
-② Պատրաստեք թղթապանակ՝ հավելվածը պահելու համար, և արխիվացրեք վերը նշված zip ֆայլը այդ թղթապանակում: Արխիվացումից հետո այն պետք է այսպիսի տեսք ունենա (**Նշում. այս թղթապանակը չի կարելի ջնջել կամ տեղափոխել, հակառակ դեպքում ընդլայնումը ճիշտ չի աշխատի**) ![download-zip](./use.assets/download-zip.webp)
+② Պատրաստեք թղթապանակ՝ հավելվածը պահելու համար, և արխիվացրեք վերը նշված zip ֆայլը այդ թղթապանակում: Արխիվացումից հետո այն պետք է այսպիսի տեսք ունենա (**Նշում. այս թղթապանակը չի կարելի ջնջել կամ տեղափոխել, հակառակ դեպքում ընդլայնումը ճիշտ չի աշխատի**) ![download-zip](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/download-zip.webp)
 
 ③ Բացեք զննարկչի ընդլայնումների կառավարման ինտերֆեյսը՝ անփաթեթ ընդլայնումը բեռնելու համար (տեսեք [Միացնել մշակողի ռեժիմը՝ manifest v3 ScriptCat-ին աջակցելու համար](/docs/use/open-dev/)՝ նախ մշակողի ռեժիմը միացնելու համար)
 
-- 1. **Edge** ![edge-load-unpacked](./use.assets/edge-load-unpacked.webp)
-- 2. **Chrome** ![chrome-load-unpacked](./use.assets/chrome-load-unpacked.webp)
+- 1. **Edge** ![edge-load-unpacked](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/edge-load-unpacked.webp)
+- 2. **Chrome** ![chrome-load-unpacked](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/chrome-load-unpacked.webp)
 
 ④ Ընտրեք ② քայլում ստեղծված թղթապանակը (բեռնման ավարտից հետո ScriptCat պատկերակը կհայտնվի ընդլայնումների ցուցակում՝ ընդլայնումների կառավարման ինտերֆեյսում, և դուք կարող եք այն տեսնել նաև՝ սեղմելով զննարկչի հասցեագոտու վերևի աջ անկյունի ընդլայնումների կոճակը)
 
-- 1. **Edge** ![edge-load-unpacked-img](./use.assets/edge-load-unpacked-img.webp)
-- 2. **Chrome** ![chrome-load-unpacked-img](./use.assets/chrome-load-unpacked-img.webp)
+- 1. **Edge** ![edge-load-unpacked-img](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/edge-load-unpacked-img.webp)
+- 2. **Chrome** ![chrome-load-unpacked-img](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/chrome-load-unpacked-img.webp)
 
 ⑤ Սեղմեք վերևի աջ անկյունի ScriptCat պատկերակը, սեղմեք հայտնվող ինտերֆեյսի վերևի աջ անկյունի `┆` > Ստանալ սկրիպտներ, և կարող եք գնալ սկրիպտ կայք՝ սկրիպտներ որոնելու և տեղադրելու համար:
 

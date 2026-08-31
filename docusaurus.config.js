@@ -38,11 +38,11 @@ const config = {
   tagline: "强大的用户脚本管理器，激活浏览器的无限可能",
   url: "https://docs.scriptcat.org",
   baseUrl: "/",
-  onBrokenLinks: "warn",
-  onBrokenAnchors: "warn",
+  onBrokenLinks: "throw",
+  onBrokenAnchors: "throw",
   markdown: {
     hooks: {
-      onBrokenMarkdownLinks: "warn",
+      onBrokenMarkdownLinks: "throw",
     },
   },
   favicon: "img/logo.png",

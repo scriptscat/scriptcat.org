@@ -42,7 +42,7 @@ import GithubStar from '@site/src/components/GithubStar';
 
 ① Open de extensiebeheerinterface van de browser of bezoek [edge://extensions/](edge://extensions/)
 
-![edge-open-settings](./open-dev.assets/edge-extensions-page.webp)
+![edge-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge-extensions-page.webp)
 
 ② Zoek in de extensiebeheerinterface de ScriptCat-extensie en klik op `Details`
 
@@ -59,15 +59,15 @@ import GithubStar from '@site/src/components/GithubStar';
 
 ① Open de extensiebeheerinterface van de browser of bezoek [chrome://extensions/](chrome://extensions/)
 
-![chrome-open-settings](./open-dev.assets/chrome-extensions-page.webp)
+![chrome-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/chrome-extensions-page.webp)
 
 ② Zoek in de extensiebeheerinterface de ScriptCat-extensie en klik op `Details`
 
-![scriptcat-extension-details](open-dev.assets/scriptcat-extension-details.webp)
+![scriptcat-extension-details](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/scriptcat-extension-details.webp)
 
 ③ Zoek op de detailpagina van de ScriptCat-extensie de optie `Gebruikersscripts toestaan` en schakel deze in. Schakel de extensie vervolgens uit en weer in, of herstart de browser om de scriptfunctionaliteit van kracht te laten worden.
 
-![allow-user-scripts-toggle](open-dev.assets/allow-user-scripts-toggle.webp)
+![allow-user-scripts-toggle](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/allow-user-scripts-toggle.webp)
 </TabItem>
   <TabItem value="edge-mobile" label={<div className="flex items-center gap-1"><Icon height={16} width={16} icon="logos:microsoft-edge" />Edge Mobile</div>}>
 
@@ -81,7 +81,7 @@ Voor Edge Mobile met browsermotorversie ≥ 138 is de ontwikkelaarsmodus niet ve
 
 > ⚠️⚠️⚠️ Voor browsermotorversies lager dan 138, of gebruikers zonder deze optie, zie [Ontwikkelaarsmodus inschakelen](#enable-developer-mode)
 
-![edge-mobile-allow-user-scripts](./open-dev.assets/edge%20mobile%20138.png)
+![edge-mobile-allow-user-scripts](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge mobile 138.png)
 
   </TabItem>
 </Tabs>
@@ -93,11 +93,11 @@ Voor Edge Mobile met browsermotorversie ≥ 138 is de ontwikkelaarsmodus niet ve
 
 ① Open de extensiebeheerinterface van de browser of bezoek [edge://extensions/](edge://extensions/)
 
-![edge-open-settings](./open-dev.assets/edge-extensions-page.webp)
+![edge-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge-extensions-page.webp)
 
 ② Schakel `Ontwikkelaarsmodus` in (in sommige browsers kan deze modus zich onder andere opties bevinden, zoals 360 Browser: Geavanceerd beheer > Ontwikkelaarsmodus)
 
-![edge-open-dev](./open-dev.assets/edge-developer-mode-toggle.webp)
+![edge-open-dev](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge-developer-mode-toggle.webp)
 
 ③ Na het inschakelen van de ontwikkelaarsmodus, schakel de extensie uit en weer in, of herstart de browser om de scriptfunctionaliteit van kracht te laten worden.
 
@@ -106,11 +106,11 @@ Voor Edge Mobile met browsermotorversie ≥ 138 is de ontwikkelaarsmodus niet ve
 
 ① Open de extensiebeheerinterface van de browser of bezoek [chrome://extensions/](chrome://extensions/)
 
-![chrome-open-settings](./open-dev.assets/chrome-extensions-page.webp)
+![chrome-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/chrome-extensions-page.webp)
 
 ② Schakel `Ontwikkelaarsmodus` in (in sommige browsers kan deze modus zich onder andere opties bevinden, zoals 360 Browser: Geavanceerd beheer > Ontwikkelaarsmodus)
 
-![chrome-open-dev](./open-dev.assets/chrome-developer-mode-toggle.webp)
+![chrome-open-dev](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/chrome-developer-mode-toggle.webp)
 
 ③ Na het inschakelen van de ontwikkelaarsmodus, schakel de extensie uit en weer in, of herstart de browser om de scriptfunctionaliteit van kracht te laten worden.
 
@@ -120,7 +120,7 @@ Voor Edge Mobile met browsermotorversie ≥ 138 is de ontwikkelaarsmodus niet ve
 
 Voor Edge Mobile met browsermotorversies lager dan 138, of zonder de optie `Gebruikersscripts toestaan`, tik je op de instellingenknop bovenaan de extensiepagina om de ontwikkelaarsmodus in te schakelen.
 
-![edge-mobile-open-dev](./open-dev.assets/edge%20mobile.png)
+![edge-mobile-open-dev](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge mobile.png)
 </TabItem>
 
 </Tabs>

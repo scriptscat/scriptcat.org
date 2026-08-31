@@ -21,17 +21,17 @@ ScriptCat 是一個可以執行使用者腳本的瀏覽器擴充功能，與 Tam
 
 ① 從 [Github Release](https://github.com/scriptscat/scriptcat/releases) 或[社群下載](https://bbs.tampermonkey.net.cn/thread-3068-1-1.html)頁面下載 `zip` 檔案
 
-② 準備一個資料夾，將上方的 zip 檔案解壓縮到該資料夾。解壓縮後應如下所示（**注意：此資料夾不能刪除或移動，否則擴充功能將無法正常運作**）![download-zip](./use.assets/download-zip.webp)
+② 準備一個資料夾，將上方的 zip 檔案解壓縮到該資料夾。解壓縮後應如下所示（**注意：此資料夾不能刪除或移動，否則擴充功能將無法正常運作**）![download-zip](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/download-zip.webp)
 
 ③ 開啟瀏覽器的擴充功能管理介面，載入未打包的擴充功能（請先參閱[啟用開發者模式](/docs/use/open-dev/)）
 
-- 1. **Edge** ![edge-load-unpacked](./use.assets/edge-load-unpacked.webp)
-- 2. **Chrome** ![chrome-load-unpacked](./use.assets/chrome-load-unpacked.webp)
+- 1. **Edge** ![edge-load-unpacked](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/edge-load-unpacked.webp)
+- 2. **Chrome** ![chrome-load-unpacked](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/chrome-load-unpacked.webp)
 
 ④ 選擇步驟 ② 建立的資料夾（載入完成後，ScriptCat 圖示會出現在擴充功能管理介面的擴充功能清單中）
 
-- 1. **Edge** ![edge-load-unpacked-img](./use.assets/edge-load-unpacked-img.webp)
-- 2. **Chrome** ![chrome-load-unpacked-img](./use.assets/chrome-load-unpacked-img.webp)
+- 1. **Edge** ![edge-load-unpacked-img](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/edge-load-unpacked-img.webp)
+- 2. **Chrome** ![chrome-load-unpacked-img](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/chrome-load-unpacked-img.webp)
 
 ⑤ 點擊右上角的 ScriptCat 圖示，點擊出現的介面右上角的 `┆` > 取得腳本，即可前往腳本網站搜尋和安裝腳本。
 

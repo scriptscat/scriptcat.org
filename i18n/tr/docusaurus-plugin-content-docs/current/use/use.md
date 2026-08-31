@@ -23,17 +23,17 @@ Tarayıcınız yukarıdaki listede yoksa, [Github Sürüm](https://github.com/sc
 
 ① Önce [Github Sürüm](https://github.com/scriptscat/scriptcat/releases) veya [Topluluk İndirme](https://bbs.tampermonkey.net.cn/thread-3068-1-1.html) sayfasından `zip` dosyasını indirin. `crx` dosyasıysa, uzantısını `zip` olarak değiştirin.
 
-② Eklentiyi saklamak için bir klasör hazırlayın ve yukarıdaki zip dosyasını bu klasöre çıkarın. Çıkardıktan sonra şu şekilde görünmelidir (**Not: Bu klasör silinemez veya taşınamaz, aksi takdirde uzantı düzgün çalışmaz**) ![download-zip](./use.assets/download-zip.webp)
+② Eklentiyi saklamak için bir klasör hazırlayın ve yukarıdaki zip dosyasını bu klasöre çıkarın. Çıkardıktan sonra şu şekilde görünmelidir (**Not: Bu klasör silinemez veya taşınamaz, aksi takdirde uzantı düzgün çalışmaz**) ![download-zip](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/download-zip.webp)
 
 ③ Yüklenmemiş uzantıyı yüklemek için tarayıcının uzantı yönetimi arayüzünü açın (önce geliştirici modunu etkinleştirmek için [manifest v3 ScriptCat'i desteklemek üzere geliştirici modunu etkinleştirme](/docs/use/open-dev/) bölümüne bakın)
 
-- 1. **Edge** ![edge-load-unpacked](./use.assets/edge-load-unpacked.webp)
-- 2. **Chrome** ![chrome-load-unpacked](./use.assets/chrome-load-unpacked.webp)
+- 1. **Edge** ![edge-load-unpacked](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/edge-load-unpacked.webp)
+- 2. **Chrome** ![chrome-load-unpacked](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/chrome-load-unpacked.webp)
 
 ④ ② adımında oluşturulan klasörü seçin (yükleme tamamlandıktan sonra, ScriptCat simgesi uzantı yönetimi arayüzündeki uzantı listesinde görünecektir; tarayıcının adres çubuğunun sağ üst köşesindeki uzantı düğmesine tıklayarak da görebilirsiniz)
 
-- 1. **Edge** ![edge-load-unpacked-img](./use.assets/edge-load-unpacked-img.webp)
-- 2. **Chrome** ![chrome-load-unpacked-img](./use.assets/chrome-load-unpacked-img.webp)
+- 1. **Edge** ![edge-load-unpacked-img](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/edge-load-unpacked-img.webp)
+- 2. **Chrome** ![chrome-load-unpacked-img](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/chrome-load-unpacked-img.webp)
 
 ⑤ Sağ üst köşedeki ScriptCat simgesine tıklayın, görünen arayüzün sağ üst köşesindeki `┆` > Komut Dosyalarını Al'a tıklayın; komut dosyalarını aramak ve kurmak için komut dosyası sitesine gidebilirsiniz.
 

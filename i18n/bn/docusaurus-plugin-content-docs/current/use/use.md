@@ -23,17 +23,17 @@ ScriptCat একটি ব্রাউজার এক্সটেনশন য�
 
 ① প্রথমে [Github Release](https://github.com/scriptscat/scriptcat/releases) বা [কমিউনিটি ডাউনলোড](https://bbs.tampermonkey.net.cn/thread-3068-1-1.html) পৃষ্ঠা থেকে `zip` ফাইলটি ডাউনলোড করুন। যদি এটি `crx` ফাইল হয়, এর এক্সটেনশনটি `zip`-এ পরিবর্তন করুন।
 
-② প্লাগইন সংরক্ষণের জন্য একটি ফোল্ডার প্রস্তুত করুন এবং উপরের zip ফাইলটি সেই ফোল্ডারে এক্সট্র্যাক্ট করুন। এক্সট্র্যাক্টের পরে এটি এভাবে দেখতে হবে (**লক্ষ্য করুন: এই ফোল্ডারটি মুছে ফেলা বা সরানো যাবে না, অন্যথায় এক্সটেনশনটি সঠিকভাবে কাজ করবে না**) ![download-zip](./use.assets/download-zip.webp)
+② প্লাগইন সংরক্ষণের জন্য একটি ফোল্ডার প্রস্তুত করুন এবং উপরের zip ফাইলটি সেই ফোল্ডারে এক্সট্র্যাক্ট করুন। এক্সট্র্যাক্টের পরে এটি এভাবে দেখতে হবে (**লক্ষ্য করুন: এই ফোল্ডারটি মুছে ফেলা বা সরানো যাবে না, অন্যথায় এক্সটেনশনটি সঠিকভাবে কাজ করবে না**) ![download-zip](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/download-zip.webp)
 
 ③ আনপ্যাকড এক্সটেনশন লোড করতে ব্রাউজারের এক্সটেনশন ম্যানেজমেন্ট ইন্টারফেস খুলুন (ডেভেলপার মোড সক্রিয় করতে [manifest v3 ScriptCat সমর্থন করতে ডেভেলপার মোড সক্রিয় করুন](/docs/use/open-dev/) দেখুন)
 
-- 1. **Edge** ![edge-load-unpacked](./use.assets/edge-load-unpacked.webp)
-- 2. **Chrome** ![chrome-load-unpacked](./use.assets/chrome-load-unpacked.webp)
+- 1. **Edge** ![edge-load-unpacked](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/edge-load-unpacked.webp)
+- 2. **Chrome** ![chrome-load-unpacked](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/chrome-load-unpacked.webp)
 
 ④ ধাপ ②-তে তৈরি ফোল্ডারটি নির্বাচন করুন (লোড সম্পূর্ণ হওয়ার পরে, ScriptCat আইকনটি এক্সটেনশন ম্যানেজমেন্ট ইন্টারফেসের এক্সটেনশন তালিকায় দেখা যাবে এবং ব্রাউজারের অ্যাড্রেস বারের উপরের ডান কোণার এক্সটেনশন বাটনে ক্লিক করেও দেখতে পারেন)
 
-- 1. **Edge** ![edge-load-unpacked-img](./use.assets/edge-load-unpacked-img.webp)
-- 2. **Chrome** ![chrome-load-unpacked-img](./use.assets/chrome-load-unpacked-img.webp)
+- 1. **Edge** ![edge-load-unpacked-img](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/edge-load-unpacked-img.webp)
+- 2. **Chrome** ![chrome-load-unpacked-img](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/chrome-load-unpacked-img.webp)
 
 ⑤ উপরের ডান কোণার ScriptCat আইকনে ক্লিক করুন, উপস্থিত ইন্টারফেসের উপরের ডান কোণায় `┆` > স্ক্রিপ্ট পান-এ ক্লিক করুন এবং স্ক্রিপ্ট সাইটে গিয়ে স্ক্রিপ্ট অনুসন্ধান ও ইনস্টল করতে পারেন।
 

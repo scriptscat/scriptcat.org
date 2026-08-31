@@ -1165,10 +1165,7 @@
   "home.search.kw.video": {
     "message": "видео",
     "description": "Search keyword for video"
-  }
-}
-
-{
+  },
   "githubStar.button.label": {
     "message": "Star",
     "description": "GitHub star button label"

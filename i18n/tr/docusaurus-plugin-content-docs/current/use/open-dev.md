@@ -42,7 +42,7 @@ import GithubStar from '@site/src/components/GithubStar';
 
 ① Tarayıcının uzantı yönetimi arayüzünü açın veya [edge://extensions/](edge://extensions/) adresini ziyaret edin
 
-![edge-open-settings](./open-dev.assets/edge-extensions-page.webp)
+![edge-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge-extensions-page.webp)
 
 ② Uzantı yönetimi arayüzünde ScriptCat uzantısını bulun ve `Ayrıntılar`'a tıklayın
 
@@ -59,15 +59,15 @@ import GithubStar from '@site/src/components/GithubStar';
 
 ① Tarayıcının uzantı yönetimi arayüzünü açın veya [chrome://extensions/](chrome://extensions/) adresini ziyaret edin
 
-![chrome-open-settings](./open-dev.assets/chrome-extensions-page.webp)
+![chrome-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/chrome-extensions-page.webp)
 
 ② Uzantı yönetimi arayüzünde ScriptCat uzantısını bulun ve `Ayrıntılar`'a tıklayın
 
-![scriptcat-extension-details](open-dev.assets/scriptcat-extension-details.webp)
+![scriptcat-extension-details](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/scriptcat-extension-details.webp)
 
 ③ ScriptCat uzantısı ayrıntı sayfasında `Kullanıcı komut dosyalarına izin ver` seçeneğini bulun ve etkinleştirin. Ardından uzantıyı devre dışı bırakıp yeniden etkinleştirin veya komut dosyası işlevinin etkili olması için tarayıcıyı yeniden başlatın.
 
-![allow-user-scripts-toggle](open-dev.assets/allow-user-scripts-toggle.webp)
+![allow-user-scripts-toggle](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/allow-user-scripts-toggle.webp)
 </TabItem>
   <TabItem value="edge-mobile" label={<div className="flex items-center gap-1"><Icon height={16} width={16} icon="logos:microsoft-edge" />Edge Mobile</div>}>
 
@@ -81,7 +81,7 @@ Tarayıcı motoru sürümü ≥ 138 olan Edge Mobile için Geliştirici Modu ger
 
 > ⚠️⚠️⚠️ 138'den düşük tarayıcı motoru sürümleri veya bu seçeneği olmayan kullanıcılar için lütfen [Geliştirici Modunu Etkinleştir](#enable-developer-mode) bölümüne bakın
 
-![edge-mobile-allow-user-scripts](./open-dev.assets/edge%20mobile%20138.png)
+![edge-mobile-allow-user-scripts](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge mobile 138.png)
 
   </TabItem>
 </Tabs>
@@ -93,11 +93,11 @@ Tarayıcı motoru sürümü ≥ 138 olan Edge Mobile için Geliştirici Modu ger
 
 ① Tarayıcının uzantı yönetimi arayüzünü açın veya [edge://extensions/](edge://extensions/) adresini ziyaret edin
 
-![edge-open-settings](./open-dev.assets/edge-extensions-page.webp)
+![edge-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge-extensions-page.webp)
 
 ② `Geliştirici modunu` etkinleştirin (Bazı tarayıcılarda bu mod başka seçeneklerde bulunabilir; örn. 360 Tarayıcı: Gelişmiş Yönetim > Geliştirici Modu)
 
-![edge-open-dev](./open-dev.assets/edge-developer-mode-toggle.webp)
+![edge-open-dev](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge-developer-mode-toggle.webp)
 
 ③ Geliştirici modunu etkinleştirdikten sonra, uzantıyı devre dışı bırakıp yeniden etkinleştirin veya komut dosyası işlevinin etkili olması için tarayıcıyı yeniden başlatın.
 
@@ -106,11 +106,11 @@ Tarayıcı motoru sürümü ≥ 138 olan Edge Mobile için Geliştirici Modu ger
 
 ① Tarayıcının uzantı yönetimi arayüzünü açın veya [chrome://extensions/](chrome://extensions/) adresini ziyaret edin
 
-![chrome-open-settings](./open-dev.assets/chrome-extensions-page.webp)
+![chrome-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/chrome-extensions-page.webp)
 
 ② `Geliştirici modunu` etkinleştirin (Bazı tarayıcılarda bu mod başka seçeneklerde bulunabilir; örn. 360 Tarayıcı: Gelişmiş Yönetim > Geliştirici Modu)
 
-![chrome-open-dev](./open-dev.assets/chrome-developer-mode-toggle.webp)
+![chrome-open-dev](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/chrome-developer-mode-toggle.webp)
 
 ③ Geliştirici modunu etkinleştirdikten sonra, uzantıyı devre dışı bırakıp yeniden etkinleştirin veya komut dosyası işlevinin etkili olması için tarayıcıyı yeniden başlatın.
 
@@ -120,7 +120,7 @@ Tarayıcı motoru sürümü ≥ 138 olan Edge Mobile için Geliştirici Modu ger
 
 138'den düşük tarayıcı motoru sürümüne sahip veya `Kullanıcı komut dosyalarına izin ver` seçeneği olmayan Edge Mobile için, Geliştirici Modunu etkinleştirmek üzere uzantılar sayfasının üst kısmındaki ayarlar düğmesine dokunun.
 
-![edge-mobile-open-dev](./open-dev.assets/edge%20mobile.png)
+![edge-mobile-open-dev](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge mobile.png)
 </TabItem>
 
 </Tabs>

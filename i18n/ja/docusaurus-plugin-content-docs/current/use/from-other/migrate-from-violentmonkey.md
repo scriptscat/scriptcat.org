@@ -8,20 +8,20 @@ title: Violentmonkey から ScriptCat への移行
 
 まず、Violentmonkey アイコンをクリックして管理パネルに入ります。
 
-![image-20250716225900597](./migrate-from-violentmonkey.assets/image-20250716225900597.webp)
+![image-20250716225900597](@site/i18n/en/docusaurus-plugin-content-docs/current/use/from-other/migrate-from-violentmonkey.assets/image-20250716225900597.webp)
 
 `設定` をクリックし、`zipファイルとしてエクスポート` をクリックしてバックアップファイルをエクスポートします。
 
-![image-20250716225935258](./migrate-from-violentmonkey.assets/image-20250716225935258.webp)
+![image-20250716225935258](@site/i18n/en/docusaurus-plugin-content-docs/current/use/from-other/migrate-from-violentmonkey.assets/image-20250716225935258.webp)
 
 ## ScriptCat にインポート
 
 ScriptCat 拡張機能で、ダッシュボードアイコンをクリックして管理パネルに入ります。
 
-![image-20250716225719787](./migrate-from-tampermonkey.assets/image-20250716225719787.webp)
+![image-20250716225719787](@site/i18n/en/docusaurus-plugin-content-docs/current/use/from-other/migrate-from-tampermonkey.assets/image-20250716225719787.webp)
 
 `ツール` を選択し、`ファイルをインポート` をクリックして、先ほどエクスポートした Violentmonkey の zip ファイルを選択し、`開く` をクリックしてインポートします。
 
-![image-20250716225741428](./migrate-from-tampermonkey.assets/image-20250716225741428.webp)
+![image-20250716225741428](@site/i18n/en/docusaurus-plugin-content-docs/current/use/from-other/migrate-from-tampermonkey.assets/image-20250716225741428.webp)
 
 その後、新しく開いたページでインポートするスクリプトを選択または全選択し、`インポート` ボタンをクリックします。

@@ -23,17 +23,17 @@ Si votre navigateur ne figure pas dans la liste ci-dessus, vous pouvez télécha
 
 ① Téléchargez d'abord le fichier `zip` depuis la page [GitHub Releases](https://github.com/scriptscat/scriptcat/releases) ou la page de [téléchargement de la communauté](https://bbs.tampermonkey.net.cn/thread-3068-1-1.html). S'il s'agit d'un fichier `crx`, remplacez son extension par `.zip`.
 
-② Préparez un dossier pour stocker l'extension et extrayez le fichier zip dans ce dossier. Après l'extraction, la structure doit ressembler à ceci (**Remarque : ce dossier ne peut être supprimé ou déplacé, sinon l'extension ne fonctionnera plus correctement**) ![download-zip](./use.assets/download-zip.webp)
+② Préparez un dossier pour stocker l'extension et extrayez le fichier zip dans ce dossier. Après l'extraction, la structure doit ressembler à ceci (**Remarque : ce dossier ne peut être supprimé ou déplacé, sinon l'extension ne fonctionnera plus correctement**) ![download-zip](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/download-zip.webp)
 
 ③ Ouvrez l'interface de gestion des extensions de votre navigateur pour charger l'extension décompressée (référez-vous à [Activer le mode développeur pour supporter ScriptCat manifest v3](/docs/use/open-dev/) pour activer d'abord le mode développeur).
 
-- 1. **Edge** ![edge-load-unpacked](./use.assets/edge-load-unpacked.webp)
-- 2. **Chrome** ![chrome-load-unpacked](./use.assets/chrome-load-unpacked.webp)
+- 1. **Edge** ![edge-load-unpacked](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/edge-load-unpacked.webp)
+- 2. **Chrome** ![chrome-load-unpacked](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/chrome-load-unpacked.webp)
 
 ④ Sélectionnez le dossier créé à l'étape ② (une fois le chargement terminé, l'icône ScriptCat apparaîtra dans la liste des extensions, et vous pourrez également la voir en cliquant sur le bouton des extensions en haut à droite de la barre d'adresse).
 
-- 1. **Edge** ![edge-load-unpacked-img](./use.assets/edge-load-unpacked-img.webp)
-- 2. **Chrome** ![chrome-load-unpacked-img](./use.assets/chrome-load-unpacked-img.webp)
+- 1. **Edge** ![edge-load-unpacked-img](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/edge-load-unpacked-img.webp)
+- 2. **Chrome** ![chrome-load-unpacked-img](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/chrome-load-unpacked-img.webp)
 
 ⑤ Cliquez sur l'icône ScriptCat en haut à droite, puis sur `┆` > "Obtenir des scripts" pour accéder aux sites de scripts et installer ceux qui vous intéressent.
 

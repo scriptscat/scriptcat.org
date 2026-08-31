@@ -23,17 +23,17 @@ ScriptCat هو إضافة متصفح يمكنها تنفيذ سكرپتات ال
 
 ① أولاً قم بتنزيل ملف `zip` من صفحة [Github Release](https://github.com/scriptscat/scriptcat/releases) أو صفحة [التنزيل المجتمعي](https://bbs.tampermonkey.net.cn/thread-3068-1-1.html). إذا كان ملف `crx`، فغيّر امتداده إلى `zip`.
 
-② جهز مجلداً لتخزين الإضافة، واستخرج ملف zip أعلاه إلى هذا المجلد. بعد الاستخراج، يجب أن يبدو هكذا (**ملاحظة: لا يمكن حذف هذا المجلد أو نقله، وإلا لن تعمل الإضافة بشكل صحيح**) ![download-zip](./use.assets/download-zip.webp)
+② جهز مجلداً لتخزين الإضافة، واستخرج ملف zip أعلاه إلى هذا المجلد. بعد الاستخراج، يجب أن يبدو هكذا (**ملاحظة: لا يمكن حذف هذا المجلد أو نقله، وإلا لن تعمل الإضافة بشكل صحيح**) ![download-zip](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/download-zip.webp)
 
 ③ افتح واجهة إدارة الإضافات في المتصفح لتحميل الإضافة غير المعبأة (ارجع إلى [تفعيل وضع المطور لدعم manifest v3 ScriptCat](/docs/use/open-dev/) لتفعيل وضع المطور أولاً)
 
-- 1. **Edge** ![edge-load-unpacked](./use.assets/edge-load-unpacked.webp)
-- 2. **Chrome** ![chrome-load-unpacked](./use.assets/chrome-load-unpacked.webp)
+- 1. **Edge** ![edge-load-unpacked](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/edge-load-unpacked.webp)
+- 2. **Chrome** ![chrome-load-unpacked](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/chrome-load-unpacked.webp)
 
 ④ حدد المجلد الذي أنشأته في الخطوة ② (بعد اكتمال التحميل، ستظهر أيقونة ScriptCat في قائمة الإضافات في واجهة إدارة الإضافات، ويمكنك أيضاً رؤيتها بالنقر على زر الإضافات في الزاوية العلوية اليمنى من شريط عنوان المتصفح)
 
-- 1. **Edge** ![edge-load-unpacked-img](./use.assets/edge-load-unpacked-img.webp)
-- 2. **Chrome** ![chrome-load-unpacked-img](./use.assets/chrome-load-unpacked-img.webp)
+- 1. **Edge** ![edge-load-unpacked-img](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/edge-load-unpacked-img.webp)
+- 2. **Chrome** ![chrome-load-unpacked-img](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/chrome-load-unpacked-img.webp)
 
 ⑤ انقر على أيقونة ScriptCat في الزاوية العلوية اليمنى، ثم انقر على `┆` > الحصول على السكرپتات في الزاوية العلوية اليمنى من الواجهة التي تظهر، ويمكنك الانتقال إلى موقع السكرپتات للبحث عن السكرپتات وتثبيتها.
 

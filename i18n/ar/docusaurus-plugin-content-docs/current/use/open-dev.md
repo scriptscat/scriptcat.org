@@ -42,7 +42,7 @@ import GithubStar from '@site/src/components/GithubStar';
 
 ① افتح واجهة إدارة الإضافات في المتصفح، أو انتقل إلى [edge://extensions/](edge://extensions/)
 
-![edge-open-settings](./open-dev.assets/edge-extensions-page.webp)
+![edge-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge-extensions-page.webp)
 
 ② في واجهة إدارة الإضافات، ابحث عن إضافة ScriptCat وانقر على `التفاصيل`
 
@@ -52,22 +52,22 @@ import GithubStar from '@site/src/components/GithubStar';
 
 > ⚠️⚠️⚠️ بالنسبة للإصدارات الأقدم من Edge (\<=143) أو المستخدمين الذين لا يملكون هذا الخيار، يرجى الرجوع إلى [تفعيل وضع المطور](#enable-developer-mode)
 
-![edge-allow-user-scripts](open-dev.assets/edge-allow-user-scripts.png)
+![edge-allow-user-scripts](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge-allow-user-scripts.png)
 
   </TabItem>
   <TabItem value="chrome" label={<div className="flex items-center gap-1"><Icon height={16} width={16} icon="logos:chrome" />Chrome</div>}>
 
 ① افتح واجهة إدارة الإضافات في المتصفح، أو انتقل إلى [chrome://extensions/](chrome://extensions/)
 
-![chrome-open-settings](./open-dev.assets/chrome-extensions-page.webp)
+![chrome-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/chrome-extensions-page.webp)
 
 ② في واجهة إدارة الإضافات، ابحث عن إضافة ScriptCat وانقر على `التفاصيل`
 
-![scriptcat-extension-details](open-dev.assets/scriptcat-extension-details.webp)
+![scriptcat-extension-details](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/scriptcat-extension-details.webp)
 
 ③ في صفحة تفاصيل إضافة ScriptCat، ابحث عن خيار `Allow user scripts` وقم بتفعيله. ثم عطّل الإضافة وأعد تفعيلها، أو أعد تشغيل المتصفح حتى تعمل السكرپتات.
 
-![allow-user-scripts-toggle](open-dev.assets/allow-user-scripts-toggle.webp)
+![allow-user-scripts-toggle](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/allow-user-scripts-toggle.webp)
 </TabItem>
   <TabItem value="edge-mobile" label={<div className="flex items-center gap-1"><Icon height={16} width={16} icon="logos:microsoft-edge" />Edge Mobile</div>}>
 
@@ -81,7 +81,7 @@ import GithubStar from '@site/src/components/GithubStar';
 
 > ⚠️⚠️⚠️ بالنسبة لإصدارات محرك المتصفح الأقل من 138، أو المستخدمين الذين لا يملكون هذا الخيار، يرجى الرجوع إلى [تفعيل وضع المطور](#enable-developer-mode)
 
-![edge-mobile-allow-user-scripts](./open-dev.assets/edge%20mobile%20138.png)
+![edge-mobile-allow-user-scripts](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge mobile 138.png)
 
   </TabItem>
 </Tabs>
@@ -93,11 +93,11 @@ import GithubStar from '@site/src/components/GithubStar';
 
 ① افتح واجهة إدارة الإضافات في المتصفح، أو انتقل إلى [edge://extensions/](edge://extensions/)
 
-![edge-open-settings](./open-dev.assets/edge-extensions-page.webp)
+![edge-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge-extensions-page.webp)
 
 ② فعّل `وضع المطور` (في بعض المتصفحات، قد يكون هذا الوضع في خيارات أخرى، مثل متصفح 360: الإدارة المتقدمة > وضع المطور)
 
-![edge-open-dev](./open-dev.assets/edge-developer-mode-toggle.webp)
+![edge-open-dev](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge-developer-mode-toggle.webp)
 
 ③ بعد تفعيل وضع المطور، عطّل الإضافة ثم أعد تفعيلها، أو أعد تشغيل المتصفح حتى تعمل السكرپتات.
 
@@ -106,11 +106,11 @@ import GithubStar from '@site/src/components/GithubStar';
 
 ① افتح واجهة إدارة الإضافات في المتصفح، أو انتقل إلى [chrome://extensions/](chrome://extensions/)
 
-![chrome-open-settings](./open-dev.assets/chrome-extensions-page.webp)
+![chrome-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/chrome-extensions-page.webp)
 
 ② فعّل `وضع المطور` (في بعض المتصفحات، قد يكون هذا الوضع في خيارات أخرى، مثل متصفح 360: الإدارة المتقدمة > وضع المطور)
 
-![chrome-open-dev](./open-dev.assets/chrome-developer-mode-toggle.webp)
+![chrome-open-dev](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/chrome-developer-mode-toggle.webp)
 
 ③ بعد تفعيل وضع المطور، عطّل الإضافة ثم أعد تفعيلها، أو أعد تشغيل المتصفح حتى تعمل السكرپتات.
 
@@ -120,7 +120,7 @@ import GithubStar from '@site/src/components/GithubStar';
 
 بالنسبة إلى Edge Mobile بإصدار محرك متصفح أقل من 138، أو بدون خيار `Allow user scripts`، اضغط على زر الإعدادات أعلى صفحة الإضافات لتفعيل وضع المطور.
 
-![edge-mobile-open-dev](./open-dev.assets/edge%20mobile.png)
+![edge-mobile-open-dev](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge mobile.png)
 </TabItem>
 
 </Tabs>

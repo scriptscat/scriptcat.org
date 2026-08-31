@@ -42,7 +42,7 @@ import GithubStar from '@site/src/components/GithubStar';
 
 ① ব্রাউজারের এক্সটেনশন ম্যানেজমেন্ট ইন্টারফেস খুলুন, বা [edge://extensions/](edge://extensions/) দেখুন
 
-![edge-open-settings](./open-dev.assets/edge-extensions-page.webp)
+![edge-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge-extensions-page.webp)
 
 ② এক্সটেনশন ম্যানেজমেন্ট ইন্টারফেসে, ScriptCat এক্সটেনশনটি খুঁজুন এবং `Details`-এ ক্লিক করুন
 
@@ -59,15 +59,15 @@ import GithubStar from '@site/src/components/GithubStar';
 
 ① ব্রাউজারের এক্সটেনশন ম্যানেজমেন্ট ইন্টারফেস খুলুন, বা [chrome://extensions/](chrome://extensions/) দেখুন
 
-![chrome-open-settings](./open-dev.assets/chrome-extensions-page.webp)
+![chrome-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/chrome-extensions-page.webp)
 
 ② এক্সটেনশন ম্যানেজমেন্ট ইন্টারফেসে, ScriptCat এক্সটেনশনটি খুঁজুন এবং `Details`-এ ক্লিক করুন
 
-![scriptcat-extension-details](open-dev.assets/scriptcat-extension-details.webp)
+![scriptcat-extension-details](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/scriptcat-extension-details.webp)
 
 ③ ScriptCat এক্সটেনশন বিবরণ পৃষ্ঠায়, `Allow user scripts` বিকল্পটি খুঁজুন এবং এটি সক্রিয় করুন। তারপর এক্সটেনশনটি নিষ্ক্রিয় ও পুনরায় সক্রিয় করুন, বা স্ক্রিপ্ট কার্যকারিতা কার্যকর করতে ব্রাউজারটি পুনরায় চালু করুন।
 
-![allow-user-scripts-toggle](open-dev.assets/allow-user-scripts-toggle.webp)
+![allow-user-scripts-toggle](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/allow-user-scripts-toggle.webp)
 </TabItem>
   <TabItem value="edge-mobile" label={<div className="flex items-center gap-1"><Icon height={16} width={16} icon="logos:microsoft-edge" />Edge Mobile</div>}>
 
@@ -81,7 +81,7 @@ import GithubStar from '@site/src/components/GithubStar';
 
 > ⚠️⚠️⚠️ 138-এর নিচের ব্রাউজার ইঞ্জিন সংস্করণগুলির জন্য, বা যাদের এই বিকল্প নেই, অনুগ্রহ করে [ডেভেলপার মোড সক্রিয় করুন](#enable-developer-mode) দেখুন
 
-![edge-mobile-allow-user-scripts](./open-dev.assets/edge%20mobile%20138.png)
+![edge-mobile-allow-user-scripts](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge mobile 138.png)
 
   </TabItem>
 </Tabs>
@@ -93,11 +93,11 @@ import GithubStar from '@site/src/components/GithubStar';
 
 ① ব্রাউজারের এক্সটেনশন ম্যানেজমেন্ট ইন্টারফেস খুলুন, বা [edge://extensions/](edge://extensions/) দেখুন
 
-![edge-open-settings](./open-dev.assets/edge-extensions-page.webp)
+![edge-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge-extensions-page.webp)
 
 ② `ডেভেলপার মোড` সক্রিয় করুন (কিছু ব্রাউজারে, এই মোডটি অন্যান্য বিকল্পে অবস্থিত হতে পারে, যেমন 360 ব্রাউজার: অ্যাডভান্সড ম্যানেজমেন্ট > ডেভেলপার মোড)
 
-![edge-open-dev](./open-dev.assets/edge-developer-mode-toggle.webp)
+![edge-open-dev](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge-developer-mode-toggle.webp)
 
 ③ ডেভেলপার মোড সক্রিয় করার পরে, এক্সটেনশনটি নিষ্ক্রিয় ও তারপর পুনরায় সক্রিয় করুন, বা স্ক্রিপ্ট কার্যকারিতা কার্যকর করতে ব্রাউজারটি পুনরায় চালু করুন।
 
@@ -106,11 +106,11 @@ import GithubStar from '@site/src/components/GithubStar';
 
 ① ব্রাউজারের এক্সটেনশন ম্যানেজমেন্ট ইন্টারফেস খুলুন, বা [chrome://extensions/](chrome://extensions/) দেখুন
 
-![chrome-open-settings](./open-dev.assets/chrome-extensions-page.webp)
+![chrome-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/chrome-extensions-page.webp)
 
 ② `ডেভেলপার মোড` সক্রিয় করুন (কিছু ব্রাউজারে, এই মোডটি অন্যান্য বিকল্পে অবস্থিত হতে পারে, যেমন 360 ব্রাউজার: অ্যাডভান্সড ম্যানেজমেন্ট > ডেভেলপার মোড)
 
-![chrome-open-dev](./open-dev.assets/chrome-developer-mode-toggle.webp)
+![chrome-open-dev](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/chrome-developer-mode-toggle.webp)
 
 ③ ডেভেলপার মোড সক্রিয় করার পরে, এক্সটেনশনটি নিষ্ক্রিয় ও তারপর পুনরায় সক্রিয় করুন, বা স্ক্রিপ্ট কার্যকারিতা কার্যকর করতে ব্রাউজারটি পুনরায় চালু করুন।
 
@@ -120,7 +120,7 @@ import GithubStar from '@site/src/components/GithubStar';
 
 138-এর নিচের ব্রাউজার ইঞ্জিন সংস্করণ সহ Edge Mobile-এর জন্য, বা `Allow user scripts` বিকল্প ছাড়া, ডেভেলপার মোড সক্রিয় করতে এক্সটেনশন পৃষ্ঠার শীর্ষে সেটিংস বাটনে ট্যাপ করুন।
 
-![edge-mobile-open-dev](./open-dev.assets/edge%20mobile.png)
+![edge-mobile-open-dev](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge mobile.png)
 </TabItem>
 
 </Tabs>

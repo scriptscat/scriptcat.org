@@ -23,17 +23,17 @@ Jika browser Anda tidak ada dalam daftar di atas, Anda dapat mengunduh file `zip
 
 ① Pertama unduh file `zip` dari halaman [Rilis Github](https://github.com/scriptscat/scriptcat/releases) atau [Unduhan Komunitas](https://bbs.tampermonkey.net.cn/thread-3068-1-1.html). Jika berupa file `crx`, ubah ekstensinya menjadi `zip`.
 
-② Siapkan folder untuk menyimpan plugin, dan ekstrak file zip di atas ke folder tersebut. Setelah diekstrak, tampilannya akan seperti ini (**Catatan: Folder ini tidak boleh dihapus atau dipindahkan, jika tidak ekstensi tidak akan berfungsi dengan baik**) ![download-zip](./use.assets/download-zip.webp)
+② Siapkan folder untuk menyimpan plugin, dan ekstrak file zip di atas ke folder tersebut. Setelah diekstrak, tampilannya akan seperti ini (**Catatan: Folder ini tidak boleh dihapus atau dipindahkan, jika tidak ekstensi tidak akan berfungsi dengan baik**) ![download-zip](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/download-zip.webp)
 
 ③ Buka antarmuka pengelolaan ekstensi browser untuk memuat ekstensi unpacked (lihat [Aktifkan mode pengembang untuk mendukung manifest v3 ScriptCat](/docs/use/open-dev/) untuk mengaktifkan mode pengembang terlebih dahulu)
 
-- 1. **Edge** ![edge-load-unpacked](./use.assets/edge-load-unpacked.webp)
-- 2. **Chrome** ![chrome-load-unpacked](./use.assets/chrome-load-unpacked.webp)
+- 1. **Edge** ![edge-load-unpacked](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/edge-load-unpacked.webp)
+- 2. **Chrome** ![chrome-load-unpacked](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/chrome-load-unpacked.webp)
 
 ④ Pilih folder yang dibuat di langkah ② (setelah pemuatan selesai, ikon ScriptCat akan muncul di daftar ekstensi di antarmuka pengelolaan ekstensi, dan Anda juga dapat melihatnya dengan mengklik tombol ekstensi di pojok kanan atas bilah alamat browser)
 
-- 1. **Edge** ![edge-load-unpacked-img](./use.assets/edge-load-unpacked-img.webp)
-- 2. **Chrome** ![chrome-load-unpacked-img](./use.assets/chrome-load-unpacked-img.webp)
+- 1. **Edge** ![edge-load-unpacked-img](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/edge-load-unpacked-img.webp)
+- 2. **Chrome** ![chrome-load-unpacked-img](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/chrome-load-unpacked-img.webp)
 
 ⑤ Klik ikon ScriptCat di pojok kanan atas, klik `┆` > Dapatkan Skrip di pojok kanan atas antarmuka yang muncul, dan Anda dapat pergi ke situs skrip untuk mencari dan memasang skrip.
 

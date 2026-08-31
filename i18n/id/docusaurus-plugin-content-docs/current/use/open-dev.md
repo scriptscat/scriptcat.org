@@ -42,7 +42,7 @@ import GithubStar from '@site/src/components/GithubStar';
 
 ① Buka antarmuka pengelolaan ekstensi browser, atau kunjungi [edge://extensions/](edge://extensions/)
 
-![edge-open-settings](./open-dev.assets/edge-extensions-page.webp)
+![edge-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge-extensions-page.webp)
 
 ② Di antarmuka pengelolaan ekstensi, temukan ekstensi ScriptCat dan klik `Detail`
 
@@ -59,15 +59,15 @@ import GithubStar from '@site/src/components/GithubStar';
 
 ① Buka antarmuka pengelolaan ekstensi browser, atau kunjungi [chrome://extensions/](chrome://extensions/)
 
-![chrome-open-settings](./open-dev.assets/chrome-extensions-page.webp)
+![chrome-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/chrome-extensions-page.webp)
 
 ② Di antarmuka pengelolaan ekstensi, temukan ekstensi ScriptCat dan klik `Detail`
 
-![scriptcat-extension-details](open-dev.assets/scriptcat-extension-details.webp)
+![scriptcat-extension-details](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/scriptcat-extension-details.webp)
 
 ③ Di halaman detail ekstensi ScriptCat, temukan opsi `Izinkan skrip pengguna` dan aktifkan. Kemudian nonaktifkan dan aktifkan kembali ekstensi, atau mulai ulang browser agar fungsionalitas skrip berfungsi.
 
-![allow-user-scripts-toggle](open-dev.assets/allow-user-scripts-toggle.webp)
+![allow-user-scripts-toggle](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/allow-user-scripts-toggle.webp)
 </TabItem>
   <TabItem value="edge-mobile" label={<div className="flex items-center gap-1"><Icon height={16} width={16} icon="logos:microsoft-edge" />Edge Mobile</div>}>
 
@@ -81,7 +81,7 @@ Untuk Edge Mobile dengan versi mesin browser ≥ 138, Mode Pengembang tidak dipe
 
 > ⚠️⚠️⚠️ Untuk versi mesin browser yang lebih rendah dari 138, atau pengguna tanpa opsi ini, silakan lihat [Aktifkan Mode Pengembang](#enable-developer-mode)
 
-![edge-mobile-allow-user-scripts](./open-dev.assets/edge%20mobile%20138.png)
+![edge-mobile-allow-user-scripts](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge mobile 138.png)
 
   </TabItem>
 </Tabs>
@@ -93,11 +93,11 @@ Untuk Edge Mobile dengan versi mesin browser ≥ 138, Mode Pengembang tidak dipe
 
 ① Buka antarmuka pengelolaan ekstensi browser, atau kunjungi [edge://extensions/](edge://extensions/)
 
-![edge-open-settings](./open-dev.assets/edge-extensions-page.webp)
+![edge-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge-extensions-page.webp)
 
 ② Aktifkan `Mode pengembang` (Di beberapa browser, mode ini mungkin terletak di opsi lain, seperti Browser 360: Manajemen Lanjutan > Mode Pengembang)
 
-![edge-open-dev](./open-dev.assets/edge-developer-mode-toggle.webp)
+![edge-open-dev](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge-developer-mode-toggle.webp)
 
 ③ Setelah mengaktifkan mode pengembang, nonaktifkan lalu aktifkan kembali ekstensi, atau mulai ulang browser agar fungsionalitas skrip berfungsi.
 
@@ -106,11 +106,11 @@ Untuk Edge Mobile dengan versi mesin browser ≥ 138, Mode Pengembang tidak dipe
 
 ① Buka antarmuka pengelolaan ekstensi browser, atau kunjungi [chrome://extensions/](chrome://extensions/)
 
-![chrome-open-settings](./open-dev.assets/chrome-extensions-page.webp)
+![chrome-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/chrome-extensions-page.webp)
 
 ② Aktifkan `Mode pengembang` (Di beberapa browser, mode ini mungkin terletak di opsi lain, seperti Browser 360: Manajemen Lanjutan > Mode Pengembang)
 
-![chrome-open-dev](./open-dev.assets/chrome-developer-mode-toggle.webp)
+![chrome-open-dev](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/chrome-developer-mode-toggle.webp)
 
 ③ Setelah mengaktifkan mode pengembang, nonaktifkan lalu aktifkan kembali ekstensi, atau mulai ulang browser agar fungsionalitas skrip berfungsi.
 
@@ -120,7 +120,7 @@ Untuk Edge Mobile dengan versi mesin browser ≥ 138, Mode Pengembang tidak dipe
 
 Untuk Edge Mobile dengan versi mesin browser lebih rendah dari 138, atau tanpa opsi `Izinkan skrip pengguna`, ketuk tombol pengaturan di bagian atas halaman ekstensi untuk mengaktifkan Mode Pengembang.
 
-![edge-mobile-open-dev](./open-dev.assets/edge%20mobile.png)
+![edge-mobile-open-dev](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge mobile.png)
 </TabItem>
 
 </Tabs>

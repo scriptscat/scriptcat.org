@@ -23,17 +23,17 @@ Als je browser niet in bovenstaande lijst staat, kun je het `zip`/`crx`-bestand 
 
 ① Download eerst het `zip`-bestand van de [Github Release](https://github.com/scriptscat/scriptcat/releases)-pagina of de [Community download](https://bbs.tampermonkey.net.cn/thread-3068-1-1.html)-pagina. Als het een `crx`-bestand is, verander dan de extensie naar `zip`.
 
-② Bereid een map voor om de plugin op te slaan en pak het bovenstaande zip-bestand uit naar die map. Na het uitpakken zou het er zo uit moeten zien (**Opmerking: deze map kan niet worden verwijderd of verplaatst, anders werkt de extensie niet goed**) ![download-zip](./use.assets/download-zip.webp)
+② Bereid een map voor om de plugin op te slaan en pak het bovenstaande zip-bestand uit naar die map. Na het uitpakken zou het er zo uit moeten zien (**Opmerking: deze map kan niet worden verwijderd of verplaatst, anders werkt de extensie niet goed**) ![download-zip](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/download-zip.webp)
 
 ③ Open de extensiebeheerinterface van de browser om de uitgepakte extensie te laden (raadpleeg [Ontwikkelaarsmodus inschakelen om manifest v3 ScriptCat te ondersteunen](/docs/use/open-dev/) om eerst de ontwikkelaarsmodus in te schakelen)
 
-- 1. **Edge** ![edge-load-unpacked](./use.assets/edge-load-unpacked.webp)
-- 2. **Chrome** ![chrome-load-unpacked](./use.assets/chrome-load-unpacked.webp)
+- 1. **Edge** ![edge-load-unpacked](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/edge-load-unpacked.webp)
+- 2. **Chrome** ![chrome-load-unpacked](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/chrome-load-unpacked.webp)
 
 ④ Selecteer de map die je in stap ② hebt gemaakt (na het laden verschijnt het ScriptCat-pictogram in de extensielijst in de extensiebeheerinterface, en je kunt het ook zien door op de extensieknop in de rechterbovenhoek van de adresbalk van de browser te klikken)
 
-- 1. **Edge** ![edge-load-unpacked-img](./use.assets/edge-load-unpacked-img.webp)
-- 2. **Chrome** ![chrome-load-unpacked-img](./use.assets/chrome-load-unpacked-img.webp)
+- 1. **Edge** ![edge-load-unpacked-img](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/edge-load-unpacked-img.webp)
+- 2. **Chrome** ![chrome-load-unpacked-img](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/chrome-load-unpacked-img.webp)
 
 ⑤ Klik op het ScriptCat-pictogram in de rechterbovenhoek, klik op `┆` > Scripts ophalen in de rechterbovenhoek van de interface die verschijnt, en je kunt naar de scriptsite gaan om scripts te zoeken en installeren.
 

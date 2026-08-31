@@ -42,7 +42,7 @@ import GithubStar from '@site/src/components/GithubStar';
 
 ① 브라우저의 확장 프로그램 관리 인터페이스를 열거나 [edge://extensions/](edge://extensions/)를 방문합니다
 
-![edge-open-settings](./open-dev.assets/edge-extensions-page.webp)
+![edge-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge-extensions-page.webp)
 
 ② 확장 프로그램 관리 인터페이스에서 ScriptCat 확장 프로그램을 찾아 `세부정보`를 클릭합니다
 
@@ -59,15 +59,15 @@ import GithubStar from '@site/src/components/GithubStar';
 
 ① 브라우저의 확장 프로그램 관리 인터페이스를 열거나 [chrome://extensions/](chrome://extensions/)를 방문합니다
 
-![chrome-open-settings](./open-dev.assets/chrome-extensions-page.webp)
+![chrome-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/chrome-extensions-page.webp)
 
 ② 확장 프로그램 관리 인터페이스에서 ScriptCat 확장 프로그램을 찾아 `세부정보`를 클릭합니다
 
-![scriptcat-extension-details](open-dev.assets/scriptcat-extension-details.webp)
+![scriptcat-extension-details](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/scriptcat-extension-details.webp)
 
 ③ ScriptCat 확장 프로그램 세부정보 페이지에서 `사용자 스크립트 허용` 옵션을 찾아 활성화합니다. 그런 다음 확장 프로그램을 비활성화했다가 다시 활성화하거나 브라우저를 다시 시작하여 스크립트 기능을 적용합니다.
 
-![allow-user-scripts-toggle](open-dev.assets/allow-user-scripts-toggle.webp)
+![allow-user-scripts-toggle](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/allow-user-scripts-toggle.webp)
 </TabItem>
   <TabItem value="edge-mobile" label={<div className="flex items-center gap-1"><Icon height={16} width={16} icon="logos:microsoft-edge" />Edge Mobile</div>}>
 
@@ -81,7 +81,7 @@ import GithubStar from '@site/src/components/GithubStar';
 
 > ⚠️⚠️⚠️ 브라우저 엔진 버전이 138보다 낮거나 이 옵션이 없는 사용자는 [개발자 모드 활성화](#enable-developer-mode)를 참조하세요
 
-![edge-mobile-allow-user-scripts](./open-dev.assets/edge%20mobile%20138.png)
+![edge-mobile-allow-user-scripts](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge mobile 138.png)
 
   </TabItem>
 </Tabs>
@@ -93,11 +93,11 @@ import GithubStar from '@site/src/components/GithubStar';
 
 ① 브라우저의 확장 프로그램 관리 인터페이스를 열거나 [edge://extensions/](edge://extensions/)를 방문합니다
 
-![edge-open-settings](./open-dev.assets/edge-extensions-page.webp)
+![edge-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge-extensions-page.webp)
 
 ② `개발자 모드`를 활성화합니다 (일부 브라우저에서는 이 모드가 다른 옵션에 있을 수 있습니다. 예: 360 브라우저: 고급 관리 > 개발자 모드)
 
-![edge-open-dev](./open-dev.assets/edge-developer-mode-toggle.webp)
+![edge-open-dev](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge-developer-mode-toggle.webp)
 
 ③ 개발자 모드를 활성화한 후 확장 프로그램을 비활성화했다가 다시 활성화하거나 브라우저를 다시 시작하여 스크립트 기능을 적용합니다.
 
@@ -106,11 +106,11 @@ import GithubStar from '@site/src/components/GithubStar';
 
 ① 브라우저의 확장 프로그램 관리 인터페이스를 열거나 [chrome://extensions/](chrome://extensions/)를 방문합니다
 
-![chrome-open-settings](./open-dev.assets/chrome-extensions-page.webp)
+![chrome-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/chrome-extensions-page.webp)
 
 ② `개발자 모드`를 활성화합니다 (일부 브라우저에서는 이 모드가 다른 옵션에 있을 수 있습니다. 예: 360 브라우저: 고급 관리 > 개발자 모드)
 
-![chrome-open-dev](./open-dev.assets/chrome-developer-mode-toggle.webp)
+![chrome-open-dev](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/chrome-developer-mode-toggle.webp)
 
 ③ 개발자 모드를 활성화한 후 확장 프로그램을 비활성화했다가 다시 활성화하거나 브라우저를 다시 시작하여 스크립트 기능을 적용합니다.
 
@@ -120,7 +120,7 @@ import GithubStar from '@site/src/components/GithubStar';
 
 브라우저 엔진 버전이 138보다 낮거나 `사용자 스크립트 허용` 옵션이 없는 Edge Mobile의 경우 확장 프로그램 페이지 상단의 설정 버튼을 탭하여 개발자 모드를 활성화하세요.
 
-![edge-mobile-open-dev](./open-dev.assets/edge%20mobile.png)
+![edge-mobile-open-dev](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge mobile.png)
 </TabItem>
 
 </Tabs>

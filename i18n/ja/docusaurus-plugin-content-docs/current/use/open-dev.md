@@ -42,7 +42,7 @@ import GithubStar from '@site/src/components/GithubStar';
 
 ① ブラウザの拡張機能管理インターフェースを開くか、[edge://extensions/](edge://extensions/) にアクセス
 
-![edge-open-settings](./open-dev.assets/edge-extensions-page.webp)
+![edge-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge-extensions-page.webp)
 
 ② 拡張機能管理インターフェースで ScriptCat 拡張機能を見つけて `詳細` をクリック
 
@@ -52,22 +52,22 @@ import GithubStar from '@site/src/components/GithubStar';
 
 > ⚠️⚠️⚠️ 旧バージョンの Edge ブラウザ（v143 以下）またはこのオプションがないユーザーは、[開発者モードを有効にする](#enable-developer-mode) を参照してください
 
-![edge-allow-user-scripts](open-dev.assets/edge-allow-user-scripts.png)
+![edge-allow-user-scripts](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge-allow-user-scripts.png)
 
   </TabItem>
   <TabItem value="chrome" label={<div className="flex items-center gap-1"><Icon height={16} width={16} icon="logos:chrome" />Chrome</div>}>
 
 ① ブラウザの拡張機能管理インターフェースを開くか、[chrome://extensions/](chrome://extensions/) にアクセス
 
-![chrome-open-settings](./open-dev.assets/chrome-extensions-page.webp)
+![chrome-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/chrome-extensions-page.webp)
 
 ② 拡張機能管理インターフェースで ScriptCat 拡張機能を見つけて `詳細` をクリック
 
-![scriptcat-extension-details](open-dev.assets/scriptcat-extension-details.webp)
+![scriptcat-extension-details](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/scriptcat-extension-details.webp)
 
 ③ ScriptCat 拡張機能の詳細ページで `ユーザースクリプトを許可` オプションを見つけて有効にします。その後、拡張機能を無効にして再度有効にするか、ブラウザを再起動してスクリプト機能を有効にしてください。
 
-![allow-user-scripts-toggle](open-dev.assets/allow-user-scripts-toggle.webp)
+![allow-user-scripts-toggle](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/allow-user-scripts-toggle.webp)
 </TabItem>
   <TabItem value="edge-mobile" label={<div className="flex items-center gap-1"><Icon height={16} width={16} icon="logos:microsoft-edge" />Edge Mobile</div>}>
 
@@ -81,7 +81,7 @@ import GithubStar from '@site/src/components/GithubStar';
 
 > ⚠️⚠️⚠️ ブラウザエンジンバージョンが 138 未満の場合、またはこのオプションがない場合は、[開発者モードを有効にする](#enable-developer-mode) を参照してください
 
-![edge-mobile-allow-user-scripts](./open-dev.assets/edge%20mobile%20138.png)
+![edge-mobile-allow-user-scripts](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge mobile 138.png)
 
   </TabItem>
 </Tabs>
@@ -93,11 +93,11 @@ import GithubStar from '@site/src/components/GithubStar';
 
 ① ブラウザの拡張機能管理インターフェースを開くか、[edge://extensions/](edge://extensions/) にアクセス
 
-![edge-open-settings](./open-dev.assets/edge-extensions-page.webp)
+![edge-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge-extensions-page.webp)
 
 ② `開発者モード` を有効にする（一部のブラウザでは、このモードが他のオプションにある場合があります。例：360 ブラウザ：詳細管理 > 開発者モード）
 
-![edge-open-dev](./open-dev.assets/edge-developer-mode-toggle.webp)
+![edge-open-dev](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge-developer-mode-toggle.webp)
 
 ③ 開発者モードを有効にした後、拡張機能を無効にして再度有効にするか、ブラウザを再起動してスクリプト機能を有効にしてください。
 
@@ -106,11 +106,11 @@ import GithubStar from '@site/src/components/GithubStar';
 
 ① ブラウザの拡張機能管理インターフェースを開くか、[chrome://extensions/](chrome://extensions/) にアクセス
 
-![chrome-open-settings](./open-dev.assets/chrome-extensions-page.webp)
+![chrome-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/chrome-extensions-page.webp)
 
 ② `開発者モード` を有効にする（一部のブラウザでは、このモードが他のオプションにある場合があります。例：360 ブラウザ：詳細管理 > 開発者モード）
 
-![chrome-open-dev](./open-dev.assets/chrome-developer-mode-toggle.webp)
+![chrome-open-dev](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/chrome-developer-mode-toggle.webp)
 
 ③ 開発者モードを有効にした後、拡張機能を無効にして再度有効にするか、ブラウザを再起動してスクリプト機能を有効にしてください。
 
@@ -120,7 +120,7 @@ import GithubStar from '@site/src/components/GithubStar';
 
 ブラウザエンジンバージョンが 138 未満の Edge Mobile または `ユーザースクリプトを許可` オプションがない場合は、拡張機能ページの上部にある設定ボタンをタップして開発者モードを有効にしてください。
 
-![edge-mobile-open-dev](./open-dev.assets/edge%20mobile.png)
+![edge-mobile-open-dev](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge mobile.png)
 </TabItem>
 
 </Tabs>

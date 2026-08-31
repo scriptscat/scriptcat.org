@@ -1,8 +1,16 @@
 # i18n Terminology Glossary / 多语言术语对照表
 
-EN summary: This document provides a consistent terminology reference for all 20 supported locales. Translators and AI tools should use these terms as the canonical translations to ensure consistency across the entire documentation site.
+EN summary: This document provides terminology and content-ownership rules for all 20 supported locales. Changelogs have Chinese and English sources only; every other locale renders the English source and reuses its images.
 
 本文档为所有 20 个支持的语言区域提供统一的术语参考。翻译者和 AI 工具应使用这些术语作为规范翻译，以确保整个文档站点的一致性。
+
+## Changelog and image ownership
+
+- Changelogs under `change/`, including `change/index.md` and `change/beta-changelog.md`, are maintained only in Chinese (`docs/change/`) and English (`i18n/en/.../change/`). Every other locale declares `change/` as an English fallback in `scripts/check-config.json`; do not add translated changelog copies.
+- A non-English document that displays the same screenshot as the English document must reference the English asset with `@site/i18n/en/docusaurus-plugin-content-docs/current/<path>` instead of copying the binary into its locale tree.
+- Keep a locale-specific image only when its visible content is genuinely localized. Do not treat a renamed, recompressed, or relocated English screenshot as a translation.
+
+更新日志（包括 `change/index.md` 和 `change/beta-changelog.md`）只维护中文与英文版本，其他语言通过 `scripts/check-config.json` 回退到英文。与英文版内容相同的图片必须直接引用英文资源；只有画面内容确实完成本地化时，才保留该语言自己的图片文件。
 
 ---
 
@@ -19,13 +27,13 @@ When translating documentation or UI strings:
 
 ## Core Product Terms
 
-| English | zh-Hans | zh-Hant | ja | ko | ru | de | fr | es | it | pt | ar | fa | nl | bn | uk | tr | vi | id | hy | ko-dev |
-|---------|---------|---------|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|--------|
-| Userscript / User script | 用户脚本 | 使用者腳本 | ユーザースクリプト | 사용자 스크립트 | Юзерскрипт | Benutzer-Skript | Script utilisateur | Script de usuario | Script utente | Script de usuário | سكربت المستخدم | اسکریپت کاربر | Gebruikersscript | ব্যবহারকারী স্ক্রিপ্ট | Юзерскрипт | Kullanıcı betiği | Script người dùng | Skrip pengguna | Օգտագործողի սկրիպտ | 사용자 스크립트 |
-| Browser extension | 浏览器扩展 | 瀏覽器擴充套件 | ブラウザ拡張 | 브라우저 확장 프로그램 | Расширение браузера | Browser-Erweiterung | Extension de navigateur | Extensión de navegador | Estensione del browser | Extensão do navegador | إضافة متصفح | افزونه مرورگر | Browserextensie | ব্রাউজার এক্সটেনশন | Розширення браузера | Tarayıcı eklentisi | Phần mở rộng trình duyệt | Ekstensi browser | Բրաուզերի հավելում | 브라우저 확장 프로그램 |
-| Background script | 后台腳本 | 背景腳本 | バックグラウンドスクリプト | 백그라운드 스크립트 | Фоновый скрипт | Hintergrundskript | Script d'arrière-plan | Script en segundo plano | Script in background | Script em segundo plano | سكربت الخلفية | اسکریپت پس‌زمینه | Achtergrondscript | ব্যাকগ্রাউন্ড স্ক্রিপ্ট | Фоновий скрипт | Arka plan betiği | Script chạy nền | Skrip latar belakang | Խորհրդապահեստ սկրիպտ | 백그라운드 스크립트 |
-| Scheduled script (crontab) | 定时脚本 | 排程腳本 | スケジュールスクリプト | 예약 스크립트 | Запланированный скрипт | Geplantes Skript | Script planifié | Script programado | Script pianificato | Script agendado | سكربت مجدول | اسکریپت زمان‌بندی | Gepland script | শিডিউল স্ক্রিপ্ট | Запланований скript | Zamanlanmış betik | Script lên lịch | Skrip terjadwal | Ժամանակացույցով սկրիպտ | 예약 스크립트 |
-| Foreground script | 前台脚本 | 前景腳本 | フォアグラウンドスクリプト | 포그라운드 스크립트 | Скрипт foreground | Vordergrundskript | Script au premier plan | Script en primer plano | Script in primo piano | Script em primeiro plano | سكربت الأمام | اسکریپت پیش‌زمینه | Voorgrondscript | ফোরগ্রাউন্ড স্ক্রিপ্ট | Скрипт foreground | Ön plan betiği | Script chạy trước | Skrip latar depan | Առջևի պլանի սկript | 포그라운드 스크립트 |
+| English | zh-Hans | zh-Hant | ja | ko | ru | de | fr | es | it | pt | ar | fa | nl | bn | uk | tr | vi | id | hy |
+|---------|---------|---------|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|
+| Userscript / User script | 用户脚本 | 使用者腳本 | ユーザースクリプト | 사용자 스크립트 | Юзерскрипт | Benutzer-Skript | Script utilisateur | Script de usuario | Script utente | Script de usuário | سكربت المستخدم | اسکریپت کاربر | Gebruikersscript | ব্যবহারকারী স্ক্রিপ্ট | Юзерскрипт | Kullanıcı betiği | Script người dùng | Skrip pengguna | Օգտագործողի սկրիպտ |
+| Browser extension | 浏览器扩展 | 瀏覽器擴充套件 | ブラウザ拡張 | 브라우저 확장 프로그램 | Расширение браузера | Browser-Erweiterung | Extension de navigateur | Extensión de navegador | Estensione del browser | Extensão do navegador | إضافة متصفح | افزونه مرورگر | Browserextensie | ব্রাউজার এক্সটেনশন | Розширення браузера | Tarayıcı eklentisi | Phần mở rộng trình duyệt | Ekstensi browser | Բրաուզերի հավելում |
+| Background script | 后台脚本 | 背景腳本 | バックグラウンドスクリプト | 백그라운드 스크립트 | Фоновый скрипт | Hintergrundskript | Script d'arrière-plan | Script en segundo plano | Script in background | Script em segundo plano | سكربت الخلفية | اسکریپت پس‌زمینه | Achtergrondscript | ব্যাকগ্রাউন্ড স্ক্রিপ্ট | Фоновий скрипт | Arka plan betiği | Script chạy nền | Skrip latar belakang | Խորհրդապահեստ սկրիպտ |
+| Scheduled script (crontab) | 定时脚本 | 排程腳本 | スケジュールスクリプト | 예약 스크립트 | Запланированный скрипт | Geplantes Skript | Script planifié | Script programado | Script pianificato | Script agendado | سكربت مجدول | اسکریپت زمان‌بندی | Gepland script | শিডিউল স্ক্রিপ্ট | Запланований скript | Zamanlanmış betik | Script lên lịch | Skrip terjadwal | Ժամանակացույցով սկրիպտ |
+| Foreground script | 前台脚本 | 前景腳本 | フォアグラウンドスクリプト | 포그라운드 스크립트 | Скрипт foreground | Vordergrundskript | Script au premier plan | Script en primer plano | Script in primo piano | Script em primeiro plano | سكربت الأمام | اسکریپت پیش‌زمینه | Voorgrondscript | ফোরগ্রাউন্ড স্ক্রিপ্ট | Скрипт foreground | Ön plan betiği | Script chạy trước | Skrip latar depan | Առջևի պլանի սկript |
 
 ## Technical API Terms
 

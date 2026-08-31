@@ -42,7 +42,7 @@ import GithubStar from '@site/src/components/GithubStar';
 
 ① Відкрийте інтерфейс керування розширеннями браузера або відвідайте [edge://extensions/](edge://extensions/)
 
-![edge-open-settings](./open-dev.assets/edge-extensions-page.webp)
+![edge-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge-extensions-page.webp)
 
 ② В інтерфейсі керування розширеннями знайдіть розширення ScriptCat і натисніть `Деталі`
 
@@ -59,15 +59,15 @@ import GithubStar from '@site/src/components/GithubStar';
 
 ① Відкрийте інтерфейс керування розширеннями браузера або відвідайте [chrome://extensions/](chrome://extensions/)
 
-![chrome-open-settings](./open-dev.assets/chrome-extensions-page.webp)
+![chrome-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/chrome-extensions-page.webp)
 
 ② В інтерфейсі керування розширеннями знайдіть розширення ScriptCat і натисніть `Деталі`
 
-![scriptcat-extension-details](open-dev.assets/scriptcat-extension-details.webp)
+![scriptcat-extension-details](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/scriptcat-extension-details.webp)
 
 ③ На сторінці деталей розширення ScriptCat знайдіть опцію `Дозволити користувацькі скрипти` та увімкніть її. Потім вимкніть і знову ввімкніть розширення або перезапустіть браузер, щоб функціональність скриптів стала ефективною.
 
-![allow-user-scripts-toggle](open-dev.assets/allow-user-scripts-toggle.webp)
+![allow-user-scripts-toggle](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/allow-user-scripts-toggle.webp)
 </TabItem>
   <TabItem value="edge-mobile" label={<div className="flex items-center gap-1"><Icon height={16} width={16} icon="logos:microsoft-edge" />Edge Mobile</div>}>
 
@@ -81,7 +81,7 @@ import GithubStar from '@site/src/components/GithubStar';
 
 > ⚠️⚠️⚠️ Для версій рушія браузера нижче 138 або користувачів без цієї опції дивіться [Увімкнення режиму розробника](#enable-developer-mode)
 
-![edge-mobile-allow-user-scripts](./open-dev.assets/edge%20mobile%20138.png)
+![edge-mobile-allow-user-scripts](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge mobile 138.png)
 
   </TabItem>
 </Tabs>
@@ -93,11 +93,11 @@ import GithubStar from '@site/src/components/GithubStar';
 
 ① Відкрийте інтерфейс керування розширеннями браузера або відвідайте [edge://extensions/](edge://extensions/)
 
-![edge-open-settings](./open-dev.assets/edge-extensions-page.webp)
+![edge-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge-extensions-page.webp)
 
 ② Увімкніть `Режим розробника` (у деяких браузерах цей режим може знаходитися в інших опціях, наприклад, 360 Browser: Розширене керування > Режим розробника)
 
-![edge-open-dev](./open-dev.assets/edge-developer-mode-toggle.webp)
+![edge-open-dev](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge-developer-mode-toggle.webp)
 
 ③ Після ввімкнення режиму розробника вимкніть і знову ввімкніть розширення або перезапустіть браузер, щоб функціональність скриптів стала ефективною.
 
@@ -106,11 +106,11 @@ import GithubStar from '@site/src/components/GithubStar';
 
 ① Відкрийте інтерфейс керування розширеннями браузера або відвідайте [chrome://extensions/](chrome://extensions/)
 
-![chrome-open-settings](./open-dev.assets/chrome-extensions-page.webp)
+![chrome-open-settings](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/chrome-extensions-page.webp)
 
 ② Увімкніть `Режим розробника` (у деяких браузерах цей режим може знаходитися в інших опціях, наприклад, 360 Browser: Розширене керування > Режим розробника)
 
-![chrome-open-dev](./open-dev.assets/chrome-developer-mode-toggle.webp)
+![chrome-open-dev](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/chrome-developer-mode-toggle.webp)
 
 ③ Після ввімкнення режиму розробника вимкніть і знову ввімкніть розширення або перезапустіть браузер, щоб функціональність скриптів стала ефективною.
 
@@ -120,7 +120,7 @@ import GithubStar from '@site/src/components/GithubStar';
 
 Для Edge Mobile із версіями рушія браузера нижче 138 або без опції `Дозволити користувацькі скрипти` торкніться кнопки налаштувань у верхній частині сторінки розширень, щоб увімкнути режим розробника.
 
-![edge-mobile-open-dev](./open-dev.assets/edge%20mobile.png)
+![edge-mobile-open-dev](@site/i18n/en/docusaurus-plugin-content-docs/current/use/open-dev.assets/edge mobile.png)
 </TabItem>
 
 </Tabs>

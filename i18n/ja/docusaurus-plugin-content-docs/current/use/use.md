@@ -23,17 +23,17 @@ ScriptCat はユーザースクリプトを実行できるブラウザ拡張機�
 
 ① [Github Release](https://github.com/scriptscat/scriptcat/releases) または[コミュニティダウンロード](https://bbs.tampermonkey.net.cn/thread-3068-1-1.html) ページから `zip` ファイルをダウンロード。`crx` ファイルの場合は、拡張子を `zip` に変更。
 
-② プラグインを保存するフォルダを準備し、上記の zip ファイルをそのフォルダに展開。展開後は以下のようになります（**注意：このフォルダは削除または移動しないでください。否則、拡張機能が正しく動作しません**）![download-zip](./use.assets/download-zip.webp)
+② プラグインを保存するフォルダを準備し、上記の zip ファイルをそのフォルダに展開。展開後は以下のようになります（**注意：このフォルダは削除または移動しないでください。否則、拡張機能が正しく動作しません**）![download-zip](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/download-zip.webp)
 
 ③ ブラウザの拡張機能管理インターフェースを開き、パックされていない拡張機能を読み込み（[開発者モードを有効にして Manifest v3 ScriptCat をサポート](/docs/use/open-dev/) を参照して先に開発者モードを有効にしてください）
 
-- 1. **Edge** ![edge-load-unpacked](./use.assets/edge-load-unpacked.webp)
-- 2. **Chrome** ![chrome-load-unpacked](./use.assets/chrome-load-unpacked.webp)
+- 1. **Edge** ![edge-load-unpacked](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/edge-load-unpacked.webp)
+- 2. **Chrome** ![chrome-load-unpacked](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/chrome-load-unpacked.webp)
 
 ④ ステップ ② で作成したフォルダを選択（読み込み完了後、ScriptCat アイコンが拡張機能管理インターフェースの拡張機能リストに表示され、ブラウザのアドレスバーの右上の拡張機能ボタンをクリックしても確認できます）
 
-- 1. **Edge** ![edge-load-unpacked-img](./use.assets/edge-load-unpacked-img.webp)
-- 2. **Chrome** ![chrome-load-unpacked-img](./use.assets/chrome-load-unpacked-img.webp)
+- 1. **Edge** ![edge-load-unpacked-img](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/edge-load-unpacked-img.webp)
+- 2. **Chrome** ![chrome-load-unpacked-img](@site/i18n/en/docusaurus-plugin-content-docs/current/use/use.assets/chrome-load-unpacked-img.webp)
 
 ⑤ 右上の ScriptCat アイコンをクリックし、出現するインターフェースの右上の `┆` > スクリプトを取得をクリックすると、スクリプトサイトでスクリプトを検索してインストールできます。
 
