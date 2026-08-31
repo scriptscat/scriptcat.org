@@ -4,32 +4,26 @@
 import { themes as prismThemes } from "prism-react-renderer";
 
 const { defaultLocale, i18nDocFallbacks = {} } = require("./scripts/check-config.json");
+const locales = ["zh-Hans", "en", "ru", "ar", "bn", "de", "es", "fa", "fr", "hy", "id", "it", "ja", "ko", "nl", "pt", "tr", "uk", "vi", "zh-Hant"];
 const currentLocale = process.env.DOCUSAURUS_CURRENT_LOCALE ?? defaultLocale;
 const docsFallbackLocale = i18nDocFallbacks[currentLocale]?.sourceLocale;
 const docsPath = docsFallbackLocale
-  ? `i18n/${docsFallbackLocale}/docusaurus-plugin-content-docs/current`
+  ? docsFallbackLocale === defaultLocale
+    ? "docs"
+    : `i18n/${docsFallbackLocale}/docusaurus-plugin-content-docs/current`
   : "docs";
 
-const metadataByLocale = {
-  "zh-Hans": {
-    keywords:
-      "scriptcat,userscript,browser extension,浏览器扩展,用户脚本,后台脚本,脚本猫,tampermonkey,violentmonkey,greasemonkey,javascript,自动化脚本,网页增强",
-    description:
-      "ScriptCat 是一个可以执行自定义脚本的浏览器扩展，支持用户脚本、后台脚本等多种脚本类型。提供强大的脚本管理、同步、订阅等功能。",
-  },
-  en: {
-    keywords:
-      "scriptcat,userscript,browser extension,user scripts,background scripts,scheduled scripts,userscript manager,tampermonkey,violentmonkey,greasemonkey,javascript,browser automation",
-    description:
-      "ScriptCat is an open-source browser extension for user scripts, background scripts, and scheduled scripts, with powerful management, sync, and subscription features.",
-  },
-  ru: {
-    keywords:
-      "scriptcat,userscript,расширение браузера,пользовательские скрипты,фоновые скрипты,скрипты по расписанию,менеджер пользовательских скриптов,tampermonkey,violentmonkey,greasemonkey,javascript,автоматизация браузера",
-    description:
-      "ScriptCat — открытое расширение браузера для пользовательских, фоновых скриптов и скриптов по расписанию с удобным управлением, синхронизацией и подписками.",
-  },
-};
+const metadataByLocale = Object.fromEntries(
+  locales.map((locale) => {
+    const translations = require(`./i18n/${locale}/code.json`);
+    const keywords = translations["homepage.meta.keywords"]?.message;
+    const description = translations["homepage.meta.description"]?.message;
+    if (!keywords || !description) {
+      throw new Error(`Missing homepage SEO metadata translations for locale ${locale}`);
+    }
+    return [locale, { keywords, description }];
+  })
+);
 const metadata = metadataByLocale[currentLocale] ?? metadataByLocale[defaultLocale];
 
 /** @type {import('@docusaurus/types').Config} */
@@ -77,7 +71,7 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale,
-    locales: ["zh-Hans", "en", "ru"],
+    locales,
     localeConfigs: {
       "zh-Hans": {
         label: "简体中文",
@@ -93,6 +87,91 @@ const config = {
         label: "Русский",
         direction: "ltr",
         htmlLang: "ru",
+      },
+      ar: {
+        label: "العربية",
+        direction: "rtl",
+        htmlLang: "ar",
+      },
+      bn: {
+        label: "বাংলা",
+        direction: "ltr",
+        htmlLang: "bn",
+      },
+      de: {
+        label: "Deutsch",
+        direction: "ltr",
+        htmlLang: "de",
+      },
+      es: {
+        label: "Español",
+        direction: "ltr",
+        htmlLang: "es",
+      },
+      fa: {
+        label: "فارسی",
+        direction: "rtl",
+        htmlLang: "fa",
+      },
+      fr: {
+        label: "Français",
+        direction: "ltr",
+        htmlLang: "fr",
+      },
+      hy: {
+        label: "Հայերեն",
+        direction: "ltr",
+        htmlLang: "hy",
+      },
+      id: {
+        label: "Bahasa Indonesia",
+        direction: "ltr",
+        htmlLang: "id",
+      },
+      it: {
+        label: "Italiano",
+        direction: "ltr",
+        htmlLang: "it",
+      },
+      ja: {
+        label: "日本語",
+        direction: "ltr",
+        htmlLang: "ja",
+      },
+      ko: {
+        label: "한국어",
+        direction: "ltr",
+        htmlLang: "ko",
+      },
+      nl: {
+        label: "Nederlands",
+        direction: "ltr",
+        htmlLang: "nl",
+      },
+      pt: {
+        label: "Português",
+        direction: "ltr",
+        htmlLang: "pt",
+      },
+      tr: {
+        label: "Türkçe",
+        direction: "ltr",
+        htmlLang: "tr",
+      },
+      uk: {
+        label: "Українська",
+        direction: "ltr",
+        htmlLang: "uk",
+      },
+      vi: {
+        label: "Tiếng Việt",
+        direction: "ltr",
+        htmlLang: "vi",
+      },
+      "zh-Hant": {
+        label: "繁體中文",
+        direction: "ltr",
+        htmlLang: "zh-Hant",
       },
     },
   },

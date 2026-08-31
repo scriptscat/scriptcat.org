@@ -1,0 +1,30 @@
+{
+  "title": {
+    "message": "ScriptCat",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "ScriptCat",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  },
+  "item.label.使用文档": {
+    "message": "Panduan Penggunaan",
+    "description": "Navbar item with label 使用文档"
+  },
+  "item.label.开发文档": {
+    "message": "Dokumentasi Pengembang",
+    "description": "Navbar item with label 开发文档"
+  },
+  "item.label.更新日志": {
+    "message": "Riwayat Perubahan",
+    "description": "Navbar item with label 更新日志"
+  },
+  "item.label.脚本开发指南": {
+    "message": "Panduan Pengembangan Script",
+    "description": "Navbar item with label 脚本开发指南"
+  }
+}

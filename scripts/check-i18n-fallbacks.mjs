@@ -37,11 +37,15 @@ function main() {
 
   const config = JSON.parse(readFileSync(CONFIG_FILE, "utf8"));
   const fallbacks = config.i18nDocFallbacks ?? {};
+  const defaultLocale = config.defaultLocale;
   let checked = 0;
   const issues = [];
 
   for (const [locale, fallback] of Object.entries(fallbacks)) {
-    const sourceRoot = join(I18N_DIR, fallback.sourceLocale, DOCS_PLUGIN_PATH);
+    const sourceIsDefault = fallback.sourceLocale === defaultLocale;
+    const sourceRoot = sourceIsDefault
+      ? join(ROOT, "docs")
+      : join(I18N_DIR, fallback.sourceLocale, DOCS_PLUGIN_PATH);
     const localeRoot = join(I18N_DIR, locale, DOCS_PLUGIN_PATH);
     const builtDocsRoot = join(BUILD_DIR, locale, "docs");
     const builtPages = listFiles(builtDocsRoot, (file) => file.endsWith("index.html")).map(
@@ -62,8 +66,9 @@ function main() {
       );
 
     for (const doc of fallbackDocs) {
-      const editPath =
-        `edit/main/i18n/${fallback.sourceLocale}/${DOCS_PLUGIN_PATH}/${doc}`;
+      const editPath = sourceIsDefault
+        ? `edit/main/docs/${doc}`
+        : `edit/main/i18n/${fallback.sourceLocale}/${DOCS_PLUGIN_PATH}/${doc}`;
       const matches = builtPages.filter(({ html }) => html.includes(editPath));
       if (matches.length !== 1) {
         issues.push(

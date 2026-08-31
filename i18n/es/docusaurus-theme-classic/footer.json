@@ -1,0 +1,42 @@
+{
+  "link.item.label.Discord": {
+    "message": "Discord",
+    "description": "The label of footer link with label=Discord linking to https://discord.gg/JF76nHCCM7"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "The label of footer link with label=GitHub linking to https://github.com/scriptscat/scriptcat"
+  },
+  "link.title.Docs": {
+    "message": "Documentación",
+    "description": "The title of the footer links column with title=Docs in the footer"
+  },
+  "link.title.Community": {
+    "message": "Comunidad",
+    "description": "The title of the footer links column with title=Community in the footer"
+  },
+  "link.title.More": {
+    "message": "Más",
+    "description": "The title of the footer links column with title=More in the footer"
+  },
+  "link.item.label.使用指南": {
+    "message": "Guía de Uso",
+    "description": "The label of footer link with label=使用指南"
+  },
+  "link.item.label.开发指南": {
+    "message": "Guía de Desarrolladores",
+    "description": "The label of footer link with label=开发指南"
+  },
+  "link.item.label.油猴中文网": {
+    "message": "Foro Chino de Tampermonkey",
+    "description": "The label of footer link with label=油猴中文网"
+  },
+  "link.item.label.脚本猫脚本站": {
+    "message": "Sitio de Scripts de ScriptCat",
+    "description": "The label of footer link with label=脚本猫脚本站"
+  },
+  "copyright": {
+    "message": "Copyright © {year} ScriptCat, Inc. Construido con Docusaurus.",
+    "description": "The footer copyright"
+  }
+}

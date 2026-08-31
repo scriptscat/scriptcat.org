@@ -937,5 +937,590 @@
   "uninstall.feature.alert.button": {
     "message": "前往GitHub提出功能建议",
     "description": "Feature alert button text"
+  },
+  "home.search.kw.adblock": {
+    "message": "去广告",
+    "description": "Search keyword for adblock"
+  },
+  "home.search.kw.shopping": {
+    "message": "购物",
+    "description": "Search keyword for shopping"
+  },
+  "home.search.kw.automation": {
+    "message": "自动化",
+    "description": "Search keyword for automation"
+  },
+  "home.search.kw.translation": {
+    "message": "翻译",
+    "description": "Search keyword for translation"
+  },
+  "home.search.kw.video": {
+    "message": "视频",
+    "description": "Search keyword for video"
+  },
+  "footer.community.recruiting": {
+    "message": "招募",
+    "description": "Footer community recruiting badge"
+  },
+  "githubStar.button.label": {
+    "message": "Star",
+    "description": "GitHub star button label"
+  },
+  "githubStar.changelog.subtitle": {
+    "message": "覺得這些更新有用？到 GitHub 點個 Star，支持我們做得更好",
+    "description": "GitHub star bar subtitle on changelog page"
+  },
+  "githubStar.changelog.title": {
+    "message": "ScriptCat 持續在更新 🚀",
+    "description": "GitHub star bar title on changelog page"
+  },
+  "githubStar.home.subtitle": {
+    "message": "覺得好用就點個 Star 支持我們持續維護",
+    "description": "GitHub star bar subtitle on homepage"
+  },
+  "githubStar.home.title": {
+    "message": "ScriptCat 開源免費",
+    "description": "GitHub star bar title on homepage"
+  },
+  "githubStar.install.subtitle": {
+    "message": "到 GitHub 點個 Star，幫更多人發現它 🌟",
+    "description": "GitHub star bar subtitle on install-complete page"
+  },
+  "githubStar.install.title": {
+    "message": "喜歡 ScriptCat 嗎？",
+    "description": "GitHub star bar title on install-complete page"
+  },
+  "home.comm.btn": {
+    "message": "在 GitHub 上貢獻"
+  },
+  "home.comm.eyebrow": {
+    "message": "開源 · OPEN SOURCE"
+  },
+  "home.comm.sub": {
+    "message": "完全開源、透明且免費。每一行程式碼都可審計，每一位貢獻者都被看見。"
+  },
+  "home.comm.title1": {
+    "message": "由 "
+  },
+  "home.comm.title2": {
+    "message": "社群共同打造"
+  },
+  "home.cta.chip": {
+    "message": "已安裝並正在執行"
+  },
+  "home.cta.eyebrow": {
+    "message": "免費 · 開源 · 無廣告"
+  },
+  "home.cta.h1": {
+    "message": "準備好讓瀏覽器"
+  },
+  "home.cta.h2": {
+    "message": "擁有超能力"
+  },
+  "home.cta.h3": {
+    "message": "了嗎？"
+  },
+  "home.cta.primary": {
+    "message": "免費安裝於 {browser}"
+  },
+  "home.cta.secondary": {
+    "message": "瀏覽腳本"
+  },
+  "home.cta.stores": {
+    "message": "支援 Edge · Chrome · Firefox · 手動安裝包"
+  },
+  "home.cta.sub": {
+    "message": "從商店一鍵安裝，或手動下載安裝包。30 秒解鎖網頁超能力。"
+  },
+  "home.dev.api.d": {
+    "message": "檔案儲存、cron 排程與跨域請求 — 全部包含。"
+  },
+  "home.dev.api.t": {
+    "message": "強大的 API"
+  },
+  "home.dev.apiBtn": {
+    "message": "API 參考"
+  },
+  "home.dev.bg.d": {
+    "message": "無需固定分頁 — 腳本持續在背景執行。"
+  },
+  "home.dev.bg.t": {
+    "message": "背景腳本"
+  },
+  "home.dev.debug.d": {
+    "message": "日誌、執行記錄與錯誤追蹤 — 問題一目了然。"
+  },
+  "home.dev.debug.t": {
+    "message": "即時除錯"
+  },
+  "home.dev.docsBtn": {
+    "message": "閱讀文件"
+  },
+  "home.dev.editor.d": {
+    "message": "語法高亮、智慧補全與錯誤提示，讓腳本開發流暢順手。"
+  },
+  "home.dev.editor.t": {
+    "message": "內建編輯器"
+  },
+  "home.dev.eyebrow": {
+    "message": "為開發者打造 · FOR DEVELOPERS"
+  },
+  "home.dev.mock.name": {
+    "message": "每日簽到",
+    "description": "@name value in the editor mock code block"
+  },
+  "home.dev.mock.toast": {
+    "message": "簽到成功",
+    "description": "Notification text in the editor mock code block"
+  },
+  "home.dev.run": {
+    "message": "執行"
+  },
+  "home.dev.sub": {
+    "message": "背景腳本、豐富的 API、內建編輯器與除錯工具 — 從第一行程式碼到正式上線，全部集中在一處。"
+  },
+  "home.dev.title1": {
+    "message": "將瀏覽器變成你的 "
+  },
+  "home.dev.title2": {
+    "message": "程式碼執行環境"
+  },
+  "home.feat.api.d": {
+    "message": "比 GM 更豐富：檔案儲存、定時任務與跨域請求，盡在掌握。"
+  },
+  "home.feat.api.t": {
+    "message": "強大的 API"
+  },
+  "home.feat.bg.d": {
+    "message": "獨一無二：無需開啟分頁，腳本也能在背景持續執行。"
+  },
+  "home.feat.bg.t": {
+    "message": "背景腳本"
+  },
+  "home.feat.compat.b": {
+    "message": "支援 GM_* API · 相同的中繼資料區塊"
+  },
+  "home.feat.compat.d": {
+    "message": "與使用者腳本格式及 GM API 完全相容 — 現有腳本零修改遷移，無切換成本。"
+  },
+  "home.feat.compat.t": {
+    "message": "相容 Tampermonkey"
+  },
+  "home.feat.devTag": {
+    "message": "開發者"
+  },
+  "home.feat.eyebrow": {
+    "message": "核心功能 · 為什麼選擇 SCRIPTCAT"
+  },
+  "home.feat.secure.d": {
+    "message": "透明可控的權限與可見的行為 — 惡意腳本在源頭就被攔截。"
+  },
+  "home.feat.secure.t": {
+    "message": "安全可靠"
+  },
+  "home.feat.store.d": {
+    "message": "一鍵安裝數千個社群腳本，或發布你自己的腳本，一起打造生態系。"
+  },
+  "home.feat.store.stat": {
+    "message": "{count} 個社群腳本"
+  },
+  "home.feat.store.t": {
+    "message": "腳本商店"
+  },
+  "home.feat.sub": {
+    "message": "從相容性到安全性，從一般使用者到開發者 — ScriptCat 應有盡有。"
+  },
+  "home.feat.sync.d": {
+    "message": "腳本與設定跨裝置同步 — 換機或重裝都不遺失。"
+  },
+  "home.feat.sync.t": {
+    "message": "雲端同步"
+  },
+  "home.feat.title1": {
+    "message": "強大的核心，"
+  },
+  "home.feat.title2": {
+    "message": "安心的保障"
+  },
+  "home.hero.browse": {
+    "message": "瀏覽腳本"
+  },
+  "home.hero.chip.background": {
+    "message": "3 個腳本在背景執行中"
+  },
+  "home.hero.chip.installed": {
+    "message": "已安裝腳本"
+  },
+  "home.hero.chip.installedSub": {
+    "message": "影片增強 v2.1"
+  },
+  "home.hero.eyebrow": {
+    "message": "開源的使用者腳本引擎 · 相容 Tampermonkey"
+  },
+  "home.hero.installTo": {
+    "message": "新增至 {browser}"
+  },
+  "home.hero.mock.adblock": {
+    "message": "自動跳過廣告"
+  },
+  "home.hero.mock.add": {
+    "message": "從腳本商店新增"
+  },
+  "home.hero.mock.dark": {
+    "message": "頁面深色模式"
+  },
+  "home.hero.mock.running": {
+    "message": "此頁面有 3 個腳本正在執行"
+  },
+  "home.hero.mock.skip": {
+    "message": "跳過廣告"
+  },
+  "home.hero.mock.speed": {
+    "message": "影片速度控制"
+  },
+  "home.hero.moreBrowsers": {
+    "message": "更多瀏覽器"
+  },
+  "home.hero.subhead": {
+    "message": "封鎖廣告、強化影片、自動化繁瑣事務 — 從商店一鍵安裝社群腳本，並為開發者提供背景腳本與強大 API。相容 Tampermonkey，現有腳本零成本遷移。"
+  },
+  "home.hero.title1": {
+    "message": "賦予瀏覽器"
+  },
+  "home.hero.title2": {
+    "message": ""
+  },
+  "home.hero.title3": {
+    "message": "超能力"
+  },
+  "home.hero.trust": {
+    "message": "適用於 Chrome · Edge · Firefox — 完全免費且開源"
+  },
+  "home.install.chrome": {
+    "message": "新增至 Chrome"
+  },
+  "home.install.edge": {
+    "message": "新增至 Edge"
+  },
+  "home.install.firefox": {
+    "message": "新增至 Firefox"
+  },
+  "home.install.guide": {
+    "message": "安裝指南"
+  },
+  "home.install.manual": {
+    "message": "下載安裝包並手動安裝"
+  },
+  "home.nav.changelog": {
+    "message": "更新日誌"
+  },
+  "home.nav.dev": {
+    "message": "開發者"
+  },
+  "home.nav.docs": {
+    "message": "文件"
+  },
+  "home.nav.install": {
+    "message": "安裝"
+  },
+  "home.nav.installTo": {
+    "message": "新增至 {browser}"
+  },
+  "home.nav.menu": {
+    "message": "選單"
+  },
+  "home.nav.store": {
+    "message": "腳本商店"
+  },
+  "home.nav.theme": {
+    "message": "切換主題"
+  },
+  "home.sc.adblock.d": {
+    "message": "封鎖廣告與彈窗，讓頁面乾淨整潔。"
+  },
+  "home.sc.adblock.l": {
+    "message": "廣告封鎖腳本"
+  },
+  "home.sc.adblock.t": {
+    "message": "廣告封鎖 · 更乾淨的網路"
+  },
+  "home.sc.auto.d": {
+    "message": "自動簽到、批量操作，實用的小工具箱。"
+  },
+  "home.sc.auto.l": {
+    "message": "生產力腳本"
+  },
+  "home.sc.auto.t": {
+    "message": "生產力 · 自動化"
+  },
+  "home.sc.eyebrow": {
+    "message": "人人可用 · 無需編寫程式碼"
+  },
+  "home.sc.featured.btn": {
+    "message": "瀏覽影片腳本"
+  },
+  "home.sc.featured.c1": {
+    "message": "速度控制"
+  },
+  "home.sc.featured.c2": {
+    "message": "廣告封鎖"
+  },
+  "home.sc.featured.c3": {
+    "message": "下載"
+  },
+  "home.sc.featured.c4": {
+    "message": "畫中畫"
+  },
+  "home.sc.featured.d": {
+    "message": "速度控制、自動跳過廣告、一鍵下載、畫中畫 — 更好的 Bilibili / YouTube / Netflix 體驗。"
+  },
+  "home.sc.featured.sites": {
+    "message": "支援 20+ 個影片網站"
+  },
+  "home.sc.featured.t": {
+    "message": "全面強化影片體驗"
+  },
+  "home.sc.featured.tag": {
+    "message": "最受歡迎"
+  },
+  "home.sc.read.d": {
+    "message": "深色模式、網頁翻譯、沉浸式閱讀。"
+  },
+  "home.sc.read.l": {
+    "message": "閱讀增強"
+  },
+  "home.sc.read.t": {
+    "message": "閱讀 · 翻譯"
+  },
+  "home.sc.shop.d": {
+    "message": "到處比價、價格歷史圖表、一鍵領取優惠券。"
+  },
+  "home.sc.shop.l": {
+    "message": "購物助手"
+  },
+  "home.sc.shop.t": {
+    "message": "購物 · 比價"
+  },
+  "home.sc.sub": {
+    "message": "從商店取用一個腳本 — 廣告、影片、購物、生產力，通通幫你搞定。"
+  },
+  "home.sc.title1": {
+    "message": "無需程式碼，只要 "
+  },
+  "home.sc.title2": {
+    "message": "一鍵"
+  },
+  "home.sc.title3": {
+    "message": " 解決日常煩惱"
+  },
+  "home.step.eyebrow": {
+    "message": "三步驟開始"
+  },
+  "home.step.sub": {
+    "message": "無需複雜設定 — 只要三個步驟：安裝即可開始。"
+  },
+  "home.step.title1": {
+    "message": "30 秒"
+  },
+  "home.step.title2": {
+    "message": " 擁有第一個腳本"
+  },
+  "home.step1.d": {
+    "message": "從 Chrome / Edge / Firefox 商店一鍵新增，或手動安裝。"
+  },
+  "home.step1.p": {
+    "message": "新增至瀏覽器"
+  },
+  "home.step1.t": {
+    "message": "安裝擴充功能"
+  },
+  "home.step2.d": {
+    "message": "探索 ScriptCat 社群中的數千個腳本，挑選你喜歡的。"
+  },
+  "home.step2.p": {
+    "message": "搜尋：影片速度"
+  },
+  "home.step2.t": {
+    "message": "瀏覽商店"
+  },
+  "home.step3.d": {
+    "message": "點擊安裝，腳本立即在頁面上生效。"
+  },
+  "home.step3.p": {
+    "message": "已安裝 · 立即生效"
+  },
+  "home.step3.t": {
+    "message": "一鍵安裝"
+  },
+  "home.trust.contributors": {
+    "message": "貢獻者"
+  },
+  "home.trust.eyebrow": {
+    "message": "深受全球使用者與開發者信賴"
+  },
+  "home.trust.scripts": {
+    "message": "社群腳本"
+  },
+  "home.trust.stars": {
+    "message": "GitHub 星數"
+  },
+  "home.trust.users": {
+    "message": "安裝使用者"
+  },
+  "homepage.comments.bigonion.content": {
+    "message": "ScriptCat 就是未來。",
+    "description": "bigonion's comment content"
+  },
+  "homepage.comments.bigonion.description": {
+    "message": "ScriptCat 開發者",
+    "description": "bigonion's description in community comments"
+  },
+  "homepage.comments.bigonion.username": {
+    "message": "bigonion",
+    "description": "bigonion's username in community comments"
+  },
+  "homepage.comments.enncy.content": {
+    "message": "由衷感謝油中",
+    "description": "enncy的評論內容"
+  },
+  "homepage.comments.enncy.description": {
+    "message": "著名腳本作者",
+    "description": "enncy在社群評論中的描述"
+  },
+  "homepage.comments.enncy.username": {
+    "message": "Yan Xiaoxi (enncy)",
+    "description": "enncy在社群評論中的使用者名稱"
+  },
+  "homepage.comments.lihengdao.content": {
+    "message": "我們腳本貓真是太棒啦！",
+    "description": "李恆道的評論內容"
+  },
+  "homepage.comments.lihengdao.description": {
+    "message": "油中創始人之一",
+    "description": "李恆道在社群評論中的描述"
+  },
+  "homepage.comments.lihengdao.username": {
+    "message": "李恆道",
+    "description": "李恆道在社群評論中的使用者名稱"
+  },
+  "homepage.comments.oraer.content": {
+    "message": "與 Tampermonkey 的初次相遇！學習 Tampermonkey！超越 Tampermonkey！",
+    "description": "Oraer's comment content"
+  },
+  "homepage.comments.oraer.description": {
+    "message": "Chrome使用者",
+    "description": "Oraer's description in community comments"
+  },
+  "homepage.comments.oraer.username": {
+    "message": "Oraer",
+    "description": "Oraer's username in community comments"
+  },
+  "homepage.comments.qianyu.content": {
+    "message": "一開始，人們都以為這是小眾js外掛。。。。直到。。。",
+    "description": "仟羽的評論內容"
+  },
+  "homepage.comments.qianyu.description": {
+    "message": "Chrome 使用者",
+    "description": "仟羽在社群評論中的描述"
+  },
+  "homepage.comments.qianyu.username": {
+    "message": "仟羽",
+    "description": "仟羽在社群評論中的使用者名稱"
+  },
+  "homepage.comments.student.content": {
+    "message": "感謝油中如此豐富的學習資源，讓我受益匪淺，更好地發展自己的技術能力。腳本貓是一個非常好用的瀏覽器擴充功能，為我提供了便捷和高效的功能。",
+    "description": "學生使用者的評論內容"
+  },
+  "homepage.comments.student.description": {
+    "message": "學生",
+    "description": "學生使用者在社群評論中的描述"
+  },
+  "homepage.comments.student.username": {
+    "message": "為考試發愁",
+    "description": "學生使用者在社群評論中的使用者名稱"
+  },
+  "homepage.comments.wwwwwllllk.content": {
+    "message": "使用 ScriptCat 改善我的上網體驗，在社群中遇見志同道合的人。",
+    "description": "wwwwwllllk's comment content"
+  },
+  "homepage.comments.wwwwwllllk.description": {
+    "message": "前端開發者",
+    "description": "wwwwwllllk's description in community comments"
+  },
+  "homepage.comments.wwwwwllllk.username": {
+    "message": "wwwwwllllk",
+    "description": "wwwwwllllk's username in community comments"
+  },
+  "homepage.features.compatibility.description": {
+    "message": "與 Tampermonkey 和 Violentmonkey 腳本完全相容，零成本無縫遷移。"
+  },
+  "homepage.features.compatibility.title": {
+    "message": "完美相容性"
+  },
+  "homepage.features.easy.description": {
+    "message": "內建編輯器，智慧補全，語法檢查，讓腳本開發更加高效流暢",
+    "description": "Description for easy to use section"
+  },
+  "homepage.features.easy.title": {
+    "message": "易於使用",
+    "description": "Title for easy to use section"
+  },
+  "homepage.features.powerful.description": {
+    "message": "完全相容 Tampermonkey，背景腳本，定時腳本，豐富的 API",
+    "description": "Description for powerful features section"
+  },
+  "homepage.features.powerful.title": {
+    "message": "強大功能",
+    "description": "Title for powerful features section"
+  },
+  "homepage.features.secure.description": {
+    "message": "沙盒機制，權限管理，保障腳本安全執行",
+    "description": "Description for secure and reliable section"
+  },
+  "homepage.features.secure.title": {
+    "message": "安全可靠",
+    "description": "Title for secure and reliable section"
+  },
+  "homepage.features.title.features": {
+    "message": "puissantes"
+  },
+  "homepage.hero.button.getStarted": {
+    "message": "Commencer"
+  },
+  "homepage.hero.button.github": {
+    "message": "GitHub"
+  },
+  "homepage.hero.subtitle": {
+    "message": "一個可以執行使用者腳本的瀏覽器擴充功能，萬物皆可腳本化，讓你的瀏覽器可以做更多的事情！",
+    "description": "The hero subtitle on the homepage"
+  },
+  "homepage.og.description": {
+    "message": "Elevate your browsing experience with ScriptCat. Fully compatible with Tampermonkey."
+  },
+  "homepage.og.title": {
+    "message": "ScriptCat - A Powerful Userscript Engine"
+  },
+  "homepage.twitter.description": {
+    "message": "強大的開源瀏覽器腳本引擎，讓您的瀏覽器做更多",
+    "description": "Twitter card description"
+  },
+  "homepage.twitter.title": {
+    "message": "ScriptCat - 強大的瀏覽器腳本引擎",
+    "description": "Twitter card title"
+  },
+  "uninstall.reason.better": {
+    "message": "找到了更好的替代品"
+  },
+  "uninstall.reason.bug": {
+    "message": "遇到了錯誤或 Bug"
+  },
+  "uninstall.reason.feature": {
+    "message": "缺少我需要的功能"
+  },
+  "uninstall.reason.unused": {
+    "message": "不再需要了"
+  },
+  "home.hero.en": {
+    "message": "為您的瀏覽器賦予超能力。"
   }
 }

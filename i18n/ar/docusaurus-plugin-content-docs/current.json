@@ -1,0 +1,18 @@
+{
+  "version.label": {
+    "message": "التالي",
+    "description": "The label for version current"
+  },
+  "sidebar.dev.category.Agent 智能助手": {
+    "message": "المساعد الذكي Agent",
+    "description": "The label for category Agent in sidebar"
+  },
+  "sidebar.use.category.服务协议": {
+    "message": "اتفاقية الخدمة",
+    "description": "The label for category Service Agreement in sidebar"
+  },
+  "sidebar.use.category.从其它管理器迁移": {
+    "message": "الهجرة من مديري البرامج الآخرين",
+    "description": "The label for category Migrate from other managers in sidebar"
+  }
+}

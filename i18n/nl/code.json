@@ -1,0 +1,1173 @@
+{
+  "footer.community.contact": {
+    "message": "Contact opnemen met team",
+    "description": "Footer community contact team link"
+  },
+  "footer.community.contributing": {
+    "message": "Bijdragehandleiding",
+    "description": "Footer community contributing guide link"
+  },
+  "footer.community.discord": {
+    "message": "Discord-kanaal",
+    "description": "Footer community Discord link"
+  },
+  "footer.community.forum": {
+    "message": "Forumdiscussie",
+    "description": "Footer community forum link"
+  },
+  "footer.community.issues": {
+    "message": "Problemen melden",
+    "description": "Footer community report issues link"
+  },
+  "footer.community.recruiting": {
+    "message": "Werving",
+    "description": "Footer community recruiting badge"
+  },
+  "footer.community.title": {
+    "message": "Community",
+    "description": "Footer community section title"
+  },
+  "footer.copyright.allRightsReserved": {
+    "message": "Alle rechten voorbehouden.",
+    "description": "Footer copyright all rights reserved text"
+  },
+  "footer.copyright.license": {
+    "message": "Licentieovereenkomst",
+    "description": "Footer copyright license link"
+  },
+  "footer.copyright.privacy": {
+    "message": "Privacybeleid",
+    "description": "Footer copyright privacy policy link"
+  },
+  "footer.copyright.terms": {
+    "message": "Gebruiksvoorwaarden",
+    "description": "Footer copyright terms of use link"
+  },
+  "footer.description": {
+    "message": "Een krachtige browserscript-engine die uw webervaring rijker en kleurrijker maakt.",
+    "description": "Footer description"
+  },
+  "footer.product.changelog": {
+    "message": "Wijzigingslogboek",
+    "description": "Footer product changelog link"
+  },
+  "footer.product.features": {
+    "message": "Functies",
+    "description": "Footer product features link"
+  },
+  "footer.product.scriptStore": {
+    "message": "Scriptwinkel",
+    "description": "Footer product script store link"
+  },
+  "footer.product.title": {
+    "message": "Product",
+    "description": "Footer product section title"
+  },
+  "footer.resources.apiReference": {
+    "message": "API-referentie",
+    "description": "Footer resources API reference link"
+  },
+  "footer.resources.devDocs": {
+    "message": "Ontwikkelaarsdocumentatie",
+    "description": "Footer resources development docs link"
+  },
+  "footer.resources.examples": {
+    "message": "Voorbeeldscripts",
+    "description": "Footer resources example scripts link"
+  },
+  "footer.resources.faq": {
+    "message": "Veelgestelde vragen",
+    "description": "Footer resources FAQ link"
+  },
+  "footer.resources.title": {
+    "message": "Bronnen",
+    "description": "Footer resources section title"
+  },
+  "githubStar.button.label": {
+    "message": "Ster",
+    "description": "GitHub star button label"
+  },
+  "githubStar.changelog.subtitle": {
+    "message": "Vindt u deze updates nuttig? Geef ons een ster op GitHub om ons werk te steunen",
+    "description": "GitHub star bar subtitle on changelog page"
+  },
+  "githubStar.changelog.title": {
+    "message": "ScriptCat wordt steeds beter 🚀",
+    "description": "GitHub star bar title on changelog page"
+  },
+  "githubStar.home.subtitle": {
+    "message": "Geef ons een ster als u het nuttig vindt — zo blijven we doorgaan",
+    "description": "GitHub star bar subtitle on homepage"
+  },
+  "githubStar.home.title": {
+    "message": "ScriptCat is gratis & open source",
+    "description": "GitHub star bar title on homepage"
+  },
+  "githubStar.install.subtitle": {
+    "message": "Geef ons een ster op GitHub zodat meer mensen het ontdekken 🌟",
+    "description": "GitHub star bar subtitle on install-complete page"
+  },
+  "githubStar.install.title": {
+    "message": "Bevalt ScriptCat u?",
+    "description": "GitHub star bar title on install-complete page"
+  },
+  "home.comm.btn": {
+    "message": "Bijdragen op GitHub"
+  },
+  "home.comm.eyebrow": {
+    "message": "Open source · OPEN SOURCE"
+  },
+  "home.comm.sub": {
+    "message": "Volledig open source, transparant en gratis. Elke regel code is controleerbaar, elke bijdrager wordt gezien."
+  },
+  "home.comm.title1": {
+    "message": "Gebouwd door de "
+  },
+  "home.comm.title2": {
+    "message": "community"
+  },
+  "home.cta.chip": {
+    "message": "Geïnstalleerd & actief"
+  },
+  "home.cta.eyebrow": {
+    "message": "Gratis · Open source · Geen advertenties"
+  },
+  "home.cta.h1": {
+    "message": "Klaar om uw browser"
+  },
+  "home.cta.h2": {
+    "message": "superkrachten"
+  },
+  "home.cta.h3": {
+    "message": "te geven?"
+  },
+  "home.cta.primary": {
+    "message": "Gratis installeren voor {browser}"
+  },
+  "home.cta.secondary": {
+    "message": "Scripts bekijken"
+  },
+  "home.cta.stores": {
+    "message": "Ondersteunt Edge · Chrome · Firefox · handmatig pakket"
+  },
+  "home.cta.sub": {
+    "message": "Installeer in één klik vanuit de winkel, of download het pakket handmatig. In 30 seconden web-superkrachten ontgrendeld."
+  },
+  "home.dev.api.d": {
+    "message": "Bestandsopslag, cron-planning en cross-origin-verzoeken — allemaal inbegrepen."
+  },
+  "home.dev.api.t": {
+    "message": "Krachtige API's"
+  },
+  "home.dev.apiBtn": {
+    "message": "API-referentie"
+  },
+  "home.dev.bg.d": {
+    "message": "Geen vastgezet tabblad nodig — scripts blijven op de achtergrond draaien."
+  },
+  "home.dev.bg.t": {
+    "message": "Achtergrondscripts"
+  },
+  "home.dev.debug.d": {
+    "message": "Logs, uitvoeringsgeschiedenis en foutopsporing — problemen in één oogopslag."
+  },
+  "home.dev.debug.t": {
+    "message": "Live debuggen"
+  },
+  "home.dev.docsBtn": {
+    "message": "Documentatie lezen"
+  },
+  "home.dev.editor.d": {
+    "message": "Syntaxaccentuering, slimme aanvulling en fouthints maken scripten vloeiend."
+  },
+  "home.dev.editor.t": {
+    "message": "Ingebouwde editor"
+  },
+  "home.dev.eyebrow": {
+    "message": "Gemaakt voor ontwikkelaars · VOOR ONTWIKKELAARS"
+  },
+  "home.dev.mock.name": {
+    "message": "Dagelijkse check-in",
+    "description": "@name value in the editor mock code block"
+  },
+  "home.dev.mock.toast": {
+    "message": "Ingelogd",
+    "description": "Notification text in the editor mock code block"
+  },
+  "home.dev.run": {
+    "message": "Uitvoeren"
+  },
+  "home.dev.sub": {
+    "message": "Achtergrondscripts, rijke API's, een ingebouwde editor en debugtools — van uw eerste regel tot productie, alles op één plek."
+  },
+  "home.dev.title1": {
+    "message": "Maak van uw browser uw "
+  },
+  "home.dev.title2": {
+    "message": "coderuntime"
+  },
+  "home.feat.api.d": {
+    "message": "Rijker dan GM: bestandsopslag, geplande taken en cross-origin-verzoeken binnen handbereik."
+  },
+  "home.feat.api.t": {
+    "message": "Krachtige API's"
+  },
+  "home.feat.bg.d": {
+    "message": "Uniek: scripts blijven op de achtergrond draaien zonder een open tabblad."
+  },
+  "home.feat.bg.t": {
+    "message": "Achtergrondscripts"
+  },
+  "home.feat.compat.b": {
+    "message": "Ondersteunt GM_*-API's · identiek metadatablok"
+  },
+  "home.feat.compat.d": {
+    "message": "Volledig compatibel met het userscript-formaat en GM-API's — bestaande scripts migreren zonder wijzigingen en zonder omschakelingskosten."
+  },
+  "home.feat.compat.t": {
+    "message": "Tampermonkey-compatibel"
+  },
+  "home.feat.devTag": {
+    "message": "Ontwikkelaar"
+  },
+  "home.feat.eyebrow": {
+    "message": "Kerntoepassingen · WAAROM SCRIPTCAT"
+  },
+  "home.feat.secure.d": {
+    "message": "Transparante, controleerbare machtigingen en zichtbaar gedrag — kwaadaardige scripts worden aan de bron gestopt."
+  },
+  "home.feat.secure.t": {
+    "message": "Veilig & betrouwbaar"
+  },
+  "home.feat.store.d": {
+    "message": "Installeer duizenden communityscripts in één klik, of publiceer uw eigen en bouw samen het ecosysteem."
+  },
+  "home.feat.store.stat": {
+    "message": "{count} communityscripts"
+  },
+  "home.feat.store.t": {
+    "message": "Scriptwinkel"
+  },
+  "home.feat.sub": {
+    "message": "Van compatibiliteit tot beveiliging, van dagelijkse gebruikers tot ontwikkelaars — ScriptCat dekt het allemaal."
+  },
+  "home.feat.sync.d": {
+    "message": "Scripts en instellingen synchroniseren tussen apparaten — niets gaat verloren bij wisselen of herinstalleren."
+  },
+  "home.feat.sync.t": {
+    "message": "Cloudsync"
+  },
+  "home.feat.title1": {
+    "message": "Krachtige kern, "
+  },
+  "home.feat.title2": {
+    "message": "gemoedsrust"
+  },
+  "home.hero.browse": {
+    "message": "Scripts bekijken"
+  },
+  "home.hero.chip.background": {
+    "message": "3 scripts draaien op de achtergrond"
+  },
+  "home.hero.chip.installed": {
+    "message": "Script geïnstalleerd"
+  },
+  "home.hero.chip.installedSub": {
+    "message": "Al 100.000+ gebruikers"
+  },
+  "home.hero.eyebrow": {
+    "message": "Open-source userscript-engine · Tampermonkey-compatibel"
+  },
+  "home.hero.installTo": {
+    "message": "Toevoegen aan {browser}"
+  },
+  "home.hero.mock.adblock": {
+    "message": "Advertenties automatisch overslaan"
+  },
+  "home.hero.mock.add": {
+    "message": "Toevoegen uit scriptwinkel"
+  },
+  "home.hero.mock.dark": {
+    "message": "Donkere modus voor pagina's"
+  },
+  "home.hero.mock.running": {
+    "message": "3 scripts draaien op deze pagina"
+  },
+  "home.hero.mock.skip": {
+    "message": "Advertenties overslaan"
+  },
+  "home.hero.mock.speed": {
+    "message": "Videosnelheid regelen"
+  },
+  "home.hero.moreBrowsers": {
+    "message": "Meer browsers"
+  },
+  "home.hero.subhead": {
+    "message": "Blokkeer advertenties, verbeter video, automatiseer het saaie werk — installeer communityscripts in één klik uit de winkel, met achtergrondscripts en krachtige API's voor ontwikkelaars. Tampermonkey-compatibel, dus uw bestaande scripts migreren zonder kosten."
+  },
+  "home.hero.title1": {
+    "message": "Geef uw browser"
+  },
+  "home.hero.title2": {
+    "message": ""
+  },
+  "home.hero.title3": {
+    "message": "superkrachten"
+  },
+  "home.hero.trust": {
+    "message": "Werkt op Chrome · Edge · Firefox — volledig gratis & open source"
+  },
+  "home.install.chrome": {
+    "message": "Toevoegen aan Chrome"
+  },
+  "home.install.edge": {
+    "message": "Toevoegen aan Edge"
+  },
+  "home.install.firefox": {
+    "message": "Toevoegen aan Firefox"
+  },
+  "home.install.guide": {
+    "message": "Installatiehandleiding"
+  },
+  "home.install.manual": {
+    "message": "Pakket downloaden en handmatig installeren"
+  },
+  "home.nav.changelog": {
+    "message": "Wijzigingslogboek"
+  },
+  "home.nav.dev": {
+    "message": "Ontwikkelaars"
+  },
+  "home.nav.docs": {
+    "message": "Documentatie"
+  },
+  "home.nav.install": {
+    "message": "Installeren"
+  },
+  "home.nav.installTo": {
+    "message": "Toevoegen aan {browser}"
+  },
+  "home.nav.menu": {
+    "message": "Menu"
+  },
+  "home.nav.store": {
+    "message": "Scriptwinkel"
+  },
+  "home.nav.theme": {
+    "message": "Thema wisselen"
+  },
+  "home.sc.adblock.d": {
+    "message": "Blokkeer advertenties en pop-ups voor een schone, overzichtelijke pagina."
+  },
+  "home.sc.adblock.l": {
+    "message": "Advertentieblokkerscripts"
+  },
+  "home.sc.adblock.t": {
+    "message": "Advertentieblokkering · Schoner web"
+  },
+  "home.sc.auto.d": {
+    "message": "Automatische check-in, batchacties, een handig klein gereedschapskistje."
+  },
+  "home.sc.auto.l": {
+    "message": "Productiviteitsscripts"
+  },
+  "home.sc.auto.t": {
+    "message": "Productiviteit · Automatisering"
+  },
+  "home.sc.eyebrow": {
+    "message": "Voor iedereen · Geen codeerervaring nodig"
+  },
+  "home.sc.featured.btn": {
+    "message": "Videoscripts bekijken"
+  },
+  "home.sc.featured.c1": {
+    "message": "Snelheidsregeling"
+  },
+  "home.sc.featured.c2": {
+    "message": "Advertentieblokkering"
+  },
+  "home.sc.featured.c3": {
+    "message": "Downloaden"
+  },
+  "home.sc.featured.c4": {
+    "message": "Beeld-in-beeld"
+  },
+  "home.sc.featured.d": {
+    "message": "Snelheidsregeling, automatisch advertenties overslaan, downloaden met één klik, beeld-in-beeld — een betere Bilibili / YouTube / Netflix."
+  },
+  "home.sc.featured.sites": {
+    "message": "Ondersteunt 20+ videosites"
+  },
+  "home.sc.featured.t": {
+    "message": "Video, volledig verbeterd"
+  },
+  "home.sc.featured.tag": {
+    "message": "Meest populair"
+  },
+  "home.sc.read.d": {
+    "message": "Donkere modus, paginavetaling, immersief lezen."
+  },
+  "home.sc.read.l": {
+    "message": "Leesverbeteraars"
+  },
+  "home.sc.read.t": {
+    "message": "Lezen · Vertaling"
+  },
+  "home.sc.shop.d": {
+    "message": "Prijzen overal vergelijken, prijshistoriegrafieken, kortingsbonnen met één klik."
+  },
+  "home.sc.shop.l": {
+    "message": "Winkelhulp"
+  },
+  "home.sc.shop.t": {
+    "message": "Winkelen · Prijsvergelijking"
+  },
+  "home.sc.sub": {
+    "message": "Pak een script uit de winkel — advertenties, video, winkelen, productiviteit, allemaal voor u geregeld."
+  },
+  "home.sc.title1": {
+    "message": "Geen code, gewoon "
+  },
+  "home.sc.title2": {
+    "message": "één klik"
+  },
+  "home.sc.title3": {
+    "message": " om dagelijkse ergernissen op te lossen"
+  },
+  "home.step.eyebrow": {
+    "message": "AAN DE SLAG IN 3 STAPPEN"
+  },
+  "home.step.sub": {
+    "message": "Geen ingewikkelde instellingen — volg drie stappen: installeer en ga."
+  },
+  "home.step.title1": {
+    "message": "30 seconden"
+  },
+  "home.step.title2": {
+    "message": " naar uw eerste script"
+  },
+  "home.step1.d": {
+    "message": "Voeg het in één klik toe vanuit de Chrome / Edge / Firefox-winkel, of installeer handmatig."
+  },
+  "home.step1.p": {
+    "message": "Toevoegen aan browser"
+  },
+  "home.step1.t": {
+    "message": "Installeer de extensie"
+  },
+  "home.step2.d": {
+    "message": "Verken duizenden scripts in de ScriptCat-community en kies een favoriet."
+  },
+  "home.step2.p": {
+    "message": "Zoeken: videosnelheid"
+  },
+  "home.step2.t": {
+    "message": "Bekijk de winkel"
+  },
+  "home.step3.d": {
+    "message": "Klik op installeren en het script werkt meteen op de pagina."
+  },
+  "home.step3.p": {
+    "message": "Geïnstalleerd · nu actief"
+  },
+  "home.step3.t": {
+    "message": "Installeren met één klik"
+  },
+  "home.trust.contributors": {
+    "message": "Bijdragers"
+  },
+  "home.trust.eyebrow": {
+    "message": "VERTROUWD DOOR GEBRUIKERS & ONTWIKKELAARS WERELDWIJD"
+  },
+  "home.trust.scripts": {
+    "message": "Communityscripts"
+  },
+  "home.trust.stars": {
+    "message": "GitHub-sterren"
+  },
+  "home.trust.users": {
+    "message": "Geïnstalleerde gebruikers"
+  },
+  "homepage.comments.bigonion.content": {
+    "message": "ScriptCat is de toekomst.",
+    "description": "bigonion's comment content"
+  },
+  "homepage.comments.bigonion.description": {
+    "message": "ScriptCat-ontwikkelaar",
+    "description": "bigonion's description in community comments"
+  },
+  "homepage.comments.bigonion.username": {
+    "message": "bigonion",
+    "description": "bigonion's username in community comments"
+  },
+  "homepage.comments.enncy.content": {
+    "message": "Hartelijk dank aan de community",
+    "description": "Enncy's comment content"
+  },
+  "homepage.comments.enncy.description": {
+    "message": "Bekende scriptauteur",
+    "description": "Enncy's description in community comments"
+  },
+  "homepage.comments.enncy.username": {
+    "message": "Yan Xiaoxi (enncy)",
+    "description": "Enncy's username in community comments"
+  },
+  "homepage.comments.lihengdao.content": {
+    "message": "ScriptCat is absoluut geweldig!",
+    "description": "Li Hengdao's comment content"
+  },
+  "homepage.comments.lihengdao.description": {
+    "message": "Medeoprichter van Tampermonkey CN",
+    "description": "Li Hengdao's description in community comments"
+  },
+  "homepage.comments.lihengdao.username": {
+    "message": "Li Hengdao",
+    "description": "Li Hengdao's username in community comments"
+  },
+  "homepage.comments.oraer.content": {
+    "message": "Eerste kennismaking met Tampermonkey! Tampermonkey leren! Tampermonkey overtreffen!",
+    "description": "Oraer's comment content"
+  },
+  "homepage.comments.oraer.description": {
+    "message": "Chrome-gebruiker",
+    "description": "Oraer's description in community comments"
+  },
+  "homepage.comments.oraer.username": {
+    "message": "Oraer",
+    "description": "Oraer's username in community comments"
+  },
+  "homepage.comments.qianyu.content": {
+    "message": "Eerst dachten mensen dat dit een niche-JS-plugin was... totdat...",
+    "description": "Qian Yu's comment content"
+  },
+  "homepage.comments.qianyu.description": {
+    "message": "Chrome-gebruiker",
+    "description": "Qian Yu's description in community comments"
+  },
+  "homepage.comments.qianyu.username": {
+    "message": "Qian Yu",
+    "description": "Qian Yu's username in community comments"
+  },
+  "homepage.comments.student.content": {
+    "message": "Dankzij de rijke leermiddelen in de community heb ik veel geleerd en kan ik mijn technische vaardigheden beter ontwikkelen. ScriptCat is een zeer nuttige browserextensie die mij handige en efficiënte functionaliteit biedt.",
+    "description": "Student user's comment content"
+  },
+  "homepage.comments.student.description": {
+    "message": "Student",
+    "description": "Student user's description in community comments"
+  },
+  "homepage.comments.student.username": {
+    "message": "Student",
+    "description": "Student user's username in community comments"
+  },
+  "homepage.comments.wwwwwllllk.content": {
+    "message": "ScriptCat gebruiken om mijn internetervaring te verbeteren en gelijkgestemde mensen in de community te ontmoeten.",
+    "description": "wwwwwllllk's comment content"
+  },
+  "homepage.comments.wwwwwllllk.description": {
+    "message": "Frontend-ontwikkelaar",
+    "description": "wwwwwllllk's description in community comments"
+  },
+  "homepage.comments.wwwwwllllk.username": {
+    "message": "wwwwwllllk",
+    "description": "wwwwwllllk's username in community comments"
+  },
+  "homepage.comparison.feature": {
+    "message": "Functie",
+    "description": "Comparison table header: Feature"
+  },
+  "homepage.comparison.feature.api": {
+    "message": "Krachtige API's",
+    "description": "Comparison feature: Powerful APIs"
+  },
+  "homepage.comparison.feature.background": {
+    "message": "Achtergrondscripts",
+    "description": "Comparison feature: Background scripts"
+  },
+  "homepage.comparison.feature.community": {
+    "message": "Community-ondersteuning",
+    "description": "Comparison feature: Community support"
+  },
+  "homepage.comparison.feature.compatibility": {
+    "message": "Scriptcompatibiliteit",
+    "description": "Comparison feature: Script compatibility"
+  },
+  "homepage.comparison.feature.mv3": {
+    "message": "MV3-ondersteuning",
+    "description": "Comparison feature: MV3 Support"
+  },
+  "homepage.comparison.feature.opensource": {
+    "message": "Gratis & open source",
+    "description": "Comparison feature: Open source"
+  },
+  "homepage.comparison.feature.sync": {
+    "message": "Cloudsync",
+    "description": "Comparison feature: Cloud sync"
+  },
+  "homepage.comparison.label.efficient": {
+    "message": "Efficiënt",
+    "description": "Comparison label: Efficient"
+  },
+  "homepage.comparison.label.multiplatform": {
+    "message": "Multiplatform",
+    "description": "Comparison label: Multi-platform"
+  },
+  "homepage.comparison.subtitle": {
+    "message": "Vergeleken met andere script-engines biedt ScriptCat meer voordelen en verbeterde functies",
+    "description": "Comparison section subtitle"
+  },
+  "homepage.comparison.title.why": {
+    "message": "Waarom kiezen",
+    "description": "Comparison section title part 1"
+  },
+  "homepage.download.chrome": {
+    "message": "Chrome-extensiewinkel",
+    "description": "Download button: Chrome store"
+  },
+  "homepage.download.edge": {
+    "message": "Edge-extensiewinkel",
+    "description": "Download button: Edge store"
+  },
+  "homepage.download.firefox": {
+    "message": "Firefox-extensiewinkel",
+    "description": "Download button: Firefox store"
+  },
+  "homepage.download.github": {
+    "message": "GitHub-download",
+    "description": "Download button: GitHub"
+  },
+  "homepage.download.popup.text": {
+    "message": "3 scripts draaien op deze pagina",
+    "description": "Extension popup text"
+  },
+  "homepage.download.popup.title": {
+    "message": "ScriptCat ingeschakeld",
+    "description": "Extension popup title"
+  },
+  "homepage.download.subtitle": {
+    "message": "Installeer ScriptCat nu en ontgrendel eindeloze mogelijkheden voor web browsen",
+    "description": "Download section subtitle"
+  },
+  "homepage.download.title.enhance": {
+    "message": "Verbeter uw browse-ervaring",
+    "description": "Download section title highlight"
+  },
+  "homepage.download.title.question": {
+    "message": "?",
+    "description": "Download section title part 2"
+  },
+  "homepage.download.title.ready": {
+    "message": "Klaar om",
+    "description": "Download section title part 1"
+  },
+  "homepage.features.api.description": {
+    "message": "Biedt rijkere API-interfaces dan GM en ondersteunt geavanceerde functies zoals bestandsopslag en gebruikersconfiguratie, waardoor scriptmogelijkheden worden uitgebreid.",
+    "description": "Feature description: APIs"
+  },
+  "homepage.features.api.title": {
+    "message": "Krachtige API's",
+    "description": "Feature title: APIs"
+  },
+  "homepage.features.background.description": {
+    "message": "In tegenstelling tot gewone userscripts kunnen uw scripts continu op de achtergrond draaien zonder tabbladen te hoeven openen.",
+    "description": "Feature description: Background scripts"
+  },
+  "homepage.features.background.title": {
+    "message": "Achtergrondscripts",
+    "description": "Feature title: Background scripts"
+  },
+  "homepage.features.compatibility.description": {
+    "message": "Volledig compatibel met Tampermonkey- en Violentmonkey-scripts; migreer uw favoriete scripts moeiteloos."
+  },
+  "homepage.features.compatibility.title": {
+    "message": "Perfecte compatibiliteit"
+  },
+  "homepage.features.easy.description": {
+    "message": "Ingebouwde editor, slimme automatische aanvulling, syntaxcontrole, efficiëntere scriptontwikkeling",
+    "description": "Description for easy to use section"
+  },
+  "homepage.features.easy.title": {
+    "message": "Gebruiksvriendelijk",
+    "description": "Title for easy to use section"
+  },
+  "homepage.features.editor.description": {
+    "message": "Krachtige code-editor met syntaxaccentuering, codeaanvulling en fouthints om script schrijven efficiënter te maken.",
+    "description": "Feature description: Code editor"
+  },
+  "homepage.features.editor.title": {
+    "message": "Ingebouwde code-editor",
+    "description": "Feature title: Code editor"
+  },
+  "homepage.features.powerful.description": {
+    "message": "Volledig compatibel met Tampermonkey, achtergrondscripts, geplande scripts, rijke API",
+    "description": "Description for powerful features section"
+  },
+  "homepage.features.powerful.title": {
+    "message": "Krachtige functies",
+    "description": "Title for powerful features section"
+  },
+  "homepage.features.secure.description": {
+    "message": "Sandbox-mechanisme, machtigingsbeheer, garandeert veilige uitvoering van scripts",
+    "description": "Description for secure and reliable section"
+  },
+  "homepage.features.secure.title": {
+    "message": "Veilig en betrouwbaar",
+    "description": "Title for secure and reliable section"
+  },
+  "homepage.features.security.description": {
+    "message": "Strikt machtigingscontrolesysteem, transparant scriptgedrag, voorkomt effectief kwaadaardige scripts en beschermt uw privacy.",
+    "description": "Feature description: Security"
+  },
+  "homepage.features.security.title": {
+    "message": "Veilig en betrouwbaar",
+    "description": "Feature title: Security"
+  },
+  "homepage.features.store.description": {
+    "message": "Bevat een scriptwinkel voor het installeren van populaire scripts in één klik, of publiceer uw werk om met de community te delen en een actief ecosysteem op te bouwen.",
+    "description": "Feature description: Script store"
+  },
+  "homepage.features.store.title": {
+    "message": "Scriptwinkel",
+    "description": "Feature title: Script store"
+  },
+  "homepage.features.subtitle": {
+    "message": "ScriptCat biedt een reeks krachtige functies waarmee u eenvoudig de mogelijkheden van uw browser uitbreidt en uw eigen webervaring creëert.",
+    "description": "Features section subtitle"
+  },
+  "homepage.features.tampermonkey.description": {
+    "message": "Volledig compatibel met het Tampermonkey-scriptformaat; migreer bestaande scriptbibliotheken naadloos zonder omschakelingskosten.",
+    "description": "Feature description: Tampermonkey compatibility"
+  },
+  "homepage.features.tampermonkey.title": {
+    "message": "Tampermonkey-compatibel",
+    "description": "Feature title: Tampermonkey compatibility"
+  },
+  "homepage.features.title.features": {
+    "message": "krachtige"
+  },
+  "homepage.features.title.possibilities": {
+    "message": "Eindeloze mogelijkheden",
+    "description": "Features section title highlight"
+  },
+  "homepage.features.title.powerful": {
+    "message": "Krachtige functies, ",
+    "description": "Features section title part 1"
+  },
+  "homepage.footer.contributors.title": {
+    "message": "Dank aan alle bijdragers",
+    "description": "Footer contributors section title"
+  },
+  "homepage.hero.browser.chrome": {
+    "message": "Toevoegen aan Chrome-browser",
+    "description": "Button text for Chrome browser"
+  },
+  "homepage.hero.browser.crx": {
+    "message": "Installatiepakket downloaden voor handmatige installatie",
+    "description": "Button text for manual installation"
+  },
+  "homepage.hero.browser.default": {
+    "message": "Extensie installeren in browser",
+    "description": "Default button text for browser installation"
+  },
+  "homepage.hero.browser.edge": {
+    "message": "Toevoegen aan Edge-browser",
+    "description": "Button text for Edge browser"
+  },
+  "homepage.hero.browser.firefox": {
+    "message": "Toevoegen aan Firefox-browser",
+    "description": "Button text for Firefox browser"
+  },
+  "homepage.hero.button.browseScripts": {
+    "message": "Scriptbibliotheek bekijken",
+    "description": "Button text for browsing scripts"
+  },
+  "homepage.hero.button.getStarted": {
+    "message": "Aan de slag"
+  },
+  "homepage.hero.button.github": {
+    "message": "GitHub"
+  },
+  "homepage.hero.subtitle": {
+    "message": "Een browserextensie die userscripts kan uitvoeren; alles kan worden gescript, laat uw browser meer doen!",
+    "description": "The hero subtitle on the homepage"
+  },
+  "homepage.hero.subtitle.highlight": {
+    "message": "Een browserextensie voor het uitvoeren van",
+    "description": "Highlighted subtitle on homepage"
+  },
+  "homepage.hero.subtitle.main": {
+    "message": "ScriptCat is een krachtige open-source browserscript-engine waarmee je eenvoudig webfunctionaliteit kunt aanpassen, advertenties kunt verwijderen, taken kunt automatiseren en je browse-ervaring kunt verbeteren. Compatibel met Tampermonkey en biedt meer functies en optimalisaties.",
+    "description": "Main subtitle description on homepage"
+  },
+  "homepage.hero.subtitle.possibilities": {
+    "message": ", eindeloze mogelijkheden voor uw browser activeren!",
+    "description": "Browser possibilities text"
+  },
+  "homepage.hero.subtitle.userScript": {
+    "message": "gebruikerscripts",
+    "description": "User script highlight"
+  },
+  "homepage.hero.title": {
+    "message": "De ultieme script-engine voor",
+    "description": "Main title on the homepage hero section"
+  },
+  "homepage.hero.title.engine": {
+    "message": "Verbeterde browse-ervaring",
+    "description": "Gradient text in main title"
+  },
+  "homepage.hero.trustBadges.title": {
+    "message": "Vertrouwd en gesteund door de techcommunity",
+    "description": "Trust badges section title"
+  },
+  "homepage.meta.description": {
+    "message": "ScriptCat is een krachtige open-source browserscript-engine waarmee u eenvoudig webfunctionaliteit aanpast, advertenties verwijdert, taken automatiseert en uw browse-ervaring verbetert. Compatibel met Tampermonkey met meer functies.",
+    "description": "Homepage meta description for SEO"
+  },
+  "homepage.meta.keywords": {
+    "message": "ScriptCat,userscript,browserextensie,user script,Tampermonkey,Violentmonkey,achtergrondscripts,geplande scripts,browserautomatisering,advertentieblokkering,scriptwinkel",
+    "description": "Homepage SEO keywords"
+  },
+  "homepage.meta.title": {
+    "message": "ScriptCat - Krachtige browserscript-engine",
+    "description": "Homepage meta title for SEO"
+  },
+  "homepage.og.description": {
+    "message": "Open-source browserscript-engine die uw browser meer laat doen. Ondersteunt userscripts, achtergrondscripts, compatibel met Tampermonkey, krachtigere functies.",
+    "description": "Open Graph description for social sharing"
+  },
+  "homepage.og.title": {
+    "message": "ScriptCat - Krachtige browserscript-engine",
+    "description": "Open Graph title for social sharing"
+  },
+  "homepage.scenario.shopping.feature.alert": {
+    "message": "Prijsdalingmelding",
+    "description": "Shopping feature: Price alert"
+  },
+  "homepage.scenario.shopping.feature.compare": {
+    "message": "Prijsvergelijking",
+    "description": "Shopping feature: Price comparison"
+  },
+  "homepage.scenario.shopping.feature.coupon": {
+    "message": "Automatisch kortingsbonnen zoeken",
+    "description": "Shopping feature: Coupon search"
+  },
+  "homepage.scenario.shopping.feature.history": {
+    "message": "Prijshistorie opvragen",
+    "description": "Shopping feature: Price history"
+  },
+  "homepage.scenario.shopping.subtitle": {
+    "message": "Maak de winkelervaring eenvoudiger",
+    "description": "Shopping scenario subtitle"
+  },
+  "homepage.scenario.shopping.tag": {
+    "message": "Praktische tools",
+    "description": "Shopping scenario tag"
+  },
+  "homepage.scenario.shopping.title": {
+    "message": "Winkelassistent",
+    "description": "Shopping scenario title"
+  },
+  "homepage.scenario.sites.more": {
+    "message": "+Meer",
+    "description": "More sites indicator in scenario cards"
+  },
+  "homepage.scenario.subtitle": {
+    "message": "Zie hoe ScriptCat uw browse-ervaring kan transformeren",
+    "description": "Scenario section subtitle"
+  },
+  "homepage.scenario.title.problems": {
+    "message": "echte problemen",
+    "description": "Scenario section title highlight"
+  },
+  "homepage.scenario.title.scripts": {
+    "message": "",
+    "description": "Scenario section title part 2"
+  },
+  "homepage.scenario.title.solve": {
+    "message": "Scripts die ",
+    "description": "Scenario section title part 1"
+  },
+  "homepage.scenario.video.feature.adblock": {
+    "message": "Automatisch advertenties overslaan",
+    "description": "Video feature: Ad blocking"
+  },
+  "homepage.scenario.video.feature.download": {
+    "message": "Video downloaden met één klik",
+    "description": "Video feature: Download"
+  },
+  "homepage.scenario.video.feature.speed": {
+    "message": "Videosnelheid regelen",
+    "description": "Video feature: Speed control"
+  },
+  "homepage.scenario.video.feature.ui": {
+    "message": "UI vereenvoudigen",
+    "description": "Video feature: UI optimization"
+  },
+  "homepage.scenario.video.getScript": {
+    "message": "Script ophalen →",
+    "description": "Video scenario get script link"
+  },
+  "homepage.scenario.video.sites": {
+    "message": "Ondersteunde sites",
+    "description": "Video scenario supported sites label"
+  },
+  "homepage.scenario.video.subtitle": {
+    "message": "Optimaliseer de video-ervaring",
+    "description": "Video scenario subtitle"
+  },
+  "homepage.scenario.video.tag": {
+    "message": "Populaire apps",
+    "description": "Video scenario tag"
+  },
+  "homepage.scenario.video.title": {
+    "message": "Verbetering van videosites",
+    "description": "Video scenario title"
+  },
+  "homepage.twitter.description": {
+    "message": "Open-source browserscript-engine die uw browser meer laat doen",
+    "description": "Twitter card description"
+  },
+  "homepage.twitter.title": {
+    "message": "ScriptCat - Krachtige browserscript-engine",
+    "description": "Twitter card title"
+  },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "Terug naar boven",
+    "description": "The ARIA label for the back to top button"
+  },
+  "theme.ErrorPageContent.title": {
+    "message": "Deze pagina is gecrasht.",
+    "description": "The title of the fallback page when the page crashed"
+  },
+  "theme.blog.archive.description": {
+    "message": "Archief",
+    "description": "The page & hero description of the blog archive page"
+  },
+  "theme.blog.archive.title": {
+    "message": "Archief",
+    "description": "The page & hero title of the blog archive page"
+  },
+  "theme.blog.paginator.navAriaLabel": {
+    "message": "Navigatie van bloglijstpagina",
+    "description": "The ARIA label for the blog pagination"
+  },
+  "theme.blog.paginator.newerEntries": {
+    "message": "Nieuwere berichten",
+    "description": "The label used to navigate to the newer blog posts page (previous page)"
+  },
+  "theme.blog.paginator.olderEntries": {
+    "message": "Oudere berichten",
+    "description": "The label used to navigate to the older blog posts page (next page)"
+  },
+  "theme.blog.post.paginator.navAriaLabel": {
+    "message": "Navigatie van blogberichtpagina",
+    "description": "The ARIA label for the blog posts pagination"
+  },
+  "theme.blog.post.paginator.newerPost": {
+    "message": "Nieuwer bericht",
+    "description": "The blog post button label to navigate to the newer/previous post"
+  },
+  "theme.blog.post.paginator.olderPost": {
+    "message": "Ouder bericht",
+    "description": "The blog post button label to navigate to the older/next post"
+  },
+  "theme.blog.post.plurals": {
+    "message": "{count} artikelen",
+    "description": "Pluralized label for \"{count} posts\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.blog.tagTitle": {
+    "message": "{nPosts} getagd met \"{tagName}\"",
+    "description": "The title of the page for a blog tag"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "Alle tags bekijken",
+    "description": "The label of the link targeting the tag list page"
+  },
+  "uninstall.bug.alert.button": {
+    "message": "Probleem melden op GitHub",
+    "description": "Bug alert button text"
+  },
+  "uninstall.bug.alert.description": {
+    "message": "Als u een fout of bug tegenkomt, raden we aan direct een issue op GitHub aan te maken voor snellere feedback en technische ondersteuning.",
+    "description": "Bug alert description"
+  },
+  "uninstall.bug.alert.title": {
+    "message": "Een bug tegengekomen?",
+    "description": "Bug alert title"
+  },
+  "uninstall.button.submit": {
+    "message": "Feedback versturen",
+    "description": "Submit button text"
+  },
+  "uninstall.description": {
+    "message": "Bedankt voor het gebruik van ScriptCat. Vertel ons waarom u het verwijdert.",
+    "description": "Description of the uninstall survey page"
+  },
+  "uninstall.error.submit": {
+    "message": "Verzenden mislukt, probeer het later opnieuw",
+    "description": "Error message when submission fails"
+  },
+  "uninstall.feature.alert.button": {
+    "message": "Functie voorstellen op GitHub",
+    "description": "Feature alert button text"
+  },
+  "uninstall.feature.alert.description": {
+    "message": "We hechten veel waarde aan functieverzoeken! We raden aan uw gewenste functies gedetailleerd op GitHub te beschrijven, zodat we uw behoeften beter begrijpen en de implementatie prioriteren.",
+    "description": "Feature alert description"
+  },
+  "uninstall.feature.alert.title": {
+    "message": "Een functie mist?",
+    "description": "Feature alert title"
+  },
+  "uninstall.feedback.placeholder": {
+    "message": "Deel uw specifieke problemen, suggesties of andere gedachten...",
+    "description": "Placeholder text for feedback textarea"
+  },
+  "uninstall.header.subtitle": {
+    "message": "Als u wilt, horen we graag uw gedachten om ons te helpen blijven verbeteren",
+    "description": "Subtitle on uninstall survey page"
+  },
+  "uninstall.header.title": {
+    "message": "Jammer dat u ScriptCat verwijdert",
+    "description": "Main header title on uninstall survey page"
+  },
+  "uninstall.question.feedback": {
+    "message": "Wilt u, als het uitkomt, meer details delen?",
+    "description": "Question about detailed feedback"
+  },
+  "uninstall.question.reason": {
+    "message": "Wat is de belangrijkste reden dat u ScriptCat verwijdert?",
+    "description": "Question about uninstall reason"
+  },
+  "uninstall.reason.alternative": {
+    "message": "Een beter alternatief gevonden",
+    "description": "Uninstall reason: found alternative"
+  },
+  "uninstall.reason.better": {
+    "message": "Een beter alternatief gevonden"
+  },
+  "uninstall.reason.bug": {
+    "message": "Fouten of bugs tegengekomen"
+  },
+  "uninstall.reason.bugs": {
+    "message": "Fouten of bugs tegengekomen",
+    "description": "Uninstall reason: bugs"
+  },
+  "uninstall.reason.feature": {
+    "message": "Een functie die ik nodig heb ontbreekt"
+  },
+  "uninstall.reason.features": {
+    "message": "Functies die ik nodig heb ontbreken",
+    "description": "Uninstall reason: missing features"
+  },
+  "uninstall.reason.no_need": {
+    "message": "Heb ScriptCat niet langer nodig",
+    "description": "Uninstall reason: no longer need"
+  },
+  "uninstall.reason.other": {
+    "message": "Andere redenen",
+    "description": "Uninstall reason: other"
+  },
+  "uninstall.reason.unused": {
+    "message": "Heb het niet langer nodig"
+  },
+  "uninstall.reinstall.chrome": {
+    "message": "Chrome Web Store",
+    "description": "Reinstall from Chrome Web Store button"
+  },
+  "uninstall.reinstall.edge": {
+    "message": "Edge Add-ons",
+    "description": "Reinstall from Edge Add-ons button"
+  },
+  "uninstall.reinstall.firefox": {
+    "message": "Firefox Add-ons",
+    "description": "Reinstall from Firefox Add-ons button"
+  },
+  "uninstall.reinstall.message": {
+    "message": "Als u van gedachten verandert, kunt u altijd opnieuw installeren:",
+    "description": "Reinstall message"
+  },
+  "uninstall.sidebar.help.description": {
+    "message": "Problemen? We staan klaar om u te helpen",
+    "description": "Sidebar help description"
+  },
+  "uninstall.sidebar.help.docs": {
+    "message": "Documentatie bekijken",
+    "description": "View docs button"
+  },
+  "uninstall.sidebar.help.github": {
+    "message": "GitHub-issues",
+    "description": "GitHub issues button"
+  },
+  "uninstall.sidebar.help.title": {
+    "message": "Hulp nodig?",
+    "description": "Sidebar help title"
+  },
+  "uninstall.sidebar.reinstall.title": {
+    "message": "U bent altijd welkom",
+    "description": "Sidebar reinstall title"
+  },
+  "uninstall.success.submitted": {
+    "message": "Bedankt voor uw feedback!",
+    "description": "Success message after submission"
+  },
+  "uninstall.thanks.backHome": {
+    "message": "Terug naar start",
+    "description": "Back to home button"
+  },
+  "uninstall.thanks.considerReinstall": {
+    "message": "Als u van gedachten verandert, bent u altijd welkom",
+    "description": "Consider reinstall message"
+  },
+  "uninstall.thanks.message": {
+    "message": "Uw feedback is van onschatbare waarde en helpt ons ScriptCat te verbeteren.",
+    "description": "Thank you page message"
+  },
+  "uninstall.thanks.reportIssue": {
+    "message": "Probleem melden",
+    "description": "Report issue button"
+  },
+  "uninstall.thanks.submitAnother": {
+    "message": "Andere feedback versturen",
+    "description": "Submit another feedback button"
+  },
+  "uninstall.thanks.title": {
+    "message": "Bedankt voor uw feedback!",
+    "description": "Thank you page title"
+  },
+  "uninstall.title": {
+    "message": "Verwijderingsenquête",
+    "description": "Title of the uninstall survey page"
+  },
+  "uninstall.warning.selectReason": {
+    "message": "Selecteer een verwijderingsreden",
+    "description": "Warning when no reason is selected"
+  },
+  "home.hero.en": {
+    "message": "Superkrachten voor je browser."
+  },
+  "home.search.kw.adblock": {
+    "message": "adblocker",
+    "description": "Search keyword for adblock"
+  },
+  "home.search.kw.shopping": {
+    "message": "winkelen",
+    "description": "Search keyword for shopping"
+  },
+  "home.search.kw.automation": {
+    "message": "automatisering",
+    "description": "Search keyword for automation"
+  },
+  "home.search.kw.translation": {
+    "message": "vertaling",
+    "description": "Search keyword for translation"
+  },
+  "home.search.kw.video": {
+    "message": "video",
+    "description": "Search keyword for video"
+  },
+  "ad.label": {
+    "message": "Advertisement",
+    "description": "Label shown above an advertisement slot"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "link.item.label.Discord": {
+    "message": "Discord",
+    "description": "The label of footer link with label=Discord linking to https://discord.gg/JF76nHCCM7"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "The label of footer link with label=GitHub linking to https://github.com/scriptscat/scriptcat"
+  },
+  "link.title.Docs": {
+    "message": "Dokumentasi",
+    "description": "The title of the footer links column with title=Docs in the footer"
+  },
+  "link.title.Community": {
+    "message": "Komunitas",
+    "description": "The title of the footer links column with title=Community in the footer"
+  },
+  "link.title.More": {
+    "message": "Lainnya",
+    "description": "The title of the footer links column with title=More in the footer"
+  },
+  "link.item.label.使用指南": {
+    "message": "Panduan Penggunaan",
+    "description": "The label of footer link with label=使用指南"
+  },
+  "link.item.label.开发指南": {
+    "message": "Panduan Pengembang",
+    "description": "The label of footer link with label=开发指南"
+  },
+  "link.item.label.油猴中文网": {
+    "message": "Forum Tampermonkey Tiongkok",
+    "description": "The label of footer link with label=油猴中文网"
+  },
+  "link.item.label.脚本猫脚本站": {
+    "message": "Situs Script ScriptCat",
+    "description": "The label of footer link with label=脚本猫脚本站"
+  },
+  "copyright": {
+    "message": "Hak Cipta © {year} ScriptCat, Inc. Dibangun dengan Docusaurus.",
+    "description": "The footer copyright"
+  }
+}
