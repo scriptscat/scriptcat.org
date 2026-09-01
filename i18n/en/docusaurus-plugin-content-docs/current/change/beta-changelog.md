@@ -19,6 +19,38 @@ You can obtain pre-release versions from the [Release](https://github.com/script
 
 Additionally, besides pre-releases, ScriptCat builds the extension on [Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml) after each code commit is merged to the main branch. If you want to experience the latest features or fixes, you can download them from the [Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml) page.
 
+<a name="1.5.0-beta.3"></a>
+
+## 1.5.0-beta.3 (2026-09-01)
+
+This pre-release introduces Network Rules (DNR), which can strip CSP and other response headers, rewrite request/response headers, and block or redirect requests on a per-domain basis. Popup site-scope actions are now always available and reversible, and several Firefox sandbox, Popup script list, and multi-device sync ordering issues are fixed.
+
+### 🚀 Major New Features
+
+- ✨ Added Network Rules (DNR): strip CSP / X-Frame-Options and other response headers, rewrite request and response headers, block or redirect requests on matched domains, with scenario templates, rule ordering, bulk actions, quota hints, and match testing ([#1598](https://github.com/scriptscat/scriptcat/pull/1598)) (by @cyfung1031)
+- ✨ Popup site-scope actions are now always available; "Exclude on X" now removes the site from `@match` where possible instead of always writing an `@exclude` rule ([#1696](https://github.com/scriptscat/scriptcat/pull/1696)) (by @CodFrm)
+
+### 🔒 Security Improvements
+
+- 🔒 Restricted Agent OPFS write operations to the workspace directory, and added rename and move support [#1572](https://github.com/scriptscat/scriptcat/issues/1572) ([#1578](https://github.com/scriptscat/scriptcat/pull/1578)) (by @cyfung1031)
+
+### 🐛 Bug Fixes
+
+- 🐛 Fixed the Firefox `@inject-into content` script sandbox missing EventTarget methods, leaking a self-reference, and having interface objects stripped ([#1692](https://github.com/scriptscat/scriptcat/pull/1692)) ([#1697](https://github.com/scriptscat/scriptcat/pull/1697)) (by @CodFrm)
+- 🐛 Fixed the Popup "scripts globally disabled" notice showing inconsistently while the current-page script list stayed empty ([#1694](https://github.com/scriptscat/scriptcat/pull/1694)) (by @CodFrm)
+- 🐛 Fixed false positives in the Popup "scripts running on this page" list: non-runnable pages are filtered out and iframe scripts are shown again [#1687](https://github.com/scriptscat/scriptcat/issues/1687) ([#1689](https://github.com/scriptscat/scriptcat/pull/1689)) (by @CodFrm)
+- 🐛 Fixed script ordering getting scrambled when syncing across multiple devices [#1682](https://github.com/scriptscat/scriptcat/issues/1682) ([#1690](https://github.com/scriptscat/scriptcat/pull/1690)) (by @CodFrm)
+- 🐛 Fixed the "new script" button click being swallowed by its hover menu; it now creates a user script directly [#1699](https://github.com/scriptscat/scriptcat/issues/1699) ([#1704](https://github.com/scriptscat/scriptcat/pull/1704)) (by @CodFrm)
+
+### 🎨 UI Improvements
+
+- 💄 Unified the three desktop and mobile list pages into responsive list rows, fixing script names being squeezed out in narrow windows [#1698](https://github.com/scriptscat/scriptcat/issues/1698) ([#1709](https://github.com/scriptscat/scriptcat/pull/1709)) (by @CodFrm)
+- 💄 When the menu expand count is 0, the expanded Popup menu now appears before Edit / Script settings ([#1688](https://github.com/scriptscat/scriptcat/pull/1688)) (by @CodFrm)
+
+### Others
+
+- 🔧 Update-check failure logs now include the specific URL, making problems easier to diagnose ([#1693](https://github.com/scriptscat/scriptcat/pull/1693)) (by @cyfung1031)
+
 <a name="1.5.0-beta.2"></a>
 
 ## 1.5.0-beta.2 (2026-08-21)

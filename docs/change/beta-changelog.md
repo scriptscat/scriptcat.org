@@ -19,6 +19,38 @@ import GithubStar from '@site/src/components/GithubStar';
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+<a name="1.5.0-beta.3"></a>
+
+## 1.5.0-beta.3 (2026-09-01)
+
+本次预发布带来「网络规则管理（DNR）」，可按域名移除 CSP 等响应头、改写请求/响应头、屏蔽或重定向请求；Popup 站点范围快捷操作改为常驻且可逆；并修复 Firefox 脚本沙盒、Popup 脚本列表与多设备同步排序等问题。
+
+### 🚀 主要新功能
+
+- ✨ 新增网络规则管理（DNR）：按域名移除 CSP / X-Frame-Options 等响应头、改写请求头与响应头、屏蔽或重定向请求，支持场景模板、规则排序、批量操作、配额提示与匹配测试 ([#1598](https://github.com/scriptscat/scriptcat/pull/1598)) (by @cyfung1031)
+- ✨ Popup 站点范围快捷操作改为常驻，「排除在 X 上执行」优先移出 `@match` 而非写死 `@exclude` ([#1696](https://github.com/scriptscat/scriptcat/pull/1696)) (by @CodFrm)
+
+### 🔒 安全性改进
+
+- 🔒 限制 Agent OPFS 写操作至 workspace 目录，并支持重命名与移动 [#1572](https://github.com/scriptscat/scriptcat/issues/1572) ([#1578](https://github.com/scriptscat/scriptcat/pull/1578)) (by @cyfung1031)
+
+### 🐛 Bug 修复
+
+- 🐛 修复 Firefox 下 `@inject-into content` 脚本沙盒缺失 EventTarget 方法、自引用逃逸与接口物件被剥空 ([#1692](https://github.com/scriptscat/scriptcat/pull/1692)) ([#1697](https://github.com/scriptscat/scriptcat/pull/1697)) (by @CodFrm)
+- 🐛 修复 Popup 全局关闭提示时有时无、且当前页脚本列表为空 ([#1694](https://github.com/scriptscat/scriptcat/pull/1694)) (by @CodFrm)
+- 🐛 修复 Popup「当前页运行脚本」误报：过滤不可运行页面并恢复 iframe 脚本显示 [#1687](https://github.com/scriptscat/scriptcat/issues/1687) ([#1689](https://github.com/scriptscat/scriptcat/pull/1689)) (by @CodFrm)
+- 🐛 修复多设备同步脚本排序错乱 [#1682](https://github.com/scriptscat/scriptcat/issues/1682) ([#1690](https://github.com/scriptscat/scriptcat/pull/1690)) (by @CodFrm)
+- 🐛 修复新建脚本按钮点击被 hover 菜单吞掉，改为直接新建用户脚本 [#1699](https://github.com/scriptscat/scriptcat/issues/1699) ([#1704](https://github.com/scriptscat/scriptcat/pull/1704)) (by @CodFrm)
+
+### 🎨 UI 改进
+
+- 💄 桌面与移动三页列表统一为自适应列表行，修复窄窗口下脚本名被挤没 [#1698](https://github.com/scriptscat/scriptcat/issues/1698) ([#1709](https://github.com/scriptscat/scriptcat/pull/1709)) (by @CodFrm)
+- 💄 菜单展开数量为 0 时，Popup 展开的菜单排在编辑 / 脚本设置之前 ([#1688](https://github.com/scriptscat/scriptcat/pull/1688)) (by @CodFrm)
+
+### 其它
+
+- 🔧 检查更新失败的日志附带具体 URL，便于定位问题 ([#1693](https://github.com/scriptscat/scriptcat/pull/1693)) (by @cyfung1031)
+
 <a name="1.5.0-beta.2"></a>
 
 ## 1.5.0-beta.2 (2026-08-21)
