@@ -19,10 +19,6 @@
     "message": "Sorun Bildir",
     "description": "Footer community report issues link"
   },
-  "footer.community.recruiting": {
-    "message": "İşe Alım",
-    "description": "Footer community recruiting badge"
-  },
   "footer.community.title": {
     "message": "Topluluk",
     "description": "Footer community section title"
@@ -241,9 +237,6 @@
   },
   "home.feat.store.d": {
     "message": "Binlerce topluluk komut dosyasını tek tıkla kurun veya kendi eserlerinizi yayınlayıp ekosistemi birlikte inşa edin."
-  },
-  "home.feat.store.stat": {
-    "message": "{count} topluluk komut dosyası"
   },
   "home.feat.store.t": {
     "message": "Komut dosyası mağazası"
@@ -488,337 +481,6 @@
   "home.trust.users": {
     "message": "Kurulu kullanıcı"
   },
-  "homepage.comments.bigonion.content": {
-    "message": "ScriptCat gelecektir.",
-    "description": "bigonion's comment content"
-  },
-  "homepage.comments.bigonion.description": {
-    "message": "ScriptCat Geliştiricisi",
-    "description": "bigonion's description in community comments"
-  },
-  "homepage.comments.bigonion.username": {
-    "message": "bigonion",
-    "description": "bigonion's username in community comments"
-  },
-  "homepage.comments.enncy.content": {
-    "message": "Topluluğa içten teşekkürler",
-    "description": "Enncy's comment content"
-  },
-  "homepage.comments.enncy.description": {
-    "message": "Ünlü Komut Dosyası Yazarı",
-    "description": "Enncy's description in community comments"
-  },
-  "homepage.comments.enncy.username": {
-    "message": "Yan Xiaoxi (enncy)",
-    "description": "Enncy's username in community comments"
-  },
-  "homepage.comments.lihengdao.content": {
-    "message": "ScriptCat kesinlikle harika!",
-    "description": "Li Hengdao's comment content"
-  },
-  "homepage.comments.lihengdao.description": {
-    "message": "Tampermonkey CN Kurucu Ortağı",
-    "description": "Li Hengdao's description in community comments"
-  },
-  "homepage.comments.lihengdao.username": {
-    "message": "Li Hengdao",
-    "description": "Li Hengdao's username in community comments"
-  },
-  "homepage.comments.oraer.content": {
-    "message": "Tampermonkey ile ilk karşılaşma! Tampermonkey öğrenmek! Tampermonkey'i aşmak!",
-    "description": "Oraer's comment content"
-  },
-  "homepage.comments.oraer.description": {
-    "message": "Chrome Kullanıcısı",
-    "description": "Oraer's description in community comments"
-  },
-  "homepage.comments.oraer.username": {
-    "message": "Oraer",
-    "description": "Oraer's username in community comments"
-  },
-  "homepage.comments.qianyu.content": {
-    "message": "İlk başta bunun niş bir JS eklentisi olduğunu düşündüler... ta ki...",
-    "description": "Qian Yu's comment content"
-  },
-  "homepage.comments.qianyu.description": {
-    "message": "Chrome Kullanıcısı",
-    "description": "Qian Yu's description in community comments"
-  },
-  "homepage.comments.qianyu.username": {
-    "message": "Qian Yu",
-    "description": "Qian Yu's username in community comments"
-  },
-  "homepage.comments.student.content": {
-    "message": "Topluluktaki zengin öğrenme kaynakları sayesinde çok faydalandım ve teknik yeteneklerimi daha iyi geliştirebiliyorum. ScriptCat bana kolay ve verimli işlevler sağlayan çok kullanışlı bir tarayıcı uzantısıdır.",
-    "description": "Student user's comment content"
-  },
-  "homepage.comments.student.description": {
-    "message": "Öğrenci",
-    "description": "Student user's description in community comments"
-  },
-  "homepage.comments.student.username": {
-    "message": "Student",
-    "description": "Student user's username in community comments"
-  },
-  "homepage.comments.wwwwwllllk.content": {
-    "message": "ScriptCat'i kullanarak internet deneyimimi geliştiriyor, toplulukta aynı görüşteki insanlarla tanışıyorum.",
-    "description": "wwwwwllllk's comment content"
-  },
-  "homepage.comments.wwwwwllllk.description": {
-    "message": "Ön Uç Geliştiricisi",
-    "description": "wwwwwllllk's description in community comments"
-  },
-  "homepage.comments.wwwwwllllk.username": {
-    "message": "wwwwwllllk",
-    "description": "wwwwwllllk's username in community comments"
-  },
-  "homepage.comparison.feature": {
-    "message": "Özellik",
-    "description": "Comparison table header: Feature"
-  },
-  "homepage.comparison.feature.api": {
-    "message": "Güçlü API'ler",
-    "description": "Comparison feature: Powerful APIs"
-  },
-  "homepage.comparison.feature.background": {
-    "message": "Arka Plan Komut Dosyaları",
-    "description": "Comparison feature: Background scripts"
-  },
-  "homepage.comparison.feature.community": {
-    "message": "Topluluk Desteği",
-    "description": "Comparison feature: Community support"
-  },
-  "homepage.comparison.feature.compatibility": {
-    "message": "Komut Dosyası Uyumluluğu",
-    "description": "Comparison feature: Script compatibility"
-  },
-  "homepage.comparison.feature.mv3": {
-    "message": "MV3 Desteği",
-    "description": "Comparison feature: MV3 Support"
-  },
-  "homepage.comparison.feature.opensource": {
-    "message": "Açık Kaynak Ücretsiz",
-    "description": "Comparison feature: Open source"
-  },
-  "homepage.comparison.feature.sync": {
-    "message": "Bulut Senkronizasyonu",
-    "description": "Comparison feature: Cloud sync"
-  },
-  "homepage.comparison.label.efficient": {
-    "message": "Verimli",
-    "description": "Comparison label: Efficient"
-  },
-  "homepage.comparison.label.multiplatform": {
-    "message": "Çoklu platform",
-    "description": "Comparison label: Multi-platform"
-  },
-  "homepage.comparison.subtitle": {
-    "message": "Diğer komut dosyası motorlarıyla karşılaştırıldığında ScriptCat daha fazla avantaj ve gelişmiş özellik sunar",
-    "description": "Comparison section subtitle"
-  },
-  "homepage.comparison.title.why": {
-    "message": "Neden Seçmeli",
-    "description": "Comparison section title part 1"
-  },
-  "homepage.download.chrome": {
-    "message": "Chrome Uzantı Mağazası",
-    "description": "Download button: Chrome store"
-  },
-  "homepage.download.edge": {
-    "message": "Edge Uzantı Mağazası",
-    "description": "Download button: Edge store"
-  },
-  "homepage.download.firefox": {
-    "message": "Firefox Uzantı Mağazası",
-    "description": "Download button: Firefox store"
-  },
-  "homepage.download.github": {
-    "message": "GitHub indirme",
-    "description": "Download button: GitHub"
-  },
-  "homepage.download.popup.text": {
-    "message": "Geçerli sayfada 3 komut dosyası çalışıyor",
-    "description": "Extension popup text"
-  },
-  "homepage.download.popup.title": {
-    "message": "ScriptCat Etkin",
-    "description": "Extension popup title"
-  },
-  "homepage.download.subtitle": {
-    "message": "Şimdi ScriptCat'i kurun ve web'de gezinmenin sınırsız olanaklarını keşfedin",
-    "description": "Download section subtitle"
-  },
-  "homepage.download.title.enhance": {
-    "message": "Tarama Deneyiminizi Geliştirin",
-    "description": "Download section title highlight"
-  },
-  "homepage.download.title.question": {
-    "message": "?",
-    "description": "Download section title part 2"
-  },
-  "homepage.download.title.ready": {
-    "message": "Hazır",
-    "description": "Download section title part 1"
-  },
-  "homepage.features.api.description": {
-    "message": "GM'den daha zengin API arayüzleri sunar, dosya depolama ve kullanıcı yapılandırması gibi gelişmiş özellikleri destekleyerek komut dosyası yeteneklerini genişletir.",
-    "description": "Feature description: APIs"
-  },
-  "homepage.features.api.title": {
-    "message": "Güçlü API'ler",
-    "description": "Feature title: APIs"
-  },
-  "homepage.features.background.description": {
-    "message": "Normal kullanıcı komut dosyalarından farklı olarak, komut dosyalarınızın sekme açmadan arka planda sürekli çalışmasını sağlar.",
-    "description": "Feature description: Background scripts"
-  },
-  "homepage.features.background.title": {
-    "message": "Arka Plan Komut Dosyaları",
-    "description": "Feature title: Background scripts"
-  },
-  "homepage.features.compatibility.description": {
-    "message": "Tampermonkey ve Violentmonkey komut dosyalarıyla tamamen uyumludur, sevdiğiniz komut dosyalarınızı zahmetsizce taşıyın."
-  },
-  "homepage.features.compatibility.title": {
-    "message": "Mükemmel uyumluluk"
-  },
-  "homepage.features.easy.description": {
-    "message": "Yerleşik düzenleyici, akıllı otomatik tamamlama, sözdizimi denetimi ile daha verimli komut dosyası geliştirme",
-    "description": "Description for easy to use section"
-  },
-  "homepage.features.easy.title": {
-    "message": "Kullanımı kolay",
-    "description": "Title for easy to use section"
-  },
-  "homepage.features.editor.description": {
-    "message": "Sözdizimi vurgulama, kod tamamlama ve hata ipuçları sunan güçlü kod düzenleyici, komut dosyası yazmayı daha verimli hale getirir.",
-    "description": "Feature description: Code editor"
-  },
-  "homepage.features.editor.title": {
-    "message": "Yerleşik Kod Düzenleyici",
-    "description": "Feature title: Code editor"
-  },
-  "homepage.features.powerful.description": {
-    "message": "Tampermonkey ile tam uyumlu, arka plan komut dosyaları, zamanlanmış komut dosyaları, zengin API",
-    "description": "Description for powerful features section"
-  },
-  "homepage.features.powerful.title": {
-    "message": "Güçlü özellikler",
-    "description": "Title for powerful features section"
-  },
-  "homepage.features.secure.description": {
-    "message": "Korumalı alan mekanizması, izin yönetimi, komut dosyalarının güvenli çalışmasını garanti eder",
-    "description": "Description for secure and reliable section"
-  },
-  "homepage.features.secure.title": {
-    "message": "Güvenli ve güvenilir",
-    "description": "Title for secure and reliable section"
-  },
-  "homepage.features.security.description": {
-    "message": "Sıkı izin kontrol sistemi, şeffaf komut dosyası davranışı, kötü amaçlı komut dosyalarını etkili şekilde engeller ve gizliliğinizi korur.",
-    "description": "Feature description: Security"
-  },
-  "homepage.features.security.title": {
-    "message": "Güvenli ve Güvenilir",
-    "description": "Feature title: Security"
-  },
-  "homepage.features.store.description": {
-    "message": "Popüler komut dosyalarını tek tıkla kurmak için komut dosyası mağazası sunar veya eserlerinizi toplulukla paylaşmak üzere yayınlayarak aktif bir ekosistem inşa eder.",
-    "description": "Feature description: Script store"
-  },
-  "homepage.features.store.title": {
-    "message": "Komut Dosyası Mağazası",
-    "description": "Feature title: Script store"
-  },
-  "homepage.features.subtitle": {
-    "message": "ScriptCat, tarayıcınızın yeteneklerini kolayca genişletmenize ve kendi web deneyiminizi oluşturmanıza olanak tanıyan bir dizi güçlü özellik sunar.",
-    "description": "Features section subtitle"
-  },
-  "homepage.features.tampermonkey.description": {
-    "message": "Tampermonkey komut dosyası formatıyla tam uyumludur, mevcut komut dosyası kitaplıklarınızı sıfır geçiş maliyetiyle sorunsuz taşır.",
-    "description": "Feature description: Tampermonkey compatibility"
-  },
-  "homepage.features.tampermonkey.title": {
-    "message": "Tampermonkey Uyumlu",
-    "description": "Feature title: Tampermonkey compatibility"
-  },
-  "homepage.features.title.features": {
-    "message": "Sınırsız Olanaklar"
-  },
-  "homepage.features.title.possibilities": {
-    "message": "Sınırsız Olanaklar",
-    "description": "Features section title highlight"
-  },
-  "homepage.features.title.powerful": {
-    "message": "Güçlü Özellikler, ",
-    "description": "Features section title part 1"
-  },
-  "homepage.footer.contributors.title": {
-    "message": "Tüm katkıda bulunanlara teşekkürler",
-    "description": "Footer contributors section title"
-  },
-  "homepage.hero.browser.chrome": {
-    "message": "Chrome Tarayıcıya Ekle",
-    "description": "Button text for Chrome browser"
-  },
-  "homepage.hero.browser.crx": {
-    "message": "Elle Kurulum için Kurulum Paketini İndir",
-    "description": "Button text for manual installation"
-  },
-  "homepage.hero.browser.default": {
-    "message": "Uzantıyı Tarayıcıya Kur",
-    "description": "Default button text for browser installation"
-  },
-  "homepage.hero.browser.edge": {
-    "message": "Edge Tarayıcıya Ekle",
-    "description": "Button text for Edge browser"
-  },
-  "homepage.hero.browser.firefox": {
-    "message": "Firefox Tarayıcıya Ekle",
-    "description": "Button text for Firefox browser"
-  },
-  "homepage.hero.button.browseScripts": {
-    "message": "Komut Dosyası Kitaplığına Göz At",
-    "description": "Button text for browsing scripts"
-  },
-  "homepage.hero.button.getStarted": {
-    "message": "Başla"
-  },
-  "homepage.hero.button.github": {
-    "message": "GitHub"
-  },
-  "homepage.hero.subtitle": {
-    "message": "Kullanıcı komut dosyalarını çalıştırabilen bir tarayıcı uzantısı, her şey komut dosyasıyla yapılabilir, tarayıcınızın daha fazlasını yapmasını sağlayın!",
-    "description": "The hero subtitle on the homepage"
-  },
-  "homepage.hero.subtitle.highlight": {
-    "message": "Şunları çalıştıran bir tarayıcı uzantısı:",
-    "description": "Highlighted subtitle on homepage"
-  },
-  "homepage.hero.subtitle.main": {
-    "message": "ScriptCat, web işlevlerini kolayca özelleştirmenizi, reklamları kaldırmanızı, görevleri otomatikleştirmenizi ve tarama deneyiminizi geliştirmenizi sağlayan güçlü bir açık kaynak tarayıcı betik motorudur. Tampermonkey ile uyumludur ve daha fazla özellik ve optimizasyon sunar.",
-    "description": "Main subtitle description on homepage"
-  },
-  "homepage.hero.subtitle.possibilities": {
-    "message": ", tarayıcınız için sınırsız olanakları etkinleştirin!",
-    "description": "Browser possibilities text"
-  },
-  "homepage.hero.subtitle.userScript": {
-    "message": "kullanıcı betikleri",
-    "description": "User script highlight"
-  },
-  "homepage.hero.title": {
-    "message": "İçin En İyi Komut Dosyası Motoru",
-    "description": "Main title on the homepage hero section"
-  },
-  "homepage.hero.title.engine": {
-    "message": "Gelişmiş Tarayıcı Deneyimi",
-    "description": "Gradient text in main title"
-  },
-  "homepage.hero.trustBadges.title": {
-    "message": "Teknoloji topluluğu tarafından güvenilir ve desteklenir",
-    "description": "Trust badges section title"
-  },
   "homepage.meta.description": {
     "message": "ScriptCat, web işlevlerini kolayca özelleştirmenize, reklamları ortadan kaldırmanıza, görevleri otomatikleştirmenize ve tarama deneyiminizi geliştirmenize olanak tanıyan güçlü bir açık kaynak tarayıcı komut dosyası motorudur. Daha fazla özellikli Tampermonkey ile uyumlu.",
     "description": "Homepage meta description for SEO"
@@ -830,106 +492,6 @@
   "homepage.meta.title": {
     "message": "ScriptCat - Güçlü Tarayıcı Komut Dosyası Motoru",
     "description": "Homepage meta title for SEO"
-  },
-  "homepage.og.description": {
-    "message": "Tarayıcınızın daha fazlasını yapmasını sağlayan açık kaynak tarayıcı komut dosyası motoru. Kullanıcı komut dosyalarını destekler, arka plan komut dosyaları, Tampermonkey ile uyumlu, daha güçlü özellikler.",
-    "description": "Open Graph description for social sharing"
-  },
-  "homepage.og.title": {
-    "message": "ScriptCat - Güçlü Tarayıcı Komut Dosyası Motoru",
-    "description": "Open Graph title for social sharing"
-  },
-  "homepage.scenario.shopping.feature.alert": {
-    "message": "Fiyat Düşüş Uyarısı",
-    "description": "Shopping feature: Price alert"
-  },
-  "homepage.scenario.shopping.feature.compare": {
-    "message": "Fiyat Karşılaştırma",
-    "description": "Shopping feature: Price comparison"
-  },
-  "homepage.scenario.shopping.feature.coupon": {
-    "message": "Otomatik Kupon Arama",
-    "description": "Shopping feature: Coupon search"
-  },
-  "homepage.scenario.shopping.feature.history": {
-    "message": "Fiyat Geçmişi Sorgulama",
-    "description": "Shopping feature: Price history"
-  },
-  "homepage.scenario.shopping.subtitle": {
-    "message": "Alışveriş deneyimini daha kolay hale getirin",
-    "description": "Shopping scenario subtitle"
-  },
-  "homepage.scenario.shopping.tag": {
-    "message": "Pratik araçlar",
-    "description": "Shopping scenario tag"
-  },
-  "homepage.scenario.shopping.title": {
-    "message": "Alışveriş Asistanı",
-    "description": "Shopping scenario title"
-  },
-  "homepage.scenario.sites.more": {
-    "message": "+Daha fazla",
-    "description": "More sites indicator in scenario cards"
-  },
-  "homepage.scenario.subtitle": {
-    "message": "ScriptCat'in tarama deneyiminizi nasıl dönüştürebileceğini görün",
-    "description": "Scenario section subtitle"
-  },
-  "homepage.scenario.title.problems": {
-    "message": "gerçek sorunlar",
-    "description": "Scenario section title highlight"
-  },
-  "homepage.scenario.title.scripts": {
-    "message": "",
-    "description": "Scenario section title part 2"
-  },
-  "homepage.scenario.title.solve": {
-    "message": "Komut Dosyaları",
-    "description": "Scenario section title part 1"
-  },
-  "homepage.scenario.video.feature.adblock": {
-    "message": "Reklamları otomatik atlama",
-    "description": "Video feature: Ad blocking"
-  },
-  "homepage.scenario.video.feature.download": {
-    "message": "Tek Tıkla Video İndirme",
-    "description": "Video feature: Download"
-  },
-  "homepage.scenario.video.feature.speed": {
-    "message": "Video Hız Kontrolü",
-    "description": "Video feature: Speed control"
-  },
-  "homepage.scenario.video.feature.ui": {
-    "message": "Arayüz Sadeleştirme",
-    "description": "Video feature: UI optimization"
-  },
-  "homepage.scenario.video.getScript": {
-    "message": "Betik al →",
-    "description": "Video scenario get script link"
-  },
-  "homepage.scenario.video.sites": {
-    "message": "Desteklenen siteler",
-    "description": "Video scenario supported sites label"
-  },
-  "homepage.scenario.video.subtitle": {
-    "message": "Video izleme deneyimini optimize edin",
-    "description": "Video scenario subtitle"
-  },
-  "homepage.scenario.video.tag": {
-    "message": "Popüler uygulamalar",
-    "description": "Video scenario tag"
-  },
-  "homepage.scenario.video.title": {
-    "message": "Video Sitesi Geliştirme",
-    "description": "Video scenario title"
-  },
-  "homepage.twitter.description": {
-    "message": "Tarayıcınızın daha fazlasını yapmasını sağlayan açık kaynak tarayıcı komut dosyası motoru",
-    "description": "Twitter card description"
-  },
-  "homepage.twitter.title": {
-    "message": "ScriptCat - Güçlü Tarayıcı Komut Dosyası Motoru",
-    "description": "Twitter card title"
   },
   "theme.BackToTopButton.buttonAriaLabel": {
     "message": "Başa dön",
@@ -1043,18 +605,9 @@
     "message": "Daha iyi bir alternatif buldum",
     "description": "Uninstall reason: found alternative"
   },
-  "uninstall.reason.better": {
-    "message": "Daha iyi bir alternatif buldum"
-  },
-  "uninstall.reason.bug": {
-    "message": "Hatalarla veya sorunlarla karşılaştım"
-  },
   "uninstall.reason.bugs": {
     "message": "Hatalarla veya sorunlarla karşılaştım",
     "description": "Uninstall reason: bugs"
-  },
-  "uninstall.reason.feature": {
-    "message": "İhtiyacım olan bir özellik eksik"
   },
   "uninstall.reason.features": {
     "message": "İhtiyacım olan özellikler eksik",
@@ -1067,9 +620,6 @@
   "uninstall.reason.other": {
     "message": "Diğer nedenler",
     "description": "Uninstall reason: other"
-  },
-  "uninstall.reason.unused": {
-    "message": "Artık buna ihtiyacım yok"
   },
   "uninstall.reinstall.chrome": {
     "message": "Chrome Web Mağazası",
@@ -1142,9 +692,6 @@
   "uninstall.warning.selectReason": {
     "message": "Lütfen bir kaldırma nedeni seçin",
     "description": "Warning when no reason is selected"
-  },
-  "home.hero.en": {
-    "message": "Tarayıcınız için süper güçler."
   },
   "home.search.kw.adblock": {
     "message": "reklam engelleyici",

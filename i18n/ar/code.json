@@ -51,374 +51,11 @@
     "message": "عرض جميع العلامات",
     "description": "The label of the link targeting the tag list page"
   },
-  "homepage.hero.title": {
-    "message": "محرك السكريبتات النهائي لـ"
-  },
-  "homepage.hero.subtitle": {
-    "message": "إضافة متصفح يمكنها تشغيل سكريبتات المستخدم، كل شيء يمكن برمجته، اجعل متصفحك يفعل المزيد!",
-    "description": "The hero subtitle on the homepage"
-  },
-  "homepage.features.powerful.title": {
-    "message": "ميزات قوية",
-    "description": "Title for powerful features section"
-  },
-  "homepage.features.powerful.description": {
-    "message": "متوافق تماماً مع Tampermonkey، سكريبتات الخلفية، سكريبتات مجدولة، واجهة برمجة تطبيقات غنية",
-    "description": "Description for powerful features section"
-  },
-  "homepage.features.easy.title": {
-    "message": "سهل الاستخدام",
-    "description": "Title for easy to use section"
-  },
-  "homepage.features.easy.description": {
-    "message": "محرر مدمج، إكمال تلقائي ذكي، فحص بناء الجملة، تطوير سكريبتات أكثر كفاءة",
-    "description": "Description for easy to use section"
-  },
-  "homepage.features.secure.title": {
-    "message": "آمن وموثوق",
-    "description": "Title for secure and reliable section"
-  },
-  "homepage.features.secure.description": {
-    "message": "آلية الحماية، إدارة الأذونات، ضمان تشغيل آمن للسكريبتات",
-    "description": "Description for secure and reliable section"
-  },
-  "homepage.comments.lihengdao.username": {
-    "message": "لي هينغداو",
-    "description": "اسم المستخدم لي هينغداو في تعليقات المجتمع"
-  },
-  "homepage.comments.lihengdao.description": {
-    "message": "مؤسس مشارك لـ Tampermonkey CN",
-    "description": "وصف لي هينغداو في تعليقات المجتمع"
-  },
-  "homepage.comments.lihengdao.content": {
-    "message": "ScriptCat رائع تماماً!",
-    "description": "محتوى تعليق لي هينغداو"
-  },
-  "homepage.comments.student.username": {
-    "message": "قلق بشأن الامتحانات",
-    "description": "اسم المستخدم الطالب في تعليقات المجتمع"
-  },
-  "homepage.comments.student.description": {
-    "message": "طالب",
-    "description": "وصف الطالب في تعليقات المجتمع"
-  },
-  "homepage.comments.student.content": {
-    "message": "شكراً لموارد التعلم الغنية في المجتمع، لقد تعلمت الكثير وتمكنت من تطوير مهاراتي التقنية بشكل أفضل. ScriptCat إضافة متصفح مفيدة جداً توفر لي وظائف مريحة وفعالة.",
-    "description": "محتوى تعليق الطالب"
-  },
-  "homepage.comments.enncy.username": {
-    "message": "Yan Xiaoxi (enncy)",
-    "description": "اسم المستخدم enncy في تعليقات المجتمع"
-  },
-  "homepage.comments.enncy.description": {
-    "message": "مؤلف سكريبتات مشهور",
-    "description": "وصف enncy في تعليقات المجتمع"
-  },
-  "homepage.comments.enncy.content": {
-    "message": "شكر صادق للمجتمع",
-    "description": "محتوى تعليق enncy"
-  },
-  "homepage.comments.qianyu.username": {
-    "message": "تشيان يو",
-    "description": "اسم المستخدم تشيان يو في تعليقات المجتمع"
-  },
-  "homepage.comments.qianyu.description": {
-    "message": "مستخدم Chrome",
-    "description": "وصف تشيان يو في تعليقات المجتمع"
-  },
-  "homepage.comments.qianyu.content": {
-    "message": "في البداية، اعتقد الناس أن هذا مكون إضافي JS متخصص... حتى...",
-    "description": "محتوى تعليق تشيان يو"
-  },
-  "homepage.comments.wwwwwllllk.username": {
-    "message": "wwwwwllllk",
-    "description": "wwwwwllllk's username in community comments"
-  },
-  "homepage.comments.wwwwwllllk.description": {
-    "message": "مطور واجهة أمامية",
-    "description": "وصف wwwwwllllk في تعليقات المجتمع"
-  },
-  "homepage.comments.wwwwwllllk.content": {
-    "message": "استخدام ScriptCat لتحسين تجربتي على الإنترنت، تلبية أشخاص يشاركونني الاهتمامات في المجتمع.",
-    "description": "محتوى تعليق wwwwwllllk"
-  },
-  "homepage.comments.oraer.username": {
-    "message": "Oraer",
-    "description": "Oraer's username in community comments"
-  },
-  "homepage.comments.oraer.description": {
-    "message": "مستخدم Chrome",
-    "description": "وصف Oraer في تعليقات المجتمع"
-  },
-  "homepage.comments.oraer.content": {
-    "message": "أول لقاء مع Tampermonkey! أتعلم Tampermonkey! أتفوق على Tampermonkey!",
-    "description": "محتوى تعليق Oraer"
-  },
-  "homepage.comments.bigonion.username": {
-    "message": "bigonion",
-    "description": "bigonion's username in community comments"
-  },
-  "homepage.comments.bigonion.description": {
-    "message": "مطور ScriptCat",
-    "description": "وصف bigonion في تعليقات المجتمع"
-  },
-  "homepage.comments.bigonion.content": {
-    "message": "ScriptCat هو المستقبل.",
-    "description": "محتوى تعليق bigonion"
-  },
   "homepage.meta.title": {
     "message": "ScriptCat - محرك سكرپتات المستخدم لمتصفحك"
   },
   "homepage.meta.description": {
     "message": "ScriptCat هو محرك سكرپتات متصفح مفتوح المصدر وقوي يتيح لك تخصيص وظائف الويب بسهولة، وإزالة الإعلانات، وأتمتة المهام، وتحسين تجربة التصفح. متوافق مع Tampermonkey مع المزيد من الميزات."
-  },
-  "homepage.og.title": {
-    "message": "ScriptCat - A Powerful Userscript Engine"
-  },
-  "homepage.og.description": {
-    "message": "Elevate your browsing experience with ScriptCat. Fully compatible with Tampermonkey."
-  },
-  "homepage.twitter.title": {
-    "message": "ScriptCat - محرك سكريبتات متصفح قوي",
-    "description": "Twitter card title"
-  },
-  "homepage.twitter.description": {
-    "message": "محرك سكريبتات متصفح مفتوح المصدر يجعل متصفحك يفعل المزيد",
-    "description": "Twitter card description"
-  },
-  "homepage.hero.title.engine": {
-    "message": "تجربة تصفح محسّنة",
-    "description": "Gradient text in main title"
-  },
-  "homepage.hero.subtitle.userScript": {
-    "message": "سكريبتات المستخدم",
-    "description": "User script highlight"
-  },
-  "homepage.hero.subtitle.possibilities": {
-    "message": "، تفعيل إمكانيات لا محدودة لمتصفحك!",
-    "description": "Browser possibilities text"
-  },
-  "homepage.hero.subtitle.main": {
-    "message": "ScriptCat هو محرك سكريبتات مفتوح المصدر قوي يتيح لك بسهولة تخصيص وظائف الويب، وإزالة الإعلانات، وأتمتة المهام، وتحسين تجربة التصفح. متوافق مع Tampermonkey ويوفر ميزات وتحسينات إضافية.",
-    "description": "Main subtitle description on homepage"
-  },
-  "homepage.hero.button.getStarted": {
-    "message": "Commencer"
-  },
-  "homepage.hero.button.github": {
-    "message": "GitHub"
-  },
-  "homepage.features.title.powerful": {
-    "message": "ميزات قوية، ",
-    "description": "Features section title part 1"
-  },
-  "homepage.features.title.features": {
-    "message": "puissantes"
-  },
-  "homepage.features.subtitle": {
-    "message": "أكثر من مجرد إضافة للمتصفح: تجربة ويب أكثر حرية وأمانًا وقوة"
-  },
-  "homepage.features.compatibility.title": {
-    "message": "توافق كامل"
-  },
-  "homepage.features.compatibility.description": {
-    "message": "متوافق تمامًا مع سكريبتات Tampermonkey و Violentmonkey، انتقل دون تكلفة إضافية."
-  },
-  "homepage.features.background.title": {
-    "message": "سكرپتات الخلفية"
-  },
-  "homepage.features.background.description": {
-    "message": "تسمح سكرپتات الخلفية الفريدة والمهام المجدولة بالأتمتة على مدار الساعة طوال أيام الأسبوع، بشكل مستقل عن DOM."
-  },
-  "homepage.features.security.title": {
-    "message": "الأمان والخصوصية"
-  },
-  "homepage.features.security.description": {
-    "message": "نظام صارم للتحكم في الأذونات وسلوك شفاف للسكرپتات يمنع السكرپتات الضارة بفعالية ويحمي خصوصيتك."
-  },
-  "homepage.features.editor.title": {
-    "message": "محرر أكواد مدمج"
-  },
-  "homepage.features.editor.description": {
-    "message": "محرر قوي مع تمييز الصيغة والإكمال التلقائي وتلميحات الأخطاء لجعل كتابة السكرپتات أكثر كفاءة."
-  },
-  "homepage.features.api.title": {
-    "message": "واجهات برمجة تطبيقات قوية"
-  },
-  "homepage.features.api.description": {
-    "message": "يوفر واجهات برمجة تطبيقات أغنى من GM، ويدعم ميزات متقدمة مثل تخزين الملفات وتكوين المستخدم."
-  },
-  "homepage.features.store.title": {
-    "message": "متجر السكرپتات"
-  },
-  "homepage.features.store.description": {
-    "message": "يوفر متجرًا لتثبيت السكرپتات الشائعة بنقرة واحدة، أو نشر أعمالك لمشاركتها مع المجتمع."
-  },
-  "homepage.comparison.title.why": {
-    "message": "لماذا تختارنا؟"
-  },
-  "homepage.comparison.subtitle": {
-    "message": "بالمقارنة مع محركات السكرپتات الأخرى، يقدم ScriptCat مزيدًا من المزايا والميزات المحسنة"
-  },
-  "homepage.comparison.feature": {
-    "message": "الميزة"
-  },
-  "homepage.comparison.feature.compatibility": {
-    "message": "توافق السكرپتات"
-  },
-  "homepage.comparison.feature.background": {
-    "message": "سكرپتات الخلفية"
-  },
-  "homepage.comparison.feature.opensource": {
-    "message": "مفتوح المصدر ومجاني"
-  },
-  "homepage.comparison.feature.mv3": {
-    "message": "دعم MV3"
-  },
-  "homepage.comparison.feature.sync": {
-    "message": "مزامنة سحابية"
-  },
-  "homepage.comparison.feature.api": {
-    "message": "APIs قوية"
-  },
-  "homepage.comparison.feature.community": {
-    "message": "دعم المجتمع"
-  },
-  "homepage.comparison.label.efficient": {
-    "message": "فعال",
-    "description": "Comparison label: Efficient"
-  },
-  "homepage.comparison.label.multiplatform": {
-    "message": "متعدد المنصات",
-    "description": "Comparison label: Multi-platform"
-  },
-  "homepage.scenario.title.solve": {
-    "message": "سكريبتات تحل المشاكل",
-    "description": "Scenario section title part 1"
-  },
-  "homepage.scenario.title.problems": {
-    "message": "مشاكل حقيقية",
-    "description": "Scenario section title highlight"
-  },
-  "homepage.scenario.title.scripts": {
-    "message": "",
-    "description": "Scenario section title part 2"
-  },
-  "homepage.scenario.subtitle": {
-    "message": "شاهد كيف يمكن لـ ScriptCat تغيير تجربة التصفح الخاصة بك",
-    "description": "Scenario section subtitle"
-  },
-  "homepage.scenario.video.title": {
-    "message": "تحسين مواقع الفيديو",
-    "description": "Video scenario title"
-  },
-  "homepage.scenario.video.subtitle": {
-    "message": "حسّن تجربة مشاهدة الفيديو",
-    "description": "Video scenario subtitle"
-  },
-  "homepage.scenario.video.tag": {
-    "message": "تطبيقات شائعة",
-    "description": "Video scenario tag"
-  },
-  "homepage.scenario.video.feature.speed": {
-    "message": "التحكم بسرعة الفيديو",
-    "description": "Video feature: Speed control"
-  },
-  "homepage.scenario.video.feature.download": {
-    "message": "تنزيل فيديو بنقرة واحدة",
-    "description": "Video feature: Download"
-  },
-  "homepage.scenario.video.feature.adblock": {
-    "message": "تخطي الإعلانات تلقائياً",
-    "description": "Video feature: Ad blocking"
-  },
-  "homepage.scenario.video.feature.ui": {
-    "message": "تبسيط واجهة المستخدم",
-    "description": "Video feature: UI optimization"
-  },
-  "homepage.scenario.video.sites": {
-    "message": "المواقع المدعومة",
-    "description": "Video scenario supported sites label"
-  },
-  "homepage.scenario.video.getScript": {
-    "message": "احصل على السكريبت →",
-    "description": "Video scenario get script link"
-  },
-  "homepage.scenario.shopping.title": {
-    "message": "مساعد التسوق",
-    "description": "Shopping scenario title"
-  },
-  "homepage.scenario.shopping.subtitle": {
-    "message": "اجعل تجربة التسوق أسهل",
-    "description": "Shopping scenario subtitle"
-  },
-  "homepage.scenario.shopping.tag": {
-    "message": "أدوات عملية",
-    "description": "Shopping scenario tag"
-  },
-  "homepage.scenario.shopping.feature.history": {
-    "message": "سجل الأسعار",
-    "description": "Shopping feature: Price history"
-  },
-  "homepage.scenario.shopping.feature.coupon": {
-    "message": "بحث تلقائي عن القسائم",
-    "description": "Shopping feature: Coupon search"
-  },
-  "homepage.scenario.shopping.feature.compare": {
-    "message": "مقارنة الأسعار",
-    "description": "Shopping feature: Price comparison"
-  },
-  "homepage.scenario.shopping.feature.alert": {
-    "message": "تنبيه انخفاض السعر",
-    "description": "Shopping feature: Price alert"
-  },
-  "homepage.scenario.sites.more": {
-    "message": "+المزيد",
-    "description": "More sites indicator in scenario cards"
-  },
-  "homepage.download.title.ready": {
-    "message": "مستعد لـ",
-    "description": "Download section title part 1"
-  },
-  "homepage.download.title.enhance": {
-    "message": "حسّن تجربة التصفح الخاصة بك",
-    "description": "Download section title highlight"
-  },
-  "homepage.download.title.question": {
-    "message": "?",
-    "description": "Download section title part 2"
-  },
-  "homepage.download.subtitle": {
-    "message": "قم بتثبيت ScriptCat الآن وافتح إمكانيات لا محدودة لتصفح الويب",
-    "description": "Download section subtitle"
-  },
-  "homepage.download.edge": {
-    "message": "Edge Web Store",
-    "description": "Download button: Edge store"
-  },
-  "homepage.download.chrome": {
-    "message": "Chrome Web Store",
-    "description": "Download button: Chrome store"
-  },
-  "homepage.download.firefox": {
-    "message": "Firefox Add-ons",
-    "description": "Download button: Firefox store"
-  },
-  "homepage.download.github": {
-    "message": "تنزيل من GitHub",
-    "description": "Download button: GitHub"
-  },
-  "homepage.download.popup.title": {
-    "message": "تم تفعيل ScriptCat",
-    "description": "Extension popup title"
-  },
-  "homepage.download.popup.text": {
-    "message": "3 سكريبتات تعمل على الصفحة الحالية",
-    "description": "Extension popup text"
-  },
-  "homepage.footer.contributors.title": {
-    "message": "شكر لجميع المساهمين",
-    "description": "Footer contributors section title"
   },
   "footer.description": {
     "message": "محرك برمجيات متصفح قوي يجعل تجربة الويب الخاصة بك أكثر ثراءً وتنوعًا."
@@ -477,10 +114,6 @@
   "footer.community.contact": {
     "message": "تواصل مع الفريق",
     "description": "Footer community contact team link"
-  },
-  "footer.community.recruiting": {
-    "message": "التوظيف",
-    "description": "Footer community recruiting badge"
   },
   "footer.copyright.allRightsReserved": {
     "message": "جميع الحقوق محفوظة."
@@ -544,18 +177,6 @@
   "uninstall.question.reason": {
     "message": "ما السبب الرئيسي لإلغاء تثبيت ScriptCat؟",
     "description": "Question about uninstall reason"
-  },
-  "uninstall.reason.bug": {
-    "message": "واجهت أخطاءً أو مشاكل"
-  },
-  "uninstall.reason.unused": {
-    "message": "لم أعد بحاجة إليه"
-  },
-  "uninstall.reason.feature": {
-    "message": "تنقصني ميزة أحتاجها"
-  },
-  "uninstall.reason.better": {
-    "message": "وجدت بديلًا أفضل"
   },
   "uninstall.reason.other": {
     "message": "أسباب أخرى",
@@ -621,10 +242,6 @@
     "message": "عرض الوثائق",
     "description": "View docs button"
   },
-  "homepage.hero.browser.crx": {
-    "message": "تنزيل حزمة التثبيت للتثبيت اليدوي",
-    "description": "Button text for manual installation"
-  },
   "uninstall.reason.no_need": {
     "message": "لم أعد بحاجة إلى ScriptCat",
     "description": "Uninstall reason: no longer need"
@@ -653,41 +270,13 @@
     "message": "شكرًا لملاحظاتك!",
     "description": "Thank you page title"
   },
-  "homepage.hero.button.browseScripts": {
-    "message": "تصفح مكتبة السكريبتات",
-    "description": "Button text for browsing scripts"
-  },
   "uninstall.warning.selectReason": {
     "message": "يرجى اختيار سبب إلغاء التثبيت",
     "description": "Warning when no reason is selected"
   },
-  "homepage.features.tampermonkey.title": {
-    "message": "Tampermonkey Compatible",
-    "description": "Feature title: Tampermonkey compatibility"
-  },
   "uninstall.reason.alternative": {
     "message": "وجدت بديلًا أفضل",
     "description": "Uninstall reason: found alternative"
-  },
-  "homepage.hero.browser.edge": {
-    "message": "إضافة إلى متصفح Edge",
-    "description": "Button text for Edge browser"
-  },
-  "homepage.hero.trustBadges.title": {
-    "message": "موثوق ويدعمه مجتمع التقنية",
-    "description": "Trust badges section title"
-  },
-  "homepage.hero.browser.chrome": {
-    "message": "إضافة إلى متصفح Chrome",
-    "description": "Button text for Chrome browser"
-  },
-  "homepage.features.tampermonkey.description": {
-    "message": "متوافق تمامًا مع تنسيق سكريبتات Tampermonkey، انتقل بسلاسة إلى سكريبتاتك الحالية.",
-    "description": "Feature description: Tampermonkey compatibility"
-  },
-  "homepage.hero.browser.default": {
-    "message": "تثبيت الإضافة في المتصفح",
-    "description": "Default button text for browser installation"
   },
   "uninstall.success.submitted": {
     "message": "شكرًا لملاحظاتك!",
@@ -697,10 +286,6 @@
     "message": "واجهت أخطاءً أو مشاكل",
     "description": "Uninstall reason: bugs"
   },
-  "homepage.hero.subtitle.highlight": {
-    "message": "إضافة متصفح لتنفيذ",
-    "description": "Highlighted subtitle on homepage"
-  },
   "uninstall.thanks.reportIssue": {
     "message": "الإبلاغ عن مشكلة",
     "description": "Report issue button"
@@ -708,14 +293,6 @@
   "uninstall.error.submit": {
     "message": "فشل الإرسال، يرجى المحاولة لاحقًا",
     "description": "Error message when submission fails"
-  },
-  "homepage.hero.browser.firefox": {
-    "message": "إضافة إلى متصفح Firefox",
-    "description": "Button text for Firefox browser"
-  },
-  "homepage.features.title.possibilities": {
-    "message": "إمكانيات لا محدودة",
-    "description": "Features section title highlight"
   },
   "home.comm.btn": {
     "message": "ساهم على GitHub"
@@ -847,9 +424,6 @@
   },
   "home.feat.store.d": {
     "message": "ثبّت آلاف السكرپتات المجتمعية بنقرة واحدة، أو انشر سكرپتاتك وابنِ النظام البيئي معًا."
-  },
-  "home.feat.store.stat": {
-    "message": "{count} سكرپتًا مجتمعيًا"
   },
   "home.feat.store.t": {
     "message": "متجر السكرپتات"
@@ -1109,9 +683,6 @@
   "uninstall.reinstall.firefox": {
     "message": "إضافات Firefox",
     "description": "Reinstall from Firefox Add-ons button"
-  },
-  "home.hero.en": {
-    "message": "قوى خارقة لمتصفحك."
   },
   "home.search.kw.adblock": {
     "message": "حجب الإعلانات",

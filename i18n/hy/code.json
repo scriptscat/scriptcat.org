@@ -19,10 +19,6 @@
     "message": "Հայտնել խնդիրների մասին",
     "description": "Footer community report issues link"
   },
-  "footer.community.recruiting": {
-    "message": "Հավաքագրում",
-    "description": "Footer community recruiting badge"
-  },
   "footer.community.title": {
     "message": "Համայնք",
     "description": "Footer community section title"
@@ -241,9 +237,6 @@
   },
   "home.feat.store.d": {
     "message": "Տեղադրեք հազարավոր համայնքային սկրիպտներ մեկ սեղմումով կամ հրապարակեք ձեր աշխատանքները և միասին կառուցեք էկոհամակարգը։"
-  },
-  "home.feat.store.stat": {
-    "message": "{count} համայնքային սկրիպտ"
   },
   "home.feat.store.t": {
     "message": "Սկրիպտների խանութ"
@@ -488,337 +481,6 @@
   "home.trust.users": {
     "message": "Օգտագործողներ տեղադրել են"
   },
-  "homepage.comments.bigonion.content": {
-    "message": "ScriptCat-ն է ապագան։",
-    "description": "bigonion's comment content"
-  },
-  "homepage.comments.bigonion.description": {
-    "message": "ScriptCat մշակող",
-    "description": "bigonion's description in community comments"
-  },
-  "homepage.comments.bigonion.username": {
-    "message": "bigonion",
-    "description": "bigonion's username in community comments"
-  },
-  "homepage.comments.enncy.content": {
-    "message": "Ջերմ շնորհակալություն համայնքին",
-    "description": "Enncy's comment content"
-  },
-  "homepage.comments.enncy.description": {
-    "message": "Հայտնի սկրիպտների հեղինակ",
-    "description": "Enncy's description in community comments"
-  },
-  "homepage.comments.enncy.username": {
-    "message": "Yan Xiaoxi (enncy)",
-    "description": "Enncy's username in community comments"
-  },
-  "homepage.comments.lihengdao.content": {
-    "message": "ScriptCat-ն իսկապես զարմանալի է։",
-    "description": "Li Hengdao's comment content"
-  },
-  "homepage.comments.lihengdao.description": {
-    "message": "Tampermonkey CN-ի համահիմնադիր",
-    "description": "Li Hengdao's description in community comments"
-  },
-  "homepage.comments.lihengdao.username": {
-    "message": "Li Hengdao",
-    "description": "Li Hengdao's username in community comments"
-  },
-  "homepage.comments.oraer.content": {
-    "message": "Առաջին ծանոթությունը Tampermonkey-ի հետ։ Սովորում ենք Tampermonkey։ Գերազանցում ենք Tampermonkey-ին։",
-    "description": "Oraer's comment content"
-  },
-  "homepage.comments.oraer.description": {
-    "message": "Chrome օգտագործող",
-    "description": "Oraer's description in community comments"
-  },
-  "homepage.comments.oraer.username": {
-    "message": "Oraer",
-    "description": "Oraer's username in community comments"
-  },
-  "homepage.comments.qianyu.content": {
-    "message": "Սկզբում մարդիկ կարծում էին, որ սա նիշային JS փլագին է... մինչև...",
-    "description": "Qian Yu's comment content"
-  },
-  "homepage.comments.qianyu.description": {
-    "message": "Chrome օգտագործող",
-    "description": "Qian Yu's description in community comments"
-  },
-  "homepage.comments.qianyu.username": {
-    "message": "Qian Yu",
-    "description": "Qian Yu's username in community comments"
-  },
-  "homepage.comments.student.content": {
-    "message": "Համայնքի հարուստ ուսումնական ռեսուրսների շնորհիվ ես մեծ օգուտ եմ ստացել և կարող եմ ավելի լավ զարգացնել իմ տեխնիկական կարողությունները։ ScriptCat-ը շատ օգտակար բրաուզերի ընդլայնում է, որը տալիս է ինձ հարմար և արդյունավետ գործառույթներ։",
-    "description": "Student user's comment content"
-  },
-  "homepage.comments.student.description": {
-    "message": "Ուսանող",
-    "description": "Student user's description in community comments"
-  },
-  "homepage.comments.student.username": {
-    "message": "Student",
-    "description": "Student user's username in community comments"
-  },
-  "homepage.comments.wwwwwllllk.content": {
-    "message": "Օգտագործում եմ ScriptCat-ը իմ ինտերնետ փորձառությունը բարելավելու համար, համայնքում ծանոթանում եմ համախոհ մարդկանց հետ։",
-    "description": "wwwwwllllk's comment content"
-  },
-  "homepage.comments.wwwwwllllk.description": {
-    "message": "Ֆրոնտենդ մշակող",
-    "description": "wwwwwllllk's description in community comments"
-  },
-  "homepage.comments.wwwwwllllk.username": {
-    "message": "wwwwwllllk",
-    "description": "wwwwwllllk's username in community comments"
-  },
-  "homepage.comparison.feature": {
-    "message": "Հնարավորություն",
-    "description": "Comparison table header: Feature"
-  },
-  "homepage.comparison.feature.api": {
-    "message": "Հզոր API-ներ",
-    "description": "Comparison feature: Powerful APIs"
-  },
-  "homepage.comparison.feature.background": {
-    "message": "Ֆոնային սկրիպտներ",
-    "description": "Comparison feature: Background scripts"
-  },
-  "homepage.comparison.feature.community": {
-    "message": "Համայնքի աջակցություն",
-    "description": "Comparison feature: Community support"
-  },
-  "homepage.comparison.feature.compatibility": {
-    "message": "Սկրիպտների համատեղելիություն",
-    "description": "Comparison feature: Script compatibility"
-  },
-  "homepage.comparison.feature.mv3": {
-    "message": "MV3 աջակցություն",
-    "description": "Comparison feature: MV3 Support"
-  },
-  "homepage.comparison.feature.opensource": {
-    "message": "Բաց կոդ, անվճար",
-    "description": "Comparison feature: Open source"
-  },
-  "homepage.comparison.feature.sync": {
-    "message": "Ամպային համաժամացում",
-    "description": "Comparison feature: Cloud sync"
-  },
-  "homepage.comparison.label.efficient": {
-    "message": "Արդյունավետ",
-    "description": "Comparison label: Efficient"
-  },
-  "homepage.comparison.label.multiplatform": {
-    "message": "Բազմապլատֆորմ",
-    "description": "Comparison label: Multi-platform"
-  },
-  "homepage.comparison.subtitle": {
-    "message": "Համեմատած այլ սկրիպտային շարժիչների՝ ScriptCat-ն առաջարկում է ավելի շատ առավելություններ և ընդլայնված հնարավորություններ",
-    "description": "Comparison section subtitle"
-  },
-  "homepage.comparison.title.why": {
-    "message": "Ինչու ընտրել",
-    "description": "Comparison section title part 1"
-  },
-  "homepage.download.chrome": {
-    "message": "Chrome ընդլայնումների խանութ",
-    "description": "Download button: Chrome store"
-  },
-  "homepage.download.edge": {
-    "message": "Edge ընդլայնումների խանութ",
-    "description": "Download button: Edge store"
-  },
-  "homepage.download.firefox": {
-    "message": "Firefox ընդլայնումների խանութ",
-    "description": "Download button: Firefox store"
-  },
-  "homepage.download.github": {
-    "message": "GitHub ներբեռնում",
-    "description": "Download button: GitHub"
-  },
-  "homepage.download.popup.text": {
-    "message": "Ընթացիկ էջում 3 սկրիպտ է աշխատում",
-    "description": "Extension popup text"
-  },
-  "homepage.download.popup.title": {
-    "message": "ScriptCat-ը միացված է",
-    "description": "Extension popup title"
-  },
-  "homepage.download.subtitle": {
-    "message": "Տեղադրեք ScriptCat-ը հիմա և բացեք վեբ զննարկման անսահման հնարավորությունները",
-    "description": "Download section subtitle"
-  },
-  "homepage.download.title.enhance": {
-    "message": "Բարելավեք ձեր զննարկման փորձառությունը",
-    "description": "Download section title highlight"
-  },
-  "homepage.download.title.question": {
-    "message": "?",
-    "description": "Download section title part 2"
-  },
-  "homepage.download.title.ready": {
-    "message": "Պատրաստ է",
-    "description": "Download section title part 1"
-  },
-  "homepage.features.api.description": {
-    "message": "Տրամադրում է ավելի հարուստ API ինտերֆեյսներ, քան GM-ը, աջակցում է առաջադեմ գործառույթների՝ ինչպիսիք են ֆայլերի պահպանումը և օգտագործողի կարգավորումները՝ ընդլայնելով սկրիպտների հնարավորությունները։",
-    "description": "Feature description: APIs"
-  },
-  "homepage.features.api.title": {
-    "message": "Հզոր API-ներ",
-    "description": "Feature title: APIs"
-  },
-  "homepage.features.background.description": {
-    "message": "Ի տարբերություն սովորական օգտագործողի սկրիպտների՝ թույլ է տալիս ձեր սկրիպտներին շարունակաբար աշխատել ֆոնում՝ առանց ներդիրներ բացելու։",
-    "description": "Feature description: Background scripts"
-  },
-  "homepage.features.background.title": {
-    "message": "Ֆոնային սկրիպտներ",
-    "description": "Feature title: Background scripts"
-  },
-  "homepage.features.compatibility.description": {
-    "message": "Ամբողջովին համատեղելի Tampermonkey-ի և Violentmonkey-ի սկրիպտների հետ, հեշտությամբ տեղափոխեք ձեր սիրելի սկրիպտները։"
-  },
-  "homepage.features.compatibility.title": {
-    "message": "Կատարյալ համատեղելիություն"
-  },
-  "homepage.features.easy.description": {
-    "message": "Ներկառուցված խմբագրիչ, խելացի ավտոլրացում, շարահյուսության ստուգում, ավելի արդյունավետ սկրիպտների մշակում",
-    "description": "Description for easy to use section"
-  },
-  "homepage.features.easy.title": {
-    "message": "Հեշտ օգտագործման համար",
-    "description": "Title for easy to use section"
-  },
-  "homepage.features.editor.description": {
-    "message": "Հզոր կոդի խմբագրիչ՝ շարահյուսության գունավորմամբ, կոդի լրացմամբ և սխալի հուշումներով, որը սկրիպտ գրելը դարձնում է ավելի արդյունավետ։",
-    "description": "Feature description: Code editor"
-  },
-  "homepage.features.editor.title": {
-    "message": "Ներկառուցված կոդի խմբագրիչ",
-    "description": "Feature title: Code editor"
-  },
-  "homepage.features.powerful.description": {
-    "message": "Ամբողջովին համատեղելի Tampermonkey-ի հետ, ֆոնային սկրիպտներ, պլանավորված սկրիպտներ, հարուստ API",
-    "description": "Description for powerful features section"
-  },
-  "homepage.features.powerful.title": {
-    "message": "Հզոր հնարավորություններ",
-    "description": "Title for powerful features section"
-  },
-  "homepage.features.secure.description": {
-    "message": "Ավազարկղ մեխանիզմ, թույլտվությունների կառավարում, ապահովում է սկրիպտների անվտանգ կատարումը",
-    "description": "Description for secure and reliable section"
-  },
-  "homepage.features.secure.title": {
-    "message": "Անվտանգ և հուսալի",
-    "description": "Title for secure and reliable section"
-  },
-  "homepage.features.security.description": {
-    "message": "Թույլտվությունների վերահսկման խիստ համակարգ, սկրիպտների թափանցիկ վարքագիծ, արդյունավետորեն կանխում է վնասակար սկրիպտները և պաշտպանում ձեր գաղտնիությունը։",
-    "description": "Feature description: Security"
-  },
-  "homepage.features.security.title": {
-    "message": "Անվտանգ և հուսալի",
-    "description": "Feature title: Security"
-  },
-  "homepage.features.store.description": {
-    "message": "Ունի սկրիպտների խանութ՝ հանրաճանաչ սկրիպտների մեկ սեղմումով տեղադրման համար, կամ հրապարակեք ձեր աշխատանքները՝ համայնքի հետ կիսվելու համար՝ կառուցելով ակտիվ էկոհամակարգ։",
-    "description": "Feature description: Script store"
-  },
-  "homepage.features.store.title": {
-    "message": "Սկրիպտների խանութ",
-    "description": "Feature title: Script store"
-  },
-  "homepage.features.subtitle": {
-    "message": "ScriptCat-ը տրամադրում է հզոր գործառույթների շարք, որոնք թույլ են տալիս հեշտությամբ ընդլայնել ձեր բրաուզերի հնարավորությունները և ստեղծել ձեր սեփական վեբ փորձառությունը։",
-    "description": "Features section subtitle"
-  },
-  "homepage.features.tampermonkey.description": {
-    "message": "Ամբողջովին համատեղելի Tampermonkey սկրիպտների ձևաչափի հետ, անխափան տեղափոխում է գոյություն ունեցող սկրիպտների գրադարանները զրոյական անցման ծախսերով։",
-    "description": "Feature description: Tampermonkey compatibility"
-  },
-  "homepage.features.tampermonkey.title": {
-    "message": "Համատեղելի Tampermonkey-ի հետ",
-    "description": "Feature title: Tampermonkey compatibility"
-  },
-  "homepage.features.title.features": {
-    "message": "Անսահման հնարավորություններ"
-  },
-  "homepage.features.title.possibilities": {
-    "message": "Անսահման հնարավորություններ",
-    "description": "Features section title highlight"
-  },
-  "homepage.features.title.powerful": {
-    "message": "Հզոր գործառույթներ, ",
-    "description": "Features section title part 1"
-  },
-  "homepage.footer.contributors.title": {
-    "message": "Շնորհակալություն բոլոր ներդրողներին",
-    "description": "Footer contributors section title"
-  },
-  "homepage.hero.browser.chrome": {
-    "message": "Ավելացնել Chrome բրաուզերին",
-    "description": "Button text for Chrome browser"
-  },
-  "homepage.hero.browser.crx": {
-    "message": "Ներբեռնել տեղադրման փաթեթը ձեռքով տեղադրման համար",
-    "description": "Button text for manual installation"
-  },
-  "homepage.hero.browser.default": {
-    "message": "Տեղադրել ընդլայնումը բրաուզերում",
-    "description": "Default button text for browser installation"
-  },
-  "homepage.hero.browser.edge": {
-    "message": "Ավելացնել Edge բրաուզերին",
-    "description": "Button text for Edge browser"
-  },
-  "homepage.hero.browser.firefox": {
-    "message": "Ավելացնել Firefox բրաուզերին",
-    "description": "Button text for Firefox browser"
-  },
-  "homepage.hero.button.browseScripts": {
-    "message": "Դիտել սկրիպտների գրադարանը",
-    "description": "Button text for browsing scripts"
-  },
-  "homepage.hero.button.getStarted": {
-    "message": "Սկսել"
-  },
-  "homepage.hero.button.github": {
-    "message": "GitHub"
-  },
-  "homepage.hero.subtitle": {
-    "message": "Բրաուզերի ընդլայնում, որը կարող է գործարկել օգտագործողի սկրիպտներ, ամեն ինչ կարելի է սկրիպտավորել, թույլ տվեք ձեր բրաուզերին ավելին անել։",
-    "description": "The hero subtitle on the homepage"
-  },
-  "homepage.hero.subtitle.highlight": {
-    "message": "Բրաուզերի ընդլայնում՝",
-    "description": "Highlighted subtitle on homepage"
-  },
-  "homepage.hero.subtitle.main": {
-    "message": "ScriptCat-ը հզոր բաց կոդով բրաուզերի սկրիպտների շարժիչ է, որը թույլ է տալիս հեշտությամբ հարմարեցնել վեբ գործառույթները, վերացնել գովազդները, ավտոմատացնել խնդիրները և բարելավել ձեր դիտարկմի փորձը: Համատեղելի է Tampermonkey-ի հետ և տրամադրում է ավելի շատ հնարավորություններ և օպտիմիզացիա:",
-    "description": "Main subtitle description on homepage"
-  },
-  "homepage.hero.subtitle.possibilities": {
-    "message": ", ակտիվացնելով ձեր բրաուզերի անսահման հնարավորությունները։",
-    "description": "Browser possibilities text"
-  },
-  "homepage.hero.subtitle.userScript": {
-    "message": "օգտագործողի սկրիպտներ",
-    "description": "User script highlight"
-  },
-  "homepage.hero.title": {
-    "message": "Լավագույն սկրիպտային շարժիչը",
-    "description": "Main title on the homepage hero section"
-  },
-  "homepage.hero.title.engine": {
-    "message": "բարելավված բրաուզերի փորձառության համար",
-    "description": "Gradient text in main title"
-  },
-  "homepage.hero.trustBadges.title": {
-    "message": "Վստահվում է և աջակցվում տեխնոլոգիական համայնքի կողմից",
-    "description": "Trust badges section title"
-  },
   "homepage.meta.description": {
     "message": "ScriptCat-ը հզոր բաց կոդով բրաուզերի սկրիպտային շարժիչ է, որը թույլ է տալիս հեշտությամբ հարմարեցնել վեբ գործառույթները, վերացնել գովազդը, ավտոմատացնել առաջադրանքները և բարելավել զննարկման փորձառությունը։ Համատեղելի է Tampermonkey-ի հետ՝ ավելի շատ գործառույթներով։",
     "description": "Homepage meta description for SEO"
@@ -830,106 +492,6 @@
   "homepage.meta.title": {
     "message": "ScriptCat - Հզոր բրաուզերի սկրիպտային շարժիչ",
     "description": "Homepage meta title for SEO"
-  },
-  "homepage.og.description": {
-    "message": "Բաց կոդով բրաուզերի սկրիպտային շարժիչ, որը ձեր բրաուզերին թույլ է տալիս ավելին անել։ Աջակցում է օգտագործողի սկրիպտներին, ֆոնային սկրիպտներին, համատեղելի է Tampermonkey-ի հետ, ավելի հզոր գործառույթներ։",
-    "description": "Open Graph description for social sharing"
-  },
-  "homepage.og.title": {
-    "message": "ScriptCat - Հզոր բրաուզերի սկրիպտային շարժիչ",
-    "description": "Open Graph title for social sharing"
-  },
-  "homepage.scenario.shopping.feature.alert": {
-    "message": "Գնի իջեցման ծանուցում",
-    "description": "Shopping feature: Price alert"
-  },
-  "homepage.scenario.shopping.feature.compare": {
-    "message": "Գների համեմատում",
-    "description": "Shopping feature: Price comparison"
-  },
-  "homepage.scenario.shopping.feature.coupon": {
-    "message": "Կտրոնների ավտոմատ որոնում",
-    "description": "Shopping feature: Coupon search"
-  },
-  "homepage.scenario.shopping.feature.history": {
-    "message": "Գների պատմության հարցում",
-    "description": "Shopping feature: Price history"
-  },
-  "homepage.scenario.shopping.subtitle": {
-    "message": "Դարձրեք գնումների փորձառությունը ավելի հեշտ",
-    "description": "Shopping scenario subtitle"
-  },
-  "homepage.scenario.shopping.tag": {
-    "message": "Գործնական գործիքներ",
-    "description": "Shopping scenario tag"
-  },
-  "homepage.scenario.shopping.title": {
-    "message": "Գնումների օգնական",
-    "description": "Shopping scenario title"
-  },
-  "homepage.scenario.sites.more": {
-    "message": "+Ավելին",
-    "description": "More sites indicator in scenario cards"
-  },
-  "homepage.scenario.subtitle": {
-    "message": "Տեսեք, թե ինչպես ScriptCat-ը կարող է փոխել ձեր զննարկման փորձառությունը",
-    "description": "Scenario section subtitle"
-  },
-  "homepage.scenario.title.problems": {
-    "message": "իրական խնդիրներ",
-    "description": "Scenario section title highlight"
-  },
-  "homepage.scenario.title.scripts": {
-    "message": "",
-    "description": "Scenario section title part 2"
-  },
-  "homepage.scenario.title.solve": {
-    "message": "իրական խնդիրներ",
-    "description": "Scenario section title part 1"
-  },
-  "homepage.scenario.video.feature.adblock": {
-    "message": "Գովազդների ավտոմատ բաց թողնում",
-    "description": "Video feature: Ad blocking"
-  },
-  "homepage.scenario.video.feature.download": {
-    "message": "Վիդեոյի ներբեռնում մեկ սեղմումով",
-    "description": "Video feature: Download"
-  },
-  "homepage.scenario.video.feature.speed": {
-    "message": "Վիդեոյի արագության կառավարում",
-    "description": "Video feature: Speed control"
-  },
-  "homepage.scenario.video.feature.ui": {
-    "message": "Ինտերֆեյսի պարզեցում",
-    "description": "Video feature: UI optimization"
-  },
-  "homepage.scenario.video.getScript": {
-    "message": "Ստանալ սկրիպտ →",
-    "description": "Video scenario get script link"
-  },
-  "homepage.scenario.video.sites": {
-    "message": "Աջակցվող կայքեր",
-    "description": "Video scenario supported sites label"
-  },
-  "homepage.scenario.video.subtitle": {
-    "message": "Օպտիմիզացրեք վիդեո դիտման փորձառությունը",
-    "description": "Video scenario subtitle"
-  },
-  "homepage.scenario.video.tag": {
-    "message": "Հայտնի հավելվածներ",
-    "description": "Video scenario tag"
-  },
-  "homepage.scenario.video.title": {
-    "message": "Վիդեո կայքերի բարելավում",
-    "description": "Video scenario title"
-  },
-  "homepage.twitter.description": {
-    "message": "Բաց կոդով բրաուզերի սկրիպտային շարժիչ, որը ձեր բրաուզերին թույլ է տալիս ավելին անել",
-    "description": "Twitter card description"
-  },
-  "homepage.twitter.title": {
-    "message": "ScriptCat - Հզոր բրաուզերի սկրիպտային շարժիչ",
-    "description": "Twitter card title"
   },
   "theme.BackToTopButton.buttonAriaLabel": {
     "message": "Վերադառնալ վերև",
@@ -1043,18 +605,9 @@
     "message": "Գտել եմ ավելի լավ այլընտրանք",
     "description": "Uninstall reason: found alternative"
   },
-  "uninstall.reason.better": {
-    "message": "Գտել եմ ավելի լավ այլընտրանք"
-  },
-  "uninstall.reason.bug": {
-    "message": "Հանդիպել եմ սխալների կամ բագերի"
-  },
   "uninstall.reason.bugs": {
     "message": "Հանդիպել եմ սխալների կամ բագերի",
     "description": "Uninstall reason: bugs"
-  },
-  "uninstall.reason.feature": {
-    "message": "Պակասում է ինձ անհրաժեշտ գործառույթը"
   },
   "uninstall.reason.features": {
     "message": "Պակասում են ինձ անհրաժեշտ գործառույթները",
@@ -1067,9 +620,6 @@
   "uninstall.reason.other": {
     "message": "Այլ պատճառներ",
     "description": "Uninstall reason: other"
-  },
-  "uninstall.reason.unused": {
-    "message": "Այլևս կարիք չունեմ"
   },
   "uninstall.reinstall.chrome": {
     "message": "Chrome վեբ խանութ",
@@ -1142,9 +692,6 @@
   "uninstall.warning.selectReason": {
     "message": "Խնդրում ենք ընտրել հեռացման պատճառ",
     "description": "Warning when no reason is selected"
-  },
-  "home.hero.en": {
-    "message": "Գերհզորություններ ձեր բրաուզերի համար։"
   },
   "home.search.kw.adblock": {
     "message": "գովազdelays արdelays",

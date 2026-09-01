@@ -19,10 +19,6 @@
     "message": "گزارش مشکلات",
     "description": "Footer community report issues link"
   },
-  "footer.community.recruiting": {
-    "message": "استخدام",
-    "description": "Footer community recruiting badge"
-  },
   "footer.community.title": {
     "message": "انجمن",
     "description": "Footer community section title"
@@ -241,9 +237,6 @@
   },
   "home.feat.store.d": {
     "message": "هزاران اسکریپت انجمن را در یک کلیک نصب کنید، یا آثار خود را منتشر کنید و اکوسیستم را با هم بسازید."
-  },
-  "home.feat.store.stat": {
-    "message": "{count} اسکریپت انجمن"
   },
   "home.feat.store.t": {
     "message": "فروشگاه اسکریپت"
@@ -488,337 +481,6 @@
   "home.trust.users": {
     "message": "کاربران نصب‌کننده"
   },
-  "homepage.comments.bigonion.content": {
-    "message": "ScriptCat آینده است.",
-    "description": "bigonion's comment content"
-  },
-  "homepage.comments.bigonion.description": {
-    "message": "توسعه‌دهنده ScriptCat",
-    "description": "bigonion's description in community comments"
-  },
-  "homepage.comments.bigonion.username": {
-    "message": "bigonion",
-    "description": "bigonion's username in community comments"
-  },
-  "homepage.comments.enncy.content": {
-    "message": "تشکر صمیمانه از انجمن",
-    "description": "Enncy's comment content"
-  },
-  "homepage.comments.enncy.description": {
-    "message": "نویسنده مشهور اسکریپت",
-    "description": "Enncy's description in community comments"
-  },
-  "homepage.comments.enncy.username": {
-    "message": "Yan Xiaoxi (enncy)",
-    "description": "Enncy's username in community comments"
-  },
-  "homepage.comments.lihengdao.content": {
-    "message": "ScriptCat فوق‌العاده است!",
-    "description": "Li Hengdao's comment content"
-  },
-  "homepage.comments.lihengdao.description": {
-    "message": "هم‌بنیان‌گذار Tampermonkey چین",
-    "description": "Li Hengdao's description in community comments"
-  },
-  "homepage.comments.lihengdao.username": {
-    "message": "Li Hengdao",
-    "description": "Li Hengdao's username in community comments"
-  },
-  "homepage.comments.oraer.content": {
-    "message": "اولین آشنایی با Tampermonkey! یادگیری Tampermonkey! پیشی گرفتن از Tampermonkey!",
-    "description": "Oraer's comment content"
-  },
-  "homepage.comments.oraer.description": {
-    "message": "کاربر Chrome",
-    "description": "Oraer's description in community comments"
-  },
-  "homepage.comments.oraer.username": {
-    "message": "Oraer",
-    "description": "Oraer's username in community comments"
-  },
-  "homepage.comments.qianyu.content": {
-    "message": "در ابتدا مردم فکر می‌کردند این یک افزونه JS خاص است... تا اینکه...",
-    "description": "Qian Yu's comment content"
-  },
-  "homepage.comments.qianyu.description": {
-    "message": "کاربر Chrome",
-    "description": "Qian Yu's description in community comments"
-  },
-  "homepage.comments.qianyu.username": {
-    "message": "Qian Yu",
-    "description": "Qian Yu's username in community comments"
-  },
-  "homepage.comments.student.content": {
-    "message": "به لطف منابع آموزشی غنی انجمن، بسیار بهره بردم و می‌توانم بهتر توانایی‌های فنی‌ام را توسعه دهم. ScriptCat یک افزونه مرورگر بسیار مفید است که قابلیت‌های راحت و کارآمدی در اختیارم می‌گذارد.",
-    "description": "Student user's comment content"
-  },
-  "homepage.comments.student.description": {
-    "message": "دانشجو",
-    "description": "Student user's description in community comments"
-  },
-  "homepage.comments.student.username": {
-    "message": "دانشجو",
-    "description": "Student user's username in community comments"
-  },
-  "homepage.comments.wwwwwllllk.content": {
-    "message": "با ScriptCat تجربه اینترنتم را بهتر می‌کنم و در انجمن با افراد هم‌فکر آشنا می‌شوم.",
-    "description": "wwwwwllllk's comment content"
-  },
-  "homepage.comments.wwwwwllllk.description": {
-    "message": "توسعه‌دهنده فرانت‌اند",
-    "description": "wwwwwllllk's description in community comments"
-  },
-  "homepage.comments.wwwwwllllk.username": {
-    "message": "wwwwwllllk",
-    "description": "wwwwwllllk's username in community comments"
-  },
-  "homepage.comparison.feature": {
-    "message": "امکانات",
-    "description": "Comparison table header: Feature"
-  },
-  "homepage.comparison.feature.api": {
-    "message": "APIهای قدرتمند",
-    "description": "Comparison feature: Powerful APIs"
-  },
-  "homepage.comparison.feature.background": {
-    "message": "اسکریپت‌های پس‌زمینه",
-    "description": "Comparison feature: Background scripts"
-  },
-  "homepage.comparison.feature.community": {
-    "message": "پشتیبانی انجمن",
-    "description": "Comparison feature: Community support"
-  },
-  "homepage.comparison.feature.compatibility": {
-    "message": "سازگاری اسکریپت",
-    "description": "Comparison feature: Script compatibility"
-  },
-  "homepage.comparison.feature.mv3": {
-    "message": "پشتیبانی MV3",
-    "description": "Comparison feature: MV3 Support"
-  },
-  "homepage.comparison.feature.opensource": {
-    "message": "رایگان و متن‌باز",
-    "description": "Comparison feature: Open source"
-  },
-  "homepage.comparison.feature.sync": {
-    "message": "همگام‌سازی ابری",
-    "description": "Comparison feature: Cloud sync"
-  },
-  "homepage.comparison.label.efficient": {
-    "message": "کارآمد",
-    "description": "Comparison label: Efficient"
-  },
-  "homepage.comparison.label.multiplatform": {
-    "message": "چندسکویی",
-    "description": "Comparison label: Multi-platform"
-  },
-  "homepage.comparison.subtitle": {
-    "message": "در مقایسه با سایر موتورهای اسکریپت، ScriptCat مزایا و امکانات بیشتری ارائه می‌دهد",
-    "description": "Comparison section subtitle"
-  },
-  "homepage.comparison.title.why": {
-    "message": "چرا ScriptCat را انتخاب کنیم",
-    "description": "Comparison section title part 1"
-  },
-  "homepage.download.chrome": {
-    "message": "فروشگاه افزونه Chrome",
-    "description": "Download button: Chrome store"
-  },
-  "homepage.download.edge": {
-    "message": "فروشگاه افزونه Edge",
-    "description": "Download button: Edge store"
-  },
-  "homepage.download.firefox": {
-    "message": "فروشگاه افزونه Firefox",
-    "description": "Download button: Firefox store"
-  },
-  "homepage.download.github": {
-    "message": "دانلود از GitHub",
-    "description": "Download button: GitHub"
-  },
-  "homepage.download.popup.text": {
-    "message": "۳ اسکریپت در حال اجرا در این صفحه هستند",
-    "description": "Extension popup text"
-  },
-  "homepage.download.popup.title": {
-    "message": "ScriptCat فعال شد",
-    "description": "Extension popup title"
-  },
-  "homepage.download.subtitle": {
-    "message": "همین حالا ScriptCat را نصب کنید و امکانات بی‌نهایت مرور وب را باز کنید",
-    "description": "Download section subtitle"
-  },
-  "homepage.download.title.enhance": {
-    "message": "تجربه مرور خود را ارتقا دهید",
-    "description": "Download section title highlight"
-  },
-  "homepage.download.title.question": {
-    "message": "؟",
-    "description": "Download section title part 2"
-  },
-  "homepage.download.title.ready": {
-    "message": "آماده‌اید",
-    "description": "Download section title part 1"
-  },
-  "homepage.features.api.description": {
-    "message": "رابط‌های API غنی‌تری نسبت به GM ارائه می‌دهد و از امکانات پیشرفته‌ای مانند ذخیره‌سازی فایل و پیکربندی کاربر پشتیبانی می‌کند.",
-    "description": "Feature description: APIs"
-  },
-  "homepage.features.api.title": {
-    "message": "APIهای قدرتمند",
-    "description": "Feature title: APIs"
-  },
-  "homepage.features.background.description": {
-    "message": "برخلاف اسکریپت‌های کاربری معمولی، به اسکریپت‌های شما اجازه می‌دهد بدون نیاز به باز کردن تب، در پس‌زمینه به طور مداوم اجرا شوند.",
-    "description": "Feature description: Background scripts"
-  },
-  "homepage.features.background.title": {
-    "message": "اسکریپت‌های پس‌زمینه",
-    "description": "Feature title: Background scripts"
-  },
-  "homepage.features.compatibility.description": {
-    "message": "کاملاً سازگار با اسکریپت‌های Tampermonkey و Violentmonkey؛ اسکریپت‌های محبوب خود را بدون زحمت منتقل کنید."
-  },
-  "homepage.features.compatibility.title": {
-    "message": "سازگاری کامل"
-  },
-  "homepage.features.easy.description": {
-    "message": "ویرایشگر داخلی، تکمیل خودکار هوشمند، بررسی سینتکس — توسعه اسکریپت کارآمدتر",
-    "description": "Description for easy to use section"
-  },
-  "homepage.features.easy.title": {
-    "message": "آسان در استفاده",
-    "description": "Title for easy to use section"
-  },
-  "homepage.features.editor.description": {
-    "message": "ویرایشگر کد قدرتمند با هایلایت سینتکس، تکمیل کد و راهنمای خطا برای کارآمدتر کردن اسکریپت‌نویسی.",
-    "description": "Feature description: Code editor"
-  },
-  "homepage.features.editor.title": {
-    "message": "ویرایشگر کد داخلی",
-    "description": "Feature title: Code editor"
-  },
-  "homepage.features.powerful.description": {
-    "message": "کاملاً سازگار با Tampermonkey، اسکریپت‌های پس‌زمینه، اسکریپت‌های زمان‌بندی‌شده، API غنی",
-    "description": "Description for powerful features section"
-  },
-  "homepage.features.powerful.title": {
-    "message": "امکانات قدرتمند",
-    "description": "Title for powerful features section"
-  },
-  "homepage.features.secure.description": {
-    "message": "مکانیزم sandbox، مدیریت مجوزها، اجرای امن اسکریپت‌ها را تضمین می‌کند",
-    "description": "Description for secure and reliable section"
-  },
-  "homepage.features.secure.title": {
-    "message": "امن و قابل اعتماد",
-    "description": "Title for secure and reliable section"
-  },
-  "homepage.features.security.description": {
-    "message": "سیستم کنترل مجوز سخت‌گیرانه، رفتار شفاف اسکریپت، جلوگیری مؤثر از اسکریپت‌های مخرب و محافظت از حریم خصوصی شما.",
-    "description": "Feature description: Security"
-  },
-  "homepage.features.security.title": {
-    "message": "امن و قابل اعتماد",
-    "description": "Feature title: Security"
-  },
-  "homepage.features.store.description": {
-    "message": "دارای فروشگاه اسکریپت برای نصب یک‌کلیکی اسکریپت‌های محبوب، یا انتشار آثار شما برای اشتراک با انجمن و ساختن یک اکوسیستم فعال.",
-    "description": "Feature description: Script store"
-  },
-  "homepage.features.store.title": {
-    "message": "فروشگاه اسکریپت",
-    "description": "Feature title: Script store"
-  },
-  "homepage.features.subtitle": {
-    "message": "ScriptCat مجموعه‌ای از امکانات قدرتمند را ارائه می‌دهد که به شما اجازه می‌دهد به سادگی قابلیت‌های مرورگر را گسترش دهید و تجربه وب خود را بسازید.",
-    "description": "Features section subtitle"
-  },
-  "homepage.features.tampermonkey.description": {
-    "message": "کاملاً سازگار با فرمت اسکریپت Tampermonkey؛ کتابخانه اسکریپت موجود را با هزینه صفر و بدون زحمت منتقل کنید.",
-    "description": "Feature description: Tampermonkey compatibility"
-  },
-  "homepage.features.tampermonkey.title": {
-    "message": "سازگار با Tampermonkey",
-    "description": "Feature title: Tampermonkey compatibility"
-  },
-  "homepage.features.title.features": {
-    "message": "قدرتمند"
-  },
-  "homepage.features.title.possibilities": {
-    "message": "امکانات بی‌نهایت",
-    "description": "Features section title highlight"
-  },
-  "homepage.features.title.powerful": {
-    "message": "امکانات قدرتمند، ",
-    "description": "Features section title part 1"
-  },
-  "homepage.footer.contributors.title": {
-    "message": "با تشکر از همه مشارکت‌کنندگان",
-    "description": "Footer contributors section title"
-  },
-  "homepage.hero.browser.chrome": {
-    "message": "افزودن به مرورگر Chrome",
-    "description": "Button text for Chrome browser"
-  },
-  "homepage.hero.browser.crx": {
-    "message": "دانلود بسته نصب برای نصب دستی",
-    "description": "Button text for manual installation"
-  },
-  "homepage.hero.browser.default": {
-    "message": "نصب افزونه در مرورگر",
-    "description": "Default button text for browser installation"
-  },
-  "homepage.hero.browser.edge": {
-    "message": "افزودن به مرورگر Edge",
-    "description": "Button text for Edge browser"
-  },
-  "homepage.hero.browser.firefox": {
-    "message": "افزودن به مرورگر Firefox",
-    "description": "Button text for Firefox browser"
-  },
-  "homepage.hero.button.browseScripts": {
-    "message": "مرور کتابخانه اسکریپت",
-    "description": "Button text for browsing scripts"
-  },
-  "homepage.hero.button.getStarted": {
-    "message": "شروع کنید"
-  },
-  "homepage.hero.button.github": {
-    "message": "GitHub"
-  },
-  "homepage.hero.subtitle": {
-    "message": "یک افزونه مرورگر که می‌تواند اسکریپت‌های کاربری را اجرا کند؛ همه چیز قابل اسکریپت‌نویسی است، مرورگرتان را بیشتر به کار بگیرید!",
-    "description": "The hero subtitle on the homepage"
-  },
-  "homepage.hero.subtitle.highlight": {
-    "message": "یک افزونه مرورگر برای اجرای",
-    "description": "Highlighted subtitle on homepage"
-  },
-  "homepage.hero.subtitle.main": {
-    "message": "ScriptCat یک موتور اسکریپت قدرتمند متن‌باز مرورگر است که به شما امکان می‌دهد به راحتی عملکرد وب را سفارشی کنید، تبلیغات را حذف کنید، وظایف را خودکار کنید و تجربه مرور خود را بهبود بخشید. سازگار با Tampermonkey و ویژگی‌ها و بهینه‌سازی‌های بیشتری ارائه می‌دهد.",
-    "description": "Main subtitle description on homepage"
-  },
-  "homepage.hero.subtitle.possibilities": {
-    "message": "، فعال‌سازی امکانات بی‌نهایت برای مرورگر شما!",
-    "description": "Browser possibilities text"
-  },
-  "homepage.hero.subtitle.userScript": {
-    "message": "اسکریپت‌های کاربری",
-    "description": "User script highlight"
-  },
-  "homepage.hero.title": {
-    "message": "موتور نهایی اسکریپت برای",
-    "description": "Main title on the homepage hero section"
-  },
-  "homepage.hero.title.engine": {
-    "message": "تجربه مرور ارتقا یافته",
-    "description": "Gradient text in main title"
-  },
-  "homepage.hero.trustBadges.title": {
-    "message": "مورد اعتماد و حمایت انجمن فناوری",
-    "description": "Trust badges section title"
-  },
   "homepage.meta.description": {
     "message": "ScriptCat یک موتور اسکریپت مرورگر متن‌باز و قدرتمند است که به شما اجازه می‌دهد به سادگی عملکرد وب را شخصی‌سازی کنید، تبلیغات را حذف کنید، کارها را خودکار کنید و تجربه مرور را ارتقا دهید. سازگار با Tampermonkey با امکانات بیشتر.",
     "description": "Homepage meta description for SEO"
@@ -830,106 +492,6 @@
   "homepage.meta.title": {
     "message": "ScriptCat - موتور قدرتمند اسکریپت مرورگر",
     "description": "Homepage meta title for SEO"
-  },
-  "homepage.og.description": {
-    "message": "موتور اسکریپت مرورگر متن‌باز که مرورگر شما را بیشتر به کار می‌گیرد. پشتیبانی از اسکریپت‌های کاربری، اسکریپت‌های پس‌زمینه، سازگار با Tampermonkey، امکانات قدرتمندتر.",
-    "description": "Open Graph description for social sharing"
-  },
-  "homepage.og.title": {
-    "message": "ScriptCat - موتور قدرتمند اسکریپت مرورگر",
-    "description": "Open Graph title for social sharing"
-  },
-  "homepage.scenario.shopping.feature.alert": {
-    "message": "هشدار کاهش قیمت",
-    "description": "Shopping feature: Price alert"
-  },
-  "homepage.scenario.shopping.feature.compare": {
-    "message": "مقایسه قیمت",
-    "description": "Shopping feature: Price comparison"
-  },
-  "homepage.scenario.shopping.feature.coupon": {
-    "message": "جستجوی خودکار کوپن",
-    "description": "Shopping feature: Coupon search"
-  },
-  "homepage.scenario.shopping.feature.history": {
-    "message": "استعلام تاریخچه قیمت",
-    "description": "Shopping feature: Price history"
-  },
-  "homepage.scenario.shopping.subtitle": {
-    "message": "تجربه خرید را آسان‌تر کنید",
-    "description": "Shopping scenario subtitle"
-  },
-  "homepage.scenario.shopping.tag": {
-    "message": "ابزارهای کاربردی",
-    "description": "Shopping scenario tag"
-  },
-  "homepage.scenario.shopping.title": {
-    "message": "دستیار خرید",
-    "description": "Shopping scenario title"
-  },
-  "homepage.scenario.sites.more": {
-    "message": "بیشتر+",
-    "description": "More sites indicator in scenario cards"
-  },
-  "homepage.scenario.subtitle": {
-    "message": "ببینید ScriptCat چگونه تجربه مرور شما را متحول می‌کند",
-    "description": "Scenario section subtitle"
-  },
-  "homepage.scenario.title.problems": {
-    "message": "مشکلات واقعی",
-    "description": "Scenario section title highlight"
-  },
-  "homepage.scenario.title.scripts": {
-    "message": "",
-    "description": "Scenario section title part 2"
-  },
-  "homepage.scenario.title.solve": {
-    "message": "اسکریپت‌هایی که ",
-    "description": "Scenario section title part 1"
-  },
-  "homepage.scenario.video.feature.adblock": {
-    "message": "رد خودکار از تبلیغ",
-    "description": "Video feature: Ad blocking"
-  },
-  "homepage.scenario.video.feature.download": {
-    "message": "دانلود ویدیو با یک کلیک",
-    "description": "Video feature: Download"
-  },
-  "homepage.scenario.video.feature.speed": {
-    "message": "کنترل سرعت ویدیو",
-    "description": "Video feature: Speed control"
-  },
-  "homepage.scenario.video.feature.ui": {
-    "message": "ساده‌سازی رابط",
-    "description": "Video feature: UI optimization"
-  },
-  "homepage.scenario.video.getScript": {
-    "message": "دریافت اسکریپت ←",
-    "description": "Video scenario get script link"
-  },
-  "homepage.scenario.video.sites": {
-    "message": "سایت‌های پشتیبانی‌شده",
-    "description": "Video scenario supported sites label"
-  },
-  "homepage.scenario.video.subtitle": {
-    "message": "بهینه‌سازی تجربه تماشای ویدیو",
-    "description": "Video scenario subtitle"
-  },
-  "homepage.scenario.video.tag": {
-    "message": "برنامه‌های محبوب",
-    "description": "Video scenario tag"
-  },
-  "homepage.scenario.video.title": {
-    "message": "ارتقای سایت‌های ویدیویی",
-    "description": "Video scenario title"
-  },
-  "homepage.twitter.description": {
-    "message": "موتور اسکریپت مرورگر متن‌باز که مرورگر شما را بیشتر به کار می‌گیرد",
-    "description": "Twitter card description"
-  },
-  "homepage.twitter.title": {
-    "message": "ScriptCat - موتور قدرتمند اسکریپت مرورگر",
-    "description": "Twitter card title"
   },
   "theme.BackToTopButton.buttonAriaLabel": {
     "message": "بازگشت به بالا",
@@ -1043,18 +605,9 @@
     "message": "جایگزین بهتری پیدا کردم",
     "description": "Uninstall reason: found alternative"
   },
-  "uninstall.reason.better": {
-    "message": "جایگزین بهتری پیدا کردم"
-  },
-  "uninstall.reason.bug": {
-    "message": "با خطا یا باگ مواجه شدم"
-  },
   "uninstall.reason.bugs": {
     "message": "با خطا یا باگ مواجه شدم",
     "description": "Uninstall reason: bugs"
-  },
-  "uninstall.reason.feature": {
-    "message": "امکاناتی که نیاز دارم کم است"
   },
   "uninstall.reason.features": {
     "message": "امکانات مورد نیاز من موجود نیست",
@@ -1067,9 +620,6 @@
   "uninstall.reason.other": {
     "message": "دلایل دیگر",
     "description": "Uninstall reason: other"
-  },
-  "uninstall.reason.unused": {
-    "message": "دیگر به آن نیاز ندارم"
   },
   "uninstall.reinstall.chrome": {
     "message": "فروشگاه وب Chrome",
@@ -1142,9 +692,6 @@
   "uninstall.warning.selectReason": {
     "message": "لطفاً یک دلیل حذف نصب را انتخاب کنید",
     "description": "Warning when no reason is selected"
-  },
-  "home.hero.en": {
-    "message": "ابرقدرت برای مرورگر شما."
   },
   "home.search.kw.adblock": {
     "message": "مسدودسازی تبلیغات",

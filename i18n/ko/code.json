@@ -19,10 +19,6 @@
     "message": "문제 보고",
     "description": "Footer community report issues link"
   },
-  "footer.community.recruiting": {
-    "message": "모집 중",
-    "description": "Footer community recruiting badge"
-  },
   "footer.community.title": {
     "message": "커뮤니티",
     "description": "Footer community section title"
@@ -241,9 +237,6 @@
   },
   "home.feat.store.d": {
     "message": "수천 개의 커뮤니티 스크립트를 한 번의 클릭으로 설치하거나, 직접 게시하여 생태계를 함께 만들어 가세요."
-  },
-  "home.feat.store.stat": {
-    "message": "커뮤니티 스크립트 {count}개"
   },
   "home.feat.store.t": {
     "message": "스크립트 스토어"
@@ -488,337 +481,6 @@
   "home.trust.users": {
     "message": "설치 사용자"
   },
-  "homepage.comments.bigonion.content": {
-    "message": "ScriptCat은 미래입니다.",
-    "description": "bigonion's comment content"
-  },
-  "homepage.comments.bigonion.description": {
-    "message": "ScriptCat 개발자",
-    "description": "bigonion's description in community comments"
-  },
-  "homepage.comments.bigonion.username": {
-    "message": "bigonion",
-    "description": "bigonion's username in community comments"
-  },
-  "homepage.comments.enncy.content": {
-    "message": "커뮤니티에 진심으로 감사드립니다",
-    "description": "Enncy's comment content"
-  },
-  "homepage.comments.enncy.description": {
-    "message": "유명 스크립트 작성자",
-    "description": "Enncy's description in community comments"
-  },
-  "homepage.comments.enncy.username": {
-    "message": "Yan Xiaoxi (enncy)",
-    "description": "Enncy's username in community comments"
-  },
-  "homepage.comments.lihengdao.content": {
-    "message": "ScriptCat은 정말 놀랍습니다!",
-    "description": "Li Hengdao's comment content"
-  },
-  "homepage.comments.lihengdao.description": {
-    "message": "Tampermonkey CN 공동 창립자",
-    "description": "Li Hengdao's description in community comments"
-  },
-  "homepage.comments.lihengdao.username": {
-    "message": "Li Hengdao",
-    "description": "Li Hengdao's username in community comments"
-  },
-  "homepage.comments.oraer.content": {
-    "message": "Tampermonkey와의 첫 만남! Tampermonkey를 배우고! Tampermonkey를 능가합니다!",
-    "description": "Oraer's comment content"
-  },
-  "homepage.comments.oraer.description": {
-    "message": "Chrome 사용자",
-    "description": "Oraer's description in community comments"
-  },
-  "homepage.comments.oraer.username": {
-    "message": "Oraer",
-    "description": "Oraer's username in community comments"
-  },
-  "homepage.comments.qianyu.content": {
-    "message": "처음에는 이것이 틈새 JS 플러그인이라고 생각했습니다... 그런데...",
-    "description": "Qian Yu's comment content"
-  },
-  "homepage.comments.qianyu.description": {
-    "message": "Chrome 사용자",
-    "description": "Qian Yu's description in community comments"
-  },
-  "homepage.comments.qianyu.username": {
-    "message": "Qian Yu",
-    "description": "Qian Yu's username in community comments"
-  },
-  "homepage.comments.student.content": {
-    "message": "커뮤니티의 풍부한 학습 자료 덕분에 큰 도움을 받았고 기술 능력을 더 잘 발전시킬 수 있었습니다. ScriptCat은 편리하고 효율적인 기능을 제공하는 매우 유용한 브라우저 확장 프로그램입니다.",
-    "description": "Student user's comment content"
-  },
-  "homepage.comments.student.description": {
-    "message": "학생",
-    "description": "Student user's description in community comments"
-  },
-  "homepage.comments.student.username": {
-    "message": "Student",
-    "description": "Student user's username in community comments"
-  },
-  "homepage.comments.wwwwwllllk.content": {
-    "message": "ScriptCat으로 인터넷 경험을 개선하고 커뮤니티에서 뜻이 맞는 사람들을 만나고 있습니다.",
-    "description": "wwwwwllllk's comment content"
-  },
-  "homepage.comments.wwwwwllllk.description": {
-    "message": "프론트엔드 개발자",
-    "description": "wwwwwllllk's description in community comments"
-  },
-  "homepage.comments.wwwwwllllk.username": {
-    "message": "wwwwwllllk",
-    "description": "wwwwwllllk's username in community comments"
-  },
-  "homepage.comparison.feature": {
-    "message": "기능",
-    "description": "Comparison table header: Feature"
-  },
-  "homepage.comparison.feature.api": {
-    "message": "강력한 API",
-    "description": "Comparison feature: Powerful APIs"
-  },
-  "homepage.comparison.feature.background": {
-    "message": "백그라운드 스크립트",
-    "description": "Comparison feature: Background scripts"
-  },
-  "homepage.comparison.feature.community": {
-    "message": "커뮤니티 지원",
-    "description": "Comparison feature: Community support"
-  },
-  "homepage.comparison.feature.compatibility": {
-    "message": "스크립트 호환성",
-    "description": "Comparison feature: Script compatibility"
-  },
-  "homepage.comparison.feature.mv3": {
-    "message": "MV3 지원",
-    "description": "Comparison feature: MV3 Support"
-  },
-  "homepage.comparison.feature.opensource": {
-    "message": "오픈소스 무료",
-    "description": "Comparison feature: Open source"
-  },
-  "homepage.comparison.feature.sync": {
-    "message": "클라우드 동기화",
-    "description": "Comparison feature: Cloud sync"
-  },
-  "homepage.comparison.label.efficient": {
-    "message": "효율적",
-    "description": "Comparison label: Efficient"
-  },
-  "homepage.comparison.label.multiplatform": {
-    "message": "멀티플랫폼",
-    "description": "Comparison label: Multi-platform"
-  },
-  "homepage.comparison.subtitle": {
-    "message": "다른 스크립트 엔진과 비교해 ScriptCat은 더 많은 장점과 향상된 기능을 제공합니다",
-    "description": "Comparison section subtitle"
-  },
-  "homepage.comparison.title.why": {
-    "message": "왜 선택하는가",
-    "description": "Comparison section title part 1"
-  },
-  "homepage.download.chrome": {
-    "message": "Chrome 확장 프로그램 스토어",
-    "description": "Download button: Chrome store"
-  },
-  "homepage.download.edge": {
-    "message": "Edge 확장 프로그램 스토어",
-    "description": "Download button: Edge store"
-  },
-  "homepage.download.firefox": {
-    "message": "Firefox 확장 프로그램 스토어",
-    "description": "Download button: Firefox store"
-  },
-  "homepage.download.github": {
-    "message": "GitHub 다운로드",
-    "description": "Download button: GitHub"
-  },
-  "homepage.download.popup.text": {
-    "message": "현재 페이지에서 스크립트 3개가 실행 중입니다",
-    "description": "Extension popup text"
-  },
-  "homepage.download.popup.title": {
-    "message": "ScriptCat 활성화됨",
-    "description": "Extension popup title"
-  },
-  "homepage.download.subtitle": {
-    "message": "지금 ScriptCat을 설치하고 웹 브라우징의 무한한 가능성을 열어 보세요",
-    "description": "Download section subtitle"
-  },
-  "homepage.download.title.enhance": {
-    "message": "브라우징 경험을 향상시키세요",
-    "description": "Download section title highlight"
-  },
-  "homepage.download.title.question": {
-    "message": "?",
-    "description": "Download section title part 2"
-  },
-  "homepage.download.title.ready": {
-    "message": "준비하세요",
-    "description": "Download section title part 1"
-  },
-  "homepage.features.api.description": {
-    "message": "GM보다 더 풍부한 API 인터페이스를 제공하며 파일 저장, 사용자 구성과 같은 고급 기능을 지원해 스크립트 기능을 확장합니다.",
-    "description": "Feature description: APIs"
-  },
-  "homepage.features.api.title": {
-    "message": "강력한 API",
-    "description": "Feature title: APIs"
-  },
-  "homepage.features.background.description": {
-    "message": "일반 유저스크립트와 달리 탭을 열지 않고도 스크립트가 백그라운드에서 계속 실행되도록 합니다.",
-    "description": "Feature description: Background scripts"
-  },
-  "homepage.features.background.title": {
-    "message": "백그라운드 스크립트",
-    "description": "Feature title: Background scripts"
-  },
-  "homepage.features.compatibility.description": {
-    "message": "Tampermonkey 및 Violentmonkey 스크립트와 완벽하게 호환되며 좋아하는 스크립트를 번거로움 없이 마이그레이션하세요."
-  },
-  "homepage.features.compatibility.title": {
-    "message": "완벽한 호환성"
-  },
-  "homepage.features.easy.description": {
-    "message": "내장 에디터, 스마트 자동 완성, 구문 검사로 더 효율적인 스크립트 개발이 가능합니다",
-    "description": "Description for easy to use section"
-  },
-  "homepage.features.easy.title": {
-    "message": "사용하기 쉬움",
-    "description": "Title for easy to use section"
-  },
-  "homepage.features.editor.description": {
-    "message": "구문 강조, 코드 완성, 오류 힌트를 갖춘 강력한 코드 에디터로 스크립트 작성이 더 효율적입니다.",
-    "description": "Feature description: Code editor"
-  },
-  "homepage.features.editor.title": {
-    "message": "내장 코드 에디터",
-    "description": "Feature title: Code editor"
-  },
-  "homepage.features.powerful.description": {
-    "message": "Tampermonkey와 완벽 호환, 백그라운드 스크립트, 예약 스크립트, 풍부한 API",
-    "description": "Description for powerful features section"
-  },
-  "homepage.features.powerful.title": {
-    "message": "강력한 기능",
-    "description": "Title for powerful features section"
-  },
-  "homepage.features.secure.description": {
-    "message": "샌드박스 메커니즘, 권한 관리로 스크립트의 안전한 실행을 보장합니다",
-    "description": "Description for secure and reliable section"
-  },
-  "homepage.features.secure.title": {
-    "message": "안전하고 신뢰할 수 있음",
-    "description": "Title for secure and reliable section"
-  },
-  "homepage.features.security.description": {
-    "message": "엄격한 권한 제어 시스템, 투명한 스크립트 동작으로 악성 스크립트를 효과적으로 차단하고 개인정보를 보호합니다.",
-    "description": "Feature description: Security"
-  },
-  "homepage.features.security.title": {
-    "message": "안전하고 신뢰할 수 있음",
-    "description": "Feature title: Security"
-  },
-  "homepage.features.store.description": {
-    "message": "인기 스크립트를 원클릭 설치할 수 있는 스크립트 스토어를 제공하거나 작품을 게시해 커뮤니티와 공유하며 활발한 생태계를 구축합니다.",
-    "description": "Feature description: Script store"
-  },
-  "homepage.features.store.title": {
-    "message": "스크립트 스토어",
-    "description": "Feature title: Script store"
-  },
-  "homepage.features.subtitle": {
-    "message": "ScriptCat은 브라우저 기능을 쉽게 확장하고 나만의 웹 경험을 만들 수 있는 일련의 강력한 기능을 제공합니다.",
-    "description": "Features section subtitle"
-  },
-  "homepage.features.tampermonkey.description": {
-    "message": "Tampermonkey 스크립트 형식과 완벽하게 호환되며 기존 스크립트 라이브러리를 전환 비용 없이 매끄럽게 마이그레이션합니다.",
-    "description": "Feature description: Tampermonkey compatibility"
-  },
-  "homepage.features.tampermonkey.title": {
-    "message": "Tampermonkey 호환",
-    "description": "Feature title: Tampermonkey compatibility"
-  },
-  "homepage.features.title.features": {
-    "message": "무한한 가능성"
-  },
-  "homepage.features.title.possibilities": {
-    "message": "무한한 가능성",
-    "description": "Features section title highlight"
-  },
-  "homepage.features.title.powerful": {
-    "message": "강력한 기능, ",
-    "description": "Features section title part 1"
-  },
-  "homepage.footer.contributors.title": {
-    "message": "모든 기여자에게 감사드립니다",
-    "description": "Footer contributors section title"
-  },
-  "homepage.hero.browser.chrome": {
-    "message": "Chrome 브라우저에 추가",
-    "description": "Button text for Chrome browser"
-  },
-  "homepage.hero.browser.crx": {
-    "message": "수동 설치용 설치 패키지 다운로드",
-    "description": "Button text for manual installation"
-  },
-  "homepage.hero.browser.default": {
-    "message": "브라우저에 확장 프로그램 설치",
-    "description": "Default button text for browser installation"
-  },
-  "homepage.hero.browser.edge": {
-    "message": "Edge 브라우저에 추가",
-    "description": "Button text for Edge browser"
-  },
-  "homepage.hero.browser.firefox": {
-    "message": "Firefox 브라우저에 추가",
-    "description": "Button text for Firefox browser"
-  },
-  "homepage.hero.button.browseScripts": {
-    "message": "스크립트 라이브러리 둘러보기",
-    "description": "Button text for browsing scripts"
-  },
-  "homepage.hero.button.getStarted": {
-    "message": "시작하기"
-  },
-  "homepage.hero.button.github": {
-    "message": "GitHub"
-  },
-  "homepage.hero.subtitle": {
-    "message": "유저스크립트를 실행할 수 있는 브라우저 확장 프로그램, 모든 것을 스크립트할 수 있으며 브라우저가 더 많은 일을 하게 해 주세요!",
-    "description": "The hero subtitle on the homepage"
-  },
-  "homepage.hero.subtitle.highlight": {
-    "message": "다음을 실행하는 브라우저 확장 프로그램:",
-    "description": "Highlighted subtitle on homepage"
-  },
-  "homepage.hero.subtitle.main": {
-    "message": "ScriptCat은 웹 기능을 쉽게 사용자 정의하고, 광고를 제거하고, 작업을 자동화하고, 브라우징 경험을 향상시킬 수 있는 강력한 오픈 소스 브라우저 스크립트 엔진입니다. Tampermonkey와 호환되며 더 많은 기능과 최적화를 제공합니다.",
-    "description": "Main subtitle description on homepage"
-  },
-  "homepage.hero.subtitle.possibilities": {
-    "message": ", 브라우저의 무한한 가능성을 활성화합니다!",
-    "description": "Browser possibilities text"
-  },
-  "homepage.hero.subtitle.userScript": {
-    "message": "사용자 스크립트",
-    "description": "User script highlight"
-  },
-  "homepage.hero.title": {
-    "message": "궁극의 스크립트 엔진 for",
-    "description": "Main title on the homepage hero section"
-  },
-  "homepage.hero.title.engine": {
-    "message": "향상된 브라우저 경험",
-    "description": "Gradient text in main title"
-  },
-  "homepage.hero.trustBadges.title": {
-    "message": "기술 커뮤니티의 신뢰와 지지를 받습니다",
-    "description": "Trust badges section title"
-  },
   "homepage.meta.description": {
     "message": "ScriptCat은 브라우저 기능을 쉽게 사용자 지정하고, 광고를 제거하고, 작업을 자동화하며, 브라우징 경험을 향상시킬 수 있는 강력한 오픈소스 브라우저 스크립트 엔진입니다. 더 많은 기능을 갖춘 Tampermonkey 호환 엔진입니다.",
     "description": "Homepage meta description for SEO"
@@ -830,106 +492,6 @@
   "homepage.meta.title": {
     "message": "ScriptCat - 강력한 브라우저 스크립트 엔진",
     "description": "Homepage meta title for SEO"
-  },
-  "homepage.og.description": {
-    "message": "브라우저가 더 많은 일을 하게 만드는 오픈소스 브라우저 스크립트 엔진. 유저스크립트, 백그라운드 스크립트 지원, Tampermonkey 호환, 더 강력한 기능.",
-    "description": "Open Graph description for social sharing"
-  },
-  "homepage.og.title": {
-    "message": "ScriptCat - 강력한 브라우저 스크립트 엔진",
-    "description": "Open Graph title for social sharing"
-  },
-  "homepage.scenario.shopping.feature.alert": {
-    "message": "가격 인하 알림",
-    "description": "Shopping feature: Price alert"
-  },
-  "homepage.scenario.shopping.feature.compare": {
-    "message": "가격 비교",
-    "description": "Shopping feature: Price comparison"
-  },
-  "homepage.scenario.shopping.feature.coupon": {
-    "message": "자동 쿠폰 검색",
-    "description": "Shopping feature: Coupon search"
-  },
-  "homepage.scenario.shopping.feature.history": {
-    "message": "가격 이력 조회",
-    "description": "Shopping feature: Price history"
-  },
-  "homepage.scenario.shopping.subtitle": {
-    "message": "쇼핑 경험을 더 쉽게 만드세요",
-    "description": "Shopping scenario subtitle"
-  },
-  "homepage.scenario.shopping.tag": {
-    "message": "실용적인 도구",
-    "description": "Shopping scenario tag"
-  },
-  "homepage.scenario.shopping.title": {
-    "message": "쇼핑 도우미",
-    "description": "Shopping scenario title"
-  },
-  "homepage.scenario.sites.more": {
-    "message": "+더보기",
-    "description": "More sites indicator in scenario cards"
-  },
-  "homepage.scenario.subtitle": {
-    "message": "ScriptCat이 브라우징 경험을 어떻게 변화시키는지 확인하세요",
-    "description": "Scenario section subtitle"
-  },
-  "homepage.scenario.title.problems": {
-    "message": "실제 문제",
-    "description": "Scenario section title highlight"
-  },
-  "homepage.scenario.title.scripts": {
-    "message": "",
-    "description": "Scenario section title part 2"
-  },
-  "homepage.scenario.title.solve": {
-    "message": "해결하는 스크립트 ",
-    "description": "Scenario section title part 1"
-  },
-  "homepage.scenario.video.feature.adblock": {
-    "message": "광고 자동 건너뛰기",
-    "description": "Video feature: Ad blocking"
-  },
-  "homepage.scenario.video.feature.download": {
-    "message": "원클릭 비디오 다운로드",
-    "description": "Video feature: Download"
-  },
-  "homepage.scenario.video.feature.speed": {
-    "message": "비디오 속도 조절",
-    "description": "Video feature: Speed control"
-  },
-  "homepage.scenario.video.feature.ui": {
-    "message": "UI 단순화",
-    "description": "Video feature: UI optimization"
-  },
-  "homepage.scenario.video.getScript": {
-    "message": "스크립트 받기 →",
-    "description": "Video scenario get script link"
-  },
-  "homepage.scenario.video.sites": {
-    "message": "지원되는 사이트",
-    "description": "Video scenario supported sites label"
-  },
-  "homepage.scenario.video.subtitle": {
-    "message": "비디오 시청 경험 최적화",
-    "description": "Video scenario subtitle"
-  },
-  "homepage.scenario.video.tag": {
-    "message": "인기 앱",
-    "description": "Video scenario tag"
-  },
-  "homepage.scenario.video.title": {
-    "message": "비디오 사이트 향상",
-    "description": "Video scenario title"
-  },
-  "homepage.twitter.description": {
-    "message": "브라우저가 더 많은 일을 하게 만드는 오픈소스 브라우저 스크립트 엔진",
-    "description": "Twitter card description"
-  },
-  "homepage.twitter.title": {
-    "message": "ScriptCat - 강력한 브라우저 스크립트 엔진",
-    "description": "Twitter card title"
   },
   "theme.BackToTopButton.buttonAriaLabel": {
     "message": "맨 위로",
@@ -1043,18 +605,9 @@
     "message": "더 나은 대안을 찾았습니다",
     "description": "Uninstall reason: found alternative"
   },
-  "uninstall.reason.better": {
-    "message": "더 나은 대안을 찾았습니다"
-  },
-  "uninstall.reason.bug": {
-    "message": "오류나 버그가 발생했습니다"
-  },
   "uninstall.reason.bugs": {
     "message": "오류나 버그가 발생했습니다",
     "description": "Uninstall reason: bugs"
-  },
-  "uninstall.reason.feature": {
-    "message": "필요한 기능이 없습니다"
   },
   "uninstall.reason.features": {
     "message": "필요한 기능이 없습니다",
@@ -1067,9 +620,6 @@
   "uninstall.reason.other": {
     "message": "기타 이유",
     "description": "Uninstall reason: other"
-  },
-  "uninstall.reason.unused": {
-    "message": "더 이상 필요하지 않습니다"
   },
   "uninstall.reinstall.chrome": {
     "message": "Chrome 웹 스토어",
@@ -1142,9 +692,6 @@
   "uninstall.warning.selectReason": {
     "message": "제거 사유를 선택해 주세요",
     "description": "Warning when no reason is selected"
-  },
-  "home.hero.en": {
-    "message": "브라우저를 위한 초능력."
   },
   "home.search.kw.adblock": {
     "message": "광고 차단",

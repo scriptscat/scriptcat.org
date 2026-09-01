@@ -51,375 +51,11 @@
     "message": "Xem tất cả thẻ",
     "description": "The label of the link targeting the tag list page"
   },
-  "homepage.hero.title": {
-    "message": "Công cụ script mạnh mẽ nhất cho",
-    "description": "Main title on the homepage hero section"
-  },
-  "homepage.hero.subtitle": {
-    "message": "Tiện ích mở rộng trình duyệt có thể thực thi các script người dùng, mọi thứ đều có thể được script hóa, cho phép trình duyệt làm được nhiều việc hơn!",
-    "description": "The hero subtitle on the homepage"
-  },
-  "homepage.features.powerful.title": {
-    "message": "Tính năng mạnh mẽ",
-    "description": "Title for powerful features section"
-  },
-  "homepage.features.powerful.description": {
-    "message": "Hoàn toàn tương thích với Tampermonkey, script nền, script định thời, API phong phú",
-    "description": "Description for powerful features section"
-  },
-  "homepage.features.easy.title": {
-    "message": "Dễ sử dụng",
-    "description": "Title for easy to use section"
-  },
-  "homepage.features.easy.description": {
-    "message": "Trình soạn thảo tích hợp, tự động hoàn thành thông minh, kiểm tra cú pháp, phát triển script hiệu quả hơn",
-    "description": "Description for easy to use section"
-  },
-  "homepage.features.secure.title": {
-    "message": "An toàn và đáng tin cậy",
-    "description": "Title for secure and reliable section"
-  },
-  "homepage.features.secure.description": {
-    "message": "Cơ chế sandbox, quản lý quyền, đảm bảo thực thi script an toàn",
-    "description": "Description for secure and reliable section"
-  },
-  "homepage.comments.lihengdao.username": {
-    "message": "Li Hengdao",
-    "description": "Li Hengdao's username in community comments"
-  },
-  "homepage.comments.lihengdao.description": {
-    "message": "Đồng sáng lập Tampermonkey CN",
-    "description": "Mô tả của Li Hengdao trong bình luận cộng đồng"
-  },
-  "homepage.comments.lihengdao.content": {
-    "message": "ScriptCat thật tuyệt vời!",
-    "description": "Nội dung bình luận của Li Hengdao"
-  },
-  "homepage.comments.student.username": {
-    "message": "Lo lắng về kỳ thi",
-    "description": "Tên người dùng sinh viên trong bình luận cộng đồng"
-  },
-  "homepage.comments.student.description": {
-    "message": "Sinh viên",
-    "description": "Mô tả sinh viên trong bình luận cộng đồng"
-  },
-  "homepage.comments.student.content": {
-    "message": "Cảm ơn cộng đồng với những tài nguyên học tập phong phú, tôi đã học được rất nhiều và có thể phát triển kỹ năng kỹ thuật của mình tốt hơn. ScriptCat là một tiện ích mở rộng trình duyệt rất hữu ích, cung cấp cho tôi các chức năng tiện lợi và hiệu quả.",
-    "description": "Nội dung bình luận của sinh viên"
-  },
-  "homepage.comments.enncy.username": {
-    "message": "Yan Xiaoxi (enncy)",
-    "description": "Enncy's username in community comments"
-  },
-  "homepage.comments.enncy.description": {
-    "message": "Tác giả script nổi tiếng",
-    "description": "Mô tả của enncy trong bình luận cộng đồng"
-  },
-  "homepage.comments.enncy.content": {
-    "message": "Chân thành cảm ơn cộng đồng",
-    "description": "Nội dung bình luận của enncy"
-  },
-  "homepage.comments.qianyu.username": {
-    "message": "Qian Yu",
-    "description": "Qian Yu's username in community comments"
-  },
-  "homepage.comments.qianyu.description": {
-    "message": "Người dùng Chrome",
-    "description": "Mô tả của Qian Yu trong bình luận cộng đồng"
-  },
-  "homepage.comments.qianyu.content": {
-    "message": "Ban đầu, mọi người nghĩ đây là một plugin JS thích hợp... cho đến khi...",
-    "description": "Nội dung bình luận của Qian Yu"
-  },
-  "homepage.comments.wwwwwllllk.username": {
-    "message": "wwwwwllllk",
-    "description": "wwwwwllllk's username in community comments"
-  },
-  "homepage.comments.wwwwwllllk.description": {
-    "message": "Nhà phát triển Frontend",
-    "description": "wwwwwllllk's description in community comments"
-  },
-  "homepage.comments.wwwwwllllk.content": {
-    "message": "Sử dụng ScriptCat để cải thiện trải nghiệm internet, gặp gỡ những người cùng chí hướng trong cộng đồng.",
-    "description": "wwwwwllllk's comment content"
-  },
-  "homepage.comments.oraer.username": {
-    "message": "Oraer",
-    "description": "Oraer's username in community comments"
-  },
-  "homepage.comments.oraer.description": {
-    "message": "Người dùng Chrome",
-    "description": "Oraer's description in community comments"
-  },
-  "homepage.comments.oraer.content": {
-    "message": "Lần đầu gặp gỡ Tampermonkey! Đang học Tampermonkey! Vượt qua Tampermonkey!",
-    "description": "Oraer's comment content"
-  },
-  "homepage.comments.bigonion.username": {
-    "message": "bigonion",
-    "description": "bigonion's username in community comments"
-  },
-  "homepage.comments.bigonion.description": {
-    "message": "Nhà phát triển ScriptCat",
-    "description": "bigonion's description in community comments"
-  },
-  "homepage.comments.bigonion.content": {
-    "message": "ScriptCat là tương lai.",
-    "description": "bigonion's comment content"
-  },
   "homepage.meta.title": {
     "message": "ScriptCat - Công cụ kịch bản người dùng cho trình duyệt của bạn"
   },
   "homepage.meta.description": {
     "message": "ScriptCat là công cụ kịch bản trình duyệt mã nguồn mở mạnh mẽ, cho phép bạn dễ dàng tùy chỉnh chức năng web, loại bỏ quảng cáo, tự động hóa tác vụ và nâng cao trải nghiệm duyệt web. Tương thích với Tampermonkey và có nhiều tính năng hơn."
-  },
-  "homepage.og.title": {
-    "message": "ScriptCat - A Powerful Userscript Engine"
-  },
-  "homepage.og.description": {
-    "message": "Elevate your browsing experience with ScriptCat. Fully compatible with Tampermonkey."
-  },
-  "homepage.twitter.title": {
-    "message": "ScriptCat - Công cụ script trình duyệt mạnh mẽ",
-    "description": "Twitter card title"
-  },
-  "homepage.twitter.description": {
-    "message": "Công cụ script trình duyệt mã nguồn mở mạnh mẽ giúp trình duyệt của bạn làm được nhiều hơn",
-    "description": "Twitter card description"
-  },
-  "homepage.hero.title.engine": {
-    "message": "Trải nghiệm duyệt web được nâng cao",
-    "description": "Gradient text in main title"
-  },
-  "homepage.hero.subtitle.userScript": {
-    "message": "script người dùng",
-    "description": "User script highlight"
-  },
-  "homepage.hero.subtitle.possibilities": {
-    "message": ", kích hoạt khả năng vô hạn cho trình duyệt của bạn!",
-    "description": "Browser possibilities text"
-  },
-  "homepage.hero.subtitle.main": {
-    "message": "ScriptCat là một công cụ script trình duyệt mã nguồn mở mạnh mẽ giúp bạn dễ dàng tùy chỉnh chức năng web, chặn quảng cáo, tự động hóa tác vụ và nâng cao trải nghiệm duyệt web. Tương thích với Tampermonkey và cung cấp nhiều tính năng và tối ưu hóa hơn.",
-    "description": "Main subtitle description on homepage"
-  },
-  "homepage.hero.button.getStarted": {
-    "message": "Commencer"
-  },
-  "homepage.hero.button.github": {
-    "message": "GitHub"
-  },
-  "homepage.features.title.powerful": {
-    "message": "Tính năng mạnh mẽ, ",
-    "description": "Features section title part 1"
-  },
-  "homepage.features.title.features": {
-    "message": "puissantes"
-  },
-  "homepage.features.subtitle": {
-    "message": "Không chỉ là một tiện ích mở rộng trình duyệt: một trải nghiệm web tự do, an toàn và mạnh mẽ hơn"
-  },
-  "homepage.features.compatibility.title": {
-    "message": "Tương thích hoàn hảo"
-  },
-  "homepage.features.compatibility.description": {
-    "message": "Hoàn toàn tương thích với script của Tampermonkey và Violentmonkey, di chuyển mà không tốn kém."
-  },
-  "homepage.features.background.title": {
-    "message": "Kịch bản chạy nền"
-  },
-  "homepage.features.background.description": {
-    "message": "Các kịch bản chạy nền độc đáo và nhiệm vụ theo lịch trình cho phép tự động hóa 24/7, độc lập với DOM."
-  },
-  "homepage.features.security.title": {
-    "message": "An toàn và Quyền riêng tư"
-  },
-  "homepage.features.security.description": {
-    "message": "Hệ thống kiểm soát quyền nghiêm ngặt và hành vi kịch bản minh bạch giúp ngăn chặn hiệu quả các kịch bản độc hại và bảo vệ quyền riêng tư của bạn."
-  },
-  "homepage.features.editor.title": {
-    "message": "Trình chỉnh sửa mã tích hợp"
-  },
-  "homepage.features.editor.description": {
-    "message": "Trình chỉnh sửa mạnh mẽ với tính năng làm nổi bật cú pháp, tự động hoàn thành và gợi ý lỗi giúp việc lập trình hiệu quả hơn."
-  },
-  "homepage.features.api.title": {
-    "message": "API mạnh mẽ"
-  },
-  "homepage.features.api.description": {
-    "message": "Cung cấp các giao diện API phong phú hơn GM, hỗ trợ các chức năng nâng cao như lưu trữ tệp và cấu hình người dùng."
-  },
-  "homepage.features.store.title": {
-    "message": "Cửa hàng kịch bản"
-  },
-  "homepage.features.store.description": {
-    "message": "Cửa hàng để cài đặt các kịch bản phổ biến chỉ với một cú nhấp chuột, hoặc xuất bản tác phẩm của bạn để chia sẻ với cộng đồng."
-  },
-  "homepage.comparison.title.why": {
-    "message": "Tại sao chọn chúng tôi?"
-  },
-  "homepage.comparison.subtitle": {
-    "message": "So với các công cụ kịch bản khác, ScriptCat cung cấp nhiều ưu điểm và tính năng cải tiến hơn"
-  },
-  "homepage.comparison.feature": {
-    "message": "Tính năng"
-  },
-  "homepage.comparison.feature.compatibility": {
-    "message": "Tương thích kịch bản"
-  },
-  "homepage.comparison.feature.background": {
-    "message": "Kịch bản chạy nền"
-  },
-  "homepage.comparison.feature.opensource": {
-    "message": "Mã nguồn mở miễn phí"
-  },
-  "homepage.comparison.feature.mv3": {
-    "message": "Hỗ trợ MV3"
-  },
-  "homepage.comparison.feature.sync": {
-    "message": "Đồng bộ hóa đám mây"
-  },
-  "homepage.comparison.feature.api": {
-    "message": "API mạnh mẽ"
-  },
-  "homepage.comparison.feature.community": {
-    "message": "Hỗ trợ cộng đồng"
-  },
-  "homepage.comparison.label.efficient": {
-    "message": "Hiệu quả",
-    "description": "Comparison label: Efficient"
-  },
-  "homepage.comparison.label.multiplatform": {
-    "message": "Đa nền tảng",
-    "description": "Comparison label: Multi-platform"
-  },
-  "homepage.scenario.title.solve": {
-    "message": "Script giải quyết vấn đề",
-    "description": "Scenario section title part 1"
-  },
-  "homepage.scenario.title.problems": {
-    "message": "vấn đề thực tế",
-    "description": "Scenario section title highlight"
-  },
-  "homepage.scenario.title.scripts": {
-    "message": "",
-    "description": "Scenario section title part 2"
-  },
-  "homepage.scenario.subtitle": {
-    "message": "Xem ScriptCat có thể biến đổi trải nghiệm duyệt web của bạn như thế nào",
-    "description": "Scenario section subtitle"
-  },
-  "homepage.scenario.video.title": {
-    "message": "Cải thiện trang video",
-    "description": "Video scenario title"
-  },
-  "homepage.scenario.video.subtitle": {
-    "message": "Tối ưu hóa trải nghiệm xem video",
-    "description": "Video scenario subtitle"
-  },
-  "homepage.scenario.video.tag": {
-    "message": "Ứng dụng phổ biến",
-    "description": "Video scenario tag"
-  },
-  "homepage.scenario.video.feature.speed": {
-    "message": "Điều khiển tốc độ video",
-    "description": "Video feature: Speed control"
-  },
-  "homepage.scenario.video.feature.download": {
-    "message": "Tải video bằng một cú nhấp",
-    "description": "Video feature: Download"
-  },
-  "homepage.scenario.video.feature.adblock": {
-    "message": "Tự động bỏ qua quảng cáo",
-    "description": "Video feature: Ad blocking"
-  },
-  "homepage.scenario.video.feature.ui": {
-    "message": "Đơn giản hóa giao diện",
-    "description": "Video feature: UI optimization"
-  },
-  "homepage.scenario.video.sites": {
-    "message": "Trang web được hỗ trợ",
-    "description": "Video scenario supported sites label"
-  },
-  "homepage.scenario.video.getScript": {
-    "message": "Lấy script →",
-    "description": "Video scenario get script link"
-  },
-  "homepage.scenario.shopping.title": {
-    "message": "Trợ lý mua sắm",
-    "description": "Shopping scenario title"
-  },
-  "homepage.scenario.shopping.subtitle": {
-    "message": "Làm cho trải nghiệm mua sắm dễ dàng hơn",
-    "description": "Shopping scenario subtitle"
-  },
-  "homepage.scenario.shopping.tag": {
-    "message": "Công cụ thực tế",
-    "description": "Shopping scenario tag"
-  },
-  "homepage.scenario.shopping.feature.history": {
-    "message": "Lịch sử giá",
-    "description": "Shopping feature: Price history"
-  },
-  "homepage.scenario.shopping.feature.coupon": {
-    "message": "Tìm kiếm mã giảm giá tự động",
-    "description": "Shopping feature: Coupon search"
-  },
-  "homepage.scenario.shopping.feature.compare": {
-    "message": "So sánh giá",
-    "description": "Shopping feature: Price comparison"
-  },
-  "homepage.scenario.shopping.feature.alert": {
-    "message": "Cảnh báo giảm giá",
-    "description": "Shopping feature: Price alert"
-  },
-  "homepage.scenario.sites.more": {
-    "message": "+Thêm",
-    "description": "More sites indicator in scenario cards"
-  },
-  "homepage.download.title.ready": {
-    "message": "Sẵn sàng",
-    "description": "Download section title part 1"
-  },
-  "homepage.download.title.enhance": {
-    "message": "Nâng cao trải nghiệm duyệt web của bạn",
-    "description": "Download section title highlight"
-  },
-  "homepage.download.title.question": {
-    "message": "?",
-    "description": "Download section title part 2"
-  },
-  "homepage.download.subtitle": {
-    "message": "Cài đặt ScriptCat ngay và mở khóa khả năng vô hạn cho việc duyệt web",
-    "description": "Download section subtitle"
-  },
-  "homepage.download.edge": {
-    "message": "Edge Web Store",
-    "description": "Download button: Edge store"
-  },
-  "homepage.download.chrome": {
-    "message": "Chrome Web Store",
-    "description": "Download button: Chrome store"
-  },
-  "homepage.download.firefox": {
-    "message": "Firefox Add-ons",
-    "description": "Download button: Firefox store"
-  },
-  "homepage.download.github": {
-    "message": "Tải xuống GitHub",
-    "description": "Download button: GitHub"
-  },
-  "homepage.download.popup.title": {
-    "message": "ScriptCat đã được kích hoạt",
-    "description": "Extension popup title"
-  },
-  "homepage.download.popup.text": {
-    "message": "3 script đang chạy trên trang hiện tại",
-    "description": "Extension popup text"
-  },
-  "homepage.footer.contributors.title": {
-    "message": "Cảm ơn tất cả cộng tác viên",
-    "description": "Footer contributors section title"
   },
   "footer.description": {
     "message": "Một công cụ kịch bản trình duyệt mạnh mẽ giúp trải nghiệm web của bạn phong phú và màu sắc hơn."
@@ -478,10 +114,6 @@
   "footer.community.contact": {
     "message": "Liên hệ với nhóm",
     "description": "Footer community contact team link"
-  },
-  "footer.community.recruiting": {
-    "message": "Tuyển dụng",
-    "description": "Footer community recruiting badge"
   },
   "footer.copyright.allRightsReserved": {
     "message": "Bản quyền đã được bảo hộ."
@@ -545,18 +177,6 @@
   "uninstall.question.reason": {
     "message": "Lý do chính khiến bạn gỡ cài đặt ScriptCat là gì?",
     "description": "Question about uninstall reason"
-  },
-  "uninstall.reason.bug": {
-    "message": "Đã gặp lỗi hoặc bug"
-  },
-  "uninstall.reason.unused": {
-    "message": "Không còn cần dùng"
-  },
-  "uninstall.reason.feature": {
-    "message": "Thiếu tính năng tôi cần"
-  },
-  "uninstall.reason.better": {
-    "message": "Đã tìm thấy giải pháp thay thế tốt hơn"
   },
   "uninstall.reason.other": {
     "message": "Lý do khác",
@@ -622,10 +242,6 @@
     "message": "Xem tài liệu",
     "description": "View docs button"
   },
-  "homepage.hero.browser.crx": {
-    "message": "Tải xuống gói cài đặt để cài đặt thủ công",
-    "description": "Button text for manual installation"
-  },
   "uninstall.reason.no_need": {
     "message": "Không còn cần ScriptCat",
     "description": "Uninstall reason: no longer need"
@@ -654,41 +270,13 @@
     "message": "Cảm ơn phản hồi của bạn!",
     "description": "Thank you page title"
   },
-  "homepage.hero.button.browseScripts": {
-    "message": "Duyệt thư viện script",
-    "description": "Button text for browsing scripts"
-  },
   "uninstall.warning.selectReason": {
     "message": "Vui lòng chọn lý do gỡ cài đặt",
     "description": "Warning when no reason is selected"
   },
-  "homepage.features.tampermonkey.title": {
-    "message": "Tampermonkey Compatible",
-    "description": "Feature title: Tampermonkey compatibility"
-  },
   "uninstall.reason.alternative": {
     "message": "Đã tìm thấy giải pháp thay thế tốt hơn",
     "description": "Uninstall reason: found alternative"
-  },
-  "homepage.hero.browser.edge": {
-    "message": "Thêm vào trình duyệt Edge",
-    "description": "Button text for Edge browser"
-  },
-  "homepage.hero.trustBadges.title": {
-    "message": "Được tin cậy và hỗ trợ bởi cộng đồng công nghệ",
-    "description": "Trust badges section title"
-  },
-  "homepage.hero.browser.chrome": {
-    "message": "Thêm vào trình duyệt Chrome",
-    "description": "Button text for Chrome browser"
-  },
-  "homepage.features.tampermonkey.description": {
-    "message": "Hoàn toàn tương thích với định dạng script Tampermonkey, di chuyển script hiện có mà không bị gián đoạn.",
-    "description": "Feature description: Tampermonkey compatibility"
-  },
-  "homepage.hero.browser.default": {
-    "message": "Cài đặt tiện ích mở rộng",
-    "description": "Default button text for browser installation"
   },
   "uninstall.success.submitted": {
     "message": "Cảm ơn phản hồi của bạn!",
@@ -698,10 +286,6 @@
     "message": "Đã gặp lỗi hoặc bug",
     "description": "Uninstall reason: bugs"
   },
-  "homepage.hero.subtitle.highlight": {
-    "message": "Tiện ích mở rộng trình duyệt để thực thi",
-    "description": "Highlighted subtitle on homepage"
-  },
   "uninstall.thanks.reportIssue": {
     "message": "Báo cáo sự cố",
     "description": "Report issue button"
@@ -709,14 +293,6 @@
   "uninstall.error.submit": {
     "message": "Gửi thất bại, vui lòng thử lại sau",
     "description": "Error message when submission fails"
-  },
-  "homepage.hero.browser.firefox": {
-    "message": "Thêm vào trình duyệt Firefox",
-    "description": "Button text for Firefox browser"
-  },
-  "homepage.features.title.possibilities": {
-    "message": "Khả năng vô hạn",
-    "description": "Features section title highlight"
   },
   "home.comm.btn": {
     "message": "Đóng góp trên GitHub"
@@ -848,9 +424,6 @@
   },
   "home.feat.store.d": {
     "message": "Cài đặt hàng nghìn script cộng đồng chỉ một cú nhấp, hoặc xuất bản script của bạn và cùng nhau xây dựng hệ sinh thái."
-  },
-  "home.feat.store.stat": {
-    "message": "{count} script cộng đồng"
   },
   "home.feat.store.t": {
     "message": "Cửa hàng script"
@@ -1110,9 +683,6 @@
   "uninstall.reinstall.firefox": {
     "message": "Tiện ích Firefox",
     "description": "Reinstall from Firefox Add-ons button"
-  },
-  "home.hero.en": {
-    "message": "Siêu năng lực cho trình duyệt của bạn."
   },
   "home.search.kw.adblock": {
     "message": "chặn quảng cáo",

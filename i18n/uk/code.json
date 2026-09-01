@@ -19,10 +19,6 @@
     "message": "Повідомити про проблеми",
     "description": "Footer community report issues link"
   },
-  "footer.community.recruiting": {
-    "message": "Набір команди",
-    "description": "Footer community recruiting badge"
-  },
   "footer.community.title": {
     "message": "Спільнота",
     "description": "Footer community section title"
@@ -241,9 +237,6 @@
   },
   "home.feat.store.d": {
     "message": "Встановіть тисячі скриптів спільноти одним кліком або опублікуйте власні та будуйте екосистему разом."
-  },
-  "home.feat.store.stat": {
-    "message": "{count} скриптів спільноти"
   },
   "home.feat.store.t": {
     "message": "Магазин скриптів"
@@ -488,337 +481,6 @@
   "home.trust.users": {
     "message": "Користувачів встановили"
   },
-  "homepage.comments.bigonion.content": {
-    "message": "ScriptCat — це майбутнє.",
-    "description": "bigonion's comment content"
-  },
-  "homepage.comments.bigonion.description": {
-    "message": "Розробник ScriptCat",
-    "description": "bigonion's description in community comments"
-  },
-  "homepage.comments.bigonion.username": {
-    "message": "bigonion",
-    "description": "bigonion's username in community comments"
-  },
-  "homepage.comments.enncy.content": {
-    "message": "Щира подяка спільноті",
-    "description": "Enncy's comment content"
-  },
-  "homepage.comments.enncy.description": {
-    "message": "Відомий автор скриптів",
-    "description": "Enncy's description in community comments"
-  },
-  "homepage.comments.enncy.username": {
-    "message": "Yan Xiaoxi (enncy)",
-    "description": "Enncy's username in community comments"
-  },
-  "homepage.comments.lihengdao.content": {
-    "message": "ScriptCat просто неймовірний!",
-    "description": "Li Hengdao's comment content"
-  },
-  "homepage.comments.lihengdao.description": {
-    "message": "Співзасновник Tampermonkey CN",
-    "description": "Li Hengdao's description in community comments"
-  },
-  "homepage.comments.lihengdao.username": {
-    "message": "Li Hengdao",
-    "description": "Li Hengdao's username in community comments"
-  },
-  "homepage.comments.oraer.content": {
-    "message": "Перша зустріч із Tampermonkey! Вчимо Tampermonkey! Перевершуємо Tampermonkey!",
-    "description": "Oraer's comment content"
-  },
-  "homepage.comments.oraer.description": {
-    "message": "Користувач Chrome",
-    "description": "Oraer's description in community comments"
-  },
-  "homepage.comments.oraer.username": {
-    "message": "Oraer",
-    "description": "Oraer's username in community comments"
-  },
-  "homepage.comments.qianyu.content": {
-    "message": "Спочатку люди думали, що це нішевий JS-плагін... поки не...",
-    "description": "Qian Yu's comment content"
-  },
-  "homepage.comments.qianyu.description": {
-    "message": "Користувач Chrome",
-    "description": "Qian Yu's description in community comments"
-  },
-  "homepage.comments.qianyu.username": {
-    "message": "Qian Yu",
-    "description": "Qian Yu's username in community comments"
-  },
-  "homepage.comments.student.content": {
-    "message": "Завдяки багатим навчальним ресурсам у спільноті я багато чому навчився і можу краще розвивати свої технічні навички. ScriptCat — дуже корисне браузерне розширення, яке надає мені зручні та ефективні функції.",
-    "description": "Student user's comment content"
-  },
-  "homepage.comments.student.description": {
-    "message": "Студент",
-    "description": "Student user's description in community comments"
-  },
-  "homepage.comments.student.username": {
-    "message": "Student",
-    "description": "Student user's username in community comments"
-  },
-  "homepage.comments.wwwwwllllk.content": {
-    "message": "Використовую ScriptCat, щоб покращити свій інтернет-досвід, знаходжу однодумців у спільноті.",
-    "description": "wwwwwllllk's comment content"
-  },
-  "homepage.comments.wwwwwllllk.description": {
-    "message": "Фронтенд-розробник",
-    "description": "wwwwwllllk's description in community comments"
-  },
-  "homepage.comments.wwwwwllllk.username": {
-    "message": "wwwwwllllk",
-    "description": "wwwwwllllk's username in community comments"
-  },
-  "homepage.comparison.feature": {
-    "message": "Можливість",
-    "description": "Comparison table header: Feature"
-  },
-  "homepage.comparison.feature.api": {
-    "message": "Потужні API",
-    "description": "Comparison feature: Powerful APIs"
-  },
-  "homepage.comparison.feature.background": {
-    "message": "Фонові скрипти",
-    "description": "Comparison feature: Background scripts"
-  },
-  "homepage.comparison.feature.community": {
-    "message": "Підтримка спільноти",
-    "description": "Comparison feature: Community support"
-  },
-  "homepage.comparison.feature.compatibility": {
-    "message": "Сумісність скриптів",
-    "description": "Comparison feature: Script compatibility"
-  },
-  "homepage.comparison.feature.mv3": {
-    "message": "Підтримка MV3",
-    "description": "Comparison feature: MV3 Support"
-  },
-  "homepage.comparison.feature.opensource": {
-    "message": "Відкритий код, безкоштовно",
-    "description": "Comparison feature: Open source"
-  },
-  "homepage.comparison.feature.sync": {
-    "message": "Хмарна синхронізація",
-    "description": "Comparison feature: Cloud sync"
-  },
-  "homepage.comparison.label.efficient": {
-    "message": "Ефективно",
-    "description": "Comparison label: Efficient"
-  },
-  "homepage.comparison.label.multiplatform": {
-    "message": "Кросплатформенно",
-    "description": "Comparison label: Multi-platform"
-  },
-  "homepage.comparison.subtitle": {
-    "message": "Порівняно з іншими скриптовими рушіями ScriptCat надає більше переваг і розширених можливостей",
-    "description": "Comparison section subtitle"
-  },
-  "homepage.comparison.title.why": {
-    "message": "Чому обирають",
-    "description": "Comparison section title part 1"
-  },
-  "homepage.download.chrome": {
-    "message": "Магазин розширень Chrome",
-    "description": "Download button: Chrome store"
-  },
-  "homepage.download.edge": {
-    "message": "Магазин розширень Edge",
-    "description": "Download button: Edge store"
-  },
-  "homepage.download.firefox": {
-    "message": "Магазин розширень Firefox",
-    "description": "Download button: Firefox store"
-  },
-  "homepage.download.github": {
-    "message": "Завантажити з GitHub",
-    "description": "Download button: GitHub"
-  },
-  "homepage.download.popup.text": {
-    "message": "На поточній сторінці працюють 3 скрипти",
-    "description": "Extension popup text"
-  },
-  "homepage.download.popup.title": {
-    "message": "ScriptCat увімкнено",
-    "description": "Extension popup title"
-  },
-  "homepage.download.subtitle": {
-    "message": "Встановіть ScriptCat зараз і відкрийте безмежні можливості веб-серфінгу",
-    "description": "Download section subtitle"
-  },
-  "homepage.download.title.enhance": {
-    "message": "Покращте свій досвід перегляду",
-    "description": "Download section title highlight"
-  },
-  "homepage.download.title.question": {
-    "message": "?",
-    "description": "Download section title part 2"
-  },
-  "homepage.download.title.ready": {
-    "message": "Готові до",
-    "description": "Download section title part 1"
-  },
-  "homepage.features.api.description": {
-    "message": "Надає багатші API-інтерфейси, ніж GM, підтримує розширені можливості, як-от зберігання файлів і конфігурація користувача, розширюючи можливості скриптів.",
-    "description": "Feature description: APIs"
-  },
-  "homepage.features.api.title": {
-    "message": "Потужні API",
-    "description": "Feature title: APIs"
-  },
-  "homepage.features.background.description": {
-    "message": "На відміну від звичайних юзерскриптів, дозволяє скриптам безперервно працювати у фоновому режимі без відкриття вкладок.",
-    "description": "Feature description: Background scripts"
-  },
-  "homepage.features.background.title": {
-    "message": "Фонові скрипти",
-    "description": "Feature title: Background scripts"
-  },
-  "homepage.features.compatibility.description": {
-    "message": "Повністю сумісний зі скриптами Tampermonkey і Violentmonkey, легко перенесіть улюблені скрипти."
-  },
-  "homepage.features.compatibility.title": {
-    "message": "Ідеальна сумісність"
-  },
-  "homepage.features.easy.description": {
-    "message": "Вбудований редактор, розумне автодоповнення, перевірка синтаксису, ефективніша розробка скриптів",
-    "description": "Description for easy to use section"
-  },
-  "homepage.features.easy.title": {
-    "message": "Легко у використанні",
-    "description": "Title for easy to use section"
-  },
-  "homepage.features.editor.description": {
-    "message": "Потужний редактор коду з підсвічуванням синтаксису, доповненням коду та підказками про помилки, що робить написання скриптів ефективнішим.",
-    "description": "Feature description: Code editor"
-  },
-  "homepage.features.editor.title": {
-    "message": "Вбудований редактор коду",
-    "description": "Feature title: Code editor"
-  },
-  "homepage.features.powerful.description": {
-    "message": "Повна сумісність із Tampermonkey, фонові скрипти, заплановані скрипти, багатий API",
-    "description": "Description for powerful features section"
-  },
-  "homepage.features.powerful.title": {
-    "message": "Потужні можливості",
-    "description": "Title for powerful features section"
-  },
-  "homepage.features.secure.description": {
-    "message": "Механізм пісочниці, керування дозволами, гарантує безпечне виконання скриптів",
-    "description": "Description for secure and reliable section"
-  },
-  "homepage.features.secure.title": {
-    "message": "Безпечно та надійно",
-    "description": "Title for secure and reliable section"
-  },
-  "homepage.features.security.description": {
-    "message": "Сувора система контролю дозволів, прозора поведінка скриптів, ефективно запобігає шкідливим скриптам і захищає вашу конфіденційність.",
-    "description": "Feature description: Security"
-  },
-  "homepage.features.security.title": {
-    "message": "Безпечно та надійно",
-    "description": "Feature title: Security"
-  },
-  "homepage.features.store.description": {
-    "message": "Має магазин скриптів для встановлення популярних скриптів одним кліком або публікуйте свої роботи, щоб поділитися зі спільнотою та побудувати активну екосистему.",
-    "description": "Feature description: Script store"
-  },
-  "homepage.features.store.title": {
-    "message": "Магазин скриптів",
-    "description": "Feature title: Script store"
-  },
-  "homepage.features.subtitle": {
-    "message": "ScriptCat надає низку потужних функцій, які дозволяють легко розширювати можливості вашого браузера та створювати власний вебдосвід.",
-    "description": "Features section subtitle"
-  },
-  "homepage.features.tampermonkey.description": {
-    "message": "Повністю сумісний із форматом скриптів Tampermonkey, безперешкодно переносить наявні бібліотеки скриптів із нульовими витратами на перехід.",
-    "description": "Feature description: Tampermonkey compatibility"
-  },
-  "homepage.features.tampermonkey.title": {
-    "message": "Сумісний із Tampermonkey",
-    "description": "Feature title: Tampermonkey compatibility"
-  },
-  "homepage.features.title.features": {
-    "message": "Безмежні можливості"
-  },
-  "homepage.features.title.possibilities": {
-    "message": "Безмежні можливості",
-    "description": "Features section title highlight"
-  },
-  "homepage.features.title.powerful": {
-    "message": "Потужні функції, ",
-    "description": "Features section title part 1"
-  },
-  "homepage.footer.contributors.title": {
-    "message": "Дякуємо всім учасникам",
-    "description": "Footer contributors section title"
-  },
-  "homepage.hero.browser.chrome": {
-    "message": "Додати до браузера Chrome",
-    "description": "Button text for Chrome browser"
-  },
-  "homepage.hero.browser.crx": {
-    "message": "Завантажити інсталяційний пакет для ручного встановлення",
-    "description": "Button text for manual installation"
-  },
-  "homepage.hero.browser.default": {
-    "message": "Встановити розширення в браузер",
-    "description": "Default button text for browser installation"
-  },
-  "homepage.hero.browser.edge": {
-    "message": "Додати до браузера Edge",
-    "description": "Button text for Edge browser"
-  },
-  "homepage.hero.browser.firefox": {
-    "message": "Додати до браузера Firefox",
-    "description": "Button text for Firefox browser"
-  },
-  "homepage.hero.button.browseScripts": {
-    "message": "Переглянути бібліотеку скриптів",
-    "description": "Button text for browsing scripts"
-  },
-  "homepage.hero.button.getStarted": {
-    "message": "Почати"
-  },
-  "homepage.hero.button.github": {
-    "message": "GitHub"
-  },
-  "homepage.hero.subtitle": {
-    "message": "Браузерне розширення, яке може виконувати юзерскрипти, усе можна заскриптувати, змусьте ваш браузер робити більше!",
-    "description": "The hero subtitle on the homepage"
-  },
-  "homepage.hero.subtitle.highlight": {
-    "message": "Браузерне розширення для виконання",
-    "description": "Highlighted subtitle on homepage"
-  },
-  "homepage.hero.subtitle.main": {
-    "message": "ScriptCat — це потужний движок скриптів браузера з відкритим кодом, який дозволяє легко налаштовувати функціональність веб-сайтів, видаляти рекламу, автоматизувати завдання та покращувати ваш досвід перегляду. Сумісний з Tampermonkey та надає додаткові функції та оптимізації.",
-    "description": "Main subtitle description on homepage"
-  },
-  "homepage.hero.subtitle.possibilities": {
-    "message": ", активуючи безмежні можливості вашого браузера!",
-    "description": "Browser possibilities text"
-  },
-  "homepage.hero.subtitle.userScript": {
-    "message": "користувацькі скрипти",
-    "description": "User script highlight"
-  },
-  "homepage.hero.title": {
-    "message": "Найкращий скриптовий рушій для",
-    "description": "Main title on the homepage hero section"
-  },
-  "homepage.hero.title.engine": {
-    "message": "Покращеного браузерного досвіду",
-    "description": "Gradient text in main title"
-  },
-  "homepage.hero.trustBadges.title": {
-    "message": "Нам довіряє та підтримує технічна спільнота",
-    "description": "Trust badges section title"
-  },
   "homepage.meta.description": {
     "message": "ScriptCat — це потужний відкритий браузерний скриптовий рушій, який дозволяє легко налаштовувати вебфункції, прибирати рекламу, автоматизувати завдання та покращувати досвід перегляду. Сумісний із Tampermonkey з більшою кількістю функцій.",
     "description": "Homepage meta description for SEO"
@@ -830,106 +492,6 @@
   "homepage.meta.title": {
     "message": "ScriptCat - Потужний браузерний скриптовий рушій",
     "description": "Homepage meta title for SEO"
-  },
-  "homepage.og.description": {
-    "message": "Відкритий браузерний скриптовий рушій, який змушує ваш браузер робити більше. Підтримує юзерскрипти, фонові скрипти, сумісний із Tampermonkey, потужніші функції.",
-    "description": "Open Graph description for social sharing"
-  },
-  "homepage.og.title": {
-    "message": "ScriptCat - Потужний браузерний скриптовий рушій",
-    "description": "Open Graph title for social sharing"
-  },
-  "homepage.scenario.shopping.feature.alert": {
-    "message": "Сповіщення про зниження ціни",
-    "description": "Shopping feature: Price alert"
-  },
-  "homepage.scenario.shopping.feature.compare": {
-    "message": "Порівняння цін",
-    "description": "Shopping feature: Price comparison"
-  },
-  "homepage.scenario.shopping.feature.coupon": {
-    "message": "Автоматичний пошук купонів",
-    "description": "Shopping feature: Coupon search"
-  },
-  "homepage.scenario.shopping.feature.history": {
-    "message": "Перегляд історії цін",
-    "description": "Shopping feature: Price history"
-  },
-  "homepage.scenario.shopping.subtitle": {
-    "message": "Зробіть покупки простішими",
-    "description": "Shopping scenario subtitle"
-  },
-  "homepage.scenario.shopping.tag": {
-    "message": "Практичні інструменти",
-    "description": "Shopping scenario tag"
-  },
-  "homepage.scenario.shopping.title": {
-    "message": "Помічник для покупок",
-    "description": "Shopping scenario title"
-  },
-  "homepage.scenario.sites.more": {
-    "message": "+Більше",
-    "description": "More sites indicator in scenario cards"
-  },
-  "homepage.scenario.subtitle": {
-    "message": "Подивіться, як ScriptCat може змінити ваш досвід перегляду",
-    "description": "Scenario section subtitle"
-  },
-  "homepage.scenario.title.problems": {
-    "message": "реальні проблеми",
-    "description": "Scenario section title highlight"
-  },
-  "homepage.scenario.title.scripts": {
-    "message": "",
-    "description": "Scenario section title part 2"
-  },
-  "homepage.scenario.title.solve": {
-    "message": "реальні проблеми",
-    "description": "Scenario section title part 1"
-  },
-  "homepage.scenario.video.feature.adblock": {
-    "message": "Автопропуск реклами",
-    "description": "Video feature: Ad blocking"
-  },
-  "homepage.scenario.video.feature.download": {
-    "message": "Завантаження відео одним кліком",
-    "description": "Video feature: Download"
-  },
-  "homepage.scenario.video.feature.speed": {
-    "message": "Контроль швидкості відео",
-    "description": "Video feature: Speed control"
-  },
-  "homepage.scenario.video.feature.ui": {
-    "message": "Спрощення інтерфейсу",
-    "description": "Video feature: UI optimization"
-  },
-  "homepage.scenario.video.getScript": {
-    "message": "Отримати скрипт →",
-    "description": "Video scenario get script link"
-  },
-  "homepage.scenario.video.sites": {
-    "message": "Підтримувані сайти",
-    "description": "Video scenario supported sites label"
-  },
-  "homepage.scenario.video.subtitle": {
-    "message": "Оптимізуйте досвід перегляду відео",
-    "description": "Video scenario subtitle"
-  },
-  "homepage.scenario.video.tag": {
-    "message": "Популярні додатки",
-    "description": "Video scenario tag"
-  },
-  "homepage.scenario.video.title": {
-    "message": "Покращення відеосайтів",
-    "description": "Video scenario title"
-  },
-  "homepage.twitter.description": {
-    "message": "Відкритий браузерний скриптовий рушій, який змушує ваш браузер робити більше",
-    "description": "Twitter card description"
-  },
-  "homepage.twitter.title": {
-    "message": "ScriptCat - Потужний браузерний скриптовий рушій",
-    "description": "Twitter card title"
   },
   "theme.BackToTopButton.buttonAriaLabel": {
     "message": "Догори",
@@ -1043,18 +605,9 @@
     "message": "Знайшов кращу альтернативу",
     "description": "Uninstall reason: found alternative"
   },
-  "uninstall.reason.better": {
-    "message": "Знайшов кращу альтернативу"
-  },
-  "uninstall.reason.bug": {
-    "message": "Зіткнувся з помилками або багами"
-  },
   "uninstall.reason.bugs": {
     "message": "Зіткнувся з помилками або багами",
     "description": "Uninstall reason: bugs"
-  },
-  "uninstall.reason.feature": {
-    "message": "Бракує потрібної мені функції"
   },
   "uninstall.reason.features": {
     "message": "Бракує потрібних мені функцій",
@@ -1067,9 +620,6 @@
   "uninstall.reason.other": {
     "message": "Інші причини",
     "description": "Uninstall reason: other"
-  },
-  "uninstall.reason.unused": {
-    "message": "Більше не потрібен"
   },
   "uninstall.reinstall.chrome": {
     "message": "Chrome Web Store",
@@ -1142,9 +692,6 @@
   "uninstall.warning.selectReason": {
     "message": "Виберіть причину видалення",
     "description": "Warning when no reason is selected"
-  },
-  "home.hero.en": {
-    "message": "Суперсили для вашого браузера."
   },
   "home.search.kw.adblock": {
     "message": "блокування реклами",

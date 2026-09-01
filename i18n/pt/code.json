@@ -51,375 +51,11 @@
     "message": "Ver todas as tags",
     "description": "The label of the link targeting the tag list page"
   },
-  "homepage.hero.title": {
-    "message": "O motor de scripts definitivo para",
-    "description": "Main title on the homepage hero section"
-  },
-  "homepage.hero.subtitle": {
-    "message": "Uma extensão de navegador que pode executar userscripts, tudo pode ser scriptado, permita que seu navegador faça mais!",
-    "description": "The hero subtitle on the homepage"
-  },
-  "homepage.features.powerful.title": {
-    "message": "Funcionalidades poderosas",
-    "description": "Title for powerful features section"
-  },
-  "homepage.features.powerful.description": {
-    "message": "Totalmente compatível com Tampermonkey, scripts em segundo plano, scripts agendados, API rica",
-    "description": "Description for powerful features section"
-  },
-  "homepage.features.easy.title": {
-    "message": "Fácil de usar",
-    "description": "Title for easy to use section"
-  },
-  "homepage.features.easy.description": {
-    "message": "Editor integrado, autocompletar inteligente, verificação de sintaxe, desenvolvimento de scripts mais eficiente",
-    "description": "Description for easy to use section"
-  },
-  "homepage.features.secure.title": {
-    "message": "Seguro e confiável",
-    "description": "Title for secure and reliable section"
-  },
-  "homepage.features.secure.description": {
-    "message": "Mecanismo de sandbox, gerenciamento de permissões, garante execução segura de scripts",
-    "description": "Description for secure and reliable section"
-  },
-  "homepage.comments.lihengdao.username": {
-    "message": "Li Hengdao",
-    "description": "Li Hengdao's username in community comments"
-  },
-  "homepage.comments.lihengdao.description": {
-    "message": "Co-fundador do Tampermonkey CN",
-    "description": "Descrição de Li Hengdao nos comentários da comunidade"
-  },
-  "homepage.comments.lihengdao.content": {
-    "message": "ScriptCat é absolutamente incrível!",
-    "description": "Conteúdo do comentário de Li Hengdao"
-  },
-  "homepage.comments.student.username": {
-    "message": "Preocupado com exames",
-    "description": "Nome de usuário do estudante nos comentários da comunidade"
-  },
-  "homepage.comments.student.description": {
-    "message": "Estudante",
-    "description": "Descrição do estudante nos comentários da comunidade"
-  },
-  "homepage.comments.student.content": {
-    "message": "Obrigado pelos ricos recursos de aprendizado da comunidade, aprendi muito e consegui desenvolver melhor minhas habilidades técnicas. ScriptCat é uma extensão de navegador muito útil que me fornece funcionalidades convenientes e eficientes.",
-    "description": "Conteúdo do comentário do estudante"
-  },
-  "homepage.comments.enncy.username": {
-    "message": "Yan Xiaoxi (enncy)",
-    "description": "Enncy's username in community comments"
-  },
-  "homepage.comments.enncy.description": {
-    "message": "Autor de scripts famoso",
-    "description": "Descrição de enncy nos comentários da comunidade"
-  },
-  "homepage.comments.enncy.content": {
-    "message": "Agradecimentos sinceros à comunidade",
-    "description": "Conteúdo do comentário de enncy"
-  },
-  "homepage.comments.qianyu.username": {
-    "message": "Qian Yu",
-    "description": "Qian Yu's username in community comments"
-  },
-  "homepage.comments.qianyu.description": {
-    "message": "Usuário Chrome",
-    "description": "Descrição de Qian Yu nos comentários da comunidade"
-  },
-  "homepage.comments.qianyu.content": {
-    "message": "No início, as pessoas pensavam que era um plugin JS de nicho... até que...",
-    "description": "Conteúdo do comentário de Qian Yu"
-  },
-  "homepage.comments.wwwwwllllk.username": {
-    "message": "wwwwwllllk",
-    "description": "wwwwwllllk's username in community comments"
-  },
-  "homepage.comments.wwwwwllllk.description": {
-    "message": "Desenvolvedor Frontend",
-    "description": "Descrição de wwwwwllllk nos comentários da comunidade"
-  },
-  "homepage.comments.wwwwwllllk.content": {
-    "message": "Usar o ScriptCat para melhorar minha experiência na internet, conhecer pessoas com interesses semelhantes na comunidade.",
-    "description": "Conteúdo do comentário de wwwwwllllk"
-  },
-  "homepage.comments.oraer.username": {
-    "message": "Oraer",
-    "description": "Oraer's username in community comments"
-  },
-  "homepage.comments.oraer.description": {
-    "message": "Usuário do Chrome",
-    "description": "Descrição de Oraer nos comentários da comunidade"
-  },
-  "homepage.comments.oraer.content": {
-    "message": "Primeiro encontro com o Tampermonkey! Aprendendo Tampermonkey! Superando Tampermonkey!",
-    "description": "Conteúdo do comentário de Oraer"
-  },
-  "homepage.comments.bigonion.username": {
-    "message": "bigonion",
-    "description": "bigonion's username in community comments"
-  },
-  "homepage.comments.bigonion.description": {
-    "message": "Desenvolvedor ScriptCat",
-    "description": "Descrição de bigonion nos comentários da comunidade"
-  },
-  "homepage.comments.bigonion.content": {
-    "message": "ScriptCat é o futuro.",
-    "description": "Conteúdo do comentário de bigonion"
-  },
   "homepage.meta.title": {
     "message": "ScriptCat - O mecanismo de scripts de usuário para o seu navegador"
   },
   "homepage.meta.description": {
     "message": "O ScriptCat é um poderoso mecanismo de scripts de navegador de código aberto que permite personalizar facilmente as funções da web, eliminar anúncios, automatizar tarefas e melhorar sua experiência de navegação. Compatível com Tampermonkey, com mais recursos."
-  },
-  "homepage.og.title": {
-    "message": "ScriptCat - A Powerful Userscript Engine"
-  },
-  "homepage.og.description": {
-    "message": "Elevate your browsing experience with ScriptCat. Fully compatible with Tampermonkey."
-  },
-  "homepage.twitter.title": {
-    "message": "ScriptCat - Poderoso motor de scripts de navegador",
-    "description": "Twitter card title"
-  },
-  "homepage.twitter.description": {
-    "message": "Um poderoso motor de scripts de navegador open-source que faz seu navegador fazer mais",
-    "description": "Twitter card description"
-  },
-  "homepage.hero.title.engine": {
-    "message": "Experiência de navegação aprimorada",
-    "description": "Gradient text in main title"
-  },
-  "homepage.hero.subtitle.userScript": {
-    "message": "scripts de usuário",
-    "description": "User script highlight"
-  },
-  "homepage.hero.subtitle.possibilities": {
-    "message": ", ativando possibilidades infinitas para o seu navegador!",
-    "description": "Browser possibilities text"
-  },
-  "homepage.hero.subtitle.main": {
-    "message": "ScriptCat é um poderoso motor de scripts de navegador de código aberto que permite personalizar facilmente funcionalidades da web, eliminar anúncios, automatizar tarefas e melhorar sua experiência de navegação. Compatível com o Tampermonkey e oferece mais funcionalidades e otimizações.",
-    "description": "Main subtitle description on homepage"
-  },
-  "homepage.hero.button.getStarted": {
-    "message": "Commencer"
-  },
-  "homepage.hero.button.github": {
-    "message": "GitHub"
-  },
-  "homepage.features.title.powerful": {
-    "message": "Funcionalidades poderosas, ",
-    "description": "Features section title part 1"
-  },
-  "homepage.features.title.features": {
-    "message": "puissantes"
-  },
-  "homepage.features.subtitle": {
-    "message": "Mais do que uma extensão de navegador: uma experiência web mais livre, segura e potente"
-  },
-  "homepage.features.compatibility.title": {
-    "message": "Compatibilidade perfeita"
-  },
-  "homepage.features.compatibility.description": {
-    "message": "Totalmente compatível com scripts do Tampermonkey e Violentmonkey, migre sem custos adicionais."
-  },
-  "homepage.features.background.title": {
-    "message": "Scripts em segundo plano"
-  },
-  "homepage.features.background.description": {
-    "message": "Os scripts em segundo plano exclusivos e as tarefas agendadas permitem a automatização 24/7, independentemente do DOM."
-  },
-  "homepage.features.security.title": {
-    "message": "Segurança e Privacidade"
-  },
-  "homepage.features.security.description": {
-    "message": "Sistema rigoroso de controlo de permissões e comportamento transparente dos scripts para prevenir scripts maliciosos e proteger a sua privacidade."
-  },
-  "homepage.features.editor.title": {
-    "message": "Editor de código integrado"
-  },
-  "homepage.features.editor.description": {
-    "message": "Poderoso editor com realce de sintaxe, conclusão automática e sugestões de erros para um scripting eficiente."
-  },
-  "homepage.features.api.title": {
-    "message": "APIs potentes"
-  },
-  "homepage.features.api.description": {
-    "message": "Oferece interfaces API mais ricas do que o GM, suportando funções avançadas como armazenamento de ficheiros e configuração do utilizador."
-  },
-  "homepage.features.store.title": {
-    "message": "Loja de scripts"
-  },
-  "homepage.features.store.description": {
-    "message": "Loja para instalação num clique de scripts populares ou para publicar as suas obras e partilhá-las com a comunidade."
-  },
-  "homepage.comparison.title.why": {
-    "message": "Porquê escolher-nos?"
-  },
-  "homepage.comparison.subtitle": {
-    "message": "Em comparação com outros motores de scripts, o ScriptCat oferece mais vantagens e funcionalidades melhoradas"
-  },
-  "homepage.comparison.feature": {
-    "message": "Funcionalidade"
-  },
-  "homepage.comparison.feature.compatibility": {
-    "message": "Compatibilidade de scripts"
-  },
-  "homepage.comparison.feature.background": {
-    "message": "Scripts em segundo plano"
-  },
-  "homepage.comparison.feature.opensource": {
-    "message": "Código Aberto Gratuito"
-  },
-  "homepage.comparison.feature.mv3": {
-    "message": "Suporte MV3"
-  },
-  "homepage.comparison.feature.sync": {
-    "message": "Sincronização Cloud"
-  },
-  "homepage.comparison.feature.api": {
-    "message": "APIs potentes"
-  },
-  "homepage.comparison.feature.community": {
-    "message": "Suporte comunitário"
-  },
-  "homepage.comparison.label.efficient": {
-    "message": "Eficiente",
-    "description": "Comparison label: Efficient"
-  },
-  "homepage.comparison.label.multiplatform": {
-    "message": "Multiplataforma",
-    "description": "Comparison label: Multi-platform"
-  },
-  "homepage.scenario.title.solve": {
-    "message": "Scripts que resolvem",
-    "description": "Scenario section title part 1"
-  },
-  "homepage.scenario.title.problems": {
-    "message": "problemas reais",
-    "description": "Scenario section title highlight"
-  },
-  "homepage.scenario.title.scripts": {
-    "message": "",
-    "description": "Scenario section title part 2"
-  },
-  "homepage.scenario.subtitle": {
-    "message": "Veja como o ScriptCat pode transformar sua experiência de navegação",
-    "description": "Scenario section subtitle"
-  },
-  "homepage.scenario.video.title": {
-    "message": "Aprimoramento de sites de vídeo",
-    "description": "Video scenario title"
-  },
-  "homepage.scenario.video.subtitle": {
-    "message": "Otimize a experiência de visualização de vídeo",
-    "description": "Video scenario subtitle"
-  },
-  "homepage.scenario.video.tag": {
-    "message": "Apps populares",
-    "description": "Video scenario tag"
-  },
-  "homepage.scenario.video.feature.speed": {
-    "message": "Controle de velocidade de vídeo",
-    "description": "Video feature: Speed control"
-  },
-  "homepage.scenario.video.feature.download": {
-    "message": "Download de vídeo com um clique",
-    "description": "Video feature: Download"
-  },
-  "homepage.scenario.video.feature.adblock": {
-    "message": "Pulo automático de anúncios",
-    "description": "Video feature: Ad blocking"
-  },
-  "homepage.scenario.video.feature.ui": {
-    "message": "Simplificação da interface",
-    "description": "Video feature: UI optimization"
-  },
-  "homepage.scenario.video.sites": {
-    "message": "Sites compatíveis",
-    "description": "Video scenario supported sites label"
-  },
-  "homepage.scenario.video.getScript": {
-    "message": "Obter script →",
-    "description": "Video scenario get script link"
-  },
-  "homepage.scenario.shopping.title": {
-    "message": "Assistente de compras",
-    "description": "Shopping scenario title"
-  },
-  "homepage.scenario.shopping.subtitle": {
-    "message": "Torne a experiência de compras mais fácil",
-    "description": "Shopping scenario subtitle"
-  },
-  "homepage.scenario.shopping.tag": {
-    "message": "Ferramentas práticas",
-    "description": "Shopping scenario tag"
-  },
-  "homepage.scenario.shopping.feature.history": {
-    "message": "Histórico de preços",
-    "description": "Shopping feature: Price history"
-  },
-  "homepage.scenario.shopping.feature.coupon": {
-    "message": "Pesquisa automática de cupons",
-    "description": "Shopping feature: Coupon search"
-  },
-  "homepage.scenario.shopping.feature.compare": {
-    "message": "Comparação de preços",
-    "description": "Shopping feature: Price comparison"
-  },
-  "homepage.scenario.shopping.feature.alert": {
-    "message": "Alerta de queda de preço",
-    "description": "Shopping feature: Price alert"
-  },
-  "homepage.scenario.sites.more": {
-    "message": "+Mais",
-    "description": "More sites indicator in scenario cards"
-  },
-  "homepage.download.title.ready": {
-    "message": "Pronto para",
-    "description": "Download section title part 1"
-  },
-  "homepage.download.title.enhance": {
-    "message": "Melhore sua experiência de navegação",
-    "description": "Download section title highlight"
-  },
-  "homepage.download.title.question": {
-    "message": "?",
-    "description": "Download section title part 2"
-  },
-  "homepage.download.subtitle": {
-    "message": "Instale o ScriptCat agora e desbloqueie possibilidades infinitas para a navegação web",
-    "description": "Download section subtitle"
-  },
-  "homepage.download.edge": {
-    "message": "Edge Web Store",
-    "description": "Download button: Edge store"
-  },
-  "homepage.download.chrome": {
-    "message": "Chrome Web Store",
-    "description": "Download button: Chrome store"
-  },
-  "homepage.download.firefox": {
-    "message": "Firefox Add-ons",
-    "description": "Download button: Firefox store"
-  },
-  "homepage.download.github": {
-    "message": "Download do GitHub",
-    "description": "Download button: GitHub"
-  },
-  "homepage.download.popup.title": {
-    "message": "ScriptCat habilitado",
-    "description": "Extension popup title"
-  },
-  "homepage.download.popup.text": {
-    "message": "3 scripts estão sendo executados na página atual",
-    "description": "Extension popup text"
-  },
-  "homepage.footer.contributors.title": {
-    "message": "Obrigado a todos os colaboradores",
-    "description": "Footer contributors section title"
   },
   "footer.description": {
     "message": "Um poderoso motor de scripts de navegador que torna a sua experiência web mais rica e colorida."
@@ -478,10 +114,6 @@
   "footer.community.contact": {
     "message": "Fale com a equipe",
     "description": "Footer community contact team link"
-  },
-  "footer.community.recruiting": {
-    "message": "Carreiras",
-    "description": "Footer community recruiting badge"
   },
   "footer.copyright.allRightsReserved": {
     "message": "Todos os direitos reservados."
@@ -545,18 +177,6 @@
   "uninstall.question.reason": {
     "message": "Qual é o principal motivo para desinstalar o ScriptCat?",
     "description": "Question about uninstall reason"
-  },
-  "uninstall.reason.bug": {
-    "message": "Encontrei erros ou bugs"
-  },
-  "uninstall.reason.unused": {
-    "message": "Não preciso mais dele"
-  },
-  "uninstall.reason.feature": {
-    "message": "Falta um recurso que preciso"
-  },
-  "uninstall.reason.better": {
-    "message": "Encontrei uma alternativa melhor"
   },
   "uninstall.reason.other": {
     "message": "Outras razões",
@@ -622,10 +242,6 @@
     "message": "Ver documentação",
     "description": "View docs button"
   },
-  "homepage.hero.browser.crx": {
-    "message": "Baixar pacote de instalação para instalação manual",
-    "description": "Button text for manual installation"
-  },
   "uninstall.reason.no_need": {
     "message": "Não preciso mais do ScriptCat",
     "description": "Uninstall reason: no longer need"
@@ -654,41 +270,13 @@
     "message": "Obrigado pelo seu feedback!",
     "description": "Thank you page title"
   },
-  "homepage.hero.button.browseScripts": {
-    "message": "Explorar biblioteca de scripts",
-    "description": "Button text for browsing scripts"
-  },
   "uninstall.warning.selectReason": {
     "message": "Selecione um motivo de desinstalação",
     "description": "Warning when no reason is selected"
   },
-  "homepage.features.tampermonkey.title": {
-    "message": "Tampermonkey Compatible",
-    "description": "Feature title: Tampermonkey compatibility"
-  },
   "uninstall.reason.alternative": {
     "message": "Encontrei uma alternativa melhor",
     "description": "Uninstall reason: found alternative"
-  },
-  "homepage.hero.browser.edge": {
-    "message": "Adicionar ao navegador Edge",
-    "description": "Button text for Edge browser"
-  },
-  "homepage.hero.trustBadges.title": {
-    "message": "Apoiado e confiado pela comunidade de tecnologia",
-    "description": "Trust badges section title"
-  },
-  "homepage.hero.browser.chrome": {
-    "message": "Adicionar ao navegador Chrome",
-    "description": "Button text for Chrome browser"
-  },
-  "homepage.features.tampermonkey.description": {
-    "message": "Totalmente compatível com o formato de script do Tampermonkey, migre seus scripts existentes sem interrupções.",
-    "description": "Feature description: Tampermonkey compatibility"
-  },
-  "homepage.hero.browser.default": {
-    "message": "Instalar extensão no navegador",
-    "description": "Default button text for browser installation"
   },
   "uninstall.success.submitted": {
     "message": "Obrigado pelo seu feedback!",
@@ -698,10 +286,6 @@
     "message": "Encontrei erros ou bugs",
     "description": "Uninstall reason: bugs"
   },
-  "homepage.hero.subtitle.highlight": {
-    "message": "Uma extensão do navegador para executar",
-    "description": "Highlighted subtitle on homepage"
-  },
   "uninstall.thanks.reportIssue": {
     "message": "Reportar problema",
     "description": "Report issue button"
@@ -709,14 +293,6 @@
   "uninstall.error.submit": {
     "message": "Falha no envio, tente novamente mais tarde",
     "description": "Error message when submission fails"
-  },
-  "homepage.hero.browser.firefox": {
-    "message": "Adicionar ao navegador Firefox",
-    "description": "Button text for Firefox browser"
-  },
-  "homepage.features.title.possibilities": {
-    "message": "Possibilidades infinitas",
-    "description": "Features section title highlight"
   },
   "home.comm.btn": {
     "message": "Contribuir no GitHub"
@@ -848,9 +424,6 @@
   },
   "home.feat.store.d": {
     "message": "Instale milhares de scripts da comunidade com um clique, ou publique os seus e construa o ecossistema juntos."
-  },
-  "home.feat.store.stat": {
-    "message": "{count} scripts da comunidade"
   },
   "home.feat.store.t": {
     "message": "Loja de scripts"
@@ -1110,9 +683,6 @@
   "uninstall.reinstall.firefox": {
     "message": "Complementos do Firefox",
     "description": "Reinstall from Firefox Add-ons button"
-  },
-  "home.hero.en": {
-    "message": "Superpoderes para o seu navegador."
   },
   "home.search.kw.adblock": {
     "message": "bloqueador de anúncios",

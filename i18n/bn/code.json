@@ -19,10 +19,6 @@
     "message": "সমস্যা জানান",
     "description": "Footer community report issues link"
   },
-  "footer.community.recruiting": {
-    "message": "নিয়োগ",
-    "description": "Footer community recruiting badge"
-  },
   "footer.community.title": {
     "message": "কমিউনিটি",
     "description": "Footer community section title"
@@ -241,9 +237,6 @@
   },
   "home.feat.store.d": {
     "message": "এক ক্লিকে হাজারো কমিউনিটি স্ক্রিপ্ট ইনস্টল করুন, অথবা নিজের কাজ প্রকাশ করুন এবং একসাথে ইকোসিস্টেম গড়ে তুলুন।"
-  },
-  "home.feat.store.stat": {
-    "message": "{count}টি কমিউনিটি স্ক্রিপ্ট"
   },
   "home.feat.store.t": {
     "message": "স্ক্রিপ্ট স্টোর"
@@ -488,337 +481,6 @@
   "home.trust.users": {
     "message": "ইনস্টল করা ব্যবহারকারী"
   },
-  "homepage.comments.bigonion.content": {
-    "message": "ScriptCat-ই ভবিষ্যৎ।",
-    "description": "bigonion's comment content"
-  },
-  "homepage.comments.bigonion.description": {
-    "message": "ScriptCat ডেভেলপার",
-    "description": "bigonion's description in community comments"
-  },
-  "homepage.comments.bigonion.username": {
-    "message": "bigonion",
-    "description": "bigonion's username in community comments"
-  },
-  "homepage.comments.enncy.content": {
-    "message": "কমিউনিটিকে আন্তরিক ধন্যবাদ",
-    "description": "Enncy's comment content"
-  },
-  "homepage.comments.enncy.description": {
-    "message": "বিখ্যাত স্ক্রিপ্ট লেখক",
-    "description": "Enncy's description in community comments"
-  },
-  "homepage.comments.enncy.username": {
-    "message": "Yan Xiaoxi (enncy)",
-    "description": "Enncy's username in community comments"
-  },
-  "homepage.comments.lihengdao.content": {
-    "message": "ScriptCat সত্যিই অসাধারণ!",
-    "description": "Li Hengdao's comment content"
-  },
-  "homepage.comments.lihengdao.description": {
-    "message": "Tampermonkey CN-এর সহ-প্রতিষ্ঠাতা",
-    "description": "Li Hengdao's description in community comments"
-  },
-  "homepage.comments.lihengdao.username": {
-    "message": "Li Hengdao",
-    "description": "Li Hengdao's username in community comments"
-  },
-  "homepage.comments.oraer.content": {
-    "message": "Tampermonkey-এর সাথে প্রথম পরিচয়! Tampermonkey শেখা! Tampermonkey-কে ছাড়িয়ে যাওয়া!",
-    "description": "Oraer's comment content"
-  },
-  "homepage.comments.oraer.description": {
-    "message": "Chrome ব্যবহারকারী",
-    "description": "Oraer's description in community comments"
-  },
-  "homepage.comments.oraer.username": {
-    "message": "Oraer",
-    "description": "Oraer's username in community comments"
-  },
-  "homepage.comments.qianyu.content": {
-    "message": "প্রথমে মানুষ ভেবেছিল এটি একটি বিশেষায়িত JS প্লাগইন... যতক্ষণ না...",
-    "description": "Qian Yu's comment content"
-  },
-  "homepage.comments.qianyu.description": {
-    "message": "Chrome ব্যবহারকারী",
-    "description": "Qian Yu's description in community comments"
-  },
-  "homepage.comments.qianyu.username": {
-    "message": "Qian Yu",
-    "description": "Qian Yu's username in community comments"
-  },
-  "homepage.comments.student.content": {
-    "message": "কমিউনিটির সমৃদ্ধ শিক্ষা সংস্থানের জন্য আমি ব্যাপকভাবে উপকৃত হয়েছি এবং আমার প্রযুক্তিগত দক্ষতা আরও ভালোভাবে বিকাশ করতে পারছি। ScriptCat একটি অত্যন্ত কার্যকরী ব্রাউজার এক্সটেনশন যা আমাকে সুবিধাজনক ও দক্ষ কার্যকারিতা প্রদান করে।",
-    "description": "Student user's comment content"
-  },
-  "homepage.comments.student.description": {
-    "message": "শিক্ষার্থী",
-    "description": "Student user's description in community comments"
-  },
-  "homepage.comments.student.username": {
-    "message": "Student",
-    "description": "Student user's username in community comments"
-  },
-  "homepage.comments.wwwwwllllk.content": {
-    "message": "ScriptCat ব্যবহার করে আমার ইন্টারনেট অভিজ্ঞতা উন্নত করছি, কমিউনিটিতে সমমনা মানুষদের সাথে পরিচিত হচ্ছি।",
-    "description": "wwwwwllllk's comment content"
-  },
-  "homepage.comments.wwwwwllllk.description": {
-    "message": "ফ্রন্টএন্ড ডেভেলপার",
-    "description": "wwwwwllllk's description in community comments"
-  },
-  "homepage.comments.wwwwwllllk.username": {
-    "message": "wwwwwllllk",
-    "description": "wwwwwllllk's username in community comments"
-  },
-  "homepage.comparison.feature": {
-    "message": "বৈশিষ্ট্য",
-    "description": "Comparison table header: Feature"
-  },
-  "homepage.comparison.feature.api": {
-    "message": "শক্তিশালী API",
-    "description": "Comparison feature: Powerful APIs"
-  },
-  "homepage.comparison.feature.background": {
-    "message": "ব্যাকগ্রাউন্ড স্ক্রিপ্ট",
-    "description": "Comparison feature: Background scripts"
-  },
-  "homepage.comparison.feature.community": {
-    "message": "কমিউনিটি সমর্থন",
-    "description": "Comparison feature: Community support"
-  },
-  "homepage.comparison.feature.compatibility": {
-    "message": "স্ক্রিপ্ট সামঞ্জস্য",
-    "description": "Comparison feature: Script compatibility"
-  },
-  "homepage.comparison.feature.mv3": {
-    "message": "MV3 সমর্থন",
-    "description": "Comparison feature: MV3 Support"
-  },
-  "homepage.comparison.feature.opensource": {
-    "message": "ওপেন সোর্স ফ্রি",
-    "description": "Comparison feature: Open source"
-  },
-  "homepage.comparison.feature.sync": {
-    "message": "ক্লাউড সিঙ্ক",
-    "description": "Comparison feature: Cloud sync"
-  },
-  "homepage.comparison.label.efficient": {
-    "message": "দক্ষ",
-    "description": "Comparison label: Efficient"
-  },
-  "homepage.comparison.label.multiplatform": {
-    "message": "মাল্টিপ্ল্যাটফর্ম",
-    "description": "Comparison label: Multi-platform"
-  },
-  "homepage.comparison.subtitle": {
-    "message": "অন্যান্য স্ক্রিপ্ট ইঞ্জিনের তুলনায়, ScriptCat আরও সুবিধা এবং উন্নত বৈশিষ্ট্য প্রদান করে",
-    "description": "Comparison section subtitle"
-  },
-  "homepage.comparison.title.why": {
-    "message": "কেন বেছে নেবেন",
-    "description": "Comparison section title part 1"
-  },
-  "homepage.download.chrome": {
-    "message": "Chrome এক্সটেনশন স্টোর",
-    "description": "Download button: Chrome store"
-  },
-  "homepage.download.edge": {
-    "message": "Edge এক্সটেনশন স্টোর",
-    "description": "Download button: Edge store"
-  },
-  "homepage.download.firefox": {
-    "message": "Firefox এক্সটেনশন স্টোর",
-    "description": "Download button: Firefox store"
-  },
-  "homepage.download.github": {
-    "message": "GitHub ডাউনলোড",
-    "description": "Download button: GitHub"
-  },
-  "homepage.download.popup.text": {
-    "message": "বর্তমান পেজে ৩টি স্ক্রিপ্ট চলছে",
-    "description": "Extension popup text"
-  },
-  "homepage.download.popup.title": {
-    "message": "ScriptCat সক্রিয়",
-    "description": "Extension popup title"
-  },
-  "homepage.download.subtitle": {
-    "message": "এখনই ScriptCat ইনস্টল করুন এবং ওয়েব ব্রাউজিংয়ের অসীম সম্ভাবনা উন্মোচন করুন",
-    "description": "Download section subtitle"
-  },
-  "homepage.download.title.enhance": {
-    "message": "আপনার ব্রাউজিং অভিজ্ঞতা উন্নত করুন",
-    "description": "Download section title highlight"
-  },
-  "homepage.download.title.question": {
-    "message": "?",
-    "description": "Download section title part 2"
-  },
-  "homepage.download.title.ready": {
-    "message": "প্রস্তুত",
-    "description": "Download section title part 1"
-  },
-  "homepage.features.api.description": {
-    "message": "GM-এর চেয়ে সমৃদ্ধ API ইন্টারফেস প্রদান করে, ফাইল স্টোরেজ এবং ব্যবহারকারী কনফিগারেশনের মতো উন্নত বৈশিষ্ট্য সমর্থন করে, স্ক্রিপ্টের সক্ষমতা বাড়ায়।",
-    "description": "Feature description: APIs"
-  },
-  "homepage.features.api.title": {
-    "message": "শক্তিশালী API",
-    "description": "Feature title: APIs"
-  },
-  "homepage.features.background.description": {
-    "message": "সাধারণ ইউজারস্ক্রিপ্টের বিপরীতে, ট্যাব খোলার প্রয়োজন ছাড়াই আপনার স্ক্রিপ্টগুলোকে ব্যাকগ্রাউন্ডে অবিরাম চলতে দেয়।",
-    "description": "Feature description: Background scripts"
-  },
-  "homepage.features.background.title": {
-    "message": "ব্যাকগ্রাউন্ড স্ক্রিপ্ট",
-    "description": "Feature title: Background scripts"
-  },
-  "homepage.features.compatibility.description": {
-    "message": "Tampermonkey এবং Violentmonkey স্ক্রিপ্টের সাথে সম্পূর্ণ সামঞ্জস্যপূর্ণ, সহজেই আপনার পছন্দের স্ক্রিপ্ট স্থানান্তর করুন।"
-  },
-  "homepage.features.compatibility.title": {
-    "message": "নিখুঁত সামঞ্জস্য"
-  },
-  "homepage.features.easy.description": {
-    "message": "বিল্ট-ইন এডিটর, স্মার্ট অটোকমপ্লিশন, সিনট্যাক্স যাচাই, আরও দক্ষ স্ক্রিপ্ট ডেভেলপমেন্ট",
-    "description": "Description for easy to use section"
-  },
-  "homepage.features.easy.title": {
-    "message": "ব্যবহার সহজ",
-    "description": "Title for easy to use section"
-  },
-  "homepage.features.editor.description": {
-    "message": "সিনট্যাক্স হাইলাইটিং, কোড কমপ্লিশন এবং ত্রুটি সংকেতসহ শক্তিশালী কোড এডিটর, যা স্ক্রিপ্ট লেখাকে আরও দক্ষ করে।",
-    "description": "Feature description: Code editor"
-  },
-  "homepage.features.editor.title": {
-    "message": "বিল্ট-ইন কোড এডিটর",
-    "description": "Feature title: Code editor"
-  },
-  "homepage.features.powerful.description": {
-    "message": "Tampermonkey-এর সাথে সম্পূর্ণ সামঞ্জস্যপূর্ণ, ব্যাকগ্রাউন্ড স্ক্রিপ্ট, নির্ধারিত স্ক্রিপ্ট, সমৃদ্ধ API",
-    "description": "Description for powerful features section"
-  },
-  "homepage.features.powerful.title": {
-    "message": "শক্তিশালী বৈশিষ্ট্য",
-    "description": "Title for powerful features section"
-  },
-  "homepage.features.secure.description": {
-    "message": "স্যান্ডবক্স প্রক্রিয়া, অনুমতি ব্যবস্থাপনা, স্ক্রিপ্টের নিরাপদ কার্যকর নিশ্চিত করে",
-    "description": "Description for secure and reliable section"
-  },
-  "homepage.features.secure.title": {
-    "message": "নিরাপদ ও নির্ভরযোগ্য",
-    "description": "Title for secure and reliable section"
-  },
-  "homepage.features.security.description": {
-    "message": "কঠোর অনুমতি নিয়ন্ত্রণ ব্যবস্থা, স্বচ্ছ স্ক্রিপ্ট আচরণ, কার্যকরভাবে ক্ষতিকারক স্ক্রিপ্ট প্রতিরোধ করে এবং আপনার গোপনীয়তা রক্ষা করে।",
-    "description": "Feature description: Security"
-  },
-  "homepage.features.security.title": {
-    "message": "নিরাপদ ও নির্ভরযোগ্য",
-    "description": "Feature title: Security"
-  },
-  "homepage.features.store.description": {
-    "message": "জনপ্রিয় স্ক্রিপ্ট এক ক্লিকে ইনস্টল করার জন্য স্ক্রিপ্ট স্টোর বৈশিষ্ট্য প্রদান করে, অথবা আপনার কাজ প্রকাশ করে কমিউনিটির সাথে ভাগ করুন, একটি সক্রিয় ইকোসিস্টেম গড়ে তুলুন।",
-    "description": "Feature description: Script store"
-  },
-  "homepage.features.store.title": {
-    "message": "স্ক্রিপ্ট স্টোর",
-    "description": "Feature title: Script store"
-  },
-  "homepage.features.subtitle": {
-    "message": "ScriptCat শক্তিশালী বৈশিষ্ট্যের একটি সিরিজ প্রদান করে যা আপনাকে সহজেই ব্রাউজারের সক্ষমতা বাড়াতে এবং নিজস্ব ওয়েব অভিজ্ঞতা তৈরি করতে দেয়।",
-    "description": "Features section subtitle"
-  },
-  "homepage.features.tampermonkey.description": {
-    "message": "Tampermonkey স্ক্রিপ্ট ফরম্যাটের সাথে সম্পূর্ণ সামঞ্জস্যপূর্ণ, শূন্য স্যুইচিং খরচে বিদ্যমান স্ক্রিপ্ট লাইব্রেরি নির্বিঘ্নে স্থানান্তর করে।",
-    "description": "Feature description: Tampermonkey compatibility"
-  },
-  "homepage.features.tampermonkey.title": {
-    "message": "Tampermonkey সামঞ্জস্যপূর্ণ",
-    "description": "Feature title: Tampermonkey compatibility"
-  },
-  "homepage.features.title.features": {
-    "message": "অসীম সম্ভাবনা"
-  },
-  "homepage.features.title.possibilities": {
-    "message": "অসীম সম্ভাবনা",
-    "description": "Features section title highlight"
-  },
-  "homepage.features.title.powerful": {
-    "message": "শক্তিশালী বৈশিষ্ট্য, ",
-    "description": "Features section title part 1"
-  },
-  "homepage.footer.contributors.title": {
-    "message": "সব অবদানকারীকে ধন্যবাদ",
-    "description": "Footer contributors section title"
-  },
-  "homepage.hero.browser.chrome": {
-    "message": "Chrome ব্রাউজারে যোগ করুন",
-    "description": "Button text for Chrome browser"
-  },
-  "homepage.hero.browser.crx": {
-    "message": "ম্যানুয়াল ইনস্টলের জন্য ইনস্টলেশন প্যাকেজ ডাউনলোড করুন",
-    "description": "Button text for manual installation"
-  },
-  "homepage.hero.browser.default": {
-    "message": "ব্রাউজারে এক্সটেনশন ইনস্টল করুন",
-    "description": "Default button text for browser installation"
-  },
-  "homepage.hero.browser.edge": {
-    "message": "Edge ব্রাউজারে যোগ করুন",
-    "description": "Button text for Edge browser"
-  },
-  "homepage.hero.browser.firefox": {
-    "message": "Firefox ব্রাউজারে যোগ করুন",
-    "description": "Button text for Firefox browser"
-  },
-  "homepage.hero.button.browseScripts": {
-    "message": "স্ক্রিপ্ট লাইব্রেরি ব্রাউজ করুন",
-    "description": "Button text for browsing scripts"
-  },
-  "homepage.hero.button.getStarted": {
-    "message": "শুরু করুন"
-  },
-  "homepage.hero.button.github": {
-    "message": "GitHub"
-  },
-  "homepage.hero.subtitle": {
-    "message": "একটি ব্রাউজার এক্সটেনশন যা ইউজারস্ক্রিপ্ট চালাতে পারে, সবকিছু স্ক্রিপ্টযোগ্য, আপনার ব্রাউজারকে আরও কিছু করতে দিন!",
-    "description": "The hero subtitle on the homepage"
-  },
-  "homepage.hero.subtitle.highlight": {
-    "message": "চালানোর জন্য একটি ব্রাউজার এক্সটেনশন",
-    "description": "Highlighted subtitle on homepage"
-  },
-  "homepage.hero.subtitle.main": {
-    "message": "ScriptCat একটি শক্তিশালী ওপেন-সোর্স ব্রাউজার স্ক্রিপ্ট ইঞ্জিন যা আপনাকে সহজেই ওয়েব ফাংশনালিটি কাস্টমাইজ করতে, বিজ্ঞাপন বাদ দিতে, কাজ স্বয়ংক্রিয় করতে এবং আপনার ব্রাউজিং অভিজ্ঞতা বাড়াতে দেয়। Tampermonkey-এর সাথে সামঞ্জস্যপূর্ণ এবং আরও বৈশিষ্ট্য ও অপ্টিমাইজেশন প্রদান করে।",
-    "description": "Main subtitle description on homepage"
-  },
-  "homepage.hero.subtitle.possibilities": {
-    "message": ", আপনার ব্রাউজারের জন্য অসীম সম্ভাবনা সক্রিয় করুন!",
-    "description": "Browser possibilities text"
-  },
-  "homepage.hero.subtitle.userScript": {
-    "message": "ব্যবহারকারী স্ক্রিপ্ট",
-    "description": "User script highlight"
-  },
-  "homepage.hero.title": {
-    "message": "এর জন্য চূড়ান্ত স্ক্রিপ্ট ইঞ্জিন",
-    "description": "Main title on the homepage hero section"
-  },
-  "homepage.hero.title.engine": {
-    "message": "উন্নত ব্রাউজার অভিজ্ঞতা",
-    "description": "Gradient text in main title"
-  },
-  "homepage.hero.trustBadges.title": {
-    "message": "টেক কমিউনিটি দ্বারা বিশ্বস্ত ও সমর্থিত",
-    "description": "Trust badges section title"
-  },
   "homepage.meta.description": {
     "message": "ScriptCat একটি শক্তিশালী ওপেন সোর্স ব্রাউজার স্ক্রিপ্ট ইঞ্জিন যা আপনাকে সহজেই ওয়েব কার্যকারিতা কাস্টমাইজ করতে, বিজ্ঞাপন দূর করতে, কাজ অটোমেট করতে এবং ব্রাউজিং অভিজ্ঞতা উন্নত করতে দেয়। আরও বৈশিষ্ট্যসহ Tampermonkey-এর সাথে সামঞ্জস্যপূর্ণ।",
     "description": "Homepage meta description for SEO"
@@ -830,106 +492,6 @@
   "homepage.meta.title": {
     "message": "ScriptCat - শক্তিশালী ব্রাউজার স্ক্রিপ্ট ইঞ্জিন",
     "description": "Homepage meta title for SEO"
-  },
-  "homepage.og.description": {
-    "message": "ওপেন সোর্স ব্রাউজার স্ক্রিপ্ট ইঞ্জিন যা আপনার ব্রাউজারকে আরও কিছু করতে দেয়। ইউজারস্ক্রিপ্ট, ব্যাকগ্রাউন্ড স্ক্রিপ্ট সমর্থন করে, Tampermonkey-এর সাথে সামঞ্জস্যপূর্ণ, আরও শক্তিশালী বৈশিষ্ট্য।",
-    "description": "Open Graph description for social sharing"
-  },
-  "homepage.og.title": {
-    "message": "ScriptCat - শক্তিশালী ব্রাউজার স্ক্রিপ্ট ইঞ্জিন",
-    "description": "Open Graph title for social sharing"
-  },
-  "homepage.scenario.shopping.feature.alert": {
-    "message": "দাম কমানোর সতর্কতা",
-    "description": "Shopping feature: Price alert"
-  },
-  "homepage.scenario.shopping.feature.compare": {
-    "message": "দাম তুলনা",
-    "description": "Shopping feature: Price comparison"
-  },
-  "homepage.scenario.shopping.feature.coupon": {
-    "message": "অটো কুপন অনুসন্ধান",
-    "description": "Shopping feature: Coupon search"
-  },
-  "homepage.scenario.shopping.feature.history": {
-    "message": "দামের ইতিহাস অনুসন্ধান",
-    "description": "Shopping feature: Price history"
-  },
-  "homepage.scenario.shopping.subtitle": {
-    "message": "শপিং অভিজ্ঞতা সহজ করে তুলুন",
-    "description": "Shopping scenario subtitle"
-  },
-  "homepage.scenario.shopping.tag": {
-    "message": "ব্যবহারিক টুল",
-    "description": "Shopping scenario tag"
-  },
-  "homepage.scenario.shopping.title": {
-    "message": "শপিং সহায়ক",
-    "description": "Shopping scenario title"
-  },
-  "homepage.scenario.sites.more": {
-    "message": "+আরও",
-    "description": "More sites indicator in scenario cards"
-  },
-  "homepage.scenario.subtitle": {
-    "message": "ScriptCat কীভাবে আপনার ব্রাউজিং অভিজ্ঞতা বদলে দিতে পারে তা দেখুন",
-    "description": "Scenario section subtitle"
-  },
-  "homepage.scenario.title.problems": {
-    "message": "প্রকৃত সমস্যা",
-    "description": "Scenario section title highlight"
-  },
-  "homepage.scenario.title.scripts": {
-    "message": "",
-    "description": "Scenario section title part 2"
-  },
-  "homepage.scenario.title.solve": {
-    "message": "বাস্তব সমস্যা",
-    "description": "Scenario section title part 1"
-  },
-  "homepage.scenario.video.feature.adblock": {
-    "message": "বিজ্ঞাপন স্বয়ংক্রিয় বাদ",
-    "description": "Video feature: Ad blocking"
-  },
-  "homepage.scenario.video.feature.download": {
-    "message": "এক ক্লিক ভিডিও ডাউনলোড",
-    "description": "Video feature: Download"
-  },
-  "homepage.scenario.video.feature.speed": {
-    "message": "ভিডিও গতি নিয়ন্ত্রণ",
-    "description": "Video feature: Speed control"
-  },
-  "homepage.scenario.video.feature.ui": {
-    "message": "UI সরলীকরণ",
-    "description": "Video feature: UI optimization"
-  },
-  "homepage.scenario.video.getScript": {
-    "message": "স্ক্রিপ্ট পান →",
-    "description": "Video scenario get script link"
-  },
-  "homepage.scenario.video.sites": {
-    "message": "সমর্থিত সাইট",
-    "description": "Video scenario supported sites label"
-  },
-  "homepage.scenario.video.subtitle": {
-    "message": "ভিডিও দেখার অভিজ্ঞতা অপ্টিমাইজ করুন",
-    "description": "Video scenario subtitle"
-  },
-  "homepage.scenario.video.tag": {
-    "message": "জনপ্রিয় অ্যাপ",
-    "description": "Video scenario tag"
-  },
-  "homepage.scenario.video.title": {
-    "message": "ভিডিও সাইট উন্নতি",
-    "description": "Video scenario title"
-  },
-  "homepage.twitter.description": {
-    "message": "ওপেন সোর্স ব্রাউজার স্ক্রিপ্ট ইঞ্জিন যা আপনার ব্রাউজারকে আরও কিছু করতে দেয়",
-    "description": "Twitter card description"
-  },
-  "homepage.twitter.title": {
-    "message": "ScriptCat - শক্তিশালী ব্রাউজার স্ক্রিপ্ট ইঞ্জিন",
-    "description": "Twitter card title"
   },
   "theme.BackToTopButton.buttonAriaLabel": {
     "message": "উপরে ফিরে যান",
@@ -1043,18 +605,9 @@
     "message": "আরও ভালো বিকল্প পেয়েছি",
     "description": "Uninstall reason: found alternative"
   },
-  "uninstall.reason.better": {
-    "message": "আরও ভালো বিকল্প পেয়েছি"
-  },
-  "uninstall.reason.bug": {
-    "message": "ত্রুটি বা বাগের সম্মুখীন হয়েছি"
-  },
   "uninstall.reason.bugs": {
     "message": "ত্রুটি বা বাগের সম্মুখীন হয়েছি",
     "description": "Uninstall reason: bugs"
-  },
-  "uninstall.reason.feature": {
-    "message": "আমার প্রয়োজনীয় ফিচারের অভাব"
   },
   "uninstall.reason.features": {
     "message": "আমার প্রয়োজনীয় ফিচারের অভাব",
@@ -1067,9 +620,6 @@
   "uninstall.reason.other": {
     "message": "অন্যান্য কারণ",
     "description": "Uninstall reason: other"
-  },
-  "uninstall.reason.unused": {
-    "message": "আর প্রয়োজন নেই"
   },
   "uninstall.reinstall.chrome": {
     "message": "Chrome ওয়েব স্টোর",
@@ -1142,9 +692,6 @@
   "uninstall.warning.selectReason": {
     "message": "অনুগ্রহ করে একটি আনইনস্টল কারণ নির্বাচন করুন",
     "description": "Warning when no reason is selected"
-  },
-  "home.hero.en": {
-    "message": "আপনার ব্রাউজারের জন্য সুপারপাওয়ার।"
   },
   "home.search.kw.adblock": {
     "message": "বিজ্ঞাপন ব্লক",

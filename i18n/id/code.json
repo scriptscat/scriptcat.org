@@ -19,10 +19,6 @@
     "message": "Laporkan Masalah",
     "description": "Footer community report issues link"
   },
-  "footer.community.recruiting": {
-    "message": "Rekrutmen",
-    "description": "Footer community recruiting badge"
-  },
   "footer.community.title": {
     "message": "Komunitas",
     "description": "Footer community section title"
@@ -241,9 +237,6 @@
   },
   "home.feat.store.d": {
     "message": "Pasang ribuan skrip komunitas sekali klik, atau terbitkan karya Anda dan bangun ekosistem bersama."
-  },
-  "home.feat.store.stat": {
-    "message": "{count} skrip komunitas"
   },
   "home.feat.store.t": {
     "message": "Toko skrip"
@@ -488,337 +481,6 @@
   "home.trust.users": {
     "message": "Pengguna terpasang"
   },
-  "homepage.comments.bigonion.content": {
-    "message": "ScriptCat adalah masa depan.",
-    "description": "bigonion's comment content"
-  },
-  "homepage.comments.bigonion.description": {
-    "message": "Pengembang ScriptCat",
-    "description": "bigonion's description in community comments"
-  },
-  "homepage.comments.bigonion.username": {
-    "message": "bigonion",
-    "description": "bigonion's username in community comments"
-  },
-  "homepage.comments.enncy.content": {
-    "message": "Terima kasih yang tulus kepada komunitas",
-    "description": "Enncy's comment content"
-  },
-  "homepage.comments.enncy.description": {
-    "message": "Penulis Skrip Terkenal",
-    "description": "Enncy's description in community comments"
-  },
-  "homepage.comments.enncy.username": {
-    "message": "Yan Xiaoxi (enncy)",
-    "description": "Enncy's username in community comments"
-  },
-  "homepage.comments.lihengdao.content": {
-    "message": "ScriptCat sungguh luar biasa!",
-    "description": "Li Hengdao's comment content"
-  },
-  "homepage.comments.lihengdao.description": {
-    "message": "Co-founder Tampermonkey CN",
-    "description": "Li Hengdao's description in community comments"
-  },
-  "homepage.comments.lihengdao.username": {
-    "message": "Li Hengdao",
-    "description": "Li Hengdao's username in community comments"
-  },
-  "homepage.comments.oraer.content": {
-    "message": "Pertemuan pertama dengan Tampermonkey! Belajar Tampermonkey! Melampaui Tampermonkey!",
-    "description": "Oraer's comment content"
-  },
-  "homepage.comments.oraer.description": {
-    "message": "Pengguna Chrome",
-    "description": "Oraer's description in community comments"
-  },
-  "homepage.comments.oraer.username": {
-    "message": "Oraer",
-    "description": "Oraer's username in community comments"
-  },
-  "homepage.comments.qianyu.content": {
-    "message": "Awalnya orang mengira ini plugin JS khusus... sampai...",
-    "description": "Qian Yu's comment content"
-  },
-  "homepage.comments.qianyu.description": {
-    "message": "Pengguna Chrome",
-    "description": "Qian Yu's description in community comments"
-  },
-  "homepage.comments.qianyu.username": {
-    "message": "Qian Yu",
-    "description": "Qian Yu's username in community comments"
-  },
-  "homepage.comments.student.content": {
-    "message": "Berkat sumber belajar yang kaya di komunitas, saya mendapat banyak manfaat dan dapat mengembangkan kemampuan teknis saya dengan lebih baik. ScriptCat adalah ekstensi browser yang sangat berguna yang memberi saya fungsi yang nyaman dan efisien.",
-    "description": "Student user's comment content"
-  },
-  "homepage.comments.student.description": {
-    "message": "Pelajar",
-    "description": "Student user's description in community comments"
-  },
-  "homepage.comments.student.username": {
-    "message": "Student",
-    "description": "Student user's username in community comments"
-  },
-  "homepage.comments.wwwwwllllk.content": {
-    "message": "Menggunakan ScriptCat untuk meningkatkan pengalaman internet saya, bertemu orang-orang yang sepaham di komunitas.",
-    "description": "wwwwwllllk's comment content"
-  },
-  "homepage.comments.wwwwwllllk.description": {
-    "message": "Pengembang Frontend",
-    "description": "wwwwwllllk's description in community comments"
-  },
-  "homepage.comments.wwwwwllllk.username": {
-    "message": "wwwwwllllk",
-    "description": "wwwwwllllk's username in community comments"
-  },
-  "homepage.comparison.feature": {
-    "message": "Fitur",
-    "description": "Comparison table header: Feature"
-  },
-  "homepage.comparison.feature.api": {
-    "message": "API Hebat",
-    "description": "Comparison feature: Powerful APIs"
-  },
-  "homepage.comparison.feature.background": {
-    "message": "Skrip Latar Belakang",
-    "description": "Comparison feature: Background scripts"
-  },
-  "homepage.comparison.feature.community": {
-    "message": "Dukungan Komunitas",
-    "description": "Comparison feature: Community support"
-  },
-  "homepage.comparison.feature.compatibility": {
-    "message": "Kompatibilitas Skrip",
-    "description": "Comparison feature: Script compatibility"
-  },
-  "homepage.comparison.feature.mv3": {
-    "message": "Dukungan MV3",
-    "description": "Comparison feature: MV3 Support"
-  },
-  "homepage.comparison.feature.opensource": {
-    "message": "Sumber Terbuka Gratis",
-    "description": "Comparison feature: Open source"
-  },
-  "homepage.comparison.feature.sync": {
-    "message": "Sinkronisasi Cloud",
-    "description": "Comparison feature: Cloud sync"
-  },
-  "homepage.comparison.label.efficient": {
-    "message": "Efisien",
-    "description": "Comparison label: Efficient"
-  },
-  "homepage.comparison.label.multiplatform": {
-    "message": "Multiplatform",
-    "description": "Comparison label: Multi-platform"
-  },
-  "homepage.comparison.subtitle": {
-    "message": "Dibandingkan mesin skrip lain, ScriptCat memberikan lebih banyak keunggulan dan fitur yang disempurnakan",
-    "description": "Comparison section subtitle"
-  },
-  "homepage.comparison.title.why": {
-    "message": "Mengapa Memilih",
-    "description": "Comparison section title part 1"
-  },
-  "homepage.download.chrome": {
-    "message": "Toko Ekstensi Chrome",
-    "description": "Download button: Chrome store"
-  },
-  "homepage.download.edge": {
-    "message": "Toko Ekstensi Edge",
-    "description": "Download button: Edge store"
-  },
-  "homepage.download.firefox": {
-    "message": "Toko Ekstensi Firefox",
-    "description": "Download button: Firefox store"
-  },
-  "homepage.download.github": {
-    "message": "Unduhan GitHub",
-    "description": "Download button: GitHub"
-  },
-  "homepage.download.popup.text": {
-    "message": "3 skrip sedang berjalan di halaman saat ini",
-    "description": "Extension popup text"
-  },
-  "homepage.download.popup.title": {
-    "message": "ScriptCat Aktif",
-    "description": "Extension popup title"
-  },
-  "homepage.download.subtitle": {
-    "message": "Pasang ScriptCat sekarang dan buka kemungkinan tak terbatas untuk menjelajah web",
-    "description": "Download section subtitle"
-  },
-  "homepage.download.title.enhance": {
-    "message": "Tingkatkan Pengalaman Menjelajah Anda",
-    "description": "Download section title highlight"
-  },
-  "homepage.download.title.question": {
-    "message": "?",
-    "description": "Download section title part 2"
-  },
-  "homepage.download.title.ready": {
-    "message": "Siap untuk",
-    "description": "Download section title part 1"
-  },
-  "homepage.features.api.description": {
-    "message": "Menyediakan antarmuka API yang lebih kaya dari GM, mendukung fitur lanjutan seperti penyimpanan file dan konfigurasi pengguna, memperluas kemampuan skrip.",
-    "description": "Feature description: APIs"
-  },
-  "homepage.features.api.title": {
-    "message": "API Hebat",
-    "description": "Feature title: APIs"
-  },
-  "homepage.features.background.description": {
-    "message": "Tidak seperti skrip pengguna biasa, memungkinkan skrip Anda terus berjalan di latar belakang tanpa perlu membuka tab.",
-    "description": "Feature description: Background scripts"
-  },
-  "homepage.features.background.title": {
-    "message": "Skrip Latar Belakang",
-    "description": "Feature title: Background scripts"
-  },
-  "homepage.features.compatibility.description": {
-    "message": "Sepenuhnya kompatibel dengan skrip Tampermonkey dan Violentmonkey, migrasikan skrip favorit Anda dengan mudah."
-  },
-  "homepage.features.compatibility.title": {
-    "message": "Kompatibilitas sempurna"
-  },
-  "homepage.features.easy.description": {
-    "message": "Editor bawaan, autocomplete cerdas, pemeriksaan sintaks, pengembangan skrip lebih efisien",
-    "description": "Description for easy to use section"
-  },
-  "homepage.features.easy.title": {
-    "message": "Mudah digunakan",
-    "description": "Title for easy to use section"
-  },
-  "homepage.features.editor.description": {
-    "message": "Editor kode hebat dengan penyorotan sintaks, pelengkapan kode, dan petunjuk kesalahan untuk membuat penulisan skrip lebih efisien.",
-    "description": "Feature description: Code editor"
-  },
-  "homepage.features.editor.title": {
-    "message": "Editor Kode Bawaan",
-    "description": "Feature title: Code editor"
-  },
-  "homepage.features.powerful.description": {
-    "message": "Sepenuhnya kompatibel dengan Tampermonkey, skrip latar belakang, skrip terjadwal, API yang kaya",
-    "description": "Description for powerful features section"
-  },
-  "homepage.features.powerful.title": {
-    "message": "Fitur hebat",
-    "description": "Title for powerful features section"
-  },
-  "homepage.features.secure.description": {
-    "message": "Mekanisme sandbox, manajemen izin, menjamin eksekusi skrip yang aman",
-    "description": "Description for secure and reliable section"
-  },
-  "homepage.features.secure.title": {
-    "message": "Aman dan andal",
-    "description": "Title for secure and reliable section"
-  },
-  "homepage.features.security.description": {
-    "message": "Sistem kontrol izin yang ketat, perilaku skrip yang transparan, secara efektif mencegah skrip jahat dan melindungi privasi Anda.",
-    "description": "Feature description: Security"
-  },
-  "homepage.features.security.title": {
-    "message": "Aman dan Andal",
-    "description": "Feature title: Security"
-  },
-  "homepage.features.store.description": {
-    "message": "Menampilkan toko skrip untuk pemasangan sekali klik skrip populer, atau terbitkan karya Anda untuk dibagikan dengan komunitas, membangun ekosistem yang aktif.",
-    "description": "Feature description: Script store"
-  },
-  "homepage.features.store.title": {
-    "message": "Toko Skrip",
-    "description": "Feature title: Script store"
-  },
-  "homepage.features.subtitle": {
-    "message": "ScriptCat menyediakan serangkaian fitur hebat yang memungkinkan Anda memperluas kemampuan browser dengan mudah dan menciptakan pengalaman web Anda sendiri.",
-    "description": "Features section subtitle"
-  },
-  "homepage.features.tampermonkey.description": {
-    "message": "Sepenuhnya kompatibel dengan format skrip Tampermonkey, migrasikan pustaka skrip yang ada dengan mulus dengan biaya peralihan nol.",
-    "description": "Feature description: Tampermonkey compatibility"
-  },
-  "homepage.features.tampermonkey.title": {
-    "message": "Kompatibel dengan Tampermonkey",
-    "description": "Feature title: Tampermonkey compatibility"
-  },
-  "homepage.features.title.features": {
-    "message": "Kemungkinan Tanpa Batas"
-  },
-  "homepage.features.title.possibilities": {
-    "message": "Kemungkinan Tanpa Batas",
-    "description": "Features section title highlight"
-  },
-  "homepage.features.title.powerful": {
-    "message": "Fitur Hebat, ",
-    "description": "Features section title part 1"
-  },
-  "homepage.footer.contributors.title": {
-    "message": "Terima kasih kepada semua kontributor",
-    "description": "Footer contributors section title"
-  },
-  "homepage.hero.browser.chrome": {
-    "message": "Tambahkan ke Browser Chrome",
-    "description": "Button text for Chrome browser"
-  },
-  "homepage.hero.browser.crx": {
-    "message": "Unduh Paket Instalasi untuk Pemasangan Manual",
-    "description": "Button text for manual installation"
-  },
-  "homepage.hero.browser.default": {
-    "message": "Pasang Ekstensi ke Browser",
-    "description": "Default button text for browser installation"
-  },
-  "homepage.hero.browser.edge": {
-    "message": "Tambahkan ke Browser Edge",
-    "description": "Button text for Edge browser"
-  },
-  "homepage.hero.browser.firefox": {
-    "message": "Tambahkan ke Browser Firefox",
-    "description": "Button text for Firefox browser"
-  },
-  "homepage.hero.button.browseScripts": {
-    "message": "Jelajahi Pustaka Skrip",
-    "description": "Button text for browsing scripts"
-  },
-  "homepage.hero.button.getStarted": {
-    "message": "Mulai"
-  },
-  "homepage.hero.button.github": {
-    "message": "GitHub"
-  },
-  "homepage.hero.subtitle": {
-    "message": "Ekstensi browser yang dapat menjalankan skrip pengguna, semuanya dapat diskrip, buat browser Anda melakukan lebih banyak hal!",
-    "description": "The hero subtitle on the homepage"
-  },
-  "homepage.hero.subtitle.highlight": {
-    "message": "Ekstensi browser untuk menjalankan",
-    "description": "Highlighted subtitle on homepage"
-  },
-  "homepage.hero.subtitle.main": {
-    "message": "ScriptCat adalah mesin skrip browser open-source yang kuat yang memungkinkan Anda dengan mudah menyesuaikan fungsionalitas web, menghilangkan iklan, mengotomatiskan tugas, dan meningkatkan pengalaman menjelajah Anda. Kompatibel dengan Tampermonkey dan menyediakan lebih banyak fitur dan optimasi.",
-    "description": "Main subtitle description on homepage"
-  },
-  "homepage.hero.subtitle.possibilities": {
-    "message": ", mengaktifkan kemungkinan tak terbatas untuk browser Anda!",
-    "description": "Browser possibilities text"
-  },
-  "homepage.hero.subtitle.userScript": {
-    "message": "skrip pengguna",
-    "description": "User script highlight"
-  },
-  "homepage.hero.title": {
-    "message": "Mesin Skrip Terbaik untuk",
-    "description": "Main title on the homepage hero section"
-  },
-  "homepage.hero.title.engine": {
-    "message": "Pengalaman Browser yang Ditingkatkan",
-    "description": "Gradient text in main title"
-  },
-  "homepage.hero.trustBadges.title": {
-    "message": "Dipercaya dan didukung oleh komunitas teknologi",
-    "description": "Trust badges section title"
-  },
   "homepage.meta.description": {
     "message": "ScriptCat adalah mesin skrip browser sumber terbuka yang hebat yang memungkinkan Anda menyesuaikan fungsi web dengan mudah, menghilangkan iklan, mengotomatiskan tugas, dan meningkatkan pengalaman menjelajah Anda. Kompatibel dengan Tampermonkey dengan lebih banyak fitur.",
     "description": "Homepage meta description for SEO"
@@ -830,106 +492,6 @@
   "homepage.meta.title": {
     "message": "ScriptCat - Mesin Skrip Browser Hebat",
     "description": "Homepage meta title for SEO"
-  },
-  "homepage.og.description": {
-    "message": "Mesin skrip browser sumber terbuka yang membuat browser Anda berbuat lebih banyak. Mendukung skrip pengguna, skrip latar belakang, kompatibel dengan Tampermonkey, fitur yang lebih hebat.",
-    "description": "Open Graph description for social sharing"
-  },
-  "homepage.og.title": {
-    "message": "ScriptCat - Mesin Skrip Browser Hebat",
-    "description": "Open Graph title for social sharing"
-  },
-  "homepage.scenario.shopping.feature.alert": {
-    "message": "Peringatan Penurunan Harga",
-    "description": "Shopping feature: Price alert"
-  },
-  "homepage.scenario.shopping.feature.compare": {
-    "message": "Perbandingan Harga",
-    "description": "Shopping feature: Price comparison"
-  },
-  "homepage.scenario.shopping.feature.coupon": {
-    "message": "Pencarian Kupon Otomatis",
-    "description": "Shopping feature: Coupon search"
-  },
-  "homepage.scenario.shopping.feature.history": {
-    "message": "Kueri Riwayat Harga",
-    "description": "Shopping feature: Price history"
-  },
-  "homepage.scenario.shopping.subtitle": {
-    "message": "Buat pengalaman belanja lebih mudah",
-    "description": "Shopping scenario subtitle"
-  },
-  "homepage.scenario.shopping.tag": {
-    "message": "Alat praktis",
-    "description": "Shopping scenario tag"
-  },
-  "homepage.scenario.shopping.title": {
-    "message": "Asisten Belanja",
-    "description": "Shopping scenario title"
-  },
-  "homepage.scenario.sites.more": {
-    "message": "+Lainnya",
-    "description": "More sites indicator in scenario cards"
-  },
-  "homepage.scenario.subtitle": {
-    "message": "Lihat bagaimana ScriptCat dapat mengubah pengalaman menjelajah Anda",
-    "description": "Scenario section subtitle"
-  },
-  "homepage.scenario.title.problems": {
-    "message": "masalah nyata",
-    "description": "Scenario section title highlight"
-  },
-  "homepage.scenario.title.scripts": {
-    "message": "",
-    "description": "Scenario section title part 2"
-  },
-  "homepage.scenario.title.solve": {
-    "message": "Masalah Nyata",
-    "description": "Scenario section title part 1"
-  },
-  "homepage.scenario.video.feature.adblock": {
-    "message": "Lewati iklan otomatis",
-    "description": "Video feature: Ad blocking"
-  },
-  "homepage.scenario.video.feature.download": {
-    "message": "Unduh Video Sekali Klik",
-    "description": "Video feature: Download"
-  },
-  "homepage.scenario.video.feature.speed": {
-    "message": "Kontrol Kecepatan Video",
-    "description": "Video feature: Speed control"
-  },
-  "homepage.scenario.video.feature.ui": {
-    "message": "Penyederhanaan UI",
-    "description": "Video feature: UI optimization"
-  },
-  "homepage.scenario.video.getScript": {
-    "message": "Dapatkan skrip →",
-    "description": "Video scenario get script link"
-  },
-  "homepage.scenario.video.sites": {
-    "message": "Situs yang didukung",
-    "description": "Video scenario supported sites label"
-  },
-  "homepage.scenario.video.subtitle": {
-    "message": "Optimalkan pengalaman menonton video",
-    "description": "Video scenario subtitle"
-  },
-  "homepage.scenario.video.tag": {
-    "message": "Aplikasi populer",
-    "description": "Video scenario tag"
-  },
-  "homepage.scenario.video.title": {
-    "message": "Peningkatan Situs Video",
-    "description": "Video scenario title"
-  },
-  "homepage.twitter.description": {
-    "message": "Mesin skrip browser sumber terbuka yang membuat browser Anda berbuat lebih banyak",
-    "description": "Twitter card description"
-  },
-  "homepage.twitter.title": {
-    "message": "ScriptCat - Mesin Skrip Browser Hebat",
-    "description": "Twitter card title"
   },
   "theme.BackToTopButton.buttonAriaLabel": {
     "message": "Kembali ke atas",
@@ -1043,18 +605,9 @@
     "message": "Menemukan alternatif yang lebih baik",
     "description": "Uninstall reason: found alternative"
   },
-  "uninstall.reason.better": {
-    "message": "Menemukan alternatif yang lebih baik"
-  },
-  "uninstall.reason.bug": {
-    "message": "Mengalami kesalahan atau bug"
-  },
   "uninstall.reason.bugs": {
     "message": "Mengalami kesalahan atau bug",
     "description": "Uninstall reason: bugs"
-  },
-  "uninstall.reason.feature": {
-    "message": "Fitur yang saya butuhkan tidak ada"
   },
   "uninstall.reason.features": {
     "message": "Fitur yang saya butuhkan tidak ada",
@@ -1067,9 +620,6 @@
   "uninstall.reason.other": {
     "message": "Alasan lain",
     "description": "Uninstall reason: other"
-  },
-  "uninstall.reason.unused": {
-    "message": "Tidak lagi membutuhkannya"
   },
   "uninstall.reinstall.chrome": {
     "message": "Chrome Web Store",
@@ -1142,9 +692,6 @@
   "uninstall.warning.selectReason": {
     "message": "Silakan pilih alasan penghapusan",
     "description": "Warning when no reason is selected"
-  },
-  "home.hero.en": {
-    "message": "Kekuatan super untuk browser Anda."
   },
   "home.search.kw.adblock": {
     "message": "blokir iklan",

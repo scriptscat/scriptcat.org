@@ -1,27 +1,27 @@
 {
-  "updatedAt": "2026-07-14T07:20:28.351Z",
-  "stars": 4836,
-  "scripts": 3150,
-  "users": 2251969,
+  "updatedAt": "2026-09-01T08:58:07.225Z",
+  "stars": 5222,
+  "scripts": 3616,
+  "users": 1857770,
   "usersByStore": {
     "chrome": 100000,
-    "edge": 2142824,
-    "firefox": 9145
+    "edge": 1748423,
+    "firefox": 9347
   },
   "contributors": {
-    "count": 40,
+    "count": 44,
     "list": [
       {
         "login": "CodFrm",
         "avatar": "https://avatars.githubusercontent.com/u/22783163?v=4",
         "url": "https://github.com/CodFrm",
-        "contributions": 1860
+        "contributions": 1947
       },
       {
         "login": "cyfung1031",
         "avatar": "https://avatars.githubusercontent.com/u/44498510?v=4",
         "url": "https://github.com/cyfung1031",
-        "contributions": 403
+        "contributions": 438
       },
       {
         "login": "taozhiyu",
@@ -63,7 +63,7 @@
         "login": "RenjiYuusei",
         "avatar": "https://avatars.githubusercontent.com/u/166010224?v=4",
         "url": "https://github.com/RenjiYuusei",
-        "contributions": 4
+        "contributions": 5
       },
       {
         "login": "duoluodexiaoxiaoyuan",
@@ -99,6 +99,12 @@
         "login": "joriscai",
         "avatar": "https://avatars.githubusercontent.com/u/17852005?v=4",
         "url": "https://github.com/joriscai",
+        "contributions": 2
+      },
+      {
+        "login": "neoOpus",
+        "avatar": "https://avatars.githubusercontent.com/u/1388336?v=4",
+        "url": "https://github.com/neoOpus",
         "contributions": 2
       },
       {
@@ -156,6 +162,12 @@
         "contributions": 1
       },
       {
+        "login": "Lucas559-noob",
+        "avatar": "https://avatars.githubusercontent.com/u/54007604?v=4",
+        "url": "https://github.com/Lucas559-noob",
+        "contributions": 1
+      },
+      {
         "login": "maxzhang666",
         "avatar": "https://avatars.githubusercontent.com/u/10149878?v=4",
         "url": "https://github.com/maxzhang666",
@@ -192,15 +204,15 @@
         "contributions": 1
       },
       {
-        "login": "piglee05022",
-        "avatar": "https://avatars.githubusercontent.com/u/212375369?v=4",
-        "url": "https://github.com/piglee05022",
+        "login": "moduvoice",
+        "avatar": "https://avatars.githubusercontent.com/u/291867022?v=4",
+        "url": "https://github.com/moduvoice",
         "contributions": 1
       },
       {
-        "login": "tomaioo",
-        "avatar": "https://avatars.githubusercontent.com/u/203048277?v=4",
-        "url": "https://github.com/tomaioo",
+        "login": "piglee05022",
+        "avatar": "https://avatars.githubusercontent.com/u/212375369?v=4",
+        "url": "https://github.com/piglee05022",
         "contributions": 1
       },
       {
@@ -228,6 +240,12 @@
         "contributions": 1
       },
       {
+        "login": "Mishasama",
+        "avatar": "https://avatars.githubusercontent.com/u/54498172?v=4",
+        "url": "https://github.com/Mishasama",
+        "contributions": 1
+      },
+      {
         "login": "mon-jai",
         "avatar": "https://avatars.githubusercontent.com/u/91261297?v=4",
         "url": "https://github.com/mon-jai",
@@ -237,6 +255,12 @@
         "login": "jiuyou",
         "avatar": "https://avatars.githubusercontent.com/u/8434983?v=4",
         "url": "https://github.com/jiuyou",
+        "contributions": 1
+      },
+      {
+        "login": "anupamme",
+        "avatar": "https://avatars.githubusercontent.com/u/667857?v=4",
+        "url": "https://github.com/anupamme",
         "contributions": 1
       },
       {
