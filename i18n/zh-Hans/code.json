@@ -967,405 +967,405 @@
     "description": "GitHub star button label"
   },
   "githubStar.changelog.subtitle": {
-    "message": "覺得這些更新有用？到 GitHub 點個 Star，支持我們做得更好",
+    "message": "觉得这些更新有用？到 GitHub 点个 Star，支持我们做得更好",
     "description": "GitHub star bar subtitle on changelog page"
   },
   "githubStar.changelog.title": {
-    "message": "ScriptCat 持續在更新 🚀",
+    "message": "脚本猫持续在更新 🚀",
     "description": "GitHub star bar title on changelog page"
   },
   "githubStar.home.subtitle": {
-    "message": "覺得好用就點個 Star 支持我們持續維護",
+    "message": "觉得好用就点个 Star 支持我们持续维护",
     "description": "GitHub star bar subtitle on homepage"
   },
   "githubStar.home.title": {
-    "message": "ScriptCat 開源免費",
+    "message": "脚本猫开源免费",
     "description": "GitHub star bar title on homepage"
   },
   "githubStar.install.subtitle": {
-    "message": "到 GitHub 點個 Star，幫更多人發現它 🌟",
+    "message": "到 GitHub 点个 Star，帮更多人发现它 🌟",
     "description": "GitHub star bar subtitle on install-complete page"
   },
   "githubStar.install.title": {
-    "message": "喜歡 ScriptCat 嗎？",
+    "message": "喜欢脚本猫吗？",
     "description": "GitHub star bar title on install-complete page"
   },
   "home.comm.btn": {
-    "message": "在 GitHub 上貢獻"
+    "message": "在 GitHub 上参与贡献"
   },
   "home.comm.eyebrow": {
-    "message": "開源 · OPEN SOURCE"
+    "message": "开源社区 · OPEN SOURCE"
   },
   "home.comm.sub": {
-    "message": "完全開源、透明且免費。每一行程式碼都可審計，每一位貢獻者都被看見。"
+    "message": "完全开源、透明、免费。每一行代码都可审阅，每一位贡献者都被看见。"
   },
   "home.comm.title1": {
-    "message": "由 "
+    "message": "由社区，"
   },
   "home.comm.title2": {
-    "message": "社群共同打造"
+    "message": "共同打造"
   },
   "home.cta.chip": {
-    "message": "已安裝並正在執行"
+    "message": "已安装并运行"
   },
   "home.cta.eyebrow": {
-    "message": "免費 · 開源 · 無廣告"
+    "message": "完全免费 · 开源 · 无广告"
   },
   "home.cta.h1": {
-    "message": "準備好讓瀏覽器"
+    "message": "准备好给浏览器"
   },
   "home.cta.h2": {
-    "message": "擁有超能力"
+    "message": "开挂"
   },
   "home.cta.h3": {
-    "message": "了嗎？"
+    "message": "了吗？"
   },
   "home.cta.primary": {
-    "message": "免費安裝於 {browser}"
+    "message": "免费安装到 {browser}"
   },
   "home.cta.secondary": {
-    "message": "瀏覽腳本"
+    "message": "浏览脚本库"
   },
   "home.cta.stores": {
-    "message": "支援 Edge · Chrome · Firefox · 手動安裝包"
+    "message": "支持 Edge · Chrome · Firefox · 手动安装包"
   },
   "home.cta.sub": {
-    "message": "從商店一鍵安裝，或手動下載安裝包。30 秒解鎖網頁超能力。"
+    "message": "从应用商店一键安装，或下载安装包手动安装。30 秒，解锁网页超能力。"
   },
   "home.dev.api.d": {
-    "message": "檔案儲存、cron 排程與跨域請求 — 全部包含。"
+    "message": "文件存储、定时任务 cron、跨域请求一应俱全。"
   },
   "home.dev.api.t": {
-    "message": "強大的 API"
+    "message": "强大 API"
   },
   "home.dev.apiBtn": {
-    "message": "API 參考"
+    "message": "API 参考"
   },
   "home.dev.bg.d": {
-    "message": "無需固定分頁 — 腳本持續在背景執行。"
+    "message": "无需常驻标签页，脚本可在后台持续运行。"
   },
   "home.dev.bg.t": {
-    "message": "背景腳本"
+    "message": "后台脚本"
   },
   "home.dev.debug.d": {
-    "message": "日誌、執行記錄與錯誤追蹤 — 問題一目了然。"
+    "message": "日志、运行记录、错误追踪，问题一目了然。"
   },
   "home.dev.debug.t": {
-    "message": "即時除錯"
+    "message": "实时调试"
   },
   "home.dev.docsBtn": {
-    "message": "閱讀文件"
+    "message": "阅读开发文档"
   },
   "home.dev.editor.d": {
-    "message": "語法高亮、智慧補全與錯誤提示，讓腳本開發流暢順手。"
+    "message": "语法高亮、智能补全、错误提示，写脚本更顺手。"
   },
   "home.dev.editor.t": {
-    "message": "內建編輯器"
+    "message": "内置编辑器"
   },
   "home.dev.eyebrow": {
-    "message": "為開發者打造 · FOR DEVELOPERS"
+    "message": "为开发者而生 · FOR DEVELOPERS"
   },
   "home.dev.mock.name": {
-    "message": "每日簽到",
+    "message": "每日自动签到",
     "description": "@name value in the editor mock code block"
   },
   "home.dev.mock.toast": {
-    "message": "簽到成功",
+    "message": "签到成功",
     "description": "Notification text in the editor mock code block"
   },
   "home.dev.run": {
-    "message": "執行"
+    "message": "运行"
   },
   "home.dev.sub": {
-    "message": "背景腳本、豐富的 API、內建編輯器與除錯工具 — 從第一行程式碼到正式上線，全部集中在一處。"
+    "message": "后台脚本、丰富 API、内置编辑器与调试工具 —— 从写下第一行到上线运行，一站式搞定。"
   },
   "home.dev.title1": {
-    "message": "將瀏覽器變成你的 "
+    "message": "把浏览器，变成你的"
   },
   "home.dev.title2": {
-    "message": "程式碼執行環境"
+    "message": "代码运行时"
   },
   "home.feat.api.d": {
-    "message": "比 GM 更豐富：檔案儲存、定時任務與跨域請求，盡在掌握。"
+    "message": "比 GM 更丰富：文件存储、定时任务、跨域请求随手可用。"
   },
   "home.feat.api.t": {
-    "message": "強大的 API"
+    "message": "强大 API"
   },
   "home.feat.bg.d": {
-    "message": "獨一無二：無需開啟分頁，腳本也能在背景持續執行。"
+    "message": "独有能力：无需开着标签页，脚本也能后台常驻运行。"
   },
   "home.feat.bg.t": {
-    "message": "背景腳本"
+    "message": "后台脚本"
   },
   "home.feat.compat.b": {
-    "message": "支援 GM_* API · 相同的中繼資料區塊"
+    "message": "支持 GM_* API · 元数据头完全一致"
   },
   "home.feat.compat.d": {
-    "message": "與使用者腳本格式及 GM API 完全相容 — 現有腳本零修改遷移，無切換成本。"
+    "message": "完全兼容油猴脚本格式与 GM API，现有脚本零改动直接迁移，切换毫无成本。"
   },
   "home.feat.compat.t": {
-    "message": "相容 Tampermonkey"
+    "message": "兼容 Tampermonkey"
   },
   "home.feat.devTag": {
-    "message": "開發者"
+    "message": "开发者"
   },
   "home.feat.eyebrow": {
-    "message": "核心功能 · 為什麼選擇 SCRIPTCAT"
+    "message": "核心能力 · WHY SCRIPTCAT"
   },
   "home.feat.secure.d": {
-    "message": "透明可控的權限與可見的行為 — 惡意腳本在源頭就被攔截。"
+    "message": "权限透明可控，脚本行为可见，从源头拒绝恶意脚本。"
   },
   "home.feat.secure.t": {
     "message": "安全可靠"
   },
   "home.feat.store.d": {
-    "message": "一鍵安裝數千個社群腳本，或發布你自己的腳本，一起打造生態系。"
+    "message": "上万款社区脚本一键安装，也能发布你的作品，与社区共建生态。"
   },
   "home.feat.store.stat": {
     "message": "{count} 個社群腳本"
   },
   "home.feat.store.t": {
-    "message": "腳本商店"
+    "message": "脚本商店"
   },
   "home.feat.sub": {
-    "message": "從相容性到安全性，從一般使用者到開發者 — ScriptCat 應有盡有。"
+    "message": "从兼容性到安全性，从普通用户到开发者，ScriptCat 都替你想到了。"
   },
   "home.feat.sync.d": {
-    "message": "腳本與設定跨裝置同步 — 換機或重裝都不遺失。"
+    "message": "脚本与配置多端云同步，换设备、重装也不丢失。"
   },
   "home.feat.sync.t": {
-    "message": "雲端同步"
+    "message": "云端同步"
   },
   "home.feat.title1": {
-    "message": "強大的核心，"
+    "message": "强大内核，"
   },
   "home.feat.title2": {
-    "message": "安心的保障"
+    "message": "安心之选"
   },
   "home.hero.browse": {
-    "message": "瀏覽腳本"
+    "message": "浏览脚本库"
   },
   "home.hero.chip.background": {
-    "message": "3 個腳本在背景執行中"
+    "message": "3 个脚本正在后台运行"
   },
   "home.hero.chip.installed": {
-    "message": "已安裝腳本"
+    "message": "脚本已安装"
   },
   "home.hero.chip.installedSub": {
-    "message": "影片增強 v2.1"
+    "message": "视频体验增强 v2.1"
   },
   "home.hero.eyebrow": {
-    "message": "開源的使用者腳本引擎 · 相容 Tampermonkey"
+    "message": "开源用户脚本引擎 · 兼容 Tampermonkey"
   },
   "home.hero.installTo": {
-    "message": "新增至 {browser}"
+    "message": "添加到 {browser} 浏览器"
   },
   "home.hero.mock.adblock": {
-    "message": "自動跳過廣告"
+    "message": "自动跳过广告"
   },
   "home.hero.mock.add": {
-    "message": "從腳本商店新增"
+    "message": "从脚本商店添加"
   },
   "home.hero.mock.dark": {
-    "message": "頁面深色模式"
+    "message": "网页夜间模式"
   },
   "home.hero.mock.running": {
-    "message": "此頁面有 3 個腳本正在執行"
+    "message": "本页 3 个脚本运行中"
   },
   "home.hero.mock.skip": {
-    "message": "跳過廣告"
+    "message": "自动跳广告"
   },
   "home.hero.mock.speed": {
-    "message": "影片速度控制"
+    "message": "视频倍速控制"
   },
   "home.hero.moreBrowsers": {
-    "message": "更多瀏覽器"
+    "message": "更多浏览器"
   },
   "home.hero.subhead": {
-    "message": "封鎖廣告、強化影片、自動化繁瑣事務 — 從商店一鍵安裝社群腳本，並為開發者提供背景腳本與強大 API。相容 Tampermonkey，現有腳本零成本遷移。"
+    "message": "去广告、增强视频、自动化操作 —— 从脚本商店一键安装社区脚本，也能为开发者提供后台脚本与强大 API。兼容 Tampermonkey，现有脚本零成本迁移。"
   },
   "home.hero.title1": {
-    "message": "賦予瀏覽器"
+    "message": "给浏览器"
   },
   "home.hero.title2": {
-    "message": ""
+    "message": "装上"
   },
   "home.hero.title3": {
     "message": "超能力"
   },
   "home.hero.trust": {
-    "message": "適用於 Chrome · Edge · Firefox — 完全免費且開源"
+    "message": "支持 Chrome · Edge · Firefox，完全免费开源"
   },
   "home.install.chrome": {
-    "message": "新增至 Chrome"
+    "message": "添加到 Chrome 浏览器"
   },
   "home.install.edge": {
-    "message": "新增至 Edge"
+    "message": "添加到 Edge 浏览器"
   },
   "home.install.firefox": {
-    "message": "新增至 Firefox"
+    "message": "添加到 Firefox 浏览器"
   },
   "home.install.guide": {
-    "message": "安裝指南"
+    "message": "查看安装指南"
   },
   "home.install.manual": {
-    "message": "下載安裝包並手動安裝"
+    "message": "下载安装包手动安装"
   },
   "home.nav.changelog": {
-    "message": "更新日誌"
+    "message": "更新日志"
   },
   "home.nav.dev": {
-    "message": "開發者"
+    "message": "开发者"
   },
   "home.nav.docs": {
-    "message": "文件"
+    "message": "文档"
   },
   "home.nav.install": {
-    "message": "安裝"
+    "message": "安装扩展"
   },
   "home.nav.installTo": {
-    "message": "新增至 {browser}"
+    "message": "安装到 {browser}"
   },
   "home.nav.menu": {
-    "message": "選單"
+    "message": "菜单"
   },
   "home.nav.store": {
-    "message": "腳本商店"
+    "message": "脚本商店"
   },
   "home.nav.theme": {
-    "message": "切換主題"
+    "message": "切换主题"
   },
   "home.sc.adblock.d": {
-    "message": "封鎖廣告與彈窗，讓頁面乾淨整潔。"
+    "message": "屏蔽广告与弹窗，还网页一个清爽干净。"
   },
   "home.sc.adblock.l": {
-    "message": "廣告封鎖腳本"
+    "message": "去广告脚本"
   },
   "home.sc.adblock.t": {
-    "message": "廣告封鎖 · 更乾淨的網路"
+    "message": "去广告 · 净化"
   },
   "home.sc.auto.d": {
-    "message": "自動簽到、批量操作，實用的小工具箱。"
+    "message": "自动签到、批量操作、贴心的快捷工具箱。"
   },
   "home.sc.auto.l": {
-    "message": "生產力腳本"
+    "message": "效率脚本"
   },
   "home.sc.auto.t": {
-    "message": "生產力 · 自動化"
+    "message": "效率 · 自动化"
   },
   "home.sc.eyebrow": {
-    "message": "人人可用 · 無需編寫程式碼"
+    "message": "人人可用 · 无需编程"
   },
   "home.sc.featured.btn": {
-    "message": "瀏覽影片腳本"
+    "message": "浏览视频脚本"
   },
   "home.sc.featured.c1": {
-    "message": "速度控制"
+    "message": "倍速播放"
   },
   "home.sc.featured.c2": {
-    "message": "廣告封鎖"
+    "message": "去广告"
   },
   "home.sc.featured.c3": {
-    "message": "下載"
+    "message": "视频下载"
   },
   "home.sc.featured.c4": {
-    "message": "畫中畫"
+    "message": "画中画"
   },
   "home.sc.featured.d": {
-    "message": "速度控制、自動跳過廣告、一鍵下載、畫中畫 — 更好的 Bilibili / YouTube / Netflix 體驗。"
+    "message": "倍速播放、自动跳广告、一键下载、画中画 —— 让 Bilibili / YouTube / Netflix 更好用。"
   },
   "home.sc.featured.sites": {
-    "message": "支援 20+ 個影片網站"
+    "message": "支持 20+ 视频网站"
   },
   "home.sc.featured.t": {
-    "message": "全面強化影片體驗"
+    "message": "视频体验，全面增强"
   },
   "home.sc.featured.tag": {
-    "message": "最受歡迎"
+    "message": "最受欢迎"
   },
   "home.sc.read.d": {
-    "message": "深色模式、網頁翻譯、沉浸式閱讀。"
+    "message": "夜间模式、网页翻译、沉浸式阅读体验。"
   },
   "home.sc.read.l": {
-    "message": "閱讀增強"
+    "message": "阅读增强"
   },
   "home.sc.read.t": {
-    "message": "閱讀 · 翻譯"
+    "message": "阅读 · 翻译"
   },
   "home.sc.shop.d": {
-    "message": "到處比價、價格歷史圖表、一鍵領取優惠券。"
+    "message": "全网比价、历史价格曲线、优惠券一键领。"
   },
   "home.sc.shop.l": {
-    "message": "購物助手"
+    "message": "购物助手"
   },
   "home.sc.shop.t": {
-    "message": "購物 · 比價"
+    "message": "网购 · 比价"
   },
   "home.sc.sub": {
-    "message": "從商店取用一個腳本 — 廣告、影片、購物、生產力，通通幫你搞定。"
+    "message": "从脚本商店挑一个装上，广告、视频、购物、效率，统统交给脚本。"
   },
   "home.sc.title1": {
-    "message": "無需程式碼，只要 "
+    "message": "不用写代码，"
   },
   "home.sc.title2": {
-    "message": "一鍵"
+    "message": "一键"
   },
   "home.sc.title3": {
-    "message": " 解決日常煩惱"
+    "message": "解决日常烦恼"
   },
   "home.step.eyebrow": {
-    "message": "三步驟開始"
+    "message": "三步上手 · GET STARTED"
   },
   "home.step.sub": {
-    "message": "無需複雜設定 — 只要三個步驟：安裝即可開始。"
+    "message": "没有复杂配置，跟着三步走即可，即装即用。"
   },
   "home.step.title1": {
     "message": "30 秒"
   },
   "home.step.title2": {
-    "message": " 擁有第一個腳本"
+    "message": "，用上你的第一个脚本"
   },
   "home.step1.d": {
-    "message": "從 Chrome / Edge / Firefox 商店一鍵新增，或手動安裝。"
+    "message": "从 Chrome / Edge / Firefox 商店一键添加，或手动安装。"
   },
   "home.step1.p": {
-    "message": "新增至瀏覽器"
+    "message": "添加到浏览器"
   },
   "home.step1.t": {
-    "message": "安裝擴充功能"
+    "message": "安装扩展"
   },
   "home.step2.d": {
-    "message": "探索 ScriptCat 社群中的數千個腳本，挑選你喜歡的。"
+    "message": "在脚本猫社区浏览上万款脚本，挑一个心仪的。"
   },
   "home.step2.p": {
-    "message": "搜尋：影片速度"
+    "message": "搜索：视频倍速"
   },
   "home.step2.t": {
-    "message": "瀏覽商店"
+    "message": "逛脚本商店"
   },
   "home.step3.d": {
-    "message": "點擊安裝，腳本立即在頁面上生效。"
+    "message": "点击安装，脚本立刻在对应网页生效，即装即用。"
   },
   "home.step3.p": {
-    "message": "已安裝 · 立即生效"
+    "message": "已安装 · 立即生效"
   },
   "home.step3.t": {
-    "message": "一鍵安裝"
+    "message": "一键安装"
   },
   "home.trust.contributors": {
-    "message": "貢獻者"
+    "message": "开源贡献者"
   },
   "home.trust.eyebrow": {
-    "message": "深受全球使用者與開發者信賴"
+    "message": "深受全球用户与开发者信赖 · TRUSTED WORLDWIDE"
   },
   "home.trust.scripts": {
-    "message": "社群腳本"
+    "message": "社区脚本"
   },
   "home.trust.stars": {
-    "message": "GitHub 星數"
+    "message": "GitHub Stars"
   },
   "home.trust.users": {
-    "message": "安裝使用者"
+    "message": "装机用户"
   },
   "homepage.comments.bigonion.content": {
     "message": "ScriptCat 就是未來。",
