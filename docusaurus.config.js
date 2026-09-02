@@ -61,15 +61,31 @@ const config = {
     v4: {
       removeLegacyPostBuildHeadAttribute: true,
     },
-    // Every faster flag, including rspackPersistentCache. Do not switch that
-    // one off in CI on the theory that a throwaway container never reads the
-    // cache back: the 20 locales compile sequentially in one process and share
-    // nearly all their modules, so locales 2-20 hit what the first one wrote.
-    // A cold build with it off measured 91s, against 56-83s with it on -- the
-    // spread is machine noise, so treat that as "off is no faster, probably
-    // slower", and measure before changing it. (Whether CI should carry the
-    // cache *between* runs is a separate question -- see ci.yaml.)
-    faster: true,
+    // `faster: true` (every flag) except that CI skips the persistent cache.
+    // Full 20 locales, cold, alternating runs on one machine:
+    //
+    //   cache on    57s  50s  59s
+    //   cache off   42s  41s  53s
+    //
+    // Every pair favours off, by 6-15s: CI starts cold and throws the container
+    // away, so the ~1.6 GB that rspack writes there is never read back. Locally
+    // it stays on, where a second build does read it (~39s).
+    //
+    // Absolute times on this machine drift by tens of seconds under sustained
+    // load -- five builds back to back turned a 39s warm build into 83s. Only
+    // the paired differences above mean anything; re-measure in pairs before
+    // changing this.
+    faster: {
+      swcJsLoader: true,
+      swcJsMinimizer: true,
+      swcHtmlMinimizer: true,
+      lightningCssMinimizer: true,
+      mdxCrossCompilerCache: true,
+      rspackBundler: true,
+      rspackPersistentCache: !process.env.CI,
+      ssgWorkerThreads: true,
+      gitEagerVcs: true,
+    },
   },
   markdown: {
     hooks: {

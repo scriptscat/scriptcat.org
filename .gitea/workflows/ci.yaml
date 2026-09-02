@@ -13,22 +13,16 @@ env:
 # One job, one `docusaurus build`, no artifacts and no build cache. This was
 # briefly four sharded build jobs stitched back together through artifacts, on
 # the theory that 20 sequential locale builds were worth parallelising. Measured
-# on the full locale set, they are not:
+# on the full locale set, they are not.
 #
-#   all 20 locales, one process, rspack cache warm   39s
-#   all 20 locales, one process, rspack cache cold   56-83s across runs
-#
-# So sharding could save a minute at best, while costing three extra
-# `pnpm install`s, four cache restores, and a 187 MB `build/` tree pushed
-# through upload-artifact and pulled back down by the job that runs the checks.
-# Carrying the rspack cache between runs went for the same reason: it saves the
-# gap between those two rows, and costs a 1.6 GB directory shipped to and from
-# the Gitea cache server every time.
-#
-# That is only about *restoring* the cache between runs. rspack's persistent
-# cache itself stays enabled -- the 20 locales compile in one process and share
-# it, so the later ones hit what the first one wrote. Do not switch it off
-# without measuring; see the `faster` block in docusaurus.config.js.
+# A full build of all 20 locales, one process, is ~45s here (docusaurus.config.js
+# turns rspack's persistent cache off under CI, which is what makes it that
+# rather than ~55s). So sharding could save well under a minute, while costing
+# three extra `pnpm install`s, four cache restores, and a 187 MB `build/` tree
+# pushed through upload-artifact and pulled back down by the job that runs the
+# checks. Restoring an rspack cache between runs is out for the same reason: a
+# 1.6 GB directory shipped to and from the Gitea cache server, to save less
+# than the transfer costs.
 #
 # Dropping the artifacts also sidesteps a wall: upload-artifact@v4+ bundles
 # @actions/artifact v2, which refuses to run when GITHUB_SERVER_URL's host is
