@@ -1,0 +1,9 @@
+# The image only needs `build/` and `deploy/docker/nginx.conf` (see
+# deploy/docker/Dockerfile). Everything below is pure upload cost for the
+# buildx context -- node_modules alone is several GB once the Rspack
+# persistent cache lands in node_modules/.cache.
+node_modules
+.git
+.docusaurus
+.gitea
+.github

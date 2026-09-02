@@ -31,11 +31,14 @@ jobs:
         node-version: "20.x"
         cache: 'pnpm'
 
+    - name: Install
+      run: pnpm install --frozen-lockfile
+
     - name: Build
-      run: |
-        pnpm install --frozen-lockfile
-        pnpm run build
-        pnpm run check
+      run: pnpm run build
+
+    - name: Check
+      run: pnpm run check
 
     - name: Set up QEMU
 #      uses: docker/setup-qemu-action@v3
@@ -66,8 +69,6 @@ jobs:
         file: deploy/docker/Dockerfile
         tags: ${{ env.REGISTRY }}/${{ env.REPOSITORY }}:${{ steps.vars.outputs.sha_short }}
         context: .
-        cache-from: type=gha
-        cache-to: type=gha,mode=max
         build-args: |
           BASEIMAGE=${{ env.BASEIMAGE }}/nginx:1.25
 

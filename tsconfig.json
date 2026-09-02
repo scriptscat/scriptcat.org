@@ -1,6 +1,10 @@
 {
   // This file is not used in compilation. It is here just for a nice editor experience.
   "extends": "@docusaurus/tsconfig",
+  // Without this, the default "**/*" include type-checks the generated build
+  // output too (~1300 emitted JS files), which takes `tsc` from ~4s to ~84s
+  // whenever build/ is present.
+  "exclude": ["build", ".docusaurus"],
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {

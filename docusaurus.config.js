@@ -34,6 +34,15 @@ const config = {
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenAnchors: "throw",
+  future: {
+    // ssgWorkerThreads (part of `faster`) requires this v4 flag. Only this one
+    // flag is enabled -- `v4: true` would also switch on CSS cascade layers and
+    // storage namespacing, which change runtime behaviour.
+    v4: {
+      removeLegacyPostBuildHeadAttribute: true,
+    },
+    faster: true,
+  },
   markdown: {
     hooks: {
       onBrokenMarkdownLinks: "throw",
