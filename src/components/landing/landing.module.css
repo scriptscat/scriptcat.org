@@ -1312,6 +1312,8 @@
   font-size: 46px;
   font-weight: 800;
   line-height: 1;
+  /* 序号取主色本体而非 soft 浅底色，浅色/深色下都能达到 AA 大字号对比度 */
+  letter-spacing: -0.02em;
 }
 .stepChip {
   width: 50px;

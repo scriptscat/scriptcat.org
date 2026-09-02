@@ -423,7 +423,7 @@ export function Steps() {
               )}
               <div className={styles.stepCard}>
                 <div className={styles.stepHead}>
-                  <div className={styles.stepNo} style={{ color: s.soft }}>
+                  <div className={styles.stepNo} style={{ color: s.color }}>
                     {s.no}
                   </div>
                   <div
