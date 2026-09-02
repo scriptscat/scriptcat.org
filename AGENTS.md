@@ -18,6 +18,7 @@ pnpm run start               # Dev server (Chinese, default locale)
 pnpm run start:en            # Dev server (English, port 3001)
 pnpm run start:ru            # Dev server (Russian, port 3002)
 pnpm run build               # Production build (builds every locale in one pass)
+pnpm run build:shard -- --shard 2/4   # Build only one slice of the locales (what CI runs)
 pnpm run serve               # Serve the production build locally
 pnpm run typecheck           # TypeScript type checking
 pnpm run check               # URL contract / fallback output / i18n parity / frontmatter
@@ -26,17 +27,18 @@ pnpm run write-translations  # Scaffold i18n translation files
 
 ## Before you commit
 
-`.gitea/workflows/ci.yaml` runs `pnpm run typecheck && pnpm run build && pnpm run check` on every PR, and `deploy.yaml` runs `build && check` again before shipping. CI lives on Gitea, so GitHub shows no status checks — that does **not** mean there is no CI. Run this locally at minimum:
+`.gitea/workflows/ci.yaml` typechecks, builds the locales across four parallel shard jobs, then merges the shards' `build/` artifacts into one tree and runs `pnpm run check` over it. `deploy.yaml` does the same before shipping. CI lives on Gitea, so GitHub shows no status checks — that does **not** mean there is no CI. Run this locally at minimum:
 
 ```bash
 pnpm run typecheck && pnpm run build && pnpm run check
 ```
 
-Three things to know:
+Four things to know:
 
 - **`pnpm run check` needs the `build/` output** (`check:fallbacks` reads the generated HTML), so build first.
-- **Do not build a single locale only.** `onBrokenLinks` and `onBrokenAnchors` are both `throw`, but a broken link or anchor only surfaces in the locale that contains it — `--locale zh-Hans` alone misses English and Russian breakage.
+- **Do not build a single locale only.** `onBrokenLinks` and `onBrokenAnchors` are both `throw`, but a broken link or anchor only surfaces in the locale that contains it — `--locale zh-Hans` alone misses breakage in the other 19 locales. (CI's shards are safe: between them they cover every locale, and each shard checks its own.)
 - After touching anything in `src/`, spot-check a page in `build/`, `build/en/` **and** `build/ru/`. Verifying only the Chinese output is how most of this repo's localization bugs got through.
+- **`pnpm run build:shard` does not run the `prebuild` hook**, so it uses the committed `src/data/landing-stats.json` rather than re-scraping. `deploy.yaml` scrapes once in a separate job and hands the result to the shards, so all locales bake the same numbers.
 
 ## Hard constraints
 
@@ -63,14 +65,14 @@ Three things to know:
 
 ## Localization (read before touching i18n code)
 
-Three locales: `zh-Hans` (default, no URL prefix), `en` (`/en/`), `ru` (`/ru/`).
+Twenty locales, listed in `scripts/check-config.json` (`docusaurus.config.js`, the check scripts and `scripts/build-locales.mjs` all read that one list). `zh-Hans` is the default and has no URL prefix; every other locale is served under `/<locale>/`. Each one is a full separate site build, which is why CI shards them — see "Before you commit".
 
 The four mistakes that keep recurring — **full rules and incident notes in [agents/i18n.md](./agents/i18n.md)**:
 
 1. **Hardcoding a locale name.** `currentLocale !== "en"` or `pathname.startsWith("/en/")` classifies Russian as Chinese; building a prefix without stripping the existing one produces `/en/ru/x` (a 404). Read the locale from `useDocusaurusContext().i18n.currentLocale`; iterate with `i18n.locales` and `i18n.localeConfigs`.
-2. **Forgetting baseUrl on a plain `<a href="/...">`.** For non-default locales `baseUrl` is `/en/` or `/ru/`. `<Link to>` and markdown links apply it automatically; plain `<a>` and antd `<Button href>` do not — wrap those in `withBaseUrl()`.
-3. **Hardcoded UI copy.** Everything user-facing goes through `<Translate>` / `translate()`, with keys added to both `i18n/en/code.json` and `i18n/ru/code.json` (identical key count **and** order).
-4. **Locale assumptions outside `src/`.** `docusaurus.config.js`'s `metadataByLocale` and `deploy/docker/nginx.conf`'s 404 routing both enumerate locales by hand and must be updated when adding a language. The nginx one is invisible to the build and to `pnpm run check` — it only shows up in production.
+2. **Forgetting baseUrl on a plain `<a href="/...">`.** For non-default locales `baseUrl` is `/en/` or `/ru/`. `<Link to>` and markdown links apply it automatically; a plain `<a>` — including the ones inside `landing/Dropdown.tsx` items and `uninstall/ui.tsx`'s `<Btn href>` — does not. Wrap those in `withBaseUrl()`.
+3. **Hardcoded UI copy.** Everything user-facing goes through `<Translate>` / `translate()`, with keys added to every non-default `i18n/<locale>/code.json` (identical key count **and** order — `check:i18n-ui` enforces this across all 19).
+4. **Locale assumptions outside `src/`.** Adding a language means an `i18n/<locale>/code.json`, a `localeConfigs` entry in `docusaurus.config.js`, an entry in `scripts/check-config.json`'s `locales`, and a `deploy/docker/nginx.conf` 404 routing branch. The nginx one is invisible to the build and to `pnpm run check` — it only shows up in production.
 
 Changelogs under `change/` are not translated into Russian: the Russian routes compile the English doc tree directly (`docusaurus.config.js` swaps `docs.path` based on `DOCUSAURUS_CURRENT_LOCALE`). **That fallback covers the whole tree**, so any file missing under `i18n/ru/` silently renders in English instead of failing the build — only `check:i18n` catches it. Do not skip `pnpm run check`.
 
@@ -84,7 +86,7 @@ Changelogs under `change/` are not translated into Russian: the Russian routes c
 
 ## Key dependencies
 
-**antd** (forms, buttons, cards, modals), **@iconify/react** (icons), **swiper** (carousel), **react-device-detect** (browser detection for the install guide).
+**@iconify/react** (icons), **react-device-detect** (browser detection for the install guide, dynamically imported), **clsx**. There is deliberately **no UI framework** — see "Bundle budget" below. The two components that would otherwise call for one are in-house: `src/components/landing/Dropdown.tsx` (menus) and `src/components/uninstall/ui.tsx` (card / button / radio / textarea / alert / toast).
 
 ### Icons
 
@@ -92,7 +94,17 @@ Import `Icon` from `src/components/Icon` (`@site/src/components/Icon` in markdow
 
 `src/components/Icon.tsx` is that registry: one `import` from `@iconify-icons/<prefix>/<name>` per icon plus a row in `REGISTRY`, which is what keeps usage sites writing plain strings (`icon="lucide:zap"`, or `{ icon: "lucide:zap" }` inside a data array). To add an icon, add both lines. **An icon used without a row renders blank, silently** — there is no build-time check for this.
 
-Import individual icons, never a whole collection. `import { icons } from "@iconify-json/logos"` pulls in all 2110 icons; doing that for the four collections in use takes `main.js` from 700 KB to 10.5 MB. Add the matching `@iconify-icons/*` dev dependency before using a new prefix.
+Import individual icons, never a whole collection. `import { icons } from "@iconify-json/logos"` pulls in all 2110 icons; doing that for the four collections in use adds about 10 MB to `main.js`. Add the matching `@iconify-icons/*` dev dependency before using a new prefix.
+
+### Bundle budget
+
+`main.js` ships on **every** page, so anything a shared component imports statically is paid for site-wide. A few rules keep it honest:
+
+- **Don't add a UI framework.** antd is the usual temptation and a good measure of the price: its `Dropdown` alone is ~280 KB (cssinjs + rc-trigger + rc-menu + theme tokens), and a form page on its `Card`/`Radio`/`Input`/`Form` runs ~500 KB — more than the rest of the site's JS put together, for controls that are a `<label>` and an `<input>` underneath. Extend `landing/Dropdown.tsx` or `uninstall/ui.tsx` instead.
+- **In `uninstall/ui.module.css`, never set a property that the page also sets with a Tailwind utility.** A CSS-module class and a utility class have equal specificity, so which one wins depends on their order in the bundled `styles.css` — not something either file controls. Margins and the overridden font sizes live only on the page; sizes that belong to the primitive (button height, radius) live only in the module and are selected by prop.
+- **`@docsearch/react` must stay on v4.** v3 has no `version` / `useDocSearchKeyboardEvents` / `useTheme` subpath entries, so Docusaurus aliases all three to the package root — which resolves through `main` to the CommonJS `dist/umd` build, a second un-shakeable copy of the whole library (~205 KB, modal included) in `main.js` alongside the ESM one. v4 ships those subpaths for real, so only the search *button* is eager and the modal splits into its own lazily-fetched chunk.
+
+To see where the bytes are: `npx docusaurus build --locale zh-Hans --bundle-analyzer`, then read the report at <http://127.0.0.1:8888>. For reference, the homepage loads ~550 KB of JS, `/uninstall/` ~965 KB and a docs page ~1.1 MB — the bulk of the last two being `docs/change/index.md`, which compiles to a 320 KB chunk that Docusaurus prefetches from the navbar link.
 
 ## Conventions index
 

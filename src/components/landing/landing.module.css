@@ -377,9 +377,20 @@
   display: inline-flex;
   width: auto;
 }
-.lnavPanelLang .ant-dropdown-menu {
+/* The mobile panel is its own scroll container (max-height + overflow-y),
+   which would clip an absolutely-positioned popup. Inside it the language
+   menu flows inline instead and the panel scrolls to reveal it. */
+.lnavPanelLang .dd {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.lnavPanelLang .ddPopLeft,
+.lnavPanelLang .ddPopRight {
+  position: static;
+}
+.lnavPanelLang .ddMenu {
   max-height: 50vh;
-  overflow-y: auto;
 }
 
 @media (max-width: 900px) {
@@ -599,11 +610,14 @@
 .installWrap {
   display: inline-flex;
 }
+/* Deliberately no overflow:hidden: the arrow's dropdown is a descendant and
+   would be clipped. Nothing here needs clipping anyway — the gradient sits on
+   this element and already follows border-radius, and every child is
+   transparent. */
 .install {
   display: inline-flex;
   align-items: stretch;
   border-radius: 13px;
-  overflow: hidden;
   background: linear-gradient(180deg, var(--lp-brand-bright) 0%, var(--lp-brand-deep) 100%);
   box-shadow: 0 10px 24px -6px rgba(11, 111, 168, 0.4);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
@@ -672,7 +686,7 @@
   text-decoration: none;
 }
 
-/* dropdown menu (antd override lives in tsx via className) */
+/* dropdown menu items (see Dropdown.tsx) */
 .menuItem {
   display: flex;
   align-items: center;
@@ -2238,4 +2252,75 @@
   .editorGutter {
     display: none;
   }
+}
+
+/* =========================================================================
+   Dropdown menu (src/components/landing/Dropdown.tsx)
+   Rendered in place rather than in a portal, so the lp-* tokens on .page reach
+   it and dark mode needs no separate override block.
+   ========================================================================= */
+.dd {
+  position: relative;
+  display: inline-flex;
+}
+.ddPopLeft,
+.ddPopRight {
+  position: absolute;
+  top: 100%;
+  z-index: 100;
+  /* bridges the gap to the menu so hover survives the trip down */
+  padding-top: 6px;
+}
+.ddPopLeft {
+  inset-inline-start: 0;
+}
+.ddPopRight {
+  inset-inline-end: 0;
+}
+.ddMenu {
+  margin: 0;
+  padding: 4px;
+  list-style: none;
+  min-width: 100%;
+  max-height: 60vh;
+  overflow-y: auto;
+  border-radius: 8px;
+  background: var(--lp-surface);
+  border: 1px solid var(--lp-border);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+:global([data-theme="dark"]) .ddMenu {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
+.ddItem {
+  padding: 5px 12px;
+  border-radius: 4px;
+  white-space: nowrap;
+  color: var(--lp-ink);
+  transition: background 0.15s ease;
+}
+.ddItem:hover {
+  background: var(--lp-bg-blue);
+}
+.ddItem a {
+  text-decoration: none;
+}
+.ddMenu::-webkit-scrollbar {
+  width: 6px;
+}
+.ddMenu::-webkit-scrollbar-track {
+  background: transparent;
+}
+.ddMenu::-webkit-scrollbar-thumb {
+  background: #c1cdd8;
+  border-radius: 3px;
+}
+.ddMenu::-webkit-scrollbar-thumb:hover {
+  background: #a0b0c0;
+}
+:global([data-theme="dark"]) .ddMenu::-webkit-scrollbar-thumb {
+  background: #374a5c;
+}
+:global([data-theme="dark"]) .ddMenu::-webkit-scrollbar-thumb:hover {
+  background: #4a6078;
 }

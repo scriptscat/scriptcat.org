@@ -62,9 +62,9 @@ export function detectInstallTarget(): InstallTarget {
 }
 
 // A static build has no request UA, so the first paint renders the "unknown"
-// fallback and this refines it on mount. Pessimistic on purpose: defaulting to
-// Chrome (as this once did) silently told every unrecognised browser to
-// install from a store it may not even be able to open.
+// fallback and this refines it on mount. The fallback is "unknown" rather than
+// Chrome on purpose: guessing Chrome sends every unrecognised browser to a
+// store it may not even be able to open.
 export function useInstallTarget(): InstallTarget {
   const [target, setTarget] = useState<InstallTarget>("unknown");
   useEffect(() => setTarget(detectInstallTarget()), []);

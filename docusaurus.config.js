@@ -3,8 +3,12 @@
 
 import { themes as prismThemes } from "prism-react-renderer";
 
-const { defaultLocale, i18nDocFallbacks = {} } = require("./scripts/check-config.json");
-const locales = ["zh-Hans", "en", "ru", "ar", "bn", "de", "es", "fa", "fr", "hy", "id", "it", "ja", "ko", "nl", "pt", "tr", "uk", "vi", "zh-Hant"];
+// The locale list lives in check-config.json so that this file, the check
+// scripts and scripts/build-locales.mjs (which shards the build across CI jobs)
+// all read the same source. Adding a locale still means adding a localeConfigs
+// entry below, an i18n/<locale>/code.json, and a deploy/docker/nginx.conf
+// branch -- see agents/i18n.md.
+const { defaultLocale, locales, i18nDocFallbacks = {} } = require("./scripts/check-config.json");
 const currentLocale = process.env.DOCUSAURUS_CURRENT_LOCALE ?? defaultLocale;
 const docsFallbackLocale = i18nDocFallbacks[currentLocale]?.sourceLocale;
 const docsPath = docsFallbackLocale
@@ -25,6 +29,23 @@ const metadataByLocale = Object.fromEntries(
   })
 );
 const metadata = metadataByLocale[currentLocale] ?? metadataByLocale[defaultLocale];
+
+// Docusaurus only *infers* `/<locale>/` as a locale's baseUrl when the build
+// covers more than one locale. `docusaurus build --locale <one>` flips
+// `automaticBaseUrlLocalizationDisabled` (see core's buildUtils.ts) and
+// silently rebuilds the site at `/` — the multi-domain deployment shape — which
+// turns every `/en/...` link into a broken link and writes the output to
+// `build/` instead of `build/<locale>/`. CI builds locales in shards and a shard
+// can hold a single locale, so pin the baseUrl instead of relying on that
+// inference.
+/** @type {(localeConfigs: {[locale: string]: Partial<import('@docusaurus/types').I18nLocaleConfig>}) => {[locale: string]: Partial<import('@docusaurus/types').I18nLocaleConfig>}} */
+const withLocaleBaseUrls = (localeConfigs) =>
+  Object.fromEntries(
+    Object.entries(localeConfigs).map(([locale, localeConfig]) => [
+      locale,
+      { ...localeConfig, baseUrl: locale === defaultLocale ? "/" : `/${locale}/` },
+    ])
+  );
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -81,7 +102,7 @@ const config = {
   i18n: {
     defaultLocale,
     locales,
-    localeConfigs: {
+    localeConfigs: withLocaleBaseUrls({
       "zh-Hans": {
         label: "简体中文",
         direction: "ltr",
@@ -182,7 +203,7 @@ const config = {
         direction: "ltr",
         htmlLang: "zh-Hant",
       },
-    },
+    }),
   },
 
   // AdSense 加载器。只需在 <head> 里出现一次，广告单元本身在

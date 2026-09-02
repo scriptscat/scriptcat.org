@@ -19,8 +19,10 @@ import lucideBoxes from "@iconify-icons/lucide/boxes";
 import lucideBug from "@iconify-icons/lucide/bug";
 import lucideCheck from "@iconify-icons/lucide/check";
 import lucideChevronDown from "@iconify-icons/lucide/chevron-down";
+import lucideCircleAlert from "@iconify-icons/lucide/circle-alert";
 import lucideCircleCheck from "@iconify-icons/lucide/circle-check";
 import lucideCircleCheckBig from "@iconify-icons/lucide/circle-check-big";
+import lucideCircleX from "@iconify-icons/lucide/circle-x";
 import lucideCode from "@iconify-icons/lucide/code";
 import lucideCompass from "@iconify-icons/lucide/compass";
 import lucideCpu from "@iconify-icons/lucide/cpu";
@@ -30,9 +32,13 @@ import lucideFlame from "@iconify-icons/lucide/flame";
 import lucideGauge from "@iconify-icons/lucide/gauge";
 import lucideGithub from "@iconify-icons/lucide/github";
 import lucideGlobe from "@iconify-icons/lucide/globe";
+import lucideHeart from "@iconify-icons/lucide/heart";
 import lucideHeartHandshake from "@iconify-icons/lucide/heart-handshake";
+import lucideHouse from "@iconify-icons/lucide/house";
+import lucideInfo from "@iconify-icons/lucide/info";
 import lucideLock from "@iconify-icons/lucide/lock";
 import lucideMenu from "@iconify-icons/lucide/menu";
+import lucideMessageCircle from "@iconify-icons/lucide/message-circle";
 import lucideMoon from "@iconify-icons/lucide/moon";
 import lucideMousePointerClick from "@iconify-icons/lucide/mouse-pointer-click";
 import lucidePackage from "@iconify-icons/lucide/package";
@@ -49,12 +55,14 @@ import lucideSearch from "@iconify-icons/lucide/search";
 import lucideShieldCheck from "@iconify-icons/lucide/shield-check";
 import lucideShoppingCart from "@iconify-icons/lucide/shopping-cart";
 import lucideSkipForward from "@iconify-icons/lucide/skip-forward";
+import lucideSmile from "@iconify-icons/lucide/smile";
 import lucideSparkles from "@iconify-icons/lucide/sparkles";
 import lucideStore from "@iconify-icons/lucide/store";
 import lucideSun from "@iconify-icons/lucide/sun";
 import lucideTerminal from "@iconify-icons/lucide/terminal";
 import lucideUsers from "@iconify-icons/lucide/users";
 import lucideWandSparkles from "@iconify-icons/lucide/wand-sparkles";
+import lucideWrench from "@iconify-icons/lucide/wrench";
 import lucideX from "@iconify-icons/lucide/x";
 import lucideZap from "@iconify-icons/lucide/zap";
 import logosChrome from "@iconify-icons/logos/chrome";
@@ -72,8 +80,10 @@ const REGISTRY: Array<[string, IconifyIcon]> = [
   ["lucide:bug", lucideBug],
   ["lucide:check", lucideCheck],
   ["lucide:chevron-down", lucideChevronDown],
+  ["lucide:circle-alert", lucideCircleAlert],
   ["lucide:circle-check", lucideCircleCheck],
   ["lucide:circle-check-big", lucideCircleCheckBig],
+  ["lucide:circle-x", lucideCircleX],
   ["lucide:code", lucideCode],
   ["lucide:compass", lucideCompass],
   ["lucide:cpu", lucideCpu],
@@ -83,9 +93,13 @@ const REGISTRY: Array<[string, IconifyIcon]> = [
   ["lucide:gauge", lucideGauge],
   ["lucide:github", lucideGithub],
   ["lucide:globe", lucideGlobe],
+  ["lucide:heart", lucideHeart],
   ["lucide:heart-handshake", lucideHeartHandshake],
+  ["lucide:house", lucideHouse],
+  ["lucide:info", lucideInfo],
   ["lucide:lock", lucideLock],
   ["lucide:menu", lucideMenu],
+  ["lucide:message-circle", lucideMessageCircle],
   ["lucide:moon", lucideMoon],
   ["lucide:mouse-pointer-click", lucideMousePointerClick],
   ["lucide:package", lucidePackage],
@@ -102,12 +116,14 @@ const REGISTRY: Array<[string, IconifyIcon]> = [
   ["lucide:shield-check", lucideShieldCheck],
   ["lucide:shopping-cart", lucideShoppingCart],
   ["lucide:skip-forward", lucideSkipForward],
+  ["lucide:smile", lucideSmile],
   ["lucide:sparkles", lucideSparkles],
   ["lucide:store", lucideStore],
   ["lucide:sun", lucideSun],
   ["lucide:terminal", lucideTerminal],
   ["lucide:users", lucideUsers],
   ["lucide:wand-sparkles", lucideWandSparkles],
+  ["lucide:wrench", lucideWrench],
   ["lucide:x", lucideX],
   ["lucide:zap", lucideZap],
   ["logos:chrome", logosChrome],

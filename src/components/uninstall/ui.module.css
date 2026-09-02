@@ -1,0 +1,350 @@
+/* =========================================================================
+   Card and form primitives for /uninstall/ (see ui.tsx).
+   The page is otherwise laid out with Tailwind; these tokens cover the two
+   themes, swapped by the [data-theme="dark"] block below.
+   ========================================================================= */
+
+.root {
+  --u-card-bg: #ffffff;
+  --u-border: #f0f0f0;
+  --u-border-strong: #d9d9d9;
+  --u-text: rgba(0, 0, 0, 0.88);
+  --u-text-secondary: rgba(0, 0, 0, 0.45);
+  --u-primary: #1677ff;
+  --u-primary-hover: #4096ff;
+  --u-primary-active: #0958d9;
+  --u-info-bg: #e6f4ff;
+  --u-info-border: #91caff;
+  --u-divider: rgba(5, 5, 5, 0.06);
+  --u-btn-shadow: 0 2px 0 rgba(0, 0, 0, 0.02);
+}
+
+:global([data-theme="dark"]) .root {
+  --u-card-bg: #141414;
+  --u-border: #303030;
+  --u-border-strong: #424242;
+  --u-text: rgba(255, 255, 255, 0.85);
+  --u-text-secondary: rgba(255, 255, 255, 0.45);
+  --u-primary: #1668dc;
+  --u-primary-hover: #3c89e8;
+  --u-primary-active: #1554ad;
+  --u-info-bg: #111a2c;
+  --u-info-border: #15325b;
+  --u-divider: rgba(253, 253, 253, 0.12);
+  --u-btn-shadow: 0 2px 0 rgba(255, 255, 255, 0.04);
+}
+
+/* ---- card ------------------------------------------------------------- */
+/* Nothing in this file sets a property that the page also sets through a
+   Tailwind utility. A CSS-module class and a utility class have the same
+   specificity, so whichever lands later in styles.css would win — not
+   something this file should depend on. Margins and the two overridden font
+   sizes are therefore left entirely to the page; the 14px body size is set on
+   the container here and inherited by the text inside. */
+.card {
+  background: var(--u-card-bg);
+  border: 1px solid var(--u-border);
+  border-radius: 8px;
+  color: var(--u-text);
+  font-size: 14px;
+  line-height: 1.5714;
+}
+.cardHead {
+  display: flex;
+  align-items: center;
+  min-height: 56px;
+  padding: 0 24px;
+  border-bottom: 1px solid var(--u-border);
+  font-size: 16px;
+  font-weight: 600;
+}
+.cardBody {
+  padding: 24px;
+}
+
+/* ---- typography ------------------------------------------------------- */
+.h1,
+.h2,
+.h3 {
+  font-weight: 600;
+}
+.h1 {
+  font-size: 38px;
+  line-height: 46px;
+}
+.h2 {
+  font-size: 30px;
+  line-height: 38px;
+}
+.h3 {
+  font-size: 24px;
+  line-height: 32px;
+}
+.secondary {
+  color: var(--u-text-secondary);
+}
+.required::before {
+  content: "*";
+  margin-inline-end: 4px;
+  color: #ff4d4f;
+  font-family: SimSun, sans-serif;
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* ---- button ----------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 32px;
+  padding: 0 15px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 14px;
+  white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+.btn:hover {
+  text-decoration: none;
+}
+.btnSm {
+  height: 24px;
+  padding: 0 7px;
+}
+.btnLg {
+  height: 40px;
+  font-size: 16px;
+}
+/* The page's three full-width call-to-action buttons. */
+.btnXl {
+  height: 48px;
+  font-size: 16px;
+}
+.btnBlock {
+  width: 100%;
+}
+.btnDefault {
+  background: var(--u-card-bg);
+  border-color: var(--u-border-strong);
+  color: var(--u-text);
+  box-shadow: var(--u-btn-shadow);
+}
+.btnDefault:hover {
+  border-color: var(--u-primary-hover);
+  color: var(--u-primary-hover);
+}
+.btnPrimary {
+  background: var(--u-primary);
+  color: #fff;
+}
+.btnPrimary:hover {
+  background: var(--u-primary-hover);
+  color: #fff;
+}
+.btnPrimary:active {
+  background: var(--u-primary-active);
+}
+.btnLink {
+  background: transparent;
+  border-color: transparent;
+  color: var(--u-primary);
+  box-shadow: none;
+}
+.btnLink:hover {
+  color: var(--u-primary-hover);
+}
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+.btn svg {
+  width: 1em;
+  height: 1em;
+}
+
+.spinner {
+  width: 1em;
+  height: 1em;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: uSpin 0.8s linear infinite;
+}
+@keyframes uSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .spinner {
+    animation-duration: 2.4s;
+  }
+}
+
+/* ---- radio ------------------------------------------------------------ */
+.radio {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.radio input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+.radioDot {
+  position: relative;
+  flex: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--u-border-strong);
+  border-radius: 50%;
+  background: var(--u-card-bg);
+  transition: border-color 0.2s;
+}
+.radio:hover .radioDot {
+  border-color: var(--u-primary);
+}
+.radioDot::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border-radius: 50%;
+  background: var(--u-primary);
+  transform: scale(0);
+  transition: transform 0.2s;
+}
+.radio input:checked + .radioDot {
+  border-color: var(--u-primary);
+}
+.radio input:checked + .radioDot::after {
+  transform: scale(1);
+}
+.radio input:focus-visible + .radioDot {
+  outline: 2px solid var(--u-primary);
+  outline-offset: 2px;
+}
+
+/* ---- textarea --------------------------------------------------------- */
+.textarea {
+  display: block;
+  width: 100%;
+  padding: 7px 11px;
+  border: 1px solid var(--u-border-strong);
+  border-radius: 8px;
+  font-size: 16px;
+  background: var(--u-card-bg);
+  color: var(--u-text);
+  font-family: inherit;
+  line-height: 1.5714;
+  resize: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.textarea::placeholder {
+  color: var(--u-text-secondary);
+}
+.textarea:hover {
+  border-color: var(--u-primary-hover);
+}
+.textarea:focus {
+  outline: none;
+  border-color: var(--u-primary);
+  box-shadow: 0 0 0 2px rgba(5, 145, 255, 0.1);
+}
+.count {
+  margin-top: 2px;
+  text-align: end;
+  color: var(--u-text-secondary);
+  font-size: 16px;
+}
+
+/* ---- alert ------------------------------------------------------------ */
+.alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid var(--u-info-border);
+  border-radius: 8px;
+  font-size: 14px;
+  background: var(--u-info-bg);
+  color: var(--u-text);
+  line-height: 1.5714;
+}
+.alertIcon {
+  flex: none;
+  margin-top: 3px;
+  color: var(--u-primary);
+  font-size: 16px;
+}
+.alertTitle {
+  margin-bottom: 4px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* ---- divider ---------------------------------------------------------- */
+.divider {
+  margin: 24px 0;
+  border: none;
+  border-top: 1px solid var(--u-divider);
+}
+
+/* ---- toast ------------------------------------------------------------ */
+/* One slot, top-centre, auto-dismissed. */
+.toastLayer {
+  position: fixed;
+  top: 8px;
+  inset-inline: 0;
+  z-index: 1010;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+.toast {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  padding: 9px 12px;
+  border-radius: 8px;
+  background: var(--u-card-bg);
+  color: var(--u-text);
+  font-size: 14px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12);
+  animation: uToastIn 0.2s ease;
+}
+:global([data-theme="dark"]) .toast {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+}
+@keyframes uToastIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .toast {
+    animation: none;
+  }
+}
+.toastSuccess {
+  color: #52c41a;
+}
+.toastError {
+  color: #ff4d4f;
+}
+.toastWarning {
+  color: #faad14;
+}

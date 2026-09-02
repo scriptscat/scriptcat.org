@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Icon } from "../Icon";
-import { Dropdown } from "antd";
-import type { MenuProps } from "antd";
+import { Dropdown, type DropdownItem } from "./Dropdown";
 import Translate, { translate } from "@docusaurus/Translate";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import useBaseUrl, { useBaseUrlUtils } from "@docusaurus/useBaseUrl";
@@ -166,7 +165,7 @@ function LangSwitch() {
       ? siteConfig.baseUrl
       : siteConfig.baseUrl.slice(0, -(currentPath.length + 1));
 
-  const items: MenuProps["items"] = locales.map((locale) => ({
+  const items: DropdownItem[] = locales.map((locale) => ({
     key: locale,
     label: (
       <a
@@ -180,12 +179,14 @@ function LangSwitch() {
   }));
 
   return (
-    <Dropdown menu={{ items }} trigger={["hover", "click"]} placement="bottomRight">
-      <button className={styles.lnavLang}>
-        <Icon icon="lucide:globe" width={16} height={16} />
-        <span>{localeConfigs[currentLocale].label}</span>
-        <Icon icon="lucide:chevron-down" width={14} height={14} />
-      </button>
+    <Dropdown items={items}>
+      {(trigger) => (
+        <button {...trigger} className={styles.lnavLang}>
+          <Icon icon="lucide:globe" width={16} height={16} />
+          <span>{localeConfigs[currentLocale].label}</span>
+          <Icon icon="lucide:chevron-down" width={14} height={14} />
+        </button>
+      )}
     </Dropdown>
   );
 }

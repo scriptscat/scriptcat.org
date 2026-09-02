@@ -1,5 +1,6 @@
 {
   "defaultLocale": "zh-Hans",
+  "locales": ["zh-Hans", "en", "ru", "ar", "bn", "de", "es", "fa", "fr", "hy", "id", "it", "ja", "ko", "nl", "pt", "tr", "uk", "vi", "zh-Hant"],
   "i18nParityStrict": true,
   "frontmatterStrict": true,
   "i18nDocFallbacks": {

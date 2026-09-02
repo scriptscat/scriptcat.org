@@ -1,7 +1,6 @@
 import { type ReactNode } from "react";
 import { Icon } from "../Icon";
-import { Dropdown } from "antd";
-import type { MenuProps } from "antd";
+import { Dropdown, type DropdownItem } from "./Dropdown";
 import Translate, { translate } from "@docusaurus/Translate";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import styles from "./landing.module.css";
@@ -118,7 +117,7 @@ export function usePrimaryInstall(): {
 export function InstallButton() {
   const { store, href, external } = usePrimaryInstall();
 
-  const items: MenuProps["items"] = [
+  const items: DropdownItem[] = [
     {
       key: "edge",
       label: (
@@ -200,16 +199,19 @@ export function InstallButton() {
           )}
         </a>
         <span className={styles.installDivider} />
-        <Dropdown menu={{ items }} trigger={["hover", "click"]} placement="bottomRight">
-          <button
-            className={styles.installArrow}
-            aria-label={translate({
-              id: "home.hero.moreBrowsers",
-              message: "更多浏览器",
-            })}
-          >
-            <Icon icon="lucide:chevron-down" width={18} height={18} />
-          </button>
+        <Dropdown items={items}>
+          {(trigger) => (
+            <button
+              {...trigger}
+              className={styles.installArrow}
+              aria-label={translate({
+                id: "home.hero.moreBrowsers",
+                message: "更多浏览器",
+              })}
+            >
+              <Icon icon="lucide:chevron-down" width={18} height={18} />
+            </button>
+          )}
         </Dropdown>
       </div>
     </div>
