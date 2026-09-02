@@ -18,7 +18,7 @@ pnpm run start               # Dev server (Chinese, default locale)
 pnpm run start:en            # Dev server (English, port 3001)
 pnpm run start:ru            # Dev server (Russian, port 3002)
 pnpm run build               # Production build (builds every locale in one pass)
-pnpm run build:shard -- --shard 2/4   # Build only one slice of the locales (what CI runs)
+npx docusaurus build         # Same, minus the prebuild stats scrape (what CI runs)
 pnpm run serve               # Serve the production build locally
 pnpm run typecheck           # TypeScript type checking
 pnpm run check               # URL contract / fallback output / i18n parity / frontmatter
@@ -27,18 +27,17 @@ pnpm run write-translations  # Scaffold i18n translation files
 
 ## Before you commit
 
-`.gitea/workflows/ci.yaml` typechecks, builds the locales across four parallel shard jobs, then merges the shards' `build/` artifacts into one tree and runs `pnpm run check` over it. `deploy.yaml` does the same before shipping. CI lives on Gitea, so GitHub shows no status checks — that does **not** mean there is no CI. Run this locally at minimum:
+`.gitea/workflows/ci.yaml` runs one job: install, typecheck, build every locale, then `pnpm run check` over the result. `deploy.yaml` does the same before shipping. Both are deliberately unsharded, and neither carries a build cache between runs — the whole 20-locale build takes about a minute, and the artifact and cache round trips needed to split it up cost more than they save. The workflow header carries the measurements; read it before reintroducing either. CI lives on Gitea, so GitHub shows no status checks — that does **not** mean there is no CI. Run this locally at minimum:
 
 ```bash
 pnpm run typecheck && pnpm run build && pnpm run check
 ```
 
-Four things to know:
+Three things to know:
 
 - **`pnpm run check` needs the `build/` output** (`check:fallbacks` reads the generated HTML), so build first.
-- **Do not build a single locale only.** `onBrokenLinks` and `onBrokenAnchors` are both `throw`, but a broken link or anchor only surfaces in the locale that contains it — `--locale zh-Hans` alone misses breakage in the other 19 locales. (CI's shards are safe: between them they cover every locale, and each shard checks its own.)
+- **Do not build a single locale only.** `onBrokenLinks` and `onBrokenAnchors` are both `throw`, but a broken link or anchor only surfaces in the locale that contains it — `--locale zh-Hans` alone misses breakage in the other 19 locales.
 - After touching anything in `src/`, spot-check a page in `build/`, `build/en/` **and** `build/ru/`. Verifying only the Chinese output is how most of this repo's localization bugs got through.
-- **`pnpm run build:shard` does not run the `prebuild` hook**, so it uses the committed `src/data/landing-stats.json` rather than re-scraping. `deploy.yaml` scrapes once in a separate job and hands the result to the shards, so all locales bake the same numbers.
 
 ## Hard constraints
 
@@ -65,7 +64,7 @@ Four things to know:
 
 ## Localization (read before touching i18n code)
 
-Twenty locales, listed in `scripts/check-config.json` (`docusaurus.config.js`, the check scripts and `scripts/build-locales.mjs` all read that one list). `zh-Hans` is the default and has no URL prefix; every other locale is served under `/<locale>/`. Each one is a full separate site build, which is why CI shards them — see "Before you commit".
+Twenty locales, listed in `scripts/check-config.json` (`docusaurus.config.js` and the check scripts all read that one list). `zh-Hans` is the default and has no URL prefix; every other locale is served under `/<locale>/`. Each one is a full separate site build, compiled sequentially in a single `docusaurus build` process.
 
 The four mistakes that keep recurring — **full rules and incident notes in [agents/i18n.md](./agents/i18n.md)**:
 

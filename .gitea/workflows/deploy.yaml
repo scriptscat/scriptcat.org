@@ -17,79 +17,15 @@ env:
   RUNNER_TOOL_CACHE: /toolcache
   BASEIMAGE: ${{ secrets.BASEIMAGE && secrets.BASEIMAGE || '' }}
 
-# Same locale sharding as ci.yaml -- see the comment there for why. The extra
-# job here is `stats`: `pnpm run build` used to refresh the landing-page numbers
-# through its `prebuild` hook, but four shards each running that hook would make
-# four independent scrapes and could bake different numbers into different
-# locales. So it is scraped once and handed to the shards as an artifact.
+# One job for the same reasons as ci.yaml -- see the comment there for the
+# measurements. Building in the job that also builds the image means the Docker
+# context already contains build/, with no artifact round trip in between.
+#
+# `pnpm run build` (not `docusaurus build`) so the prebuild hook refreshes the
+# landing page stats. It runs exactly once here, which is what keeps every
+# locale baking the same numbers.
 jobs:
-  stats:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-
-    - name: Use Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: "20.x"
-
-    # The script never regresses a metric to 0 and always exits 0: on any
-    # failure it keeps the value committed in src/data/landing-stats.json.
-    - name: Refresh landing page stats
-      run: node scripts/fetch-landing-stats.mjs
-
-    - name: Upload landing stats
-      uses: actions/upload-artifact@v4
-      with:
-        name: landing-stats
-        path: src/data/landing-stats.json
-        retention-days: 1
-
-  build:
-    needs: stats
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        shard: [1, 2, 3, 4]
-    steps:
-    - uses: actions/checkout@v3
-    - uses: pnpm/action-setup@v4
-
-    - name: Use Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: "20.x"
-        cache: 'pnpm'
-
-    - name: Install
-      run: pnpm install --frozen-lockfile
-
-    - name: Download landing stats
-      uses: actions/download-artifact@v4
-      with:
-        name: landing-stats
-        path: src/data
-
-    # See ci.yaml for why this is an exact-match key with no restore-keys.
-    - name: Restore rspack cache
-      uses: actions/cache@v4
-      with:
-        path: node_modules/.cache/rspack
-        key: rspack-v1-${{ matrix.shard }}-${{ hashFiles('pnpm-lock.yaml', 'docusaurus.config.js', 'sidebars.js', 'tailwind.config.js', 'scripts/check-config.json') }}
-
-    - name: Build locales (shard ${{ matrix.shard }}/4)
-      run: pnpm run build:shard -- --shard ${{ matrix.shard }}/4
-
-    - name: Upload build output
-      uses: actions/upload-artifact@v4
-      with:
-        name: build-${{ matrix.shard }}
-        path: build
-        retention-days: 1
-
   deploy:
-    needs: build
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -104,29 +40,8 @@ jobs:
     - name: Install
       run: pnpm install --frozen-lockfile
 
-    # The shards write disjoint paths (the default locale owns build/ itself,
-    # every other locale owns only build/<locale>/), so download order does not
-    # matter. The Dockerfile copies this merged tree.
-    - name: Download shard 1
-      uses: actions/download-artifact@v4
-      with:
-        name: build-1
-        path: build
-    - name: Download shard 2
-      uses: actions/download-artifact@v4
-      with:
-        name: build-2
-        path: build
-    - name: Download shard 3
-      uses: actions/download-artifact@v4
-      with:
-        name: build-3
-        path: build
-    - name: Download shard 4
-      uses: actions/download-artifact@v4
-      with:
-        name: build-4
-        path: build
+    - name: Build
+      run: pnpm run build
 
     - name: Check
       run: pnpm run check

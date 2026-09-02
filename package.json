@@ -10,7 +10,6 @@
     "start:ru": "docusaurus start --locale ru --port 3002",
     "prebuild": "node scripts/fetch-landing-stats.mjs || true",
     "build": "docusaurus build",
-    "build:shard": "node scripts/build-locales.mjs",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",

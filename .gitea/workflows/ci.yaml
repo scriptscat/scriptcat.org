@@ -10,14 +10,37 @@ on:
 env:
   RUNNER_TOOL_CACHE: /toolcache
 
-# A `docusaurus build` compiles every locale sequentially in a single, almost
-# entirely single-threaded process, so with 20 locales the wall time is 20x one
-# locale while the runner sits at roughly one core. The locales are therefore
-# split across parallel `build` jobs and stitched back together in `check`,
-# which needs the whole tree. Changing the shard count means editing the matrix
-# below *and* the `/4` in the build step and the download steps in `check`.
+# One job, one `docusaurus build`, no artifacts and no build cache. This was
+# briefly four sharded build jobs stitched back together through artifacts, on
+# the theory that 20 sequential locale builds were worth parallelising. Measured
+# on the full locale set, they are not:
+#
+#   all 20 locales, one process, rspack cache warm   39s
+#   all 20 locales, one process, rspack cache cold   56-83s across runs
+#
+# So sharding could save a minute at best, while costing three extra
+# `pnpm install`s, four cache restores, and a 187 MB `build/` tree pushed
+# through upload-artifact and pulled back down by the job that runs the checks.
+# Carrying the rspack cache between runs went for the same reason: it saves the
+# gap between those two rows, and costs a 1.6 GB directory shipped to and from
+# the Gitea cache server every time.
+#
+# That is only about *restoring* the cache between runs. rspack's persistent
+# cache itself stays enabled -- the 20 locales compile in one process and share
+# it, so the later ones hit what the first one wrote. Do not switch it off
+# without measuring; see the `faster` block in docusaurus.config.js.
+#
+# Dropping the artifacts also sidesteps a wall: upload-artifact@v4+ bundles
+# @actions/artifact v2, which refuses to run when GITHUB_SERVER_URL's host is
+# not github.com / *.ghe.com / *.localhost -- it cannot tell Gitea from GHES and
+# fails with GHESNotSupportedError before contacting the server. v3 works but
+# uploads file by file, which is slow for a tree this size.
+#
+# If the locale count grows enough to make this hurt again, shard by *runner*
+# rather than by artifact: give each job the whole `pnpm run check` too, so
+# nothing has to be stitched back together.
 jobs:
-  typecheck:
+  build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -35,92 +58,13 @@ jobs:
     - name: Typecheck
       run: pnpm run typecheck
 
-  build:
-    runs-on: ubuntu-latest
-    strategy:
-      # One shard failing shouldn't hide breakage in the other locales.
-      fail-fast: false
-      matrix:
-        shard: [1, 2, 3, 4]
-    steps:
-    - uses: actions/checkout@v3
-    - uses: pnpm/action-setup@v4
+    # `docusaurus build` rather than `pnpm run build`, to skip the latter's
+    # prebuild hook: that scrapes the landing page stats off the network, which
+    # only the deploy has any reason to do. Every locale is built -- a broken
+    # link or anchor only fails the build in the locale that contains it.
+    - name: Build every locale
+      run: npx docusaurus build
 
-    - name: Use Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: "20.x"
-        cache: 'pnpm'
-
-    - name: Install
-      run: pnpm install --frozen-lockfile
-
-    # Without this every run recompiles all 20 locales from scratch: the rspack
-    # persistent cache that `future.faster` enables lives here and was never
-    # restored, which is why the "cold build 500s -> 65s" number from enabling
-    # `faster` only ever showed up locally. Roughly 70 MB per locale.
-    #
-    # Exact-match key, no restore-keys: rspack namespaces its entries per locale
-    # but keys them on a config hash it computes itself, and feeding it a cache
-    # built from a different config has produced broken output (a missing server
-    # bundle, a truncated client manifest) instead of a clean miss. A config or
-    # dependency change should mean a cold build, not a half-warm one.
-    - name: Restore rspack cache
-      uses: actions/cache@v4
-      with:
-        path: node_modules/.cache/rspack
-        key: rspack-v1-${{ matrix.shard }}-${{ hashFiles('pnpm-lock.yaml', 'docusaurus.config.js', 'sidebars.js', 'tailwind.config.js', 'scripts/check-config.json') }}
-
-    - name: Build locales (shard ${{ matrix.shard }}/4)
-      run: pnpm run build:shard -- --shard ${{ matrix.shard }}/4
-
-    - name: Upload build output
-      uses: actions/upload-artifact@v4
-      with:
-        name: build-${{ matrix.shard }}
-        path: build
-        retention-days: 1
-
-  check:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: pnpm/action-setup@v4
-
-    - name: Use Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: "20.x"
-        cache: 'pnpm'
-
-    - name: Install
-      run: pnpm install --frozen-lockfile
-
-    # check:fallbacks reads the generated HTML, so the shards have to be merged
-    # back into one build/ first. They write disjoint paths -- the default locale
-    # owns build/ itself, every other locale owns only build/<locale>/ -- so the
-    # download order does not matter.
-    - name: Download shard 1
-      uses: actions/download-artifact@v4
-      with:
-        name: build-1
-        path: build
-    - name: Download shard 2
-      uses: actions/download-artifact@v4
-      with:
-        name: build-2
-        path: build
-    - name: Download shard 3
-      uses: actions/download-artifact@v4
-      with:
-        name: build-3
-        path: build
-    - name: Download shard 4
-      uses: actions/download-artifact@v4
-      with:
-        name: build-4
-        path: build
-
+    # Needs the build/ output above: check:fallbacks reads the generated HTML.
     - name: Check URL inventory, i18n parity, and frontmatter conventions
       run: pnpm run check

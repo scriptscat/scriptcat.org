@@ -3,9 +3,8 @@
 
 import { themes as prismThemes } from "prism-react-renderer";
 
-// The locale list lives in check-config.json so that this file, the check
-// scripts and scripts/build-locales.mjs (which shards the build across CI jobs)
-// all read the same source. Adding a locale still means adding a localeConfigs
+// The locale list lives in check-config.json so that this file and the check
+// scripts all read the same source. Adding a locale still means adding a localeConfigs
 // entry below, an i18n/<locale>/code.json, and a deploy/docker/nginx.conf
 // branch -- see agents/i18n.md.
 const { defaultLocale, locales, i18nDocFallbacks = {} } = require("./scripts/check-config.json");
@@ -35,9 +34,9 @@ const metadata = metadataByLocale[currentLocale] ?? metadataByLocale[defaultLoca
 // `automaticBaseUrlLocalizationDisabled` (see core's buildUtils.ts) and
 // silently rebuilds the site at `/` — the multi-domain deployment shape — which
 // turns every `/en/...` link into a broken link and writes the output to
-// `build/` instead of `build/<locale>/`. CI builds locales in shards and a shard
-// can hold a single locale, so pin the baseUrl instead of relying on that
-// inference.
+// `build/` instead of `build/<locale>/`. CI always builds every locale at once,
+// so it never trips this, but anyone narrowing a local build to one locale
+// would -- pin the baseUrl instead of relying on that inference.
 /** @type {(localeConfigs: {[locale: string]: Partial<import('@docusaurus/types').I18nLocaleConfig>}) => {[locale: string]: Partial<import('@docusaurus/types').I18nLocaleConfig>}} */
 const withLocaleBaseUrls = (localeConfigs) =>
   Object.fromEntries(
@@ -62,6 +61,14 @@ const config = {
     v4: {
       removeLegacyPostBuildHeadAttribute: true,
     },
+    // Every faster flag, including rspackPersistentCache. Do not switch that
+    // one off in CI on the theory that a throwaway container never reads the
+    // cache back: the 20 locales compile sequentially in one process and share
+    // nearly all their modules, so locales 2-20 hit what the first one wrote.
+    // A cold build with it off measured 91s, against 56-83s with it on -- the
+    // spread is machine noise, so treat that as "off is no faster, probably
+    // slower", and measure before changing it. (Whether CI should carry the
+    // cache *between* runs is a separate question -- see ci.yaml.)
     faster: true,
   },
   markdown: {
