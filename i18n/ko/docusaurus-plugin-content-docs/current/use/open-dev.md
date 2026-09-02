@@ -4,7 +4,7 @@ title: 브라우저 사용자 스크립트 지원 활성화
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import { Icon } from "@iconify/react";
+import { Icon } from "@site/src/components/Icon";
 import BrowserGuide from '@site/src/components/BrowserGuide';
 import GithubStar from '@site/src/components/GithubStar';
 

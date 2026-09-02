@@ -4,7 +4,7 @@ import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import Translate from "@docusaurus/Translate";
 import useBaseUrl from "@docusaurus/useBaseUrl";
-import { Icon } from "@iconify/react";
+import { Icon } from "../Icon";
 import { getGithubStats } from "@site/src/service/system";
 import styles from "./styles.module.css";
 

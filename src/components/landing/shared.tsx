@@ -1,5 +1,5 @@
 import { type ReactNode } from "react";
-import { Icon } from "@iconify/react";
+import { Icon } from "../Icon";
 import { Dropdown } from "antd";
 import type { MenuProps } from "antd";
 import Translate, { translate } from "@docusaurus/Translate";

@@ -4,7 +4,7 @@ title: ব্রাউজার ইউজার স্ক্রিপ্ট স�
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import { Icon } from "@iconify/react";
+import { Icon } from "@site/src/components/Icon";
 import BrowserGuide from '@site/src/components/BrowserGuide';
 import GithubStar from '@site/src/components/GithubStar';
 

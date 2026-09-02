@@ -30,7 +30,7 @@ import {
   HomeOutlined,
   GithubOutlined,
 } from "@ant-design/icons";
-import { Icon } from "@iconify/react";
+import { Icon } from "../components/Icon";
 import Translate, { translate } from "@docusaurus/Translate";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import { useBaseUrlUtils } from "@docusaurus/useBaseUrl";

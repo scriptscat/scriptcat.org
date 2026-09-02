@@ -4,7 +4,7 @@ title: Aktifkan Dukungan Skrip Pengguna Browser
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import { Icon } from "@iconify/react";
+import { Icon } from "@site/src/components/Icon";
 import BrowserGuide from '@site/src/components/BrowserGuide';
 import GithubStar from '@site/src/components/GithubStar';
 

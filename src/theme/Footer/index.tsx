@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./index.module.css";
 import { IconCat } from "../../components/IconCat";
-import { Icon } from "@iconify/react";
+import { Icon } from "../../components/Icon";
 import Translate from '@docusaurus/Translate';
 import { useBaseUrlUtils } from "@docusaurus/useBaseUrl";
 

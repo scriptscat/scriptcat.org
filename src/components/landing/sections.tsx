@@ -1,4 +1,4 @@
-import { Icon } from "@iconify/react";
+import { Icon } from "../Icon";
 import Link from "@docusaurus/Link";
 import Translate, { translate } from "@docusaurus/Translate";
 import styles from "./landing.module.css";

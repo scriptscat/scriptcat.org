@@ -86,6 +86,14 @@ Changelogs under `change/` are not translated into Russian: the Russian routes c
 
 **antd** (forms, buttons, cards, modals), **@iconify/react** (icons), **swiper** (carousel), **react-device-detect** (browser detection for the install guide).
 
+### Icons
+
+Import `Icon` from `src/components/Icon` (`@site/src/components/Icon` in markdown) — **never from `@iconify/react` directly**. That package's default entry fetches icon data from `api.iconify.design` after hydration, so icons are absent from the SSR'd HTML and only pop in once the request lands. The wrapper uses the `/offline` entry, which never touches the network and renders only what has been registered with it.
+
+`src/components/Icon.tsx` is that registry: one `import` from `@iconify-icons/<prefix>/<name>` per icon plus a row in `REGISTRY`, which is what keeps usage sites writing plain strings (`icon="lucide:zap"`, or `{ icon: "lucide:zap" }` inside a data array). To add an icon, add both lines. **An icon used without a row renders blank, silently** — there is no build-time check for this.
+
+Import individual icons, never a whole collection. `import { icons } from "@iconify-json/logos"` pulls in all 2110 icons; doing that for the four collections in use takes `main.js` from 700 KB to 10.5 MB. Add the matching `@iconify-icons/*` dev dependency before using a new prefix.
+
 ## Conventions index
 
 - [CONTRIBUTING.md](./CONTRIBUTING.md) — markdown/doc structure: file path is the URL, `title:` is the only page-title source, images in a sibling `.assets/` folder, the URL contract, translation glossary
