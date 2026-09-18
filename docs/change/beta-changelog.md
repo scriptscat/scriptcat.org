@@ -19,6 +19,39 @@ import GithubStar from '@site/src/components/GithubStar';
 
 另外除了预发布以外,脚本猫每次代码提交合并到主分支后都会在[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)上打包构建一次扩展,如果你想体验最新或者修复的内容可以前往[Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml)页进行下载.
 
+<a name="1.5.0-beta.4"></a>
+
+## 1.5.0-beta.4 (2026-09-18)
+
+本次预发布重做了安装页：装脚本前就能看出哪些指令与 GM 能力在脚本猫里不会生效，更新时只突出变化了的权限，代码还能全屏查看；新建脚本的模板支持按类型自定义；同时解除了大脚本与大资源的消息大小限制，并修复 Firefox 沙盒相容性、脚本资源分类与一批安装 / 更新链路问题。
+
+### 🚀 主要新功能
+
+- ✨ 安装页标出写了但不会生效的指令、取值与 GM 能力，并注明脚本猫独有的能力 [#1713](https://github.com/scriptscat/scriptcat/issues/1713) ([#1742](https://github.com/scriptscat/scriptcat/pull/1742)) (by @CodFrm)
+- ✨ 更新脚本时按与已安装版本的差异呈现权限，未变动项收起；同时移除常驻的安全警示条 [#1716](https://github.com/scriptscat/scriptcat/issues/1716) ([#1732](https://github.com/scriptscat/scriptcat/pull/1732)) (by @CodFrm)
+- ✨ 新建脚本模板可在「设置 → 开发工具 → 脚本模板」按普通 / 后台 / 定时分别自定义，支持 `{{name}}`、`{{match}}`、`{{date:YYYY-MM-DD}}` 等变量 [#1722](https://github.com/scriptscat/scriptcat/issues/1722) ([#1731](https://github.com/scriptscat/scriptcat/pull/1731)) (by @CodFrm)
+- ✨ 安装页支持全屏查看脚本代码 ([#1743](https://github.com/scriptscat/scriptcat/pull/1743)) (by @cyfung1031)
+
+### 🐛 Bug 修复
+
+- 🐛 修复大脚本与大资源受消息大小限制导致安装或读取失败 ([#1745](https://github.com/scriptscat/scriptcat/pull/1745)) (by @cyfung1031)
+- 🐛 修正 Firefox 下 `@inject-into content` 脚本的分离 realm 沙盒相容性 [#1701](https://github.com/scriptscat/scriptcat/issues/1701) ([#1706](https://github.com/scriptscat/scriptcat/pull/1706)) (by @cyfung1031)
+- 🐛 修正脚本资源分类与页面资源权限边界，`@resource` / `@require-css` / `@require` 不再互相串用 ([#1686](https://github.com/scriptscat/scriptcat/pull/1686)) (by @cyfung1031)
+- 🐛 修复 `@run-at context-menu`：设置面板覆写的运行时机在重新注册后失效、菜单项注册不上、脚本体自己的 `GM_registerMenuCommand` 被屏蔽 [#1649](https://github.com/scriptscat/scriptcat/issues/1649) ([#1718](https://github.com/scriptscat/scriptcat/pull/1718)) (by @CodFrm)
+- 🐛 修复 Edge Dev 下脚本注入静默失效 [#1724](https://github.com/scriptscat/scriptcat/issues/1724) ([#1725](https://github.com/scriptscat/scriptcat/pull/1725)) (by @mikemikimike)
+- 🐛 批量更新页不再倒计时自动关闭；检查记录失效改为自动重新检查并接着做完剩余条目 [#1715](https://github.com/scriptscat/scriptcat/issues/1715) ([#1720](https://github.com/scriptscat/scriptcat/pull/1720)) (by @CodFrm)
+- 🐛 批量更新页点击脚本名打开更新详情时复用检查缓存，不再重复请求，并挡住连点 ([#1719](https://github.com/scriptscat/scriptcat/pull/1719)) (by @CodFrm)
+- 🐛 修复带路径前缀的 S3 端点（如 Supabase）同步失败 [#1723](https://github.com/scriptscat/scriptcat/issues/1723) ([#1729](https://github.com/scriptscat/scriptcat/pull/1729)) (by @CodFrm)
+- 🐛 修正脚本 MIME 类型兼容性，以 `application/x-javascript` 提供的 `.user.js` 也能进入安装页 [#1730](https://github.com/scriptscat/scriptcat/issues/1730) ([#1736](https://github.com/scriptscat/scriptcat/pull/1736)) (by @cyfung1031)
+
+### ⚡️ 性能优化
+
+- ⚡️ 压缩用户网络规则的 DNR 编译输出，同类响应头合并为单条规则 ([#1733](https://github.com/scriptscat/scriptcat/pull/1733)) (by @cyfung1031)
+
+### 🎨 UI 改进
+
+- 💄 修正错误的 `overflow-hidden` 样式 ([#1746](https://github.com/scriptscat/scriptcat/pull/1746)) (by @cyfung1031)
+
 <a name="1.5.0-beta.3"></a>
 
 ## 1.5.0-beta.3 (2026-09-01)

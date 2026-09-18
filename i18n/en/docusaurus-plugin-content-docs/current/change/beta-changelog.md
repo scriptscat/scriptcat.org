@@ -19,6 +19,39 @@ You can obtain pre-release versions from the [Release](https://github.com/script
 
 Additionally, besides pre-releases, ScriptCat builds the extension on [Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml) after each code commit is merged to the main branch. If you want to experience the latest features or fixes, you can download them from the [Github Action](https://github.com/scriptscat/scriptcat/actions/workflows/build.yaml) page.
 
+<a name="1.5.0-beta.4"></a>
+
+## 1.5.0-beta.4 (2026-09-18)
+
+This pre-release reworks the install page: before installing you can see which directives and GM capabilities ScriptCat will not honour, an update highlights only the permissions that actually changed, and the code can be viewed full screen. New-script templates are now customisable per script type. It also removes the message size limit that blocked large scripts and resources, and fixes Firefox sandbox compatibility, script resource classification, and a batch of install / update issues.
+
+### 🚀 Major New Features
+
+- ✨ The install page now flags directives, values and GM capabilities that are declared but have no effect in ScriptCat, and marks the ones that are ScriptCat-only [#1713](https://github.com/scriptscat/scriptcat/issues/1713) ([#1742](https://github.com/scriptscat/scriptcat/pull/1742)) (by @CodFrm)
+- ✨ When updating a script, permissions are shown as a diff against the installed version with unchanged entries collapsed; the permanent security warning banner is removed [#1716](https://github.com/scriptscat/scriptcat/issues/1716) ([#1732](https://github.com/scriptscat/scriptcat/pull/1732)) (by @CodFrm)
+- ✨ New-script templates can be customised per type (normal / background / scheduled) under Settings → Developer Tools → Script Templates, with variables such as `{{name}}`, `{{match}}` and `{{date:YYYY-MM-DD}}` [#1722](https://github.com/scriptscat/scriptcat/issues/1722) ([#1731](https://github.com/scriptscat/scriptcat/pull/1731)) (by @CodFrm)
+- ✨ Added a full-screen view for the script code on the install page ([#1743](https://github.com/scriptscat/scriptcat/pull/1743)) (by @cyfung1031)
+
+### 🐛 Bug Fixes
+
+- 🐛 Fixed large scripts and large resources failing to install or load because of the message size limit ([#1745](https://github.com/scriptscat/scriptcat/pull/1745)) (by @cyfung1031)
+- 🐛 Fixed split-realm sandbox compatibility for `@inject-into content` scripts on Firefox [#1701](https://github.com/scriptscat/scriptcat/issues/1701) ([#1706](https://github.com/scriptscat/scriptcat/pull/1706)) (by @cyfung1031)
+- 🐛 Fixed script resource classification and the page resource permission boundary, so `@resource` / `@require-css` / `@require` no longer leak into each other ([#1686](https://github.com/scriptscat/scriptcat/pull/1686)) (by @cyfung1031)
+- 🐛 Fixed `@run-at context-menu`: a run-at override set in the script settings was lost after re-registration, the menu item failed to register, and the script's own `GM_registerMenuCommand` was blocked [#1649](https://github.com/scriptscat/scriptcat/issues/1649) ([#1718](https://github.com/scriptscat/scriptcat/pull/1718)) (by @CodFrm)
+- 🐛 Fixed script injection silently failing on Edge Dev [#1724](https://github.com/scriptscat/scriptcat/issues/1724) ([#1725](https://github.com/scriptscat/scriptcat/pull/1725)) (by @mikemikimike)
+- 🐛 The batch update page no longer closes itself on a countdown; an expired check record now triggers an automatic re-check and continues with the remaining entries [#1715](https://github.com/scriptscat/scriptcat/issues/1715) ([#1720](https://github.com/scriptscat/scriptcat/pull/1720)) (by @CodFrm)
+- 🐛 Opening update details from the batch update page now reuses the cached check result instead of refetching, and blocks repeated clicks ([#1719](https://github.com/scriptscat/scriptcat/pull/1719)) (by @CodFrm)
+- 🐛 Fixed sync failing against S3 endpoints that carry a path prefix (such as Supabase) [#1723](https://github.com/scriptscat/scriptcat/issues/1723) ([#1729](https://github.com/scriptscat/scriptcat/pull/1729)) (by @CodFrm)
+- 🐛 Fixed script MIME type compatibility so a `.user.js` served as `application/x-javascript` also opens the install page [#1730](https://github.com/scriptscat/scriptcat/issues/1730) ([#1736](https://github.com/scriptscat/scriptcat/pull/1736)) (by @cyfung1031)
+
+### ⚡️ Performance Improvements
+
+- ⚡️ Compressed the DNR output compiled from user network rules, merging same-kind response headers into a single rule ([#1733](https://github.com/scriptscat/scriptcat/pull/1733)) (by @cyfung1031)
+
+### 🎨 UI Improvements
+
+- 💄 Fixed an incorrect `overflow-hidden` style ([#1746](https://github.com/scriptscat/scriptcat/pull/1746)) (by @cyfung1031)
+
 <a name="1.5.0-beta.3"></a>
 
 ## 1.5.0-beta.3 (2026-09-01)
