@@ -11,7 +11,9 @@ ScriptCat 是一個可以執行使用者腳本的瀏覽器擴充功能，與 Tam
 | --- | --- | --- |
 | Chrome | [穩定版](https://chrome.google.com/webstore/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf) [測試版](https://chromewebstore.google.com/detail/%E8%84%9A%E6%9C%AC%E7%8C%AB-beta/jaehimmlecjmebpekkipmpmbpfhdacom?authuser=0&hl=zh-CN) | ✅ 可用 |
 | Edge | [穩定版](https://microsoftedge.microsoft.com/addons/detail/scriptcat/liilgpjgabokdklappibcjfablkpcekh) [測試版](https://microsoftedge.microsoft.com/addons/detail/scriptcat-beta/nimmbghgpcjmeniofmpdfkofcedcjpfi) | ✅ 可用 |
-| Firefox | [穩定版](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/) [測試版](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat-pre/) | ✅ MV2 |
+| Firefox | [穩定版 (MV2)](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/) [測試版 (MV3)](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat-pre/) | ✅ 可用 |
+
+> Firefox 穩定版目前仍使用 Manifest V2；測試版（v1.5+）已支援 Manifest V3。
 
 ### 其他瀏覽器
 

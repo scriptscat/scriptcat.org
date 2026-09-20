@@ -13,7 +13,9 @@ Uzantıyı aşağıdaki uzantı mağazalarından kurabilirsiniz:
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
 | Chrome          | [Kararlı Sürüm](https://chrome.google.com/webstore/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf) [Beta Sürümü](https://chromewebstore.google.com/detail/%E8%84%9A%E6%9C%AC%E7%8C%AB-beta/jaehimmlecjmebpekkipmpmbpfhdacom?authuser=0&hl=zh-CN) | ✅ Mevcut    |
 | Edge            | [Kararlı Sürüm](https://microsoftedge.microsoft.com/addons/detail/scriptcat/liilgpjgabokdklappibcjfablkpcekh) [Beta Sürümü](https://microsoftedge.microsoft.com/addons/detail/scriptcat-beta/nimmbghgpcjmeniofmpdfkofcedcjpfi)                      | ✅ Mevcut    |
-| Firefox         | [Kararlı Sürüm](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/) [Beta Sürümü](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat-pre/)                                                                                             | ✅ MV2         |
+| Firefox         | [Kararlı Sürüm (MV2)](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/) [Beta Sürümü (MV3)](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat-pre/)                                                                                             | ✅ Mevcut |
+
+> Firefox kararlı sürümü şu anda hâlâ Manifest V2 kullanır; Beta sürümü (v1.5+) Manifest V3'ü destekler.
 
 ### Diğer Tarayıcılar
 

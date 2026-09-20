@@ -13,7 +13,9 @@ Je kunt de extensie installeren vanuit de volgende extensiewinkels:
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
 | Chrome          | [Stabiele versie](https://chrome.google.com/webstore/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf) [Bètaversie](https://chromewebstore.google.com/detail/%E8%84%9A%E6%9C%AC%E7%8C%AB-beta/jaehimmlecjmebpekkipmpmbpfhdacom?authuser=0&hl=zh-CN) | ✅ Beschikbaar    |
 | Edge            | [Stabiele versie](https://microsoftedge.microsoft.com/addons/detail/scriptcat/liilgpjgabokdklappibcjfablkpcekh) [Bètaversie](https://microsoftedge.microsoft.com/addons/detail/scriptcat-beta/nimmbghgpcjmeniofmpdfkofcedcjpfi)                      | ✅ Beschikbaar    |
-| Firefox         | [Stabiele versie](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/) [Bètaversie](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat-pre/)                                                                                             | ✅ MV2         |
+| Firefox         | [Stabiele versie (MV2)](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/) [Bètaversie (MV3)](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat-pre/)                                                                                             | ✅ Beschikbaar |
+
+> De stabiele Firefox-versie gebruikt momenteel nog Manifest V2; de bètaversie (v1.5+) ondersteunt Manifest V3.
 
 ### Andere browsers
 

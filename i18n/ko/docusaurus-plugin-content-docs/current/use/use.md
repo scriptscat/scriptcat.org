@@ -13,7 +13,9 @@ ScriptCat은 사용자 스크립트를 실행할 수 있는 브라우저 확장 
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
 | Chrome          | [안정 버전](https://chrome.google.com/webstore/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf) [베타 버전](https://chromewebstore.google.com/detail/%E8%84%9A%E6%9C%AC%E7%8C%AB-beta/jaehimmlecjmebpekkipmpmbpfhdacom?authuser=0&hl=zh-CN) | ✅ 사용 가능    |
 | Edge            | [안정 버전](https://microsoftedge.microsoft.com/addons/detail/scriptcat/liilgpjgabokdklappibcjfablkpcekh) [베타 버전](https://microsoftedge.microsoft.com/addons/detail/scriptcat-beta/nimmbghgpcjmeniofmpdfkofcedcjpfi)                      | ✅ 사용 가능    |
-| Firefox         | [안정 버전](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/) [베타 버전](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat-pre/)                                                                                             | ✅ MV2         |
+| Firefox         | [안정 버전 (MV2)](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/) [베타 버전 (MV3)](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat-pre/)                                                                                             | ✅ 사용 가능 |
+
+> Firefox 안정 버전은 현재 Manifest V2를 사용하며, 베타 버전(v1.5+)은 Manifest V3를 지원합니다.
 
 ### 기타 브라우저
 
