@@ -29,7 +29,7 @@ import GithubStar from '@site/src/components/GithubStar';
   },
   nonChromium: {
     title: "Navegador baseado em Chromium não detectado",
-    description: "ScriptCat atualmente só suporta navegadores baseados em Chromium (como Chrome, Edge, etc.).",
+    description: "As configurações “Permitir scripts de usuário” e “Modo de desenvolvedor” desta página se aplicam apenas a navegadores baseados em Chromium, como Chrome e Edge. O Firefox oferece suporte ao Manifest V3 na versão Beta v1.5+ e não precisa dessas configurações específicas do Chromium.",
   },
 }} />
 
