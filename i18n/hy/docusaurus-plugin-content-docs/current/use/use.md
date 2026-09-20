@@ -13,7 +13,9 @@ ScriptCat-ը զննարկչի ընդլայնում է, որը կարող է կա
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
 | Chrome          | [Կայուն տարբերակ](https://chrome.google.com/webstore/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf) [Բետա տարբերակ](https://chromewebstore.google.com/detail/%E8%84%9A%E6%9C%AC%E7%8C%AB-beta/jaehimmlecjmebpekkipmpmbpfhdacom?authuser=0&hl=zh-CN) | ✅ Հասանելի    |
 | Edge            | [Կայուն տարբերակ](https://microsoftedge.microsoft.com/addons/detail/scriptcat/liilgpjgabokdklappibcjfablkpcekh) [Բետա տարբերակ](https://microsoftedge.microsoft.com/addons/detail/scriptcat-beta/nimmbghgpcjmeniofmpdfkofcedcjpfi)                      | ✅ Հասանելի    |
-| Firefox         | [Կայուն տարբերակ](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/) [Բետա տարբերակ](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat-pre/)                                                                                             | ✅ MV2         |
+| Firefox         | [Կայուն տարբերակ (MV2)](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/) [Բետա տարբերակ (MV3)](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat-pre/)                                                                                             | ✅ Հասանելի |
+
+> Firefox-ի կայուն տարբերակը ներկայում դեռ օգտագործում է Manifest V2, իսկ Beta տարբերակը (v1.5+) աջակցում է Manifest V3-ին։
 
 ### Այլ զննարկիչներ
 

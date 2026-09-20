@@ -13,7 +13,9 @@ Anda dapat memasang ekstensi dari toko ekstensi berikut:
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
 | Chrome          | [Versi Stabil](https://chrome.google.com/webstore/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf) [Versi Beta](https://chromewebstore.google.com/detail/%E8%84%9A%E6%9C%AC%E7%8C%AB-beta/jaehimmlecjmebpekkipmpmbpfhdacom?authuser=0&hl=zh-CN) | ✅ Tersedia    |
 | Edge            | [Versi Stabil](https://microsoftedge.microsoft.com/addons/detail/scriptcat/liilgpjgabokdklappibcjfablkpcekh) [Versi Beta](https://microsoftedge.microsoft.com/addons/detail/scriptcat-beta/nimmbghgpcjmeniofmpdfkofcedcjpfi)                      | ✅ Tersedia    |
-| Firefox         | [Versi Stabil](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/) [Versi Beta](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat-pre/)                                                                                             | ✅ MV2         |
+| Firefox         | [Versi Stabil (MV2)](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/) [Versi Beta (MV3)](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat-pre/)                                                                                             | ✅ Tersedia |
+
+> Versi stabil Firefox saat ini masih menggunakan Manifest V2; versi Beta (v1.5+) mendukung Manifest V3.
 
 ### Browser Lain
 

@@ -13,7 +13,9 @@ You can install the extension from the following extension stores:
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
 | Chrome          | [Stable Version](https://chrome.google.com/webstore/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf) [Beta Version](https://chromewebstore.google.com/detail/%E8%84%9A%E6%9C%AC%E7%8C%AB-beta/jaehimmlecjmebpekkipmpmbpfhdacom?authuser=0&hl=zh-CN) | ✅ Available    |
 | Edge            | [Stable Version](https://microsoftedge.microsoft.com/addons/detail/scriptcat/liilgpjgabokdklappibcjfablkpcekh) [Beta Version](https://microsoftedge.microsoft.com/addons/detail/scriptcat-beta/nimmbghgpcjmeniofmpdfkofcedcjpfi)                      | ✅ Available    |
-| Firefox         | [Stable Version](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/) [Beta Version](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat-pre/)                                                                                             | ✅ MV2         |
+| Firefox         | [Stable Version (MV2)](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/) [Beta Version (MV3)](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat-pre/)                                                                                             | ✅ Available |
+
+> The Firefox stable version currently uses Manifest V2; the Beta version (v1.5+) supports Manifest V3.
 
 ### Other Browsers
 

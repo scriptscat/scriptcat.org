@@ -13,7 +13,9 @@ ScriptCat একটি ব্রাউজার এক্সটেনশন য�
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
 | Chrome          | [স্টেবল সংস্করণ](https://chrome.google.com/webstore/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf) [বিটা সংস্করণ](https://chromewebstore.google.com/detail/%E8%84%9A%E6%9C%AC%E7%8C%AB-beta/jaehimmlecjmebpekkipmpmbpfhdacom?authuser=0&hl=zh-CN) | ✅ উপলব্ধ    |
 | Edge            | [স্টেবল সংস্করণ](https://microsoftedge.microsoft.com/addons/detail/scriptcat/liilgpjgabokdklappibcjfablkpcekh) [বিটা সংস্করণ](https://microsoftedge.microsoft.com/addons/detail/scriptcat-beta/nimmbghgpcjmeniofmpdfkofcedcjpfi)                      | ✅ উপলব্ধ    |
-| Firefox         | [স্টেবল সংস্করণ](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/) [বিটা সংস্করণ](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat-pre/)                                                                                             | ✅ MV2         |
+| Firefox         | [স্টেবল সংস্করণ (MV2)](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/) [বিটা সংস্করণ (MV3)](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat-pre/)                                                                                             | ✅ উপলব্ধ |
+
+> Firefox-এর স্থিতিশীল সংস্করণটি বর্তমানে Manifest V2 ব্যবহার করে; Beta সংস্করণ (v1.5+) Manifest V3 সমর্থন করে।
 
 ### অন্যান্য ব্রাউজার
 
