@@ -29,7 +29,7 @@ import GithubStar from '@site/src/components/GithubStar';
   },
   nonChromium: {
     title: "未检测到 Chromium 内核浏览器",
-    description: "脚本猫目前仅支持 Chromium 内核浏览器（如 Chrome、Edge 等）。如果你确实使用的是 Chromium 内核浏览器，请忽略此提示，参考下方步骤操作。",
+    description: "本页的「允许用户脚本」和「开发者模式」设置仅适用于 Chromium 内核浏览器（如 Chrome、Edge 等）。Firefox 已在 Beta 版本（v1.5+）中支持 Manifest V3，不需要这些 Chromium 专用设置。",
   },
 }} />
 

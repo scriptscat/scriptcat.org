@@ -29,7 +29,7 @@ import GithubStar from '@site/src/components/GithubStar';
   },
   nonChromium: {
     title: "Browser berbasis Chromium tidak terdeteksi",
-    description: "ScriptCat saat ini hanya mendukung browser berbasis Chromium (seperti Chrome, Edge, dll.). Jika Anda menggunakan browser berbasis Chromium, abaikan pesan ini dan ikuti langkah-langkah di bawah.",
+    description: "Pengaturan “Izinkan Skrip Pengguna” dan “Mode Pengembang” di halaman ini hanya berlaku untuk browser berbasis Chromium seperti Chrome dan Edge. Firefox mendukung Manifest V3 pada Beta v1.5+ dan tidak memerlukan pengaturan khusus Chromium ini.",
   },
 }} />
 
