@@ -60,6 +60,49 @@ a:hover {
   display: none !important;
 }
 
+/* Beta 页面（BetaTheme 组件）的红色主色 */
+body.beta-theme {
+  --ifm-color-primary: #d84a4a;
+  --ifm-color-primary-dark: #d33232;
+  --ifm-color-primary-darker: #cb2c2c;
+  --ifm-color-primary-darkest: #a72424;
+  --ifm-color-primary-light: #dc5c5c;
+  --ifm-color-primary-lighter: #de6565;
+  --ifm-color-primary-lightest: #e48080;
+}
+
+[data-theme="dark"] body.beta-theme {
+  --ifm-color-primary: #f07a7a;
+  --ifm-color-primary-dark: #ec5959;
+  --ifm-color-primary-darker: #ea4949;
+  --ifm-color-primary-darkest: #e41a1a;
+  --ifm-color-primary-light: #f28787;
+  --ifm-color-primary-lighter: #f28e8e;
+  --ifm-color-primary-lightest: #f5a2a2;
+}
+
+/* Infima 在 :root 上用 var(--ifm-color-primary) 派生的变量，在 :root 就已算成蓝色，
+   body 上只改主色不会传下来，需要在这里重新声明一次 */
+body.beta-theme {
+  --ifm-link-color: var(--ifm-color-primary);
+  --ifm-link-hover-color: var(--ifm-link-color);
+  --ifm-breadcrumb-color-active: var(--ifm-color-primary);
+  --ifm-footer-link-hover-color: var(--ifm-color-primary);
+  --ifm-menu-color-active: var(--ifm-color-primary);
+  --ifm-navbar-link-hover-color: var(--ifm-color-primary);
+  --ifm-navbar-link-active-color: var(--ifm-link-color);
+  --ifm-pagination-color-active: var(--ifm-color-primary);
+  --ifm-pagination-nav-color-hover: var(--ifm-color-primary);
+  --ifm-pills-color-active: var(--ifm-color-primary);
+  --ifm-tabs-color-active: var(--ifm-color-primary);
+  --docusaurus-progress-bar-color: var(--ifm-color-primary);
+  --docsearch-primary-color: var(--ifm-color-primary);
+}
+
+body.beta-theme .navbar__logo img {
+  content: url("../../static/img/logo-beta.png");
+}
+
 /* The homepage renders its own LandingNav; hide the global Docusaurus navbar there. */
 body.landing-page .navbar {
   display: none;
