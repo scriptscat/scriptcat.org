@@ -26,7 +26,7 @@ const OUT_FILE = join(ROOT, "src", "data", "landing-stats.json");
 // Edit this array to add or remove repos.
 const CONTRIBUTOR_REPOS = [
   "scriptscat/scriptcat",
-  "scriptscat/scriptcat.org",
+  "scriptscat/docs.scriptcat.org",
   "scriptscat/scriptlist-frontend",
   "scriptscat/tampermonkey-learn-guide",
 ];

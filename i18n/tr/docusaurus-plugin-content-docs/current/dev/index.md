@@ -12,4 +12,4 @@ Bu eklenti üç tür betiği destekler:
 
 Bu belgeleri [Tampermonkey'in API'sini](./api.md) ve [ScriptCat'in arka plan betiklerini](./background.md) öğrenmek için kullanabilirsiniz. Ayrıca zengin öğrenme kaynakları içeren bir [Tampermonkey Betik Geliştirme Rehberi](https://learn.scriptcat.org/) sitesi de yürütüyoruz — tartışmalara katılmanız memnuniyetle karşılanır.
 
-Belgelerde eksikler bulursanız, lütfen [GitHub](https://github.com/scriptscat/scriptcat.org) üzerinden bize bildirin veya iyileştirmeye yardımcı olmak için bir PR gönderin.
+Belgelerde eksikler bulursanız, lütfen [GitHub](https://github.com/scriptscat/docs.scriptcat.org) üzerinden bize bildirin veya iyileştirmeye yardımcı olmak için bir PR gönderin.

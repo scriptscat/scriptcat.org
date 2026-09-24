@@ -12,4 +12,4 @@ Skrip latar depan adalah yang biasanya dimaksud orang dengan skrip Tampermonkey.
 
 Anda dapat menggunakan dokumentasi ini untuk mempelajari [API Tampermonkey](./api.md) dan [skrip latar belakang ScriptCat](./background.md). Kami juga mengelola situs [Panduan Pengembangan Skrip Tampermonkey](https://learn.scriptcat.org/) dengan banyak sumber belajar — Anda dipersilakan bergabung dalam diskusi di sana.
 
-Jika Anda menemukan kekurangan dalam dokumentasi, beri tahu kami di [GitHub](https://github.com/scriptscat/scriptcat.org), atau kirim PR untuk membantu memperbaikinya.
+Jika Anda menemukan kekurangan dalam dokumentasi, beri tahu kami di [GitHub](https://github.com/scriptscat/docs.scriptcat.org), atau kirim PR untuk membantu memperbaikinya.

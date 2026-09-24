@@ -12,4 +12,4 @@ title: 简介
 
 你可以通过本文档内容学习[油猴的 API](./api.md)和[脚本猫的后台脚本](./background.md)，另外我们维护了一个[油猴脚本开发指南](https://learn.scriptcat.org/)的文档站，有非常丰富的相关学习资料，欢迎大家一起交流。
 
-对于文档不完善的地方可以在[Github](https://github.com/scriptscat/scriptcat.org)反馈给我们，或者 pr 帮助我们完善
+对于文档不完善的地方可以在[Github](https://github.com/scriptscat/docs.scriptcat.org)反馈给我们，或者 pr 帮助我们完善

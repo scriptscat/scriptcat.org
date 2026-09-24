@@ -253,7 +253,7 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/scriptscat/scriptcat.org/edit/main",
+          editUrl: "https://github.com/scriptscat/docs.scriptcat.org/edit/main",
           // So "Edit this page" on /en/ docs opens the en source file, not zh.
           editLocalizedFiles: true,
         },

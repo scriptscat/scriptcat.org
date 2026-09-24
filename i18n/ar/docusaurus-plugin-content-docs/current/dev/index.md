@@ -12,4 +12,4 @@ title: مقدمة
 
 يمكنك استخدام هذه الوثائق للتعرف على [واجهة برمجة Tampermonkey](./api.md) و[سكرپتات الخلفية الخاصة بـ ScriptCat](./background.md). نحافظ أيضاً على موقع [دليل تطوير سكرپتات Tampermonkey](https://learn.scriptcat.org/) الذي يحتوي على ثروة من موارد التعلم — نرحب بانضمامك إلى النقاش هناك.
 
-إذا وجدت ثغرات في الوثائق، يرجى إخبارنا على [GitHub](https://github.com/scriptscat/scriptcat.org)، أو أرسل لنا PR للمساعدة في تحسينها.
+إذا وجدت ثغرات في الوثائق، يرجى إخبارنا على [GitHub](https://github.com/scriptscat/docs.scriptcat.org)، أو أرسل لنا PR للمساعدة في تحسينها.
