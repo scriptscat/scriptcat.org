@@ -13,7 +13,9 @@ ScriptCat はユーザースクリプトを実行できるブラウザ拡張機�
 | --- | --- | --- |
 | Chrome | [安定版](https://chrome.google.com/webstore/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf) [ベータ版](https://chromewebstore.google.com/detail/%E8%84%9A%E6%9C%AC%E7%8C%AB-beta/jaehimmlecjmebpekkipmpmbpfhdacom?authuser=0&hl=zh-CN) | ✅ 利用可能 |
 | Edge | [安定版](https://microsoftedge.microsoft.com/addons/detail/scriptcat/liilgpjgabokdklappibcjfablkpcekh) [ベータ版](https://microsoftedge.microsoft.com/addons/detail/scriptcat-beta/nimmbghgpcjmeniofmpdfkofcedcjpfi) | ✅ 利用可能 |
-| Firefox | [安定版](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/) [ベータ版](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat-pre/) | ✅ MV2 |
+| Firefox | [安定版 (MV2)](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/) [ベータ版 (MV3)](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat-pre/) | ✅ 利用可能 |
+
+> Firefox の安定版は現在も Manifest V2 を使用しています。ベータ版（v1.5+）は Manifest V3 に対応しています。
 
 ### その他のブラウザ
 

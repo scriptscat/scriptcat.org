@@ -13,7 +13,9 @@ ScriptCat هو إضافة متصفح يمكنها تنفيذ سكرپتات ال
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
 | Chrome | [الإصدار المستقر](https://chrome.google.com/webstore/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf) [إصدار بيتا](https://chromewebstore.google.com/detail/%E8%84%9A%E6%9C%AC%E7%8C%AB-beta/jaehimmlecjmebpekkipmpmbpfhdacom?authuser=0&hl=zh-CN) | ✅ متاح |
 | Edge | [الإصدار المستقر](https://microsoftedge.microsoft.com/addons/detail/scriptcat/liilgpjgabokdklappibcjfablkpcekh) [إصدار بيتا](https://microsoftedge.microsoft.com/addons/detail/scriptcat-beta/nimmbghgpcjmeniofmpdfkofcedcjpfi) | ✅ متاح |
-| Firefox | [الإصدار المستقر](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/) [إصدار بيتا](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat-pre/) | ✅ MV2 |
+| Firefox | [الإصدار المستقر (MV2)](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/) [إصدار بيتا (MV3)](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat-pre/) | ✅ متاح |
+
+> لا تزال النسخة المستقرة من Firefox تستخدم Manifest V2؛ أما النسخة التجريبية (v1.5+) فتدعم Manifest V3.
 
 ### متصفحات أخرى
 

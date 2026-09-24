@@ -13,7 +13,9 @@ ScriptCat — браузерное расширение для запуска п
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
 | Chrome          | [Стабильная версия](https://chrome.google.com/webstore/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf) [Бета](https://chromewebstore.google.com/detail/%E8%84%9A%E6%9C%AC%E7%8C%AB-beta/jaehimmlecjmebpekkipmpmbpfhdacom?authuser=0&hl=zh-CN) | ✅ Доступно    |
 | Edge            | [Стабильная версия](https://microsoftedge.microsoft.com/addons/detail/scriptcat/liilgpjgabokdklappibcjfablkpcekh) [Бета](https://microsoftedge.microsoft.com/addons/detail/scriptcat-beta/nimmbghgpcjmeniofmpdfkofcedcjpfi)                      | ✅ Доступно    |
-| Firefox         | [Стабильная версия](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/) [Бета](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat-pre/)                                                                                             | ✅ MV2         |
+| Firefox         | [Стабильная версия (MV2)](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/) [Бета (MV3)](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat-pre/)                                                                                             | ✅ Доступно |
+
+> Стабильная версия Firefox пока использует Manifest V2; бета-версия (v1.5+) поддерживает Manifest V3.
 
 ### Другие браузеры
 

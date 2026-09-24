@@ -11,7 +11,9 @@ ScriptCat là tiện ích mở rộng trình duyệt có thể chạy script, t�
 | --- | --- | --- |
 | Chrome | [Phiên bản Ổn định](https://chrome.google.com/webstore/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf) [Phiên bản Beta](https://chromewebstore.google.com/detail/%E8%84%9A%E6%9C%AC%E7%8C%AB-beta/jaehimmlecjmebpekkipmpmbpfhdacom?authuser=0&hl=zh-CN) | ✅ Khả dụng |
 | Edge | [Phiên bản Ổn định](https://microsoftedge.microsoft.com/addons/detail/scriptcat/liilgpjgabokdklappibcjfablkpcekh) [Phiên bản Beta](https://microsoftedge.microsoft.com/addons/detail/scriptcat-beta/nimmbghgpcjmeniofmpdfkofcedcjpfi) | ✅ Khả dụng |
-| Firefox | [Phiên bản Ổn định](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/) [Phiên bản Beta](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat-pre/) | ✅ MV2 |
+| Firefox | [Phiên bản Ổn định (MV2)](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/) [Phiên bản Beta (MV3)](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat-pre/) | ✅ Khả dụng |
+
+> Phiên bản ổn định của Firefox hiện vẫn sử dụng Manifest V2; phiên bản Beta (v1.5+) hỗ trợ Manifest V3.
 
 ### Trình duyệt Khác
 

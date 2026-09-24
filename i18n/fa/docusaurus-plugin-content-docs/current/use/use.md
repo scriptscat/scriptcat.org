@@ -13,7 +13,9 @@ ScriptCat یک افزونه مرورگر است که می‌تواند اسکر�
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
 | Chrome          | [نسخه پایدار](https://chrome.google.com/webstore/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf) [نسخه بتا](https://chromewebstore.google.com/detail/%E8%84%9A%E6%9C%AC%E7%8C%AB-beta/jaehimmlecjmebpekkipmpmbpfhdacom?authuser=0&hl=zh-CN) | ✅ موجود    |
 | Edge            | [نسخه پایدار](https://microsoftedge.microsoft.com/addons/detail/scriptcat/liilgpjgabokdklappibcjfablkpcekh) [نسخه بتا](https://microsoftedge.microsoft.com/addons/detail/scriptcat-beta/nimmbghgpcjmeniofmpdfkofcedcjpfi)                      | ✅ موجود    |
-| Firefox         | [نسخه پایدار](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/) [نسخه بتا](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat-pre/)                                                                                             | ✅ MV2         |
+| Firefox         | [نسخه پایدار (MV2)](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/) [نسخه بتا (MV3)](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat-pre/)                                                                                             | ✅ موجود |
+
+> نسخه پایدار Firefox در حال حاضر همچنان از Manifest V2 استفاده می‌کند؛ نسخه بتا (v1.5+) از Manifest V3 پشتیبانی می‌کند.
 
 ### سایر مرورگرها
 

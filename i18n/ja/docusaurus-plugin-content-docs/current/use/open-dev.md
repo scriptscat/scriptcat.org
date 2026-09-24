@@ -29,7 +29,7 @@ import GithubStar from '@site/src/components/GithubStar';
   },
   nonChromium: {
     title: "Chromium ベースのブラウザが検出されません",
-    description: "ScriptCat は現在、Chromium ベースのブラウザ（Chrome、Edge など）のみをサポートしています。Chromium ベースのブラウザを使用している場合は、このメッセージを無視し、以下の手順に従ってください。",
+    description: "このページの「ユーザースクリプトを許可」と「デベロッパーモード」の設定は、Chrome や Edge などの Chromium ベースのブラウザにのみ適用されます。Firefox は Beta v1.5+ で Manifest V3 に対応しており、これらの Chromium 固有の設定は不要です。",
   },
 }} />
 

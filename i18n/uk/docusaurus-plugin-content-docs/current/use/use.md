@@ -13,7 +13,9 @@ ScriptCat — це браузерне розширення, яке може ви
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
 | Chrome          | [Стабільна версія](https://chrome.google.com/webstore/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf) [Бета-версія](https://chromewebstore.google.com/detail/%E8%84%9A%E6%9C%AC%E7%8C%AB-beta/jaehimmlecjmebpekkipmpmbpfhdacom?authuser=0&hl=zh-CN) | ✅ Доступна    |
 | Edge            | [Стабільна версія](https://microsoftedge.microsoft.com/addons/detail/scriptcat/liilgpjgabokdklappibcjfablkpcekh) [Бета-версія](https://microsoftedge.microsoft.com/addons/detail/scriptcat-beta/nimmbghgpcjmeniofmpdfkofcedcjpfi)                      | ✅ Доступна    |
-| Firefox         | [Стабільна версія](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/) [Бета-версія](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat-pre/)                                                                                             | ✅ MV2         |
+| Firefox         | [Стабільна версія (MV2)](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/) [Бета-версія (MV3)](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat-pre/)                                                                                             | ✅ Доступна |
+
+> Стабільна версія Firefox наразі все ще використовує Manifest V2; бета-версія (v1.5+) підтримує Manifest V3.
 
 ### Інші браузери
 

@@ -11,7 +11,9 @@ ScriptCat é uma extensão de navegador que pode executar userscripts, compatív
 | --- | --- | --- |
 | Chrome | [Versão Estável](https://chrome.google.com/webstore/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf) [Versão Beta](https://chromewebstore.google.com/detail/%E8%84%9A%E6%9C%AC%E7%8C%AB-beta/jaehimmlecjmebpekkipmpmbpfhdacom?authuser=0&hl=zh-CN) | ✅ Disponível |
 | Edge | [Versão Estável](https://microsoftedge.microsoft.com/addons/detail/scriptcat/liilgpjgabokdklappibcjfablkpcekh) [Versão Beta](https://microsoftedge.microsoft.com/addons/detail/scriptcat-beta/nimmbghgpcjmeniofmpdfkofcedcjpfi) | ✅ Disponível |
-| Firefox | [Versão Estável](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/) [Versão Beta](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat-pre/) | ✅ MV2 |
+| Firefox | [Versão Estável (MV2)](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/) [Versão Beta (MV3)](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat-pre/) | ✅ Disponível |
+
+> A versão estável do Firefox ainda usa Manifest V2; a versão Beta (v1.5+) oferece suporte ao Manifest V3.
 
 ### Outros Navegadores
 

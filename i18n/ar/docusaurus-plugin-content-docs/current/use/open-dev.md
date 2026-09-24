@@ -29,7 +29,7 @@ import GithubStar from '@site/src/components/GithubStar';
   },
   nonChromium: {
     title: "لم يتم اكتشاف متصفح قائم على Chromium",
-    description: "يدعم ScriptCat حالياً المتصفحات القائمة على Chromium فقط (مثل Chrome وEdge وغيرها). إذا كنت تستخدم متصفحاً قائماً على Chromium، فتجاهل هذه الرسالة واتبع الخطوات أدناه.",
+    description: "إعدادا «السماح بسكربتات المستخدم» و«وضع المطور» في هذه الصفحة خاصان بمتصفحات Chromium مثل Chrome وEdge. يدعم Firefox ‏Manifest V3 في الإصدار التجريبي v1.5+ ولا يحتاج إلى إعدادات Chromium هذه.",
   },
 }} />
 

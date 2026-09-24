@@ -29,7 +29,7 @@ import GithubStar from '@site/src/components/GithubStar';
   },
   nonChromium: {
     title: "未偵測到 Chromium 系瀏覽器",
-    description: "ScriptCat 目前僅支援 Chromium 系瀏覽器（如 Chrome、Edge 等）。",
+    description: "本頁的「允許使用者腳本」與「開發者模式」設定僅適用於 Chromium 系瀏覽器（如 Chrome、Edge 等）。Firefox 已在 Beta v1.5+ 支援 Manifest V3，不需要這些 Chromium 專用設定。",
   },
 }} />
 

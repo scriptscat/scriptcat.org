@@ -29,7 +29,7 @@ import GithubStar from '@site/src/components/GithubStar';
   },
   nonChromium: {
     title: "Chromium tabanlı tarayıcı algılanamadı",
-    description: "ScriptCat şu anda yalnızca Chromium tabanlı tarayıcıları (Chrome, Edge vb.) destekler. Chromium tabanlı bir tarayıcı kullanıyorsanız bu mesajı yok sayın ve aşağıdaki adımları izleyin.",
+    description: "Bu sayfadaki “Kullanıcı Komut Dosyalarına İzin Ver” ve “Geliştirici Modu” ayarları yalnızca Chrome ve Edge gibi Chromium tabanlı tarayıcılar için geçerlidir. Firefox, Beta v1.5+ sürümünde Manifest V3'ü destekler ve Chromium'a özel bu ayarları gerektirmez.",
   },
 }} />
 

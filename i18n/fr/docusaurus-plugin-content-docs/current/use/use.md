@@ -13,7 +13,9 @@ Vous pouvez installer l'extension depuis les boutiques officielles suivantes :
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
 | Chrome          | [Version stable](https://chrome.google.com/webstore/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf) [Version Beta](https://chromewebstore.google.com/detail/%E8%84%9A%E6%9C%AC%E7%8C%AB-beta/jaehimmlecjmebpekkipmpmbpfhdacom?authuser=0&hl=zh-CN) | ✅ Disponible    |
 | Edge            | [Version stable](https://microsoftedge.microsoft.com/addons/detail/scriptcat/liilgpjgabokdklappibcjfablkpcekh) [Version Beta](https://microsoftedge.microsoft.com/addons/detail/scriptcat-beta/nimmbghgpcjmeniofmpdfkofcedcjpfi)                      | ✅ Disponible    |
-| Firefox         | [Version stable](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/) [Version Beta](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat-pre/)                                                                                             | ✅ MV2         |
+| Firefox         | [Version stable (MV2)](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/) [Version Beta (MV3)](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat-pre/)                                                                                             | ✅ Disponible |
+
+> La version stable de Firefox utilise encore Manifest V2 ; la version Beta (v1.5+) prend en charge Manifest V3.
 
 ### Autres navigateurs
 

@@ -13,7 +13,9 @@ title: 快速开始
 | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
 | Chrome          | [正式版本](https://chrome.google.com/webstore/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf) [Beta 版本](https://chromewebstore.google.com/detail/%E8%84%9A%E6%9C%AC%E7%8C%AB-beta/jaehimmlecjmebpekkipmpmbpfhdacom?authuser=0&hl=zh-CN) | ✅ 可用      |
 | Edge            | [正式版本](https://microsoftedge.microsoft.com/addons/detail/scriptcat/liilgpjgabokdklappibcjfablkpcekh) [Beta 版本](https://microsoftedge.microsoft.com/addons/detail/scriptcat-beta/nimmbghgpcjmeniofmpdfkofcedcjpfi)                      | ✅ 可用      |
-| Firefox         | [正式版本](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/) [Beta 版本](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat-pre/)                                                                                             | ✅ MV2       |
+| Firefox         | [正式版本 (MV2)](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat/) [Beta 版本 (MV3)](https://addons.mozilla.org/zh-CN/firefox/addon/scriptcat-pre/)                                                                                             | ✅ 可用 |
+
+> Firefox 正式版本目前仍使用 Manifest V2；Beta 版本（v1.5+）已支持 Manifest V3。
 
 ### 其他浏览器
 

@@ -29,7 +29,7 @@ import GithubStar from '@site/src/components/GithubStar';
   },
   nonChromium: {
     title: "Không phát hiện trình duyệt dựa trên Chromium",
-    description: "ScriptCat hiện chỉ hỗ trợ các trình duyệt dựa trên Chromium (như Chrome, Edge, v.v.).",
+    description: "Các cài đặt “Cho phép tập lệnh người dùng” và “Chế độ nhà phát triển” trên trang này chỉ áp dụng cho các trình duyệt dựa trên Chromium như Chrome và Edge. Firefox hỗ trợ Manifest V3 trong bản Beta v1.5+ và không cần các cài đặt dành riêng cho Chromium này.",
   },
 }} />
 

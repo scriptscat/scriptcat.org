@@ -28,8 +28,8 @@ import GithubStar from '@site/src/components/GithubStar';
     description: "Your browser does not support Manifest V3. You need to manually install the legacy ScriptCat (v0.16.x). See instructions below.",
   },
   nonChromium: {
-    title: "Chromium-based browser not detected",
-    description: "ScriptCat currently only supports Chromium-based browsers (such as Chrome, Edge, etc.). If you are using a Chromium-based browser, please ignore this message and follow the steps below.",
+    title: "Chromium 기반 브라우저가 감지되지 않음",
+    description: "이 페이지의 ‘사용자 스크립트 허용’ 및 ‘개발자 모드’ 설정은 Chrome, Edge와 같은 Chromium 기반 브라우저에만 적용됩니다. Firefox는 Beta v1.5+에서 Manifest V3를 지원하며 이러한 Chromium 전용 설정이 필요하지 않습니다.",
   },
 }} />
 
