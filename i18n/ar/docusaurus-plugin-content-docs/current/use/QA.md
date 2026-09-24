@@ -22,6 +22,36 @@ title: الأسئلة الشائعة
 
 توجد بعض الاختلافات بين ScriptCat و Tampermonkey في تنفيذ واجهات البرمجة (APIs). يرجى التحديث إلى أحدث إصدار. إذا استمرت المشكلة، قم بتقديم Issue على [GitHub](https://github.com/scriptscat/scriptcat/issues).
 
+## قيود CSP / Trusted Types {#csp-trusted-types}
+
+#### Q: ماذا أفعل إذا منع CSP في الموقع السكربت من العمل؟
+
+في ScriptCat، افتح **Network Rules** ثم اختر **Tools → Network rules → New rule → Remove CSP**. في حقل **Websites** أدخل الموقع المتأثر فقط، مثل `example.com`. احفظ القاعدة ثم حدّث الصفحات المفتوحة.
+
+يزيل قالب **Remove CSP** ترويسات CSP من استجابات المستندات في الإطار الرئيسي والإطارات الفرعية. ويمكنك اختيار إزالة `X-Frame-Options` أيضًا.
+
+#### Q: ماذا أفعل عند ظهور `This document requires 'TrustedHTML' assignment.`؟
+
+يعني هذا عادةً أن المتصفح رفض عملية DOM لأن الموقع يفرض Trusted Types. يمكن للموقع تفعيلها بتوجيه CSP `require-trusted-types-for 'script'`؛ وقد يظهر الخطأ إذا نفّذ user script عملية لا تسمح بها السياسة. المتصفح هو الذي يطبّق سياسة أمان الموقع، ولا تثبت هذه الرسالة وحدها أن ScriptCat سبب المشكلة.
+
+إذا كان التقييد مفروضًا بترويسة CSP في استجابة المستند، فقد تساعد قاعدة **Remove CSP** لهذا الموقع وحده. لكنها لا تضمن حل الخطأ إذا لم يكن سببه إحدى ترويسات CSP التي تزيلها القاعدة.
+
+#### Q: لماذا لا يزيل ScriptCat CSP من جميع المواقع تلقائيًا؟
+
+يساعد CSP وTrusted Types على تقليل مخاطر مثل البرمجة النصية عبر المواقع (XSS). إزالة CSP تضعف وسائل الحماية الأصلية للمواقع المطابقة. أنشئ قاعدة للمواقع التي تحتاج إليها فقط. يتوفر نطاق **All websites**، لكن ScriptCat يطلب تأكيدًا قبل حفظه.
+
+:::warning تنبيه أمني
+
+تجنب نطاق **All websites** ما لم تكن تفهم أثره الأمني وتقبله.
+
+:::
+
+:::info حول مشكلة توافق Trusted Types في ScriptCat
+
+تضمنت [ScriptCat #1239](https://github.com/scriptscat/scriptcat/issues/1239) أيضًا مشكلة توافق منفصلة في `GM_xmlhttpRequest`، وقد أُصلحت في [ScriptCat #1242](https://github.com/scriptscat/scriptcat/pull/1242). لا يعطّل هذا الإصلاح Trusted Types ولا يتجاوزها، ولا يغيّر CSP الخاص بالموقع. حدّث ScriptCat إذا كنت تستخدم إصدارًا قديمًا.
+
+:::
+
 ## مشاكل المزامنة السحابية
 
 > للاستخدام الأساسي للمزامنة، راجع [المزامنة والنسخ الاحتياطي](/docs/use/sync/).

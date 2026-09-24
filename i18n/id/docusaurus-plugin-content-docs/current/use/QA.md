@@ -22,6 +22,36 @@ Jika sudah diaktifkan tetapi peringatan tetap muncul, coba mulai ulang browser a
 
 ScriptCat dan Tampermonkey memiliki beberapa perbedaan dalam implementasi API. Harap perbarui ke versi terbaru. Jika masalah tetap berlanjut, ajukan Issue di [GitHub](https://github.com/scriptscat/scriptcat/issues).
 
+## Batasan CSP / Trusted Types {#csp-trusted-types}
+
+#### Q: Apa yang harus dilakukan jika CSP situs menghalangi skrip?
+
+Di ScriptCat, buka **Network Rules**, lalu pilih **Tools → Network rules → New rule → Remove CSP**. Pada kolom **Websites**, masukkan hanya situs yang bermasalah, misalnya `example.com`. Simpan aturan lalu muat ulang halaman yang sudah terbuka.
+
+Templat **Remove CSP** menghapus header respons CSP dari respons dokumen di bingkai utama dan subbingkai. Anda juga dapat memilih untuk menghapus `X-Frame-Options`.
+
+#### Q: Apa arti `This document requires 'TrustedHTML' assignment.`?
+
+Biasanya browser menolak operasi DOM karena situs menerapkan Trusted Types. Situs dapat mengaktifkannya melalui direktif CSP `require-trusted-types-for 'script'`; userscript dapat memicu kesalahan ini jika melakukan operasi yang dilarang kebijakan. Browser sedang menerapkan kebijakan keamanan situs, jadi pesan ini saja tidak membuktikan bahwa ScriptCat penyebabnya.
+
+Jika pembatasan diterapkan oleh header respons CSP pada dokumen, aturan **Remove CSP** khusus untuk situs tersebut mungkin membantu. Aturan ini tidak menjamin penyelesaian jika penyebab kesalahan bukan header respons CSP yang dapat dihapus.
+
+#### Q: Mengapa ScriptCat tidak menghapus CSP dari semua situs secara default?
+
+CSP dan Trusted Types membantu mengurangi risiko seperti cross-site scripting (XSS). Menghapus CSP melemahkan perlindungan keamanan bawaan situs yang cocok. Buat aturan hanya untuk situs yang memang memerlukannya. Cakupan **All websites** tersedia, tetapi ScriptCat meminta konfirmasi sebelum menyimpannya.
+
+:::warning Peringatan keamanan
+
+Hindari cakupan **All websites** kecuali Anda memahami dan menerima dampak keamanannya.
+
+:::
+
+:::info Tentang masalah kompatibilitas Trusted Types di ScriptCat
+
+[ScriptCat #1239](https://github.com/scriptscat/scriptcat/issues/1239) juga memuat masalah kompatibilitas `GM_xmlhttpRequest` yang terpisah dan telah diperbaiki di [ScriptCat #1242](https://github.com/scriptscat/scriptcat/pull/1242). Perbaikan tersebut tidak menonaktifkan atau melewati Trusted Types, dan tidak mengubah CSP situs. Perbarui ScriptCat jika Anda menggunakan versi lama.
+
+:::
+
 ## Masalah Sinkronisasi Cloud
 
 > Untuk penggunaan sinkronisasi dasar, lihat [Sinkronisasi & Cadangan](/docs/use/sync/).

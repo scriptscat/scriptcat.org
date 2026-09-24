@@ -22,6 +22,36 @@ title: 常見問題
 
 ScriptCat 和 Tampermonkey 在 API 實作上有部分差異。請更新至最新版本。如果問題持續，請在 [GitHub](https://github.com/scriptscat/scriptcat/issues) 提交 Issue。
 
+## CSP / Trusted Types 限制 {#csp-trusted-types}
+
+#### Q: 網站的 CSP 限制導致腳本無法正常執行，該怎麼辦？
+
+在 ScriptCat 的 **Network Rules（網路規則）** 頁面依序選擇「工具 → 網路規則 → 新增規則 → 移除 CSP」，並在「套用範圍」中只填入實際發生問題的網站，例如 `example.com`。儲存規則後，重新整理已開啟的頁面即可套用。
+
+「移除 CSP」範本會針對主框架與子框架的文件請求移除 CSP 回應標頭，也可以選擇同時移除 `X-Frame-Options`。
+
+#### Q: 遇到 `This document requires 'TrustedHTML' assignment.` 該怎麼辦？
+
+這通常表示瀏覽器因 Trusted Types 限制而拒絕某項 DOM 操作。網站可以透過 CSP 指令 `require-trusted-types-for 'script'` 啟用 Trusted Types；userscript 執行不符合要求的操作時可能出現此錯誤。這是瀏覽器執行網站安全政策，單憑錯誤訊息不能斷定是 ScriptCat 的問題。
+
+如果限制是由文件回應中的 CSP 回應標頭啟用，可以嘗試只為該網站建立上述「移除 CSP」規則。若錯誤不是由規則能移除的 CSP 回應標頭引起，就不一定能解決。
+
+#### Q: 為什麼 ScriptCat 不預設對所有網站移除 CSP？
+
+CSP 和 Trusted Types 有助於降低跨網站指令碼（XSS）等攻擊風險。移除 CSP 會削弱符合規則網站原有的安全保護。建議只為確實需要的網站建立規則。ScriptCat 支援「所有網站」範圍，但儲存前會要求確認。
+
+:::warning 安全提示
+
+除非了解並接受相關安全影響，否則不要使用「所有網站」範圍。
+
+:::
+
+:::info 關於 ScriptCat 自身的 Trusted Types 相容性問題
+
+[ScriptCat #1239](https://github.com/scriptscat/scriptcat/issues/1239) 也包含一項 `GM_xmlhttpRequest` 相容性問題，後來已由 [ScriptCat #1242](https://github.com/scriptscat/scriptcat/pull/1242) 修正。該修正不會停用或繞過 Trusted Types，也不會修改網站的 CSP。若仍使用舊版 ScriptCat，請更新至目前版本。
+
+:::
+
 ## 雲端同步問題
 
 > 基本同步使用方式，參閱[同步與備份](/docs/use/sync/)。

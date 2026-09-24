@@ -22,6 +22,36 @@ Chrome 120+ 및 최신 Edge 버전부터 브라우저는 스크립트 실행을 
 
 ScriptCat과 Tampermonkey는 API 구현에 일부 차이가 있습니다. 최신 버전으로 업데이트하세요. 문제가 지속되면 [GitHub](https://github.com/scriptscat/scriptcat/issues)에 Issue를 제출하세요.
 
+## CSP / Trusted Types 제한 {#csp-trusted-types}
+
+#### Q: 사이트의 CSP 때문에 스크립트가 작동하지 않으면 어떻게 하나요?
+
+ScriptCat의 **Network Rules(네트워크 규칙)** 에서 **도구 → 네트워크 규칙 → 새 규칙 → CSP 제거**를 선택하세요. **적용 사이트**에는 문제가 발생한 사이트만 입력합니다(예: `example.com`). 규칙을 저장한 뒤 이미 열려 있는 페이지를 새로고침하세요.
+
+**Remove CSP** 템플릿은 메인 프레임과 하위 프레임의 문서 응답에서 CSP 응답 헤더를 제거합니다. `X-Frame-Options`도 함께 제거하도록 선택할 수 있습니다.
+
+#### Q: `This document requires 'TrustedHTML' assignment.` 오류가 표시되면 어떻게 하나요?
+
+대개 사이트가 Trusted Types를 적용해 브라우저가 DOM 작업을 거부했다는 뜻입니다. 사이트는 CSP 지시어 `require-trusted-types-for 'script'`로 Trusted Types를 활성화할 수 있으며, userscript가 정책에서 허용하지 않는 작업을 하면 이 오류가 발생할 수 있습니다. 브라우저가 사이트 보안 정책을 적용하는 것이므로, 이 메시지만으로 ScriptCat의 문제라고 단정할 수 없습니다.
+
+문서 응답의 강제 CSP 응답 헤더가 제한의 원인이라면 해당 사이트에만 적용하는 **Remove CSP** 규칙이 도움이 될 수 있습니다. 원인이 제거 가능한 CSP 응답 헤더가 아니라면 해결을 보장하지 않습니다.
+
+#### Q: ScriptCat은 왜 기본적으로 모든 사이트의 CSP를 제거하지 않나요?
+
+CSP와 Trusted Types는 사이트 간 스크립팅(XSS) 같은 위험을 줄이는 데 도움이 됩니다. CSP를 제거하면 해당 사이트의 기존 보안 보호가 약해집니다. 실제로 필요한 사이트에만 규칙을 만드세요. **모든 웹사이트** 범위도 있지만 저장 전에 ScriptCat이 확인을 요청합니다.
+
+:::warning 보안 안내
+
+보안 영향을 이해하고 받아들이는 경우가 아니라면 **모든 웹사이트** 범위를 사용하지 마세요.
+
+:::
+
+:::info ScriptCat 자체의 Trusted Types 호환성 문제
+
+[ScriptCat #1239](https://github.com/scriptscat/scriptcat/issues/1239)에는 별도의 `GM_xmlhttpRequest` 호환성 문제가 포함되어 있었으며, [ScriptCat #1242](https://github.com/scriptscat/scriptcat/pull/1242)에서 수정되었습니다. 이 수정은 Trusted Types를 비활성화하거나 우회하지 않으며 사이트의 CSP도 변경하지 않습니다. 오래된 ScriptCat을 사용 중이라면 현재 버전으로 업데이트하세요.
+
+:::
+
 ## 클라우드 동기화 문제
 
 > 기본적인 동기화 사용법은 [동기화 및 백업](/docs/use/sync/)을 참조하세요.
